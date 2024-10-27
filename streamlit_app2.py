@@ -8,7 +8,7 @@ from pydub import AudioSegment
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from rapidfuzz import process, fuzz  # Corrected import
+from rapidfuzz import process, fuzz
 import torch
 import zipfile
 import requests
@@ -17,13 +17,21 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 import spacy
 import re
 import logging
+from spacy.matcher import Matcher
 
 # -------------------- Environment Setup -------------------- #
 
 # Load environment variables from .env file
 dotenv.load_dotenv()
+
+# Securely set the OpenAI API key
 #openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = "sk-_8i-5CjqPiA9GdeDqjfsybwgMwyXsreAzHqdYjlNxFT3BlbkFJxgU4Fd2AAV5G8z5yth53M-KKgRRQaTmR9XWLE0Da8A"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+if not openai.api_key:
+    st.error("OpenAI API key not found. Please set it in the .env file.")
+    st.stop()
+
 # Initialize logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -34,81 +42,109 @@ logger = logging.getLogger(__name__)
 BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/bsphlpwlt7jclb9ybiyx6/medical-bert-symptom-ner.zip?rlkey=j1066ivw1qvkp0c8urpm8pjv6&st=bk4e923j&dl=1"
 
 # Path to the BioBERT model directory
-biobert_model_dir = 'medical-bert-symptom-ner'  # Path where the model will be extracted
+BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be extracted
 
 def download_and_unzip_biobert_model(model_url, model_dir):
     if not os.path.exists(model_dir):
         st.info("Downloading the BioBERT NER model. Please wait...")
         # Download the model zip file
         with st.spinner('Downloading BioBERT NER model...'):
-            response = requests.get(model_url, stream=True)
-            if response.status_code == 200:
+            try:
+                response = requests.get(model_url, stream=True)
+                response.raise_for_status()
                 with open('biobert_model.zip', 'wb') as out_file:
                     for chunk in response.iter_content(chunk_size=8192):
                         if chunk:
                             out_file.write(chunk)
-            else:
-                st.error("Failed to download the BioBERT NER model. Please check the URL.")
+                logger.info("BioBERT NER model downloaded successfully.")
+            except requests.exceptions.RequestException as e:
+                st.error(f"Failed to download the BioBERT NER model: {e}")
+                logger.error(f"Failed to download the BioBERT NER model: {e}")
                 st.stop()
         # Unzip the model
         try:
             with zipfile.ZipFile('biobert_model.zip', 'r') as zip_ref:
                 zip_ref.extractall('.')
             st.success("BioBERT NER model downloaded and extracted successfully.")
-        except zipfile.BadZipFile:
+            logger.info("BioBERT NER model extracted successfully.")
+        except zipfile.BadZipFile as e:
             st.error("Downloaded BioBERT model file is not a valid zip file.")
+            logger.error(f"Invalid zip file: {e}")
             st.stop()
         finally:
-            os.remove('biobert_model.zip')
+            # Remove the zip file if it exists
+            if os.path.exists('biobert_model.zip'):
+                try:
+                    os.remove('biobert_model.zip')
+                    logger.info("biobert_model.zip removed successfully.")
+                except Exception as e:
+                    st.warning(f"Could not remove biobert_model.zip: {e}")
+                    logger.warning(f"Could not remove biobert_model.zip: {e}")
 
 # Download and unzip the BioBERT model if it doesn't exist
-download_and_unzip_biobert_model(BIOBERT_MODEL_URL, biobert_model_dir)
+download_and_unzip_biobert_model(BIOBERT_MODEL_URL, BIOBERT_MODEL_DIR)
 
 # Check if the BioBERT model directory exists after extraction
-if not os.path.exists(biobert_model_dir):
-    st.error(f"BioBERT model directory '{biobert_model_dir}' not found after extraction.")
+if not os.path.exists(BIOBERT_MODEL_DIR):
+    st.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
+    logger.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
     st.stop()
 
 # Load the tokenizer and model using caching
 @st.cache_resource
 def load_biobert_ner_pipeline():
-    tokenizer = AutoTokenizer.from_pretrained(biobert_model_dir, add_prefix_space=True)
-    model = AutoModelForTokenClassification.from_pretrained(biobert_model_dir)
-    device = 0 if torch.cuda.is_available() else -1
-    ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
-    return ner_pipeline
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(BIOBERT_MODEL_DIR, add_prefix_space=True)
+        model = AutoModelForTokenClassification.from_pretrained(BIOBERT_MODEL_DIR)
+        device = 0 if torch.cuda.is_available() else -1
+        ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
+        logger.info("BioBERT NER pipeline loaded successfully.")
+        return ner_pipeline
+    except Exception as e:
+        st.error(f"Failed to load BioBERT NER pipeline: {e}")
+        logger.error(f"Failed to load BioBERT NER pipeline: {e}")
+        st.stop()
 
 ner_pipeline = load_biobert_ner_pipeline()
 st.sidebar.success("BioBERT NER model loaded successfully!")
 
-# -------------------- Load Whisper Model -------------------- #
+# -------------------- Load SpaCy Model -------------------- #
 
 @st.cache_resource
-def load_whisper_model():
+def load_spacy_model():
     """
     Load the SpaCy model for additional NLP tasks.
     """
     try:
         nlp = spacy.load('en_core_web_sm')
+        logger.info("SpaCy model 'en_core_web_sm' loaded successfully.")
         return nlp
-    except OSError:
-        st.error("SpaCy model 'en_core_web_sm' not found. Please ensure it's installed correctly.")
-        logger.error("SpaCy model 'en_core_web_sm' not found.")
+    except OSError as e:
+        st.error("SpaCy model 'en_core_web_sm' not found. Please install it using 'python -m spacy download en_core_web_sm'.")
+        logger.error(f"SpaCy model loading error: {e}")
         st.stop()
 
-nlp = load_whisper_model()
+nlp = load_spacy_model()
 
 # -------------------- Load Disease-Symptom Mapping -------------------- #
 
 @st.cache_resource
 def load_disease_symptom_mapping():
+    """
+    Load the disease-symptom mapping from a CSV file.
+    """
     if not os.path.exists("disease_symptom_mapping.csv"):
         st.error("'disease_symptom_mapping.csv' not found in the current directory.")
         logger.error("'disease_symptom_mapping.csv' not found.")
         st.stop()
-    df = pd.read_csv("disease_symptom_mapping.csv")
-    logger.info("'disease_symptom_mapping.csv' loaded successfully.")
-    return df
+    try:
+        df = pd.read_csv("disease_symptom_mapping.csv")
+        logger.info("'disease_symptom_mapping.csv' loaded successfully.")
+        return df
+    except Exception as e:
+        st.error(f"Failed to load 'disease_symptom_mapping.csv': {e}")
+        logger.error(f"Failed to load 'disease_symptom_mapping.csv': {e}")
+        st.stop()
 
 df_disease_symptom = load_disease_symptom_mapping()
 
@@ -129,7 +165,7 @@ def translate(audio_file):
     """
     try:
         translation = openai.Audio.translate("whisper-1", audio_file)
-        st.info("Translation successful.")
+        logger.info("Audio translation successful.")
         return translation
     except Exception as e:
         st.error(f"Translation failed: {e}")
@@ -148,7 +184,7 @@ def transcribe(audio_file):
     """
     try:
         transcript = openai.Audio.transcribe("whisper-1", audio_file)
-        st.info("Transcription successful.")
+        logger.info("Audio transcription successful.")
         return transcript
     except Exception as e:
         st.error(f"Transcription failed: {e}")
@@ -172,7 +208,6 @@ def save_audio_file(audio_bytes, file_extension):
     try:
         with open(file_name, "wb") as f:
             f.write(audio_bytes)
-        st.success(f"Audio saved as {file_name}")
         logger.info(f"Audio saved as {file_name}")
         return file_name
     except Exception as e:
@@ -234,12 +269,19 @@ def extract_symptoms(text):
     Returns:
         set: A set of extracted symptom strings.
     """
-    entities = ner_pipeline(text)
-    if not entities:
+    try:
+        entities = ner_pipeline(text)
+        if not entities:
+            logger.info("No entities extracted by BioBERT NER.")
+            return set()
+        # Extract unique symptoms
+        extracted_symptoms = set([entity['word'].title() for entity in entities])
+        logger.info(f"Extracted Symptoms from NER: {extracted_symptoms}")
+        return extracted_symptoms
+    except Exception as e:
+        st.error(f"An error occurred during symptom extraction: {e}")
+        logger.error(f"Symptom extraction error: {e}")
         return set()
-    # Extract unique symptoms
-    extracted_symptoms = set([entity['word'].title() for entity in entities])
-    return extracted_symptoms
 
 def match_symptoms(extracted_symptoms):
     """
@@ -269,22 +311,66 @@ def extract_additional_entities(text):
     Returns:
         dict: A dictionary containing extracted entities.
     """
-    doc = nlp(text)
+    doc = nlp(text.lower())  # Normalize text to lowercase for consistent matching
     age = None
     gender = None
     location = None
     duration = None
     medications = []
 
-    # Extract entities using SpaCy
+    # Initialize Matcher with the shared vocab
+    matcher = Matcher(nlp.vocab)
+
+    # Define patterns for duration
+    duration_patterns = [
+        [{"LOWER": {"IN": ["since", "for", "from"]}}, {"LOWER": {"IN": ["the", "past", "last"]}, "OP": "?"}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
+        [{"LOWER": {"IN": ["the", "past", "last"]}}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
+        [{"LOWER": {"IN": ["over", "during"]}}, {"LOWER": {"IN": ["the"]}}, {"LOWER": {"IN": ["past", "last"]}}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
+        [{"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}, {"LOWER": {"IN": ["ago", "back"]}}],
+        [{"LOWER": {"IN": ["a", "an"]}}, {"LOWER": {"IN": ["day", "week", "month", "year"]}}]
+    ]
+    matcher.add("DURATION", duration_patterns)
+
+    # Define patterns for medications
+    medication_patterns = [
+        [{"LOWER": {"IN": ["taking", "taken", "take", "using", "prescribed", "prescription"]}}, {"LOWER": "the", "OP": "?"}, {"POS": "NOUN"}, {"LOWER": {"IN": [",", "and"]}, "OP": "*"}, {"POS": "NOUN", "OP": "*"}],
+        [{"LOWER": {"IN": ["prescribed"]}}, {"POS": "NOUN"}, {"LOWER": {"IN": [",", "and"]}, "OP": "*"}, {"POS": "NOUN", "OP": "*"}]
+    ]
+    matcher.add("MEDICATION", medication_patterns)
+
+    matches = matcher(doc)
+
+    for match_id, start, end in matches:
+        span = doc[start:end]
+        rule_id = nlp.vocab.strings[match_id]
+        if rule_id == "DURATION":
+            duration = span.text
+        elif rule_id == "MEDICATION":
+            meds = span.text.split()
+            # Clean and title case
+            meds = [med.strip(",").title() for med in meds if med.lower() not in ['taking', 'taken', 'take', 'using', 'prescribed', 'prescription', 'the']]
+            # Split medications by commas or 'and'
+            meds_list = re.split(r',| and ', ' '.join(meds))
+            for med in meds_list:
+                med = med.strip().title()
+                if med:  # Ensure it's not empty
+                    medications.append(med)
+
+    # Extract entities using SpaCy's NER
     for ent in doc.ents:
         if ent.label_ == 'GPE':
-            location = ent.text
+            location = ent.text.title()
+        elif ent.label_ in ['DATE', 'TIME']:
+            # Attempt to extract duration from DATE and TIME entities
+            if not duration:
+                duration = ent.text
 
-    # Extract age
+    # Extract age using regex patterns
     age_patterns = [
         r'(\b\d{1,2}\b)\s*(years old|year old|y/o|yo|yrs old)',
-        r'age\s*(\b\d{1,2}\b)'
+        r'age\s*(\b\d{1,2}\b)',
+        r'i am\s*(\b\d{1,2}\b)',
+        r'my age is\s*(\b\d{1,2}\b)'
     ]
     for pattern in age_patterns:
         match = re.search(pattern, text, re.IGNORECASE)
@@ -292,9 +378,11 @@ def extract_additional_entities(text):
             age = int(match.group(1))
             break
 
-    # Extract gender
+    # Extract gender using regex patterns
     gender_patterns = [
-        r'\b(male|female|man|woman|boy|girl)\b'
+        r'\b(male|female|man|woman|boy|girl)\b',
+        r'i am\s+(male|female)',
+        r'my gender is\s+(male|female)'
     ]
     for pattern in gender_patterns:
         match = re.search(pattern, text, re.IGNORECASE)
@@ -306,31 +394,8 @@ def extract_additional_entities(text):
                 gender = 'female'
             break
 
-    # Extract duration
-    duration_patterns = [
-        r'since\s*(\d+\s*(days?|weeks?|months?|years?))',
-        r'for\s*(\d+\s*(days?|weeks?|months?|years?))',
-        r'(\d+\s*(days?|weeks?|months?|years?))\s*(ago|back)'
-    ]
-    for pattern in duration_patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            duration = match.group(1)
-            break
-
-    # Extract medications
-    # For simplicity, we'll assume that medications are mentioned after phrases like 'taking' or 'taken'
-    medication_patterns = [
-        r'(taking|taken|take)\s+([\w\s]+)'
-    ]
-    for pattern in medication_patterns:
-        matches = re.findall(pattern, text, re.IGNORECASE)
-        for match in matches:
-            meds = match[1].strip()
-            # Remove common words that are not medications
-            stopwords = ['and', 'or', 'but', 'with', 'without']
-            meds = ' '.join([word for word in meds.split() if word.lower() not in stopwords])
-            medications.append(meds.title())
+    # Log extracted entities for debugging
+    logger.info(f"Extracted Entities: Age={age}, Gender={gender}, Location={location}, Duration={duration}, Medications={medications}")
 
     return {
         'age': age,
@@ -403,12 +468,12 @@ def map_symptoms_to_diseases(matched_symptoms, additional_info):
 # -------------------- Streamlit Interface -------------------- #
 
 def main():
-
-    #Main function to run the integrated Whisper Transcription and BioBERT-based Symptom-to-Disease Mapper app.
-
-    st.title("🩺 O-Health LLM Tool")
+    """
+    Main function to run the integrated Whisper Transcription and BioBERT-based Symptom-to-Disease Mapper app.
+    """
+    st.title("🩺 O-Health Diagnostic Tool")
     st.write("""
-        Welcome to the O-Health LLM Platform. You can either speak your symptoms in any language or type them to receive healthcare recommendations based on your inputs.
+        Welcome to the O-Health Diagnostic Tool. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
     """)
 
     # Create two tabs: Voice Input and Text Input
