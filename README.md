@@ -6,7 +6,9 @@ The system has 3 python files:
 1. generate_synthetic_data.py generates SNOMED based symptoms and also sentences of symptoms (synthetic_train.csv) as a csv file for synthetic data to train. Input : disease.csv, symptom.csv and disease_symptom_mapping.csv
 2. train_distilbert.py takes as input the generated synthetic data and trains it with DBio_ClicalBERT and generates a NER file of the output. We then create a zip file of the NER folder for compression.
 3. streamlit_app2.py OR streamlit_voice.py takes as input the zip file of a trained model and creates a web app to interact with symptoms through voice in multi-language (streamlit_voice.py) or through text (streamlit_app2) as input, and outputs probable diseases with graphs.
-We can ineract through https://o-health-v3.streamlit.app for streamlit_app2 OR
+We can interact through streamlit cloud to test the features on:
+
+https://o-health-v3.streamlit.app for streamlit_app2 OR
 
 https://o-health-v4.streamlit.ap for streamllit_voice.py
 
