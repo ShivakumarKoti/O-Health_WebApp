@@ -22,7 +22,7 @@ import io
 dotenv.load_dotenv()
 
 # Set the OpenAI API key from environment variables
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 if not OPENAI_API_KEY:
     st.error("OpenAI API key not found. Please set it in the .env file.")
