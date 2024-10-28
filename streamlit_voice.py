@@ -48,15 +48,16 @@ def download_and_extract_model(url, extract_to='medical-bert-symptom-ner'):
     try:
         if not os.path.exists(extract_to):
             logger.info("Downloading BioBERT NER model...")
-            response = requests.get(url)
-            if response.status_code == 200:
-                with ZipFile(io.BytesIO(response.content)) as zip_ref:
-                    zip_ref.extractall(extract_to)
-                logger.info("BioBERT NER model downloaded and extracted successfully.")
-            else:
-                st.error(f"Failed to download the model. Status code: {response.status_code}")
-                logger.error(f"Failed to download the model. Status code: {response.status_code}")
-                st.stop()
+            with requests.get(url, stream=True) as r:
+                r.raise_for_status()
+                with open("medical_bert_model.zip", "wb") as f:
+                    for chunk in r.iter_content(chunk_size=8192):
+                        f.write(chunk)
+            logger.info("Download complete. Extracting the model...")
+            with ZipFile("medical_bert_model.zip", 'r') as zip_ref:
+                zip_ref.extractall(extract_to)
+            logger.info("BioBERT NER model downloaded and extracted successfully.")
+            os.remove("medical_bert_model.zip")  # Clean up the zip file after extraction
         else:
             logger.info("BioBERT NER model already exists. Skipping download.")
     except Exception as e:
@@ -64,7 +65,7 @@ def download_and_extract_model(url, extract_to='medical-bert-symptom-ner'):
         logger.error(f"Model download/extraction error: {e}")
         st.stop()
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def get_biobert_pipeline():
     """
     Download (if not already), extract, and load the BioBERT NER pipeline.
