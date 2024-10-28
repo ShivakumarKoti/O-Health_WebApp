@@ -59,5 +59,5 @@ Next Steps:
 5. Creating a model or program for root cause analysis of the disease from the inputs of the symptoms
 Example input "I have a fever since 2 days ever since I was drenched in the rain, and rashes on my skin since yesterday. I have peanut allergy and had some roasted peanuts and nutella yesterday"
 Expected Output: Your fever might be caused due to the rain and rashes could be an allergic reaction to the peanuts
-6. Increase and customize the questions for each symptom extracted to make the dynamic questioning more effective on streamllit_voice.py
+6. Increase and customize the questions for each symptom extracted to make the dynamic questioning more effective on streamlit_voice.py
 
