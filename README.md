@@ -54,7 +54,7 @@ Next Steps:
    Example: The model should consider adverbs and the tone of the sentence for the input.
    "The patient is very very tired" : The words "very very" should signify high intensity and severity of the symptoms
    "I was sleepy since last week but not anymore" : The sentence has positives and negatives and should be considered.
-3. Making the program more efficient in extracting the information from the transcript
+3. Making the program more efficient in extracting the information from the transcript. Currently it extracts symptoms, medications taken, age, gender, duration and location but we can extract more information with more efficiency.
 4. Integrating the entire system onto 1 python version (either 3.9 or 3.12) for easy development
 5. Creating a model or program for root cause analysis of the disease from the inputs of the symptoms
 Example input "I have a fever since 2 days ever since I was drenched in the rain, and rashes on my skin since yesterday. I have peanut allergy and had some roasted peanuts and nutella yesterday"
