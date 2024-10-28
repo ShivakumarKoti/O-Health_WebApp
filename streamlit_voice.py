@@ -1,7 +1,5 @@
 import os
 import datetime
-import openai
-import dotenv
 import streamlit as st
 from audio_recorder_streamlit import audio_recorder
 import pandas as pd
@@ -16,17 +14,22 @@ import logging
 from spacy.matcher import Matcher
 from gtts import gTTS
 import io
+import openai  # Added import
+import requests  # For downloading the model
+from zipfile import ZipFile  # For extracting the model
 
 # -------------------- Environment Setup -------------------- #
 
-# Load environment variables from .env file
-#dotenv.load_dotenv()
+# Set the OpenAI API key from Streamlit secrets
+try:
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
+except KeyError:
+    st.error("""
+        OpenAI API key not found. Please set it in the Streamlit Secrets.
+        If you're running this app locally, ensure you have a `.env` file with the following content:
 
-# Set the OpenAI API key from environment variables
-openai.api_key = st.secrets["OPENAI_API_KEY"]
-
-if not openai.api_key:
-    st.error("OpenAI API key not found. Please set it in the .env file.")
+        OPENAI_API_KEY=your_openai_api_key_here
+    """)
     st.stop()
 
 # Initialize logging
@@ -35,13 +38,40 @@ logger = logging.getLogger(__name__)
 
 # -------------------- Load BioBERT NER Model -------------------- #
 
-# Path to the BioBERT model directory
-BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Ensure this directory exists
+# URL to download the BioBERT NER model zip file from Dropbox
+MODEL_ZIP_URL = "https://www.dropbox.com/scl/fi/bsphlpwlt7jclb9ybiyx6/medical-bert-symptom-ner.zip?rlkey=j1066ivw1qvkp0c8urpm8pjv6&dl=1"
 
-def load_biobert_ner_pipeline(model_dir):
+def download_and_extract_model(url, extract_to='medical-bert-symptom-ner'):
     """
-    Load the BioBERT NER pipeline.
+    Download and extract the BioBERT NER model from the provided URL.
     """
+    try:
+        if not os.path.exists(extract_to):
+            logger.info("Downloading BioBERT NER model...")
+            response = requests.get(url)
+            if response.status_code == 200:
+                with ZipFile(io.BytesIO(response.content)) as zip_ref:
+                    zip_ref.extractall(extract_to)
+                logger.info("BioBERT NER model downloaded and extracted successfully.")
+            else:
+                st.error(f"Failed to download the model. Status code: {response.status_code}")
+                logger.error(f"Failed to download the model. Status code: {response.status_code}")
+                st.stop()
+        else:
+            logger.info("BioBERT NER model already exists. Skipping download.")
+    except Exception as e:
+        st.error(f"An error occurred while downloading/extracting the model: {e}")
+        logger.error(f"Model download/extraction error: {e}")
+        st.stop()
+
+@st.cache_resource
+def get_biobert_pipeline():
+    """
+    Download (if not already), extract, and load the BioBERT NER pipeline.
+    """
+    model_dir = 'medical-bert-symptom-ner'
+    download_and_extract_model(MODEL_ZIP_URL, extract_to=model_dir)
+    
     try:
         tokenizer = AutoTokenizer.from_pretrained(model_dir, add_prefix_space=True)
         model = AutoModelForTokenClassification.from_pretrained(model_dir)
@@ -53,10 +83,6 @@ def load_biobert_ner_pipeline(model_dir):
         st.error(f"Failed to load BioBERT NER pipeline: {e}")
         logger.error(f"Failed to load BioBERT NER pipeline: {e}")
         st.stop()
-
-@st.cache_resource
-def get_biobert_pipeline():
-    return load_biobert_ner_pipeline(BIOBERT_MODEL_DIR)
 
 ner_pipeline = get_biobert_pipeline()
 st.sidebar.success("BioBERT NER model loaded successfully!")
@@ -178,9 +204,6 @@ def transcribe_audio(file_path):
     Uses the 'translate' endpoint to get English transcription.
     """
     try:
-        import openai  # Ensure OpenAI is installed
-        openai.api_key = OPENAI_API_KEY
-
         with open(file_path, "rb") as audio_file:
             transcript = openai.Audio.translate("whisper-1", audio_file)
             transcribed_text = transcript.get("text", "").strip()
@@ -227,18 +250,18 @@ def extract_symptoms(text):
         if not entities:
             logger.info("No entities extracted by BioBERT NER.")
             return set()
-
+        
         # Initialize SpaCy Doc for negation detection
         doc = nlp(text)
-
+        
         # Dictionary to hold symptom presence
         symptoms_presence = {}
-
+        
         for entity in entities:
             symptom = entity['word'].title()
             # Initialize as True (present) by default
             symptoms_presence[symptom] = True
-
+            
             # Find the token in SpaCy Doc
             for token in doc:
                 if token.text.lower() == entity['word'].lower():
@@ -250,7 +273,7 @@ def extract_symptoms(text):
                             break
                     symptoms_presence[symptom] = not neg
                     break
-
+        
         # Remove symptoms that are negated
         symptoms_present = {symptom for symptom, present in symptoms_presence.items() if present}
         logger.info(f"Extracted Symptoms after negation handling: {symptoms_present}")
@@ -284,10 +307,10 @@ def extract_additional_entities(text):
     duration = None
     medications = []
     food_intake = None
-
+    
     # Initialize Matcher with the shared vocab
     matcher = Matcher(nlp.vocab)
-
+    
     # Define patterns for duration
     duration_patterns = [
         [{"LOWER": {"IN": ["since", "for", "from"]}}, {"LOWER": {"IN": ["the", "past", "last"]}, "OP": "?"}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
@@ -297,23 +320,23 @@ def extract_additional_entities(text):
         [{"LOWER": {"IN": ["a", "an"]}}, {"LOWER": {"IN": ["day", "week", "month", "year"]}}]
     ]
     matcher.add("DURATION", duration_patterns)
-
+    
     # Define patterns for medications
     medication_patterns = [
         [{"LOWER": {"IN": ["taking", "taken", "take", "using", "prescribed", "prescription"]}}, {"LOWER": "the", "OP": "?"}, {"POS": {"IN": ["NOUN", "PROPN"]}}, {"LOWER": {"IN": [",", "and"]}, "OP": "*"}, {"POS": {"IN": ["NOUN", "PROPN", "NUM"]}, "OP": "+"}],
         [{"LOWER": {"IN": ["prescribed"]}}, {"POS": {"IN": ["NOUN", "PROPN"]}}, {"LOWER": {"IN": [",", "and"]}, "OP": "*"}, {"POS": {"IN": ["NOUN", "PROPN", "NUM"]}, "OP": "+"}]
     ]
     matcher.add("MEDICATION", medication_patterns)
-
+    
     # Define patterns for food intake
     food_patterns = [
         [{"LOWER": {"IN": ["ate", "eaten", "have eaten", "had"]}}, {"POS": {"IN": ["NOUN", "PROPN"]}, "OP": "+"}],
         [{"LOWER": {"IN": ["what", "have"]}}, {"LOWER": "you"}, {"LOWER": "eaten"}, {"LOWER": "recently"}, {"LOWER": "?"}]
     ]
     matcher.add("FOOD", food_patterns)
-
+    
     matches = matcher(doc)
-
+    
     for match_id, start, end in matches:
         span = doc[start:end]
         rule_id = nlp.vocab.strings[match_id]
@@ -331,7 +354,7 @@ def extract_additional_entities(text):
                     medications.append(med)
         elif rule_id == "FOOD":
             food_intake = span.text
-
+    
     # Extract entities using SpaCy's NER
     for ent in doc.ents:
         if ent.label_ == 'GPE':
@@ -340,7 +363,7 @@ def extract_additional_entities(text):
             # Attempt to extract duration from DATE and TIME entities
             if not duration:
                 duration = ent.text
-
+    
     # Extract age using regex patterns
     age_patterns = [
         r'(\b\d{1,2}\b)\s*(years old|year old|y/o|yo|yrs old)',
@@ -353,7 +376,7 @@ def extract_additional_entities(text):
         if match:
             age = int(match.group(1))
             break
-
+    
     # Extract gender using regex patterns
     gender_patterns = [
         r'\b(male|female|man|woman|boy|girl)\b',
@@ -369,10 +392,10 @@ def extract_additional_entities(text):
             elif gender in ['woman', 'girl']:
                 gender = 'female'
             break
-
+    
     # Log extracted entities for debugging
     logger.info(f"Extracted Entities: Age={age}, Gender={gender}, Location={location}, Duration={duration}, Medications={medications}, Food Intake={food_intake}")
-
+    
     return {
         'age': age,
         'gender': gender,
@@ -520,10 +543,10 @@ def generate_report(conversation_history):
     """
     # Extract all necessary information
     matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
-
+    
     # Map symptoms to diseases
     probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info, causes=[])
-
+    
     # Display the report
     st.subheader("📄 **Analytical Report:**")
     st.write("**Initial Information:**")
@@ -540,7 +563,7 @@ def generate_report(conversation_history):
         st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
     if additional_info['food_intake']:
         st.write(f"**Recent Food Intake:** {additional_info['food_intake']}")
-
+    
     # Summary of answers
     st.subheader("📝 **Summary of Your Responses:**")
     summary_data = []
@@ -554,17 +577,17 @@ def generate_report(conversation_history):
             })
     df_summary = pd.DataFrame(summary_data)
     st.table(df_summary)
-
+    
     if probable_diseases:
         st.subheader("🩺 **Probable Diseases:**")
         # Remove 'Causes' if present
         causes_report = probable_diseases.pop('Causes', None)
         for disease, prob in probable_diseases.items():
             st.write(f"**{disease}**: {prob}%")
-
+    
         if causes_report:
             st.write(f"**Possible Causes:** {causes_report}")
-
+    
         # Plot bar chart
         fig, ax = plt.subplots(figsize=(10, 6))
         sns.barplot(x=list(probable_diseases.keys()), y=list(probable_diseases.values()), ax=ax)
@@ -606,9 +629,8 @@ def extract_all_symptoms(conversation_history):
             for key in additional_info:
                 if key in info and info[key]:
                     if isinstance(info[key], list):
-                        # Extend the list and remove duplicates
                         additional_info[key].extend(info[key])
-                        additional_info[key] = list(set(additional_info[key]))
+                        additional_info[key] = list(set(additional_info[key]))  # Remove duplicates
                     else:
                         if not additional_info[key]:
                             additional_info[key] = info[key]
@@ -620,9 +642,8 @@ def extract_all_symptoms(conversation_history):
             for key in additional_info:
                 if key in info and info[key]:
                     if isinstance(info[key], list):
-                        # Extend the list and remove duplicates
                         additional_info[key].extend(info[key])
-                        additional_info[key] = list(set(additional_info[key]))
+                        additional_info[key] = list(set(additional_info[key]))  # Remove duplicates
                     else:
                         if not additional_info[key]:
                             additional_info[key] = info[key]
@@ -643,10 +664,10 @@ def play_greetings():
     """
     # Greeting in Hindi
     greeting_text = "ओ-हेल्थ में आपका स्वागत है। कृपया नीचे दिए गए विकल्पों में से एक चुनें ताकि हम आपकी सहायता कर सकें।"
-
+    
     # Generate audio
     audio_bytes = generate_audio(greeting_text, lang='hi')
-
+    
     if audio_bytes:
         # Provide audio playback
         st.markdown("### 📢 **Welcome!**")
@@ -781,7 +802,7 @@ def main():
             user_input = st.text_area(
                 "📋 Enter your symptoms and additional information:",
                 height=150,
-                placeholder="e.g., I have been suffering from fever and cough for the past 3 days. I have taken Ibuprofen and Dolo 650 medications."
+                placeholder="e.g., I have been having fever and cough for the past two days. I have taken Dolo 650 and Ibuprofen medication."
             )
 
             if st.button("Submit"):
