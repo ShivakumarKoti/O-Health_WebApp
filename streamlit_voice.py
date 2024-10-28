@@ -19,7 +19,7 @@ import io
 # -------------------- Environment Setup -------------------- #
 
 # Load environment variables from .env file
-dotenv.load_dotenv()
+#dotenv.load_dotenv()
 
 # Set the OpenAI API key from environment variables
 openai.api_key = st.secrets["OPENAI_API_KEY"]
