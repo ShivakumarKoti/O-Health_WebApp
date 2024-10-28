@@ -24,7 +24,7 @@ dotenv.load_dotenv()
 # Set the OpenAI API key from environment variables
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-if not OPENAI_API_KEY:
+if not openai.api_key:
     st.error("OpenAI API key not found. Please set it in the .env file.")
     st.stop()
 
