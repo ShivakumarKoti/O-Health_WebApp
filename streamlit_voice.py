@@ -14,9 +14,9 @@ import logging
 from spacy.matcher import Matcher
 from gtts import gTTS
 import io
-import openai  # Added import
+import openai  # Ensure openai is imported
 import requests  # For downloading the model
-from zipfile import ZipFile  # For extracting the model
+import zipfile  # For extracting the model
 
 # -------------------- Environment Setup -------------------- #
 
@@ -38,44 +38,64 @@ logger = logging.getLogger(__name__)
 
 # -------------------- Load BioBERT NER Model -------------------- #
 
-# URL to download the BioBERT NER model zip file from Dropbox
-MODEL_ZIP_URL = "https://www.dropbox.com/scl/fi/bsphlpwlt7jclb9ybiyx6/medical-bert-symptom-ner.zip?rlkey=j1066ivw1qvkp0c8urpm8pjv6&dl=1"
+# URL to your BioBERT NER model zip file hosted externally
+BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/bsphlpwlt7jclb9ybiyx6/medical-bert-symptom-ner.zip?rlkey=j1066ivw1qvkp0c8urpm8pjv6&st=bk4e923j&dl=1"
 
-def download_and_extract_model(url, extract_to='medical-bert-symptom-ner'):
-    """
-    Download and extract the BioBERT NER model from the provided URL.
-    """
-    try:
-        if not os.path.exists(extract_to):
-            logger.info("Downloading BioBERT NER model...")
-            with requests.get(url, stream=True) as r:
-                r.raise_for_status()
-                with open("medical_bert_model.zip", "wb") as f:
-                    for chunk in r.iter_content(chunk_size=8192):
-                        f.write(chunk)
-            logger.info("Download complete. Extracting the model...")
-            with ZipFile("medical_bert_model.zip", 'r') as zip_ref:
-                zip_ref.extractall(extract_to)
-            logger.info("BioBERT NER model downloaded and extracted successfully.")
-            os.remove("medical_bert_model.zip")  # Clean up the zip file after extraction
-        else:
-            logger.info("BioBERT NER model already exists. Skipping download.")
-    except Exception as e:
-        st.error(f"An error occurred while downloading/extracting the model: {e}")
-        logger.error(f"Model download/extraction error: {e}")
-        st.stop()
+# Path to the BioBERT model directory
+BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be extracted
 
+def download_and_unzip_biobert_model(model_url, model_dir):
+    if not os.path.exists(model_dir):
+        st.info("Downloading the BioBERT NER model. Please wait...")
+        # Download the model zip file
+        with st.spinner('Downloading BioBERT NER model...'):
+            try:
+                response = requests.get(model_url, stream=True)
+                response.raise_for_status()
+                with open('biobert_model.zip', 'wb') as out_file:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        if chunk:
+                            out_file.write(chunk)
+                logger.info("BioBERT NER model downloaded successfully.")
+            except requests.exceptions.RequestException as e:
+                st.error(f"Failed to download the BioBERT NER model: {e}")
+                logger.error(f"Failed to download the BioBERT NER model: {e}")
+                st.stop()
+        # Unzip the model
+        try:
+            with zipfile.ZipFile('biobert_model.zip', 'r') as zip_ref:
+                zip_ref.extractall('.')
+            st.success("BioBERT NER model downloaded and extracted successfully.")
+            logger.info("BioBERT NER model extracted successfully.")
+        except zipfile.BadZipFile as e:
+            st.error("Downloaded BioBERT model file is not a valid zip file.")
+            logger.error(f"Invalid zip file: {e}")
+            st.stop()
+        finally:
+            # Remove the zip file if it exists
+            if os.path.exists('biobert_model.zip'):
+                try:
+                    os.remove('biobert_model.zip')
+                    logger.info("biobert_model.zip removed successfully.")
+                except Exception as e:
+                    st.warning(f"Could not remove biobert_model.zip: {e}")
+                    logger.warning(f"Could not remove biobert_model.zip: {e}")
+
+# Download and unzip the BioBERT model if it doesn't exist
+download_and_unzip_biobert_model(BIOBERT_MODEL_URL, BIOBERT_MODEL_DIR)
+
+# Check if the BioBERT model directory exists after extraction
+if not os.path.exists(BIOBERT_MODEL_DIR):
+    st.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
+    logger.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
+    st.stop()
+
+# Load the tokenizer and model using caching
 @st.cache_resource(show_spinner=False)
-def get_biobert_pipeline():
-    """
-    Download (if not already), extract, and load the BioBERT NER pipeline.
-    """
-    model_dir = 'medical-bert-symptom-ner'
-    download_and_extract_model(MODEL_ZIP_URL, extract_to=model_dir)
-    
+def load_biobert_ner_pipeline():
     try:
-        tokenizer = AutoTokenizer.from_pretrained(model_dir, add_prefix_space=True)
-        model = AutoModelForTokenClassification.from_pretrained(model_dir)
+        tokenizer = AutoTokenizer.from_pretrained(BIOBERT_MODEL_DIR, add_prefix_space=True)
+        model = AutoModelForTokenClassification.from_pretrained(BIOBERT_MODEL_DIR)
         device = 0 if torch.cuda.is_available() else -1
         ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
         logger.info("BioBERT NER pipeline loaded successfully.")
@@ -85,7 +105,7 @@ def get_biobert_pipeline():
         logger.error(f"Failed to load BioBERT NER pipeline: {e}")
         st.stop()
 
-ner_pipeline = get_biobert_pipeline()
+ner_pipeline = load_biobert_ner_pipeline()
 st.sidebar.success("BioBERT NER model loaded successfully!")
 
 # -------------------- Load SpaCy Model -------------------- #
