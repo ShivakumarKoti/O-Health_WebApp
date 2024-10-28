@@ -46,7 +46,7 @@ Symptoms: Cough, Fever, High Temperature, Sleepiness, Nausea
 Duration: since 2 days
 Age: 33 years old
 Gender: Male
-Medications Taken: Ibuprofen, Ibuprofen And
+Medications Taken: Ibuprofen
 
 Next Steps:
 1. Quantization: Prune and quantize/Distill the model after ‘step 4’ with quantize_model.py and select the zip model in streamlit_app
@@ -60,4 +60,5 @@ Next Steps:
 Example input "I have a fever since 2 days ever since I was drenched in the rain, and rashes on my skin since yesterday. I have peanut allergy and had some roasted peanuts and nutella yesterday"
 Expected Output: Your fever might be caused due to the rain and rashes could be an allergic reaction to the peanuts
 6. Increase and customize the questions for each symptom extracted to make the dynamic questioning more effective on streamlit_voice.py
+7. Train the model with more diseases and symptom
 
