@@ -25,7 +25,7 @@ from spacy.matcher import Matcher
 dotenv.load_dotenv()
 
 # Securely set the OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 if not openai.api_key:
     st.error("OpenAI API key not found. Please set it in the .env file.")
