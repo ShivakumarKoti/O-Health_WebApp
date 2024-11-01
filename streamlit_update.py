@@ -3,15 +3,12 @@ import datetime
 import streamlit as st
 from audio_recorder_streamlit import audio_recorder
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from rapidfuzz import process, fuzz
 import torch
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 import spacy
 import re
 import logging
-from spacy.matcher import Matcher
 from gtts import gTTS
 import io
 import openai
@@ -144,6 +141,13 @@ symptom_followup_questions = {
         {"hi": "क्या आपने हाल ही में किसी उच्च जोखिम वाले क्षेत्र की यात्रा की है?", "en": "Have you recently traveled to any high-risk areas?", "category": "travel_history"},
         {"hi": "क्या आपको सिरदर्द हो रहा है?", "en": "Are you experiencing headaches?", "category": "headache"}
     ],
+    "Cough": [
+        {"hi": "क्या आपका खांसी सूखी है या कफ के साथ है?", "en": "Is your cough dry or productive with phlegm?", "category": "cough_type"},
+        {"hi": "क्या आपके खांसी के साथ बुखार है?", "en": "Do you have a fever along with your cough?", "category": "fever"},
+        {"hi": "क्या आप सांस लेने में कठिनाई महसूस करते हैं?", "en": "Are you experiencing difficulty breathing?", "category": "breathing"},
+        {"hi": "क्या आपने किसी धुएँ या प्रदूषण के संपर्क में आए हैं?", "en": "Have you been exposed to smoke or pollution?", "category": "exposure"},
+        {"hi": "क्या आपकी खांसी रात में ज्यादा होती है?", "en": "Does your cough worsen at night?", "category": "time"}
+    ],
     # Add more symptoms and their corresponding follow-up questions as needed
 }
 
@@ -249,7 +253,7 @@ def extract_additional_entities(text):
     duration = None
     medications = []
 
-    # Medications list
+    # Medications list (extend as needed)
     medications_list = ["ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen", "amoxicillin", "antibiotic", "metformin", "lisinopril", "atorvastatin"]
     tokens = [token.text.lower() for token in doc]
     for med in medications_list:
@@ -316,14 +320,14 @@ def extract_additional_entities(text):
 
 def determine_followup_questions(matched_symptoms, additional_info):
     followup_questions = []
-    asked_questions = set()
+    asked_categories = set()
 
+    # Determine questions based on matched symptoms
     for symptom in matched_symptoms:
         if symptom in symptom_followup_questions:
             for q in symptom_followup_questions[symptom]:
-                question_en = q['en']
                 category = q.get('category')
-                if question_en not in asked_questions and len(followup_questions) < 5:
+                if category not in asked_categories and len(followup_questions) < 5:
                     # Skip questions if the information is already provided
                     if category == 'medications' and additional_info.get('medications'):
                         continue
@@ -334,24 +338,25 @@ def determine_followup_questions(matched_symptoms, additional_info):
                     if category == 'gender' and additional_info.get('gender'):
                         continue
                     followup_questions.append(q)
-                    asked_questions.add(question_en)
+                    asked_categories.add(category)
                 if len(followup_questions) >= 5:
                     break
-            if len(followup_questions) >= 5:
-                break
+        if len(followup_questions) >= 5:
+            break
 
-    # Now, check for missing additional info
+    # Add additional follow-up questions if needed
     for q in additional_followup_questions:
         category = q.get('category')
         if category in additional_info and additional_info[category]:
             continue  # Skip if info already provided
-        question_en = q['en']
-        if question_en not in asked_questions and len(followup_questions) < 5:
-            followup_questions.append(q)
-            asked_questions.add(question_en)
+        if category in asked_categories:
+            continue  # Skip if already asked
         if len(followup_questions) >= 5:
             break
+        followup_questions.append(q)
+        asked_categories.add(category)
 
+    logger.info(f"Determined Follow-Up Questions: {followup_questions}")
     return followup_questions
 
 def extract_and_prepare_questions(conversation_history):
@@ -421,7 +426,7 @@ def generate_report(conversation_history):
     if additional_info['medications']:
         st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
 
-    st.subheader("📝 **Follow-Up Questions and Responses:**")
+    st.subheader("📝 **Transcript of Questions and Answers:**")
     question_count = 1
     for entry in conversation_history:
         if 'followup_question_en' in entry and 'response' in entry:
@@ -458,6 +463,7 @@ def inject_custom_css():
 def main():
     inject_custom_css()
 
+    # Initialize session state variables
     if 'conversation_step' not in st.session_state:
         st.session_state.conversation_step = 0
         st.session_state.conversation_history = []
@@ -494,11 +500,11 @@ def main():
         st.header("🗣️ Please Press the Microphone Button and Speak Your Symptoms:")
 
         if not st.session_state.mic_pressed:
-            if st.button("🎤", key="mic_button"):
+            if st.button("🎤", key="mic_button_initial"):
                 st.session_state.mic_pressed = True
         elif st.session_state.mic_pressed:
             # Record audio
-            audio_bytes = audio_recorder(key="voice_input")
+            audio_bytes = audio_recorder(key="voice_input_initial")
             if audio_bytes:
                 st.audio(audio_bytes, format="audio/wav")
                 file_name = save_audio_file(audio_bytes, "wav")
@@ -534,12 +540,11 @@ def main():
                 st.subheader(f"🔍 Follow-Up Question {st.session_state.current_followup + 1} of {total_questions}:")
                 st.write(f"**Hindi:** {current_question['hi']}")
                 st.write(f"**English:** {current_question['en']}")
-                st.session_state.mic_pressed = False  # Reset mic_pressed
                 st.session_state.waiting_for_response = True
             else:
                 st.header("🗣️ Please Press the Microphone Button and Speak Your Answer:")
                 if not st.session_state.mic_pressed:
-                    if st.button("🎤", key=f"mic_button_{st.session_state.current_followup}"):
+                    if st.button("🎤", key=f"mic_button_followup_{st.session_state.current_followup}"):
                         st.session_state.mic_pressed = True
                 elif st.session_state.mic_pressed:
                     # Record response
@@ -555,7 +560,6 @@ def main():
                                 st.subheader(f"📝 Response to Follow-Up Question {st.session_state.current_followup + 1} (English):")
                                 st.write(response_transcribed)
                                 st.session_state.conversation_history.append({
-                                    'followup_question_hi': current_question['hi'],
                                     'followup_question_en': current_question['en'],
                                     'response': response_transcribed
                                 })
@@ -579,8 +583,6 @@ def main():
                                 st.session_state.current_followup += 1
                                 st.session_state.mic_pressed = False
                                 st.session_state.waiting_for_response = False
-                                # Remove previous question and response from display
-                                st.empty()
                                 st.experimental_rerun()
                             else:
                                 st.error("Failed to transcribe your audio response.")
@@ -613,17 +615,17 @@ def main():
         # Display extracted information
         matched_symptoms, additional_info = extract_all_symptoms(st.session_state.conversation_history)
         st.write("**Extracted Information:**")
-        st.write(f"Symptoms: {', '.join(matched_symptoms) if matched_symptoms else 'Not specified'}")
+        st.write(f"**Symptoms:** {', '.join(matched_symptoms) if matched_symptoms else 'Not specified'}")
         if additional_info['age']:
-            st.write(f"Age: {additional_info['age']} years old")
+            st.write(f"**Age:** {additional_info['age']} years old")
         if additional_info['gender']:
-            st.write(f"Gender: {additional_info['gender'].title()}")
+            st.write(f"**Gender:** {additional_info['gender'].title()}")
         if additional_info['location']:
-            st.write(f"Location: {additional_info['location']}")
+            st.write(f"**Location:** {additional_info['location']}")
         if additional_info['duration']:
-            st.write(f"Duration: {additional_info['duration']}")
+            st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info['medications']:
-            st.write(f"Medications: {', '.join(additional_info['medications'])}")
+            st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
 
 if __name__ == "__main__":
     main()
