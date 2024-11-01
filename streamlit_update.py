@@ -254,7 +254,14 @@ def extract_additional_entities(text):
     medications = []
 
     # Medications list (extend as needed)
-    medications_list = ["ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen", "amoxicillin", "antibiotic", "metformin", "lisinopril", "atorvastatin"]
+    medications_list = [
+        "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen",
+        "amoxicillin", "antibiotic", "metformin", "lisinopril", "atorvastatin",
+        "cetirizine", "azithromycin", "hydrochlorothiazide", "omeprazole",
+        "sertraline", "naproxen", "albuterol", "simvastatin", "loratadine",
+        "furosemide", "clopidogrel", "prednisone", "insulin", "levothyroxine"
+        # Add more as needed
+    ]
     tokens = [token.text.lower() for token in doc]
     for med in medications_list:
         if med.lower() in tokens:
