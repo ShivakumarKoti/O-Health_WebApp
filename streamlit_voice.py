@@ -952,7 +952,6 @@ def main():
 if __name__ == "__main__":
     main()
 '''
-
 import os
 import datetime
 import streamlit as st
@@ -969,22 +968,18 @@ import logging
 from spacy.matcher import Matcher
 from gtts import gTTS
 import io
-import openai  # Ensure openai is imported
-import requests  # For downloading the model
-import zipfile  # For extracting the model
+import openai
+import requests
+import zipfile
+import base64
 
 # -------------------- Environment Setup -------------------- #
 
-# Set the OpenAI API key from Streamlit secrets
-try:
-    openai.api_key = st.secrets["OPENAI_API_KEY"]
-except KeyError:
-    st.error("""
-        OpenAI API key not found. Please set it in the Streamlit Secrets.
-        If you're running this app locally, ensure you have a `.env` file with the following content:
+# Set the OpenAI API key from environment variable
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-        OPENAI_API_KEY=your_openai_api_key_here
-    """)
+if not openai.api_key:
+    st.error("OpenAI API key not found. Please set it as an environment variable 'OPENAI_API_KEY'.")
     st.stop()
 
 # Initialize logging
@@ -993,11 +988,8 @@ logger = logging.getLogger(__name__)
 
 # -------------------- Load BioBERT NER Model -------------------- #
 
-# URL to your BioBERT NER model zip file hosted externally
 BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/bsphlpwlt7jclb9ybiyx6/medical-bert-symptom-ner.zip?rlkey=j1066ivw1qvkp0c8urpm8pjv6&st=bk4e923j&dl=1"
-
-# Path to the BioBERT model directory
-BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be extracted
+BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'
 
 def download_and_unzip_biobert_model(model_url, model_dir):
     if not os.path.exists(model_dir):
@@ -1027,7 +1019,6 @@ def download_and_unzip_biobert_model(model_url, model_dir):
             logger.error(f"Invalid zip file: {e}")
             st.stop()
         finally:
-            # Remove the zip file if it exists
             if os.path.exists('biobert_model.zip'):
                 try:
                     os.remove('biobert_model.zip')
@@ -1038,12 +1029,6 @@ def download_and_unzip_biobert_model(model_url, model_dir):
 
 # Download and unzip the BioBERT model if it doesn't exist
 download_and_unzip_biobert_model(BIOBERT_MODEL_URL, BIOBERT_MODEL_DIR)
-
-# Check if the BioBERT model directory exists after extraction
-if not os.path.exists(BIOBERT_MODEL_DIR):
-    st.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
-    logger.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
-    st.stop()
 
 # Load the tokenizer and model using caching
 @st.cache_resource(show_spinner=False)
@@ -1067,9 +1052,6 @@ st.sidebar.success("BioBERT NER model loaded successfully!")
 
 @st.cache_resource
 def load_spacy_model():
-    """
-    Load the SpaCy model for additional NLP tasks.
-    """
     try:
         nlp = spacy.load('en_core_web_sm')
         logger.info("SpaCy model 'en_core_web_sm' loaded successfully.")
@@ -1085,9 +1067,6 @@ nlp = load_spacy_model()
 
 @st.cache_data
 def load_disease_symptom_mapping():
-    """
-    Load the disease-symptom mapping from a CSV file.
-    """
     csv_file = "disease_symptom_mapping.csv"
     if not os.path.exists(csv_file):
         st.error(f"'{csv_file}' not found in the current directory.")
@@ -1107,60 +1086,32 @@ def load_disease_symptom_mapping():
         st.stop()
 
 df_disease_symptom = load_disease_symptom_mapping()
-
-# Prepare a list of known symptoms
 known_symptoms = df_disease_symptom['SymptomName'].unique()
 
 # -------------------- Define Follow-Up Questions -------------------- #
 
-# Define a dictionary mapping symptoms to potential follow-up questions in Hindi and their English translations
 symptom_followup_questions = {
     "Fever": [
-        {"hi": "क्या आपकी बुखार लगातार है या बार-बार आती है?", "en": "Is your fever constant or intermittent?"},
-        {"hi": "क्या आपने अपने बुखार के लिए कोई दवा ली है?", "en": "Have you taken any medication for your fever?"},
-        {"hi": "क्या आप ठंडक महसूस कर रहे हैं?", "en": "Are you experiencing any chills?"},
-        {"hi": "क्या आपने हाल ही में किसी उच्च जोखिम वाले क्षेत्र की यात्रा की है?", "en": "Have you recently traveled to any high-risk areas?"},
-        {"hi": "क्या आपको सिरदर्द हो रहा है?", "en": "Are you experiencing headaches?"}
-    ],
-    "Cough": [
-        {"hi": "क्या आपकी खांसी सूखी है या बलगम के साथ है?", "en": "Is your cough dry or productive?"},
-        {"hi": "क्या खांसी के दौरान आपको छाती में दर्द होता है?", "en": "Have you experienced any chest pain while coughing?"},
-        {"hi": "क्या आपको सांस लेने में कोई तकलीफ हो रही है?", "en": "Do you have any shortness of breath?"},
-        {"hi": "क्या आपकी खांसी के साथ खून भी आता है?", "en": "Do you cough up blood?"},
-        {"hi": "क्या आपकी खांसी रात में ज्यादा होती है?", "en": "Is your cough worse at night?"}
-    ],
-    "Abdominal Pain": [
-        {"hi": "क्या आपने हाल ही में कोई तीव्र व्यायाम किया है या गिर पड़े हैं?", "en": "Did you do any intense workouts or fall recently?"},
-        {"hi": "क्या आपको मिचली या उल्टी हुई है?", "en": "Have you experienced any nausea or vomiting?"},
-        {"hi": "क्या आपके मल त्याग में कोई बदलाव आया है?", "en": "Do you have any changes in your bowel movements?"},
-        {"hi": "क्या आपने किसी भी प्रकार का फुलावट या गैस महसूस किया है?", "en": "Have you noticed any bloating or gas?"},
-        {"hi": "क्या दर्द स्थानीयकृत है या सामान्यीकृत?", "en": "Is the pain localized or generalized?"}
-    ],
-    "High Fever": [
-        {"hi": "क्या आपकी बुखार में रात को अधिक होती है?", "en": "Is your fever higher at night?"},
-        {"hi": "क्या आपके शरीर में दर्द होता है?", "en": "Do you experience body aches?"},
-        {"hi": "क्या आपको पसीना आ रहा है?", "en": "Are you sweating?"},
-        {"hi": "क्या आपकी बुखार कम हो रही है या बढ़ रही है?", "en": "Is your fever decreasing or increasing?"},
-        {"hi": "क्या आपके पास कोई अन्य लक्षण हैं?", "en": "Do you have any other symptoms?"}
+        {"hi": "क्या आपकी बुखार लगातार है या बार-बार आती है?", "en": "Is your fever constant or intermittent?", "category": "fever_type"},
+        {"hi": "क्या आपने अपने बुखार के लिए कोई दवा ली है?", "en": "Have you taken any medication for your fever?", "category": "medications"},
+        {"hi": "क्या आप ठंडक महसूस कर रहे हैं?", "en": "Are you experiencing any chills?", "category": "chills"},
+        {"hi": "क्या आपने हाल ही में किसी उच्च जोखिम वाले क्षेत्र की यात्रा की है?", "en": "Have you recently traveled to any high-risk areas?", "category": "travel_history"},
+        {"hi": "क्या आपको सिरदर्द हो रहा है?", "en": "Are you experiencing headaches?", "category": "headache"}
     ],
     # Add more symptoms and their corresponding follow-up questions as needed
 }
 
-# Additional questions for missing information in Hindi and English
 additional_followup_questions = [
-    {"hi": "आपकी उम्र क्या है?", "en": "What is your age?"},
-    {"hi": "आपका लिंग क्या है?", "en": "What is your gender?"},
-    {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?"},
-    {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?"},
-    {"hi": "आपने हाल ही में क्या खाया है?", "en": "What have you eaten recently?"}  # Added food intake question
+    {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age"},
+    {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender"},
+    {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location"},
+    {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms"},
+    {"hi": "लक्षण कब से हैं?", "en": "How long have you had these symptoms?", "category": "duration"}
 ]
 
 # -------------------- Core Functions -------------------- #
 
 def save_audio_file(audio_bytes, file_extension):
-    """
-    Save audio bytes to a file with the specified extension.
-    """
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     file_name = f"audio_{timestamp}.{file_extension}"
 
@@ -1175,10 +1126,6 @@ def save_audio_file(audio_bytes, file_extension):
         return None
 
 def transcribe_audio(file_path):
-    """
-    Transcribe the audio file at the specified path using OpenAI's Whisper API.
-    Uses the 'translate' endpoint to get English transcription.
-    """
     try:
         with open(file_path, "rb") as audio_file:
             transcript = openai.Audio.translate("whisper-1", audio_file)
@@ -1190,7 +1137,6 @@ def transcribe_audio(file_path):
         logger.error(f"Transcription failed: {e}")
         return None
     finally:
-        # Delete the audio file after transcription
         if os.path.exists(file_path):
             try:
                 os.remove(file_path)
@@ -1200,10 +1146,6 @@ def transcribe_audio(file_path):
                 logger.warning(f"Could not delete audio file {file_path}: {e}")
 
 def generate_audio(text, lang='hi'):
-    """
-    Generate audio from text using Google Text-to-Speech.
-    Returns audio bytes.
-    """
     try:
         tts = gTTS(text=text, lang=lang)
         fp = io.BytesIO()
@@ -1216,54 +1158,35 @@ def generate_audio(text, lang='hi'):
         logger.error(f"Failed to generate audio: {e}")
         return None
 
+def embed_audio_autoplay(audio_bytes):
+    audio_base64 = base64.b64encode(audio_bytes).decode()
+    audio_html = f"""
+    <audio autoplay>
+        <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
+    </audio>
+    """
+    st.markdown(audio_html, unsafe_allow_html=True)
+
 def extract_symptoms(text):
-    """
-    Extract symptoms from the input text using BioBERT-based NER and detect negations.
-    Returns a set of affirmed symptoms.
-    """
     try:
         entities = ner_pipeline(text)
         if not entities:
             logger.info("No entities extracted by BioBERT NER.")
             return set()
-        
-        # Initialize SpaCy Doc for negation detection
-        doc = nlp(text)
-        
-        # Dictionary to hold symptom presence
-        symptoms_presence = {}
-        
-        for entity in entities:
-            symptom = entity['word'].title()
-            # Initialize as True (present) by default
-            symptoms_presence[symptom] = True
-            
-            # Find the token in SpaCy Doc
-            for token in doc:
-                if token.text.lower() == entity['word'].lower():
-                    # Check if there's a negation modifier
-                    neg = False
-                    for child in token.children:
-                        if child.dep_ == "neg":
-                            neg = True
-                            break
-                    symptoms_presence[symptom] = not neg
-                    break
-        
-        # Remove symptoms that are negated
-        symptoms_present = {symptom for symptom, present in symptoms_presence.items() if present}
-        logger.info(f"Extracted Symptoms after negation handling: {symptoms_present}")
-        return symptoms_present
+
+        symptoms = set()
+        for ent in entities:
+            if ent['entity_group'] == 'SYMPTOM':
+                symptoms.add(ent['word'].title())
+
+        logger.info(f"Extracted Symptoms: {symptoms}")
+        return symptoms
     except Exception as e:
         st.error(f"An error occurred during symptom extraction: {e}")
         logger.error(f"Symptom extraction error: {e}")
         return set()
 
 def match_symptoms(extracted_symptoms):
-    """
-    Match extracted symptoms with known symptoms using RapidFuzz.
-    Returns a set of matched symptoms.
-    """
     matched_symptoms = set()
     for symptom in extracted_symptoms:
         match = process.extractOne(symptom, known_symptoms, scorer=fuzz.WRatio, score_cutoff=80)
@@ -1273,329 +1196,134 @@ def match_symptoms(extracted_symptoms):
     return matched_symptoms
 
 def extract_additional_entities(text):
-    """
-    Extract additional entities like age, gender, location, duration, medications, and food intake from text.
-    """
-    doc = nlp(text.lower())  # Normalize text to lowercase for consistent matching
+    doc = nlp(text)
     age = None
     gender = None
     location = None
     duration = None
     medications = []
-    food_intake = None
-    
-    # Initialize Matcher with the shared vocab
-    matcher = Matcher(nlp.vocab)
-    
-    # Define patterns for duration
-    duration_patterns = [
-        [{"LOWER": {"IN": ["since", "for", "from"]}}, {"LOWER": {"IN": ["the", "past", "last"]}, "OP": "?"}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
-        [{"LOWER": {"IN": ["the", "past", "last"]}}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
-        [{"LOWER": {"IN": ["over", "during"]}}, {"LOWER": {"IN": ["the"]}}, {"LOWER": {"IN": ["past", "last"]}}, {"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}],
-        [{"LIKE_NUM": True}, {"LOWER": {"IN": ["day", "days", "week", "weeks", "month", "months", "year", "years"]}}, {"LOWER": {"IN": ["ago", "back"]}}],
-        [{"LOWER": {"IN": ["a", "an"]}}, {"LOWER": {"IN": ["day", "week", "month", "year"]}}]
-    ]
-    matcher.add("DURATION", duration_patterns)
-    
-    # Define patterns for medications
-    medication_patterns = [
-        [{"LOWER": {"IN": ["taking", "taken", "take", "using", "prescribed", "prescription"]}}, {"LOWER": "the", "OP": "?"}, {"POS": {"IN": ["NOUN", "PROPN"]}}, {"LOWER": {"IN": [",", "and"]}, "OP": "*"}, {"POS": {"IN": ["NOUN", "PROPN", "NUM"]}, "OP": "+"}],
-        [{"LOWER": {"IN": ["prescribed"]}}, {"POS": {"IN": ["NOUN", "PROPN"]}}, {"LOWER": {"IN": [",", "and"]}, "OP": "*"}, {"POS": {"IN": ["NOUN", "PROPN", "NUM"]}, "OP": "+"}]
-    ]
-    matcher.add("MEDICATION", medication_patterns)
-    
-    # Define patterns for food intake
-    food_patterns = [
-        [{"LOWER": {"IN": ["ate", "eaten", "have eaten", "had"]}}, {"POS": {"IN": ["NOUN", "PROPN"]}, "OP": "+"}],
-        [{"LOWER": {"IN": ["what", "have"]}}, {"LOWER": "you"}, {"LOWER": "eaten"}, {"LOWER": "recently"}, {"LOWER": "?"}]
-    ]
-    matcher.add("FOOD", food_patterns)
-    
-    matches = matcher(doc)
-    
-    for match_id, start, end in matches:
-        span = doc[start:end]
-        rule_id = nlp.vocab.strings[match_id]
-        if rule_id == "DURATION":
-            duration = span.text
-        elif rule_id == "MEDICATION":
-            meds = span.text.split()
-            # Clean and title case
-            meds = [med.strip(",").title() for med in meds if med.lower() not in ['taking', 'taken', 'take', 'using', 'prescribed', 'prescription', 'the']]
-            # Split medications by commas or 'and'
-            meds_list = re.split(r',| and ', ' '.join(meds))
-            for med in meds_list:
-                med = med.strip().title()
-                if med:  # Ensure it's not empty
-                    medications.append(med)
-        elif rule_id == "FOOD":
-            food_intake = span.text
-    
-    # Extract entities using SpaCy's NER
-    for ent in doc.ents:
-        if ent.label_ == 'GPE':
-            location = ent.text.title()
-        elif ent.label_ in ['DATE', 'TIME']:
-            # Attempt to extract duration from DATE and TIME entities
-            if not duration:
-                duration = ent.text
-    
-    # Extract age using regex patterns
+
+    # Medications list
+    medications_list = ["ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen", "amoxicillin", "antibiotic", "metformin", "lisinopril", "atorvastatin"]
+    tokens = [token.text.lower() for token in doc]
+    for med in medications_list:
+        if med.lower() in tokens:
+            medications.append(med.title())
+    medications = list(set(medications))  # remove duplicates
+
+    # Extract age
     age_patterns = [
-        r'(\b\d{1,2}\b)\s*(years old|year old|y/o|yo|yrs old)',
-        r'age\s*(\b\d{1,2}\b)',
-        r'i am\s*(\b\d{1,2}\b)',
-        r'my age is\s*(\b\d{1,2}\b)'
+        r'(\b\d{1,3}\b)\s*(years old|year old|y/o|yo|yrs old|yrs|years)',
+        r'age\s*(\b\d{1,3}\b)',
+        r'i am\s*(\b\d{1,3}\b)',
+        r'my age is\s*(\b\d{1,3}\b)',
+        r'(\b\d{1,3}\b)\s*(male|female)'
     ]
     for pattern in age_patterns:
         match = re.search(pattern, text, re.IGNORECASE)
         if match:
-            age = int(match.group(1))
+            age_candidate = match.group(1)
+            try:
+                age = int(age_candidate)
+                break
+            except ValueError:
+                continue
+
+    # Extract gender
+    gender_keywords = {'male', 'female', 'man', 'woman', 'boy', 'girl'}
+    for token in doc:
+        if token.text.lower() in gender_keywords:
+            gender = token.text.lower()
             break
-    
-    # Extract gender using regex patterns
-    gender_patterns = [
-        r'\b(male|female|man|woman|boy|girl)\b',
-        r'i am\s+(male|female)',
-        r'my gender is\s+(male|female)'
+
+    # Extract location
+    for ent in doc.ents:
+        if ent.label_ == 'GPE' or ent.label_ == 'LOC':
+            location = ent.text
+            break
+
+    # Extract duration
+    duration_patterns = [
+        r'(since|for|from)\s+(\d+\s+(day|days|week|weeks|month|months|year|years))',
+        r'(\d+\s+(day|days|week|weeks|month|months|year|years))\s+(ago|back)'
     ]
-    for pattern in gender_patterns:
+    for pattern in duration_patterns:
         match = re.search(pattern, text, re.IGNORECASE)
         if match:
-            gender = match.group(1).lower()
-            if gender in ['man', 'boy']:
-                gender = 'male'
-            elif gender in ['woman', 'girl']:
-                gender = 'female'
+            duration = match.group(2)
             break
-    
-    # Log extracted entities for debugging
-    logger.info(f"Extracted Entities: Age={age}, Gender={gender}, Location={location}, Duration={duration}, Medications={medications}, Food Intake={food_intake}")
-    
+    if not duration:
+        # Try to extract DATE entities
+        for ent in doc.ents:
+            if ent.label_ == 'DATE':
+                duration = ent.text
+                break
+
+    logger.info(f"Extracted Entities: Age={age}, Gender={gender}, Location={location}, Duration={duration}, Medications={medications}")
     return {
         'age': age,
         'gender': gender,
         'location': location,
         'duration': duration,
-        'medications': medications,
-        'food_intake': food_intake
+        'medications': medications
     }
 
-def map_symptoms_to_diseases(matched_symptoms, additional_info, causes):
-    """
-    Map the matched symptoms to probable diseases based on the disease-symptom mapping.
-    Include causes in the final report if available.
-    """
-    # Create disease-symptom mapping
-    disease_symptom_map = df_disease_symptom.groupby('DiseaseName')['SymptomName'].apply(set).to_dict()
-
-    # Assume prior probabilities are equal for all diseases
-    disease_prior = {disease: 1 / len(disease_symptom_map) for disease in disease_symptom_map}
-
-    # Adjust priors based on age, gender, and location (simplified example)
-    for disease in disease_prior:
-        # Example adjustments (in reality, use actual data)
-        if additional_info['age']:
-            if disease in ['Chickenpox', 'Measles'] and additional_info['age'] > 12:
-                disease_prior[disease] *= 0.5  # Less likely in adults
-        if additional_info['gender']:
-            if disease == 'Prostate Cancer' and additional_info['gender'] == 'female':
-                disease_prior[disease] = 0  # Females do not get prostate cancer
-        if additional_info['location']:
-            if disease == 'Altitude Sickness' and 'Mountain' in additional_info['location']:
-                disease_prior[disease] *= 2  # More likely in mountains
-
-    # Calculate likelihoods and posterior probabilities
-    disease_scores = {}
-    for disease, symptoms_set in disease_symptom_map.items():
-        matched = matched_symptoms.intersection(symptoms_set)
-        total_symptoms = len(symptoms_set)
-        if total_symptoms == 0:
-            continue
-        # Simple likelihood estimation
-        likelihood = len(matched) / total_symptoms
-        # Posterior probability proportional to likelihood * prior
-        posterior = likelihood * disease_prior[disease]
-        disease_scores[disease] = posterior
-
-    if disease_scores:
-        # Remove diseases with zero probability
-        disease_scores = {k: v for k, v in disease_scores.items() if v > 0}
-
-        if not disease_scores:
-            return {}
-        else:
-            # Normalize the probabilities
-            total = sum(disease_scores.values())
-            for disease in disease_scores:
-                disease_scores[disease] = round((disease_scores[disease] / total) * 100, 2)
-            # Sort diseases by probability
-            sorted_diseases = dict(sorted(disease_scores.items(), key=lambda item: item[1], reverse=True))
-            # Attach causes if any
-            if causes:
-                sorted_diseases['Causes'] = ', '.join(causes)
-            return sorted_diseases
-    else:
-        return {}
-
 def determine_followup_questions(matched_symptoms, additional_info):
-    """
-    Determine up to 5 follow-up questions based on matched symptoms and missing information.
-    """
     followup_questions = []
     asked_questions = set()
 
-    # Add symptom-specific follow-up questions
     for symptom in matched_symptoms:
         if symptom in symptom_followup_questions:
             for q in symptom_followup_questions[symptom]:
                 question_en = q['en']
+                category = q.get('category')
                 if question_en not in asked_questions and len(followup_questions) < 5:
+                    # Skip questions if the information is already provided
+                    if category == 'medications' and additional_info.get('medications'):
+                        continue
+                    if category == 'duration' and additional_info.get('duration'):
+                        continue
+                    if category == 'age' and additional_info.get('age'):
+                        continue
+                    if category == 'gender' and additional_info.get('gender'):
+                        continue
                     followup_questions.append(q)
                     asked_questions.add(question_en)
                 if len(followup_questions) >= 5:
                     break
+            if len(followup_questions) >= 5:
+                break
+
+    # Now, check for missing additional info
+    for q in additional_followup_questions:
+        category = q.get('category')
+        if category in additional_info and additional_info[category]:
+            continue  # Skip if info already provided
+        question_en = q['en']
+        if question_en not in asked_questions and len(followup_questions) < 5:
+            followup_questions.append(q)
+            asked_questions.add(question_en)
         if len(followup_questions) >= 5:
             break
-
-    # Add additional questions for missing information
-    if additional_info['duration'] is None and len(followup_questions) < 5:
-        for q in additional_followup_questions:
-            if "age" not in q['en'].lower() and "gender" not in q['en'].lower() and "location" not in q['en'].lower() and "medication" not in q['en'].lower() and "other" not in q['en'].lower() and "food" not in q['en'].lower():
-                question_en = q['en']
-                if question_en not in asked_questions:
-                    followup_questions.append(q)
-                    asked_questions.add(question_en)
-                    break  # Only one question for duration
-
-    if additional_info['age'] is None and len(followup_questions) < 5:
-        for q in additional_followup_questions:
-            if "age" in q['en'].lower() and q['en'] not in asked_questions:
-                followup_questions.append(q)
-                asked_questions.add(q['en'])
-                break
-
-    if additional_info['gender'] is None and len(followup_questions) < 5:
-        for q in additional_followup_questions:
-            if "gender" in q['en'].lower() and q['en'] not in asked_questions:
-                followup_questions.append(q)
-                asked_questions.add(q['en'])
-                break
-
-    if additional_info['location'] is None and len(followup_questions) < 5:
-        for q in additional_followup_questions:
-            if "location" in q['en'].lower() and q['en'] not in asked_questions:
-                followup_questions.append(q)
-                asked_questions.add(q['en'])
-                break
-
-    if not additional_info['medications'] and len(followup_questions) < 5:
-        for q in additional_followup_questions:
-            if "medication" in q['en'].lower() and q['en'] not in asked_questions:
-                followup_questions.append(q)
-                asked_questions.add(q['en'])
-                break
-
-    if additional_info['food_intake'] is None and len(followup_questions) < 5:
-        for q in additional_followup_questions:
-            if "food" in q['en'].lower() and q['en'] not in asked_questions:
-                followup_questions.append(q)
-                asked_questions.add(q['en'])
-                break
 
     return followup_questions
 
 def extract_and_prepare_questions(conversation_history):
-    """
-    Extract information from the conversation history and prepare follow-up questions.
-    """
     matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
+    st.session_state.additional_info = additional_info  # Store in session state for access elsewhere
     followup_questions = determine_followup_questions(matched_symptoms, additional_info)
     return followup_questions
 
-def generate_report(conversation_history):
-    """
-    Generate an analytical report based on the conversation history.
-    """
-    # Extract all necessary information
-    matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
-    
-    # Map symptoms to diseases
-    probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info, causes=[])
-    
-    # Display the report
-    st.subheader("📄 **Analytical Report:**")
-    st.write("**Initial Information:**")
-    st.write(f"**Symptoms:** {', '.join(matched_symptoms) if matched_symptoms else 'Not specified'}")
-    if additional_info['duration']:
-        st.write(f"**Duration:** {additional_info['duration']}")
-    if additional_info['age']:
-        st.write(f"**Age:** {additional_info['age']} years old")
-    if additional_info['gender']:
-        st.write(f"**Gender:** {additional_info['gender'].title()}")
-    if additional_info['location']:
-        st.write(f"**Location:** {additional_info['location']}")
-    if additional_info['medications']:
-        st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
-    if additional_info['food_intake']:
-        st.write(f"**Recent Food Intake:** {additional_info['food_intake']}")
-    
-    # Summary of answers
-    st.subheader("📝 **Summary of Your Responses:**")
-    summary_data = []
-    for entry in conversation_history:
-        if 'followup_question' in entry and 'response' in entry:
-            # Find the English version of the follow-up question
-            question_en = next((q['en'] for q in additional_followup_questions + [q for symptom in symptom_followup_questions for q in symptom_followup_questions[symptom]] if q['hi'] == entry['followup_question']), entry['followup_question'])
-            summary_data.append({
-                'Question': question_en,
-                'Your Answer': entry['response']
-            })
-    df_summary = pd.DataFrame(summary_data)
-    st.table(df_summary)
-    
-    if probable_diseases:
-        st.subheader("🩺 **Probable Diseases:**")
-        # Remove 'Causes' if present
-        causes_report = probable_diseases.pop('Causes', None)
-        for disease, prob in probable_diseases.items():
-            st.write(f"**{disease}**: {prob}%")
-    
-        if causes_report:
-            st.write(f"**Possible Causes:** {causes_report}")
-    
-        # Plot bar chart
-        fig, ax = plt.subplots(figsize=(10, 6))
-        sns.barplot(x=list(probable_diseases.keys()), y=list(probable_diseases.values()), ax=ax)
-        ax.set_xlabel("Disease")
-        ax.set_ylabel("Probability (%)")
-        ax.set_title("Probable Diseases")
-        plt.xticks(rotation=45, ha='right')
-        st.pyplot(fig)
-    else:
-        st.info("No probable diseases found based on the entered symptoms and information.")
-
-def generate_followup_report(conversation_history):
-    """
-    Generate a follow-up report based on the conversation history.
-    """
-    generate_report(conversation_history)
-
 def extract_all_symptoms(conversation_history):
-    """
-    Extract and match symptoms from the entire conversation history.
-    """
     matched_symptoms = set()
     additional_info = {
         'age': None,
         'gender': None,
         'location': None,
         'duration': None,
-        'medications': [],
-        'food_intake': None
+        'medications': []
     }
 
-    # Process each entry in the conversation history
     for entry in conversation_history:
         if 'user' in entry:
             user_text = entry['user']
@@ -1606,10 +1334,9 @@ def extract_all_symptoms(conversation_history):
                 if key in info and info[key]:
                     if isinstance(info[key], list):
                         additional_info[key].extend(info[key])
-                        additional_info[key] = list(set(additional_info[key]))  # Remove duplicates
+                        additional_info[key] = list(set(additional_info[key]))
                     else:
-                        if not additional_info[key]:
-                            additional_info[key] = info[key]
+                        additional_info[key] = info[key]
         if 'response' in entry:
             response_text = entry['response']
             symptoms = extract_symptoms(response_text)
@@ -1619,10 +1346,9 @@ def extract_all_symptoms(conversation_history):
                 if key in info and info[key]:
                     if isinstance(info[key], list):
                         additional_info[key].extend(info[key])
-                        additional_info[key] = list(set(additional_info[key]))  # Remove duplicates
+                        additional_info[key] = list(set(additional_info[key]))
                     else:
-                        if not additional_info[key]:
-                            additional_info[key] = info[key]
+                        additional_info[key] = info[key]
         if 'additional_symptoms' in entry:
             additional_symptoms = entry['additional_symptoms']
             if isinstance(additional_symptoms, list):
@@ -1634,42 +1360,37 @@ def extract_all_symptoms(conversation_history):
     logger.info(f"Additional Information: {additional_info}")
     return matched_symptoms, additional_info
 
-def play_greetings():
-    """
-    Generate and play a greeting message in Hindi.
-    """
-    # Greeting in Hindi
-    greeting_text = "ओ-हेल्थ में आपका स्वागत है। कृपया नीचे दिए गए विकल्पों में से एक चुनें ताकि हम आपकी सहायता कर सकें।"
-    
-    # Generate audio
-    audio_bytes = generate_audio(greeting_text, lang='hi')
-    
-    if audio_bytes:
-        # Provide audio playback with autoplay using HTML
-        st.markdown(
-            f"""
-            <audio autoplay>
-                <source src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            """,
-            unsafe_allow_html=True
-        )
+def generate_report(conversation_history):
+    matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
+    st.subheader("📄 **Final Report:**")
+    st.write("**Symptoms:**", ', '.join(matched_symptoms) if matched_symptoms else 'Not specified')
+    if additional_info['age']:
+        st.write(f"**Age:** {additional_info['age']} years old")
+    if additional_info['gender']:
+        st.write(f"**Gender:** {additional_info['gender'].title()}")
+    if additional_info['location']:
+        st.write(f"**Location:** {additional_info['location']}")
+    if additional_info['duration']:
+        st.write(f"**Duration of Symptoms:** {additional_info['duration']}")
+    if additional_info['medications']:
+        st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
 
-# Import base64 for audio embedding
-import base64
+    st.subheader("📝 **Follow-Up Questions and Responses:**")
+    question_count = 1
+    for entry in conversation_history:
+        if 'followup_question_en' in entry and 'response' in entry:
+            st.write(f"**Question {question_count} (English):** {entry['followup_question_en']}")
+            st.write(f"**Your Answer:** {entry['response']}")
+            st.write("---")
+            question_count += 1
 
 # -------------------- Custom CSS for Microphone Button -------------------- #
 
 def inject_custom_css():
-    """
-    Inject custom CSS to style the microphone button.
-    """
     custom_css = """
     <style>
-    /* Style the microphone button */
     .custom-mic-button button {
-        background-color: #28a745 !important; /* Green color */
+        background-color: #28a745 !important;
         color: white !important;
         font-size: 24px !important;
         width: 120px !important;
@@ -1679,8 +1400,8 @@ def inject_custom_css():
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-    .custom-mic-button button.recording {
-        background-color: #dc3545 !important; /* Red color when recording */
+    .custom-mic-button button:active {
+        background-color: #dc3545 !important;
     }
     </style>
     """
@@ -1689,167 +1410,177 @@ def inject_custom_css():
 # -------------------- Streamlit Interface -------------------- #
 
 def main():
-    """
-    Main function to run the integrated Whisper Transcription and BioBERT-based Symptom-to-Disease Mapper app.
-    """
-    # Inject custom CSS
     inject_custom_css()
 
-    # Initialize session state for dynamic questioning
     if 'conversation_step' not in st.session_state:
-        st.session_state.conversation_step = 0  # 0: Welcome, 1: Active Conversation, 2: Report Generation
-        st.session_state.conversation_history = []  # Stores the conversation
-        st.session_state.report_generated = False  # Flag to indicate if report is generated
-        st.session_state.followup_questions = []  # List of follow-up questions to ask
-        st.session_state.current_followup = 0  # Index of the current follow-up question
-
-    # Play greetings when the app loads
-    if st.session_state.conversation_step == 0:
-        play_greetings()
-        st.session_state.conversation_step = 1  # Move to active conversation after playing greetings
+        st.session_state.conversation_step = 0
+        st.session_state.conversation_history = []
+        st.session_state.report_generated = False
+        st.session_state.followup_questions = []
+        st.session_state.current_followup = 0
+        st.session_state.mic_pressed = False
+        st.session_state.waiting_for_response = False
+        st.session_state.additional_info = {
+            'age': None,
+            'gender': None,
+            'location': None,
+            'duration': None,
+            'medications': []
+        }
 
     st.title("🩺 O-Health Diagnostic Tool")
     st.write("""
         Welcome to the O-Health Diagnostic Tool. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
     """)
 
-    # Create a single microphone button for all interactions
-    st.header("🗣️ **Please Press the Microphone Button and Speak Your Symptoms:**")
-    mic_button = st.empty()
-
-    if 'mic_pressed' not in st.session_state:
+    if st.session_state.conversation_step == 0:
+        # Play welcome audio
+        welcome_text = "ओ-हेल्थ में आपका स्वागत है। कृपया माइक्रोफ़ोन बटन दबाएं और अपने लक्षण बोलें।"
+        audio_bytes = generate_audio(welcome_text, lang='hi')
+        if audio_bytes:
+            embed_audio_autoplay(audio_bytes)
+        st.session_state.conversation_step = 1
+        st.session_state.waiting_for_response = False
         st.session_state.mic_pressed = False
 
-    if not st.session_state.mic_pressed:
-        if mic_button.button("🎤 Start Recording", key="mic_button"):
-            st.session_state.mic_pressed = True
-    else:
-        # Record audio
-        audio_bytes = audio_recorder(key="voice_input")
-        if audio_bytes:
-            # Display the recorded audio
-            st.audio(audio_bytes, format="audio/wav")
+    # Conversation Step 1: Initial symptom input
+    if st.session_state.conversation_step == 1:
+        st.header("🗣️ Please Press the Microphone Button and Speak Your Symptoms:")
 
-            # Save the recorded audio to a file
-            file_name = save_audio_file(audio_bytes, "wav")
-
-            if file_name:
-                st.success("Audio recorded and saved successfully!")
-                st.info("Transcribing your audio... Please wait.")
-                # Transcribe the audio to English
-                transcribed_text = transcribe_audio(file_name)
-
-                if transcribed_text:
-                    st.subheader("📝 Transcribed Text (English):")
-                    st.write(transcribed_text)
-                    # Store the translated text in session state for diagnosis
-                    st.session_state.conversation_history.append({
-                        'user': transcribed_text
-                    })
-                    # Determine follow-up questions based on initial input
-                    st.session_state.followup_questions = extract_and_prepare_questions(st.session_state.conversation_history)
-                    # Reset mic_pressed for the next interaction
-                    st.session_state.mic_pressed = False
-                else:
-                    st.error("Failed to transcribe the audio.")
-                    st.session_state.mic_pressed = False
-
-    # Handle follow-up questions
-    if st.session_state.conversation_step == 1 and st.session_state.followup_questions and st.session_state.current_followup < len(st.session_state.followup_questions):
-        current_question = st.session_state.followup_questions[st.session_state.current_followup]
-
-        # Play the follow-up question audio automatically
-        question_audio = generate_audio(current_question['hi'], lang='hi')
-        if question_audio:
-            # Embed the audio with autoplay
-            st.markdown(
-                f"""
-                <audio autoplay>
-                    <source src="data:audio/mp3;base64,{base64.b64encode(question_audio).decode()}" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
-                """,
-                unsafe_allow_html=True
-            )
-
-        # Prompt user to press the mic button to answer
-        st.header(f"🔍 **Follow-Up Question {st.session_state.current_followup + 1}:** {current_question['en']}")
-        st.write("🗣️ **Press the microphone button below to answer:**")
-
-        # Single mic button for answering follow-up questions
-        if 'followup_mic_pressed' not in st.session_state:
-            st.session_state.followup_mic_pressed = False
-
-        if not st.session_state.followup_mic_pressed:
-            if st.button("🎤 Start Recording", key=f"followup_mic_button_{st.session_state.current_followup}"):
-                st.session_state.followup_mic_pressed = True
-        else:
-            # Record audio for follow-up question
-            followup_audio_bytes = audio_recorder(key=f"followup_voice_input_{st.session_state.current_followup}")
-            if followup_audio_bytes:
-                # Display the recorded audio
-                st.audio(followup_audio_bytes, format="audio/wav")
-
-                # Save the recorded audio to a file
-                followup_file_name = save_audio_file(followup_audio_bytes, "wav")
-
-                if followup_file_name:
+        if not st.session_state.mic_pressed:
+            if st.button("🎤", key="mic_button"):
+                st.session_state.mic_pressed = True
+        elif st.session_state.mic_pressed:
+            # Record audio
+            audio_bytes = audio_recorder(key="voice_input")
+            if audio_bytes:
+                st.audio(audio_bytes, format="audio/wav")
+                file_name = save_audio_file(audio_bytes, "wav")
+                if file_name:
                     st.success("Audio recorded and saved successfully!")
                     st.info("Transcribing your audio... Please wait.")
-                    # Transcribe the response
-                    response_transcribed = transcribe_audio(followup_file_name)
-
-                    if response_transcribed:
-                        st.subheader(f"📝 Response to Follow-Up Question {st.session_state.current_followup + 1} (English):")
-                        st.write(response_transcribed)
-                        # Store the response in conversation history
+                    transcribed_text = transcribe_audio(file_name)
+                    if transcribed_text:
+                        st.subheader("📝 Transcribed Text (English):")
+                        st.write(transcribed_text)
                         st.session_state.conversation_history.append({
-                            'followup_question': current_question['en'],
-                            'response': response_transcribed
+                            'user': transcribed_text
                         })
-                        # Extract any new symptoms from the response
-                        new_symptoms = extract_symptoms(response_transcribed)
-                        matched_new_symptoms = match_symptoms(new_symptoms)
-                        if matched_new_symptoms:
-                            st.session_state.conversation_history.append({
-                                'additional_symptoms': list(matched_new_symptoms)
-                            })
-                            # Notify the user about new symptoms detected
-                            st.info(f"New symptoms detected: {', '.join(matched_new_symptoms)}")
-                        # Extract additional information from the response
-                        additional_info = extract_additional_entities(response_transcribed)
-                        # Check if follow-up questions need to be updated based on new information
-                        if any(additional_info.values()):
-                            st.session_state.followup_questions = extract_and_prepare_questions(st.session_state.conversation_history)
-                        # Move to the next follow-up question or generate report
-                        st.session_state.current_followup += 1
-                        st.session_state.followup_mic_pressed = False
-
-                        if st.session_state.current_followup >= len(st.session_state.followup_questions) or st.session_state.current_followup >= 5:
-                            st.session_state.conversation_step = 2  # Proceed to report generation
+                        st.session_state.followup_questions = extract_and_prepare_questions(st.session_state.conversation_history)
+                        st.session_state.mic_pressed = False  # Reset mic_pressed for next use
+                        st.session_state.current_followup = 0
+                        st.session_state.conversation_step = 2  # Proceed to follow-up questions
+                        st.experimental_rerun()
                     else:
-                        st.error("Failed to transcribe your audio response.")
-                        st.session_state.followup_mic_pressed = False
-                else:
-                    st.error("Failed to save your response audio.")
-                    st.session_state.followup_mic_pressed = False
+                        st.error("Failed to transcribe the audio.")
+                        st.session_state.mic_pressed = False
 
-    # ----------------- Generate Report ----------------- #
-    if st.session_state.conversation_step == 2 and not st.session_state.report_generated:
+    # Conversation Step 2: Follow-up questions
+    if st.session_state.conversation_step == 2:
+        total_questions = len(st.session_state.followup_questions)
+        if st.session_state.current_followup < total_questions:
+            current_question = st.session_state.followup_questions[st.session_state.current_followup]
+            if not st.session_state.waiting_for_response:
+                # Play question audio
+                question_audio = generate_audio(current_question['hi'], lang='hi')
+                if question_audio:
+                    embed_audio_autoplay(question_audio)
+                st.subheader(f"🔍 Follow-Up Question {st.session_state.current_followup + 1} of {total_questions}:")
+                st.write(f"**Hindi:** {current_question['hi']}")
+                st.write(f"**English:** {current_question['en']}")
+                st.session_state.mic_pressed = False  # Reset mic_pressed
+                st.session_state.waiting_for_response = True
+            else:
+                st.header("🗣️ Please Press the Microphone Button and Speak Your Answer:")
+                if not st.session_state.mic_pressed:
+                    if st.button("🎤", key=f"mic_button_{st.session_state.current_followup}"):
+                        st.session_state.mic_pressed = True
+                elif st.session_state.mic_pressed:
+                    # Record response
+                    response_audio_bytes = audio_recorder(key=f"response_voice_input_{st.session_state.current_followup}")
+                    if response_audio_bytes:
+                        st.audio(response_audio_bytes, format="audio/wav")
+                        response_file_name = save_audio_file(response_audio_bytes, "wav")
+                        if response_file_name:
+                            st.success("Audio recorded and saved successfully!")
+                            st.info("Transcribing your audio... Please wait.")
+                            response_transcribed = transcribe_audio(response_file_name)
+                            if response_transcribed:
+                                st.subheader(f"📝 Response to Follow-Up Question {st.session_state.current_followup + 1} (English):")
+                                st.write(response_transcribed)
+                                st.session_state.conversation_history.append({
+                                    'followup_question_hi': current_question['hi'],
+                                    'followup_question_en': current_question['en'],
+                                    'response': response_transcribed
+                                })
+                                # Process the response (e.g., extract symptoms)
+                                new_symptoms = extract_symptoms(response_transcribed)
+                                matched_new_symptoms = match_symptoms(new_symptoms)
+                                if matched_new_symptoms:
+                                    st.session_state.conversation_history.append({
+                                        'additional_symptoms': list(matched_new_symptoms)
+                                    })
+                                # Also extract additional entities from the response
+                                info = extract_additional_entities(response_transcribed)
+                                # Update additional_info in session_state
+                                for key, value in info.items():
+                                    if value:
+                                        if isinstance(value, list):
+                                            st.session_state.additional_info[key].extend(value)
+                                            st.session_state.additional_info[key] = list(set(st.session_state.additional_info[key]))
+                                        else:
+                                            st.session_state.additional_info[key] = value
+                                st.session_state.current_followup += 1
+                                st.session_state.mic_pressed = False
+                                st.session_state.waiting_for_response = False
+                                # Remove previous question and response from display
+                                st.empty()
+                                st.experimental_rerun()
+                            else:
+                                st.error("Failed to transcribe your audio response.")
+                                st.session_state.mic_pressed = False
+                    else:
+                        st.error("No audio recorded. Please try again.")
+                        st.session_state.mic_pressed = False
+        else:
+            # All follow-up questions have been asked
+            st.session_state.conversation_step = 3
+            st.experimental_rerun()
+
+    # Conversation Step 3: Generate Report
+    if st.session_state.conversation_step == 3 and not st.session_state.report_generated:
         st.session_state.report_generated = True
         with st.spinner("Analyzing your information..."):
-            generate_followup_report(st.session_state.conversation_history)
+            generate_report(st.session_state.conversation_history)
 
-    # -------------------- Debugging -------------------- #
-    # Display the current conversation step for debugging
-    st.sidebar.markdown("## 🔍 **Debugging Information**")
-    st.sidebar.write(f"**Conversation Step:** {st.session_state.conversation_step}")
-    st.sidebar.write(f"**Report Generated:** {st.session_state.report_generated}")
-    st.sidebar.write("**Conversation History:**")
-    st.sidebar.json(st.session_state.conversation_history)
-
-# -------------------- Run the App -------------------- #
+    # Display conversation logs on the sidebar
+    with st.sidebar:
+        st.header("📝 Conversation Log")
+        for idx, entry in enumerate(st.session_state.conversation_history):
+            if 'user' in entry:
+                st.write(f"**User Input:** {entry['user']}")
+            if 'followup_question_en' in entry:
+                st.write(f"**Question {idx+1}:** {entry['followup_question_en']}")
+                st.write(f"**Answer:** {entry['response']}")
+            if 'additional_symptoms' in entry:
+                st.write(f"**Additional Symptoms Extracted:** {', '.join(entry['additional_symptoms'])}")
+        # Display extracted information
+        matched_symptoms, additional_info = extract_all_symptoms(st.session_state.conversation_history)
+        st.write("**Extracted Information:**")
+        st.write(f"Symptoms: {', '.join(matched_symptoms) if matched_symptoms else 'Not specified'}")
+        if additional_info['age']:
+            st.write(f"Age: {additional_info['age']} years old")
+        if additional_info['gender']:
+            st.write(f"Gender: {additional_info['gender'].title()}")
+        if additional_info['location']:
+            st.write(f"Location: {additional_info['location']}")
+        if additional_info['duration']:
+            st.write(f"Duration: {additional_info['duration']}")
+        if additional_info['medications']:
+            st.write(f"Medications: {', '.join(additional_info['medications'])}")
 
 if __name__ == "__main__":
     main()
+
+
 
