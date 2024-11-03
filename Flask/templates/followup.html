@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Follow-Up Questions</title>
+</head>
+<body>
+    <h2>🔍 Follow-Up Question {{ question_number }} of {{ total_questions }}</h2>
+    <p><strong>Hindi:</strong> {{ question.hi }}</p>
+    <p><strong>English:</strong> {{ question.en }}</p>
+
+    {% if audio_base64 %}
+    <audio controls autoplay>
+        <source src="data:audio/mp3;base64,{{ audio_base64 }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+
+    <form method="POST">
+        <label for="answer">Enter your answer here:</label><br>
+        <input type="text" name="answer"><br>
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li><strong>{{ message }}</strong></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>
