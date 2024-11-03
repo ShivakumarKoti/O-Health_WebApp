@@ -19,7 +19,7 @@ import re
 import logging
 from spacy.matcher import Matcher
 
-# -------------------- Environment Setup -------------------- #
+# ------------------- Environment Setup -------------------- #
 
 # Load environment variables from .env file
 dotenv.load_dotenv()
