@@ -18,6 +18,7 @@ pydub==0.25.1
 python-dotenv
 audio_recorder_streamlit
 gtts
+googletrans==4.0.0rc1
 
 
 
