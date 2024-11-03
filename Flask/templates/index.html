@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>O-Health Diagnostic Tool</title>
+</head>
+<body>
+    <h1>🩺 O-Health Diagnostic Tool</h1>
+    <p>Welcome to the O-Health Diagnostic Tool. Please enter your symptoms below.</p>
+
+    {% if audio_base64 %}
+    <audio controls autoplay>
+        <source src="data:audio/mp3;base64,{{ audio_base64 }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+
+    <form method="POST">
+        <label for="symptoms_text">Enter your symptoms here:</label><br>
+        <textarea name="symptoms_text" rows="5" cols="50"></textarea><br>
+        <button type="submit">Submit Symptoms</button>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li><strong>{{ message }}</strong></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+</body>
+</html>
