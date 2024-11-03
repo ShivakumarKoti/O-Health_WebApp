@@ -848,24 +848,27 @@ if __name__ == "__main__":
 '''
 
 import os
+import io
+import re
 import datetime
-import streamlit as st
-from audio_recorder_streamlit import audio_recorder
+import logging
+import base64
+import uuid
+import requests
 import pandas as pd
 import torch
 import spacy
-import re
-import logging
-from gtts import gTTS
-import io
-import openai
-import base64
-import random
-import requests
-import zipfile
 import matplotlib.pyplot as plt
 import seaborn as sns
+import openai
+from gtts import gTTS
+from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
+from googletrans import Translator, LANGUAGES
+from textblob import TextBlob
+import streamlit as st
 import streamlit.components.v1 as components
+from audio_recorder_streamlit import audio_recorder
+import random
 
 # -------------------- Environment Setup -------------------- #
 
@@ -883,7 +886,7 @@ logger = logging.getLogger(__name__)
 # -------------------- Load BioBERT NER Model -------------------- #
 
 # URL to your BioBERT NER model zip file hosted externally
-BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/odjgcsy5i8ktmpbag6p33/medical-bert-symptom-ner.zip?rlkey=j4ekri3mp92341o0wq2plnro6&st=sjozv9ui&dl=1"
+BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/odjgcsy5i8ktmpbag6p33/medical-bert-symptom-ner.zip?rlkey=j4ekri3mp92341o0wq2plnro6&st=bjpqho9q&dl=1"
 
 # Path to the BioBERT model directory
 BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be extracted
@@ -891,7 +894,6 @@ BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be e
 def download_and_unzip_biobert_model(model_url, model_dir):
     if not os.path.exists(model_dir):
         st.info("Downloading the BioBERT NER model. Please wait...")
-        # Download the model zip file
         with st.spinner('Downloading BioBERT NER model...'):
             try:
                 response = requests.get(model_url, stream=True)
@@ -938,13 +940,12 @@ if not os.path.exists(BIOBERT_MODEL_DIR):
 @st.cache_resource
 def load_biobert_ner_pipeline():
     try:
-        from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
         tokenizer = AutoTokenizer.from_pretrained(BIOBERT_MODEL_DIR, add_prefix_space=True)
         model = AutoModelForTokenClassification.from_pretrained(BIOBERT_MODEL_DIR)
         device = 0 if torch.cuda.is_available() else -1
-        ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
+        ner_pipeline_model = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
         logger.info("BioBERT NER pipeline loaded successfully.")
-        return ner_pipeline
+        return ner_pipeline_model
     except Exception as e:
         st.error(f"Failed to load BioBERT NER pipeline: {e}")
         logger.error(f"Failed to load BioBERT NER pipeline: {e}")
@@ -1040,7 +1041,49 @@ medications_list = [
     # Add more medications as needed
 ]
 
-# -------------------- Symptom Follow-Up Questions (Moved to Global Scope) -------------------- #
+# Initialize the translator
+translator = Translator()
+
+def translate_to_english(text):
+    """
+    Translate text to English if it's not already in English.
+    """
+    try:
+        detection = translator.detect(text)
+        if detection.lang != 'en':
+            translated = translator.translate(text, dest='en')
+            logger.info(f"Translated '{text}' from {LANGUAGES.get(detection.lang, 'unknown')} to English: '{translated.text}'")
+            return translated.text
+        return text
+    except Exception as e:
+        logger.error(f"Translation error: {e}")
+        return text  # Fallback to original text if translation fails
+
+def translate_to_hindi(text):
+    """
+    Translate text to Hindi.
+    """
+    try:
+        translated = translator.translate(text, dest='hi')
+        logger.info(f"Translated to Hindi: '{translated.text}'")
+        return translated.text
+    except Exception as e:
+        logger.error(f"Translation error: {e}")
+        return text  # Fallback to original text if translation fails
+
+def correct_spelling(text):
+    """
+    Corrects the spelling of the given text using TextBlob.
+    """
+    try:
+        corrected_text = str(TextBlob(text).correct())
+        logger.info(f"Spelling corrected: '{text}' -> '{corrected_text}'")
+        return corrected_text
+    except Exception as e:
+        logger.error(f"Spell correction failed: {e}")
+        return text  # Return original text if correction fails
+
+# -------------------- Symptom Follow-Up Questions -------------------- #
 
 # Define symptom-specific follow-up questions with associated symptoms
 symptom_followup_questions = {
@@ -1109,6 +1152,7 @@ def generate_audio(text: str, lang: str = 'en') -> bytes:
         return audio_bytes
     except Exception as e:
         logger.error(f"Failed to generate audio: {e}")
+        st.error(f"Failed to generate audio: {e}")
         return None
 
 def embed_audio_autoplay(audio_bytes: bytes):
@@ -1116,6 +1160,9 @@ def embed_audio_autoplay(audio_bytes: bytes):
     Embed audio in Streamlit app with autoplay using HTML and JavaScript.
     Includes a fallback play button if autoplay is blocked.
     """
+    if audio_bytes is None:
+        return
+
     # Encode audio to base64
     audio_base64 = base64.b64encode(audio_bytes).decode()
 
@@ -1148,6 +1195,9 @@ def embed_audio_autoplay(audio_bytes: bytes):
     components.html(audio_html, height=0, width=0)
 
 def save_audio_file(audio_bytes, file_extension):
+    """
+    Save the audio bytes to a file with a unique name.
+    """
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     file_name = f"audio_{timestamp}.{file_extension}"
 
@@ -1162,6 +1212,9 @@ def save_audio_file(audio_bytes, file_extension):
         return None
 
 def transcribe_audio(file_path):
+    """
+    Transcribe the audio file using OpenAI's Whisper API with translation to English.
+    """
     try:
         with open(file_path, "rb") as audio_file:
             transcript = openai.Audio.translate("whisper-1", audio_file)
@@ -1182,6 +1235,9 @@ def transcribe_audio(file_path):
                 logger.warning(f"Could not delete audio file {file_path}: {e}")
 
 def extract_symptoms(text):
+    """
+    Extract symptoms from the given text using BioBERT NER model and regex matching.
+    """
     try:
         # Use BioBERT NER model to extract symptoms
         ner_results = ner_pipeline(text)
@@ -1189,7 +1245,9 @@ def extract_symptoms(text):
         for entity in ner_results:
             if entity['entity_group'] == 'SYMPTOM':
                 symptom = entity['word'].strip()
-                extracted_symptoms.add(symptom.title())
+                # Ensure the symptom is in the known_symptoms list
+                if symptom.title() in known_symptoms:
+                    extracted_symptoms.add(symptom.title())
         logger.info(f"Extracted Symptoms using BioBERT: {extracted_symptoms}")
 
         # Also match against symptom list for any missed symptoms
@@ -1207,6 +1265,9 @@ def extract_symptoms(text):
         return set()
 
 def extract_additional_entities(text):
+    """
+    Extract additional entities like age, gender, location, duration, and medications from text.
+    """
     doc = nlp(text)
     age = None
     gender = None
@@ -1246,7 +1307,7 @@ def extract_additional_entities(text):
 
     # Extract location
     for ent in doc.ents:
-        if ent.label_ == 'GPE' or ent.label_ == 'LOC':
+        if ent.label_ in ['GPE', 'LOC']:
             location = ent.text
             break
 
@@ -1282,6 +1343,9 @@ def extract_additional_entities(text):
     }
 
 def determine_followup_questions(matched_symptoms, additional_info):
+    """
+    Determine the next set of follow-up questions based on matched symptoms and additional information.
+    """
     followup_questions = []
     asked_categories = set()
 
@@ -1323,7 +1387,41 @@ def determine_followup_questions(matched_symptoms, additional_info):
     logger.info(f"Determined Follow-Up Questions: {followup_questions}")
     return followup_questions
 
+def handle_yes_no_response(question, response):
+    """
+    Handles yes/no responses to follow-up questions to add or remove symptoms.
+
+    Args:
+        question (dict): The current follow-up question being asked.
+        response (str): The user's response to the follow-up question.
+    """
+    affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
+    negative_responses = {'no', 'nah', 'nope', 'not really', 'don\'t', 'nahi'}
+
+    response_lower = response.strip().lower()
+    is_affirmative = any(word in response_lower for word in affirmative_responses)
+    is_negative = any(word in response_lower for word in negative_responses)
+
+    # Initialize session_state.matched_symptoms if not already
+    if 'matched_symptoms' not in st.session_state:
+        st.session_state.matched_symptoms = set()
+
+    if is_affirmative and question['symptom']:
+        st.session_state.matched_symptoms.add(question['symptom'])
+        logger.info(f"Added symptom '{question['symptom']}' based on affirmative response.")
+        st.success(f"Added symptom: {question['symptom']}")
+    elif is_negative and question['symptom']:
+        if question['symptom'] in st.session_state.matched_symptoms:
+            st.session_state.matched_symptoms.remove(question['symptom'])
+            logger.info(f"Removed symptom '{question['symptom']}' based on negative response.")
+            st.warning(f"Removed symptom: {question['symptom']}")
+    else:
+        logger.info("Response not recognized as yes/no or no associated symptom.")
+
 def extract_all_symptoms(conversation_history):
+    """
+    Extract all symptoms and additional information from the conversation history.
+    """
     matched_symptoms = set()
     additional_info = {
         'age': None,
@@ -1368,7 +1466,7 @@ def extract_all_symptoms(conversation_history):
             response_text_lower = response_text.strip().lower()
 
             # Check if response is affirmative
-            is_affirmative = response_text_lower in affirmative_responses
+            is_affirmative = any(word in response_text_lower for word in affirmative_responses)
 
             # Get the 'symptom' associated with the question
             symptom = None
@@ -1382,7 +1480,7 @@ def extract_all_symptoms(conversation_history):
 
             if symptom and is_affirmative:
                 matched_symptoms.add(symptom)
-            elif symptom and response_text_lower in negative_responses:
+            elif symptom and any(word in response_text_lower for word in negative_responses):
                 # Optionally, you can handle negative responses if needed
                 pass
 
@@ -1391,6 +1489,9 @@ def extract_all_symptoms(conversation_history):
     return matched_symptoms, additional_info
 
 def extract_and_prepare_questions(conversation_history):
+    """
+    Extract symptoms and additional info from the conversation history and prepare follow-up questions.
+    """
     matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
     st.session_state.additional_info = additional_info  # Store in session state for access elsewhere
     followup_questions = determine_followup_questions(matched_symptoms, additional_info)
@@ -1400,13 +1501,6 @@ def extract_and_prepare_questions(conversation_history):
 def map_symptoms_to_diseases(matched_symptoms, additional_info):
     """
     Map the matched symptoms to probable diseases based on the disease-symptom mapping.
-
-    Args:
-        matched_symptoms (set): A set of matched symptoms.
-        additional_info (dict): A dictionary containing additional extracted information.
-
-    Returns:
-        dict: A dictionary of probable diseases with their respective probabilities.
     """
     # Create disease-symptom mapping
     disease_symptom_map = df_disease_symptom.groupby('DiseaseName')['SymptomName'].apply(set).to_dict()
@@ -1458,6 +1552,9 @@ def map_symptoms_to_diseases(matched_symptoms, additional_info):
         return {}
 
 def generate_report(conversation_history):
+    """
+    Generate the final diagnostic report based on the conversation history.
+    """
     matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
     st.subheader("📄 **Final Report:**")
     st.write("**Symptoms:**", ', '.join(matched_symptoms) if matched_symptoms else 'Not specified')
@@ -1501,7 +1598,7 @@ def generate_report(conversation_history):
             st.write("---")
             question_count += 1
 
-# -------------------- Streamlit Interface -------------------- #
+# -------------------- Main Streamlit Application -------------------- #
 
 def main():
     # Initialize session state variables
@@ -1519,6 +1616,7 @@ def main():
             'medications': []
         }
         st.session_state.matched_symptoms = set()
+        st.session_state.symptoms_processed = False
 
     st.title("🩺 O-Health Diagnostic Tool")
     st.write("""
@@ -1556,14 +1654,18 @@ def main():
                 st.info("Transcribing your audio... Please wait.")
                 transcribed_text = transcribe_audio(file_name)
                 if transcribed_text:
+                    # Detect and translate to English if necessary
+                    translated_text = translate_to_english(transcribed_text)
+                    # Correct spelling in the translated text
+                    corrected_text = correct_spelling(translated_text)
                     st.subheader("📝 Transcribed Text (English):")
-                    st.write(transcribed_text)
+                    st.write(corrected_text)
                     st.session_state.conversation_history.append({
-                        'user': transcribed_text
+                        'user': corrected_text
                     })
                     st.session_state.followup_questions = extract_and_prepare_questions(st.session_state.conversation_history)
                     st.session_state.current_step = 2  # Proceed to follow-up questions
-                    st.session_state['symptoms_processed'] = True
+                    st.session_state.symptoms_processed = True
                     st.experimental_rerun()
                 else:
                     st.error("Failed to transcribe the audio.")
@@ -1578,14 +1680,18 @@ def main():
             if user_input.strip() == "":
                 st.warning("Please enter your symptoms.")
             else:
+                # Detect and translate to English if necessary
+                translated_input = translate_to_english(user_input)
+                # Correct spelling in the translated text
+                corrected_input = correct_spelling(translated_input)
                 st.subheader("📝 Your Input:")
-                st.write(user_input)
+                st.write(corrected_input)
                 st.session_state.conversation_history.append({
-                    'user': user_input
+                    'user': corrected_input
                 })
                 st.session_state.followup_questions = extract_and_prepare_questions(st.session_state.conversation_history)
                 st.session_state.current_step = 2  # Proceed to follow-up questions
-                st.session_state['symptoms_processed'] = True
+                st.session_state.symptoms_processed = True
                 st.experimental_rerun()
 
     # Step 2: Follow-Up Questions
@@ -1626,11 +1732,22 @@ def main():
                     st.info("Transcribing your audio... Please wait.")
                     response_transcribed = transcribe_audio(response_file_name)
                     if response_transcribed:
+                        # Detect and translate to English if necessary
+                        translated_response = translate_to_english(response_transcribed)
+                        # Correct spelling in the translated text
+                        corrected_response = correct_spelling(translated_response)
                         st.subheader(f"📝 Response to Follow-Up Question {question_number} (English):")
-                        st.write(response_transcribed)
+                        st.write(corrected_response)
+                        # Handle yes/no responses to add/remove symptoms
+                        handle_yes_no_response(current_question, corrected_response)
+                        # Extract any new symptoms from the response
+                        extracted_new_symptoms = extract_symptoms(corrected_response)
+                        if extracted_new_symptoms:
+                            st.session_state.matched_symptoms.update(extracted_new_symptoms)
+                            st.success(f"New symptoms detected and added: {', '.join(extracted_new_symptoms)}")
                         st.session_state.conversation_history.append({
                             'followup_question_en': current_question['en'],
-                            'response': response_transcribed
+                            'response': corrected_response
                         })
                         st.session_state[f'answer_{st.session_state.current_followup}_processed'] = True
                         st.session_state.current_followup += 1
@@ -1649,10 +1766,21 @@ def main():
                 if answer_input.strip() == "":
                     st.warning("Please enter your answer.")
                 else:
+                    # Detect and translate to English if necessary
+                    translated_answer = translate_to_english(answer_input)
+                    # Correct spelling in the translated text
+                    corrected_answer = correct_spelling(translated_answer)
                     st.session_state.conversation_history.append({
                         'followup_question_en': current_question['en'],
-                        'response': answer_input
+                        'response': corrected_answer
                     })
+                    # Handle yes/no responses to add/remove symptoms
+                    handle_yes_no_response(current_question, corrected_answer)
+                    # Extract any new symptoms from the response
+                    extracted_new_symptoms = extract_symptoms(corrected_answer)
+                    if extracted_new_symptoms:
+                        st.session_state.matched_symptoms.update(extracted_new_symptoms)
+                        st.success(f"New symptoms detected and added: {', '.join(extracted_new_symptoms)}")
                     st.session_state[f'answer_{st.session_state.current_followup}_processed'] = True
                     st.session_state.current_followup += 1
                     st.experimental_rerun()
@@ -1693,3 +1821,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
