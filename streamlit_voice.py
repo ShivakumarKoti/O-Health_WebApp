@@ -889,7 +889,7 @@ logger = logging.getLogger(__name__)
 # -------------------- Load BioBERT NER Model -------------------- #
 
 # URL to your BioBERT NER model zip file hosted externally
-BIOBERT_MODEL_URL = "https://www.dropbox.com/s/bsphlpwlt7jclb9/medical-bert-symptom-ner.zip?dl=1"
+BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/odjgcsy5i8ktmpbag6p33/medical-bert-symptom-ner.zip?rlkey=j4ekri3mp92341o0wq2plnro6&st=0ucut9k7&dl=1"
 
 # Path to the BioBERT model directory
 BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be extracted
