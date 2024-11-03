@@ -1,0 +1,3 @@
+The Flak webapp currently works without voice input at 127.0.0.1
+
+python3 app.run
