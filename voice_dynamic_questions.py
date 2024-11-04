@@ -737,9 +737,9 @@ def main():
         st.session_state.symptoms_processed = False
         st.session_state.followup_count = 0  # Initialize follow-up question counter
 
-    st.title("🩺 O-Health Diagnostic Tool")
+    st.title("🩺 O-Health LLM Dynamic-Questioning")
     st.write("""
-        Welcome to the O-Health Diagnostic Tool. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
+        Welcome to the O-Health LLM Whisper API Tool. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
     """)
 
     # Step 0: Welcome Message
@@ -755,7 +755,6 @@ def main():
 
         # Display a welcome message
         st.write("### Hello! 👋")
-        st.write("We're glad to have you here.")
         st.write("Please provide your symptoms to get started.")
 
         st.session_state.current_step = 1  # Proceed to the next step
