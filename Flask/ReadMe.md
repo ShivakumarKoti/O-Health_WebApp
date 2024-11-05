@@ -1,5 +1,5 @@
 ### Flask
-The Flask webapp currently works without voice input at 127.0.0.1
+The Flask webapp currently works without voice input at 127.0.0.1 with tested on python 3.9 
 
 Enter OPEN-API-KEY in app.py before using
 
