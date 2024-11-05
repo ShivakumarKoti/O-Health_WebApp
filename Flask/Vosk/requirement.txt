@@ -1,0 +1,6 @@
+vosk 
+transformers 
+sounddevice 
+numpy 
+nltk 
+sentencepiece
