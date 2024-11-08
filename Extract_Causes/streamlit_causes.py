@@ -435,99 +435,32 @@ def extract_symptoms(text):
         logger.error(f"Symptom extraction error: {e}")
         return set()
 
+
 def extract_possible_causes(text):
     """
-    Extract possible causes from the given text using SpaCy's dependency parsing.
-
-    Args:
-        text (str): The input text from which to extract causes.
-
-    Returns:
-        set: A set of extracted cause phrases or a message if none are found.
+    Use OpenAI API to generate a one-sentence overview of the possible cause from the transcript.
     """
-    causes = set()
-    doc = nlp(text.lower())  # Use lowercase for uniformity
-
-    # Define causal connectors
-    causal_connectors = {'after', 'because', 'due to', 'since', 'as a result of', 'owing to'}
-
-    # Define duration-related words to exclude
-    duration_words = {'day', 'days', 'week', 'weeks', 'month', 'months', 'year', 'years', 'hour', 'hours', 'minute', 'minutes'}
-
-    for token in doc:
-        # Check for multi-word causal phrases
-        if token.text in {'due', 'as', 'owing'}:
-            # Handle 'due to', 'as a result of', 'owing to'
-            if token.text == 'due' and token.nbor(1).text == 'to':
-                phrase = 'due to ' + ' '.join([t.text for t in token.subtree if t.i >= token.i and t.i <= token.nbor(1).i + 10])
-                # Check if phrase contains duration words
-                if not any(word in phrase for word in duration_words):
-                    causes.add(phrase.strip())
-                    logger.info(f"Extracted cause: {phrase.strip()}")
-            elif token.text == 'as' and token.nbor(1).text == 'a' and token.nbor(2).text == 'result' and token.nbor(3).text == 'of':
-                phrase = 'as a result of ' + ' '.join([t.text for t in token.subtree if t.i >= token.i and t.i <= token.nbor(3).i + 10])
-                if not any(word in phrase for word in duration_words):
-                    causes.add(phrase.strip())
-                    logger.info(f"Extracted cause: {phrase.strip()}")
-            elif token.text == 'owing' and token.nbor(1).text == 'to':
-                phrase = 'owing to ' + ' '.join([t.text for t in token.subtree if t.i >= token.i and t.i <= token.nbor(1).i + 10])
-                if not any(word in phrase for word in duration_words):
-                    causes.add(phrase.strip())
-                    logger.info(f"Extracted cause: {phrase.strip()}")
-        elif token.text in causal_connectors:
-            # Extract the phrase following the causal connector
-            try:
-                # Find the next token that is a verb or noun
-                for next_token in token.rights:
-                    if next_token.pos_ in {'NOUN', 'PROPN', 'VERB'}:
-                        # Extract the subtree for this token
-                        phrase = ' '.join([t.text for t in next_token.subtree])
-                        if not any(word in phrase for word in duration_words):
-                            causes.add(phrase.strip())
-                            logger.info(f"Extracted cause: {phrase.strip()}")
-                        break
-            except Exception as e:
-                logger.error(f"Error extracting cause after '{token.text}': {e}")
-                continue
-
-    # Additionally, handle cases like "after getting drenched in the rain"
-    for sent in doc.sents:
-        for token in sent:
-            if token.text in {'after', 'because', 'due', 'owing', 'since', 'as'}:
-                if token.text == 'due' and token.nbor(1).text == 'to':
-                    phrase = 'due to ' + ' '.join([t.text for t in token.subtree if t.i >= token.i and t.i <= token.nbor(1).i + 10])
-                    if not any(word in phrase for word in duration_words):
-                        causes.add(phrase.strip())
-                        logger.info(f"Extracted cause from sentence: {phrase.strip()}")
-                elif token.text == 'as' and token.nbor(1).text == 'a' and token.nbor(2).text == 'result' and token.nbor(3).text == 'of':
-                    phrase = 'as a result of ' + ' '.join([t.text for t in token.subtree if t.i >= token.i and t.i <= token.nbor(3).i + 10])
-                    if not any(word in phrase for word in duration_words):
-                        causes.add(phrase.strip())
-                        logger.info(f"Extracted cause from sentence: {phrase.strip()}")
-                elif token.text in causal_connectors:
-                    # Extract the phrase after the connector
-                    phrase = ' '.join([t.text for t in token.subtree if t.i > token.i])
-                    if not any(word in phrase for word in duration_words):
-                        causes.add(phrase.strip())
-                        logger.info(f"Extracted cause from sentence: {phrase.strip()}")
-
-    # Filter out any single-word causes that are likely not meaningful
-    filtered_causes = {cause for cause in causes if len(cause.split()) > 1}
-
-    if filtered_causes:
-        # Further filter out phrases identified as duration entities by SpaCy
-        final_causes = set()
-        for cause in filtered_causes:
-            doc_cause = nlp(cause)
-            if not any(ent.label_ in {'TIME', 'DATE'} for ent in doc_cause.ents):
-                final_causes.add(cause)
-            else:
-                logger.info(f"Excluded '{cause}' as it is a duration.")
-        if final_causes:
-            logger.info(f"Final extracted causes after entity filtering: {final_causes}")
-            return final_causes
-    logger.info("No possible causes determined.")
-    return "No possible causes determined."
+    try:
+        prompt = f"Based on the following patient transcript, provide a one-sentence possible cause of the symptoms:\n\n{text}\n\nPossible cause:"
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that provides possible causes of medical symptoms based on patient transcripts."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=50,
+            temperature=0.7,
+            n=1,
+            stop=None,
+        )
+        cause = response['choices'][0]['message']['content'].strip()
+        # Remove any leading prompts like "Possible cause:" if present
+        cause = re.sub(r'^Possible cause:\s*', '', cause, flags=re.IGNORECASE)
+        logger.info(f"Generated possible cause using OpenAI API: {cause}")
+        return cause
+    except Exception as e:
+        logger.error(f"Failed to generate possible cause using OpenAI API: {e}")
+        return "No possible causes determined."
 
 def translate_and_correct(text):
     """
@@ -684,7 +617,8 @@ def determine_followup_questions(conversation_history, additional_info):
 
 def extract_all_symptoms(conversation_history):
     """
-    Extract all symptoms, additional information, and possible causes from the conversation history.
+    Extract all symptoms and additional information from the conversation history.
+    Collect all user inputs into a single transcript for cause analysis.
     """
     matched_symptoms = set()
     additional_info = {
@@ -694,7 +628,7 @@ def extract_all_symptoms(conversation_history):
         'duration': None,
         'medications': []
     }
-    possible_causes = set()
+    combined_transcript = ""
 
     affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
     negative_responses = {'no', 'nah', 'nope', 'not really', 'don\'t', 'nahi'}
@@ -702,6 +636,7 @@ def extract_all_symptoms(conversation_history):
     for entry in conversation_history:
         if 'user' in entry:
             user_text = entry['user']
+            combined_transcript += " " + user_text  # Collecting all user inputs
             symptoms = extract_symptoms(user_text)
             matched_symptoms.update(symptoms)
             info = extract_additional_entities(user_text)
@@ -712,30 +647,14 @@ def extract_all_symptoms(conversation_history):
                         additional_info[key] = list(set(additional_info[key]))
                     else:
                         additional_info[key] = info[key]
-            # Extract possible causes
-            causes = extract_possible_causes(user_text)
-            if isinstance(causes, set):
-                possible_causes.update(causes)
         if 'followup_question_en' in entry:
             response_text = entry['response']
-            symptoms = extract_symptoms(response_text)
-            matched_symptoms.update(symptoms)
-            info = extract_additional_entities(response_text)
-            for key in additional_info:
-                if key in info and info[key]:
-                    if isinstance(info[key], list):
-                        additional_info[key].extend(info[key])
-                        additional_info[key] = list(set(additional_info[key]))
-                    else:
-                        additional_info[key] = info[key]
-
-            # Handle yes/no responses to add/remove symptoms
-            question_entry = entry
-            question_text = question_entry['followup_question_en']
+            question_text = entry['followup_question_en']
             response_text_lower = response_text.strip().lower()
 
-            # Check if response is affirmative
+            # Check if response is affirmative or negative
             is_affirmative = any(word in response_text_lower for word in affirmative_responses)
+            is_negative = any(word in response_text_lower for word in negative_responses)
 
             # Get the 'symptom' associated with the question
             symptom = None
@@ -749,20 +668,30 @@ def extract_all_symptoms(conversation_history):
 
             if symptom and is_affirmative:
                 matched_symptoms.add(symptom)
-            elif symptom and any(word in response_text_lower for word in negative_responses):
-                # Optionally, you can handle negative responses if needed
-                pass
+                combined_transcript += " " + response_text  # Include affirmative response in transcript
+            elif symptom and is_negative:
+                if symptom in matched_symptoms:
+                    matched_symptoms.remove(symptom)
+                # Do not include negative responses in transcript for cause analysis
+            else:
+                combined_transcript += " " + response_text  # Include other responses
 
-            # Extract possible causes from the response
-            causes = extract_possible_causes(response_text)
-            if isinstance(causes, set):
-                possible_causes.update(causes)
+            # Extract additional entities from the response
+            info = extract_additional_entities(response_text)
+            for key in additional_info:
+                if key in info and info[key]:
+                    if isinstance(info[key], list):
+                        additional_info[key].extend(info[key])
+                        additional_info[key] = list(set(additional_info[key]))
+                    else:
+                        additional_info[key] = info[key]
 
     logger.info(f"Final Matched Symptoms: {matched_symptoms}")
     logger.info(f"Additional Information: {additional_info}")
-    logger.info(f"Possible Causes: {possible_causes}")
+    logger.info(f"Combined Transcript for Cause Analysis: {combined_transcript}")
 
-    return matched_symptoms, additional_info, possible_causes
+    return matched_symptoms, additional_info, combined_transcript
+
 
 def extract_and_prepare_questions(conversation_history):
     """
@@ -832,7 +761,7 @@ def generate_report(conversation_history):
     """
     Generate the final diagnostic report based on the conversation history.
     """
-    matched_symptoms, additional_info, possible_causes = extract_all_symptoms(conversation_history)
+    matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(conversation_history)
     st.subheader("📄 **Final Report:**")
     st.write("**Symptoms:**", ', '.join(matched_symptoms) if matched_symptoms else 'Not specified')
     if additional_info['age']:
@@ -846,13 +775,15 @@ def generate_report(conversation_history):
     if additional_info['medications']:
         st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
 
-    # Integrate Possible Causes without a separate heading
-    if possible_causes and possible_causes != "No possible causes determined.":
-        st.write("**Possible Causes:**")
-        for cause in possible_causes:
-            st.write(f"- {cause.capitalize()}")
+    # Generate a single possible cause using OpenAI API based on the combined transcript
+    possible_cause = extract_possible_causes(combined_transcript)
+
+    # Display Possible Cause
+    if possible_cause and possible_cause != "No possible causes determined.":
+        st.write("**Possible Cause:**")
+        st.write(f"- {possible_cause}")
     else:
-        st.write("**Possible Causes:** No possible causes determined.")
+        st.write("**Possible Cause:** No possible causes determined.")
 
     # Map symptoms to diseases
     probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
@@ -913,8 +844,6 @@ def handle_yes_no_response(question, response):
             st.warning(f"Removed symptom: {question['symptom']}")
         else:
             logger.info(f"No action taken for symptom '{question['symptom']}' as it's not present.")
-    else:
-        logger.info("Response not recognized as yes/no or no associated symptom.")
 
 # -------------------- Main Streamlit Application -------------------- #
 
@@ -1149,12 +1078,12 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info['medications']:
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
-        st.write("**Possible Causes:**")
-        if possible_causes and possible_causes != "No possible causes determined.":
-            for cause in possible_causes:
-                st.write(f"- {cause.capitalize()}")
-        else:
-            st.write("No possible causes determined.")
+        #st.write("**Possible Causes:**")
+        #if possible_causes and possible_causes != "No possible causes determined.":
+            #for cause in possible_causes:
+                #st.write(f"- {cause.capitalize()}")
+        #else:
+            #st.write("No possible causes determined.")
 
 if __name__ == "__main__":
     main()
