@@ -1641,8 +1641,7 @@ def main():
             st.error("Failed to generate welcome audio.")
 
         # Display a welcome message
-        st.write("### Hello! 👋")
-        st.write("We're glad to have you here.")
+        st.write("### Welcome to O-Health!")
         st.write("Please provide your symptoms to get started.")
 
         st.session_state.current_step = 1  # Proceed to the next step
