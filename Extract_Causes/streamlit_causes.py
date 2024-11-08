@@ -543,7 +543,9 @@ def translate_and_correct(text):
         logger.info(f"Translated '{text}' from Hindi to English: '{translated_text}'")
 
         # Correct spelling while preserving medical terms
-        corrected_text = correct_spelling(translated_text)
+        corrected_text = translated_text
+        #corrected_text = correct_spelling(translated_text)
+        corrected_text = translated_text
         return corrected_text
     except Exception as e:
         logger.error(f"Translation and correction failed: {e}")
@@ -949,8 +951,7 @@ def main():
             st.error("Failed to generate welcome audio.")
 
         # Display a welcome message
-        st.write("### Hello! 👋")
-        st.write("We're glad to have you here.")
+        st.write("### Hello, Welcome to O-Health ")
         st.write("Please provide your symptoms to get started.")
 
         st.session_state.current_step = 1  # Proceed to the next step
@@ -1004,7 +1005,8 @@ def main():
                 # Detect and translate to English if necessary
                 translated_input = translate_to_english(user_input)
                 # Correct spelling in the translated text
-                corrected_input = correct_spelling(translated_input)
+                corrected_input = translated_input
+                #corrected_input = correct_spelling(translated_input)
                 st.subheader("📝 Your Input:")
                 st.write(corrected_input)
                 st.session_state.conversation_history.append({
@@ -1094,7 +1096,8 @@ def main():
                     # Detect and translate to English if necessary
                     translated_answer = translate_to_english(answer_input)
                     # Correct spelling in the translated text
-                    corrected_answer = correct_spelling(translated_answer)
+                    corrected_answer = translated_answer
+                    #corrected_answer = correct_spelling(translated_answer)
                     st.session_state.conversation_history.append({
                         'followup_question_en': current_question['en'],
                         'response': corrected_answer
