@@ -171,7 +171,7 @@ symptom_list = [
     'decreased appetite', 'increased appetite', 'feeling full quickly',
     'unusual sweating', 'dark urine', 'light-colored stools', 'blood in urine',
     'blood in stool', 'frequent infections', 'delayed healing',
-    'high temperature', 'high blood pressure', 'low blood pressure',
+    'high temperature', 'high blood pressure', 'low blood pressure','no','yes','No'
     # Add more symptoms and their variations as needed
 ]
 
@@ -189,7 +189,7 @@ medications_list = [
     "clindamycin", "metronidazole", "acetylsalicylic acid", "nifedipine",
     "warfarin", "heparin", "digoxin", "fexofenadine", "salbutamol",
     "montelukast", "levocetirizine", "betahistine", "melatonin", "zinc",
-    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant",
+    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant", "Yes", "No"
     # Add more medications as needed
 ]
 
@@ -225,10 +225,26 @@ def translate_to_hindi(text):
 
 def correct_spelling(text):
     """
-    Corrects the spelling of the given text using TextBlob.
+    Corrects the spelling of the given text using TextBlob while preserving medical terms.
+
+    Args:
+        text (str): The input text to correct.
+
+    Returns:
+        str: The spell-corrected text.
     """
     try:
-        corrected_text = str(TextBlob(text).correct())
+        blob = TextBlob(text)
+        corrected_blob = blob.correct()
+        corrected_text = str(corrected_blob)
+
+        # Restore medical terms and critical words
+        for term in medications_list:
+            if term.lower() in corrected_text.lower():
+                # Use regex to replace all case-insensitive occurrences with the correct case
+                pattern = re.compile(re.escape(term), re.IGNORECASE)
+                corrected_text = pattern.sub(term, corrected_text)
+
         logger.info(f"Spelling corrected: '{text}' -> '{corrected_text}'")
         return corrected_text
     except Exception as e:
@@ -410,6 +426,7 @@ def extract_symptoms(text):
                 extracted_symptoms.add(symptom.title())
 
         logger.info(f"Final Extracted Symptoms: {extracted_symptoms}")
+        extracted_symptoms = [med for med in extracted_symptoms if med not in {'No','yes', 'no'}]
         return extracted_symptoms
     except Exception as e:
         st.error(f"An error occurred during symptom extraction: {e}")
@@ -496,12 +513,41 @@ def extract_possible_causes(text):
     filtered_causes = {cause for cause in causes if len(cause.split()) > 1}
 
     if filtered_causes:
-        logger.info(f"Final extracted causes: {filtered_causes}")
-        return filtered_causes
-    else:
-        logger.info("No possible causes determined.")
-        return "No possible causes determined."
+        # Further filter out phrases identified as duration entities by SpaCy
+        final_causes = set()
+        for cause in filtered_causes:
+            doc_cause = nlp(cause)
+            if not any(ent.label_ in {'TIME', 'DATE'} for ent in doc_cause.ents):
+                final_causes.add(cause)
+            else:
+                logger.info(f"Excluded '{cause}' as it is a duration.")
+        if final_causes:
+            logger.info(f"Final extracted causes after entity filtering: {final_causes}")
+            return final_causes
+    logger.info("No possible causes determined.")
+    return "No possible causes determined."
 
+def translate_and_correct(text):
+    """
+    Translates input text to English if necessary and corrects spelling while preserving medical terms.
+
+    Args:
+        text (str): The input text to process.
+
+    Returns:
+        str: The translated and spell-corrected text.
+    """
+    try:
+        # Translate to English if not already in English
+        translated_text = translator_auto_to_en.translate(text)
+        logger.info(f"Translated '{text}' from Hindi to English: '{translated_text}'")
+
+        # Correct spelling while preserving medical terms
+        corrected_text = correct_spelling(translated_text)
+        return corrected_text
+    except Exception as e:
+        logger.error(f"Translation and correction failed: {e}")
+        return text  # Fallback to original text if translation fails
 
 def extract_additional_entities(text):
     """
@@ -520,6 +566,7 @@ def extract_additional_entities(text):
         if med.lower() in tokens:
             medications.append(med.title())
     medications = list(set(medications))  # remove duplicates
+    medications = [med for med in medications if med not in {'Yes', 'No'}]
 
     # Extract age
     age_patterns = [
@@ -713,7 +760,6 @@ def extract_all_symptoms(conversation_history):
 
     return matched_symptoms, additional_info, possible_causes
 
-
 def extract_and_prepare_questions(conversation_history):
     """
     Extract symptoms and additional info from the conversation history and prepare follow-up questions.
@@ -833,7 +879,6 @@ def generate_report(conversation_history):
             st.write("---")
             question_count += 1
 
-
 def handle_yes_no_response(question, response):
     """
     Handles yes/no responses to follow-up questions to add or remove symptoms.
@@ -862,9 +907,10 @@ def handle_yes_no_response(question, response):
             st.session_state.matched_symptoms.remove(question['symptom'])
             logger.info(f"Removed symptom '{question['symptom']}' based on negative response.")
             st.warning(f"Removed symptom: {question['symptom']}")
+        else:
+            logger.info(f"No action taken for symptom '{question['symptom']}' as it's not present.")
     else:
         logger.info("Response not recognized as yes/no or no associated symptom.")
-
 
 # -------------------- Main Streamlit Application -------------------- #
 
@@ -923,9 +969,12 @@ def main():
                 transcribed_text = transcribe_audio(file_name)
                 if transcribed_text:
                     # Detect and translate to English if necessary
-                    translated_text = translate_to_english(transcribed_text)
+                    #translated_text = translate_to_english(transcribed_text)
                     # Correct spelling in the translated text
-                    corrected_text = correct_spelling(translated_text)
+                    #corrected_text = correct_spelling(translated_text)
+
+                    corrected_text = translate_and_correct(transcribed_text)
+
                     st.subheader("📝 Transcribed Text (English):")
                     st.write(corrected_text)
                     st.session_state.conversation_history.append({
@@ -933,6 +982,7 @@ def main():
                     })
                     # Extract additional_info
                     matched_symptoms, additional_info, possible_causes = extract_all_symptoms(st.session_state.conversation_history)
+                    st.session_state.additional_info = additional_info  # Update additional_info in session state
                     # Determine follow-up questions with both conversation_history and additional_info
                     st.session_state.followup_questions = determine_followup_questions(st.session_state.conversation_history, additional_info)
                     st.session_state.current_step = 2  # Proceed to follow-up questions
@@ -962,6 +1012,7 @@ def main():
                 })
                 # Extract additional_info
                 matched_symptoms, additional_info, possible_causes = extract_all_symptoms(st.session_state.conversation_history)
+                st.session_state.additional_info = additional_info  # Update additional_info in session state
                 # Determine follow-up questions with both conversation_history and additional_info
                 st.session_state.followup_questions = determine_followup_questions(st.session_state.conversation_history, additional_info)
                 st.session_state.current_step = 2  # Proceed to follow-up questions
@@ -1098,7 +1149,6 @@ def main():
                 st.write(f"- {cause.capitalize()}")
         else:
             st.write("No possible causes determined.")
-
 
 if __name__ == "__main__":
     main()
