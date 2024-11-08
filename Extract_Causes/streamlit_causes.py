@@ -173,7 +173,7 @@ symptom_list = [
     'decreased appetite', 'increased appetite', 'feeling full quickly',
     'unusual sweating', 'dark urine', 'light-colored stools', 'blood in urine',
     'blood in stool', 'frequent infections', 'delayed healing',
-    'high temperature', 'high blood pressure', 'low blood pressure','no','yes','No'
+    'high temperature', 'high blood pressure', 'low blood pressure'
     # Add more symptoms and their variations as needed
 ]
 
@@ -191,7 +191,7 @@ medications_list = [
     "clindamycin", "metronidazole", "acetylsalicylic acid", "nifedipine",
     "warfarin", "heparin", "digoxin", "fexofenadine", "salbutamol",
     "montelukast", "levocetirizine", "betahistine", "melatonin", "zinc",
-    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant", "Yes", "No"
+    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant"
     # Add more medications as needed
 ]
 
@@ -936,9 +936,9 @@ def main():
         st.session_state.matched_symptoms = set()
         st.session_state.symptoms_processed = False
 
-    st.title("🩺 O-Health Diagnostic Tool")
+    st.title("🩺 O-Health LLM App")
     st.write("""
-        Welcome to the O-Health Diagnostic Tool. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
+        Welcome to the O-Health LLM App. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
     """)
 
     # Step 0: Welcome Message
@@ -1064,7 +1064,8 @@ def main():
                         # Detect and translate to English if necessary
                         translated_response = translate_to_english(response_transcribed)
                         # Correct spelling in the translated text
-                        corrected_response = correct_spelling(translated_response)
+                        corrected_response = translated_response
+                        #corrected_response = correct_spelling(translated_response)
                         st.subheader(f"📝 Response to Follow-Up Question {question_number} (English):")
                         st.write(corrected_response)
                         # Handle yes/no responses to add/remove symptoms
