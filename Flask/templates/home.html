@@ -1,15 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>🩺 O-Health LLM App</h1>
-<p>Welcome to the O-Health LLM App. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.</p>
+<h1>🩺 O-Health LLM ऐप / O-Health LLM App</h1>
+<p>O-Health LLM ऐप में आपका स्वागत है। आप हिंदी में अपने लक्षण बोल सकते हैं या अंग्रेजी में टाइप कर सकते हैं ताकि आपको आपके इनपुट के आधार पर संभावित रोग की सिफारिशें मिल सकें। / Welcome to the O-Health LLM App. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.</p>
 
 <form action="{{ url_for('home') }}" method="post">
-    <label for="symptoms">Enter your symptoms:</label><br>
-    <textarea id="symptoms" name="symptoms" rows="5" cols="50"></textarea><br><br>
-    <input type="submit" value="Submit Symptoms">
+    <label for="symptoms">अपने लक्षण दर्ज करें / Enter your symptoms:</label><br>
+    <textarea id="symptoms" name="symptoms" rows="5" cols="50"></textarea><br>
+    <button type="button" onclick="startDictation('symptoms')">🎤 बोलें / Speak</button><br><br>
+    <input type="submit" value="लक्षण सबमिट करें / Submit Symptoms">
 </form>
 
 {% if error %}
 <p style="color:red;">{{ error }}</p>
 {% endif %}
+
+<script>
+function startDictation(textareaId) {
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+        var recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'hi-IN';  // Set language to Hindi
+
+        recognition.onstart = function() {
+            console.log("Speech recognition started.");
+            alert("माइक्रोफोन सक्रिय है, कृपया बोलें...");  // "Microphone is active, please speak..."
+        };
+
+        recognition.onresult = function(e) {
+            var transcript = e.results[0][0].transcript;
+            console.log("Transcript received: " + transcript);
+            document.getElementById(textareaId).value = transcript;
+            recognition.stop();
+        };
+
+        recognition.onerror = function(e) {
+            console.error("Speech recognition error:", e.error);
+            alert("वॉइस रिकग्निशन में त्रुटि हुई: " + e.error);  // "Voice recognition error: ..."
+            recognition.stop();
+        };
+
+        recognition.onend = function() {
+            console.log("Speech recognition ended.");
+        };
+
+        recognition.start();
+    } else {
+        alert("आपका ब्राउज़र वॉइस रिकग्निशन का समर्थन नहीं करता है। कृपया अपने लक्षण टाइप करें।");  // "Your browser does not support voice recognition. Please type your symptoms."
+    }
+}
+</script>
 {% endblock %}
