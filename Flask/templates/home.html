@@ -52,7 +52,7 @@ function startDictation(textareaId) {
 
 function speakWelcomeMessage() {
     if ('speechSynthesis' in window) {
-        var msg = new SpeechSynthesisUtterance("O-Health LLM ऐप में आपका स्वागत है। कृपया अपने लक्षण बोलें या टाइप करें।");
+        var msg = new SpeechSynthesisUtterance("O-Health ऐप में आपका स्वागत है। कृपया अपने लक्षण बोलें या टाइप करें।");
         msg.lang = 'hi-IN';  // Set language to Hindi
 
         // Select a more human-like Hindi voice
