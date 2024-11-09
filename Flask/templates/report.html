@@ -1,35 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>O-Health Diagnostic Tool</title>
-</head>
-<body>
-    <h1>🩺 O-Health Diagnostic Tool</h1>
-    <p>Welcome to the O-Health Diagnostic Tool. Please enter your symptoms below.</p>
+{% extends "base.html" %}
+{% block content %}
+<h2>📄 Final Report / अंतिम रिपोर्ट:</h2>
 
-    {% if audio_base64 %}
-    <audio controls autoplay>
-        <source src="data:audio/mp3;base64,{{ audio_base64 }}" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    {% endif %}
+<!-- Symptoms -->
+<p><strong>Symptoms / लक्षण:</strong> {{ symptoms }}</p>
+{% if age %}
+<p><strong>Age / आयु:</strong> {{ age }} years old / {{ age }} वर्ष</p>
+{% endif %}
+{% if gender %}
+<p><strong>Gender / लिंग:</strong> {{ gender }}</p>
+{% endif %}
+{% if location %}
+<p><strong>Location / स्थान:</strong> {{ location }}</p>
+{% endif %}
+{% if duration %}
+<p><strong>Duration of Symptoms / लक्षणों की अवधि:</strong> {{ duration }}</p>
+{% endif %}
+{% if medications %}
+<p><strong>Medications Taken / ली गई दवाएं:</strong> {{ medications }}</p>
+{% endif %}
 
-    <form method="POST">
-        <label for="symptoms_text">Enter your symptoms here:</label><br>
-        <textarea name="symptoms_text" rows="5" cols="50"></textarea><br>
-        <button type="submit">Submit Symptoms</button>
-    </form>
+<!-- Possible Cause -->
+{% if possible_cause_en and possible_cause_en != "No possible causes determined." %}
+<p><strong>Possible Cause / संभावित कारण (English):</strong></p>
+<ul>
+    <li>{{ possible_cause_en }}</li>
+</ul>
+<p><strong>संभावित कारण (Hindi):</strong></p>
+<ul>
+    <li>{{ possible_cause_hi }}</li>
+</ul>
 
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul>
-        {% for message in messages %}
-          <li><strong>{{ message }}</strong></li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
+<!-- Audio Playback Buttons -->
+{% if possible_cause_audio_url_hi %}
+    <button onclick="playAudio('possibleCauseAudioHi')">🔊 Play Possible Cause (Hindi)</button>
+    <audio id="possibleCauseAudioHi" src="{{ possible_cause_audio_url_hi }}" style="display: none;"></audio>
+{% endif %}
+{% if possible_cause_audio_url_en %}
+    <button onclick="playAudio('possibleCauseAudioEn')">🔊 Play Possible Cause (English)</button>
+    <audio id="possibleCauseAudioEn" src="{{ possible_cause_audio_url_en }}" style="display: none;"></audio>
+{% endif %}
 
-</body>
-</html>
+{% else %}
+<p><strong>Possible Cause / संभावित कारण:</strong> No possible causes determined. / कोई संभावित कारण निर्धारित नहीं किया गया।</p>
+{% endif %}
+
+<!-- Probable Diseases -->
+{% if probable_diseases %}
+<h3>🩺 Probable Diseases / संभावित रोग:</h3>
+<ul>
+    {% for disease, prob in probable_diseases.items() %}
+    <li><strong>{{ disease }}:</strong> {{ prob }}%</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No probable diseases found based on the entered symptoms and information. / आपके दर्ज किए गए लक्षणों और जानकारी के आधार पर कोई संभावित रोग नहीं मिला।</p>
+{% endif %}
+
+<!-- Transcript of Questions and Answers -->
+<h3>📝 Transcript of Questions and Answers / प्रश्नों और उत्तरों का ट्रांसक्रिप्ट:</h3>
+<ul>
+    <!-- Initial Symptom Input -->
+    {% for entry in conversation_history %}
+        {% if entry['user_input'] %}
+            <li><strong>Initial Symptom Input / प्रारंभिक लक्षण इनपुट:</strong> {{ entry['user_input'] }}</li>
+        {% endif %}
+    {% endfor %}
+    <hr>
+    <!-- Follow-Up Q&A -->
+    {% set question_count = 1 %}
+    {% for entry in conversation_history %}
+        {% if entry['followup_question_en'] and entry['response'] %}
+            <li>
+                <p><strong>Question {{ question_count }} (English) / प्रश्न {{ question_count }} (अंग्रेजी):</strong> {{ entry['followup_question_en'] }}</p>
+                <p><strong>Your Answer / आपका उत्तर:</strong> {{ entry['response'] }}</p>
+            </li>
+            <hr>
+            {% set question_count = question_count + 1 %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<!-- JavaScript for Audio Playback -->
+{% if possible_cause_audio_url_hi or possible_cause_audio_url_en %}
+<script>
+function playAudio(audioId) {
+    var audio = document.getElementById(audioId);
+    audio.play();
+}
+</script>
+{% endif %}
+
+{% endblock %}
