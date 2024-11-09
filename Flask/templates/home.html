@@ -49,5 +49,29 @@ function startDictation(textareaId) {
         alert("आपका ब्राउज़र वॉइस रिकग्निशन का समर्थन नहीं करता है। कृपया अपने लक्षण टाइप करें।");  // "Your browser does not support voice recognition. Please type your symptoms."
     }
 }
+
+function speakWelcomeMessage() {
+    if ('speechSynthesis' in window) {
+        var msg = new SpeechSynthesisUtterance("O-Health LLM ऐप में आपका स्वागत है। कृपया अपने लक्षण बोलें या टाइप करें।");
+        msg.lang = 'hi-IN';  // Set language to Hindi
+
+        // Select a more human-like Hindi voice
+        var voices = window.speechSynthesis.getVoices();
+        for(var i = 0; i < voices.length; i++) {
+            if(voices[i].lang === 'hi-IN' && voices[i].name.includes('Hindi')) {
+                msg.voice = voices[i];
+                break;
+            }
+        }
+
+        window.speechSynthesis.speak(msg);
+    }
+}
+
+// Automatically speak the welcome message when the page loads
+window.onload = function() {
+    // Delay to ensure voices are loaded
+    setTimeout(speakWelcomeMessage, 500);
+};
 </script>
 {% endblock %}
