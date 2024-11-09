@@ -1,52 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Final Report</title>
-</head>
-<body>
-    <h2>📄 Final Report:</h2>
-    <p><strong>Symptoms:</strong> {{ report.symptoms }}</p>
-    {% if report.age %}
-    <p><strong>Age:</strong> {{ report.age }}</p>
-    {% endif %}
-    {% if report.gender %}
-    <p><strong>Gender:</strong> {{ report.gender }}</p>
-    {% endif %}
-    {% if report.location %}
-    <p><strong>Location:</strong> {{ report.location }}</p>
-    {% endif %}
-    {% if report.duration %}
-    <p><strong>Duration of Symptoms:</strong> {{ report.duration }}</p>
-    {% endif %}
-    {% if report.medications %}
-    <p><strong>Medications Taken:</strong> {{ report.medications }}</p>
-    {% endif %}
+{% extends "base.html" %}
+{% block content %}
+<h2>📄 Final Report:</h2>
 
-    {% if report.probable_diseases %}
-    <h3>🩺 Probable Diseases:</h3>
-    <ul>
-        {% for disease, prob in report.probable_diseases.items() %}
-        <li><strong>{{ disease }}:</strong> {{ prob }}%</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+<p><strong>Symptoms:</strong> {{ symptoms }}</p>
+{% if age %}
+<p><strong>Age:</strong> {{ age }} years old</p>
+{% endif %}
+{% if gender %}
+<p><strong>Gender:</strong> {{ gender }}</p>
+{% endif %}
+{% if location %}
+<p><strong>Location:</strong> {{ location }}</p>
+{% endif %}
+{% if duration %}
+<p><strong>Duration of Symptoms:</strong> {{ duration }}</p>
+{% endif %}
+{% if medications %}
+<p><strong>Medications Taken:</strong> {{ medications }}</p>
+{% endif %}
 
-    {% if report.plot_url %}
-    <img src="{{ report.plot_url }}" alt="Probable Diseases Plot">
-    {% endif %}
+{% if possible_cause and possible_cause != "No possible causes determined." %}
+<p><strong>Possible Cause:</strong></p>
+<ul>
+    <li>{{ possible_cause }}</li>
+</ul>
+{% else %}
+<p><strong>Possible Cause:</strong> No possible causes determined.</p>
+{% endif %}
 
-    <h3>📝 Transcript of Questions and Answers:</h3>
-    {% for entry in conversation_history %}
-        {% if entry.user %}
-        <p><strong>User Input:</strong> {{ entry.user }}</p>
-        {% endif %}
-        {% if entry.followup_question_en %}
-        <p><strong>Question {{ loop.index }}:</strong> {{ entry.followup_question_en }}</p>
-        <p><strong>Answer:</strong> {{ entry.response }}</p>
-        {% endif %}
+{% if probable_diseases %}
+<h3>🩺 Probable Diseases:</h3>
+<ul>
+    {% for disease, prob in probable_diseases.items() %}
+    <li><strong>{{ disease }}:</strong> {{ prob }}%</li>
     {% endfor %}
+</ul>
+{% else %}
+<p>No probable diseases found based on the entered symptoms and information.</p>
+{% endif %}
 
-    <a href="{{ url_for('reset') }}">Start Over</a>
-</body>
-</html>
+<h3>📝 Transcript of Questions and Answers:</h3>
+{% set question_count = 1 %}
+{% for entry in conversation_history %}
+    {% if entry['followup_question_en'] and entry['response'] %}
+        <p><strong>Question {{ question_count }} (English):</strong> {{ entry['followup_question_en'] }}</p>
+        <p><strong>Your Answer:</strong> {{ entry['response'] }}</p>
+        <hr>
+        {% set question_count = question_count + 1 %}
+    {% endif %}
+{% endfor %}
+
+{% endblock %}
