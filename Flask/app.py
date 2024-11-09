@@ -1,35 +1,35 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
 import os
+import io
+import re
 import datetime
+import logging
+import base64
+import uuid
+import zipfile
+import requests
 import pandas as pd
 import torch
 import spacy
-import re
-import logging
-from gtts import gTTS
-import io
-import openai
-import base64
-import random
-import requests
-import zipfile
-import matplotlib
-matplotlib.use('Agg')  # Use a non-interactive backend
 import matplotlib.pyplot as plt
 import seaborn as sns
-import uuid
+import openai
+from gtts import gTTS
+from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
+from googletrans import Translator, LANGUAGES
+from textblob import TextBlob
+import random
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 
 # -------------------- Environment Setup -------------------- #
 
-# Initialize Flask app
 app = Flask(__name__)
-app.secret_key = "123456789"  # Replace with a secure key
+app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key
 
-# Set the OpenAI API key from environment variable
-openai.api_key = "OPEN-API-KEY"
+# Securely access the OpenAI API key
+openai.api_key = "OPEN-API-KEY"  # Replace with your actual OpenAI API key
 
 if not openai.api_key:
-    raise Exception("OpenAI API key not found. Please set it as an environment variable 'OPENAI_API_KEY'.")
+    raise ValueError("OpenAI API key not found. Please set it in the code.")
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO)
@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 # -------------------- Load BioBERT NER Model -------------------- #
 
 # URL to your BioBERT NER model zip file hosted externally
-BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/odjgcsy5i8ktmpbag6p33/medical-bert-symptom-ner.zip?rlkey=j4ekri3mp92341o0wq2plnro6&st=htjh6w4w&dl=1"
+BIOBERT_MODEL_URL = "https://www.dropbox.com/scl/fi/odjgcsy5i8ktmpbag6p33/medical-bert-symptom-ner.zip?rlkey=j4ekri3mp92341o0wq2plnro6&st=0ucut9k7&dl=1"
 
 # Path to the BioBERT model directory
 BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be extracted
@@ -46,7 +46,6 @@ BIOBERT_MODEL_DIR = 'medical-bert-symptom-ner'  # Path where the model will be e
 def download_and_unzip_biobert_model(model_url, model_dir):
     if not os.path.exists(model_dir):
         print("Downloading the BioBERT NER model. Please wait...")
-        # Download the model zip file
         try:
             response = requests.get(model_url, stream=True)
             response.raise_for_status()
@@ -58,7 +57,7 @@ def download_and_unzip_biobert_model(model_url, model_dir):
         except requests.exceptions.RequestException as e:
             print(f"Failed to download the BioBERT NER model: {e}")
             logger.error(f"Failed to download the BioBERT NER model: {e}")
-            raise e
+            exit()
         # Unzip the model
         try:
             with zipfile.ZipFile('biobert_model.zip', 'r') as zip_ref:
@@ -68,7 +67,7 @@ def download_and_unzip_biobert_model(model_url, model_dir):
         except zipfile.BadZipFile as e:
             print("Downloaded BioBERT model file is not a valid zip file.")
             logger.error(f"Invalid zip file: {e}")
-            raise e
+            exit()
         finally:
             # Remove the zip file if it exists
             if os.path.exists('biobert_model.zip'):
@@ -84,22 +83,23 @@ download_and_unzip_biobert_model(BIOBERT_MODEL_URL, BIOBERT_MODEL_DIR)
 
 # Check if the BioBERT model directory exists after extraction
 if not os.path.exists(BIOBERT_MODEL_DIR):
-    raise Exception(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
+    print(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
+    logger.error(f"BioBERT model directory '{BIOBERT_MODEL_DIR}' not found after extraction.")
+    exit()
 
 # Load the tokenizer and model
 def load_biobert_ner_pipeline():
     try:
-        from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
         tokenizer = AutoTokenizer.from_pretrained(BIOBERT_MODEL_DIR, add_prefix_space=True)
         model = AutoModelForTokenClassification.from_pretrained(BIOBERT_MODEL_DIR)
         device = 0 if torch.cuda.is_available() else -1
-        ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
+        ner_pipeline_model = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
         logger.info("BioBERT NER pipeline loaded successfully.")
-        return ner_pipeline
+        return ner_pipeline_model
     except Exception as e:
         print(f"Failed to load BioBERT NER pipeline: {e}")
         logger.error(f"Failed to load BioBERT NER pipeline: {e}")
-        raise e
+        exit()
 
 ner_pipeline = load_biobert_ner_pipeline()
 print("BioBERT NER model loaded successfully!")
@@ -117,7 +117,7 @@ def load_spacy_model():
     except OSError as e:
         print("SpaCy model 'en_core_web_sm' not found. Please install it using 'python -m spacy download en_core_web_sm'.")
         logger.error(f"SpaCy model loading error: {e}")
-        raise e
+        exit()
 
 nlp = load_spacy_model()
 
@@ -130,7 +130,7 @@ def load_disease_symptom_mapping():
     if not os.path.exists("disease_symptom_mapping.csv"):
         print("'disease_symptom_mapping.csv' not found in the current directory.")
         logger.error("'disease_symptom_mapping.csv' not found.")
-        raise FileNotFoundError("'disease_symptom_mapping.csv' not found.")
+        exit()
     try:
         df = pd.read_csv("disease_symptom_mapping.csv")
         logger.info("'disease_symptom_mapping.csv' loaded successfully.")
@@ -138,7 +138,7 @@ def load_disease_symptom_mapping():
     except Exception as e:
         print(f"Failed to load 'disease_symptom_mapping.csv': {e}")
         logger.error(f"Failed to load 'disease_symptom_mapping.csv': {e}")
-        raise e
+        exit()
 
 df_disease_symptom = load_disease_symptom_mapping()
 
@@ -167,7 +167,7 @@ symptom_list = [
     'decreased appetite', 'increased appetite', 'feeling full quickly',
     'unusual sweating', 'dark urine', 'light-colored stools', 'blood in urine',
     'blood in stool', 'frequent infections', 'delayed healing',
-    'high temperature', 'high blood pressure', 'low blood pressure',
+    'high temperature', 'high blood pressure', 'low blood pressure'
     # Add more symptoms and their variations as needed
 ]
 
@@ -185,111 +185,44 @@ medications_list = [
     "clindamycin", "metronidazole", "acetylsalicylic acid", "nifedipine",
     "warfarin", "heparin", "digoxin", "fexofenadine", "salbutamol",
     "montelukast", "levocetirizine", "betahistine", "melatonin", "zinc",
-    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant",
+    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant"
     # Add more medications as needed
 ]
 
-# -------------------- Symptom Follow-Up Questions -------------------- #
+# Initialize the translator
+translator = Translator()
 
-# Define symptom-specific follow-up questions with associated symptoms
-symptom_followup_questions = {
-    "Fever": [
-        {"hi": "क्या आपका बुखार लगातार है या बीच-बीच में आता है?", "en": "Is your fever constant or intermittent?", "category": "fever_type", "symptom": None},
-        {"hi": "क्या आपको ठंड लग रही है?", "en": "Are you experiencing any chills?", "category": "chills", "symptom": "Chills"},
-        {"hi": "क्या आपने कोई दवा ली है?", "en": "Have you taken any medication?", "category": "medications", "symptom": None},
-        {"hi": "क्या आपको सिरदर्द है?", "en": "Are you experiencing headaches?", "category": "headache", "symptom": "Headache"},
-        {"hi": "क्या आपको उल्टी जैसा महसूस हो रहा है?", "en": "Are you feeling nauseous?", "category": "nausea", "symptom": "Nausea"},
-        {"hi": "क्या आपका तापमान सामान्य से अधिक है?", "en": "Is your temperature higher than normal?", "category": "high_temperature", "symptom": "High temperature"},
-        {"hi": "क्या आपको रात में पसीना आता है?", "en": "Do you experience night sweats?", "category": "night_sweats", "symptom": "Night sweats"},
-        {"hi": "क्या आपको भूख कम लग रही है?", "en": "Are you experiencing loss of appetite?", "category": "loss_of_appetite", "symptom": "Loss of appetite"},
-    ],
-    "Cough": [
-        {"hi": "क्या आपकी खांसी सूखी है या बलगम के साथ?", "en": "Is your cough dry or with phlegm?", "category": "cough_type", "symptom": None},
-        {"hi": "क्या आपके खांसी के साथ बुखार है?", "en": "Do you have a fever along with your cough?", "category": "fever", "symptom": "Fever"},
-        {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you experiencing difficulty breathing?", "category": "breathing", "symptom": "Shortness of breath"},
-        {"hi": "क्या आपकी खांसी रात में बढ़ जाती है?", "en": "Does your cough worsen at night?", "category": "time", "symptom": None},
-        {"hi": "क्या आपको सीने में दर्द है?", "en": "Are you experiencing chest pain?", "category": "chest_pain", "symptom": "Chest pain"},
-        {"hi": "क्या आपको गले में खराश है?", "en": "Do you have a sore throat?", "category": "sore_throat", "symptom": "Sore throat"},
-        {"hi": "क्या आपकी आवाज़ बदल गई है?", "en": "Has your voice changed?", "category": "voice_change", "symptom": "Hoarseness"},
-        {"hi": "क्या आपको सांस लेने में सीटी जैसी आवाज़ आती है?", "en": "Do you experience wheezing?", "category": "wheezing", "symptom": "Wheezing"},
-    ],
-    "Abdominal Pain": [
-        {"hi": "क्या दर्द पेट के ऊपरी हिस्से में है?", "en": "Is the pain in the upper abdomen?", "category": "upper_abdomen", "symptom": None},
-        {"hi": "क्या दर्द पेट के निचले हिस्से में है?", "en": "Is the pain in the lower abdomen?", "category": "lower_abdomen", "symptom": None},
-        {"hi": "क्या आपको उल्टी या मिचली हो रही है?", "en": "Are you experiencing vomiting or nausea?", "category": "nausea_vomiting", "symptom": "Nausea"},
-        {"hi": "क्या आपको दस्त या कब्ज है?", "en": "Do you have diarrhea or constipation?", "category": "bowel_changes", "symptom": "Diarrhea"},
-        {"hi": "क्या आपको पेट फूलना महसूस हो रहा है?", "en": "Are you feeling bloated?", "category": "bloating", "symptom": "Bloating"},
-        {"hi": "क्या आपको खाना खाने के बाद दर्द बढ़ जाता है?", "en": "Does the pain increase after eating?", "category": "pain_after_eating", "symptom": None},
-        {"hi": "क्या आपको एसिडिटी या जलन महसूस हो रही है?", "en": "Are you experiencing acidity or burning sensation?", "category": "acidity", "symptom": "Heartburn"},
-        {"hi": "क्या आपको पेशाब में कोई समस्या है?", "en": "Do you have any problems with urination?", "category": "urination_issues", "symptom": None},
-    ],
-    "Stomach Ache": [
-        {"hi": "क्या दर्द पेट के बीच में है?", "en": "Is the pain in the middle of your stomach?", "category": "middle_abdomen", "symptom": None},
-        {"hi": "क्या आपको खाना नहीं पच रहा है?", "en": "Are you experiencing indigestion?", "category": "indigestion", "symptom": "Indigestion"},
-        {"hi": "क्या आपको बुखार के साथ पेट दर्द है?", "en": "Do you have fever along with stomach ache?", "category": "fever", "symptom": "Fever"},
-        {"hi": "क्या आपको पेट में ऐंठन हो रही है?", "en": "Are you experiencing cramps?", "category": "cramps", "symptom": "Cramps"},
-        # Add more questions as needed
-    ],
-    # Add more symptom categories as needed
-}
-
-# Additional general follow-up questions
-additional_followup_questions = [
-    {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
-    {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
-    {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
-    {"hi": "लक्षण कब से हैं?", "en": "How long have you had these symptoms?", "category": "duration", "symptom": None},
-    {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms", "symptom": None}
-]
-
-# -------------------- Core Functions -------------------- #
-
-def generate_audio(text: str, lang: str = 'en') -> bytes:
+def translate_to_english(text):
     """
-    Generate speech audio from text using gTTS and return it as bytes.
+    Translate text to English if it's not already in English.
     """
     try:
-        tts = gTTS(text=text, lang=lang)
-        fp = io.BytesIO()
-        tts.write_to_fp(fp)
-        fp.seek(0)
-        audio_bytes = fp.read()
-        logger.info("Audio generated successfully.")
-        return audio_bytes
+        detection = translator.detect(text)
+        if detection.lang != 'en':
+            translated = translator.translate(text, dest='en')
+            logger.info(f"Translated '{text}' from {LANGUAGES.get(detection.lang, 'unknown')} to English: '{translated.text}'")
+            return translated.text
+        return text
     except Exception as e:
-        logger.error(f"Failed to generate audio: {e}")
-        return None
+        logger.error(f"Translation error: {e}")
+        return text  # Fallback to original text if translation fails
 
-def save_audio_file(audio_bytes, file_extension):
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    file_name = f"audio_{timestamp}_{uuid.uuid4().hex}.{file_extension}"
-    file_path = os.path.join('static', 'audio', file_name)
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)
-
+def translate_to_hindi(text):
+    """
+    Translate text to Hindi.
+    """
     try:
-        with open(file_path, "wb") as f:
-            f.write(audio_bytes)
-        logger.info(f"Audio saved as {file_name}")
-        return file_path
+        translated = translator.translate(text, dest='hi')
+        logger.info(f"Translated to Hindi: '{translated.text}'")
+        return translated.text
     except Exception as e:
-        logger.error(f"Failed to save audio file: {e}")
-        return None
-
-def transcribe_audio(file_path):
-    try:
-        with open(file_path, "rb") as audio_file:
-            transcript = openai.Audio.translate("whisper-1", audio_file)
-            transcribed_text = transcript.get("text", "").strip()
-            logger.info(f"Audio transcription successful: {transcribed_text}")
-            return transcribed_text
-    except Exception as e:
-        logger.error(f"Transcription failed: {e}")
-        return None
-    finally:
-        # Optionally delete the file
-        pass
+        logger.error(f"Translation error: {e}")
+        return text  # Fallback to original text if translation fails
 
 def extract_symptoms(text):
+    """
+    Extract symptoms from the given text using BioBERT NER model and regex matching.
+    """
     try:
         # Use BioBERT NER model to extract symptoms
         ner_results = ner_pipeline(text)
@@ -297,7 +230,9 @@ def extract_symptoms(text):
         for entity in ner_results:
             if entity['entity_group'] == 'SYMPTOM':
                 symptom = entity['word'].strip()
-                extracted_symptoms.add(symptom.title())
+                # Ensure the symptom is in the known_symptoms list
+                if symptom.title() in known_symptoms:
+                    extracted_symptoms.add(symptom.title())
         logger.info(f"Extracted Symptoms using BioBERT: {extracted_symptoms}")
 
         # Also match against symptom list for any missed symptoms
@@ -308,12 +243,42 @@ def extract_symptoms(text):
                 extracted_symptoms.add(symptom.title())
 
         logger.info(f"Final Extracted Symptoms: {extracted_symptoms}")
+        extracted_symptoms = [med for med in extracted_symptoms if med not in {'No', 'yes', 'no'}]
         return extracted_symptoms
     except Exception as e:
         logger.error(f"Symptom extraction error: {e}")
         return set()
 
+def extract_possible_causes(text):
+    """
+    Use OpenAI API to generate a one-sentence overview of the possible cause from the transcript.
+    """
+    try:
+        prompt = f"Based on the following patient transcript, provide a one-sentence possible cause of the symptoms:\n\n{text}\n\nPossible cause:"
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that provides possible causes of medical symptoms based on patient transcripts."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=50,
+            temperature=0.7,
+            n=1,
+            stop=None,
+        )
+        cause = response['choices'][0]['message']['content'].strip()
+        # Remove any leading prompts like "Possible cause:" if present
+        cause = re.sub(r'^Possible cause:\s*', '', cause, flags=re.IGNORECASE)
+        logger.info(f"Generated possible cause using OpenAI API: {cause}")
+        return cause
+    except Exception as e:
+        logger.error(f"Failed to generate possible cause using OpenAI API: {e}")
+        return "No possible causes determined."
+
 def extract_additional_entities(text):
+    """
+    Extract additional entities like age, gender, location, duration, and medications from text.
+    """
     doc = nlp(text)
     age = None
     gender = None
@@ -327,6 +292,7 @@ def extract_additional_entities(text):
         if med.lower() in tokens:
             medications.append(med.title())
     medications = list(set(medications))  # remove duplicates
+    medications = [med for med in medications if med not in {'Yes', 'No'}]
 
     # Extract age
     age_patterns = [
@@ -353,7 +319,7 @@ def extract_additional_entities(text):
 
     # Extract location
     for ent in doc.ents:
-        if ent.label_ == 'GPE' or ent.label_ == 'LOC':
+        if ent.label_ in ['GPE', 'LOC']:
             location = ent.text
             break
 
@@ -388,7 +354,49 @@ def extract_additional_entities(text):
         'medications': medications
     }
 
-def determine_followup_questions(matched_symptoms, additional_info):
+# -------------------- Symptom Follow-Up Questions -------------------- #
+
+# Define symptom-specific follow-up questions with associated symptoms
+symptom_followup_questions = {
+    "Fever": [
+        {"hi": "क्या आपका बुखार लगातार है या बीच-बीच में आता है?", "en": "Is your fever constant or intermittent?", "category": "fever_type", "symptom": None},
+        {"hi": "क्या आपको ठंड लग रही है?", "en": "Are you experiencing any chills?", "category": "chills", "symptom": "Chills"},
+        {"hi": "क्या आपने कोई दवा ली है?", "en": "Have you taken any medication?", "category": "medications", "symptom": None},
+        {"hi": "क्या आपको सिरदर्द है?", "en": "Are you experiencing headaches?", "category": "headache", "symptom": "Headache"},
+        {"hi": "क्या आपको उल्टी जैसा महसूस हो रहा है?", "en": "Are you feeling nauseous?", "category": "nausea", "symptom": "Nausea"},
+        {"hi": "क्या आपका तापमान सामान्य से अधिक है?", "en": "Is your temperature higher than normal?", "category": "high_temperature", "symptom": "High temperature"},
+        {"hi": "क्या आपको रात में पसीना आता है?", "en": "Do you experience night sweats?", "category": "night_sweats", "symptom": "Night sweats"},
+        {"hi": "क्या आपको भूख कम लग रही है?", "en": "Are you experiencing loss of appetite?", "category": "loss_of_appetite", "symptom": "Loss of appetite"},
+    ],
+    "Cough": [
+        {"hi": "क्या आपकी खांसी सूखी है या बलगम के साथ?", "en": "Is your cough dry or with phlegm?", "category": "cough_type", "symptom": None},
+        {"hi": "क्या आपके खांसी के साथ बुखार है?", "en": "Do you have a fever along with your cough?", "category": "fever", "symptom": "Fever"},
+        {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you experiencing difficulty breathing?", "category": "breathing", "symptom": "Shortness of breath"},
+        {"hi": "क्या आपकी खांसी रात में बढ़ जाती है?", "en": "Does your cough worsen at night?", "category": "time", "symptom": None},
+        {"hi": "क्या आपको सीने में दर्द है?", "en": "Are you experiencing chest pain?", "category": "chest_pain", "symptom": "Chest pain"},
+        {"hi": "क्या आपको गले में खराश है?", "en": "Do you have a sore throat?", "category": "sore_throat", "symptom": "Sore throat"},
+        {"hi": "क्या आपकी आवाज़ बदल गई है?", "en": "Has your voice changed?", "category": "voice_change", "symptom": "Hoarseness"},
+        {"hi": "क्या आपको सांस लेने में सीटी जैसी आवाज़ आती है?", "en": "Do you experience wheezing?", "category": "wheezing", "symptom": "Wheezing"},
+    ],
+    # Add more symptom categories as needed
+}
+
+# Additional general follow-up questions
+additional_followup_questions = [
+    {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
+    {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
+    {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
+    {"hi": "लक्षण कब से हैं?", "en": "How long have you had these symptoms?", "category": "duration", "symptom": None},
+    {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms", "symptom": None}
+]
+
+# -------------------- Core Functions -------------------- #
+
+def determine_followup_questions(conversation_history, additional_info):
+    """
+    Determine the next set of follow-up questions based on matched symptoms and additional information.
+    """
+    matched_symptoms, _, _ = extract_all_symptoms(conversation_history)
     followup_questions = []
     asked_categories = set()
 
@@ -413,7 +421,10 @@ def determine_followup_questions(matched_symptoms, additional_info):
 
     # Randomly select up to 5 questions
     num_questions_to_ask = min(len(all_possible_questions), 5)
-    selected_questions = random.sample(all_possible_questions, num_questions_to_ask)
+    if num_questions_to_ask > 0:
+        selected_questions = random.sample(all_possible_questions, num_questions_to_ask)
+    else:
+        selected_questions = []
 
     # Build the follow-up questions list
     for q in selected_questions:
@@ -431,6 +442,10 @@ def determine_followup_questions(matched_symptoms, additional_info):
     return followup_questions
 
 def extract_all_symptoms(conversation_history):
+    """
+    Extract all symptoms, additional information, and possible causes from the conversation history.
+    Collect all user inputs into a single transcript for cause analysis.
+    """
     matched_symptoms = set()
     additional_info = {
         'age': None,
@@ -439,13 +454,15 @@ def extract_all_symptoms(conversation_history):
         'duration': None,
         'medications': []
     }
+    combined_transcript = ""
 
     affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
-    negative_responses = {'no', 'nah', 'nope', 'not really', 'don\'t', 'nahi'}
+    negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
 
     for entry in conversation_history:
         if 'user' in entry:
             user_text = entry['user']
+            combined_transcript += " " + user_text  # Collecting all user inputs
             symptoms = extract_symptoms(user_text)
             matched_symptoms.update(symptoms)
             info = extract_additional_entities(user_text)
@@ -458,8 +475,34 @@ def extract_all_symptoms(conversation_history):
                         additional_info[key] = info[key]
         if 'followup_question_en' in entry:
             response_text = entry['response']
-            symptoms = extract_symptoms(response_text)
-            matched_symptoms.update(symptoms)
+            question_text = entry['followup_question_en']
+            response_text_lower = response_text.strip().lower()
+
+            # Check if response is affirmative or negative
+            is_affirmative = any(word in response_text_lower for word in affirmative_responses)
+            is_negative = any(word in response_text_lower for word in negative_responses)
+
+            # Get the 'symptom' associated with the question
+            symptom = None
+            for symptom_category in symptom_followup_questions.values():
+                for q in symptom_category:
+                    if q['en'].lower() == question_text.lower():
+                        symptom = q.get('symptom')
+                        break
+                if symptom:
+                    break
+
+            if symptom and is_affirmative:
+                matched_symptoms.add(symptom)
+                combined_transcript += " " + response_text  # Include affirmative response in transcript
+            elif symptom and is_negative:
+                if symptom in matched_symptoms:
+                    matched_symptoms.remove(symptom)
+                # Do not include negative responses in transcript for cause analysis
+            else:
+                combined_transcript += " " + response_text  # Include other responses
+
+            # Extract additional entities from the response
             info = extract_additional_entities(response_text)
             for key in additional_info:
                 if key in info and info[key]:
@@ -469,44 +512,19 @@ def extract_all_symptoms(conversation_history):
                     else:
                         additional_info[key] = info[key]
 
-            # Infer symptoms from Yes/No answers to symptom-related questions
-            question_entry = entry
-            question_text = question_entry['followup_question_en']
-            response_text_lower = response_text.strip().lower()
-
-            # Check if response is affirmative
-            is_affirmative = response_text_lower in affirmative_responses
-
-            # Get the 'symptom' associated with the question
-            symptom = None
-            for symptom_category in symptom_followup_questions.values():
-                for q in symptom_category:
-                    if q['en'] == question_text:
-                        symptom = q.get('symptom')
-                        break
-                if symptom:
-                    break
-
-            if symptom and is_affirmative:
-                matched_symptoms.add(symptom)
-            elif symptom and response_text_lower in negative_responses:
-                # Optionally, you can handle negative responses if needed
-                pass
+    # Extract possible causes from the combined transcript
+    possible_cause = extract_possible_causes(combined_transcript)
 
     logger.info(f"Final Matched Symptoms: {matched_symptoms}")
     logger.info(f"Additional Information: {additional_info}")
-    return matched_symptoms, additional_info
+    logger.info(f"Combined Transcript for Cause Analysis: {combined_transcript}")
+    logger.info(f"Possible Cause: {possible_cause}")
+
+    return matched_symptoms, additional_info, possible_cause
 
 def map_symptoms_to_diseases(matched_symptoms, additional_info):
     """
     Map the matched symptoms to probable diseases based on the disease-symptom mapping.
-
-    Args:
-        matched_symptoms (set): A set of matched symptoms.
-        additional_info (dict): A dictionary containing additional extracted information.
-
-    Returns:
-        dict: A dictionary of probable diseases with their respective probabilities.
     """
     # Create disease-symptom mapping
     disease_symptom_map = df_disease_symptom.groupby('DiseaseName')['SymptomName'].apply(set).to_dict()
@@ -557,130 +575,139 @@ def map_symptoms_to_diseases(matched_symptoms, additional_info):
     else:
         return {}
 
-def generate_report(conversation_history):
-    matched_symptoms, additional_info = extract_all_symptoms(conversation_history)
-    report = {}
-    report['symptoms'] = ', '.join(matched_symptoms) if matched_symptoms else 'Not specified'
-    report['age'] = f"{additional_info['age']} years old" if additional_info['age'] else None
-    report['gender'] = additional_info['gender'].title() if additional_info['gender'] else None
-    report['location'] = additional_info['location'] if additional_info['location'] else None
-    report['duration'] = additional_info['duration'] if additional_info['duration'] else None
-    report['medications'] = ', '.join(additional_info['medications']) if additional_info['medications'] else None
+def handle_yes_no_response(question, response):
+    """
+    Handles yes/no responses to follow-up questions to add or remove symptoms.
 
-    # Map symptoms to diseases
-    probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
-    report['probable_diseases'] = probable_diseases
+    Args:
+        question (dict): The current follow-up question being asked.
+        response (str): The user's response to the follow-up question.
+    """
+    affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
+    negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
 
-    # Generate plot if diseases are found
-    plot_url = None
-    if probable_diseases:
-        fig, ax = plt.subplots(figsize=(10, 6))
-        sns.barplot(x=list(probable_diseases.keys()), y=list(probable_diseases.values()), ax=ax)
-        ax.set_xlabel("Disease")
-        ax.set_ylabel("Probability (%)")
-        ax.set_title("Probable Diseases")
-        plt.xticks(rotation=45, ha='right')
-        # Save plot to static directory
-        plot_filename = f"plot_{uuid.uuid4().hex}.png"
-        plot_path = os.path.join('static', 'plots', plot_filename)
-        os.makedirs(os.path.dirname(plot_path), exist_ok=True)
-        plt.savefig(plot_path)
-        plot_url = url_for('static', filename=f'plots/{plot_filename}')
-        plt.close(fig)
+    response_lower = response.strip().lower()
+    is_affirmative = any(word in response_lower for word in affirmative_responses)
+    is_negative = any(word in response_lower for word in negative_responses)
 
-    report['plot_url'] = plot_url
+    # Initialize session['matched_symptoms'] if not already
+    if 'matched_symptoms' not in session:
+        session['matched_symptoms'] = []
 
-    return report
+    matched_symptoms = set(session['matched_symptoms'])
+
+    if is_affirmative and question['symptom']:
+        matched_symptoms.add(question['symptom'])
+        logger.info(f"Added symptom '{question['symptom']}' based on affirmative response.")
+    elif is_negative and question['symptom']:
+        if question['symptom'] in matched_symptoms:
+            matched_symptoms.remove(question['symptom'])
+            logger.info(f"Removed symptom '{question['symptom']}' based on negative response.")
+        else:
+            logger.info(f"No action taken for symptom '{question['symptom']}' as it's not present.")
+    else:
+        logger.info("Response not recognized as yes/no or no associated symptom.")
+
+    session['matched_symptoms'] = list(matched_symptoms)
 
 # -------------------- Flask Routes -------------------- #
 
 @app.route('/', methods=['GET', 'POST'])
-def index():
-    if 'conversation_history' not in session:
-        session['conversation_history'] = []
-        session['current_step'] = 1  # 1: Initial Symptom Input, 2: Follow-Up, 3: Report
+def home():
+    if request.method == 'POST':
+        symptoms = request.form.get('symptoms', '').strip()
+        if not symptoms:
+            return render_template('home.html', error="Please enter your symptoms.")
+
+        # Translate and process input
+        translated_input = translate_to_english(symptoms)
+        corrected_input = translated_input  # Since 'corrected_input' is disabled
+
+        # Initialize session variables
+        session['conversation_history'] = [{'user': corrected_input}]
+        session['current_step'] = 1
         session['symptoms_processed'] = False
-        session['followup_questions'] = []
+
+        # Extract additional info
+        matched_symptoms, additional_info, _ = extract_all_symptoms(session['conversation_history'])
+        session['additional_info'] = additional_info
+        session['matched_symptoms'] = list(matched_symptoms)
+
+        # Determine follow-up questions
+        followup_questions = determine_followup_questions(session['conversation_history'], additional_info)
+        session['followup_questions'] = followup_questions
         session['current_followup'] = 0
 
-    if request.method == 'POST':
-        # Handle symptom input
-        user_input = request.form.get('symptoms_text')
-        if user_input:
-            session['conversation_history'].append({'user': user_input})
-            matched_symptoms, additional_info = extract_all_symptoms(session['conversation_history'])
-            session['followup_questions'] = determine_followup_questions(matched_symptoms, additional_info)
-            session['current_step'] = 2
-            return redirect(url_for('followup'))
-        else:
-            flash("Please enter your symptoms.")
-            return redirect(url_for('index'))
-
-    # Generate welcome audio
-    welcome_text = "ओ-हेल्थ में आपका स्वागत है। कृपया अपने लक्षण टाइप करें।"
-    audio_bytes = generate_audio(welcome_text, lang='hi')
-    if audio_bytes:
-        audio_base64 = base64.b64encode(audio_bytes).decode('utf-8')
-    else:
-        audio_base64 = None
-
-    return render_template('index.html', audio_base64=audio_base64)
+        return redirect(url_for('followup'))
+    return render_template('home.html')
 
 @app.route('/followup', methods=['GET', 'POST'])
 def followup():
-    if 'conversation_history' not in session or session.get('current_step') != 2:
-        return redirect(url_for('index'))
-
-    total_questions = len(session['followup_questions'])
     current_followup = session.get('current_followup', 0)
+    followup_questions = session.get('followup_questions', [])
+
+    if current_followup >= len(followup_questions):
+        return redirect(url_for('report'))
+
+    current_question = followup_questions[current_followup]
+    question_number = current_followup + 1
+    total_questions = len(followup_questions)
 
     if request.method == 'POST':
-        # Handle follow-up answer
-        answer = request.form.get('answer')
-        if answer:
-            current_question = session['followup_questions'][current_followup]
-            session['conversation_history'].append({
-                'followup_question_en': current_question['en'],
-                'response': answer
-            })
-            session['current_followup'] = current_followup + 1
-            if session['current_followup'] >= total_questions:
-                session['current_step'] = 3
-                return redirect(url_for('report'))
-            else:
-                return redirect(url_for('followup'))
-        else:
-            flash("Please provide an answer.")
-            return redirect(url_for('followup'))
+        answer = request.form.get('answer', '').strip()
+        if not answer:
+            return render_template('followup.html', current_question=current_question,
+                                   question_number=question_number, total_questions=total_questions,
+                                   error="Please provide your answer.")
 
-    if current_followup < total_questions:
-        current_question = session['followup_questions'][current_followup]
-        # Generate question audio
-        question_audio = generate_audio(current_question['hi'], lang='hi')
-        if question_audio:
-            audio_base64 = base64.b64encode(question_audio).decode('utf-8')
-        else:
-            audio_base64 = None
+        # Process answer
+        translated_answer = translate_to_english(answer)
+        corrected_answer = translated_answer  # Since 'corrected_input' is disabled
 
-        return render_template('followup.html', question=current_question, audio_base64=audio_base64, question_number=current_followup + 1, total_questions=total_questions)
-    else:
-        session['current_step'] = 3
-        return redirect(url_for('report'))
+        # Update conversation history
+        conversation_history = session.get('conversation_history', [])
+        conversation_history.append({
+            'followup_question_en': current_question['en'],
+            'response': corrected_answer
+        })
+        session['conversation_history'] = conversation_history
+
+        # Handle yes/no response
+        handle_yes_no_response(current_question, corrected_answer)
+
+        # Update matched symptoms
+        extracted_symptoms = extract_symptoms(corrected_answer)
+        matched_symptoms = set(session.get('matched_symptoms', []))
+        matched_symptoms.update(extracted_symptoms)
+        session['matched_symptoms'] = list(matched_symptoms)
+
+        # Increment follow-up counter
+        session['current_followup'] = current_followup + 1
+        return redirect(url_for('followup'))
+
+    return render_template('followup.html', current_question=current_question,
+                           question_number=question_number, total_questions=total_questions)
 
 @app.route('/report')
 def report():
-    if 'conversation_history' not in session or session.get('current_step') != 3:
-        return redirect(url_for('index'))
+    conversation_history = session.get('conversation_history', [])
+    matched_symptoms, additional_info, possible_cause = extract_all_symptoms(conversation_history)
 
-    report_data = generate_report(session['conversation_history'])
+    # Map symptoms to diseases
+    probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
 
-    return render_template('report.html', report=report_data, conversation_history=session['conversation_history'])
+    # Prepare data for template
+    symptoms = ', '.join(matched_symptoms) if matched_symptoms else 'Not specified'
+    age = additional_info.get('age')
+    gender = additional_info.get('gender')
+    location = additional_info.get('location')
+    duration = additional_info.get('duration')
+    medications = ', '.join(additional_info.get('medications', []))
 
-@app.route('/reset')
-def reset():
-    session.clear()
-    return redirect(url_for('index'))
+    return render_template('report.html', symptoms=symptoms, age=age, gender=gender,
+                           location=location, duration=duration, medications=medications,
+                           possible_cause=possible_cause, probable_diseases=probable_diseases,
+                           conversation_history=conversation_history)
 
-# Run the app
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
