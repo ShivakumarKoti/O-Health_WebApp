@@ -27,7 +27,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key
 
 # Securely access the OpenAI API key
-openai.api_key = "OPEN_KEY"  # Replace with your actual OpenAI API key
+openai.api_key = "OPEN-KEY"  # Replace with your actual OpenAI API key
 
 if not openai.api_key:
     raise ValueError("OpenAI API key not found. Please set it in the code.")
@@ -502,8 +502,8 @@ def extract_all_symptoms(conversation_history):
     negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
 
     for entry in conversation_history:
-        if 'user' in entry:
-            user_text = entry['user']
+        if 'user_input' in entry:
+            user_text = entry['user_input']
             combined_transcript += " " + user_text  # Collecting all user inputs
             symptoms = extract_symptoms(user_text)
             matched_symptoms.update(symptoms)
@@ -666,7 +666,7 @@ def home():
         corrected_input = translated_input  # Since 'corrected_input' is disabled
 
         # Initialize session variables
-        session['conversation_history'] = [{'user': corrected_input}]
+        session['conversation_history'] = [{'user_input': corrected_input}]
         session['current_step'] = 1
         session['symptoms_processed'] = False
 
