@@ -18,6 +18,7 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 from googletrans import Translator, LANGUAGES
 from textblob import TextBlob
 import random
+import time
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 
 # -------------------- Environment Setup -------------------- #
@@ -26,7 +27,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key
 
 # Securely access the OpenAI API key
-openai.api_key = "OPEN-API-KEY"  # Replace with your actual OpenAI API key
+openai.api_key = "OPEN_KEY"  # Replace with your actual OpenAI API key
 
 if not openai.api_key:
     raise ValueError("OpenAI API key not found. Please set it in the code.")
@@ -34,6 +35,13 @@ if not openai.api_key:
 # Initialize logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# -------------------- Define Audio Directory -------------------- #
+
+# Define the path for audio files
+AUDIO_FOLDER = os.path.join('static', 'audio')
+if not os.path.exists(AUDIO_FOLDER):
+    os.makedirs(AUDIO_FOLDER)
 
 # -------------------- Load BioBERT NER Model -------------------- #
 
@@ -198,9 +206,10 @@ def translate_to_english(text):
     """
     try:
         detection = translator.detect(text)
+        logger.info(f"Detected language: {LANGUAGES.get(detection.lang, 'unknown')} for text: '{text}'")
         if detection.lang != 'en':
             translated = translator.translate(text, dest='en')
-            logger.info(f"Translated '{text}' from {LANGUAGES.get(detection.lang, 'unknown')} to English: '{translated.text}'")
+            logger.info(f"Translated '{text}' to English: '{translated.text}'")
             return translated.text
         return text
     except Exception as e:
@@ -248,6 +257,39 @@ def extract_symptoms(text):
     except Exception as e:
         logger.error(f"Symptom extraction error: {e}")
         return set()
+
+def generate_tts_audio(text, filename, lang='hi'):
+    """
+    Generate a TTS audio file using gTTS and save it to the AUDIO_FOLDER.
+    Returns the path to the audio file.
+    """
+    try:
+        cleanup_audio_files()  # Clean old files
+        tts = gTTS(text=text, lang=lang)
+        filepath = os.path.join(AUDIO_FOLDER, filename)
+        tts.save(filepath)
+        logger.info(f"Generated TTS audio file: {filepath}")
+        return filepath
+    except Exception as e:
+        logger.error(f"Failed to generate TTS audio: {e}")
+        return None
+
+def cleanup_audio_files():
+    """
+    Remove audio files older than 1 hour from the AUDIO_FOLDER.
+    """
+    now = time.time()
+    cutoff = now - 3600  # 1 hour in seconds
+    for filename in os.listdir(AUDIO_FOLDER):
+        filepath = os.path.join(AUDIO_FOLDER, filename)
+        if os.path.isfile(filepath):
+            file_modified = os.path.getmtime(filepath)
+            if file_modified < cutoff:
+                try:
+                    os.remove(filepath)
+                    logger.info(f"Deleted old audio file: {filepath}")
+                except Exception as e:
+                    logger.error(f"Failed to delete {filepath}: {e}")
 
 def extract_possible_causes(text):
     """
@@ -617,7 +659,7 @@ def home():
     if request.method == 'POST':
         symptoms = request.form.get('symptoms', '').strip()
         if not symptoms:
-            return render_template('home.html', error="Please enter your symptoms.")
+            return render_template('home.html', error="कृपया अपने लक्षण दर्ज करें।")  # "Please enter your symptoms."
 
         # Translate and process input
         translated_input = translate_to_english(symptoms)
@@ -658,7 +700,7 @@ def followup():
         if not answer:
             return render_template('followup.html', current_question=current_question,
                                    question_number=question_number, total_questions=total_questions,
-                                   error="Please provide your answer.")
+                                   error="कृपया अपना उत्तर दें।")  # "Please provide your answer."
 
         # Process answer
         translated_answer = translate_to_english(answer)
@@ -691,7 +733,9 @@ def followup():
 @app.route('/report')
 def report():
     conversation_history = session.get('conversation_history', [])
-    matched_symptoms, additional_info, possible_cause = extract_all_symptoms(conversation_history)
+    matched_symptoms, additional_info, possible_cause_en = extract_all_symptoms(conversation_history)
+
+    logger.info(f"Reporting Possible Cause: {possible_cause_en}")  # Ensure it's correctly retrieved
 
     # Map symptoms to diseases
     probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
@@ -704,9 +748,37 @@ def report():
     duration = additional_info.get('duration')
     medications = ', '.join(additional_info.get('medications', []))
 
-    return render_template('report.html', symptoms=symptoms, age=age, gender=gender,
-                           location=location, duration=duration, medications=medications,
-                           possible_cause=possible_cause, probable_diseases=probable_diseases,
+    # Generate TTS audio for possible_cause in Hindi and English
+    possible_cause_audio_url_hi = None
+    possible_cause_audio_url_en = None
+    possible_cause_hindi = ""
+    if possible_cause_en and possible_cause_en != "No possible causes determined.":
+        # Translate possible_cause back to Hindi
+        possible_cause_hindi = translate_to_hindi(possible_cause_en)
+        # Create unique filenames
+        filename_hi = f"possible_cause_hi_{uuid.uuid4().hex}.mp3"
+        filename_en = f"possible_cause_en_{uuid.uuid4().hex}.mp3"
+        # Generate Hindi audio
+        audio_path_hi = generate_tts_audio(possible_cause_hindi, filename_hi, lang='hi')
+        if audio_path_hi:
+            possible_cause_audio_url_hi = url_for('static', filename=f'audio/{filename_hi}')
+        # Generate English audio
+        audio_path_en = generate_tts_audio(possible_cause_en, filename_en, lang='en')
+        if audio_path_en:
+            possible_cause_audio_url_en = url_for('static', filename=f'audio/{filename_en}')
+
+    return render_template('report.html',
+                           symptoms=symptoms,
+                           age=age,
+                           gender=gender,
+                           location=location,
+                           duration=duration,
+                           medications=medications,
+                           possible_cause_en=possible_cause_en,  # English version
+                           possible_cause_hi=possible_cause_hindi,  # Hindi version
+                           possible_cause_audio_url_hi=possible_cause_audio_url_hi,  # Hindi audio
+                           possible_cause_audio_url_en=possible_cause_audio_url_en,  # English audio
+                           probable_diseases=probable_diseases,
                            conversation_history=conversation_history)
 
 if __name__ == "__main__":
