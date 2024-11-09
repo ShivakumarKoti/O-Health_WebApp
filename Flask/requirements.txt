@@ -1,0 +1,12 @@
+Flask
+torch
+transformers
+spacy
+matplotlib
+seaborn
+openai
+gTTS
+googletrans==4.0.0rc1
+textblob
+requests
+pandas
