@@ -1,16 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Follow-Up Question {{ question_number }} of {{ total_questions }}</h2>
+<h2>🔍 Follow-Up Question {{ question_number }} of {{ total_questions }} / फॉलो-अप प्रश्न {{ question_number }} / {{ total_questions }}</h2>
 <p><strong>Hindi:</strong> {{ current_question['hi'] }}</p>
 <p><strong>English:</strong> {{ current_question['en'] }}</p>
 
 <form action="{{ url_for('followup') }}" method="post">
-    <label for="answer">Your Answer:</label><br>
-    <textarea id="answer" name="answer" rows="2" cols="50"></textarea><br><br>
-    <input type="submit" value="Submit Answer">
+    <label for="answer">Your Answer / आपका उत्तर:</label><br>
+    <textarea id="answer" name="answer" rows="2" cols="50"></textarea><br>
+    <button type="button" onclick="startDictation('answer')">🎤 Speak / बोलें</button><br><br>
+    <input type="submit" value="Submit Answer / उत्तर सबमिट करें">
 </form>
 
 {% if error %}
 <p style="color:red;">{{ error }}</p>
 {% endif %}
+
+<script>
+function startDictation(textareaId) {
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+        var recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'hi-IN';  // Set language to Hindi
+        recognition.start();
+
+        recognition.onresult = function(e) {
+            document.getElementById(textareaId).value = e.results[0][0].transcript;
+            recognition.stop();
+        };
+
+        recognition.onerror = function(e) {
+            recognition.stop();
+        }
+    } else {
+        alert("Your browser does not support speech recognition. कृपया अपना उत्तर टाइप करें।");
+    }
+}
+
+function speakQuestion(text) {
+    if ('speechSynthesis' in window) {
+        var msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'hi-IN';  // Set language to Hindi
+        window.speechSynthesis.speak(msg);
+    }
+}
+
+// Automatically speak the question when the page loads
+window.onload = function() {
+    var questionText = "{{ current_question['hi'] }}";
+    speakQuestion(questionText);
+};
+</script>
 {% endblock %}
