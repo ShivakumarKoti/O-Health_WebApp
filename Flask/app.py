@@ -28,6 +28,7 @@ app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key
 
 # Securely access the OpenAI API key
 openai.api_key = "OPEN-KEY"  # Replace with your actual OpenAI API key
+WHISPER_API_URL = "https://api.openai.com/v1/audio/translations"  # Endpoint for transcription with translation
 
 if not openai.api_key:
     raise ValueError("OpenAI API key not found. Please set it in the code.")
@@ -502,9 +503,9 @@ def extract_all_symptoms(conversation_history):
     negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
 
     for entry in conversation_history:
-        if 'user_input' in entry:
-            user_text = entry['user_input']
-            combined_transcript += " " + user_text  # Collecting all user inputs
+        if 'user_input_english' in entry:
+            user_text = entry['user_input_english']
+            combined_transcript += " " + user_text  # Collecting all English user inputs
             symptoms = extract_symptoms(user_text)
             matched_symptoms.update(symptoms)
             info = extract_additional_entities(user_text)
@@ -515,9 +516,9 @@ def extract_all_symptoms(conversation_history):
                         additional_info[key] = list(set(additional_info[key]))
                     else:
                         additional_info[key] = info[key]
-        if 'followup_question_en' in entry:
-            response_text = entry['response']
-            question_text = entry['followup_question_en']
+        if 'followup_question_english' in entry:
+            response_text = entry['response_english']
+            question_text = entry['followup_question_english']
             response_text_lower = response_text.strip().lower()
 
             # Check if response is affirmative or negative
@@ -654,6 +655,19 @@ def handle_yes_no_response(question, response):
 
 # -------------------- Flask Routes -------------------- #
 
+def generate_tts_audio(text, filename, lang='en'):
+    """
+    Generate a TTS audio file using Google Cloud or your preferred method and save it to the AUDIO_FOLDER.
+    Returns the path to the audio file.
+    """
+    # Example implementation using a placeholder function
+    # Replace this with your actual TTS generation logic
+    filepath = os.path.join(AUDIO_FOLDER, filename)
+    with open(filepath, 'wb') as f:
+        f.write(b'')  # Placeholder: Write actual audio content
+    logger.info(f"Generated TTS audio file: {filepath}")
+    return filepath
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -663,10 +677,13 @@ def home():
 
         # Translate and process input
         translated_input = translate_to_english(symptoms)
-        corrected_input = translated_input  # Since 'corrected_input' is disabled
+        corrected_input = translated_input  # Assuming no correction needed
 
         # Initialize session variables
-        session['conversation_history'] = [{'user_input': corrected_input}]
+        session['conversation_history'] = [{
+            'user_input_hindi': symptoms,            # Original Hindi input
+            'user_input_english': corrected_input    # Translated English input
+        }]
         session['current_step'] = 1
         session['symptoms_processed'] = False
 
@@ -702,15 +719,17 @@ def followup():
                                    question_number=question_number, total_questions=total_questions,
                                    error="कृपया अपना उत्तर दें।")  # "Please provide your answer."
 
-        # Process answer
+        # Translate and process answer
         translated_answer = translate_to_english(answer)
-        corrected_answer = translated_answer  # Since 'corrected_input' is disabled
+        corrected_answer = translated_answer  # Assuming no correction needed
 
-        # Update conversation history
+        # Update conversation history with both Hindi and English versions
         conversation_history = session.get('conversation_history', [])
         conversation_history.append({
-            'followup_question_en': current_question['en'],
-            'response': corrected_answer
+            'followup_question_hindi': current_question['hi'],        # Original Hindi question
+            'followup_question_english': current_question['en'],     # English question
+            'response_hindi': answer,                                 # Original Hindi answer
+            'response_english': corrected_answer                     # Translated English answer
         })
         session['conversation_history'] = conversation_history
 
@@ -729,6 +748,105 @@ def followup():
 
     return render_template('followup.html', current_question=current_question,
                            question_number=question_number, total_questions=total_questions)
+
+
+@app.route('/transcribe', methods=['POST'])
+def transcribe():
+    """
+    Handle audio transcription and translation to English.
+    """
+    if 'audio' not in request.files:
+        return jsonify({'error': 'No audio file provided.'}), 400
+
+    audio_file = request.files['audio']
+    if audio_file.filename == '':
+        return jsonify({'error': 'No selected audio file.'}), 400
+
+    try:
+        # Save the uploaded audio file temporarily
+        temp_filename = f"temp_{uuid.uuid4().hex}.wav"
+        temp_filepath = os.path.join('temp', temp_filename)
+        os.makedirs('temp', exist_ok=True)
+        audio_file.save(temp_filepath)
+
+        # OpenAI Whisper API endpoint for translation
+        api_url = "https://api.openai.com/v1/audio/translations"
+
+        headers = {
+            "Authorization": f"Bearer {openai.api_key}"
+        }
+
+        with open(temp_filepath, 'rb') as f:
+            files = {
+                'file': (temp_filename, f, 'audio/wav'),
+                'model': (None, 'whisper-1'),
+                'prompt': (None, ''),
+                'response_format': (None, 'json')
+            }
+
+            response = requests.post(api_url, headers=headers, files=files)
+
+        # Remove the temporary file
+        os.remove(temp_filepath)
+
+        if response.status_code == 200:
+            data = response.json()
+            transcription = data.get('text', '').strip()
+            logger.info(f"Transcription received: {transcription}")
+            return jsonify({'transcription': transcription})
+        else:
+            logger.error(f"Whisper API error: {response.status_code} - {response.text}")
+            return jsonify({'error': 'Transcription failed.'}), 500
+
+    except Exception as e:
+        logger.exception("Error during transcription:")
+        return jsonify({'error': 'An error occurred during transcription.'}), 500
+
+@app.route('/transcribe_audio', methods=['POST'])
+def transcribe_audio():
+    if 'audio' not in request.files:
+        return jsonify({'error': 'No audio file provided.'}), 400
+
+    audio_file = request.files['audio']
+
+    # Save the uploaded audio file
+    filename = f"{uuid.uuid4().hex}_{audio_file.filename}"
+    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    audio_file.save(filepath)
+
+    # Send the audio file to Whisper API for transcription and translation
+    try:
+        headers = {
+            "Authorization": f"Bearer {openai.api_key}"
+        }
+        files = {
+            'file': (filename, open(filepath, 'rb')),
+            'model': (None, 'whisper-1'),  # Specify the model if required
+            'language': (None, 'hi')  # Specify source language as Hindi
+        }
+
+        response = requests.post(WHISPER_API_URL, headers=headers, files=files)
+
+        if response.status_code == 200:
+            transcription = response.json().get('text', '')
+            # Optionally, delete the audio file after processing
+            os.remove(filepath)
+            return jsonify({'transcription': transcription}), 200
+        else:
+            error_msg = response.json().get('error', 'Unknown error occurred.')
+            return jsonify({'error': f"Whisper API Error: {error_msg}"}), response.status_code
+
+    except Exception as e:
+        return jsonify({'error': f"An error occurred: {str(e)}"}), 500
+
+@app.route('/transcribe_alternative', methods=['POST'])
+def transcribe_alternative():
+    """
+    Alternative transcription method if you prefer not to use OpenAI's API.
+    Implement using another pre-built API or service.
+    """
+    # Placeholder for alternative transcription logic
+    return jsonify({'error': 'Alternative transcription not implemented.'}), 501
 
 @app.route('/report')
 def report():
@@ -758,11 +876,11 @@ def report():
         # Create unique filenames
         filename_hi = f"possible_cause_hi_{uuid.uuid4().hex}.mp3"
         filename_en = f"possible_cause_en_{uuid.uuid4().hex}.mp3"
-        # Generate Hindi audio
+        # Generate Hindi audio using your TTS function
         audio_path_hi = generate_tts_audio(possible_cause_hindi, filename_hi, lang='hi')
         if audio_path_hi:
             possible_cause_audio_url_hi = url_for('static', filename=f'audio/{filename_hi}')
-        # Generate English audio
+        # Generate English audio using your TTS function
         audio_path_en = generate_tts_audio(possible_cause_en, filename_en, lang='en')
         if audio_path_en:
             possible_cause_audio_url_en = url_for('static', filename=f'audio/{filename_en}')
