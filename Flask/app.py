@@ -19,7 +19,7 @@ from googletrans import Translator, LANGUAGES
 from textblob import TextBlob
 import random
 import time
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, jsonify,  render_template, request, redirect, url_for, session, flash
 
 # -------------------- Environment Setup -------------------- #
 
@@ -294,10 +294,18 @@ def cleanup_audio_files():
 
 def extract_possible_causes(text):
     """
-    Use OpenAI API to generate a one-sentence overview of the possible cause from the transcript.
+    Use OpenAI API to generate a one-sentence overview of the possible cause from the transcript
+    only if the input is medically related. Otherwise, return "No suitable cause determined from the transcript."
     """
     try:
-        prompt = f"Based on the following patient transcript, provide a one-sentence possible cause of the symptoms:\n\n{text}\n\nPossible cause:"
+        # Modify the prompt to instruct GPT to only provide causes for medical content
+        prompt = (
+            f"Based on the following patient transcript, determine if the content is medically related. "
+            f"If it is, provide a one-sentence possible cause of the symptoms. If it is not medically related, "
+            f"respond with 'No suitable cause determined from the transcript.'\n\n{text}\n\nPossible cause:"
+        )
+
+        # Make the API call
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -309,9 +317,16 @@ def extract_possible_causes(text):
             n=1,
             stop=None,
         )
+
+        # Extract and clean the response
         cause = response['choices'][0]['message']['content'].strip()
-        # Remove any leading prompts like "Possible cause:" if present
         cause = re.sub(r'^Possible cause:\s*', '', cause, flags=re.IGNORECASE)
+
+        # Check if the cause is non-medical and return the appropriate message
+        if "No suitable cause determined from the transcript" in cause:
+            logger.info("Non-medical input detected. No suitable cause determined.")
+            return "No suitable cause determined from the transcript."
+
         logger.info(f"Generated possible cause using OpenAI API: {cause}")
         return cause
     except Exception as e:
