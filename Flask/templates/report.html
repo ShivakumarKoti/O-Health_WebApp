@@ -31,16 +31,6 @@
     <li>{{ possible_cause_hi }}</li>
 </ul>
 
-<!-- Audio Playback Buttons -->
-{% if possible_cause_audio_url_hi %}
-    <button onclick="playAudio('possibleCauseAudioHi')">🔊 Play Possible Cause (Hindi)</button>
-    <audio id="possibleCauseAudioHi" src="{{ possible_cause_audio_url_hi }}" style="display: none;"></audio>
-{% endif %}
-{% if possible_cause_audio_url_en %}
-    <button onclick="playAudio('possibleCauseAudioEn')">🔊 Play Possible Cause (English)</button>
-    <audio id="possibleCauseAudioEn" src="{{ possible_cause_audio_url_en }}" style="display: none;"></audio>
-{% endif %}
-
 {% else %}
 <p><strong>Possible Cause / संभावित कारण:</strong> No possible causes determined. / कोई संभावित कारण निर्धारित नहीं किया गया।</p>
 {% endif %}
@@ -62,18 +52,18 @@
 <ul>
     <!-- Initial Symptom Input -->
     {% for entry in conversation_history %}
-        {% if entry['user_input'] %}
-            <li><strong>Initial Symptom Input / प्रारंभिक लक्षण इनपुट:</strong> {{ entry['user_input'] }}</li>
+        {% if entry['user_input_english'] %}
+            <li><strong>Initial Symptom Input / प्रारंभिक लक्षण इनपुट:</strong> {{ entry['user_input_english'] }}</li>
         {% endif %}
     {% endfor %}
     <hr>
     <!-- Follow-Up Q&A -->
     {% set question_count = 1 %}
     {% for entry in conversation_history %}
-        {% if entry['followup_question_en'] and entry['response'] %}
+        {% if entry['followup_question_english'] and entry['response_english'] %}
             <li>
-                <p><strong>Question {{ question_count }} (English) / प्रश्न {{ question_count }} (अंग्रेजी):</strong> {{ entry['followup_question_en'] }}</p>
-                <p><strong>Your Answer / आपका उत्तर:</strong> {{ entry['response'] }}</p>
+                <p><strong>Question {{ question_count }} (English) / प्रश्न {{ question_count }} (अंग्रेजी):</strong> {{ entry['followup_question_english'] }}</p>
+                <p><strong>Your Answer / आपका उत्तर:</strong> {{ entry['response_english'] }}</p>
             </li>
             <hr>
             {% set question_count = question_count + 1 %}
