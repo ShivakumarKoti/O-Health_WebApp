@@ -4,10 +4,10 @@
 <p><strong>Hindi:</strong> {{ current_question['hi'] }}</p>
 <p><strong>English:</strong> {{ current_question['en'] }}</p>
 
-<form action="{{ url_for('followup') }}" method="post">
+<form id="followupForm" action="{{ url_for('followup') }}" method="post">
     <label for="answer">Your Answer / आपका उत्तर:</label><br>
-    <textarea id="answer" name="answer" rows="2" cols="50"></textarea><br>
-    <button type="button" onclick="startDictation('answer')">🎤 Speak / बोलें</button><br><br>
+    <textarea id="answer" name="answer" rows="2" cols="50" placeholder="अपना उत्तर बोलें या टाइप करें / Speak or type your answer"></textarea><br>
+    <button type="button" id="recordButton">🎤 Speak / बोलें</button><br><br>
     <input type="submit" value="Submit Answer / उत्तर सबमिट करें">
 </form>
 
@@ -15,32 +15,105 @@
 <p style="color:red;">{{ error }}</p>
 {% endif %}
 
+<!-- Include a status message area -->
+<p id="statusMessage"></p>
+
 <script>
-function startDictation(textareaId) {
-    if (window.hasOwnProperty('webkitSpeechRecognition')) {
-        var recognition = new webkitSpeechRecognition();
-        recognition.continuous = false;
-        recognition.interimResults = false;
-        recognition.lang = 'hi-IN';  // Set language to Hindi
-        recognition.start();
+// Initialize variables
+let mediaRecorder;
+let audioChunks = [];
 
-        recognition.onresult = function(e) {
-            document.getElementById(textareaId).value = e.results[0][0].transcript;
-            recognition.stop();
-        };
-
-        recognition.onerror = function(e) {
-            recognition.stop();
-        }
+// Event listener for the record button
+document.getElementById('recordButton').addEventListener('click', function() {
+    if (mediaRecorder && mediaRecorder.state === "recording") {
+        // Stop recording
+        mediaRecorder.stop();
+        this.textContent = "🎤 Speak / बोलें";
     } else {
-        alert("Your browser does not support speech recognition. कृपया अपना उत्तर टाइप करें।");
+        // Start recording
+        startRecording();
+        this.textContent = "⏹️ Stop";
     }
+});
+
+function startRecording() {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(stream => {
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            document.getElementById('statusMessage').textContent = "रिकॉर्डिंग... कृपया बोलें / Recording... Please speak.";
+
+            mediaRecorder.ondataavailable = event => {
+                audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { 'type' : 'audio/wav; codecs=MS_PCM' });
+                audioChunks = [];
+                const audioUrl = URL.createObjectURL(audioBlob);
+                const audio = new Audio(audioUrl);
+                audio.controls = true;
+                document.getElementById('statusMessage').innerHTML = "रिकॉर्डिंग समाप्त / Recording stopped. <br>आपका ट्रांसक्रिप्शन नीचे दिखेगा / Your transcription will appear below.";
+
+                // Send the audio blob to the backend for transcription and translation
+                transcribeAudio(audioBlob);
+            };
+        })
+        .catch(error => {
+            console.error("Error accessing microphone:", error);
+            alert("माइक्रोफोन एक्सेस नहीं किया जा सका। कृपया अनुमति दें या अपने ब्राउज़र सेटिंग्स जांचें।");  // "Could not access the microphone. Please allow access or check your browser settings."
+        });
+}
+
+function transcribeAudio(audioBlob) {
+    const formData = new FormData();
+    formData.append('audio', audioBlob, 'answer.wav');
+
+    fetch('/transcribe', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.transcription) {
+            // Update the textarea with the English transcription
+            document.getElementById('answer').value = data.transcription;
+        } else if (data.error) {
+            alert("ट्रांसक्रिप्शन में त्रुटि: " + data.error);  // "Error in transcription: "
+        }
+        document.getElementById('statusMessage').textContent = "";
+    })
+    .catch(error => {
+        console.error("Error during transcription:", error);
+        alert("ट्रांसक्रिप्शन के दौरान एक त्रुटि हुई। कृपया पुन: प्रयास करें।");  // "An error occurred during transcription. Please try again."
+        document.getElementById('statusMessage').textContent = "";
+    });
 }
 
 function speakQuestion(text) {
     if ('speechSynthesis' in window) {
         var msg = new SpeechSynthesisUtterance(text);
         msg.lang = 'hi-IN';  // Set language to Hindi
+
+        // Fetch all available voices
+        var voices = window.speechSynthesis.getVoices();
+
+        // Select a human-like Hindi voice (preferably female)
+        var selectedVoice = voices.find(function(voice) {
+            return voice.lang === 'hi-IN' && (voice.name.toLowerCase().includes('female') || voice.name.toLowerCase().includes('male'));
+        });
+
+        if (selectedVoice) {
+            msg.voice = selectedVoice;
+        } else {
+            console.warn("No suitable Hindi voice found. Using default voice.");
+        }
+
+        // Adjust speech parameters for naturalness
+        msg.rate = 1;    // Normal rate
+        msg.pitch = 1;   // Normal pitch
+        msg.volume = 1;  // Full volume
+
         window.speechSynthesis.speak(msg);
     }
 }
