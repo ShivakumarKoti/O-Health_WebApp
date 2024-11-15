@@ -842,7 +842,7 @@ def generate_report(conversation_history):
         st.write(f"- {possible_cause}")
     else:
         st.write("**Possible Cause:** No possible causes determined.")
-
+'''
     # Map symptoms to diseases
     probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
 
@@ -862,7 +862,7 @@ def generate_report(conversation_history):
         st.pyplot(fig)
     else:
         st.info("No probable diseases found based on the entered symptoms and information.")
-
+'''
     st.subheader("📝 **Transcript of Questions and Answers:**")
     question_count = 1
     for entry in conversation_history:
