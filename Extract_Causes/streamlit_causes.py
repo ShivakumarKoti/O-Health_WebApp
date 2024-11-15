@@ -218,13 +218,13 @@ def translate_to_hindi(text):
     Translate text to Hindi.
     """
     try:
-        translated = translator_auto_to_hi.translate(text, dest='hi')
+        translated = translator.translate(text, src='en', dest='hi')
         translated_text = translated.text
         logger.info(f"Translated to Hindi: '{translated_text}'")
         return translated_text
     except Exception as e:
         logger.error(f"Translation error: {e}")
-        return text  # Fallback to original text if translation fails
+        return text
 
 def correct_spelling(text):
     """
@@ -335,7 +335,7 @@ symptom_followup_questions = {
 # Additional general follow-up questions
 additional_followup_questions = [
     {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
-    #{"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
+    {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
     {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
     {"hi": "लक्षण कब से हैं?", "en": "How long have you had these symptoms?", "category": "duration", "symptom": None},
     {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms", "symptom": None}
@@ -699,8 +699,13 @@ def extract_all_symptoms(conversation_history):
             response_text_lower = response_text.strip().lower()
 
             # Check if response is affirmative or negative
-            is_affirmative = any(word in response_text_lower for word in affirmative_responses)
-            is_negative = any(word in response_text_lower for word in negative_responses)
+            is_affirmative = any(re.search(r'\b' + re.escape(word) + r'\b', response_text_lower) for word in affirmative_responses)
+            is_negative = any(re.search(r'\b' + re.escape(word) + r'\b', response_text_lower) for word in negative_responses)
+
+            if not is_negative:
+           # Extract symptoms from the response text
+               response_symptoms = extract_symptoms(response_text)
+               matched_symptoms.update(response_symptoms)
 
             # Get the 'symptom' associated with the question
             symptom = None
@@ -721,6 +726,12 @@ def extract_all_symptoms(conversation_history):
                 # Do not include negative responses in transcript for cause analysis
             else:
                 combined_transcript += " " + response_text  # Include other responses
+
+            # Extract symptoms from the response text if not negative
+            if not is_negative:
+                # Extract symptoms from the response text
+                response_symptoms = extract_symptoms(response_text)
+                matched_symptoms.update(response_symptoms)
 
             # Extract additional entities from the response
             info = extract_additional_entities(response_text)
@@ -866,14 +877,14 @@ def generate_report(conversation_history):
     # Check if a possible cause was determined
     if possible_cause and possible_cause != "No suitable cause determined from the transcript.":
         # Translate the cause to Hindi
-        translated_cause = translate_to_hindi(possible_cause)
+        translated_cause = translator.translate(possible_cause, src='en', dest='hi').text
     else:
         translated_cause = "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।"
 
     # Translate symptoms to Hindi
     if matched_symptoms:
-        symptoms_hindi = ', '.join(matched_symptoms)
-        translated_symptoms = translate_to_hindi(symptoms_hindi)
+        translated_symptoms_list = [translate_to_hindi(symptom) for symptom in matched_symptoms]
+        translated_symptoms = ', '.join(translated_symptoms_list)
     else:
         translated_symptoms = "कोई लक्षण नहीं पहचाने गए।"
 
@@ -1171,3 +1182,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
