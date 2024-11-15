@@ -179,7 +179,7 @@ symptom_list = [
 
 # Expanded medications list
 medications_list = [
-    "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen",
+    "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen","Dolo 650",
     "amoxicillin", "antibiotic", "metformin", "lisinopril", "atorvastatin",
     "cetirizine", "azithromycin", "hydrochlorothiazide", "omeprazole",
     "sertraline", "naproxen", "albuterol", "simvastatin", "loratadine",
@@ -218,9 +218,10 @@ def translate_to_hindi(text):
     Translate text to Hindi.
     """
     try:
-        translated = translator.translate(text, dest='hi')
-        logger.info(f"Translated to Hindi: '{translated.text}'")
-        return translated.text
+        translated = translator_auto_to_hi.translate(text, dest='hi')
+        translated_text = translated.text
+        logger.info(f"Translated to Hindi: '{translated_text}'")
+        return translated_text
     except Exception as e:
         logger.error(f"Translation error: {e}")
         return text  # Fallback to original text if translation fails
@@ -458,17 +459,18 @@ def extract_symptoms(text):
         text_lower = text.lower()
         for symptom in symptom_list:
             symptom_lower = symptom.lower()
+            # Use word boundaries to avoid partial matches
             if re.search(r'\b' + re.escape(symptom_lower) + r'\b', text_lower):
                 extracted_symptoms.add(symptom.title())
 
         logger.info(f"Final Extracted Symptoms: {extracted_symptoms}")
-        extracted_symptoms = [med for med in extracted_symptoms if med not in {'No','yes', 'no'}]
+        # Remove generic affirmations and negations
+        extracted_symptoms = [sym for sym in extracted_symptoms if sym.lower() not in {'no', 'yes', 'nothing', 'nothing else'}]
         return extracted_symptoms
     except Exception as e:
         st.error(f"An error occurred during symptom extraction: {e}")
         logger.error(f"Symptom extraction error: {e}")
         return set()
-
 
 def extract_possible_causes(text):
     """
@@ -523,14 +525,9 @@ def translate_and_correct(text):
     """
     try:
         # Translate to English if not already in English
-        translated_text = translator_auto_to_en.translate(text)
-        logger.info(f"Translated '{text}' from Hindi to English: '{translated_text}'")
-
-        # Correct spelling while preserving medical terms
-        corrected_text = translated_text
-        #corrected_text = correct_spelling(translated_text)
-        corrected_text = translated_text
-        return corrected_text
+        translated_text = translate_to_english(text)
+        logger.info(f"Translated and corrected text: '{translated_text}'")
+        return translated_text
     except Exception as e:
         logger.error(f"Translation and correction failed: {e}")
         return text  # Fallback to original text if translation fails
@@ -809,6 +806,7 @@ def map_symptoms_to_diseases(matched_symptoms, additional_info):
 def generate_report(conversation_history):
     """
     Generate the final diagnostic report based on the conversation history.
+    Additionally, generate and play an audio summary in Hindi.
     """
     matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(conversation_history)
     st.subheader("📄 **Final Report:**")
@@ -828,7 +826,7 @@ def generate_report(conversation_history):
     possible_cause = extract_possible_causes(combined_transcript)
 
     # Display Possible Cause
-    if possible_cause and possible_cause != "No possible causes determined.":
+    if possible_cause and possible_cause != "No suitable cause determined from the transcript.":
         st.write("**Possible Cause:**")
         st.write(f"- {possible_cause}")
     else:
@@ -863,6 +861,39 @@ def generate_report(conversation_history):
             st.write("---")
             question_count += 1
 
+    # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
+
+    # Check if a possible cause was determined
+    if possible_cause and possible_cause != "No suitable cause determined from the transcript.":
+        # Translate the cause to Hindi
+        translated_cause = translate_to_hindi(possible_cause)
+    else:
+        translated_cause = "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।"
+
+    # Translate symptoms to Hindi
+    if matched_symptoms:
+        symptoms_hindi = ', '.join(matched_symptoms)
+        translated_symptoms = translate_to_hindi(symptoms_hindi)
+    else:
+        translated_symptoms = "कोई लक्षण नहीं पहचाने गए।"
+
+    # Construct the Hindi message
+    if translated_cause != "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।":
+        # Specific message including symptoms and possible causes
+        message_hindi = f"आपके लक्षण: {translated_symptoms}. इन लक्षणों के कारण, संभावित कारण यह हैं: {translated_cause}. हम आपको सबसे उपयुक्त डॉक्टर से तुरंत जोड़ रहे हैं।"
+    else:
+        # If no possible cause, still inform the user about connecting to a doctor
+        message_hindi = f"{translated_cause} हम आपकी मदद के लिए एक डॉक्टर से संपर्क कर रहे हैं।"
+
+    # Generate the audio in Hindi
+    audio_bytes = generate_audio(message_hindi, lang='hi')
+
+    # Play the audio
+    if audio_bytes:
+        embed_audio_autoplay(audio_bytes)
+    else:
+        st.error("Failed to generate final report audio.")
+
 def handle_yes_no_response(question, response):
     """
     Handles yes/no responses to follow-up questions to add or remove symptoms.
@@ -872,11 +903,13 @@ def handle_yes_no_response(question, response):
         response (str): The user's response to the follow-up question.
     """
     affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
-    negative_responses = {'no', 'nah', 'nope', 'not really', 'don\'t', 'nahi'}
+    negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
 
     response_lower = response.strip().lower()
-    is_affirmative = any(word in response_lower for word in affirmative_responses)
-    is_negative = any(word in response_lower for word in negative_responses)
+
+    # Use regex to match whole words only
+    is_affirmative = any(re.search(r'\b' + re.escape(word) + r'\b', response_lower) for word in affirmative_responses)
+    is_negative = any(re.search(r'\b' + re.escape(word) + r'\b', response_lower) for word in negative_responses)
 
     # Initialize session_state.matched_symptoms if not already
     if 'matched_symptoms' not in st.session_state:
@@ -893,6 +926,8 @@ def handle_yes_no_response(question, response):
             st.warning(f"Removed symptom: {question['symptom']}")
         else:
             logger.info(f"No action taken for symptom '{question['symptom']}' as it's not present.")
+    else:
+        logger.info("Response not recognized as affirmative or negative.")
 
 # -------------------- Main Streamlit Application -------------------- #
 
