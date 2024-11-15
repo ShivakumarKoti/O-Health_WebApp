@@ -845,6 +845,7 @@ def generate_report(conversation_history):
 
     # Map symptoms to diseases
     probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
+    
 """
     if probable_diseases:
         # Display results
@@ -863,6 +864,7 @@ def generate_report(conversation_history):
     else:
         st.info("No probable diseases found based on the entered symptoms and information.")
 """
+
     st.subheader("📝 **Transcript of Questions and Answers:**")
     question_count = 1
     for entry in conversation_history:
