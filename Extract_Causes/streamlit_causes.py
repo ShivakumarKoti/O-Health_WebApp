@@ -180,11 +180,6 @@ def load_symptom_list(csv_file_path='Extract_Causes/symptom_list.csv'):
         return []
 
 symptom_list = load_symptom_list('Extract_Causes/symptom_list.csv')
-# Example: Print the first 10 symptoms
-st.write("First 10 symptoms:", symptom_list[:10])
-
-# Example: Print the total number of symptoms
-st.write(f"Total number of symptoms loaded: {len(symptom_list)}")
 
 # Expanded medications list
 medications_list = [
