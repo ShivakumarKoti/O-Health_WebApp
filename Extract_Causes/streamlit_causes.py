@@ -792,7 +792,7 @@ symptom_list = [
     'hair growth abnormalities', 'hair density changes low',
     'hair density changes high', 'hair quality changes soft',
     'hair quality changes brittle', 'nail discoloration yellowing',
-    'nail discoloration white spots', 'nail discolor
+    'nail discoloration white spots', 'nail discolor'
     # Add more symptoms and their variations as needed
 ]
 
