@@ -1,5 +1,4 @@
 # corrected_input is uncommented and disabled
-
 import os
 import io
 import re
@@ -31,7 +30,7 @@ import json
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 #google Text to Speech
-API_KEY="AIzaSyASUfCPNIKGs4tvsMkStfeW8wpCKqJmZzY"
+API_KEY=st.secrets["GOOGLE_API_KEY"]
 
 if not openai.api_key:
     st.error("OpenAI API key not found. Please set it in the Streamlit Secrets.")
