@@ -179,7 +179,7 @@ def load_symptom_list(csv_file_path='Extract_Causes/symptom_list.csv'):
         print(f"An error occurred while loading symptoms: {e}")
         return []
 
-symptom_list = load_symptom_list('symptom_list.csv')
+symptom_list = load_symptom_list('Extract_Causes/symptom_list.csv')
 # Example: Print the first 10 symptoms
 st.write("First 10 symptoms:", symptom_list[:10])
 
