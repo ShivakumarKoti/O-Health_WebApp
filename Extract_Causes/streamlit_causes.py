@@ -23,11 +23,15 @@ import streamlit as st
 import streamlit.components.v1 as components
 from audio_recorder_streamlit import audio_recorder
 import random
+import json
 
 # -------------------- Environment Setup -------------------- #
 
 # Securely access the OpenAI API key from Streamlit Secrets
 openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+#google Text to Speech
+API_KEY="AIzaSyASUfCPNIKGs4tvsMkStfeW8wpCKqJmZzY"
 
 if not openai.api_key:
     st.error("OpenAI API key not found. Please set it in the Streamlit Secrets.")
@@ -373,7 +377,80 @@ additional_followup_questions = [
 ]
 
 # -------------------- Core Functions -------------------- #
+# Google TTS
+def generate_audio_with_api_key(text, api_key, lang='hi-IN'):
+    """
+    Generate audio bytes from text using Google Cloud Text-to-Speech REST API with an API key.
 
+    Args:
+        text (str): The text to convert to speech.
+        api_key (str): Your Google Cloud API key.
+        lang (str): The language code (default is 'hi-IN' for Hindi).
+
+    Returns:
+        bytes: Audio content in bytes, or None if failed.
+    """
+    url = f"https://texttospeech.googleapis.com/v1/text:synthesize?key={api_key}"
+
+    headers = {
+        "Content-Type": "application/json; charset=utf-8"
+    }
+
+    # Define the request payload
+    data = {
+        "input": {
+            "text": text
+        },
+        "voice": {
+            "languageCode": lang,
+            "name": "hi-IN-Standard-A",  # Choose a specific voice or let Google select default
+            "ssmlGender": "NEUTRAL"
+        },
+        "audioConfig": {
+            "audioEncoding": "MP3",
+            "pitch": 0,
+            "speakingRate": 1.0
+        }
+    }
+
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(data))
+        response.raise_for_status()  # Raise an error for bad status codes
+        audio_content = response.json().get('audioContent')
+        if audio_content:
+            return base64.b64decode(audio_content)
+        else:
+            st.error("No audio content received from the API.")
+            return None
+    except requests.exceptions.HTTPError as http_err:
+        st.error(f"HTTP error occurred: {http_err}")
+        st.error(f"Response: {response.text}")
+        return None
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
+        return None
+
+def embed_audio_autoplay_google(audio_bytes):
+    """
+    Embed and autoplay audio in Streamlit.
+
+    Args:
+        audio_bytes (bytes): The audio content in bytes.
+    """
+    if audio_bytes:
+        # Convert bytes to base64 for embedding
+        audio_base64 = base64.b64encode(audio_bytes).decode('utf-8')
+        audio_html = f"""
+        <audio autoplay>
+            <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        """
+        st.markdown(audio_html, unsafe_allow_html=True)
+    else:
+        st.error("No audio to play.")
+
+# Audio Open
 def generate_audio(text: str, lang: str = 'en') -> bytes:
     """
     Generate speech audio from text using gTTS and return it as bytes.
@@ -911,11 +988,11 @@ def generate_report(conversation_history):
         message_hindi = f"{translated_cause} हम आपकी मदद के लिए एक डॉक्टर से संपर्क कर रहे हैं।"
 
     # Generate the audio in Hindi
-    audio_bytes = generate_audio(message_hindi, lang='hi')
+    audio_bytes = generate_audio_with_api_key(message_hindi, API_KEY, lang='hi')
 
     # Play the audio
     if audio_bytes:
-        embed_audio_autoplay(audio_bytes)
+        embed_audio_autoplay_google(audio_bytes)
     else:
         st.error("Failed to generate final report audio.")
 
@@ -983,10 +1060,12 @@ def main():
     if st.session_state.current_step == 0:
         # Generate the welcome audio in Hindi
         welcome_text = "ओ-हेल्थ में आपका स्वागत है। कृपया माइक्रोफ़ोन बटन दबाएं और अपने लक्षण बोलें।"
-        audio_bytes = generate_audio(welcome_text, lang='hi')
+       #audio_bytes = generate_audio(welcome_text, lang='hi')
+        audio_bytes = generate_audio_with_api_key(welcome_text, API_KEY, lang='hi')
         if audio_bytes:
             # Attempt to embed and autoplay the audio
-            embed_audio_autoplay(audio_bytes)
+            #embed_audio_autoplay(audio_bytes)
+            embed_audio_autoplay_google(audio_bytes)
         else:
             st.error("Failed to generate welcome audio.")
 
@@ -1080,7 +1159,8 @@ def main():
 
             # Generate the question audio in Hindi
             if not st.session_state.get(f'question_{st.session_state.current_followup}_played'):
-                question_audio = generate_audio(current_question['hi'], lang='hi')
+                #question_audio = generate_audio(current_question['hi'], lang='hi')
+                question_audio = generate_audio_with_api_key(current_question['hi'], API_KEY, lang='hi')
                 if question_audio:
                     # Attempt to embed and autoplay the audio
                     embed_audio_autoplay(question_audio)
