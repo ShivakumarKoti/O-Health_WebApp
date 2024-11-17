@@ -186,7 +186,6 @@ st.write("First 10 symptoms:", symptom_list[:10])
 # Example: Print the total number of symptoms
 st.write(f"Total number of symptoms loaded: {len(symptom_list)}")
 
-
 # Expanded medications list
 medications_list = [
     "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen","Dolo 650",
