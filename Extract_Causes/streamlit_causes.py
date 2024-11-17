@@ -368,11 +368,11 @@ symptom_followup_questions = {
 
 # Additional general follow-up questions
 additional_followup_questions = [
-    {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
+    #{"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
     #{"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
     {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
     {"hi": "लक्षण कब से हैं?", "en": "How long have you had these symptoms?", "category": "duration", "symptom": None},
-    {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms", "symptom": None}
+    #{"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms", "symptom": None}
 ]
 
 # -------------------- Core Functions -------------------- #
