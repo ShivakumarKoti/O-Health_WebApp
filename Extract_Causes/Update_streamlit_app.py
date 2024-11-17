@@ -384,6 +384,13 @@ additional_followup_questions = [
     {"hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?", "en": "Are you experiencing any other symptoms?", "category": "other_symptoms", "symptom": None}
 ]
 
+# Normalize symptom lists
+known_symptoms_lower = [symptom.lower() for symptom in known_symptoms]
+symptom_list_lower = [symptom.lower() for symptom in symptom_list]
+
+# Convert symptom_followup_questions keys to lowercase
+symptom_followup_questions_lower = {symptom.lower(): questions for symptom, questions in symptom_followup_questions.items()}
+
 # -------------------- Core Functions -------------------- #
 # Google TTS
 def generate_audio_with_api_key(text, api_key, lang='hi-IN'):
