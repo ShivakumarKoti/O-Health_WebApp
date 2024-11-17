@@ -402,7 +402,7 @@ def generate_audio_with_api_key(text, api_key, lang='hi-IN'):
         },
         "voice": {
             "languageCode": lang,
-            "name": "hi-IN-Standard-A",  # Choose a specific voice or let Google select default
+            "name": "hi-IN-Wavenet-E",  # Choose a specific voice or let Google select default
             "ssmlGender": "NEUTRAL"
         },
         "audioConfig": {
