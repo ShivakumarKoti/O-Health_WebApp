@@ -181,10 +181,10 @@ def load_symptom_list(csv_file_path='symptom_list.csv'):
 
 symptom_list = load_symptom_list('symptom_list.csv')
 # Example: Print the first 10 symptoms
-print("First 10 symptoms:", symptom_list[:10])
+st.write("First 10 symptoms:", symptom_list[:10])
 
 # Example: Print the total number of symptoms
-print(f"Total number of symptoms loaded: {len(symptom_list)}")
+st.write(f"Total number of symptoms loaded: {len(symptom_list)}")
 
 
 # Expanded medications list
