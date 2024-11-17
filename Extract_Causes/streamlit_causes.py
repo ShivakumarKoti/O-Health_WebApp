@@ -133,12 +133,12 @@ def load_disease_symptom_mapping():
     """
     Load the disease-symptom mapping from a CSV file.
     """
-    if not os.path.exists("disease_symptom_mapping.csv"):
+    if not os.path.exists("Extract_Causes/disease_symptom_mapping.csv"):
         st.error("'disease_symptom_mapping.csv' not found in the current directory.")
         logger.error("'disease_symptom_mapping.csv' not found.")
         st.stop()
     try:
-        df = pd.read_csv("disease_symptom_mapping.csv")
+        df = pd.read_csv("Extract_Causes/disease_symptom_mapping.csv")
         logger.info("'disease_symptom_mapping.csv' loaded successfully.")
         return df
     except Exception as e:
