@@ -785,14 +785,14 @@ symptom_list = [
     'hair thinning severity mild', 'hair thinning severity moderate',
     'hair thinning severity severe', 'hair breakage extent extensive',
     'hair brittleness fragility weak', 'hair loss patterns diffuse',
-    'hair loss patterns patchy', 'hair shedding rate increased',
+    'hair loss patterns patchy', 'hair shedding rate increased', 'thirst' , 'thirsty',
     'hair graying progression early', 'hair graying progression advanced',
     'hair texture changes rough', 'hair texture changes fine',
     'hair color changes fading', 'hair color changes uneven',
     'hair growth abnormalities', 'hair density changes low',
     'hair density changes high', 'hair quality changes soft',
     'hair quality changes brittle', 'nail discoloration yellowing',
-    'nail discoloration white spots', 'nail discolor, 'thirst', 'thirsty'
+    'nail discoloration white spots', 'nail discolor
     # Add more symptoms and their variations as needed
 ]
 
