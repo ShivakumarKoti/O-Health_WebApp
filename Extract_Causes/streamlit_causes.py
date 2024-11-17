@@ -30,7 +30,7 @@ import json
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 #google Text to Speech
-API_KEY=st.secrets["GOOGLE_API_KEY"]
+API_KEY="AIzaSyASUfCPNIKGs4tvsMkStfeW8wpCKqJmZzY"
 
 if not openai.api_key:
     st.error("OpenAI API key not found. Please set it in the Streamlit Secrets.")
