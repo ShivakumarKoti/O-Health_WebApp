@@ -154,7 +154,7 @@ known_symptoms = df_disease_symptom['SymptomName'].unique()
 # -------------------- Define Symptom and Medication Lists -------------------- #
 
 # Load the expanded symptom list from a CSV file
-def load_symptom_list(csv_file_path='symptom_list.csv'):
+def load_symptom_list(csv_file_path='Extract_Causes/symptom_list.csv'):
     """
     Load symptoms from a CSV file into a Python list.
 
