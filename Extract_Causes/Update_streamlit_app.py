@@ -325,6 +325,13 @@ symptom_followup_questions = {
         {"hi": "क्या आपको तनाव है साथ ही सिरदर्द?", "en": "Are you under stress along with headache?", "category": "stress_headache", "symptom": "Stress-related headache"},
         {"hi": "क्या आपकी नींद में कोई कमी है साथ ही सिरदर्द?", "en": "Are you lacking sleep along with headache?", "category": "sleep_deprivation", "symptom": "Sleep deprivation"},
     ],
+    "Pain": [
+        {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?", "symptom": "pain"},
+        {"hi": "सीने में दर्द की तीव्रता क्या है?", "en": "What is the intensity of your pain?", "category": "stomach ache", "symptom": "pain"},
+        {"hi": "क्या दर्द का स्थान स्पष्ट है?", "en": "Is the location of the pain specific?", "category": "pain_location", "symptom": "Specific pain location"},
+        {"hi": "क्या दर्द के साथ सांस लेने में कठिनाई है?", "en": "Are you having difficulty breathing along with the pain?", "category": "breathing_difficulty", "symptom": "Difficulty breathing"},
+        {"hi": "क्या आप अत्यधिक तनाव में हैं साथ ही सीने में दर्द?", "en": "Are you under extreme stress along with pain?", "category": "stress_chest_pain", "symptom": "Stress-related chest pain"},
+        ],
     "Chest Pain": [
         {"hi": "क्या आपको सीने में दर्द हो रहा है?", "en": "Are you experiencing chest pain?", "category": "chest_pain", "symptom": "Chest pain"},
         {"hi": "सीने में दर्द की तीव्रता क्या है?", "en": "What is the intensity of your chest pain?", "category": "pain_intensity", "symptom": None},
@@ -338,7 +345,7 @@ symptom_followup_questions = {
         {"hi": "क्या आपको छाती में भारीपन महसूस हो रहा है?", "en": "Do you feel a heaviness in your chest?", "category": "chest_heaviness", "symptom": "Chest heaviness"},
     ],
 
- "stomach ache": [
+ "Stomach Ache": [
         {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?", "symptom": "stomach ache"},
         {"hi": "सीने में दर्द की तीव्रता क्या है?", "en": "What is the intensity of your stomach ache?", "category": "stomach ache", "symptom": "stomach ache"},
         {"hi": "क्या दर्द का स्थान स्पष्ट है?", "en": "Is the location of the pain specific?", "category": "pain_location", "symptom": "Specific pain location"},
@@ -373,13 +380,7 @@ symptom_followup_questions = {
         {"hi": "क्या आप अत्यधिक तनाव में हैं साथ ही सीने में दर्द?", "en": "Are you under extreme stress along with chest pain?", "category": "stress_chest_pain", "symptom": "Stress-related chest pain"},
         {"hi": "क्या आपको छाती में भारीपन महसूस हो रहा है?", "en": "Do you feel a heaviness in your chest?", "category": "chest_heaviness", "symptom": "Chest heaviness"},
         ],
-     "pain": [
-        {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?", "symptom": "pain"},
-        {"hi": "सीने में दर्द की तीव्रता क्या है?", "en": "What is the intensity of your pain?", "category": "stomach ache", "symptom": "pain"},
-        {"hi": "क्या दर्द का स्थान स्पष्ट है?", "en": "Is the location of the pain specific?", "category": "pain_location", "symptom": "Specific pain location"},
-        {"hi": "क्या दर्द के साथ सांस लेने में कठिनाई है?", "en": "Are you having difficulty breathing along with the pain?", "category": "breathing_difficulty", "symptom": "Difficulty breathing"},
-        {"hi": "क्या आप अत्यधिक तनाव में हैं साथ ही सीने में दर्द?", "en": "Are you under extreme stress along with pain?", "category": "stress_chest_pain", "symptom": "Stress-related chest pain"},
-        ],
+
 }
 
 # Additional general follow-up questions
