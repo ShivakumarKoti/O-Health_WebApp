@@ -560,8 +560,8 @@ def get_followup_questions(initial_symptoms):
 
 def extract_symptoms(text):
     """
-    Extract symptoms from the given text using BioBERT NER model and regex matching.
-    Returns a list of extracted canonical symptoms in lowercase to prevent duplication.
+    Extract exact symptoms from the given text using BioBERT NER model and regex matching.
+    Returns a list of extracted exact symptoms.
     """
     try:
         # Use BioBERT NER model to extract symptoms
@@ -570,16 +570,16 @@ def extract_symptoms(text):
         for entity in ner_results:
             if entity['entity_group'] == 'SYMPTOM':
                 symptom = entity['word'].strip().lower()  # Normalize to lowercase
-                # Normalize the symptom
-                canonical_symptom = normalize_symptom(symptom)
-                if canonical_symptom in canonical_symptom_mapping:
-                    extracted_symptoms.add(canonical_symptom)
+                # Check if the symptom is in the symptom_to_canonical mapping
+                if symptom in symptom_to_canonical:
+                    exact_symptom = symptom  # Keep the exact symptom as per user input
+                    extracted_symptoms.add(exact_symptom)
 
         # Additionally, match against symptom variants for any missed symptoms
         text_lower = text.lower()
         for variant, canonical in symptom_to_canonical.items():
             if re.search(r'\b' + re.escape(variant) + r'\b', text_lower):
-                extracted_symptoms.add(canonical)
+                extracted_symptoms.add(variant)  # Add the exact variant
 
         # Remove generic affirmations and negations
         extracted_symptoms = [sym for sym in extracted_symptoms if sym not in {'no', 'yes', 'nothing', 'nothing else'}]
@@ -831,10 +831,11 @@ def determine_followup_questions(initial_symptoms, additional_info, asked_questi
 
 def extract_all_symptoms(conversation_history):
     """
-    Extract all symptoms and additional information from the conversation history.
+    Extract all exact symptoms and additional information from the conversation history.
     Collect all user inputs into a single transcript for cause analysis.
     """
-    matched_symptoms = set()
+    exact_symptoms = set()
+    canonical_symptoms = set()
     additional_info = {
         'age': None,
         'gender': None,
@@ -852,7 +853,7 @@ def extract_all_symptoms(conversation_history):
             user_text = entry['user']
             combined_transcript += " " + user_text  # Collecting all user inputs
             symptoms = extract_symptoms(user_text)
-            matched_symptoms.update(symptoms)
+            exact_symptoms.update(symptoms)
             info = extract_additional_entities(user_text)
             for key in additional_info:
                 if key in info and info[key]:
@@ -873,12 +874,12 @@ def extract_all_symptoms(conversation_history):
             if not is_negative:
                 # Extract symptoms from the response text
                 response_symptoms = extract_symptoms(response_text)
-                matched_symptoms.update(response_symptoms)
+                exact_symptoms.update(response_symptoms)
 
-            # Get the 'symptom' associated with the question
+            # Get the 'symptom' associated with the question using canonical mapping
             symptom = None
-            for symptom_category in canonical_symptom_followup_questions.values():
-                for q in symptom_category:
+            for canonical_symptom, questions in canonical_symptom_followup_questions.items():
+                for q in questions:
                     if q['en'].lower() == question_text.lower():
                         symptom = q.get('symptom')
                         break
@@ -886,11 +887,10 @@ def extract_all_symptoms(conversation_history):
                     break
 
             if symptom and is_affirmative:
-                matched_symptoms.add(symptom.lower())  # Ensure lowercase
+                canonical_symptoms.add(symptom.lower())  # For follow-up mapping
                 combined_transcript += " " + response_text  # Include affirmative response in transcript
             elif symptom and is_negative:
-                if symptom.lower() in matched_symptoms:
-                    matched_symptoms.remove(symptom.lower())
+                canonical_symptoms.discard(symptom.lower())  # Remove symptom if previously added
                 # Do not include negative responses in transcript for cause analysis
             else:
                 combined_transcript += " " + response_text  # Include other responses
@@ -905,7 +905,7 @@ def extract_all_symptoms(conversation_history):
                     else:
                         additional_info[key] = info[key]
 
-    # Update session_state with additional_info and matched_symptoms
+    # Update session_state with additional_info and exact_symptoms
     if 'additional_info' not in st.session_state:
         st.session_state.additional_info = {}
     if 'matched_symptoms' not in st.session_state:
@@ -920,9 +920,16 @@ def extract_all_symptoms(conversation_history):
             else:
                 st.session_state.additional_info[key] = additional_info[key]
 
-    st.session_state.matched_symptoms.update(matched_symptoms)
+    # Update matched_symptoms with exact_symptoms
+    st.session_state.matched_symptoms.update(exact_symptoms)
 
-    logger.info(f"Final Matched Symptoms: {st.session_state.matched_symptoms}")
+    # For follow-up questions, use canonical_symptoms
+    if 'canonical_matched_symptoms' not in st.session_state:
+        st.session_state.canonical_matched_symptoms = set()
+    st.session_state.canonical_matched_symptoms.update(canonical_symptoms)
+
+    logger.info(f"Final Exact Symptoms: {st.session_state.matched_symptoms}")
+    logger.info(f"Canonical Symptoms for Follow-Up: {st.session_state.canonical_matched_symptoms}")
     logger.info(f"Additional Information: {st.session_state.additional_info}")
     logger.info(f"Combined Transcript for Cause Analysis: {combined_transcript}")
 
@@ -997,16 +1004,16 @@ def generate_report(conversation_history):
     Generate the final diagnostic report based on the conversation history.
     Additionally, generate and play an audio summary in Hindi.
     """
-    # Directly access session_state variables
-    matched_symptoms = st.session_state.get('matched_symptoms', set())
+    # Access session_state variables
+    exact_symptoms = st.session_state.get('matched_symptoms', set())
     additional_info = st.session_state.get('additional_info', {})
 
     # Combine transcript for possible cause analysis
-    combined_transcript = " ".join([entry['user'] if 'user' in entry else "" for entry in conversation_history])
+    combined_transcript = " ".join([entry['user'] for entry in conversation_history if 'user' in entry])
     combined_transcript += " " + " ".join([entry['response'] for entry in conversation_history if 'response' in entry])
 
     st.subheader("📄 **Final Report:**")
-    st.write("**Symptoms:**", ', '.join(sorted(matched_symptoms)) if matched_symptoms else 'Not specified')
+    st.write("**Symptoms:**", ', '.join(sorted(exact_symptoms)) if exact_symptoms else 'Not specified')
 
     # Display Additional Information
     if additional_info.get('age'):
@@ -1031,7 +1038,7 @@ def generate_report(conversation_history):
         st.write("**Possible Cause:** No possible causes determined.")
 
     # Map symptoms to diseases (optional, depending on your implementation)
-    probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
+    probable_diseases = map_symptoms_to_diseases(exact_symptoms, additional_info)
 
     st.subheader("📝 **Transcript of Questions and Answers:**")
     question_count = 1
@@ -1051,9 +1058,9 @@ def generate_report(conversation_history):
     else:
         translated_cause = "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।"
 
-    # Translate symptoms to Hindi
-    if matched_symptoms:
-        translated_symptoms_list = [translate_to_hindi(symptom) for symptom in matched_symptoms]
+    # Translate exact symptoms to Hindi
+    if exact_symptoms:
+        translated_symptoms_list = [translate_to_hindi(symptom) for symptom in exact_symptoms]
         translated_symptoms = ', '.join(translated_symptoms_list)
     else:
         translated_symptoms = "कोई लक्षण नहीं पहचाने गए।"
