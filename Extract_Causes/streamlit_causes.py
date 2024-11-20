@@ -268,9 +268,9 @@ canonical_symptom_mapping = {
     'headache': ['headache', 'migraine', 'cephalalgia'],
     'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
     'fever': ['fever', 'pyrexia','high temperature'],
-    'cough' : ['cough']
-    'acidity' : ['acidity','gastritis']
-    'weakness' : ['weakness','dehydration','dehydrated']
+    'cough' : ['cough'],
+    'acidity' : ['acidity','gastritis'],
+    'weakness' : ['weakness','dehydration','dehydrated'],
     # Add more canonical symptoms and their variants as needed
 }
 
