@@ -159,28 +159,43 @@ known_symptoms = df_disease_symptom['SymptomName'].unique()
 # Load the expanded symptom list from a CSV file
 def load_symptom_list(csv_file_path='symptom_list.csv'):
     """
-    Load symptoms from a CSV file into a Python list.
+    Load symptoms from a CSV file into a Python list and mapping.
 
     Args:
         csv_file_path (str): Path to the CSV file containing symptoms.
 
     Returns:
-        list: A list of symptoms.
+        tuple: A tuple containing:
+            - symptom_list (list): A list of symptom variants.
+            - symptom_to_canonical (dict): A mapping from variant to canonical symptom.
     """
     try:
         df_symptoms = pd.read_csv(csv_file_path)
-        symptom_list = df_symptoms['SymptomName'].dropna().str.lower().tolist()
-        print(f"Loaded {len(symptom_list)} symptoms from '{csv_file_path}'.")
-        return symptom_list
+        # Validate required columns
+        if 'SymptomName' not in df_symptoms.columns or 'CanonicalSymptom' not in df_symptoms.columns:
+            st.error("CSV file must contain 'SymptomName' and 'CanonicalSymptom' columns.")
+            return [], {}
+        # Drop rows with missing values
+        df_symptoms = df_symptoms.dropna(subset=['SymptomName', 'CanonicalSymptom'])
+        # Create the mapping
+        symptom_to_canonical = {}
+        for _, row in df_symptoms.iterrows():
+            variant = row['SymptomName'].strip().lower()
+            canonical = row['CanonicalSymptom'].strip().lower()
+            symptom_to_canonical[variant] = canonical
+        # Create a list of unique variants
+        symptom_list = list(symptom_to_canonical.keys())
+        st.success(f"Loaded {len(symptom_list)} symptom variants from '{csv_file_path}'.")
+        return symptom_list, symptom_to_canonical
     except FileNotFoundError:
-        print(f"Error: The file '{csv_file_path}' was not found.")
-        return []
+        st.error(f"Error: The file '{csv_file_path}' was not found.")
+        return [], {}
     except pd.errors.EmptyDataError:
-        print(f"Error: The file '{csv_file_path}' is empty.")
-        return []
+        st.error(f"Error: The file '{csv_file_path}' is empty.")
+        return [], {}
     except Exception as e:
-        print(f"An error occurred while loading symptoms: {e}")
-        return []
+        st.error(f"An error occurred while loading symptoms: {e}")
+        return [], {}
 
 # Expanded medications list
 medications_list = [
@@ -598,34 +613,42 @@ def get_followup_questions(initial_symptoms):
         followup_questions.extend(questions)
     return followup_questions
 
-def extract_symptoms(text):
+def extract_symptoms(text, symptom_list, symptom_to_canonical):
     """
-    Extract exact symptoms from the given text using BioBERT NER model and regex matching.
-    Returns a list of extracted exact symptoms.
+    Extract exact symptoms from the given text using symptom list and mapping.
+
+    Args:
+        text (str): The input text to extract symptoms from.
+        symptom_list (list): List of symptom variants.
+        symptom_to_canonical (dict): Mapping from variant to canonical symptom.
+
+    Returns:
+        list: A list of canonical symptoms extracted from the text.
     """
     try:
-        # Use BioBERT NER model to extract symptoms
-        ner_results = ner_pipeline(text)
+        text_lower = text.lower()
         extracted_symptoms = set()
+
+        # Use NER to extract symptoms
+        ner_results = ner_pipeline(text)
         for entity in ner_results:
             if entity['entity_group'] == 'SYMPTOM':
-                symptom = entity['word'].strip().lower()  # Normalize to lowercase
-                # Check if the symptom is in the symptom_to_canonical mapping
+                symptom = entity['word'].strip().lower()
                 if symptom in symptom_to_canonical:
-                    exact_symptom = symptom  # Keep the exact symptom as per user input
-                    extracted_symptoms.add(exact_symptom)
-
-        # Additionally, match against symptom variants for any missed symptoms
-        text_lower = text.lower()
-        for variant, canonical in symptom_to_canonical.items():
-            if re.search(r'\b' + re.escape(variant) + r'\b', text_lower):
-                extracted_symptoms.add(variant)  # Add the exact variant
-
-        # Remove generic affirmations and negations
+                    canonical = symptom_to_canonical[symptom]
+                    extracted_symptoms.add(canonical)
+        
+        # Additionally, use keyword matching for any missed symptoms
+        for symptom_variant in symptom_list:
+            if re.search(r'\b' + re.escape(symptom_variant) + r'\b', text_lower):
+                canonical = symptom_to_canonical.get(symptom_variant, symptom_variant)
+                extracted_symptoms.add(canonical)
+        
+        # Remove generic terms
         extracted_symptoms = [sym for sym in extracted_symptoms if sym not in {'no', 'yes', 'nothing', 'nothing else'}]
-
+        
         logger.info(f"Final Extracted Symptoms: {extracted_symptoms}")
-        return extracted_symptoms
+        return list(extracted_symptoms)
     except Exception as e:
         st.error(f"An error occurred during symptom extraction: {e}")
         logger.error(f"Symptom extraction error: {e}")
@@ -817,11 +840,11 @@ def determine_followup_questions(initial_symptoms, additional_info, asked_questi
 
     # Handle additional information questions only if not already provided
     additional_followup_questions = [
-        {"hi": "आपकी आयु क्या है?", "en": "What is your age?", "category": "age", "symptom": "age"},
-        {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": "gender"},
-        {"hi": "आप वर्तमान में कहाँ स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": "location"},
-        {"hi": "लक्षण कितने समय से हैं?", "en": "How long have you been experiencing these symptoms?", "category": "duration", "symptom": "duration"},
-        {"hi": "क्या आप कोई दवा ले रहे हैं?", "en": "Are you taking any medications?", "category": "medications", "symptom": "medications"},
+        {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
+        {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
+        {"hi": "आप वर्तमान में कहाँ स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
+        {"hi": "लक्षण कितने समय से हैं?", "en": "How long have you been experiencing these symptoms?", "category": "duration", "symptom": None},
+        {"hi": "क्या आप कोई दवा ले रहे हैं?", "en": "Are you taking any medications?", "category": "medications", "symptom": None},
         # Add more additional follow-up questions as needed
     ]
 
@@ -869,10 +892,18 @@ def determine_followup_questions(initial_symptoms, additional_info, asked_questi
     logger.info(f"Determined Follow-Up Questions: {[q['en'] for q in followup_questions]}")
     return followup_questions
 
-def extract_all_symptoms(conversation_history):
+def extract_all_symptoms(conversation_history, symptom_list, symptom_to_canonical):
     """
     Extract all exact symptoms and additional information from the conversation history.
     Collect all user inputs into a single transcript for cause analysis.
+
+    Args:
+        conversation_history (list): List of conversation entries.
+        symptom_list (list): List of symptom variants.
+        symptom_to_canonical (dict): Mapping from variant to canonical symptom.
+
+    Returns:
+        tuple: (matched_symptoms, additional_info, combined_transcript)
     """
     exact_symptoms = set()
     canonical_symptoms = set()
@@ -886,13 +917,13 @@ def extract_all_symptoms(conversation_history):
     combined_transcript = ""
 
     affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
-    negative_responses = {'no', 'nah', 'nope', 'not really', 'don\'t', 'nahi'}
+    negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
 
     for entry in conversation_history:
         if 'user' in entry:
             user_text = entry['user']
             combined_transcript += " " + user_text  # Collecting all user inputs
-            symptoms = extract_symptoms(user_text)
+            symptoms = extract_symptoms(user_text, symptom_list, symptom_to_canonical)
             exact_symptoms.update(symptoms)
             info = extract_additional_entities(user_text)
             for key in additional_info:
@@ -913,7 +944,7 @@ def extract_all_symptoms(conversation_history):
 
             if not is_negative:
                 # Extract symptoms from the response text
-                response_symptoms = extract_symptoms(response_text)
+                response_symptoms = extract_symptoms(response_text, symptom_list, symptom_to_canonical)
                 exact_symptoms.update(response_symptoms)
 
             # Get the 'symptom' associated with the question using canonical mapping
@@ -1182,6 +1213,13 @@ def main():
         Welcome to the O-Health LLM App. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
     """)
 
+    # Load symptoms from CSV
+    symptom_list, symptom_to_canonical = load_symptom_list('symptom_list.csv')
+
+    if not symptom_list:
+        st.error("Symptom list is empty or failed to load. Please check the CSV file.")
+        return
+
     # Step 0: Welcome Message
     if st.session_state.current_step == 0:
         # Generate and play the welcome audio in Hindi
@@ -1226,12 +1264,16 @@ def main():
                     })
 
                     # Extract symptoms and additional information
-                    extract_all_symptoms(st.session_state.conversation_history)
+                    matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
+                        st.session_state.conversation_history,
+                        symptom_list,
+                        symptom_to_canonical
+                    )
 
                     # Determine follow-up questions using extracted data
                     followup_questions = determine_followup_questions(
-                        st.session_state.matched_symptoms,
-                        st.session_state.additional_info,
+                        matched_symptoms,
+                        additional_info,
                         st.session_state.asked_question_categories
                     )
                     st.session_state.followup_questions = followup_questions
@@ -1265,12 +1307,16 @@ def main():
                 })
 
                 # Extract symptoms and additional information
-                extract_all_symptoms(st.session_state.conversation_history)
+                matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
+                    st.session_state.conversation_history,
+                    symptom_list,
+                    symptom_to_canonical
+                )
 
                 # Determine follow-up questions using extracted data
                 followup_questions = determine_followup_questions(
-                    st.session_state.matched_symptoms,
-                    st.session_state.additional_info,
+                    matched_symptoms,
+                    additional_info,
                     st.session_state.asked_question_categories
                 )
                 st.session_state.followup_questions = followup_questions
@@ -1317,24 +1363,28 @@ def main():
                     response_transcribed = transcribe_audio(response_file_name)
                     if response_transcribed:
                         # Detect and translate to English if necessary
-                        corrected_response = translate_to_english(response_transcribed)
+                        corrected_response = translate_and_correct(response_transcribed)
 
                         st.subheader(f"📝 Response to Follow-Up Question {question_number} (English):")
                         st.write(corrected_response)
                         # Handle yes/no responses to add/remove symptoms
                         handle_yes_no_response(current_question, corrected_response)
                         # Extract any new symptoms from the response
-                        extract_all_symptoms(st.session_state.conversation_history)
+                        st.session_state.conversation_history.append({
+                            'followup_question_en': current_question['en'],
+                            'response': corrected_response
+                        })
+                        matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
+                            st.session_state.conversation_history,
+                            symptom_list,
+                            symptom_to_canonical
+                        )
 
                         # Add current question category to asked categories
                         current_category = current_question.get('category')
                         if current_category:
                             st.session_state.asked_question_categories.add(current_category)
 
-                        st.session_state.conversation_history.append({
-                            'followup_question_en': current_question['en'],
-                            'response': corrected_response
-                        })
                         st.session_state[f'answer_{st.session_state.current_followup}_processed'] = True
                         st.session_state.current_followup += 1
                         st.experimental_rerun()
@@ -1359,7 +1409,11 @@ def main():
                         'response': corrected_answer
                     })
                     handle_yes_no_response(current_question, corrected_answer)
-                    extract_all_symptoms([{'user': corrected_answer}])
+                    matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
+                        st.session_state.conversation_history,
+                        symptom_list,
+                        symptom_to_canonical
+                    )
 
                     # Add current question category to asked categories
                     current_category = current_question.get('category')
@@ -1404,6 +1458,6 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info.get('medications'):
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
-
+            
 if __name__ == "__main__":
     main()
