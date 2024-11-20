@@ -269,6 +269,8 @@ canonical_symptom_mapping = {
     'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
     'fever': ['fever', 'pyrexia','high temperature'],
     'cough' : ['cough'],
+    'dizziness': ['dizziness', 'dizzy', 'lightheadedness', 'vertigo'],
+    'yellow eyes': ['yellow eyes', 'jaundice', 'scleral icterus'],
     'acidity' : ['acidity','gastritis'],
     'weakness' : ['weakness','dehydration','dehydrated'],
     # Add more canonical symptoms and their variants as needed
@@ -344,6 +346,24 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या आपको कोई चक्कर आ रहे हैं साथ ही मतली?", "en": "Are you feeling dizzy along with nausea?", "category": "dizziness_nausea", "symptom": "Dizziness"},
         {"hi": "क्या आपको नींद नहीं आ रही है साथ ही मतली?", "en": "Are you having trouble sleeping along with nausea?", "category": "sleep_disturbance", "symptom": "Sleep disturbance"},
         {"hi": "क्या आपकी त्वचा पीलिया हो रही है साथ ही मतली?", "en": "Is your skin turning yellow along with nausea?", "category": "jaundice_nausea", "symptom": "Jaundice"},
+    ],
+    'dizziness': [
+        {"hi": "क्या आप चक्कर आ रहे हैं?", "en": "Are you feeling dizzy?", "category": "dizziness_type", "symptom": None},
+        {"hi": "क्या चक्कर आना अचानक शुरू हुआ था या धीरे-धीरे?", "en": "Did the dizziness start suddenly or gradually?", "category": "dizziness_onset", "symptom": None},
+        {"hi": "क्या चक्कर आने के साथ मतली या उल्टी हो रही है?", "en": "Are you experiencing nausea or vomiting along with dizziness?", "category": "dizziness_nausea_vomiting", "symptom": "Nausea or vomiting"},
+        {"hi": "क्या चक्कर आना चलने या खड़े होने पर बढ़ता है?", "en": "Does the dizziness increase when walking or standing?", "category": "position_related_dizziness", "symptom": "Position-related dizziness"},
+        {"hi": "क्या आपको सिरदर्द हो रहा है साथ में चक्कर आना?", "en": "Are you having headaches along with dizziness?", "category": "headache_dizziness", "symptom": "Headache"},
+        {"hi": "क्या आपके आसपास की चीजें घूमती हुई दिख रही हैं?", "en": "Are objects around you spinning?", "category": "visual_dizziness", "symptom": "Visual dizziness"},
+        {"hi": "क्या आपको संतुलन बिगड़ रहा है?", "en": "Are you losing your balance?", "category": "balance_issues", "symptom": "Balance issues"},
+    ],
+    'yellow eyes': [
+        {"hi": "क्या आपके आंखों का रंग पीला हो गया है?", "en": "Have your eyes turned yellow?", "category": "jaundice_eye", "symptom": "Jaundice in eyes"},
+        {"hi": "क्या आपकी त्वचा भी पीली हो गई है?", "en": "Has your skin also turned yellow?", "category": "jaundice_skin", "symptom": "Jaundice in skin"},
+        {"hi": "क्या आपको थकान महसूस हो रही है साथ में पीली आँखें?", "en": "Are you feeling fatigued along with yellow eyes?", "category": "fatigue_jaundice", "symptom": "Fatigue with jaundice"},
+        {"hi": "क्या आपके मूत्र का रंग गहरा हो गया है?", "en": "Has the color of your urine become darker?", "category": "dark_urine", "symptom": "Dark urine"},
+        {"hi": "क्या आपके बवासीर या पेट में दर्द है साथ में पीली आँखें?", "en": "Do you have hemorrhoids or abdominal pain along with yellow eyes?", "category": "hemorrhoids_abdominal_pain", "symptom": "Hemorrhoids or abdominal pain"},
+        {"hi": "क्या आपकी आँखों में जलन हो रही है?", "en": "Are your eyes feeling itchy along with yellowing?", "category": "itchy_eyes", "symptom": "Itchy eyes"},
+        {"hi": "क्या आपके मुँह से पीली लार निकल रही है?", "en": "Is yellow saliva coming from your mouth?", "category": "yellow_saliva", "symptom": "Yellow saliva"},
     ],
     'fever': [
         {"hi": "क्या आपका बुखार लगातार है या बीच-बीच में आता है?", "en": "Is your fever constant or intermittent?", "category": "fever_type", "symptom": None},
