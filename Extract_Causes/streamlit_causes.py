@@ -263,12 +263,14 @@ def correct_spelling(text):
 
 # Define a mapping from canonical symptoms to their variants
 canonical_symptom_mapping = {
-    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain','stomach pain'],
-    'stomach pain': ['stomach ache', 'stomach pain', 'stomachache', 'abdominal discomfort'],
+    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain','stomach pain','stomach ache','stomach pain', 'stomachache', 'abdominal discomfort','stomachache','stomachpain','knee pain'],
+    #'stomach pain': ['stomach ache', 'stomach pain', 'stomachache', 'abdominal discomfort'],
     'headache': ['headache', 'migraine', 'cephalalgia'],
     'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
     'fever': ['fever', 'pyrexia','high temperature'],
-    'cough' : 'cough'
+    'cough' : ['cough']
+    'acidity' : ['acidity','gastritis']
+    'weakness' : ['weakness','dehydration','dehydrated']
     # Add more canonical symptoms and their variants as needed
 }
 
@@ -291,16 +293,34 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या पेट दर्द खाने के बाद बढ़ता है?", "en": "Does the pain increase after eating?", "category": "postprandial_pain", "symptom": "Postprandial pain"},
         {"hi": "क्या आपको पसीना आ रहा है पेट दर्द के साथ?", "en": "Are you sweating with the pain?", "category": "sweating", "symptom": "Sweating"},
         {"hi": "क्या आपके पेट में कोई हार्टबिटिंग महसूस हो रहा है?", "en": "Do you feel any heartburn in your abdomen?", "category": "heartburn", "symptom": "Heartburn"},
+        {"hi": "क्या आप घायल हुए हैं?", "en": "Have you been injured?", "category": "injury", "symptom": "Injury"},
     ],
     'stomach ache': [
-        {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?", "symptom": "stomach ache"},
+        {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?",  "category": "pain_location", "symptom": "stomach ache"},
         {"hi": "सीने में दर्द की तीव्रता क्या है?", "en": "What is the intensity of your stomach ache?", "category": "stomach ache", "symptom": "stomach ache"},
         {"hi": "क्या दर्द का स्थान स्पष्ट है?", "en": "Is the location of the pain specific?", "category": "pain_location", "symptom": "Specific pain location"},
         {"hi": "क्या दर्द के साथ सांस लेने में कठिनाई है?", "en": "Are you having difficulty breathing along with the pain?", "category": "breathing_difficulty", "symptom": "Difficulty breathing"},
         {"hi": "क्या आप अत्यधिक तनाव में हैं साथ ही सीने में दर्द?", "en": "Are you under extreme stress along with chest pain?", "category": "stress_chest_pain", "symptom": "Stress-related chest pain"},
         {"hi": "क्या आपको छाती में भारीपन महसूस हो रहा है?", "en": "Do you feel a heaviness in your chest?", "category": "chest_heaviness", "symptom": "Chest heaviness"},
     ],
+    'acidity': [
+        {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?",  "category": "stomach ache", "symptom": "stomach ache"},
+        {"hi": "दर्द कितना तीव्र है?", "en": "How intense is the pain?", "category": "stomach ache", "symptom": "stomach ache"},
+        {"hi": "क्या दर्द के साथ सांस लेने में कठिनाई है?", "en": "Are you having difficulty breathing along with the pain?", "category": "breathing_difficulty", "symptom": "Difficulty breathing"},
+        {"hi": "क्या आप अत्यधिक तनाव में हैं साथ ही सीने में दर्द?", "en": "Are you under extreme stress along with chest pain?", "category": "stress_chest_pain", "symptom": "Stress-related chest pain"},
+        {"hi": "क्या आपको छाती में भारीपन महसूस हो रहा है?", "en": "Do you feel a heaviness in your chest?", "category": "chest_heaviness", "symptom": "Chest heaviness"},
+    ],
 
+     'weakness': [
+        {"hi": "क्या आपको थकान महसूस होती है?", "en": "Do you feel fatigue? ", "category": "weakness",  "symptom": "weakness"},
+        {"hi": "क्या आपको नींद की कमी का सामना करना पड़ता है?", "en": "Do you face lack of sleep?", "category": "lack of sleep", "symptom": "sleep deprivation"},
+        {"hi": "क्या आप खुद को हाइड्रेटेड रखते हैं?", "en": "Do you keep yourself hydrated??", "category": "dehydration", "symptom": "dehydration"},
+        {"hi": "क्या आपको मांसपेशियों में कमजोरी है?", "en": "Do you have muscle weakness?", "category": "weakness", "symptom": "Weakness"},
+        {"hi": "क्या आप पौष्टिक भोजन खाते हैं?", "en": "Do you eat nutritious food?", "category": "weakness", "symptom": "Weakness"},
+         {"hi": "क्या आप प्रतिदिन व्यायाम करते हैं?", "en": "Do you exercise daily?", "category": "weakness", "symptom": "Weakness"},
+        {"hi": "क्या आप शारीरिक रूप से विकलांग व्यक्ति हैं?", "en": "Are you physically challenged person?", "category": "weakness", "symptom": "Weakness"},
+    ],
+    
     'headache': [
         {"hi": "क्या आपका सिरदर्द लगातार है या बीच-बीच में आता है?", "en": "Is your headache constant or intermittent?", "category": "headache_type", "symptom": None},
         {"hi": "क्या सिरदर्द की तीव्रता बढ़ रही है?", "en": "Is the intensity of your headache increasing?", "category": "intensity_increase", "symptom": None},
