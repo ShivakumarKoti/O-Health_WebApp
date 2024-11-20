@@ -263,7 +263,7 @@ def correct_spelling(text):
 
 # Define a mapping from canonical symptoms to their variants
 canonical_symptom_mapping = {
-    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain'],
+    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain','stomach pain'],
     'stomach pain': ['stomach ache', 'stomach pain', 'stomachache', 'abdominal discomfort'],
     'headache': ['headache', 'migraine', 'cephalalgia'],
     'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
