@@ -1,0 +1,479 @@
+SymptomName,CanonicalSymptom
+fever,fever
+cough,cough
+headache,headache
+migraine,headache
+nausea,nausea
+abdominal pain,abdominal pain
+chills,chills
+vomiting,vomiting
+diarrhea,diarrhea
+fatigue,fatigue
+shortness of breath,shortness of breath
+sore throat,sore throat
+runny nose,runny nose
+sneezing,sneezing
+rash,rash
+dizziness,dizziness
+weakness,weakness
+loss of appetite,loss of appetite
+muscle pain,muscle pain
+joint pain,joint pain
+chest pain,chest pain
+back pain,back pain
+constipation,constipation
+throat pain,sore throat
+cold,cough
+flu,cough
+breathlessness,shortness of breath
+stomach pain,abdominal pain
+stomach ache,abdominal pain
+migraine,headache
+pain,pain
+ache,pain
+sore,pain
+burning,burning
+itching,itching
+swelling,swelling
+infection,infection
+inflammation,inflammation
+cramps,cramps
+ulcers,ulcers
+bleeding,bleeding
+irritation,irritation
+anxiety,anxiety
+depression,depression
+insomnia,insomnia
+cancer,cancer
+diabetes,diabetes
+hypertension,hypertension
+allergies,allergies
+weight loss,weight loss
+weight gain,weight gain
+hair loss,hair loss
+blurred vision,vision changes
+ear pain,ear pain
+palpitations,palpitations
+urinary frequency,urinary frequency
+urinary urgency,urinary urgency
+numbness,numbness
+tingling,tingling
+night sweats,night sweats
+dry mouth,dry mouth
+excessive thirst,excessive thirst
+frequent urination,urinary frequency
+acne,acne
+bruising,bruising
+confusion,confusion
+memory loss,memory loss
+hoarseness,hoarseness
+wheezing,wheezing
+itchy eyes,itchy eyes
+dry eyes,dry eyes
+difficulty swallowing,difficulty swallowing
+difficulty sleeping,insomnia
+restlessness,restlessness
+yellow skin,yellow eyes
+yellow eyes,yellow eyes
+bloating,bloating
+gas,gas
+hiccups, hiccups
+indigestion,indigestion
+heartburn,heartburn
+mouth sores,mouth sores
+nosebleeds,nosebleeds
+ear ringing,tinnitus
+decreased appetite,loss of appetite
+increased appetite,increased appetite
+feeling full quickly,feeling full quickly
+unusual sweating,unusual sweating
+dark urine,dark urine
+light-colored stools,light-colored stools
+blood in urine,blood in urine
+blood in stool,blood in stool
+frequent infections,frequent infections
+delayed healing,delayed healing
+high temperature,fever
+high blood pressure,hypertension
+low blood pressure,hypertension
+thirst,excessive thirst
+dehydration,dehydration
+skin burn,skin burn
+sweating,sweating
+feeling cold,feeling cold
+feeling hot,feeling hot
+head pressure,head pressure
+double vision,double vision
+eye pain,eye pain
+eye redness,eye redness
+eye discharge,eye discharge
+ear discharge,ear discharge
+hearing loss,hearing loss
+ringing in ears,tinnitus
+balance problems,balance issues
+taste changes,taste changes
+smell changes,smell changes
+rapid breathing,rapid breathing
+slow breathing,slow breathing
+breathing difficulty,shortness of breath
+irregular heartbeat,irregular heartbeat
+chest tightness,chest tightness
+chest heaviness,chest tightness
+squeezing chest,chest tightness
+sharp chest pain,chest pain
+burning chest pain,chest pain
+crushing chest pain,chest pain
+tightness in chest,chest tightness
+lightheadedness,dizziness
+fainting,fainting
+feeling faint,fainting
+unsteady gait,unsteady gait
+clumsiness,clumsiness
+loss of coordination,loss of coordination
+seizures,seizures
+convulsions,convulsions
+tremors,tremors
+shakiness,shakiness
+nervousness,nervousness
+panic attacks,panic attacks
+mood swings,mood swings
+irritability,irritability
+agitation,agitation
+restlessness,restlessness
+memory problems,memory loss
+difficulty concentrating,difficulty concentrating
+foggy mind,foggy mind
+hallucinations,hallucinations
+delusions,delusions
+paranoia,paranoia
+euphoria,euphoria
+apathy,apathy
+lack of motivation,lack of motivation
+social withdrawal,social withdrawal
+anhedonia,anhedonia
+exhaustion,exhaustion
+muscle weakness,muscle weakness
+muscle cramps,muscle cramps
+muscle stiffness,muscle stiffness
+joint stiffness,joint stiffness
+joint swelling,joint swelling
+joint redness,joint redness
+joint warmth,joint warmth
+joint tenderness,joint tenderness
+bone pain,bone pain
+bone fractures,bone fractures
+sprains,sprains
+strains,strains
+ligament injuries,ligament injuries
+tendonitis,tendonitis
+bursitis,bursitis
+arthritis,arthritis
+osteoarthritis,arthritis
+rheumatoid arthritis,arthritis
+gout,gout
+fibromyalgia,fibromyalgia
+sciatica,sciatica
+herniated disc,herniated disc
+spinal stenosis,spinal stenosis
+back spasms,back spasms
+neck pain,neck pain
+whiplash,whiplash
+carpal tunnel syndrome,carpal tunnel syndrome
+tenosynovitis,tenosynovitis
+sinus pressure,sinus pressure
+sinus headache,sinus headache
+sore muscles,sore muscles
+muscle spasms,muscle spasms
+muscle strains,muscle strains
+muscle injuries,muscle injuries
+skin rash,skin rash
+skin rashes,skin rash
+eczema,eczema
+psoriasis,psoriasis
+hives,hives
+urticaria,urticaria
+contact dermatitis,contact dermatitis
+atopic dermatitis,atopic dermatitis
+seborrheic dermatitis,seborrheic dermatitis
+cutaneous lupus,cutaneous lupus
+cellulitis,cellulitis
+impetigo,impetigo
+herpes,herpes
+shingles,shingles
+warts,warts
+moles,moles
+skin lesions,skin lesions
+skin lumps,skin lumps
+skin bumps,skin bumps
+skin discoloration,skin discoloration
+skin dryness,skin dryness
+skin peeling,skin peeling
+skin cracking,skin cracking
+skin itching,skin itching
+skin burning,skin burning
+skin pain,skin pain
+skin tenderness,skin tenderness
+skin redness,skin redness
+skin swelling,skin swelling
+skin blisters,skin blisters
+skin ulcers,skin ulcers
+skin sores,skin sores
+skin growths,skin growths
+hair thinning,hair thinning
+hair breakage,hair breakage
+hair brittleness,hair brittleness
+hair loss patterns,hair loss
+hair shedding,hair shedding
+hair graying,hair graying
+hair texture changes,hair texture changes
+hair color changes,hair color changes
+hair growth abnormalities,hair growth abnormalities
+hair density changes,hair density changes
+hair quality changes,hair quality changes
+nail discoloration,nail discoloration
+nail brittleness,nail brittleness
+nail separation,nail separation
+nail ridges,nail ridges
+nail pitting,nail pitting
+nail thickening,nail thickening
+nail splitting,nail splitting
+nail fragility,nail fragility
+nail ulcers,nail ulcers
+nail pain,nail pain
+nail deformation,nail deformation
+nail lesions,nail lesions
+nail abnormalities,nail abnormalities
+nail fungus,nail fungus
+nail psoriasis,nail psoriasis
+nail lichen planus,nail lichen planus
+nail melanonychia,nail melanonychia
+nail leukonychia,nail leukonychia
+nail onychomycosis,nail onychomycosis
+nail paronychia,nail paronychia
+nail green nail syndrome,nail green nail syndrome
+nail clubbing,nail clubbing
+nail concave nails,nail concave nails
+nail convex nails,nail convex nails
+nail horizontal ridges,nail horizontal ridges
+nail vertical ridges,nail vertical ridges
+nail spoon nails,nail spoon nails
+nail koilonychia,nail koilonychia
+nail trachyonychia,nail trachyonychia
+nail dystrophy,nail dystrophy
+skin bruising,skin bruising
+skin redness,skin redness
+skin tenderness,skin tenderness
+skin swelling,skin swelling
+joint tenderness,joint tenderness
+muscle tenderness,muscle tenderness
+muscle weakness,muscle weakness
+joint instability,joint instability
+muscle atrophy,muscle atrophy
+joint dislocation,joint dislocation
+joint deformity,joint deformity
+bone deformity,bone deformity
+bone tenderness,bone tenderness
+bone swelling,bone swelling
+bone redness,bone redness
+bone warmth,bone warmth
+bone stiffness,bone stiffness
+bone tenderness,bone tenderness
+joint redness,joint redness
+joint swelling,joint swelling
+joint warmth,joint warmth
+joint tenderness,joint tenderness
+joint pain during movement,joint pain
+joint pain at rest,joint pain
+joint locking,joint locking
+joint clicking,joint clicking
+joint popping,joint popping
+joint swelling after activity,joint swelling
+joint swelling in the morning,joint swelling
+joint stiffness after inactivity,joint stiffness
+joint pain in the morning,joint pain
+joint pain after exercise,joint pain
+joint pain at night,joint pain
+joint swelling after injury,joint swelling
+joint pain with swelling,joint pain
+joint pain without swelling,joint pain
+joint stiffness in the morning,joint stiffness
+joint stiffness after exercise,joint stiffness
+joint pain during exercise,joint pain
+joint stiffness after rest,joint stiffness
+joint pain with movement,joint pain
+joint pain without movement,joint pain
+joint pain during sleep,joint pain
+joint swelling during sleep,joint swelling
+joint redness during exercise,joint redness
+joint warmth after exercise,joint warmth
+joint tenderness after injury,joint tenderness
+muscle pain,muscle pain
+muscle weakness after injury,muscle weakness
+muscle cramps at night,muscle cramps
+muscle spasms during sleep,muscle spasms
+muscle stiffness after rest,muscle stiffness
+muscle tenderness after exercise,muscle tenderness
+muscle weakness during activity,muscle weakness
+muscle atrophy due to disuse,muscle atrophy
+muscle weakness without atrophy,muscle weakness
+muscle stiffness during movement,muscle stiffness
+muscle weakness after injury,muscle weakness
+muscle pain,muscle pain
+muscle tenderness after exercise,muscle tenderness
+muscle spasms after exercise,muscle spasms
+skin dryness due to weather,skin dryness
+skin peeling due to eczema,skin peeling
+skin itching due to allergies,skin itching
+skin burning due to dermatitis,skin burning
+skin redness due to infection,skin redness
+skin swelling due to injury,skin swelling
+skin tenderness due to inflammation,skin tenderness
+skin blisters due to friction,skin blisters
+skin ulcers due to pressure,skin ulcers
+skin sores due to infection,skin sores
+skin growths due to cancer,skin growths
+skin discoloration due to sun exposure,skin discoloration
+skin dryness due to dehydration,skin dryness
+skin cracking due to cold weather,skin cracking
+skin itching due to insect bites,skin itching
+skin burning due to chemical exposure,skin burning
+skin pain due to burns,skin pain
+skin tenderness due to inflammation,skin tenderness
+eye dryness,eye dryness
+eye irritation,eye irritation
+eye discharge,eye discharge
+eye redness,eye redness
+eye pain,eye pain
+eye swelling,eye swelling
+eye tearing,eye tearing
+eye blurriness,vision changes
+eye fatigue,eye fatigue
+eye strain,eye strain
+eye sensitivity to light,vision changes
+eye watering,eye tearing
+eye twitching,eye twitching
+eye congestion,eye congestion
+eye dryness,eye dryness
+eye itching,eye itching
+eye swelling,eye swelling
+eye redness,eye redness
+eye pain,eye pain
+eye vision loss,vision changes
+eye floaters,vision changes
+eye flashes,vision changes
+ear itching,ear itching
+ear dryness,ear dryness
+ear discharge,ear discharge
+ear pain,ear pain
+ear redness,ear redness
+ear swelling,ear swelling
+ear ringing,tinnitus
+ear fullness,ear fullness
+ear congestion,ear congestion
+ear fluid,ear fluid
+ear wax buildup,ear wax buildup
+ear infection,ear infection
+earache,ear pain
+hearing loss,hearing loss
+tinnitus,tinnitus
+balance issues,balance issues
+vertigo,vertigo
+dizziness,dizziness
+swimming pool ear,ear infection
+outer ear pain,ear pain
+middle ear pain,ear pain
+inner ear pain,ear pain
+ear buzzing,tinnitus
+ear clicking,ear clicking
+ear popping,ear popping
+ear sensitivity,ear sensitivity
+ear tightness,ear tightness
+ear sensation of fullness,ear fullness
+ear pressure,ear pressure
+hearing noises,hearing loss
+hearing muffled sounds,hearing loss
+hearing fluctuating sounds,hearing loss
+hearing loss in one ear,hearing loss
+hearing loss in both ears,hearing loss
+hearing difficulty,hearing loss
+difficulty breathing,shortness of breath
+chest tightness,chest tightness
+wheezing,wheezing
+dry cough,cough
+productive cough,cough
+barking cough,cough
+persistent cough,cough
+non-productive cough,cough
+wet cough,cough
+dry cough,cough
+unproductive cough,cough
+cough with phlegm,cough
+cough with mucus,cough
+cough with blood,cough
+cough with sputum,cough
+coughing up blood,cough
+coughing up phlegm,cough
+coughing up mucus,cough
+coughing up sputum,cough
+sneezing fits,sneezing
+frequent sneezing,sneezing
+sneezing spells,sneezing
+sneezing bouts,sneezing
+sneezing attacks,sneezing
+sneezing episodes,sneezing
+nasal congestion,nasal congestion
+stuffy nose,nasal congestion
+blocked nose,nasal congestion
+clogged nose,nasal congestion
+runny nose,runny nose
+clear runny nose,runny nose
+watery eyes,eye tearing
+dry eyes,dry eyes
+itchy eyes,itchy eyes
+burning eyes,eye burning
+red eyes,eye redness
+swollen eyes,eye swelling
+painful eyes,eye pain
+vision changes,vision changes
+double vision,double vision
+blurred vision,vision changes
+trouble seeing,vision changes
+difficulty seeing,vision changes
+night blindness,vision changes
+day blindness,vision changes
+light sensitivity,vision changes
+dark sensitivity,vision changes
+double vision,double vision
+floaters,vision changes
+flashes of light,vision changes
+dim vision,vision changes
+loss of vision,vision changes
+partial vision loss,vision changes
+complete vision loss,vision changes
+slow vision,vision changes
+rapid vision,vision changes
+tunnel vision,vision changes
+peripheral vision loss,vision changes
+central vision loss,vision changes
+visual distortions,vision changes
+blind spots,vision changes
+sight flashing,vision changes
+sight flickering,vision changes
+sight tingling,vision changes
+sight buzzing,vision changes
+sight burning,vision changes
+sight itching,vision changes
+sight redness,vision changes
+sight swelling,vision changes
+sight pain,vision changes
+sight dryness,vision changes
+sight tearing,vision changes
+sight discharge,vision changes
+sight heaviness,vision changes
+sight tightness,vision changes
+sight fullness,vision changes
+sight sensitivity,vision changes
+sight irritation,vision changes
+sight inflammation,vision changes
+stomach is paining,
+backache,
