@@ -292,10 +292,10 @@ def correct_spelling(text):
 #}
 
 # Generate a reverse mapping: any variant symptom maps to its canonical term
-symptom_to_canonical = {}
-for canonical, variants in canonical_symptom_mapping.items():
-    for variant in variants:
-        symptom_to_canonical[variant.lower()] = canonical.lower()
+#symptom_to_canonical = {}
+#for canonical, variants in canonical_symptom_mapping.items():
+#    for variant in variants:
+#        symptom_to_canonical[variant.lower()] = canonical.lower()
 
 # Define follow-up questions for each canonical symptom
 canonical_symptom_followup_questions = {
