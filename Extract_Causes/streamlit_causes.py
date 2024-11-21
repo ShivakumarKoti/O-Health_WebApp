@@ -628,7 +628,521 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या आपकी आँखों की खुजली किसी विशेष पदार्थ से संबंधित है?", "en": "Is the itchiness in your eyes related to any specific substance?", "category": "triggered_itchy_eyes", "symptom": None},
         {"hi": "क्या आपकी आँखों में सूजन है?", "en": "Is there any swelling in your eyes?", "category": "swelling_with_itchy_eyes", "symptom": "swelling"},
         {"hi": "क्या आपकी आँखों में कोई धुंधलापन है?", "en": "Are you experiencing any blurriness in your vision along with itchy eyes?", "category": "blurred_vision_with_itchy_eyes", "symptom": "blurred vision"}
-    ]
+    ],
+
+'bloating': [
+        {"hi": "क्या आपको पेट में सूजन महसूस हो रही है?", "en": "Are you feeling bloated in your abdomen?", "category": "abdominal_bloating", "symptom": None},
+        {"hi": "क्या सूजन के साथ पेट में दर्द भी हो रहा है?", "en": "Are you experiencing abdominal pain along with bloating?", "category": "abdominal_pain_with_bloating", "symptom": "abdominal pain"},
+        {"hi": "क्या सूजन के कारण आपको सांस लेने में कठिनाई हो रही है?", "en": "Is bloating causing difficulty in breathing?", "category": "breathing_difficulty_with_bloating", "symptom": "shortness of breath"},
+        {"hi": "क्या आपको सूजन के साथ मतली या उल्टी हो रही है?", "en": "Are you experiencing nausea or vomiting along with bloating?", "category": "nausea_vomiting_with_bloating", "symptom": "nausea"},
+        {"hi": "क्या सूजन के कारण आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued due to bloating?", "category": "fatigue_with_bloating", "symptom": "fatigue"}
+    ],
+
+    'gas': [
+        {"hi": "क्या आपको पेट में गैस की अधिकता महसूस हो रही है?", "en": "Are you feeling excessive gas in your abdomen?", "category": "excessive_gas", "symptom": "gas"},
+        {"hi": "क्या गैस के साथ पेट में दर्द भी हो रहा है?", "en": "Are you experiencing abdominal pain along with gas?", "category": "abdominal_pain_with_gas", "symptom": "abdominal pain"},
+        {"hi": "क्या गैस के कारण आपको पेट फूलने का अनुभव हो रहा है?", "en": "Are you experiencing bloating due to gas?", "category": "bloating_with_gas", "symptom": "bloating"},
+        {"hi": "क्या गैस के साथ आपका मूड भी प्रभावित हो रहा है?", "en": "Is your mood being affected along with gas?", "category": "mood_changes_with_gas", "symptom": "depression"},
+        {"hi": "क्या गैस के कारण आपकी नींद प्रभावित हो रही है?", "en": "Is gas affecting your sleep?", "category": "sleep_disturbance_with_gas", "symptom": "insomnia"}
+    ],
+
+    'hiccups': [
+        {"hi": "क्या आपके सिकुड़न लगातार हो रही है या आती-जाती हैं?", "en": "Are your hiccups continuous or intermittent?", "category": "intermittent_hiccups", "symptom": None},
+        {"hi": "क्या सिकुड़न के साथ आपको दर्द भी हो रहा है?", "en": "Are you experiencing pain along with hiccups?", "category": "pain_with_hiccups", "symptom": "chest pain"},
+        {"hi": "क्या आपको सिकुड़न के दौरान सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing during hiccups?", "category": "breathing_difficulty_with_hiccups", "symptom": "shortness of breath"},
+        {"hi": "क्या सिकुड़न के कारण आपका खाना निगलने में कठिनाई हो रही है?", "en": "Are hiccups causing difficulty in swallowing your food?", "category": "swallowing_difficulty_with_hiccups", "symptom": "difficulty swallowing"},
+        {"hi": "क्या सिकुड़न के साथ आपके पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain along with hiccups?", "category": "abdominal_pain_with_hiccups", "symptom": "abdominal pain"},
+        {"hi": "क्या आपके सिकुड़न के कारण आपकी नींद प्रभावित हो रही है?", "en": "Are your hiccups affecting your sleep?", "category": "sleep_disturbance_with_hiccups", "symptom": "insomnia"}
+    ],
+
+    'indigestion': [
+        {"hi": "क्या आपको भोजन के बाद पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain after eating?", "category": "post_meal_abdominal_pain", "symptom": "abdominal pain"},
+        {"hi": "क्या आपको गैस या सूजन महसूस हो रही है?", "en": "Are you feeling gas or bloating?", "category": "gas_bloating_with_indigestion", "symptom": "gas"},
+        {"hi": "क्या indigestion के साथ आपको उल्टी या दस्त भी हो रहे हैं?", "en": "Are you also experiencing vomiting or diarrhea along with indigestion?", "category": "vomiting_diarrhea_with_indigestion", "symptom": "vomiting"},
+        {"hi": "क्या indigestion के कारण आपको भोजन निगलने में कठिनाई हो रही है?", "en": "Is indigestion causing difficulty in swallowing your food?", "category": "swallowing_difficulty_with_indigestion", "symptom": "difficulty swallowing"},
+        {"hi": "क्या indigestion के साथ आपको पेट में भारीपन महसूस हो रहा है?", "en": "Are you feeling a heaviness in your abdomen along with indigestion?", "category": "heaviness_with_indigestion", "symptom": None},
+        {"hi": "क्या indigestion के कारण आपकी नींद प्रभावित हो रही है?", "en": "Is indigestion affecting your sleep?", "category": "sleep_disturbance_with_indigestion", "symptom": "insomnia"}
+    ],
+
+    'heartburn': [
+        {"hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?", "en": "Are you experiencing burning sensations in your stomach?", "category": "burning_sensation_with_heartburn", "symptom": "burning"},
+        {"hi": "क्या जलन आपके छाती के क्षेत्र में हो रही है?", "en": "Is the burning sensation occurring in your chest area?", "category": "chest_burning", "symptom": "chest burning"},
+        {"hi": "क्या आपको यह जलन खाने के बाद ज्यादा होती है?", "en": "Does the burning sensation increase after eating?", "category": "post_meal_heartburn", "symptom": "heartburn"},
+        {"hi": "क्या जलन के साथ आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing along with the burning sensation?", "category": "breathing_difficulty_with_heartburn", "symptom": "shortness of breath"},
+        {"hi": "क्या आपको जलन के साथ पेट में दर्द भी हो रहा है?", "en": "Are you experiencing abdominal pain along with the burning sensation?", "category": "abdominal_pain_with_heartburn", "symptom": "abdominal pain"},
+        {"hi": "क्या यह जलन रात में ज्यादा होती है?", "en": "Does the burning sensation occur more at night?", "category": "night_time_heartburn", "symptom": None},
+        {"hi": "क्या आपको पेट में भारीपन महसूस हो रहा है?", "en": "Are you feeling a heaviness in your stomach?", "category": "heaviness_with_heartburn", "symptom": None}
+    ],
+
+    'mouth sores': [
+        {"hi": "क्या आपके मुंह में घाव तेजी से बढ़ रहे हैं?", "en": "Are your mouth sores spreading rapidly?", "category": "rapid_spread_mouth_sores", "symptom": "mouth sores"},
+        {"hi": "क्या मुंह के घावों के साथ सूजन भी है?", "en": "Is there any swelling along with your mouth sores?", "category": "swelling_with_mouth_sores", "symptom": "swelling"},
+        {"hi": "क्या मुंह के घाव खाने या पीने में दर्द पैदा करते हैं?", "en": "Do your mouth sores cause pain while eating or drinking?", "category": "pain_with_mouth_sores", "symptom": "pain"},
+        {"hi": "क्या आपको मुंह के घावों से रक्तस्राव हो रहा है?", "en": "Are your mouth sores bleeding?", "category": "bleeding_mouth_sores", "symptom": "bleeding"},
+        {"hi": "क्या मुंह के घावों के साथ आपके दांतों में दर्द है?", "en": "Are you experiencing tooth pain along with mouth sores?", "category": "tooth_pain_with_mouth_sores", "symptom": "tooth pain"},
+        {"hi": "क्या मुंह के घावों के कारण आपकी बोलने में कठिनाई हो रही है?", "en": "Are your mouth sores causing difficulty in speaking?", "category": "speech_difficulty_with_mouth_sores", "symptom": "difficulty speaking"},
+        {"hi": "क्या मुंह के घावों के साथ आपको कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with mouth sores?", "category": "other_symptoms", "symptom": None}
+    ],
+
+    'nosebleeds': [
+        {"hi": "क्या नाक से खून बहना बार-बार हो रहा है?", "en": "Are you experiencing frequent nosebleeds?", "category": "frequent_nosebleeds", "symptom": "nosebleeds"},
+        {"hi": "क्या नाक से खून बहने के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with nosebleeds?", "category": "pain_with_nosebleeds", "symptom": "chest pain"},
+        {"hi": "क्या नाक से खून बहने का कोई विशेष कारण है?", "en": "Is there any specific cause for your nosebleeds?", "category": "specific_cause_nosebleeds", "symptom": None},
+        {"hi": "क्या नाक से खून बहने के साथ आपको सूजन भी हो रही है?", "en": "Is there any swelling along with your nosebleeds?", "category": "swelling_with_nosebleeds", "symptom": "swelling"},
+        {"hi": "क्या आपको नाक से खून बहने के बाद कमजोरी महसूस हो रही है?", "en": "Are you feeling weak after nosebleeds?", "category": "weakness_with_nosebleeds", "symptom": "weakness"},
+        {"hi": "क्या नाक से खून बहने के कारण आपके आँखों में भी कोई समस्या हो रही है?", "en": "Are you experiencing any issues with your eyes due to nosebleeds?", "category": "eye_issues_with_nosebleeds", "symptom": None},
+        {"hi": "क्या नाक से खून बहने के साथ आपको सिरदर्द भी हो रहा है?", "en": "Are you experiencing headaches along with nosebleeds?", "category": "headache_with_nosebleeds", "symptom": "headache"}
+    ],
+
+    'ear ringing': [
+        {"hi": "क्या कानों में बजने वाली आवाजें लगातार हैं या कभी-कभी आती हैं?", "en": "Are the ringing sounds in your ears constant or intermittent?", "category": "intermittent_ringing", "symptom": None},
+        {"hi": "क्या कानों में बजने वाली आवाजें तेज हो रही हैं?", "en": "Are the ringing sounds in your ears becoming louder?", "category": "intensity_increase_ringing", "symptom": None},
+        {"hi": "क्या कानों में बजने वाली आवाजें आपके सुनने में कठिनाई पैदा कर रही हैं?", "en": "Are the ringing sounds in your ears causing difficulty in hearing?", "category": "hearing_difficulty_with_ringing", "symptom": "hearing loss"},
+        {"hi": "क्या कानों में बजने वाली आवाजें किसी विशेष समय पर अधिक होती हैं?", "en": "Do the ringing sounds in your ears occur more frequently at any specific time?", "category": "time_related_ringing", "symptom": None},
+        {"hi": "क्या कानों में बजने वाली आवाजें किसी विशेष गतिविधि के दौरान बढ़ती हैं?", "en": "Do the ringing sounds in your ears increase during any specific activity?", "category": "activity_related_ringing", "symptom": None},
+        {"hi": "क्या आपको कानों में बजने वाली आवाजें सुनने के साथ साथ सूजन या दर्द भी महसूस हो रहा है?", "en": "Are you experiencing swelling or pain in your ears along with ringing sounds?", "category": "swelling_pain_with_ringing", "symptom": "swelling"},
+        {"hi": "क्या कानों में बजने वाली आवाजें किसी विशेष दवा के सेवन के कारण हो रही हैं?", "en": "Are the ringing sounds in your ears caused by taking any specific medication?", "category": "medication_related_ringing", "symptom": None}
+    ],
+
+    'decreased appetite': [
+        {"hi": "क्या आपकी भूख कम हो गई है?", "en": "Has your appetite decreased?", "category": "appetite_decrease", "symptom": "decreased appetite"},
+        {"hi": "क्या भूख में कमी के साथ वजन घट रहा है?", "en": "Are you losing weight along with decreased appetite?", "category": "weight_loss_with_decreased_appetite", "symptom": "weight loss"},
+        {"hi": "क्या भूख में कमी के कारण आपकी ऊर्जा स्तर प्रभावित हो रहा है?", "en": "Is your energy level being affected due to decreased appetite?", "category": "energy_deficit_with_decreased_appetite", "symptom": "fatigue"},
+        {"hi": "क्या भूख में कमी के साथ पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain along with decreased appetite?", "category": "abdominal_pain_with_decreased_appetite", "symptom": "abdominal pain"},
+        {"hi": "क्या आपको भूख में कमी के साथ कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with decreased appetite?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या भूख में कमी के कारण आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued due to decreased appetite?", "category": "fatigue_with_decreased_appetite", "symptom": "fatigue"},
+        {"hi": "क्या आपकी डाइट में कोई विशेष परिवर्तन हुआ है?", "en": "Has there been any specific change in your diet?", "category": "diet_changes", "symptom": None}
+    ],
+
+    'increased appetite': [
+        {"hi": "क्या आपकी भूख में अचानक बढ़ोतरी हो गई है?", "en": "Has there been a sudden increase in your appetite?", "category": "sudden_increase_appetite", "symptom": "increased appetite"},
+        {"hi": "क्या वजन बढ़ने के साथ आपकी भूख में भी वृद्धि हुई है?", "en": "Has your appetite increased along with weight gain?", "category": "appetite_increase_with_weight_gain", "symptom": "weight gain"},
+        {"hi": "क्या आपकी भूख में वृद्धि के कारण आपकी डाइट में कोई विशेष बदलाव हुआ है?", "en": "Has there been any specific change in your diet due to increased appetite?", "category": "diet_changes_with_increased_appetite", "symptom": None},
+        {"hi": "क्या भूख में वृद्धि के साथ आपको थकान भी महसूस हो रही है?", "en": "Are you feeling fatigued along with increased appetite?", "category": "fatigue_with_increased_appetite", "symptom": "fatigue"},
+        {"hi": "क्या आपको भूख में वृद्धि के साथ कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with increased appetite?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या आपकी भूख में वृद्धि के कारण आपकी नींद प्रभावित हो रही है?", "en": "Is your sleep being affected due to increased appetite?", "category": "sleep_disturbance_with_increased_appetite", "symptom": "insomnia"},
+        {"hi": "क्या भूख में वृद्धि के साथ आपका मूड भी प्रभावित हो रहा है?", "en": "Is your mood being affected along with increased appetite?", "category": "mood_changes_with_increased_appetite", "symptom": "depression"}
+    ],
+
+    'feeling full quickly': [
+        {"hi": "क्या आपको खाने के तुरंत बाद भरा हुआ महसूस होता है?", "en": "Do you feel full immediately after eating?", "category": "early_satiety", "symptom": "feeling full quickly"},
+        {"hi": "क्या भरा हुआ महसूस होने के साथ पेट में दर्द भी हो रहा है?", "en": "Are you experiencing abdominal pain along with feeling full quickly?", "category": "abdominal_pain_with_satiety", "symptom": "abdominal pain"},
+        {"hi": "क्या आपको खाने में कठिनाई हो रही है?", "en": "Are you having difficulty eating?", "category": "eating_difficulty", "symptom": "difficulty swallowing"},
+        {"hi": "क्या आपके खाने के साथ किसी विशेष प्रकार का दर्द होता है?", "en": "Do you experience any specific type of pain while eating?", "category": "pain_with_eating", "symptom": "pain"},
+        {"hi": "क्या आपको खाने के बाद वजन बढ़ने की समस्या हो रही है?", "en": "Are you having issues with weight gain after eating?", "category": "weight_gain_after_eating", "symptom": "weight gain"},
+        {"hi": "क्या आपको खाने के बाद सूजन महसूस हो रही है?", "en": "Are you feeling bloated after eating?", "category": "bloating_after_eating", "symptom": "bloating"},
+        {"hi": "क्या आपको खाने के बाद थकान महसूस हो रही है?", "en": "Are you feeling fatigued after eating?", "category": "fatigue_after_eating", "symptom": "fatigue"}
+    ],
+
+    'unusual sweating': [
+        {"hi": "क्या आपको असामान्य रूप से पसीना आ रहा है?", "en": "Are you experiencing unusual sweating?", "category": "unusual_sweating", "symptom": "sweating"},
+        {"hi": "क्या पसीना आना किसी विशेष समय या गतिविधि के दौरान बढ़ता है?", "en": "Does sweating increase during any specific time or activity?", "category": "activity_related_sweating", "symptom": None},
+        {"hi": "क्या आपको रात में अधिक पसीना आता है?", "en": "Are you sweating excessively at night?", "category": "night_time_sweating", "symptom": "night sweats"},
+        {"hi": "क्या पसीना आना आपको किसी विशेष अंग या शरीर के हिस्से में हो रहा है?", "en": "Is the sweating occurring in any specific part or area of your body?", "category": "localized_sweating", "symptom": None},
+        {"hi": "क्या पसीना आना के साथ आपको कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with sweating?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या पसीना आना किसी विशेष दवा के सेवन के कारण हो रहा है?", "en": "Is the sweating caused by taking any specific medication?", "category": "medication_related_sweating", "symptom": None},
+        {"hi": "क्या आपको पसीना आना के कारण कोई अन्य स्वास्थ्य समस्याएँ हो रही हैं?", "en": "Are you experiencing any other health issues due to sweating?", "category": "health_issues_with_sweating", "symptom": None}
+    ],
+
+    'dark urine': [
+        {"hi": "क्या आपका पेशाब गहरा रंग का हो गया है?", "en": "Has your urine become dark-colored?", "category": "dark_urine", "symptom": "dark urine"},
+        {"hi": "क्या गहरे पेशाब के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with dark urine?", "category": "other_symptoms_with_dark_urine", "symptom": None},
+        {"hi": "क्या आपका पेशाब सामान्य से अधिक है?", "en": "Is your urine output more than usual?", "category": "increased_urine_output", "symptom": "frequent urination"},
+        {"hi": "क्या आपको पेशाब के साथ कोई दर्द भी हो रहा है?", "en": "Are you experiencing any pain while urinating?", "category": "pain_with_dark_urine", "symptom": "urinary pain"},
+        {"hi": "क्या आपके पेशाब में खून की लकीरें आ रही हैं?", "en": "Are you noticing blood streaks in your urine?", "category": "blood_streaks_in_urine", "symptom": "blood in urine"},
+        {"hi": "क्या गहरे पेशाब के कारण आपकी त्वचा में कोई परिवर्तन आ रहा है?", "en": "Is there any change in your skin due to dark urine?", "category": "skin_changes_with_dark_urine", "symptom": "skin discoloration"},
+        {"hi": "क्या आपका पेशाब गहरा रंग होने के कारण आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued due to dark-colored urine?", "category": "fatigue_with_dark_urine", "symptom": "fatigue"}
+    ],
+
+    'light-colored stools': [
+        {"hi": "क्या आपके मल का रंग हल्का हो गया है?", "en": "Has your stool become light-colored?", "category": "light_colored_stools", "symptom": "light-colored stools"},
+        {"hi": "क्या हल्के रंग के मल के साथ आपको पेट में दर्द भी हो रहा है?", "en": "Are you experiencing abdominal pain along with light-colored stools?", "category": "abdominal_pain_with_light_stools", "symptom": "abdominal pain"},
+        {"hi": "क्या आपके मल में कोई अन्य परिवर्तन आ रहा है?", "en": "Are you noticing any other changes in your stool?", "category": "other_changes_with_light_stools", "symptom": None},
+        {"hi": "क्या आपके मल में कोई रक्त है?", "en": "Is there any blood in your stool?", "category": "blood_in_stool", "symptom": "blood in stool"},
+        {"hi": "क्या आपको मल त्यागने में कठिनाई हो रही है?", "en": "Are you having difficulty in passing stool?", "category": "difficulty_passing_stool", "symptom": "constipation"},
+        {"hi": "क्या हल्के रंग के मल के साथ आपको उल्टी भी हो रही है?", "en": "Are you experiencing vomiting along with light-colored stools?", "category": "vomiting_with_light_stools", "symptom": "vomiting"},
+        {"hi": "क्या आपके मल त्यागने के साथ आपको पसीना आ रहा है?", "en": "Are you sweating while passing stool?", "category": "sweating_with_light_stools", "symptom": "sweating"}
+    ],
+
+    'blood in urine': [
+        {"hi": "क्या आपको पेशाब में खून दिखाई दे रहा है?", "en": "Are you noticing blood in your urine?", "category": "blood_in_urine", "symptom": "blood in urine"},
+        {"hi": "क्या खून की मात्रा बढ़ रही है?", "en": "Is the amount of blood in your urine increasing?", "category": "increasing_blood_in_urine", "symptom": None},
+        {"hi": "क्या खून आने के साथ आपको पेशाब में दर्द हो रहा है?", "en": "Are you experiencing pain while urinating along with blood in urine?", "category": "pain_with_blood_in_urine", "symptom": "urinary pain"},
+        {"hi": "क्या खून आने के साथ आपको कमजोरी भी महसूस हो रही है?", "en": "Are you feeling weak along with blood in your urine?", "category": "weakness_with_blood_in_urine", "symptom": "weakness"},
+        {"hi": "क्या खून आने के कारण आपकी त्वचा में कोई परिवर्तन आ रहा है?", "en": "Is there any change in your skin due to blood in urine?", "category": "skin_changes_with_blood_in_urine", "symptom": "skin discoloration"},
+        {"hi": "क्या खून आने के साथ आपको बुखार भी है?", "en": "Do you have a fever along with blood in urine?", "category": "fever_with_blood_in_urine", "symptom": "fever"},
+        {"hi": "क्या खून आने के साथ आपको पसीना भी आ रहा है?", "en": "Are you sweating along with blood in urine?", "category": "sweating_with_blood_in_urine", "symptom": "sweating"}
+    ],
+
+    'blood in stool': [
+        {"hi": "क्या आपके मल में खून दिखाई दे रहा है?", "en": "Are you noticing blood in your stool?", "category": "blood_in_stool", "symptom": "blood in stool"},
+        {"hi": "क्या खून का रंग गहरा है या हल्का?", "en": "Is the blood in your stool dark or light-colored?", "category": "blood_color_in_stool", "symptom": None},
+        {"hi": "क्या खून आने के साथ आपको पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain along with blood in stool?", "category": "abdominal_pain_with_blood_in_stool", "symptom": "abdominal pain"},
+        {"hi": "क्या खून आने के कारण आपको कमजोरी महसूस हो रही है?", "en": "Are you feeling weak due to blood in your stool?", "category": "weakness_with_blood_in_stool", "symptom": "weakness"},
+        {"hi": "क्या खून आने के साथ आपके मल त्यागने की आदत बदल गई है?", "en": "Has your bowel movement pattern changed along with blood in stool?", "category": "bowel_movement_changes_with_blood_in_stool", "symptom": "constipation"},
+        {"hi": "क्या खून आने के साथ आपको बुखार भी है?", "en": "Do you have a fever along with blood in stool?", "category": "fever_with_blood_in_stool", "symptom": "fever"},
+        {"hi": "क्या खून आने के कारण आपकी त्वचा में कोई परिवर्तन आ रहा है?", "en": "Is there any change in your skin due to blood in stool?", "category": "skin_changes_with_blood_in_stool", "symptom": "skin discoloration"}
+    ],
+
+    'frequent infections': [
+        {"hi": "क्या आपको बार-बार संक्रमण हो रहे हैं?", "en": "Are you experiencing frequent infections?", "category": "frequent_infections", "symptom": "frequent infections"},
+        {"hi": "क्या बार-बार होने वाले संक्रमणों के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with frequent infections?", "category": "other_symptoms_with_frequent_infections", "symptom": None},
+        {"hi": "क्या आपको संक्रमण होने के बाद तेजी से ठीक होने में कठिनाई हो रही है?", "en": "Are you having difficulty recovering quickly after infections?", "category": "delayed_recovery_with_infections", "symptom": "delayed healing"},
+        {"hi": "क्या संक्रमण के प्रकार में कोई विशेष बदलाव आया है?", "en": "Has there been any specific change in the types of infections you are getting?", "category": "change_in_infection_types", "symptom": None},
+        {"hi": "क्या आपको बार-बार होने वाले संक्रमणों के कारण थकान महसूस हो रही है?", "en": "Are you feeling fatigued due to frequent infections?", "category": "fatigue_with_frequent_infections", "symptom": "fatigue"},
+        {"hi": "क्या आपको संक्रमण के साथ सूजन भी हो रही है?", "en": "Are you experiencing any swelling along with infections?", "category": "swelling_with_infections", "symptom": "swelling"},
+        {"hi": "क्या आपको संक्रमण के कारण त्वचा में कोई परिवर्तन आ रहा है?", "en": "Are there any changes in your skin due to infections?", "category": "skin_changes_with_infections", "symptom": "skin discoloration"}
+    ],
+
+    'delayed healing': [
+        {"hi": "क्या आपके घाव या चोटों का ठीक होने में समय अधिक लग रहा है?", "en": "Are your wounds or injuries taking longer to heal?", "category": "delayed_healing", "symptom": "delayed healing"},
+        {"hi": "क्या ठीक होने में देरी के साथ आपको दर्द भी हो रहा है?", "en": "Are you experiencing pain along with delayed healing?", "category": "pain_with_delayed_healing", "symptom": "pain"},
+        {"hi": "क्या आपके घावों में कोई संक्रमण भी हो रही है?", "en": "Are your wounds getting infected while healing?", "category": "infection_with_delayed_healing", "symptom": "infection"},
+        {"hi": "क्या ठीक होने में देरी के कारण आपकी त्वचा में कोई परिवर्तन आ रहा है?", "en": "Is there any change in your skin due to delayed healing?", "category": "skin_changes_with_delayed_healing", "symptom": "skin discoloration"},
+        {"hi": "क्या आपको घावों के ठीक होने में किसी विशेष दवा का सेवन करना पड़ रहा है?", "en": "Are you taking any specific medication for delayed healing of wounds?", "category": "medication_with_delayed_healing", "symptom": None},
+        {"hi": "क्या आपके घाव या चोटों के ठीक होने में कोई विशेष कारण है?", "en": "Is there any specific reason for the delayed healing of your wounds or injuries?", "category": "specific_cause_delayed_healing", "symptom": None},
+        {"hi": "क्या आपको घावों के ठीक होने के दौरान कमजोरी महसूस हो रही है?", "en": "Are you feeling weak during the healing of your wounds?", "category": "weakness_with_delayed_healing", "symptom": "weakness"}
+    ],
+
+    'excessive thirst': [
+        {"hi": "क्या आपको अत्यधिक प्यास लग रही है?", "en": "Are you feeling excessively thirsty?", "category": "excessive_thirst", "symptom": "excessive thirst"},
+        {"hi": "क्या अत्यधिक प्यास के साथ आपको बार-बार पेशाब आ रहा है?", "en": "Are you urinating frequently along with excessive thirst?", "category": "frequent_urination_with_thirst", "symptom": "frequent urination"},
+        {"hi": "क्या अत्यधिक प्यास के कारण आप पर्याप्त पानी पी रहे हैं?", "en": "Are you drinking enough water due to excessive thirst?", "category": "hydration_with_thirst", "symptom": "dehydration"},
+        {"hi": "क्या अत्यधिक प्यास के साथ आपको कमजोरी भी महसूस हो रही है?", "en": "Are you feeling weak along with excessive thirst?", "category": "weakness_with_thirst", "symptom": "weakness"},
+        {"hi": "क्या अत्यधिक प्यास के साथ आपके शरीर में कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your body along with excessive thirst?", "category": "other_changes_with_thirst", "symptom": None},
+        {"hi": "क्या आपकी डाइट में कोई विशेष बदलाव हुआ है जिससे आपको अत्यधिक प्यास लग रही है?", "en": "Has there been any specific change in your diet causing excessive thirst?", "category": "diet_changes_with_thirst", "symptom": None},
+        {"hi": "क्या आपको अत्यधिक प्यास के साथ वजन कम हो रहा है?", "en": "Are you losing weight along with excessive thirst?", "category": "weight_loss_with_thirst", "symptom": "weight loss"}
+    ],
+
+    'dehydration': [
+        {"hi": "क्या आपको शरीर से पानी की कमी महसूस हो रही है?", "en": "Are you feeling dehydrated?", "category": "dehydration", "symptom": "dehydration"},
+        {"hi": "क्या आपको प्यास लगी हुई है?", "en": "Are you feeling thirsty?", "category": "thirst", "symptom": "thirst"},
+        {"hi": "क्या आपका पेशाब कम आ रहा है और रंग गहरा हो गया है?", "en": "Is your urine output reduced and dark-colored?", "category": "reduced_dark_urine", "symptom": "dark urine"},
+        {"hi": "क्या आपको सिरदर्द या चक्कर आ रहे हैं?", "en": "Are you experiencing headaches or dizziness?", "category": "headache_dizziness_with_dehydration", "symptom": "headache"},
+        {"hi": "क्या आपको शरीर में सूजन महसूस हो रही है?", "en": "Are you feeling swelling in your body?", "category": "swelling_with_dehydration", "symptom": "swelling"},
+        {"hi": "क्या आपको पसीना आ रहा है या त्वचा सूखी हो गई है?", "en": "Are you sweating or is your skin dry?", "category": "sweating_dry_skin_with_dehydration", "symptom": "sweating"},
+        {"hi": "क्या आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued?", "category": "fatigue_with_dehydration", "symptom": "fatigue"}
+    ],
+
+    'skin burn': [
+        {"hi": "क्या आपको त्वचा पर जलन या दर्द महसूस हो रहा है?", "en": "Are you feeling burning or pain on your skin?", "category": "burning_pain_with_skin_burn", "symptom": "burning"},
+        {"hi": "क्या त्वचा पर जलने के कारण सूजन हो रही है?", "en": "Is there any swelling due to the skin burn?", "category": "swelling_with_skin_burn", "symptom": "swelling"},
+        {"hi": "क्या आपको त्वचा पर दाने या फफोले हो रहे हैं?", "en": "Are you developing blisters or bumps on your skin?", "category": "blisters_bumps_with_skin_burn", "symptom": "skin lesions"},
+        {"hi": "क्या त्वचा पर जलने के बाद त्वचा लाल हो गई है?", "en": "Has your skin turned red after the burn?", "category": "redness_with_skin_burn", "symptom": "redness"},
+        {"hi": "क्या त्वचा पर जलने के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with the skin burn?", "category": "other_symptoms_with_skin_burn", "symptom": None},
+        {"hi": "क्या त्वचा पर जलने के कारण आपको दर्द में वृद्धि हो रही है?", "en": "Is the pain increasing due to the skin burn?", "category": "pain_increase_with_skin_burn", "symptom": "pain"},
+        {"hi": "क्या त्वचा पर जलने के कारण कोई संक्रमण हो गया है?", "en": "Has the skin burn led to any infection?", "category": "infection_with_skin_burn", "symptom": "infection"}
+    ],
+
+    'sweating': [
+        {"hi": "क्या आपको पसीना आना सामान्य से अधिक हो रहा है?", "en": "Are you sweating more than usual?", "category": "excessive_sweating", "symptom": "sweating"},
+        {"hi": "क्या पसीना आना किसी विशेष समय पर अधिक होता है?", "en": "Does sweating occur more frequently at any specific time?", "category": "time_related_sweating", "symptom": None},
+        {"hi": "क्या पसीना आना के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with sweating?", "category": "other_symptoms_with_sweating", "symptom": None},
+        {"hi": "क्या आपको पसीना आना के कारण किसी विशेष गतिविधि के दौरान कठिनाई हो रही है?", "en": "Are you experiencing difficulty during any specific activity due to sweating?", "category": "activity_related_sweating", "symptom": None},
+        {"hi": "क्या पसीना आना के साथ आपको त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are you noticing any changes in your skin due to sweating?", "category": "skin_changes_with_sweating", "symptom": "skin changes"},
+        {"hi": "क्या पसीना आना के कारण आपकी त्वचा सूखी हो गई है?", "en": "Has sweating caused your skin to become dry?", "category": "dry_skin_with_sweating", "symptom": "dry skin"},
+        {"hi": "क्या पसीना आना के साथ आपको कोई अन्य स्वास्थ्य समस्याएँ हो रही हैं?", "en": "Are you experiencing any other health issues due to sweating?", "category": "health_issues_with_sweating", "symptom": None}
+    ],
+
+    'feeling cold': [
+        {"hi": "क्या आपको ठंड लगना सामान्य से अधिक हो रहा है?", "en": "Are you feeling cold more than usual?", "category": "excessive_cold", "symptom": "feeling cold"},
+        {"hi": "क्या ठंड महसूस होने के साथ आपको दर्द भी हो रहा है?", "en": "Are you experiencing pain along with feeling cold?", "category": "pain_with_feeling_cold", "symptom": "pain"},
+        {"hi": "क्या ठंड महसूस होने के कारण आपको थकान हो रही है?", "en": "Are you feeling fatigued due to feeling cold?", "category": "fatigue_with_feeling_cold", "symptom": "fatigue"},
+        {"hi": "क्या आपको ठंड महसूस होने के साथ त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are you noticing any changes in your skin due to feeling cold?", "category": "skin_changes_with_feeling_cold", "symptom": "skin discoloration"},
+        {"hi": "क्या ठंड महसूस होने के कारण आपकी नींद प्रभावित हो रही है?", "en": "Is feeling cold affecting your sleep?", "category": "sleep_disturbance_with_feeling_cold", "symptom": "insomnia"},
+        {"hi": "क्या ठंड महसूस होने के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with feeling cold?", "category": "other_symptoms_with_feeling_cold", "symptom": None},
+        {"hi": "क्या ठंड महसूस होने के कारण आपके शरीर में कोई कमजोरी आ रही है?", "en": "Is feeling cold causing any weakness in your body?", "category": "weakness_with_feeling_cold", "symptom": "weakness"}
+    ],
+
+    'double vision': [
+        {"hi": "क्या आपकी दृष्टि दोहरी हो रही है लगातार या कभी-कभी?", "en": "Is your vision double continuously or intermittently?", "category": "intermittent_double_vision", "symptom": None},
+        {"hi": "क्या दोहरी दृष्टि के साथ आपको सिरदर्द भी हो रहा है?", "en": "Are you experiencing headaches along with double vision?", "category": "headache_with_double_vision", "symptom": "headache"},
+        {"hi": "क्या दोहरी दृष्टि किसी विशेष समय या गतिविधि के दौरान बढ़ती है?", "en": "Does your double vision increase during any specific time or activity?", "category": "activity_related_double_vision", "symptom": None},
+        {"hi": "क्या आपकी दृष्टि में कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your vision?", "category": "other_vision_changes_with_double_vision", "symptom": None},
+        {"hi": "क्या दोहरी दृष्टि के साथ आपके आँखों में दर्द भी हो रहा है?", "en": "Are you experiencing eye pain along with double vision?", "category": "eye_pain_with_double_vision", "symptom": "eye pain"},
+        {"hi": "क्या दोहरी दृष्टि के कारण आपको चलने-फिरने में कठिनाई हो रही है?", "en": "Are you having difficulty walking due to double vision?", "category": "walking_difficulty_with_double_vision", "symptom": None},
+        {"hi": "क्या दोहरी दृष्टि अचानक शुरू हुई है या धीरे-धीरे?", "en": "Did your double vision start suddenly or gradually?", "category": "sudden_graduate_double_vision", "symptom": None}
+    ],
+
+    'eye redness': [
+        {"hi": "क्या आपकी आँखें लाल हो रही हैं लगातार या कभी-कभी?", "en": "Are your eyes becoming red continuously or intermittently?", "category": "intermittent_eye_redness", "symptom": "eye redness"},
+        {"hi": "क्या आँखों में लालिमा के साथ सूजन भी हो रही है?", "en": "Is there any swelling along with redness in your eyes?", "category": "swelling_with_eye_redness", "symptom": "swelling"},
+        {"hi": "क्या आँखों में लालिमा के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with redness in your eyes?", "category": "pain_with_eye_redness", "symptom": "eye pain"},
+        {"hi": "क्या लालिमा किसी विशेष गतिविधि या समय पर बढ़ती है?", "en": "Does redness in your eyes increase during any specific activity or time?", "category": "activity_time_related_eye_redness", "symptom": None},
+        {"hi": "क्या लालिमा के कारण आपकी दृष्टि प्रभावित हो रही है?", "en": "Is the redness in your eyes affecting your vision?", "category": "vision_impact_with_eye_redness", "symptom": "blurred vision"},
+        {"hi": "क्या आँखों में लालिमा के साथ पानी आना शुरू हो गया है?", "en": "Have you started experiencing watering of the eyes along with redness?", "category": "watering_with_eye_redness", "symptom": "eye tearing"},
+        {"hi": "क्या लालिमा के साथ आपकी आँखों में खुजली या जलन हो रही है?", "en": "Are you experiencing itching or burning sensations in your eyes along with redness?", "category": "itching_burning_with_eye_redness", "symptom": "itching"}
+    ],
+
+    'eye discharge': [
+        {"hi": "क्या आपकी आँखों से अधिक मात्रा में स्राव आ रहा है?", "en": "Are you experiencing excessive discharge from your eyes?", "category": "excessive_eye_discharge", "symptom": "eye discharge"},
+        {"hi": "क्या आँखों में स्राव के साथ सूजन भी है?", "en": "Is there any swelling along with discharge in your eyes?", "category": "swelling_with_eye_discharge", "symptom": "swelling"},
+        {"hi": "क्या आँखों में स्राव के साथ खुजली या जलन हो रही है?", "en": "Are you experiencing itching or burning sensations in your eyes along with discharge?", "category": "itching_burning_with_eye_discharge", "symptom": "itching"},
+        {"hi": "क्या आँखों में स्राव के कारण आपकी दृष्टि प्रभावित हो रही है?", "en": "Is the discharge in your eyes affecting your vision?", "category": "vision_impact_with_eye_discharge", "symptom": "blurred vision"},
+        {"hi": "क्या स्राव में रंग में कोई परिवर्तन आया है?", "en": "Has there been any change in the color of the discharge?", "category": "discharge_color_change", "symptom": None},
+        {"hi": "क्या आँखों में स्राव के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with eye discharge?", "category": "other_symptoms_with_eye_discharge", "symptom": None},
+        {"hi": "क्या स्राव के कारण आपकी आँखों में सूजन हो रही है?", "en": "Is there any swelling in your eyes due to discharge?", "category": "swelling_with_eye_discharge", "symptom": "swelling"}
+    ],
+
+    'ear discharge': [
+        {"hi": "क्या आपके कान से स्राव आ रहा है?", "en": "Are you experiencing discharge from your ears?", "category": "ear_discharge", "symptom": "ear discharge"},
+        {"hi": "क्या स्राव के साथ कान में दर्द भी हो रहा है?", "en": "Are you experiencing pain in your ears along with discharge?", "category": "pain_with_ear_discharge", "symptom": "ear pain"},
+        {"hi": "क्या स्राव का रंग में कोई परिवर्तन आया है?", "en": "Has there been any change in the color of the discharge?", "category": "discharge_color_change_ear", "symptom": None},
+        {"hi": "क्या स्राव के कारण कान में सूजन हो रही है?", "en": "Is there any swelling in your ears due to discharge?", "category": "swelling_with_ear_discharge", "symptom": "swelling"},
+        {"hi": "क्या स्राव के साथ आपको सुनने में कठिनाई हो रही है?", "en": "Are you having difficulty hearing along with ear discharge?", "category": "hearing_difficulty_with_ear_discharge", "symptom": "hearing loss"},
+        {"hi": "क्या स्राव के कारण कान में खुजली हो रही है?", "en": "Are you experiencing itching in your ears due to discharge?", "category": "itching_with_ear_discharge", "symptom": "itching"},
+        {"hi": "क्या स्राव के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with ear discharge?", "category": "other_symptoms_with_ear_discharge", "symptom": None}
+    ],
+
+    'hearing loss': [
+        {"hi": "क्या आपको सुनने में कठिनाई हो रही है लगातार या कभी-कभी?", "en": "Are you experiencing difficulty hearing continuously or intermittently?", "category": "intermittent_hearing_loss", "symptom": None},
+        {"hi": "क्या सुनने में कमी किसी विशेष समय या स्थिति में होती है?", "en": "Does the hearing loss occur more during any specific time or situation?", "category": "time_situation_related_hearing_loss", "symptom": None},
+        {"hi": "क्या सुनने में कमी के साथ आपको कान में दर्द भी हो रहा है?", "en": "Are you experiencing ear pain along with hearing loss?", "category": "ear_pain_with_hearing_loss", "symptom": "ear pain"},
+        {"hi": "क्या सुनने में कमी के कारण आपकी दैनिक गतिविधियाँ प्रभावित हो रही हैं?", "en": "Are your daily activities being affected due to hearing loss?", "category": "daily_activity_impact_with_hearing_loss", "symptom": None},
+        {"hi": "क्या आपको कान में कोई स्राव या जलन महसूस हो रही है?", "en": "Are you feeling any discharge or irritation in your ears?", "category": "discharge_irritation_with_hearing_loss", "symptom": "ear discharge"},
+        {"hi": "क्या सुनने में कमी के साथ आपका संतुलन भी प्रभावित हो रहा है?", "en": "Is your balance being affected along with hearing loss?", "category": "balance_impact_with_hearing_loss", "symptom": "balance problems"},
+        {"hi": "क्या सुनने में कमी के कारण आपको सामाजिक स्थितियों में कठिनाई हो रही है?", "en": "Are you facing difficulties in social situations due to hearing loss?", "category": "social_difficulty_with_hearing_loss", "symptom": None}
+    ],
+
+    'balance problems': [
+        {"hi": "क्या आपको संतुलन बिगड़ने की समस्या हो रही है?", "en": "Are you experiencing balance problems?", "category": "balance_problems", "symptom": "balance problems"},
+        {"hi": "क्या संतुलन बिगड़ने के साथ चक्कर आना भी हो रहा है?", "en": "Are you experiencing dizziness along with balance problems?", "category": "dizziness_with_balance_problems", "symptom": "dizziness"},
+        {"hi": "क्या संतुलन बिगड़ने की समस्या किसी विशेष समय या स्थिति में होती है?", "en": "Do balance problems occur more during any specific time or situation?", "category": "time_situation_related_balance_problems", "symptom": None},
+        {"hi": "क्या संतुलन बिगड़ने के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with balance problems?", "category": "other_symptoms_with_balance_problems", "symptom": None},
+        {"hi": "क्या संतुलन बिगड़ने के कारण आपकी दैनिक गतिविधियाँ प्रभावित हो रही हैं?", "en": "Are your daily activities being affected due to balance problems?", "category": "daily_activity_impact_with_balance_problems", "symptom": None},
+        {"hi": "क्या संतुलन बिगड़ने के साथ कान में कोई समस्या है?", "en": "Do you have any ear problems along with balance issues?", "category": "ear_problems_with_balance_problems", "symptom": "ear discharge"},
+        {"hi": "क्या संतुलन बिगड़ने के कारण आपको चलने-फिरने में कठिनाई हो रही है?", "en": "Are you having difficulty walking due to balance problems?", "category": "walking_difficulty_with_balance_problems", "symptom": None}
+    ],
+
+    'taste changes': [
+        {"hi": "क्या आपके स्वाद में कोई बदलाव आया है?", "en": "Have you noticed any changes in your taste?", "category": "taste_changes", "symptom": "taste changes"},
+        {"hi": "क्या स्वाद में बदलाव के साथ आप कुछ खास चीज़ों का स्वाद नहीं ले पा रहे हैं?", "en": "Are you unable to taste certain specific things along with taste changes?", "category": "specific_taste_changes", "symptom": None},
+        {"hi": "क्या आपको स्वाद में कमी या बढ़ोतरी महसूस हो रही है?", "en": "Are you experiencing a decrease or increase in taste?", "category": "decrease_increase_taste", "symptom": None},
+        {"hi": "क्या स्वाद में बदलाव के साथ आपकी भूख प्रभावित हो रही है?", "en": "Is your appetite being affected due to taste changes?", "category": "appetite_impact_with_taste_changes", "symptom": "decreased appetite"},
+        {"hi": "क्या स्वाद में बदलाव के कारण आपको खाना पसंद नहीं आता?", "en": "Are you not liking food due to taste changes?", "category": "food_dislike_with_taste_changes", "symptom": "decreased appetite"},
+        {"hi": "क्या आपको स्वाद में बदलाव के साथ कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with taste changes?", "category": "other_symptoms_with_taste_changes", "symptom": None},
+        {"hi": "क्या स्वाद में बदलाव अचानक शुरू हुआ है या धीरे-धीरे?", "en": "Did your taste changes start suddenly or gradually?", "category": "sudden_graduate_taste_changes", "symptom": None}
+    ],
+
+    'smell changes': [
+        {"hi": "क्या आपकी गंध में कोई बदलाव आया है?", "en": "Have you noticed any changes in your sense of smell?", "category": "smell_changes", "symptom": "smell changes"},
+        {"hi": "क्या गंध में बदलाव के साथ आपकी भूख प्रभावित हो रही है?", "en": "Is your appetite being affected due to changes in smell?", "category": "appetite_impact_with_smell_changes", "symptom": "decreased appetite"},
+        {"hi": "क्या गंध में बदलाव के कारण आप कुछ खास चीजों की गंध नहीं ले पा रहे हैं?", "en": "Are you unable to detect the smell of certain specific things due to smell changes?", "category": "specific_smell_changes", "symptom": None},
+        {"hi": "क्या आपको गंध में बदलाव के साथ कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with smell changes?", "category": "other_symptoms_with_smell_changes", "symptom": None},
+        {"hi": "क्या गंध में बदलाव अचानक शुरू हुआ है या धीरे-धीरे?", "en": "Did your smell changes start suddenly or gradually?", "category": "sudden_graduate_smell_changes", "symptom": None},
+        {"hi": "क्या गंध में बदलाव के साथ आपके मूड में भी कोई परिवर्तन आया है?", "en": "Has your mood changed along with smell changes?", "category": "mood_changes_with_smell_changes", "symptom": "depression"},
+        {"hi": "क्या गंध में बदलाव के कारण आपको खाने में कोई समस्या हो रही है?", "en": "Are you having any issues with eating due to smell changes?", "category": "eating_issues_with_smell_changes", "symptom": "difficulty swallowing"}
+    ],
+
+    'rapid breathing': [
+        {"hi": "क्या आपकी सांसें तेजी से आ रही हैं?", "en": "Are your breaths coming rapidly?", "category": "rapid_breathing", "symptom": "rapid breathing"},
+        {"hi": "क्या तेजी से सांस लेने के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with rapid breathing?", "category": "other_symptoms_with_rapid_breathing", "symptom": None},
+        {"hi": "क्या तेजी से सांस लेने के कारण आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing due to rapid breathing?", "category": "difficulty_breathing_with_rapid_breathing", "symptom": "shortness of breath"},
+        {"hi": "क्या तेजी से सांस लेने के साथ आपका दिल भी तेज धड़क रहा है?", "en": "Is your heart beating faster along with rapid breathing?", "category": "heart_rate_increase_with_rapid_breathing", "symptom": "irregular heartbeat"},
+        {"hi": "क्या तेजी से सांस लेने के कारण आपको चक्कर आ रहे हैं?", "en": "Are you experiencing dizziness due to rapid breathing?", "category": "dizziness_with_rapid_breathing", "symptom": "dizziness"},
+        {"hi": "क्या तेजी से सांस लेने के साथ आपको पसीना आ रहा है?", "en": "Are you sweating along with rapid breathing?", "category": "sweating_with_rapid_breathing", "symptom": "sweating"},
+        {"hi": "क्या तेजी से सांस लेने का कारण कोई विशेष गतिविधि है?", "en": "Is there any specific activity causing your rapid breathing?", "category": "activity_related_rapid_breathing", "symptom": None}
+    ],
+
+    'irregular heartbeat': [
+        {"hi": "क्या आपके दिल की धड़कन अनियमित हो गई है?", "en": "Has your heartbeat become irregular?", "category": "irregular_heartbeat", "symptom": "irregular heartbeat"},
+        {"hi": "क्या अनियमित धड़कन के साथ आपको चक्कर आ रहे हैं?", "en": "Are you experiencing dizziness along with an irregular heartbeat?", "category": "dizziness_with_irregular_heartbeat", "symptom": "dizziness"},
+        {"hi": "क्या अनियमित धड़कन के साथ आपको थकान भी हो रही है?", "en": "Are you feeling fatigued along with an irregular heartbeat?", "category": "fatigue_with_irregular_heartbeat", "symptom": "fatigue"},
+        {"hi": "क्या आपके दिल की धड़कन तेज हो गई है?", "en": "Has your heartbeat become faster?", "category": "fast_heartbeat_with_irregular_heartbeat", "symptom": "heart palpitations"},
+        {"hi": "क्या अनियमित धड़कन के कारण आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing due to an irregular heartbeat?", "category": "breathing_difficulty_with_irregular_heartbeat", "symptom": "shortness of breath"},
+        {"hi": "क्या अनियमित धड़कन के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with an irregular heartbeat?", "category": "other_symptoms_with_irregular_heartbeat", "symptom": None},
+        {"hi": "क्या अनियमित धड़कन अचानक शुरू हुई है या धीरे-धीरे?", "en": "Did your irregular heartbeat start suddenly or gradually?", "category": "sudden_graduate_irregular_heartbeat", "symptom": None}
+    ],
+
+    'neck pain': [
+        {"hi": "क्या आपकी गर्दन में दर्द लगातार है या आता-जाता है?", "en": "Is your neck pain constant or does it come and go?", "category": "intermittent_neck_pain", "symptom": None},
+        {"hi": "क्या गर्दन का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?", "en": "Does your neck pain increase during any specific activity?", "category": "activity_related_neck_pain", "symptom": None},
+        {"hi": "क्या गर्दन के दर्द के साथ सिरदर्द भी हो रहा है?", "en": "Are you experiencing headaches along with neck pain?", "category": "headache_with_neck_pain", "symptom": "headache"},
+        {"hi": "क्या गर्दन में दर्द के साथ कोई सूजन भी है?", "en": "Is there any swelling along with neck pain?", "category": "swelling_with_neck_pain", "symptom": "swelling"},
+        {"hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?", "en": "Is your mobility being affected due to neck pain?", "category": "mobility_impact_with_neck_pain", "symptom": None},
+        {"hi": "क्या गर्दन में दर्द के साथ किसी विशेष प्रकार का दर्द हो रहा है?", "en": "Are you experiencing any specific type of pain in your neck?", "category": "specific_pain_with_neck_pain", "symptom": "pain"},
+        {"hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?", "en": "Did your neck pain start suddenly or gradually?", "category": "sudden_graduate_neck_pain", "symptom": None}
+    ],
+
+    'sinus pressure': [
+        {"hi": "क्या आपको साइनस में दबाव महसूस हो रहा है?", "en": "Are you feeling pressure in your sinuses?", "category": "sinus_pressure", "symptom": "sinus pressure"},
+        {"hi": "क्या साइनस दबाव के साथ सिरदर्द भी हो रहा है?", "en": "Are you experiencing headaches along with sinus pressure?", "category": "headache_with_sinus_pressure", "symptom": "headache"},
+        {"hi": "क्या साइनस दबाव के साथ आपको नाक बंद होना भी हो रहा है?", "en": "Are you also experiencing a blocked nose along with sinus pressure?", "category": "blocked_nose_with_sinus_pressure", "symptom": "nasal congestion"},
+        {"hi": "क्या साइनस दबाव के कारण आपकी आँखों में सूजन हो रही है?", "en": "Is sinus pressure causing swelling in your eyes?", "category": "eye_swelling_with_sinus_pressure", "symptom": "swelling"},
+        {"hi": "क्या साइनस दबाव के साथ आपकी आवाज़ में परिवर्तन आया है?", "en": "Has your voice changed along with sinus pressure?", "category": "voice_changes_with_sinus_pressure", "symptom": "voice changes"},
+        {"hi": "क्या साइनस दबाव के कारण आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing due to sinus pressure?", "category": "breathing_difficulty_with_sinus_pressure", "symptom": "shortness of breath"},
+        {"hi": "क्या साइनस दबाव के साथ आपको चक्कर आ रहे हैं?", "en": "Are you experiencing dizziness along with sinus pressure?", "category": "dizziness_with_sinus_pressure", "symptom": "dizziness"}
+    ],
+
+    'sinus headache': [
+        {"hi": "क्या आपकी सिरदर्द साइनस से संबंधित है?", "en": "Is your headache related to your sinuses?", "category": "sinus_related_headache", "symptom": "headache"},
+        {"hi": "क्या सिरदर्द के साथ साइनस में दबाव महसूस हो रहा है?", "en": "Are you feeling pressure in your sinuses along with the headache?", "category": "sinus_pressure_with_headache", "symptom": "sinus pressure"},
+        {"hi": "क्या सिरदर्द के साथ नाक बंद होना भी हो रहा है?", "en": "Are you also experiencing a blocked nose along with the headache?", "category": "blocked_nose_with_headache", "symptom": "nasal congestion"},
+        {"hi": "क्या सिरदर्द के साथ आंखों में सूजन हो रही है?", "en": "Is there any swelling in your eyes along with the headache?", "category": "eye_swelling_with_headache", "symptom": "swelling"},
+        {"hi": "क्या सिरदर्द के साथ आपकी आवाज़ में कोई बदलाव आया है?", "en": "Has your voice changed along with the headache?", "category": "voice_changes_with_headache", "symptom": "voice changes"},
+        {"hi": "क्या सिरदर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?", "en": "Is your mobility being affected due to the headache?", "category": "mobility_impact_with_headache", "symptom": None},
+        {"hi": "क्या सिरदर्द अचानक शुरू हुआ है या धीरे-धीरे?", "en": "Did your headache start suddenly or gradually?", "category": "sudden_graduate_headache", "symptom": None}
+    ],
+
+    'muscle spasms': [
+        {"hi": "क्या आपको मांसपेशियों में अचानक स्पैसम्स महसूस हो रहे हैं?", "en": "Are you experiencing sudden muscle spasms?", "category": "sudden_muscle_spasms", "symptom": "muscle spasms"},
+        {"hi": "क्या मांसपेशियों में स्पैसम्स लगातार हो रहे हैं या कभी-कभी?", "en": "Are muscle spasms occurring continuously or intermittently?", "category": "intermittent_muscle_spasms", "symptom": None},
+        {"hi": "क्या स्पैसम्स के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with muscle spasms?", "category": "pain_with_muscle_spasms", "symptom": "pain"},
+        {"hi": "क्या मांसपेशियों में स्पैसम्स किसी विशेष गतिविधि के दौरान बढ़ते हैं?", "en": "Do muscle spasms increase during any specific activity?", "category": "activity_related_muscle_spasms", "symptom": None},
+        {"hi": "क्या स्पैसम्स के कारण आपकी गतिशीलता प्रभावित हो रही है?", "en": "Are your mobility being affected due to muscle spasms?", "category": "mobility_impact_with_muscle_spasms", "symptom": None},
+        {"hi": "क्या मांसपेशियों में स्पैसम्स के साथ सूजन भी हो रही है?", "en": "Is there any swelling along with muscle spasms?", "category": "swelling_with_muscle_spasms", "symptom": "swelling"},
+        {"hi": "क्या स्पैसम्स के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with muscle spasms?", "category": "other_symptoms_with_muscle_spasms", "symptom": None}
+    ],
+
+    'muscle strains': [
+        {"hi": "क्या आपको मांसपेशियों में खिंचाव या तनाव महसूस हो रहा है?", "en": "Are you feeling any muscle strain or tension?", "category": "muscle_strain", "symptom": "muscle strains"},
+        {"hi": "क्या मांसपेशियों में तनाव के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with muscle strain?", "category": "pain_with_muscle_strain", "symptom": "pain"},
+        {"hi": "क्या मांसपेशियों में तनाव किसी विशेष गतिविधि के दौरान बढ़ता है?", "en": "Does muscle strain increase during any specific activity?", "category": "activity_related_muscle_strain", "symptom": None},
+        {"hi": "क्या मांसपेशियों में तनाव के कारण आपकी गतिशीलता प्रभावित हो रही है?", "en": "Is your mobility being affected due to muscle strain?", "category": "mobility_impact_with_muscle_strain", "symptom": None},
+        {"hi": "क्या मांसपेशियों में तनाव के साथ सूजन भी हो रही है?", "en": "Is there any swelling along with muscle strain?", "category": "swelling_with_muscle_strain", "symptom": "swelling"},
+        {"hi": "क्या मांसपेशियों में तनाव के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with muscle strain?", "category": "other_symptoms_with_muscle_strain", "symptom": None},
+        {"hi": "क्या मांसपेशियों में तनाव अचानक शुरू हुआ है या धीरे-धीरे?", "en": "Did your muscle strain start suddenly or gradually?", "category": "sudden_graduate_muscle_strain", "symptom": None}
+    ],
+
+    'muscle injuries': [
+        {"hi": "क्या आपको किसी मांसपेशी में चोट लगी है?", "en": "Have you injured any muscle?", "category": "muscle_injury", "symptom": "muscle injuries"},
+        {"hi": "क्या मांसपेशी में चोट के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with the muscle injury?", "category": "pain_with_muscle_injury", "symptom": "pain"},
+        {"hi": "क्या मांसपेशी में चोट के कारण आपकी गतिशीलता प्रभावित हो रही है?", "en": "Is your mobility being affected due to the muscle injury?", "category": "mobility_impact_with_muscle_injury", "symptom": None},
+        {"hi": "क्या मांसपेशी में चोट के साथ सूजन भी हो रही है?", "en": "Is there any swelling along with the muscle injury?", "category": "swelling_with_muscle_injury", "symptom": "swelling"},
+        {"hi": "क्या मांसपेशी में चोट के कारण आपको कमजोरी महसूस हो रही है?", "en": "Are you feeling weak due to the muscle injury?", "category": "weakness_with_muscle_injury", "symptom": "weakness"},
+        {"hi": "क्या मांसपेशी में चोट के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with the muscle injury?", "category": "other_symptoms_with_muscle_injury", "symptom": None},
+        {"hi": "क्या मांसपेशी में चोट अचानक हुई है या किसी दुर्घटना के बाद?", "en": "Did your muscle injury occur suddenly or after an accident?", "category": "sudden_or_accident_related_muscle_injury", "symptom": None}
+    ],
+
+    'skin rash': [
+        {"hi": "क्या आपके शरीर पर कोई दाने या चकत्ते हैं?", "en": "Do you have any bumps or spots on your skin?", "category": "bumps_spots_with_skin_rash", "symptom": "skin rash"},
+        {"hi": "क्या त्वचा पर लालिमा या सूजन भी है?", "en": "Is there any redness or swelling on your skin along with the rash?", "category": "redness_swelling_with_skin_rash", "symptom": "redness"},
+        {"hi": "क्या रैश किसी विशेष स्थान पर ज्यादा हैं?", "en": "Are the rashes more concentrated in any specific area?", "category": "localized_skin_rash", "symptom": None},
+        {"hi": "क्या रैश के साथ खुजली या जलन भी हो रही है?", "en": "Are you experiencing itching or burning sensations along with the rash?", "category": "itching_burning_with_skin_rash", "symptom": "itching"},
+        {"hi": "क्या रैश समय के साथ फैल रहे हैं या स्थिर हैं?", "en": "Are the rashes spreading over time or are they static?", "category": "spreading_vs_static_skin_rash", "symptom": None},
+        {"hi": "क्या आपके रैश के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to the rash?", "category": "skin_changes_with_skin_rash", "symptom": "skin discoloration"},
+        {"hi": "क्या रैश अचानक शुरू हुए हैं या धीरे-धीरे?", "en": "Did your rashes start suddenly or gradually?", "category": "sudden_graduate_skin_rash", "symptom": None}
+    ],
+
+    'herpes': [
+        {"hi": "क्या आपको मुंह या होंठों पर छाले हैं?", "en": "Do you have sores on your mouth or lips?", "category": "mouth_lips_sores_with_herpes", "symptom": "mouth sores"},
+        {"hi": "क्या हर्पीज़ के साथ आपके होंठों में सूजन भी है?", "en": "Is there any swelling in your lips along with herpes?", "category": "lip_swelling_with_herpes", "symptom": "swelling"},
+        {"hi": "क्या हर्पीज़ के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to herpes?", "category": "skin_changes_with_herpes", "symptom": "skin discoloration"},
+        {"hi": "क्या हर्पीज़ के साथ आपको दर्द भी हो रहा है?", "en": "Are you experiencing pain along with herpes?", "category": "pain_with_herpes", "symptom": "pain"},
+        {"hi": "क्या हर्पीज़ के कारण आपको किसी विशेष गतिविधि में कठिनाई हो रही है?", "en": "Are you having difficulty in any specific activity due to herpes?", "category": "activity_difficulty_with_herpes", "symptom": None},
+        {"hi": "क्या हर्पीज़ के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with herpes?", "category": "other_symptoms_with_herpes", "symptom": None},
+        {"hi": "क्या हर्पीज़ अचानक शुरू हुई है या किसी संक्रमण के बाद?", "en": "Did your herpes start suddenly or after an infection?", "category": "sudden_or_infection_related_herpes", "symptom": None}
+    ],
+
+    'shingles': [
+        {"hi": "क्या आपको त्वचा पर जलन या दर्द महसूस हो रही है?", "en": "Are you feeling burning sensations or pain on your skin?", "category": "burning_pain_with_shingles", "symptom": "burning"},
+        {"hi": "क्या त्वचा पर पट्टियां या फफोले हो रहे हैं?", "en": "Are you developing blisters or patches on your skin?", "category": "blisters_patches_with_shingles", "symptom": "skin lesions"},
+        {"hi": "क्या दर्द किसी विशेष क्षेत्र में केंद्रित है?", "en": "Is the pain concentrated in any specific area?", "category": "localized_pain_with_shingles", "symptom": None},
+        {"hi": "क्या आपको कमजोरी महसूस हो रही है?", "en": "Are you feeling weak?", "category": "weakness_with_shingles", "symptom": "weakness"},
+        {"hi": "क्या दर्द के साथ आपको सूजन भी हो रही है?", "en": "Is there any swelling along with the pain?", "category": "swelling_with_shingles", "symptom": "swelling"},
+        {"hi": "क्या आपको सिरदर्द या बुखार हो रहा है?", "en": "Are you experiencing headaches or fever?", "category": "headache_fever_with_shingles", "symptom": "headache"},
+        {"hi": "क्या दर्द से आपकी नींद प्रभावित हो रही है?", "en": "Is the pain affecting your sleep?", "category": "sleep_disturbance_with_shingles", "symptom": "insomnia"}
+    ],
+
+    'warts': [
+        {"hi": "क्या आपके शरीर पर वर्ट्स हो रहे हैं?", "en": "Are you developing warts on your body?", "category": "warts", "symptom": "warts"},
+        {"hi": "क्या वर्ट्स के साथ कोई दर्द या खुजली हो रही है?", "en": "Are you experiencing any pain or itching along with warts?", "category": "pain_itching_with_warts", "symptom": "itching"},
+        {"hi": "क्या वर्ट्स कहीं फैल रहे हैं या स्थिर हैं?", "en": "Are the warts spreading or remaining static?", "category": "spreading_vs_static_warts", "symptom": None},
+        {"hi": "क्या वर्ट्स किसी विशेष स्थान पर अधिक हो रहे हैं?", "en": "Are the warts more prevalent in any specific area?", "category": "localized_warts", "symptom": None},
+        {"hi": "क्या वर्ट्स के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to warts?", "category": "skin_changes_with_warts", "symptom": "skin discoloration"},
+        {"hi": "क्या वर्ट्स के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with warts?", "category": "other_symptoms_with_warts", "symptom": None},
+        {"hi": "क्या वर्ट्स अचानक शुरू हुए हैं या किसी संक्रमण के बाद?", "en": "Did your warts start suddenly or after an infection?", "category": "sudden_or_infection_related_warts", "symptom": None}
+    ],
+
+    'moles': [
+        {"hi": "क्या आपके शरीर पर मौल्स में कोई बदलाव आया है?", "en": "Have there been any changes in your moles?", "category": "mole_changes", "symptom": "moles"},
+        {"hi": "क्या मौल्स का आकार, रंग या आकृति बदल गई है?", "en": "Has the size, color, or shape of your moles changed?", "category": "size_color_shape_changes_with_moles", "symptom": None},
+        {"hi": "क्या मौल्स से खून आ रहा है या दर्द हो रहा है?", "en": "Are you experiencing bleeding or pain from your moles?", "category": "bleeding_pain_with_moles", "symptom": "bleeding"},
+        {"hi": "क्या मौल्स किसी विशेष समय पर अधिक दिखाई देते हैं?", "en": "Do your moles become more noticeable at any specific time?", "category": "time_related_moles", "symptom": None},
+        {"hi": "क्या मौल्स के कारण आपकी त्वचा में कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your skin due to moles?", "category": "skin_changes_with_moles", "symptom": "skin discoloration"},
+        {"hi": "क्या मौल्स अचानक हो गए हैं या धीरे-धीरे?", "en": "Did your moles appear suddenly or gradually?", "category": "sudden_graduate_moles", "symptom": None},
+        {"hi": "क्या मौल्स के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with moles?", "category": "other_symptoms_with_moles", "symptom": None}
+    ],
+
+    'skin lesions': [
+        {"hi": "क्या आपको त्वचा पर घाव या गांठें महसूस हो रही हैं?", "en": "Are you feeling sores or lumps on your skin?", "category": "sores_lumps_with_skin_lesions", "symptom": "skin lesions"},
+        {"hi": "क्या त्वचा पर घावों के साथ सूजन भी है?", "en": "Is there any swelling along with sores on your skin?", "category": "swelling_with_skin_lesions", "symptom": "swelling"},
+        {"hi": "क्या त्वचा पर घावों के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with sores on your skin?", "category": "pain_with_skin_lesions", "symptom": "pain"},
+        {"hi": "क्या त्वचा पर घाव धीरे-धीरे बढ़ रहे हैं या स्थिर हैं?", "en": "Are the sores on your skin increasing gradually or remaining static?", "category": "increasing_vs_static_skin_lesions", "symptom": None},
+        {"hi": "क्या त्वचा पर घावों का रंग बदल रहा है?", "en": "Are the sores on your skin changing in color?", "category": "color_changes_with_skin_lesions", "symptom": "skin discoloration"},
+        {"hi": "क्या त्वचा पर घावों के साथ खुजली या जलन हो रही है?", "en": "Are you experiencing itching or burning sensations along with sores on your skin?", "category": "itching_burning_with_skin_lesions", "symptom": "itching"},
+        {"hi": "क्या त्वचा पर घावों के कारण आपकी त्वचा में कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your skin due to sores?", "category": "other_skin_changes_with_skin_lesions", "symptom": None}
+    ],
+
+    'skin lumps': [
+        {"hi": "क्या आपको त्वचा पर गांठें या गांठे महसूस हो रही हैं?", "en": "Are you feeling lumps or bumps on your skin?", "category": "skin_lumps", "symptom": "skin lumps"},
+        {"hi": "क्या त्वचा पर गांठों के साथ सूजन भी है?", "en": "Is there any swelling along with lumps on your skin?", "category": "swelling_with_skin_lumps", "symptom": "swelling"},
+        {"hi": "क्या त्वचा पर गांठों के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with lumps on your skin?", "category": "pain_with_skin_lumps", "symptom": "pain"},
+        {"hi": "क्या त्वचा पर गांठें स्थिर हैं या बढ़ रही हैं?", "en": "Are the lumps on your skin static or increasing?", "category": "static_increasing_skin_lumps", "symptom": None},
+        {"hi": "क्या त्वचा पर गांठों का रंग बदल रहा है?", "en": "Are the lumps on your skin changing in color?", "category": "color_changes_with_skin_lumps", "symptom": "skin discoloration"},
+        {"hi": "क्या त्वचा पर गांठों के साथ खुजली या जलन हो रही है?", "en": "Are you experiencing itching or burning sensations along with lumps on your skin?", "category": "itching_burning_with_skin_lumps", "symptom": "itching"},
+        {"hi": "क्या त्वचा पर गांठों के कारण आपकी त्वचा में कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your skin due to lumps?", "category": "other_skin_changes_with_skin_lumps", "symptom": None}
+    ],
+
+    'skin bumps': [
+        {"hi": "क्या आपको त्वचा पर उभार या गांठें महसूस हो रही हैं?", "en": "Are you feeling bumps or lumps on your skin?", "category": "skin_bumps", "symptom": "skin bumps"},
+        {"hi": "क्या त्वचा पर उभार के साथ सूजन भी है?", "en": "Is there any swelling along with bumps on your skin?", "category": "swelling_with_skin_bumps", "symptom": "swelling"},
+        {"hi": "क्या त्वचा पर उभार के साथ दर्द भी हो रहा है?", "en": "Are you experiencing pain along with bumps on your skin?", "category": "pain_with_skin_bumps", "symptom": "pain"},
+        {"hi": "क्या त्वचा पर उभार धीरे-धीरे बढ़ रहे हैं या स्थिर हैं?", "en": "Are the bumps on your skin increasing gradually or remaining static?", "category": "increasing_vs_static_skin_bumps", "symptom": None},
+        {"hi": "क्या त्वचा पर उभार का रंग बदल रहा है?", "en": "Are the bumps on your skin changing in color?", "category": "color_changes_with_skin_bumps", "symptom": "skin discoloration"},
+        {"hi": "क्या त्वचा पर उभार के साथ खुजली या जलन हो रही है?", "en": "Are you experiencing itching or burning sensations along with bumps on your skin?", "category": "itching_burning_with_skin_bumps", "symptom": "itching"},
+        {"hi": "क्या त्वचा पर उभार के कारण आपकी त्वचा में कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your skin due to bumps?", "category": "other_skin_changes_with_skin_bumps", "symptom": None}
+    ],
+
+    'skin cracking': [
+        {"hi": "क्या आपकी त्वचा दरार खा रही है?", "en": "Is your skin cracking?", "category": "skin_cracking", "symptom": "skin cracking"},
+        {"hi": "क्या दरारों के साथ त्वचा में सूजन भी है?", "en": "Is there any swelling along with skin cracking?", "category": "swelling_with_skin_cracking", "symptom": "swelling"},
+        {"hi": "क्या त्वचा की दरारों के साथ खुजली या जलन हो रही है?", "en": "Are you experiencing itching or burning sensations along with skin cracking?", "category": "itching_burning_with_skin_cracking", "symptom": "itching"},
+        {"hi": "क्या त्वचा की दरारें किसी विशेष समय पर अधिक होती हैं?", "en": "Do your skin cracks occur more frequently at any specific time?", "category": "time_related_skin_cracking", "symptom": None},
+        {"hi": "क्या त्वचा की दरारें स्थिर हैं या बढ़ रही हैं?", "en": "Are your skin cracks static or increasing?", "category": "increasing_vs_static_skin_cracking", "symptom": None},
+        {"hi": "क्या त्वचा की दरारों के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with skin cracking?", "category": "other_symptoms_with_skin_cracking", "symptom": None},
+        {"hi": "क्या त्वचा की दरारें अचानक शुरू हुई हैं या धीरे-धीरे?", "en": "Did your skin cracks start suddenly or gradually?", "category": "sudden_graduate_skin_cracking", "symptom": None}
+    ],
+
+    'skin itching': [
+        {"hi": "क्या आपकी त्वचा में खुजली लगातार है या कभी-कभी आती है?", "en": "Is the itching on your skin continuous or intermittent?", "category": "intermittent_skin_itching", "symptom": "skin itching"},
+        {"hi": "क्या खुजली के साथ त्वचा में लालिमा भी है?", "en": "Is there any redness on your skin along with itching?", "category": "redness_with_skin_itching", "symptom": "redness"},
+        {"hi": "क्या खुजली के कारण आपको त्वचा में सूजन हो रही है?", "en": "Is itching causing any swelling on your skin?", "category": "swelling_with_skin_itching", "symptom": "swelling"},
+        {"hi": "क्या खुजली आपको सोने में परेशान कर रही है?", "en": "Is itching disturbing your sleep?", "category": "sleep_disturbance_with_skin_itching", "symptom": "insomnia"},
+        {"hi": "क्या खुजली के साथ त्वचा में कोई दरार या फफोले हो रहे हैं?", "en": "Are there any cracks or blisters on your skin along with itching?", "category": "cracks_blisters_with_skin_itching", "symptom": "skin lesions"},
+        {"hi": "क्या आपकी त्वचा में खुजली के कारण कोई अन्य परिवर्तन हो रहा है?", "en": "Are there any other changes in your skin due to itching?", "category": "skin_changes_with_skin_itching", "symptom": "skin discoloration"},
+        {"hi": "क्या खुजली किसी विशेष समय या वातावरण में बढ़ती है?", "en": "Does itching increase during any specific time or environment?", "category": "environment_related_skin_itching", "symptom": None}
+    ],
+
+    'skin burning': [
+        {"hi": "क्या आपकी त्वचा में जलन महसूस हो रही है?", "en": "Are you feeling burning sensations on your skin?", "category": "skin_burning", "symptom": "skin burning"},
+        {"hi": "क्या जलन के साथ त्वचा में सूजन भी है?", "en": "Is there any swelling along with burning sensations on your skin?", "category": "swelling_with_skin_burning", "symptom": "swelling"},
+        {"hi": "क्या जलन के कारण आपकी त्वचा लाल हो गई है?", "en": "Has your skin turned red due to burning sensations?", "category": "redness_with_skin_burning", "symptom": "redness"},
+        {"hi": "क्या त्वचा की जलन किसी विशेष समय पर अधिक होती है?", "en": "Do the burning sensations on your skin occur more frequently at any specific time?", "category": "time_related_skin_burning", "symptom": None},
+        {"hi": "क्या जलन के साथ आपको त्वचा में कोई दरार या फफोले हो रहे हैं?", "en": "Are there any cracks or blisters on your skin along with burning sensations?", "category": "cracks_blisters_with_skin_burning", "symptom": "skin lesions"},
+        {"hi": "क्या जलन के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with burning sensations on your skin?", "category": "other_symptoms_with_skin_burning", "symptom": None},
+        {"hi": "क्या जलन अचानक शुरू हुई है या धीरे-धीरे?", "en": "Did the burning sensations on your skin start suddenly or gradually?", "category": "sudden_graduate_skin_burning", "symptom": None}
+    ],
+
+    'skin pain': [
+        {"hi": "क्या आपको त्वचा पर दर्द महसूस हो रहा है?", "en": "Are you feeling pain on your skin?", "category": "skin_pain", "symptom": "skin pain"},
+        {"hi": "क्या त्वचा के दर्द के साथ कोई सूजन भी है?", "en": "Is there any swelling along with skin pain?", "category": "swelling_with_skin_pain", "symptom": "swelling"},
+        {"hi": "क्या त्वचा के दर्द के कारण आपको चलने-फिरने में कठिनाई हो रही है?", "en": "Are you having difficulty walking due to skin pain?", "category": "walking_difficulty_with_skin_pain", "symptom": None},
+        {"hi": "क्या त्वचा के दर्द के साथ कोई दरार या फफोले हो रहे हैं?", "en": "Are there any cracks or blisters on your skin along with pain?", "category": "cracks_blisters_with_skin_pain", "symptom": "skin lesions"},
+        {"hi": "क्या दर्द के साथ आपकी त्वचा में लालिमा हो गई है?", "en": "Has your skin turned red along with the pain?", "category": "redness_with_skin_pain", "symptom": "redness"},
+        {"hi": "क्या त्वचा के दर्द के साथ आपको खुजली या जलन भी हो रही है?", "en": "Are you experiencing itching or burning sensations along with skin pain?", "category": "itching_burning_with_skin_pain", "symptom": "itching"},
+        {"hi": "क्या त्वचा का दर्द अचानक शुरू हुआ है या धीरे-धीरे?", "en": "Did the skin pain start suddenly or gradually?", "category": "sudden_graduate_skin_pain", "symptom": None}
+    ],
+
+    'skin swelling': [
+        {"hi": "क्या आपकी त्वचा में सूजन हो रही है?", "en": "Are you experiencing swelling in your skin?", "category": "skin_swelling", "symptom": "swelling"},
+        {"hi": "क्या सूजन के साथ त्वचा में लालिमा भी है?", "en": "Is there any redness in your skin along with swelling?", "category": "redness_with_skin_swelling", "symptom": "redness"},
+        {"hi": "क्या सूजन के कारण आपको किसी विशेष हिस्से में दर्द हो रहा है?", "en": "Is the swelling causing any pain in a specific area?", "category": "localized_pain_with_skin_swelling", "symptom": "pain"},
+        {"hi": "क्या सूजन लगातार है या आता-जाता है?", "en": "Is the swelling constant or does it come and go?", "category": "intermittent_skin_swelling", "symptom": None},
+        {"hi": "क्या सूजन के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with swelling?", "category": "other_symptoms_with_skin_swelling", "symptom": None},
+        {"hi": "क्या सूजन किसी विशेष समय पर अधिक होती है?", "en": "Does the swelling occur more frequently at any specific time?", "category": "time_related_skin_swelling", "symptom": None},
+        {"hi": "क्या सूजन के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to swelling?", "category": "skin_changes_with_skin_swelling", "symptom": "skin discoloration"}
+    ],
     # Add more canonical symptoms and their follow-up questions as needed
 }
 
