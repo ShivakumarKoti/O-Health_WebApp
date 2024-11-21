@@ -277,19 +277,19 @@ def correct_spelling(text):
 # -------------------- Symptom Follow-Up Questions -------------------- #
 
 # Define a mapping from canonical symptoms to their variants
-canonical_symptom_mapping = {
-    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain','stomach pain','stomach ache','stomach pain', 'stomachache', 'abdominal discomfort','stomachache','stomachpain','knee pain'],
+#canonical_symptom_mapping = {
+#    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain','stomach pain','stomach ache','stomach pain', 'stomachache', 'abdominal discomfort','stomachache','stomachpain','knee pain'],
     #'stomach pain': ['stomach ache', 'stomach pain', 'stomachache', 'abdominal discomfort'],
-    'headache': ['headache', 'migraine', 'cephalalgia'],
-    'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
-    'fever': ['fever', 'pyrexia','high temperature'],
-    'cough' : ['cough'],
-    'dizziness': ['dizziness', 'dizzy', 'lightheadedness', 'vertigo'],
-    'yellow eyes': ['yellow eyes', 'jaundice', 'scleral icterus'],
-    'acidity' : ['acidity','gastritis'],
-    'weakness' : ['weakness','dehydration','dehydrated'],
+#    'headache': ['headache', 'migraine', 'cephalalgia'],
+#    'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
+#    'fever': ['fever', 'pyrexia','high temperature'],
+#    'cough' : ['cough'],
+#    'dizziness': ['dizziness', 'dizzy', 'lightheadedness', 'vertigo'],
+#    'yellow eyes': ['yellow eyes', 'jaundice', 'scleral icterus'],
+#    'acidity' : ['acidity','gastritis'],
+#    'weakness' : ['weakness','dehydration','dehydrated'],
     # Add more canonical symptoms and their variants as needed
-}
+#}
 
 # Generate a reverse mapping: any variant symptom maps to its canonical term
 symptom_to_canonical = {}
