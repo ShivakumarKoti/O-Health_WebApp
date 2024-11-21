@@ -1214,7 +1214,7 @@ def main():
     """)
 
     # Load symptoms from CSV
-    symptom_list, symptom_to_canonical = load_symptom_list('symptom_list_2.csv')
+    symptom_list, symptom_to_canonical = load_symptom_list('Extract_Causes/symptom_list_2.csv')
 
     if not symptom_list:
         st.error("Symptom list is empty or failed to load. Please check the CSV file.")
