@@ -157,7 +157,7 @@ known_symptoms = df_disease_symptom['SymptomName'].unique()
 
 
 # Load the expanded symptom list from a CSV file
-def load_symptom_list(csv_file_path='symptom_list.csv'):
+def load_symptom_list(csv_file_path='symptom_list_2.csv'):
     """
     Load symptoms from a CSV file into a Python list and mapping.
 
@@ -1214,7 +1214,7 @@ def main():
     """)
 
     # Load symptoms from CSV
-    symptom_list, symptom_to_canonical = load_symptom_list('symptom_list.csv')
+    symptom_list, symptom_to_canonical = load_symptom_list('symptom_list_2.csv')
 
     if not symptom_list:
         st.error("Symptom list is empty or failed to load. Please check the CSV file.")
