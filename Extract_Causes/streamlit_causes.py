@@ -288,6 +288,7 @@ canonical_symptom_mapping = {
     'yellow eyes': ['yellow eyes', 'jaundice', 'scleral icterus'],
     'acidity' : ['acidity','gastritis'],
     'weakness' : ['weakness','dehydration','dehydrated'],
+    'skin rash' : ['skin rash', 'skin rashes'],
     # Add more canonical symptoms and their variants as needed
 }
 
@@ -558,6 +559,75 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या आपको थकान हो रही है?", "en": "Are you feeling fatigued?", "category": "fatigue", "symptom": "fatigue"},
         {"hi": "क्या आपको पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain?", "category": "abdominal_pain", "symptom": "abdominal pain"},
         {"hi": "क्या आपकी त्वचा ठंडी और पसीनी है?", "en": "Is your skin cold and clammy?", "category": "skin_cold_clammy", "symptom": "sweating"}
+    ],
+    'cramps': [
+        {"hi": "क्या आपको क्रैम्प्स लगातार हो रहे हैं या कभी-कभी?", "en": "Are you experiencing cramps continuously or intermittently?", "category": "intermittent_cramps", "symptom": None},
+        {"hi": "क्या क्रैम्प्स किसी विशेष समय पर अधिक होते हैं?", "en": "Do your cramps occur more frequently at any specific time?", "category": "time_related_cramps", "symptom": None},
+        {"hi": "क्या क्रैम्प्स के साथ दर्द की तीव्रता बढ़ रही है?", "en": "Is the intensity of your cramps increasing?", "category": "intensity_increase", "symptom": None},
+        {"hi": "क्या क्रैम्प्स के साथ सूजन भी है?", "en": "Is there any swelling along with your cramps?", "category": "swelling_with_cramps", "symptom": "swelling"},
+        {"hi": "क्या क्रैम्प्स के कारण आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued due to cramps?", "category": "fatigue_with_cramps", "symptom": "fatigue"},
+        {"hi": "क्या क्रैम्प्स किसी विशेष गतिविधि के दौरान बढ़ते हैं?", "en": "Do your cramps increase during any specific activity?", "category": "activity_related_cramps", "symptom": None},
+        {"hi": "क्या आपको क्रैम्प्स के साथ दर्द में कोई बदलाव महसूस हो रहा है?", "en": "Are you noticing any changes in the pain associated with your cramps?", "category": "pain_changes", "symptom": None}
+    ],
+
+    'irritation': [
+        {"hi": "क्या आपको त्वचा पर खुजली या जलन महसूस हो रही है?", "en": "Are you experiencing itching or burning sensations on your skin?", "category": "skin_itching_burning", "symptom": "itching"},
+        {"hi": "क्या आपको आंखों, नाक या गले में जलन हो रही है?", "en": "Are you feeling irritation in your eyes, nose, or throat?", "category": "localized_irritation", "symptom": None},
+        {"hi": "क्या आपके शरीर के किसी विशेष हिस्से में जलन महसूस हो रही है?", "en": "Are you feeling burning sensations in any specific part of your body?", "category": "specific_irritation", "symptom": None},
+        {"hi": "क्या जलन के साथ सूजन भी है?", "en": "Is there any swelling along with the irritation?", "category": "swelling_with_irritation", "symptom": "swelling"},
+        {"hi": "क्या आपको किसी विशेष पदार्थ से जलन हो रही है?", "en": "Are you experiencing irritation due to any specific substance?", "category": "triggered_irritation", "symptom": None},
+        {"hi": "क्या जलन के कारण आपकी त्वचा लाल हो गई है?", "en": "Has the irritation caused any redness on your skin?", "category": "redness_with_irritation", "symptom": "redness"},
+        {"hi": "क्या जलन के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with the irritation?", "category": "other_symptoms", "symptom": None}
+    ],
+
+    'inflammation': [
+        {"hi": "क्या सूजन किसी विशेष हिस्से में है?", "en": "Is the inflammation localized to any specific area?", "category": "localized_inflammation", "symptom": None},
+        {"hi": "क्या सूजन के साथ दर्द भी है?", "en": "Is there any pain along with the inflammation?", "category": "pain_with_inflammation", "symptom": None},
+        {"hi": "क्या सूजन लगातार है या आता-जाता है?", "en": "Is the inflammation constant or does it come and go?", "category": "intermittent_inflammation", "symptom": None},
+        {"hi": "क्या सूजन के कारण त्वचा में लालिमा या गर्मी महसूस हो रही है?", "en": "Is there any redness or warmth in the skin due to inflammation?", "category": "skin_changes_with_inflammation", "symptom": "redness"},
+        {"hi": "क्या सूजन के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with the inflammation?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या सूजन किसी विशेष समय पर अधिक होती है?", "en": "Does the inflammation occur more frequently at any specific time?", "category": "time_related_inflammation", "symptom": None},
+        {"hi": "क्या सूजन के कारण आपको चलने-फिरने में कठिनाई हो रही है?", "en": "Are you having difficulty moving due to the inflammation?", "category": "movement_difficulty_with_inflammation", "symptom": None}
+    ],
+
+    'weight gain': [
+        {"hi": "क्या आपको वजन तेजी से बढ़ रहा है?", "en": "Are you gaining weight rapidly?", "category": "rapid_weight_gain", "symptom": "weight gain"},
+        {"hi": "क्या वजन बढ़ने के साथ आपके कपड़ों में कसाव आ रहा है?", "en": "Is your clothing feeling tighter due to weight gain?", "category": "clothing_tightness", "symptom": None},
+        {"hi": "क्या वजन बढ़ने के कारण आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued due to weight gain?", "category": "fatigue_with_weight_gain", "symptom": "fatigue"},
+        {"hi": "क्या वजन बढ़ने के साथ आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you experiencing difficulty breathing due to weight gain?", "category": "breathing_difficulty_with_weight_gain", "symptom": "shortness of breath"},
+        {"hi": "क्या वजन बढ़ने के साथ आपकी त्वचा पर कोई परिवर्तन आ रहा है?", "en": "Are there any changes in your skin due to weight gain?", "category": "skin_changes_with_weight_gain", "symptom": "skin changes"},
+        {"hi": "क्या वजन बढ़ने के साथ आपको किसी विशेष हिस्से में दर्द हो रहा है?", "en": "Are you experiencing pain in any specific area due to weight gain?", "category": "localized_pain_with_weight_gain", "symptom": None},
+        {"hi": "क्या वजन बढ़ने के साथ आपका मूड भी प्रभावित हो रहा है?", "en": "Is your mood being affected along with weight gain?", "category": "mood_changes_with_weight_gain", "symptom": "depression"}
+    ],
+
+    'hair loss': [
+        {"hi": "क्या आपको बालों का झड़ना तेजी से हो रहा है?", "en": "Are you experiencing rapid hair loss?", "category": "rapid_hair_loss", "symptom": "hair loss"},
+        {"hi": "क्या बालों का झड़ना किसी विशेष समय पर अधिक होता है?", "en": "Does hair loss occur more frequently at any specific time?", "category": "time_related_hair_loss", "symptom": None},
+        {"hi": "क्या बालों का झड़ना किसी विशेष हिस्से में ज्यादा हो रहा है?", "en": "Is hair loss more prominent in any specific area?", "category": "localized_hair_loss", "symptom": None},
+        {"hi": "क्या बालों का झड़ना के साथ स्कैल्प में खुजली या जलन है?", "en": "Is there itching or burning in the scalp along with hair loss?", "category": "scalp_itching_burning", "symptom": "itching"},
+        {"hi": "क्या आपके बालों की ग्रोथ धीमी हो गई है?", "en": "Has your hair growth slowed down?", "category": "slowed_hair_growth", "symptom": None},
+        {"hi": "क्या बालों का झड़ना के कारण आपकी आत्म-सम्मान प्रभावित हो रहा है?", "en": "Is your self-esteem being affected due to hair loss?", "category": "self_esteem_impact", "symptom": None},
+        {"hi": "क्या आपके बालों का रंग बदल रहा है?", "en": "Are you noticing any changes in your hair color?", "category": "hair_color_changes", "symptom": "hair color changes"}
+    ],
+
+    'numbness': [
+        {"hi": "क्या आपको किसी विशेष हिस्से में सुन्नता महसूस हो रही है?", "en": "Are you feeling numbness in any specific area?", "category": "localized_numbness", "symptom": None},
+        {"hi": "क्या सुन्नता लगातार है या आती-जाती है?", "en": "Is the numbness constant or does it come and go?", "category": "intermittent_numbness", "symptom": None},
+        {"hi": "क्या सुन्नता किसी विशेष गतिविधि के दौरान बढ़ती है?", "en": "Does your numbness increase during any specific activity?", "category": "activity_related_numbness", "symptom": None},
+        {"hi": "क्या सुन्नता के साथ झुनझुनी भी हो रही है?", "en": "Are you experiencing tingling sensations along with numbness?", "category": "tingling_with_numbness", "symptom": "tingling"},
+        {"hi": "क्या सुन्नता किसी विशेष समय पर अधिक होती है?", "en": "Does the numbness occur more frequently at any specific time?", "category": "time_related_numbness", "symptom": None},
+        {"hi": "क्या आपको सुन्नता के साथ कमजोरी भी महसूस हो रही है?", "en": "Are you feeling any weakness along with numbness?", "category": "weakness_with_numbness", "symptom": "weakness"},
+        {"hi": "क्या सुन्नता के साथ त्वचा में कोई परिवर्तन आ रहा है?", "en": "Are there any changes in your skin due to numbness?", "category": "skin_changes_with_numbness", "symptom": "skin changes"}
+    ],
+
+    'itchy eyes': [
+        {"hi": "क्या आपकी आँखों में खुजली लगातार है या आती-जाती है?", "en": "Is the itchiness in your eyes constant or does it come and go?", "category": "intermittent_itchiness", "symptom": None},
+        {"hi": "क्या आपकी आँखों में लालिमा भी है?", "en": "Is there any redness in your eyes along with itchiness?", "category": "redness_with_itchy_eyes", "symptom": "redness"},
+        {"hi": "क्या आपकी आँखों में जलन या दर्द है?", "en": "Are you experiencing any burning or pain in your eyes?", "category": "burning_pain_with_itchy_eyes", "symptom": "burning"},
+        {"hi": "क्या आपकी आँखों से पानी आ रहा है?", "en": "Are your eyes watering?", "category": "watery_eyes", "symptom": "watery eyes"},
+        {"hi": "क्या आपकी आँखों की खुजली किसी विशेष पदार्थ से संबंधित है?", "en": "Is the itchiness in your eyes related to any specific substance?", "category": "triggered_itchy_eyes", "symptom": None},
+        {"hi": "क्या आपकी आँखों में सूजन है?", "en": "Is there any swelling in your eyes?", "category": "swelling_with_itchy_eyes", "symptom": "swelling"},
+        {"hi": "क्या आपकी आँखों में कोई धुंधलापन है?", "en": "Are you experiencing any blurriness in your vision along with itchy eyes?", "category": "blurred_vision_with_itchy_eyes", "symptom": "blurred vision"}
     ]
     # Add more canonical symptoms and their follow-up questions as needed
 }
