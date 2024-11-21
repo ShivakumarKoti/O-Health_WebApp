@@ -404,6 +404,161 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या आपके खांसी के साथ बलगम में खून है?", "en": "Is there blood in your phlegm with your cough?", "category": "hemoptysis", "symptom": "Hemoptysis"},
         {"hi": "क्या आपकी खांसी के साथ तेज सांस लेना शामिल है?", "en": "Does your cough include rapid breathing?", "category": "rapid_breathing", "symptom": "Rapid breathing"},
         ],
+
+'muscle pain': [
+        {"hi": "क्या आपके मांसपेशियों में दर्द लगातार है या आता-जाता है?", "en": "Is your muscle pain constant or does it come and go?", "category": "intermittent_pain", "symptom": None},
+        {"hi": "क्या मांसपेशियों में दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?", "en": "Does your muscle pain increase during any specific activity?", "category": "activity_related_pain", "symptom": None},
+        {"hi": "क्या आपके मांसपेशियों में दर्द के साथ सूजन भी है?", "en": "Is there any swelling along with your muscle pain?", "category": "swelling", "symptom": "swelling"},
+        {"hi": "क्या आपको मांसपेशियों में खिंचाव महसूस हो रहा है?", "en": "Are you feeling any muscle cramps?", "category": "cramps", "symptom": "cramps"},
+        {"hi": "क्या मांसपेशियों में दर्द के साथ कमजोरी भी महसूस हो रही है?", "en": "Are you experiencing any weakness along with muscle pain?", "category": "weakness", "symptom": "weakness"}
+    ],
+
+    'joint pain': [
+        {"hi": "क्या आपके जोड़ों में दर्द लगातार है या आता-जाता है?", "en": "Is your joint pain constant or does it come and go?", "category": "intermittent_pain", "symptom": None},
+        {"hi": "क्या किसी विशेष गतिविधि के दौरान जोड़ों में दर्द बढ़ता है?", "en": "Does your joint pain increase during any specific activity?", "category": "activity_related_pain", "symptom": None},
+        {"hi": "क्या आपके जोड़ों में सूजन भी है?", "en": "Is there any swelling in your joints?", "category": "swelling", "symptom": "swelling"},
+        {"hi": "क्या आपको जोड़ों में कठोरता महसूस हो रही है?", "en": "Are you experiencing stiffness in your joints?", "category": "stiffness", "symptom": "stiffness"},
+        {"hi": "क्या जोड़ों में दर्द के साथ कोई आवाज़ भी सुनाई देती है?", "en": "Do you hear any clicking or popping sounds in your joints along with pain?", "category": "sounds_with_pain", "symptom": None}
+    ],
+
+    'chest pain': [
+        {"hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?", "en": "Is your chest pain sharp or dull?", "category": "pain_intensity", "symptom": None},
+        {"hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?", "en": "Did the chest pain start suddenly or gradually?", "category": "onset", "symptom": None},
+        {"hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?", "en": "Are you experiencing difficulty breathing along with chest pain?", "category": "breathing_difficulty", "symptom": "shortness of breath"},
+        {"hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?", "en": "Does your chest pain increase during any specific activity?", "category": "activity_related_pain", "symptom": None},
+        {"hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?", "en": "Is your chest pain radiating to your arms, neck, or back?", "category": "radiating_pain", "symptom": None},
+        {"hi": "क्या छाती में दर्द के साथ पसीना आना शुरू हुआ है?", "en": "Have you started sweating along with chest pain?", "category": "sweating_with_pain", "symptom": "sweating"}
+    ],
+
+    'back pain': [
+        {"hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?", "en": "Is your back pain in the lower or upper back?", "category": "pain_location", "symptom": None},
+        {"hi": "क्या पीठ दर्द लगातार है या आता-जाता है?", "en": "Is your back pain constant or does it come and go?", "category": "intermittent_pain", "symptom": None},
+        {"hi": "क्या किसी विशेष गतिविधि के दौरान पीठ दर्द बढ़ता है?", "en": "Does your back pain increase during any specific activity?", "category": "activity_related_pain", "symptom": None},
+        {"hi": "क्या पीठ दर्द के साथ सूजन है?", "en": "Is there any swelling along with your back pain?", "category": "swelling", "symptom": "swelling"},
+        {"hi": "क्या आपको पीठ दर्द के साथ किसी अन्य प्रकार का दर्द भी महसूस हो रहा है?", "en": "Are you experiencing any other type of pain along with your back pain?", "category": "other_pain", "symptom": "Other pain"},
+        {"hi": "क्या पीठ दर्द के साथ कमजोरी महसूस हो रही है?", "en": "Are you experiencing any weakness along with back pain?", "category": "weakness", "symptom": "weakness"}
+    ],
+
+    'constipation': [
+        {"hi": "क्या आपको कब्ज की समस्या कितने दिनों से है?", "en": "How many days have you been experiencing constipation?", "category": "duration", "symptom": None},
+        {"hi": "क्या कब्ज के साथ पेट में दर्द है?", "en": "Are you experiencing abdominal pain along with constipation?", "category": "abdominal_pain", "symptom": "abdominal pain"},
+        {"hi": "क्या आप नियमित रूप से पानी पीते हैं?", "en": "Are you drinking enough water regularly?", "category": "hydration", "symptom": None},
+        {"hi": "क्या आपकी डाइट में पर्याप्त फाइबर है?", "en": "Does your diet include sufficient fiber?", "category": "diet_fiber", "symptom": None},
+        {"hi": "क्या कब्ज की समस्या के साथ कोई अन्य लक्षण हैं?", "en": "Are there any other symptoms associated with your constipation?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या आप नियमित रूप से व्यायाम करते हैं?", "en": "Do you exercise regularly?", "category": "exercise", "symptom": None}
+    ],
+
+    'sore throat': [
+        {"hi": "क्या आपकी गले में दर्द लगातार है या आता-जाता है?", "en": "Is your sore throat constant or does it come and go?", "category": "intermittent_pain", "symptom": None},
+        {"hi": "क्या आपको निगलने में कठिनाई हो रही है?", "en": "Are you having difficulty swallowing?", "category": "difficulty_swallowing", "symptom": "difficulty swallowing"},
+        {"hi": "क्या गले में दर्द के साथ सूजन भी है?", "en": "Is there any swelling along with your sore throat?", "category": "swelling", "symptom": "swelling"},
+        {"hi": "क्या आपकी आवाज़ में परिवर्तन आया है?", "en": "Has there been any change in your voice?", "category": "voice_changes", "symptom": "voice changes"},
+        {"hi": "क्या आपको गले में जलन महसूस हो रही है?", "en": "Are you experiencing any burning sensation in your throat?", "category": "burning_sensation", "symptom": "burning"},
+        {"hi": "क्या आपके गले में कोई गड़गड़ाहट है?", "en": "Do you have any tickling sensation in your throat?", "category": "tickling_sensation", "symptom": None}
+    ],
+
+    'diarrhea': [
+        {"hi": "क्या आपको दस्त लगातार हो रहे हैं या कभी-कभी?", "en": "Are you experiencing diarrhea continuously or intermittently?", "category": "intermittent_diarrea", "symptom": None},
+        {"hi": "क्या दस्त के साथ पेट में दर्द है?", "en": "Do you have abdominal pain along with diarrhea?", "category": "abdominal_pain", "symptom": "abdominal pain"},
+        {"hi": "क्या आपको दस्त के साथ उल्टी भी हो रही है?", "en": "Are you also experiencing vomiting along with diarrhea?", "category": "vomiting", "symptom": "vomiting"},
+        {"hi": "क्या आप अपने शरीर से अधिक पानी खो रहे हैं?", "en": "Are you losing more water from your body?", "category": "dehydration", "symptom": "dehydration"},
+        {"hi": "क्या दस्त के साथ बुखार भी है?", "en": "Is there a fever along with diarrhea?", "category": "fever", "symptom": "fever"},
+        {"hi": "क्या आपको दस्त के साथ कोई अन्य लक्षण महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with diarrhea?", "category": "other_symptoms", "symptom": None}
+    ],
+
+    'vomiting': [
+        {"hi": "क्या उल्टी लगातार हो रही है या कभी-कभी?", "en": "Are you vomiting continuously or intermittently?", "category": "intermittent_vomiting", "symptom": None},
+        {"hi": "क्या उल्टी के साथ पेट में दर्द है?", "en": "Do you have abdominal pain along with vomiting?", "category": "abdominal_pain", "symptom": "abdominal pain"},
+        {"hi": "क्या आपको उल्टी के साथ दस्त भी हो रहे हैं?", "en": "Are you also experiencing diarrhea along with vomiting?", "category": "diarrhea", "symptom": "diarrhea"},
+        {"hi": "क्या उल्टी के कारण आपको शरीर से पानी की कमी हो रही है?", "en": "Are you losing water from your body due to vomiting?", "category": "dehydration", "symptom": "dehydration"},
+        {"hi": "क्या उल्टी के साथ बुखार भी है?", "en": "Is there a fever along with vomiting?", "category": "fever", "symptom": "fever"},
+        {"hi": "क्या आपको उल्टी के साथ कोई अन्य लक्षण महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with vomiting?", "category": "other_symptoms", "symptom": None}
+    ],
+
+    'chills': [
+        {"hi": "क्या आपके ठंडक के साथ बुखार भी है?", "en": "Do you have a fever along with chills?", "category": "fever", "symptom": "fever"},
+        {"hi": "क्या ठंडक की अनुभूति लगातार है या आता-जाता है?", "en": "Is your feeling of chills constant or intermittent?", "category": "intermittent_chills", "symptom": None},
+        {"hi": "क्या ठंडक के साथ पसीना आना भी शुरू हो गया है?", "en": "Have you started sweating along with chills?", "category": "sweating_with_chills", "symptom": "sweating"},
+        {"hi": "क्या ठंडक के साथ कमजोरी महसूस हो रही है?", "en": "Are you experiencing any weakness along with chills?", "category": "weakness", "symptom": "weakness"},
+        {"hi": "क्या आपको ठंडक के साथ कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with chills?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या ठंडक की अनुभूति किसी विशेष समय पर अधिक होती है?", "en": "Do you feel chills more at any specific time?", "category": "time_related_chills", "symptom": None}
+    ],
+
+    'shortness of breath': [
+        {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing?", "category": "breathing_difficulty", "symptom": None},
+        {"hi": "क्या सांस लेने में कठिनाई स्थिर है या बढ़ती जा रही है?", "en": "Is your difficulty in breathing constant or worsening?", "category": "intermittent_difficulty", "symptom": None},
+        {"hi": "क्या सांस लेने में कठिनाई के साथ दिल की धड़कन तेज हो रही है?", "en": "Is your heart rate increasing along with difficulty breathing?", "category": "heart_rate_increase", "symptom": None},
+        {"hi": "क्या सांस लेने में कठिनाई किसी विशेष गतिविधि के दौरान बढ़ती है?", "en": "Does your difficulty in breathing increase during any specific activity?", "category": "activity_related_difficulty", "symptom": None},
+        {"hi": "क्या आपको सांस लेने में दर्द भी हो रहा है?", "en": "Are you experiencing pain while breathing?", "category": "breathing_pain", "symptom": None},
+        {"hi": "क्या सांस लेने में कठिनाई के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with difficulty breathing?", "category": "other_symptoms", "symptom": None}
+    ],
+
+    'swelling': [
+        {"hi": "क्या सूजन किसी विशेष हिस्से में है?", "en": "Is the swelling in any specific area?", "category": "swelling_location", "symptom": None},
+        {"hi": "क्या सूजन के साथ दर्द भी है?", "en": "Is there any pain along with swelling?", "category": "pain_with_swelling", "symptom": None},
+        {"hi": "क्या सूजन लगातार है या आता-जाता है?", "en": "Is the swelling constant or does it come and go?", "category": "intermittent_swelling", "symptom": None},
+        {"hi": "क्या सूजन के कारण त्वचा में कोई परिवर्तन हो रहा है?", "en": "Is there any change in the skin due to swelling?", "category": "skin_changes_with_swelling", "symptom": None},
+        {"hi": "क्या सूजन के साथ त्वचा की लालिमा भी है?", "en": "Is there redness of the skin along with swelling?", "category": "redness_with_swelling", "symptom": "redness"},
+        {"hi": "क्या सूजन के कारण आपको बेचैनी हो रही है?", "en": "Are you feeling restless due to swelling?", "category": "restlessness_with_swelling", "symptom": None}
+    ],
+
+    'infection': [
+        {"hi": "क्या आपको बुखार है?", "en": "Do you have a fever?", "category": "fever", "symptom": "fever"},
+        {"hi": "क्या संक्रमण के कारण आपको किसी विशेष हिस्से में दर्द हो रहा है?", "en": "Are you experiencing pain in any specific area due to the infection?", "category": "localized_pain", "symptom": None},
+        {"hi": "क्या संक्रमण के साथ सूजन भी है?", "en": "Is there any swelling along with the infection?", "category": "swelling", "symptom": "swelling"},
+        {"hi": "क्या संक्रमण के कारण आपको कमजोरी महसूस हो रही है?", "en": "Are you feeling weak due to the infection?", "category": "weakness", "symptom": "weakness"},
+        {"hi": "क्या संक्रमण के साथ कोई अन्य लक्षण भी हैं?", "en": "Are there any other symptoms along with the infection?", "category": "other_symptoms", "symptom": None},
+        {"hi": "क्या संक्रमण के कारण आपको त्वचा में लालिमा आ रही है?", "en": "Is there any redness in your skin due to the infection?", "category": "skin_redness", "symptom": "redness"}
+    ],
+
+    'depression': [
+        {"hi": "क्या आपको उदासी या निराशा महसूस हो रही है?", "en": "Are you feeling sad or hopeless?", "category": "sadness", "symptom": None},
+        {"hi": "क्या आपकी रुचियों में कमी आई है?", "en": "Have you lost interest in your usual activities?", "category": "loss_of_interest", "symptom": None},
+        {"hi": "क्या आपको खुद को नीचा महसूस होता है?", "en": "Do you feel worthless?", "category": "worthlessness", "symptom": None},
+        {"hi": "क्या आपको निर्णय लेने में कठिनाई हो रही है?", "en": "Are you having difficulty making decisions?", "category": "decision_difficulty", "symptom": None},
+        {"hi": "क्या आपकी नींद में कोई समस्या है?", "en": "Are you having any problems with your sleep?", "category": "sleep_problems", "symptom": "insomnia"},
+        {"hi": "क्या आपको खुद को चोट पहुँचाने का विचार आता है?", "en": "Are you having thoughts of harming yourself?", "category": "self_harm_thoughts", "symptom": None},
+        {"hi": "क्या आपको ऊर्जा की कमी महसूस हो रही है?", "en": "Are you feeling a lack of energy?", "category": "energy_deficit", "symptom": "fatigue"}
+    ],
+
+    'diabetes': [
+        {"hi": "क्या आपको बार-बार पेशाब आ रहा है?", "en": "Are you urinating frequently?", "category": "frequent_urination", "symptom": "urinary frequency"},
+        {"hi": "क्या आपको अत्यधिक प्यास लग रही है?", "en": "Are you feeling excessively thirsty?", "category": "excessive_thirst", "symptom": "excessive thirst"},
+        {"hi": "क्या आपको बहुत भूख लग रही है?", "en": "Are you feeling very hungry?", "category": "increased_appetite", "symptom": "increased appetite"},
+        {"hi": "क्या आपके वजन में अचानक कमी आई है?", "en": "Have you experienced sudden weight loss?", "category": "sudden_weight_loss", "symptom": "weight loss"},
+        {"hi": "क्या आपको धुंधली दृष्टि हो रही है?", "en": "Are you experiencing blurred vision?", "category": "blurred_vision", "symptom": "blurred vision"},
+        {"hi": "क्या आपको ऊँची या नीची रक्तचाप की समस्या है?", "en": "Do you have high or low blood pressure?", "category": "blood_pressure", "symptom": None},
+        {"hi": "क्या आपके घुटनों या पैरों में सुन्नता है?", "en": "Are you experiencing numbness in your knees or feet?", "category": "numbness", "symptom": "numbness"}
+    ],
+
+    'allergies': [
+        {"hi": "क्या आपको किसी विशेष चीज़ से एलर्जी है?", "en": "Do you have allergies to any specific substance?", "category": "specific_allergy", "symptom": None},
+        {"hi": "क्या आपकी त्वचा में खुजली या लालिमा है?", "en": "Do you have itching or redness on your skin?", "category": "skin_allergy_symptoms", "symptom": "itching"},
+        {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you experiencing difficulty breathing?", "category": "breathing_difficulty", "symptom": "shortness of breath"},
+        {"hi": "क्या आपके आंखों में सूजन या जलन है?", "en": "Do you have swelling or irritation in your eyes?", "category": "eye_allergy_symptoms", "symptom": "itchy eyes"},
+        {"hi": "क्या आपको गले में खुजली या सूजन महसूस हो रही है?", "en": "Are you feeling itchiness or swelling in your throat?", "category": "throat_allergy_symptoms", "symptom": "swelling"},
+        {"hi": "क्या आपके लक्षण किसी खास मौसम या वातावरण में अधिक होते हैं?", "en": "Do your symptoms worsen in certain seasons or environments?", "category": "environmental_allergy_triggers", "symptom": None}
+    ],
+
+    'high blood pressure': [
+        {"hi": "क्या आपको सिरदर्द होता है खासकर सुबह में?", "en": "Do you experience headaches, especially in the morning?", "category": "morning_headaches", "symptom": "headache"},
+        {"hi": "क्या आपको धड़कन तेज या अनियमित महसूस होती है?", "en": "Do you feel your heartbeat is fast or irregular?", "category": "irregular_heartbeat", "symptom": "irregular heartbeat"},
+        {"hi": "क्या आपको चक्कर आना या चक्कर आना महसूस होता है?", "en": "Do you feel dizzy or lightheaded?", "category": "dizziness", "symptom": "dizziness"},
+        {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing?", "category": "breathing_difficulty", "symptom": "shortness of breath"},
+        {"hi": "क्या आपकी आँखों में धुंधलापन है?", "en": "Do you experience blurred vision?", "category": "blurred_vision", "symptom": "blurred vision"},
+        {"hi": "क्या आपको थकान महसूस हो रही है?", "en": "Are you feeling fatigued?", "category": "fatigue", "symptom": "fatigue"},
+        {"hi": "क्या आपको छाती में दर्द महसूस हो रहा है?", "en": "Are you feeling chest pain?", "category": "chest_pain", "symptom": "chest pain"}
+    ],
+
+    'low blood pressure': [
+        {"hi": "क्या आपको चक्कर आ रहे हैं या आप चकरा रहे हैं?", "en": "Are you feeling dizzy or faint?", "category": "dizziness_fainting", "symptom": "dizziness"},
+        {"hi": "क्या आपको कमजोरी महसूस हो रही है?", "en": "Are you feeling weak?", "category": "weakness", "symptom": "weakness"},
+        {"hi": "क्या आपको धुंधली दृष्टि हो रही है?", "en": "Are you experiencing blurred vision?", "category": "blurred_vision", "symptom": "blurred vision"},
+        {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you having difficulty breathing?", "category": "breathing_difficulty", "symptom": "shortness of breath"},
+        {"hi": "क्या आपको थकान हो रही है?", "en": "Are you feeling fatigued?", "category": "fatigue", "symptom": "fatigue"},
+        {"hi": "क्या आपको पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain?", "category": "abdominal_pain", "symptom": "abdominal pain"},
+        {"hi": "क्या आपकी त्वचा ठंडी और पसीनी है?", "en": "Is your skin cold and clammy?", "category": "skin_cold_clammy", "symptom": "sweating"}
+    ]
     # Add more canonical symptoms and their follow-up questions as needed
 }
 
