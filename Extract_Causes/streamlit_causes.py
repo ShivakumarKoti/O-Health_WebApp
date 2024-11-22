@@ -1144,7 +1144,7 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या सूजन के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to swelling?", "category": "skin_changes_with_skin_swelling", "symptom": "skin discoloration"}
     ],
 
-    'acne' = [
+    'acne' : [
     {"hi": "आपको कितने समय से एक्ने है?", "en": "How long have you had acne?", "category": "acne", "symptom": "acne duration"},
     {"hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?", "en": "Where do you typically get acne?", "category": "acne", "symptom": "acne location"},
     {"hi": "आपके पास किस प्रकार का एक्ने है?", "en": "What type of acne do you have?", "category": "acne", "symptom": "acne type"},
@@ -1157,7 +1157,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप अत्यधिक तनाव में हैं?", "en": "Are you under a lot of stress?", "category": "stress", "symptom": "stress"}
 ],
 
-'insomnia' = [
+'insomnia' : [
     {"hi": "आपको कितने समय से अनिद्रा हो रही है?", "en": "How long have you been experiencing insomnia?", "category": "insomnia", "symptom": "insomnia duration"},
     {"hi": "आप आमतौर पर किस समय सोने जाते हैं और किस समय उठते हैं?", "en": "What time do you usually go to bed and wake up?", "category": "insomnia", "symptom": "sleep schedule"},
     {"hi": "आपको सोने में सामान्यतः कितना समय लगता है?", "en": "How long does it typically take you to fall asleep?", "category": "insomnia", "symptom": "time to fall asleep"},
