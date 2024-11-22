@@ -1178,7 +1178,7 @@ canonical_symptom_followup_questions = {
      "category": "bedtime routines", "symptom": "bedtime routine"}
 ],
 
-'memory loss' = [
+'memory loss' : [
     {"hi": "आपको कितने समय से याददाश्त की कमी हो रही है?", "en": "How long have you been experiencing memory loss?", "category": "memory loss", "symptom": "memory loss duration"},
     {"hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं?", "en": "What type of memory problems are you experiencing?", "category": "memory loss", "symptom": "memory problem type"},
     {"hi": "क्या याददाश्त की कमी समय के साथ बढ़ रही है?", "en": "Is the memory loss getting worse over time?", "category": "memory loss", "symptom": "memory loss progression"},
@@ -1201,7 +1201,7 @@ canonical_symptom_followup_questions = {
      "category": "medical conditions", "symptom": "medical conditions"}
 ],
 
-'urinary frequency' = [
+'urinary frequency' : [
     {"hi": "आपको कितनी बार पेशाब करने की आवश्यकता महसूस होती है?", "en": "How often do you feel the need to urinate?", "category": "urinary frequency", "symptom": "urination frequency"},
     {"hi": "क्या आप रात में पेशाब करने के लिए उठते हैं (नोक्टुरिया)?", "en": "Do you wake up during the night to urinate (nocturia)?", "category": "urinary frequency", "symptom": "nocturia"},
     {"hi": "क्या आप हर बार कितनी मात्रा में पेशाब करते हैं?", "en": "How much urine do you pass each time?", "category": "urinary frequency", "symptom": "urine amount"},
@@ -1224,7 +1224,7 @@ canonical_symptom_followup_questions = {
      "category": "urinary frequency", "symptom": "health changes"}
 ],
 
-'ear pain' = [
+'ear pain' : [
     {"hi": "आपको कितने समय से कान में दर्द हो रहा है?", "en": "How long have you been experiencing ear pain?", "category": "ear pain", "symptom": "ear pain duration"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता है?", "en": "Is the pain constant, or does it come and go?", "category": "ear pain", "symptom": "pain pattern"},
     {"hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?", "en": "Do you have pain in one ear or both ears?", "category": "ear pain", "symptom": "ear affected"},
@@ -1251,7 +1251,7 @@ canonical_symptom_followup_questions = {
      "category": "ear pain", "symptom": "ear infection history"}
 ],
 
-'hypertension' = [
+'hypertension' : [
     {"hi": "आपको उच्च रक्तचाप के बारे में कितने समय से पता है?", "en": "How long have you been aware of your high blood pressure?", "category": "hypertension", "symptom": "awareness of hypertension"},
     {"hi": "क्या आपके परिवार में उच्च रक्तचाप या हृदय रोग का इतिहास है?", "en": "Do you have a family history of high blood pressure or heart disease?", "category": "hypertension", "symptom": "family history"},
     {"hi": "क्या आपको किसी अन्य चिकित्सा समस्याओं का निदान हुआ है (जैसे, मधुमेह, गुर्दे की बीमारी)?", 
@@ -1280,7 +1280,7 @@ canonical_symptom_followup_questions = {
      "category": "hypertension", "symptom": "blood pressure monitoring"}
 ],
 
-'tremors' = [
+'tremors' : [
     {"hi": "आपको कितने समय से कंपन महसूस हो रहे हैं?", "en": "How long have you been experiencing tremors?", "category": "tremors", "symptom": "duration of tremors"},
     {"hi": "क्या कंपन हमेशा होते हैं या यह आते-जाते हैं?", "en": "Are the tremors present all the time or do they come and go?", "category": "tremors", "symptom": "tremor frequency"},
     {"hi": "क्या कंपन आपके शरीर के किसी विशेष हिस्से में होते हैं (जैसे, हाथ, सिर, आवाज)?", 
@@ -1309,7 +1309,7 @@ canonical_symptom_followup_questions = {
      "category": "tremors", "symptom": "alcohol or caffeine consumption"}
 ],
 
-'panic attack' = [
+'panic attack' : [
     {"hi": "आपको कितने समय से पैनिक अटैक का अनुभव हो रहा है?", "en": "How long have you been experiencing panic attacks?", "category": "panic_attack", "symptom": "duration of panic attacks"},
     {"hi": "आपको कितनी बार पैनिक अटैक होते हैं?", "en": "How often do you have panic attacks?", "category": "panic_attack", "symptom": "frequency of panic attacks"},
     {"hi": "आप पैनिक अटैक के दौरान कौन-कौन से लक्षण अनुभव करते हैं (जैसे, तेज़ दिल की धड़कन, पसीना, छाती में दर्द, सांस लेने में कठिनाई)?", 
@@ -1338,7 +1338,7 @@ canonical_symptom_followup_questions = {
      "category": "panic_attack", "symptom": "physical changes outside of panic attacks"}
 ],
 
-'mood swings' = [
+'mood swings' : [
     {"hi": "आपको कितने समय से मूड स्विंग्स का अनुभव हो रहा है?", "en": "How long have you been experiencing mood swings?", "category": "mood_swings", "symptom": "duration of mood swings"},
     {"hi": "आपके मूड स्विंग्स कितनी बार होते हैं?", "en": "How often do your mood swings occur?", "category": "mood_swings", "symptom": "frequency of mood swings"},
     {"hi": "आप किस प्रकार के मूड परिवर्तनों का अनुभव करते हैं (जैसे, बहुत खुश या बहुत उदास महसूस करना)?", 
@@ -1367,7 +1367,7 @@ canonical_symptom_followup_questions = {
      "category": "mood_swings", "symptom": "medication use affecting mood"}
 ],
 
-'memory loss' = [
+'memory loss' : [
     {"hi": "आपको कितने समय से याददाश्त की समस्या हो रही है?", "en": "How long have you been experiencing memory loss?", "category": "memory_loss", "symptom": "duration of memory loss"},
     {"hi": "क्या याददाश्त की समस्या धीरे-धीरे बढ़ी है या अचानक हुई है?", "en": "Is the memory loss gradual or sudden?", "category": "memory_loss", "symptom": "gradual or sudden memory loss"},
     {"hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं (जैसे नाम, नियुक्तियां, या हाल की घटनाओं को भूलना)?", 
@@ -1396,7 +1396,7 @@ canonical_symptom_followup_questions = {
      "category": "memory_loss", "symptom": "medication affecting memory"}
 ],
 
-'difficulty concentrating' = [
+'difficulty concentrating' : [
     {"hi": "आपको कितने समय से एकाग्रता में कठिनाई हो रही है?", "en": "How long have you been experiencing difficulty concentrating?", "category": "difficulty_concentrating", "symptom": "duration of concentration difficulty"},
     {"hi": "क्या एकाग्रता में कठिनाई स्थायी है या कभी-कभी होती है?", "en": "Is the difficulty with concentration constant or does it come and go?", "category": "difficulty_concentrating", "symptom": "constant vs intermittent concentration difficulty"},
     {"hi": "क्या आपको विशिष्ट कार्यों पर ध्यान केंद्रित करने में कठिनाई हो रही है, या यह अधिक सामान्य है?", 
@@ -1425,7 +1425,7 @@ canonical_symptom_followup_questions = {
      "category": "difficulty_concentrating", "symptom": "lifestyle changes affecting concentration"}
 ],
 
-'hallucinations' = [
+'hallucinations' : [
     {"hi": "आपको कितने समय से भ्रांतियाँ हो रही हैं?", "en": "How long have you been experiencing hallucinations?", "category": "hallucinations", "symptom": "duration of hallucinations"},
     {"hi": "आप किस प्रकार की भ्रांतियाँ अनुभव कर रहे हैं (जैसे, आवाजें सुनना, चीज़ें देखना, गंध महसूस करना)?", 
      "en": "What type of hallucinations are you experiencing (e.g., hearing voices, seeing things, smelling odors)?", 
@@ -1456,7 +1456,7 @@ canonical_symptom_followup_questions = {
      "category": "hallucinations", "symptom": "family history of mental health disorders"}
 ],
 
-'delusions' = [
+'delusions' : [
     {"hi": "आपको कितने समय से भ्रांतियाँ हो रही हैं?", "en": "How long have you been experiencing delusions?", "category": "delusions", "symptom": "duration of delusions"},
     {"hi": "आप किस प्रकार की भ्रांतियाँ अनुभव कर रहे हैं (जैसे, संदेहवादी, महानता, विचित्र)?", 
      "en": "What kind of delusions are you experiencing (e.g., paranoid, grandiose, bizarre)?", 
@@ -1487,7 +1487,7 @@ canonical_symptom_followup_questions = {
      "category": "delusions", "symptom": "family history of mental health disorders"}
 ],
 
-'paranoia' = [
+'paranoia' : [
     {"hi": "आपको कितने समय से दूसरों के प्रति संदेह या भय महसूस हो रहा है?", 
      "en": "How long have you been feeling paranoid or suspicious of others?", 
      "category": "paranoia", 
@@ -1530,7 +1530,7 @@ canonical_symptom_followup_questions = {
      "symptom": "family history of mental health conditions"}
 ],
 
-'euphoria' = [
+'euphoria' : [
     {"hi": "आपको कितने समय से उत्साह (अत्यधिक खुशी या खुशी का अनुभव) हो रहा है?", 
      "en": "How long have you been experiencing euphoria (feeling unusually happy or elated)?", 
      "category": "euphoria", 
@@ -1573,7 +1573,7 @@ canonical_symptom_followup_questions = {
      "symptom": "family history of mood disorders"}
 ],
 
-'lack of motivation' = [
+'lack of motivation' : [
     {"hi": "आपको कितने समय से प्रेरणा की कमी महसूस हो रही है?", "en": "How long have you been feeling a lack of motivation?", "category": "lack_of_motivation", "symptom": "duration of lack of motivation"},
     {"hi": "क्या प्रेरणा की कमी लगातार है, या यह आती-जाती रहती है?", "en": "Is the lack of motivation constant, or does it come and go?", "category": "lack_of_motivation", "symptom": "consistency of lack of motivation"},
     {"hi": "क्या कुछ विशेष गतिविधियाँ या कार्य हैं जिन्हें करने के लिए आपको प्रेरणा की कमी महसूस होती है (जैसे काम, शौक, सामाजिक गतिविधियाँ)?", "en": "Are there specific activities or tasks you feel unmotivated to do (e.g., work, hobbies, socializing)?", "category": "lack_of_motivation", "symptom": "specific activities affected by lack of motivation"},
@@ -1586,7 +1586,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें प्रेसक्रिप्शन, ओवर-द-काउंटर, या अवैध नशीली दवाएँ शामिल हैं?", "en": "Are you currently taking any medications, including prescription, over-the-counter, or recreational drugs?", "category": "lack_of_motivation", "symptom": "medications or drugs"}
 ],
 
-'bone fracture' = [
+'bone fracture' : [
     {"hi": "फ्रैक्चर कैसे हुआ (जैसे गिरना, दुर्घटना, खेलों की चोट)?", "en": "How did the fracture occur (e.g., fall, accident, sports injury)?", "category": "bone_fracture", "symptom": "cause of fracture"},
     {"hi": "कौन सा हड्डी फ्रैक्चर हुई है, और दर्द कहाँ है?", "en": "Which bone is fractured, and where is the pain located?", "category": "bone_fracture", "symptom": "location and type of fracture"},
     {"hi": "चोट कब लगी थी?", "en": "When did the injury happen?", "category": "bone_fracture", "symptom": "timing of injury"},
@@ -1599,7 +1599,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपके परिवार में हड्डी संबंधित समस्याएँ या हड्डी की मजबूती को प्रभावित करने वाली स्थितियाँ हैं?", "en": "Do you have a family history of bone problems or conditions that affect bone strength?", "category": "bone_fracture", "symptom": "family history of bone problems"}
 ],
 
-'bone pain' = [
+'bone pain' : [
     {"hi": "हड्डी का दर्द कहाँ स्थित है?", "en": "Where exactly is the bone pain located?", "category": "bone_pain", "symptom": "location of bone pain"},
     {"hi": "आपको यह दर्द कब से हो रहा है?", "en": "How long have you been experiencing the pain?", "category": "bone_pain", "symptom": "duration of bone pain"},
     {"hi": "क्या यह दर्द लगातार है, या यह आता-जाता रहता है?", "en": "Is the pain constant, or does it come and go?", "category": "bone_pain", "symptom": "nature of bone pain"},
@@ -1612,7 +1612,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं, जैसे कि कैल्शियम या विटामिन D?", "en": "Are you taking any medications or supplements, including calcium or vitamin D?", "category": "bone_pain", "symptom": "medications or supplements"}
 ],
 
-'sprain' = [
+'sprain' : [
     {"hi": "स्ट्रेन कैसे हुआ (जैसे, गिरना, खेल की चोट, दुर्घटना)?", "en": "How did the sprain occur (e.g., fall, sports injury, accident)?", "category": "sprain", "symptom": "mechanism of injury"},
     {"hi": "कौन सा जोड़ा या लिगामेंट घायल हुआ है?", "en": "Which joint or ligament is injured?", "category": "sprain", "symptom": "injured joint or ligament"},
     {"hi": "चोट कब लगी थी?", "en": "When did the injury happen?", "category": "sprain", "symptom": "time of injury"},
@@ -1625,7 +1625,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, या आपने चोट पर बर्फ, गर्मी, या अन्य उपचार का उपयोग किया है?", "en": "Are you currently taking any medications, or have you used ice, heat, or other treatments on the injury?", "category": "sprain", "symptom": "treatment used"}
 ],
 
-'ligament injury' = [
+'ligament injury' : [
     {"hi": "लिगामेंट की चोट कैसे हुई (जैसे, खेल, दुर्घटना, गिरना, मुड़ने की गति)?", "en": "How did the ligament injury occur (e.g., sports, accident, fall, twisting movement)?", "category": "ligament injury", "symptom": "mechanism of injury"},
     {"hi": "कौन सा जोड़ा या क्षेत्र घायल हुआ है (जैसे, घुटना, टखना, कोहनी)?", "en": "Which joint or area is injured (e.g., knee, ankle, elbow)?", "category": "ligament injury", "symptom": "injured joint or area"},
     {"hi": "चोट कब लगी थी, और क्या उस समय तुरंत दर्द या सूजन हुई थी?", "en": "When did the injury happen, and was there any immediate pain or swelling?", "category": "ligament injury", "symptom": "pain and swelling onset"},
@@ -1638,7 +1638,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, या आपने बर्फ, संपीड़न, या ऊँचाई जैसे उपचार का उपयोग किया है?", "en": "Are you currently taking any medications, or have you used any treatments like ice, compression, or elevation?", "category": "ligament injury", "symptom": "treatment used"}
 ],
 
-'gout' = [
+'gout' : [
     {"hi": "आपको गाउट के लक्षणों का अनुभव कितने समय से हो रहा है?", "en": "How long have you been experiencing symptoms of gout?", "category": "gout", "symptom": "duration of symptoms"},
     {"hi": "कौन सा जोड़ा प्रभावित है, और क्या वह सूजा हुआ, लाल, या छूने पर गर्म है?", "en": "Which joint is affected, and is it swollen, red, or warm to the touch?", "category": "gout", "symptom": "affected joint and signs"},
     {"hi": "आपने पहले कब दर्द महसूस किया था, और क्या यह अचानक था या धीरे-धीरे बढ़ा?", "en": "When did you first notice the pain, and was it sudden or gradual?", "category": "gout", "symptom": "onset of pain"},
@@ -1651,7 +1651,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपको जोड़ों के दर्द के साथ बुखार या ठंड लगने जैसे लक्षण हो रहे हैं?", "en": "Are you experiencing any symptoms like fever or chills along with the joint pain?", "category": "gout", "symptom": "associated symptoms"}
 ],
 
-'sciatica' = [
+'sciatica' : [
     {"hi": "आपको साइटिका के लक्षणों (जैसे दर्द, सुन्नता, या झुनझुनी) का अनुभव कितने समय से हो रहा है?", "en": "How long have you been experiencing sciatica symptoms (e.g., pain, numbness, or tingling)?", "category": "sciatica", "symptom": "duration of symptoms"},
     {"hi": "दर्द कहाँ स्थित है (जैसे निचला पीठ, कूल्हे, पैर, पैरों के अंगूठे)?", "en": "Where is the pain located (e.g., lower back, buttocks, legs, feet)?", "category": "sciatica", "symptom": "location of pain"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता रहता है?", "en": "Is the pain constant, or does it come and go?", "category": "sciatica", "symptom": "pain pattern"},
@@ -1664,7 +1664,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, और क्या आपने साइटिका के दर्द के लिए किसी उपचार (जैसे फिजिकल थेरेपी, विश्राम, दर्द निवारण) की कोशिश की है?", "en": "Are you currently taking any medications, and have you tried any treatments (e.g., physical therapy, rest, pain relief) for the sciatica pain?", "category": "sciatica", "symptom": "medications and treatments"}
 ],
 
-'herniated disc' = [
+'herniated disc' : [
     {"hi": "आपको अपनी पीठ या गर्दन से संबंधित लक्षणों का अनुभव कितने समय से हो रहा है?", "en": "How long have you been experiencing symptoms related to your back or neck?", "category": "herniated_disc", "symptom": "duration of symptoms"},
     {"hi": "दर्द कहाँ स्थित है (जैसे निचला पीठ, गर्दन, हाथ, पैर)?", "en": "Where is the pain located (e.g., lower back, neck, arms, legs)?", "category": "herniated_disc", "symptom": "location of pain"},
     {"hi": "क्या आपको अपने हाथों या पैरों में दर्द महसूस होता है (जैसे साइटिका प्रकार का दर्द)?", "en": "Do you have pain radiating down your arms or legs (e.g., sciatica-type pain)?", "category": "herniated_disc", "symptom": "radiating pain"},
@@ -1677,7 +1677,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, और क्या आपने फिजिकल थेरेपी, विश्राम, या दर्द निवारण जैसे उपचार किए हैं?", "en": "Are you currently taking any medications, and have you tried treatments like physical therapy, rest, or pain relief?", "category": "herniated_disc", "symptom": "medications and treatments"}
 ],
 
-'back spasms' = [
+'back spasms' : [
     {"hi": "आपको पीठ में ऐंठन का अनुभव कितने समय से हो रहा है?", "en": "How long have you been experiencing back spasms?", "category": "back_spasms", "symptom": "duration of spasms"},
     {"hi": "ऐंठन कहाँ स्थित है (जैसे निचली पीठ, ऊपरी पीठ, या गर्दन)?", "en": "Where is the spasm located (e.g., lower back, upper back, or neck)?", "category": "back_spasms", "symptom": "location of spasm"},
     {"hi": "क्या ऐंठन लगातार है, या यह आता-जाता रहता है?", "en": "Are the spasms constant, or do they come and go?", "category": "back_spasms", "symptom": "spasm pattern"},
@@ -1690,7 +1690,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं या ऐंठन के लिए उपचार (जैसे हीट, बर्फ, फिजिकल थेरेपी) कर रहे हैं?", "en": "Are you currently taking any medications or using treatments (e.g., heat, ice, physical therapy) for the spasms?", "category": "back_spasms", "symptom": "medications and treatments"}
 ],
 
-'whiplash' = [
+'whiplash' : [
     {"hi": "चोट कब हुई थी, और क्या कारण था (जैसे कार दुर्घटना, गिरना, खेल की चोट)?", "en": "How long ago did the injury occur, and what caused the whiplash (e.g., car accident, fall, sports injury)?", "category": "whiplash", "symptom": "cause and timing of injury"},
     {"hi": "आपको कहाँ दर्द महसूस हो रहा है (जैसे गर्दन, कंधे, ऊपरी पीठ)?", "en": "Where exactly do you feel pain (e.g., neck, shoulders, upper back)?", "category": "whiplash", "symptom": "location of pain"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता रहता है?", "en": "Is the pain constant, or does it come and go?", "category": "whiplash", "symptom": "pain pattern"},
@@ -1703,7 +1703,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपको गर्दन या पीठ से संबंधित कोई इतिहास है, जैसे पिछले whiplash, हर्नियेटेड डिस्क, या गठिया?", "en": "Do you have a history of neck or back problems, such as previous whiplash, herniated discs, or arthritis?", "category": "whiplash", "symptom": "history of neck or back issues"}
 ],
 
-'fibromyalgia' = [
+'fibromyalgia' : [
     {"hi": "आपको अपने मांसपेशियों और जोड़ो में व्यापक दर्द या कोमलता का अनुभव कब से हो रहा है?", "en": "How long have you been experiencing widespread pain or tenderness in your muscles and joints?", "category": "fibromyalgia", "symptom": "pain and tenderness"},
     {"hi": "आपको कहाँ दर्द महसूस हो रहा है, और क्या यह शरीर के दोनों तरफ समान रूप से प्रभावित होता है?", "en": "Where do you feel the pain, and does it affect both sides of your body equally?", "category": "fibromyalgia", "symptom": "location and symmetry of pain"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता रहता है?", "en": "Is the pain constant, or does it come and go?", "category": "fibromyalgia", "symptom": "pain pattern"},
@@ -1716,7 +1716,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपने अपने लक्षणों के लिए कोई उपचार (जैसे दवाइयाँ, शारीरिक चिकित्सा, तनाव प्रबंधन) किया है, और यदि किया है, तो क्या वे मददगार रहे हैं?", "en": "Have you tried any treatments (e.g., medications, physical therapy, stress management) for your symptoms, and if so, did they help?", "category": "fibromyalgia", "symptom": "treatment history"}
 ],
 
-'arthritis' = [
+'arthritis' : [
     {"hi": "आपको जोड़ों में दर्द या जकड़न कब से हो रही है?", "en": "How long have you been experiencing joint pain or stiffness?", "category": "arthritis", "symptom": "joint pain and stiffness"},
     {"hi": "कौन से जोड़ों में समस्या है (जैसे घुटने, हाथ, कूल्हे, उंगलियाँ)?", "en": "Which joints are affected (e.g., knees, hands, hips, fingers)?", "category": "arthritis", "symptom": "location of pain"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता रहता है?", "en": "Is the pain constant, or does it come and go?", "category": "arthritis", "symptom": "pain pattern"},
@@ -1729,7 +1729,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, जिसमें दर्द निवारक, या आपने कोई उपचार (जैसे शारीरिक चिकित्सा, जीवनशैली में बदलाव) किया है?", "en": "Are you currently taking any medications, including pain relievers, or have you tried any treatments (e.g., physical therapy, lifestyle changes)?", "category": "arthritis", "symptom": "medication and treatment history"}
 ],
 
-'anhedonia' = [
+'anhedonia' : [
     {"hi": "आपको जो गतिविधियाँ पहले आनंददायक लगती थीं, उन्हें अब रुचि या खुशी क्यों नहीं हो रही है?", "en": "How long have you been experiencing a lack of interest or pleasure in activities you used to enjoy?", "category": "anhedonia", "symptom": "loss of interest in enjoyable activities"},
     {"hi": "कौन सी गतिविधियाँ या शौक अब आपको आनंददायक नहीं लगते (जैसे सामाजिक मेलजोल, शौक, भोजन, या काम)?", "en": "Which activities or hobbies do you no longer find enjoyable (e.g., socializing, hobbies, eating, or work)?", "category": "anhedonia", "symptom": "specific activities no longer enjoyable"},
     {"hi": "क्या आपको उन चीजों के प्रति उदासीनता या भावनात्मक 'न्यूम्नेस' महसूस हो रही है, जो पहले आपको खुशी देती थीं?", "en": "Do you feel indifferent or emotionally 'numb' toward things that once brought you happiness?", "category": "anhedonia", "symptom": "emotional numbness"},
@@ -1742,7 +1742,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, जैसे एंटीडिप्रेसेंट्स या अन्य उपचार, और क्या उन्होंने आपके आनंद लेने की क्षमता को प्रभावित किया है?", "en": "Are you currently taking any medications, including antidepressants or other treatments, and have they affected your ability to enjoy things?", "category": "anhedonia", "symptom": "effect of medications on enjoyment"}
 ],
 
-'agitation' = [
+'agitation' : [
     {"hi": "आप कब से बेचैनी या उत्तेजना महसूस कर रहे हैं?", "en": "How long have you been feeling agitated or restless?", "category": "agitation", "symptom": "feeling restless or agitated"},
     {"hi": "आप किस प्रकार की भावनाओं या व्यवहारों का अनुभव कर रहे हैं (जैसे चिड़चिड़ापन, चहलकदमी, तेज बोलना, या शांत रहने में कठिनाई)?", "en": "What specific feelings or behaviors are you experiencing (e.g., irritability, pacing, rapid speech, difficulty staying still)?", "category": "agitation", "symptom": "specific behaviors or feelings of agitation"},
     {"hi": "क्या आप अत्यधिक चिंतित, घबराए हुए या तनावपूर्ण महसूस कर रहे हैं?", "en": "Do you feel excessively anxious, nervous, or on edge?", "category": "agitation", "symptom": "excessive anxiety or nervousness"},
@@ -1755,7 +1755,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपको हाल ही में नींद में कोई विघटन, थकान, या भूख में बदलाव महसूस हुआ है?", "en": "Have you experienced any recent sleep disturbances, fatigue, or changes in appetite?", "category": "agitation", "symptom": "sleep disturbances, fatigue, or appetite changes"}
 ],
 
-'convulsions' = [
+'convulsions' : [
     {"hi": "आप कब से दौरे (माथे के झटके) का अनुभव कर रहे हैं?", "en": "How long have you been experiencing convulsions or seizures?", "category": "convulsions", "symptom": "duration of seizures"},
     {"hi": "पहला दौरा कब हुआ था, और वे कितनी बार होते हैं?", "en": "When did the first seizure occur, and how often do they happen?", "category": "convulsions", "symptom": "frequency of seizures"},
     {"hi": "दौरे के दौरान क्या दिखाई देता है (जैसे झटका, मरोड़, होश का चले जाना)?", "en": "What does the seizure look like (e.g., shaking, jerking movements, loss of consciousness)?", "category": "convulsions", "symptom": "type of seizure"},
@@ -1768,7 +1768,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपके परिवार में मिर्गी, दौरे, या अन्य तंत्रिका संबंधी विकारों का इतिहास है?", "en": "Is there a family history of epilepsy, seizures, or other neurological disorders?", "category": "convulsions", "symptom": "family history of seizures or neurological disorders"}
 ],
 
-'hives' = [
+'hives' : [
     {"hi": "आप कब से शरीर पर फफोले (उठे हुए, लाल, खुजलीदार धब्बे) का अनुभव कर रहे हैं?", "en": "How long have you been experiencing hives (raised, red, itchy welts on your skin)?", "category": "hives", "symptom": "duration of hives"},
     {"hi": "फफोले पहले कब दिखाई दिए थे, और क्या वे बढ़ते जा रहे हैं?", "en": "When did the hives first appear, and have they been getting worse?", "category": "hives", "symptom": "onset and progression of hives"},
     {"hi": "क्या फफोले किसी विशेष स्थान पर हैं, या वे आपके शरीर के विभिन्न हिस्सों में फैल रहे हैं?", "en": "Are the hives localized to a specific area, or do they spread to different parts of your body?", "category": "hives", "symptom": "location and spread of hives"},
@@ -1781,7 +1781,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपके परिवार में एलर्जी, फफोले, या अन्य एलर्जी संबंधित बीमारियों का इतिहास है?", "en": "Do you have a family history of allergies, hives, or other allergic conditions?", "category": "hives", "symptom": "family history of allergies or hives"}
 ],
 
-'contact dermatitis' = [
+'contact dermatitis' : [
     {"hi": "आप कब से चकत्ते या त्वचा में जलन महसूस कर रहे हैं?", "en": "How long have you been experiencing the rash or skin irritation?", "category": "contact_dermatitis", "symptom": "duration of rash/irritation"},
     {"hi": "चकत्ता पहले आपके शरीर के किस हिस्से पर दिखाई दिया?", "en": "Where on your body did the rash first appear?", "category": "contact_dermatitis", "symptom": "location of rash"},
     {"hi": "क्या आपने किसी नए पदार्थ, जैसे लोशन, साबुन, डिटर्जेंट, या पौधों (जैसे पोइज़न आइवी) के संपर्क में आए हैं?", "en": "Have you been in contact with any new substances, such as lotions, soaps, detergents, or plants (e.g., poison ivy)?", "category": "contact_dermatitis", "symptom": "new substance exposure"},
@@ -1794,7 +1794,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपके परिवार में त्वचा की एलर्जी या समस्याओं, जैसे एक्जिमा, अस्थमा, या हे फीवर, का इतिहास है?", "en": "Is there a family history of skin allergies or conditions like eczema, asthma, or hay fever?", "category": "contact_dermatitis", "symptom": "family history of allergies"}
 ],
 
-'atopic dermatitis' = [
+'atopic dermatitis' : [
     {"hi": "आप कब से एटोपिक डर्मेटाइटिस (जैसे खुजली, सूखी, लाल या सूजन वाली त्वचा) के लक्षण महसूस कर रहे हैं?", "en": "How long have you been experiencing symptoms of atopic dermatitis (e.g., itchy, dry, red, or inflamed skin)?", "category": "atopic_dermatitis", "symptom": "duration of symptoms"},
     {"hi": "आपके शरीर के किस हिस्से में सामान्य रूप से फ्लेयर-अप होते हैं (जैसे कोहनी, घुटने, चेहरा, हाथ)?", "en": "Where on your body do you typically have flare-ups (e.g., elbows, knees, face, hands)?", "category": "atopic_dermatitis", "symptom": "location of flare-ups"},
     {"hi": "क्या खुजली निरंतर रहती है, या यह आनी-जानी होती है?", "en": "Is the itching constant, or does it come and go?", "category": "atopic_dermatitis", "symptom": "itching pattern"},
@@ -1820,7 +1820,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपके परिवार में सेबोरेइक डर्मेटाइटिस या अन्य त्वचा विकारों का इतिहास है?", "en": "Do you have a family history of seborrheic dermatitis or other skin disorders?", "category": "seborrheic_dermatitis", "symptom": "family history of seborrheic dermatitis"}
 ],
 
-'cellulitis' = [
+'cellulitis' : [
     {"hi": "आप कब से सेल्यूलाइटिस के लक्षण महसूस कर रहे हैं (जैसे त्वचा में लालिमा, सूजन, गर्मी, या दर्द)?", "en": "How long have you been experiencing symptoms of cellulitis (e.g., redness, swelling, warmth, or pain in the skin)?", "category": "cellulitis", "symptom": "duration of symptoms"},
     {"hi": "सेल्यूलाइटिस सबसे पहले आपके शरीर के किस हिस्से में दिखा (जैसे पैरों, हाथों, चेहरे)?", "en": "Where on your body did the cellulitis first appear (e.g., legs, arms, face)?", "category": "cellulitis", "symptom": "location of cellulitis"},
     {"hi": "क्या आपको हाल ही में कट, कीड़े के काटने, या त्वचा में कोई अन्य दरारें हुई हैं जहाँ संक्रमण घुस सकता था?", "en": "Have you had any recent cuts, insect bites, or other breaks in the skin where the infection could have entered?", "category": "cellulitis", "symptom": "skin injury or break"},
@@ -1833,7 +1833,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपने किसी ऐसे व्यक्ति से संपर्क किया है जो त्वचा संक्रमण से पीड़ित हो, या क्या आपने किसी ऐसी स्थिति (जैसे असंक्रमित पानी में तैरना) का अनुभव किया है जिससे बैक्टीरिया के संपर्क का जोखिम बढ़ सकता हो?", "en": "Have you been in contact with anyone who has a skin infection, or have you been in situations (e.g., swimming in untreated water) that might increase exposure to bacteria?", "category": "cellulitis", "symptom": "exposure to infection"}
 ],
 
-'impetigo' = [
+'impetigo' : [
     {"hi": "आपको दाने या घाव कब से हैं, और ये पहले कब दिखाई दिए?", "en": "How long have you had the rash or sores, and when did they first appear?", "category": "impetigo", "symptom": "duration of symptoms"},
     {"hi": "घाव आपके शरीर के किस हिस्से पर हैं (जैसे चेहरा, हाथ, पैर, या नाक और मुँह के आस-पास)?", "en": "Where on your body are the sores located (e.g., face, arms, legs, or around the nose and mouth)?", "category": "impetigo", "symptom": "location of sores"},
     {"hi": "क्या घाव फफोले के रूप में शुरू होते हैं, और क्या ये फटते हैं या स्कैब बनते हैं?", "en": "Do the sores start as blisters, and do they rupture or form scabs?", "category": "impetigo", "symptom": "type and progression of sores"},
@@ -1846,7 +1846,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपने किसी ऐसे व्यक्ति से निकट संपर्क किया है जो इम्पेटिगो या किसी अन्य त्वचा संक्रमण से पीड़ित हो?", "en": "Have you been in close contact with someone who has impetigo or another skin infection?", "category": "impetigo", "symptom": "exposure to infection"}
 ],
 
-'eczema' = [
+'eczema' : [
     {"hi": "आपको एक्जिमा (जैसे खुजली, सूखी, या जलन वाली त्वचा) के लक्षण कब से हैं?", "en": "How long have you been experiencing symptoms of eczema (e.g., itchy, dry, or inflamed skin)?", "category": "eczema", "symptom": "duration of symptoms"},
     {"hi": "एक्जिमा आपके शरीर के किस हिस्से पर सबसे ज्यादा दिखाई देता है (जैसे चेहरा, कोहनी, घुटने, हाथ, या पैर)?", "en": "Where on your body is the eczema most noticeable (e.g., face, elbows, knees, hands, or feet)?", "category": "eczema", "symptom": "location of eczema"},
     {"hi": "क्या आपके एक्जिमा के लक्षण बढ़ते रहते हैं या यह एक स्थायी समस्या है?", "en": "Do you experience flare-ups of your eczema, or is it a chronic issue?", "category": "eczema", "symptom": "flare-ups vs chronic issue"},
@@ -1859,7 +1859,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपके परिवार में एक्जिमा, एलर्जी, अस्थमा, या अन्य त्वचा संबंधी समस्याओं का इतिहास है?", "en": "Is there a family history of eczema, allergies, asthma, or other skin conditions?", "category": "eczema", "symptom": "family history"}
 ],
 
-'ulcer' = [
+'ulcer' : [
     {"hi": "आपके शरीर पर अल्सर कहां स्थित हैं (जैसे पेट, मुँह, पैर, या पैर के तलवे)?", "en": "Where on your body are the ulcers located (e.g., stomach, mouth, legs, or feet)?", "category": "ulcer", "symptom": "location of ulcer"},
     {"hi": "आपको अल्सर कब से हो रहे हैं, और यह कब पहली बार दिखाई दिया?", "en": "How long have you been experiencing the ulcer, and when did it first appear?", "category": "ulcer", "symptom": "duration and onset"},
     {"hi": "क्या अल्सर से आपको दर्द होता है, और यदि हां, तो दर्द की तीव्रता कितनी है?", "en": "Do the ulcers cause you pain, and if so, how severe is the pain?", "category": "ulcer", "symptom": "pain severity"},
@@ -1872,7 +1872,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप वर्तमान में अल्सर, उच्च रक्तचाप, मधुमेह, या ऑटोइम्यून रोगों के लिए कोई दवाइयां ले रहे हैं?", "en": "Are you currently taking any medications for conditions like ulcers, high blood pressure, diabetes, or autoimmune disorders?", "category": "ulcer", "symptom": "medication history"}
 ],
 
-'loss of appetite' = [
+'loss of appetite' : [
     {"hi": "आपको भूख न लगने की समस्या कब से हो रही है?", "en": "How long have you been experiencing a loss of appetite?", "category": "loss_of_appetite", "symptom": "duration"},
     {"hi": "क्या भूख न लगने की समस्या निरंतर है, या यह आती-जाती रहती है?", "en": "Is the loss of appetite constant, or does it come and go?", "category": "loss_of_appetite", "symptom": "pattern"},
     {"hi": "क्या आपने अपनी खाने की आदतों में कोई और बदलाव महसूस किया है, जैसे थोड़ी मात्रा में खाने के बाद भी पेट भर जाना या कुछ खास प्रकार के खाद्य पदार्थों से बचना?", "en": "Have you noticed any other changes in your eating habits, such as feeling full after eating small amounts or avoiding certain types of food?", "category": "loss_of_appetite", "symptom": "eating habits"},
@@ -1885,7 +1885,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आपको खाने से संबंधित कोई एलर्जी, पाचन समस्याएं, या पुरानी बीमारियां हैं जो भूख को प्रभावित कर सकती हैं?", "en": "Do you have a history of food allergies, digestive issues, or chronic conditions that might affect your appetite?", "category": "loss_of_appetite", "symptom": "history of digestive or food-related issues"}
 ],
 
-'tinnitus' = [
+'tinnitus' : [
     {"hi": "आपको टिनिटस (कान में घंटी बजने, बजने, या अन्य ध्वनियां) कब से हो रही हैं?", "en": "How long have you been experiencing tinnitus (ringing, buzzing, or other sounds in your ears)?", "category": "tinnitus", "symptom": "duration"},
     {"hi": "क्या टिनिटस लगातार है, या यह आती-जाती रहती है?", "en": "Is the tinnitus constant, or does it come and go?", "category": "tinnitus", "symptom": "pattern"},
     {"hi": "कान में सुनाई देने वाली ध्वनि कैसी है (जैसे घंटी बजने, बजने, सीटी बजने या झींकने)?", "en": "What does the sound in your ears sound like (e.g., ringing, buzzing, hissing, or whistling)?", "category": "tinnitus", "symptom": "sound description"},
@@ -1898,7 +1898,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप कोई दवाइयां ले रहे हैं, विशेष रूप से उन दवाओं के बारे में जो सुनवाई को प्रभावित कर सकती हैं (जैसे एस्पिरिन, एंटीबायोटिक्स, या मूत्रवर्धक)?", "en": "Are you currently taking any medications, particularly those known to affect hearing (e.g., aspirin, antibiotics, or diuretics)?", "category": "tinnitus", "symptom": "medications"}
 ],
 
-'chest tightness' = [
+'chest tightness' : [
     {"hi": "आपको छाती में संकुचन कब से महसूस हो रहा है?", "en": "How long have you been experiencing chest tightness?", "category": "chest tightness", "symptom": "duration"},
     {"hi": "क्या छाती में संकुचन लगातार है, या यह आती-जाती रहती है?", "en": "Is the chest tightness constant, or does it come and go?", "category": "chest tightness", "symptom": "pattern"},
     {"hi": "क्या आपको संकुचन विश्राम की स्थिति में महसूस होता है, या यह शारीरिक गतिविधि, तनाव, या खाने के बाद होता है?", "en": "Do you experience the tightness at rest, or does it occur during physical activity, stress, or after eating?", "category": "chest tightness", "symptom": "triggers"},
@@ -1928,7 +1928,7 @@ canonical_symptom_followup_questions = {
 }
 
 # Additional general follow-up questions
-additional_followup_questions = [
+additional_followup_questions : [
     {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
     {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
     {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
