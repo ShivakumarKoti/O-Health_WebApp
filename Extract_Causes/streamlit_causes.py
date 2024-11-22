@@ -1807,7 +1807,7 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप इस समय कोई दवाइयाँ ले रहे हैं, और क्या आपको कोई अन्य स्वास्थ्य समस्याएं हैं (जैसे प्रतिरक्षा विकार या संक्रमण)?", "en": "Are you currently using any medications, and do you have any other health conditions (e.g., immune disorders or infections)?", "category": "atopic_dermatitis", "symptom": "current medications and other health conditions"}
 ],
 
-'seborrheic dermatitis' = [
+'seborrheic dermatitis' : [
     {"hi": "आप कब से सेबोरेइक डर्मेटाइटिस (जैसे लाल, सफेद या चिकनी त्वचा) के लक्षण महसूस कर रहे हैं?", "en": "How long have you been experiencing symptoms of seborrheic dermatitis (e.g., red, flaky, or greasy skin)?", "category": "seborrheic_dermatitis", "symptom": "duration of symptoms"},
     {"hi": "आपके शरीर के किस हिस्से में सबसे ज्यादा लक्षण दिखाई दे रहे हैं (जैसे सिर की त्वचा, चेहरा, भौहें, छाती, या पीठ)?", "en": "Where on your body do you have the most noticeable symptoms (e.g., scalp, face, eyebrows, chest, or back)?", "category": "seborrheic_dermatitis", "symptom": "location of symptoms"},
     {"hi": "क्या आपको रूसी या खुजलीदार, उबड़-खाबड़ सिर की त्वचा का अनुभव होता है?", "en": "Do you experience dandruff or an itchy, flaky scalp?", "category": "seborrheic_dermatitis", "symptom": "scalp irritation"},
