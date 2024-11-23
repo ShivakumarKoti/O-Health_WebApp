@@ -2987,19 +2987,19 @@ def main():
             report = generate_report(st.session_state.conversation_history)
 
         # Display the report
-        st.header("📄 Final Report")
-        st.write(f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}")
-        if st.session_state.additional_info.get('age'):
-            st.write(f"**Age:** {st.session_state.additional_info['age']} years old")
-        if st.session_state.additional_info.get('gender'):
-            st.write(f"**Gender:** {st.session_state.additional_info['gender'].title()}")
-        if st.session_state.additional_info.get('location'):
-            st.write(f"**Location:** {st.session_state.additional_info['location']}")
-        if st.session_state.additional_info.get('duration'):
-            st.write(f"**Duration:** {st.session_state.additional_info['duration']}")
-        if st.session_state.additional_info.get('medications'):
-            st.write(f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}")
-        st.write(f"**Possible Cause:** {report}")
+        #st.header("📄 Final Report")
+        #st.write(f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}")
+        #if st.session_state.additional_info.get('age'):
+        #    st.write(f"**Age:** {st.session_state.additional_info['age']} years old")
+        #if st.session_state.additional_info.get('gender'):
+        #    st.write(f"**Gender:** {st.session_state.additional_info['gender'].title()}")
+        #if st.session_state.additional_info.get('location'):
+        #    st.write(f"**Location:** {st.session_state.additional_info['location']}")
+        #if st.session_state.additional_info.get('duration'):
+        #    st.write(f"**Duration:** {st.session_state.additional_info['duration']}")
+        #if st.session_state.additional_info.get('medications'):
+        #    st.write(f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}")
+        #st.write(f"**Possible Cause:** {report}")
 
         # Assemble the transcript
         transcript = "📝 **Transcript of Questions and Answers:**\n\n"
@@ -3023,8 +3023,8 @@ def main():
                 question_number += 1
 
         # Display the transcript
-        st.header("📝 Transcript of Questions and Answers")
-        st.markdown(transcript)
+        #st.header("📝 Transcript of Questions and Answers")
+        #st.markdown(transcript)
 
         # Extracted Information
         extracted_info = "🔍 **Extracted Information:**\n\n"
@@ -3040,8 +3040,8 @@ def main():
         if st.session_state.additional_info.get('medications'):
             extracted_info += f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}\n"
 
-        st.header("🔍 Extracted Information")
-        st.write(extracted_info)
+        #st.header("🔍 Extracted Information")
+        #st.write(extracted_info)
 
         # Combine all content for download
         download_content = f"📄 **Final Report:**\n\n"
@@ -3100,12 +3100,6 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info.get('medications'):
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
-
-# Ensure to define or import the following functions used in the main function:
-# load_symptom_list, generate_audio_with_api_key, embed_audio_autoplay_google,
-# save_audio_file, transcribe_audio, translate_and_correct, extract_all_symptoms,
-# determine_followup_questions, handle_yes_no_response, translate_to_english,
-# generate_report, audio_recorder
 
 if __name__ == "__main__":
     main()
