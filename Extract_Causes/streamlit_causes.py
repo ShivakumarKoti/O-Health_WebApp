@@ -2092,6 +2092,63 @@ def save_audio_file(audio_bytes, file_extension):
         logger.error(f"Failed to save audio file: {e}")
         return None
 
+def determine_best_specialist(symptoms):
+    """
+    Determines the best specialist doctor based on the list of symptoms using ChatGPT.
+
+    Args:
+        symptoms (list): List of extracted symptoms.
+
+    Returns:
+        str: The type of specialist doctor.
+    """
+    try:
+        # Define a list of possible specialists
+        specialist_options = [
+            "Orthopedic Specialist",
+            "Neurologist",
+            "Cardiologist",
+            "Dermatologist",
+            "Gastroenterologist",
+            "Psychiatrist",
+            "General Practitioner",
+            "ENT Specialist",
+            "Pulmonologist",
+            "Rheumatologist",
+            "Endocrinologist",
+            "Urologist",
+            "Oncologist",
+            "Dentist"
+            # Add more as needed
+        ]
+
+        # Prepare the prompt for ChatGPT
+        prompt = (
+            f"Based on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
+            f"Symptoms: {', '.join(symptoms)}\n"
+            f"Choose the specialist from the following list: {', '.join(specialist_options)}.\n"
+            f"Provide only the name of the specialist (e.g., 'Orthopedic Specialist')."
+        )
+
+        # Make the API call to OpenAI's ChatCompletion
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a medical assistant that recommends the most suitable specialist based on symptoms."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=10,  # Short response expected
+            temperature=0  # Deterministic response
+        )
+
+        # Extract the specialist from the response
+        specialist = response['choices'][0]['message']['content'].strip()
+        logging.info(f"Determined Specialist: {specialist}")
+        return specialist
+    except Exception as e:
+        logging.error(f"Failed to determine specialist: {e}")
+        return "General Practitioner"  # Fallback specialist
+
 def transcribe_audio(file_path):
     """
     Transcribe the audio file using OpenAI's Whisper API with translation to English.
@@ -2640,12 +2697,21 @@ def generate_report(conversation_history):
             st.write("---")
             question_count += 1
 
-    # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
+ # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
+
+    # Determine the best specialist based on symptoms
+    if exact_symptoms:
+        specialist = determine_best_specialist(list(exact_symptoms))
+    else:
+        specialist = "General Practitioner"  # Default specialist
+
+    # Translate the specialist to Hindi
+    translated_specialist = specialist
 
     # Check if a possible cause was determined
     if possible_cause and possible_cause != "No suitable cause determined from the transcript.":
         # Translate the cause to Hindi
-        translated_cause = translator.translate(possible_cause, src='en', dest='hi').text
+        translated_cause = translate_to_hindi(possible_cause)
     else:
         translated_cause = "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।"
 
@@ -2659,7 +2725,7 @@ def generate_report(conversation_history):
     # Construct the Hindi message
     if translated_cause != "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।":
         # Specific message including symptoms and possible causes
-        message_hindi = f"आपके लक्षण: {translated_symptoms}. इन लक्षणों के कारण, संभावित कारण यह हैं: {translated_cause}. हम आपको सबसे उपयुक्त डॉक्टर से तुरंत जोड़ रहे हैं।"
+        message_hindi = f"आपके लक्षण: {translated_symptoms}. इन लक्षणों के कारण, संभावित कारण यह हैं: {translated_cause}. हम आपको सबसे उपयुक्त {translated_specialist} डॉक्टर से तुरंत जोड़ रहे हैं।"
     else:
         # If no possible cause, still inform the user about connecting to a doctor
         message_hindi = f"{translated_cause} हम आपकी मदद के लिए एक डॉक्टर से संपर्क कर रहे हैं।"
