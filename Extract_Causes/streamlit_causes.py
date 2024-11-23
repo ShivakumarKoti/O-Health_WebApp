@@ -1143,13 +1143,13 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या सूजन किसी विशेष समय पर अधिक होती है?", "en": "Does the swelling occur more frequently at any specific time?", "category": "time_related_skin_swelling", "symptom": None},
         {"hi": "क्या सूजन के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to swelling?", "category": "skin_changes_with_skin_swelling", "symptom": "skin discoloration"}
     ],
-
+    
     'acne' : [
-    {"hi": "आपको कितने समय से एक्ने है?", "en": "How long have you had acne?", "category": "acne", "symptom": "acne duration"},
+    #{"hi": "आपको कितने समय से एक्ने है?", "en": "How long have you had acne?", "category": "acne", "symptom": "acne duration"},
     {"hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?", "en": "Where do you typically get acne?", "category": "acne", "symptom": "acne location"},
     {"hi": "आपके पास किस प्रकार का एक्ने है?", "en": "What type of acne do you have?", "category": "acne", "symptom": "acne type"},
     {"hi": "आपके एक्ने कितने गंभीर हैं?", "en": "How severe is your acne?", "category": "acne", "symptom": "acne severity"},
-    {"hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?", "en": "Have you tried any treatments for your acne?", "category": "acne treatments", "symptom": "acne treatment"},
+    #{"hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?", "en": "Have you tried any treatments for your acne?", "category": "acne treatments", "symptom": "acne treatment"},
     {"hi": "क्या आप वर्तमान में कोई स्किनकेयर या मेकअप उत्पाद उपयोग कर रहे हैं?", "en": "Are you currently using any skincare or makeup products?", "category": "skincare", "symptom": "skincare use"},
     {"hi": "आप कौन सी दवाइयाँ ले रहे हैं?", "en": "What medications are you currently taking?", "category": "medication", "symptom": "medication"},
     {"hi": "क्या आपके परिवार में किसी को एक्ने है?", "en": "Do you have a family history of acne?", "category": "family history", "symptom": "family history"},
@@ -1158,7 +1158,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'insomnia' : [
-    {"hi": "आपको कितने समय से अनिद्रा हो रही है?", "en": "How long have you been experiencing insomnia?", "category": "insomnia", "symptom": "insomnia duration"},
+    #{"hi": "आपको कितने समय से अनिद्रा हो रही है?", "en": "How long have you been experiencing insomnia?", "category": "insomnia", "symptom": "insomnia duration"},
     {"hi": "आप आमतौर पर किस समय सोने जाते हैं और किस समय उठते हैं?", "en": "What time do you usually go to bed and wake up?", "category": "insomnia", "symptom": "sleep schedule"},
     {"hi": "आपको सोने में सामान्यतः कितना समय लगता है?", "en": "How long does it typically take you to fall asleep?", "category": "insomnia", "symptom": "time to fall asleep"},
     {"hi": "क्या आप रात में उठते हैं? अगर हां, तो कितनी बार?", "en": "Do you wake up during the night? If so, how often?", "category": "insomnia", "symptom": "night waking"},
@@ -1179,7 +1179,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'memory loss' : [
-    {"hi": "आपको कितने समय से याददाश्त की कमी हो रही है?", "en": "How long have you been experiencing memory loss?", "category": "memory loss", "symptom": "memory loss duration"},
+    #{"hi": "आपको कितने समय से याददाश्त की कमी हो रही है?", "en": "How long have you been experiencing memory loss?", "category": "memory loss", "symptom": "memory loss duration"},
     {"hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं?", "en": "What type of memory problems are you experiencing?", "category": "memory loss", "symptom": "memory problem type"},
     {"hi": "क्या याददाश्त की कमी समय के साथ बढ़ रही है?", "en": "Is the memory loss getting worse over time?", "category": "memory loss", "symptom": "memory loss progression"},
     {"hi": "क्या आपको हाल ही में कोई सिर की चोट या आघात हुआ है?", "en": "Have you had any recent head injuries or trauma?", "category": "head injury", "symptom": "head injury"},
@@ -1225,7 +1225,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'ear pain' : [
-    {"hi": "आपको कितने समय से कान में दर्द हो रहा है?", "en": "How long have you been experiencing ear pain?", "category": "ear pain", "symptom": "ear pain duration"},
+    #{"hi": "आपको कितने समय से कान में दर्द हो रहा है?", "en": "How long have you been experiencing ear pain?", "category": "ear pain", "symptom": "ear pain duration"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता है?", "en": "Is the pain constant, or does it come and go?", "category": "ear pain", "symptom": "pain pattern"},
     {"hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?", "en": "Do you have pain in one ear or both ears?", "category": "ear pain", "symptom": "ear affected"},
     {"hi": "क्या आप अन्य लक्षण अनुभव कर रहे हैं, जैसे सुनाई में कमी, कान में घंटी बजने की आवाज (टिनिटस), या चक्कर आना?", 
@@ -1252,7 +1252,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'hypertension' : [
-    {"hi": "आपको उच्च रक्तचाप के बारे में कितने समय से पता है?", "en": "How long have you been aware of your high blood pressure?", "category": "hypertension", "symptom": "awareness of hypertension"},
+    #{"hi": "आपको उच्च रक्तचाप के बारे में कितने समय से पता है?", "en": "How long have you been aware of your high blood pressure?", "category": "hypertension", "symptom": "awareness of hypertension"},
     {"hi": "क्या आपके परिवार में उच्च रक्तचाप या हृदय रोग का इतिहास है?", "en": "Do you have a family history of high blood pressure or heart disease?", "category": "hypertension", "symptom": "family history"},
     {"hi": "क्या आपको किसी अन्य चिकित्सा समस्याओं का निदान हुआ है (जैसे, मधुमेह, गुर्दे की बीमारी)?", 
      "en": "Have you been diagnosed with any other medical conditions (e.g., diabetes, kidney disease)?", 
@@ -1281,7 +1281,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'tremors' : [
-    {"hi": "आपको कितने समय से कंपन महसूस हो रहे हैं?", "en": "How long have you been experiencing tremors?", "category": "tremors", "symptom": "duration of tremors"},
+    #{"hi": "आपको कितने समय से कंपन महसूस हो रहे हैं?", "en": "How long have you been experiencing tremors?", "category": "tremors", "symptom": "duration of tremors"},
     {"hi": "क्या कंपन हमेशा होते हैं या यह आते-जाते हैं?", "en": "Are the tremors present all the time or do they come and go?", "category": "tremors", "symptom": "tremor frequency"},
     {"hi": "क्या कंपन आपके शरीर के किसी विशेष हिस्से में होते हैं (जैसे, हाथ, सिर, आवाज)?", 
      "en": "Do the tremors occur in specific parts of your body (e.g., hands, head, voice)?", 
@@ -1310,7 +1310,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'panic attack' : [
-    {"hi": "आपको कितने समय से पैनिक अटैक का अनुभव हो रहा है?", "en": "How long have you been experiencing panic attacks?", "category": "panic_attack", "symptom": "duration of panic attacks"},
+    #{"hi": "आपको कितने समय से पैनिक अटैक का अनुभव हो रहा है?", "en": "How long have you been experiencing panic attacks?", "category": "panic_attack", "symptom": "duration of panic attacks"},
     {"hi": "आपको कितनी बार पैनिक अटैक होते हैं?", "en": "How often do you have panic attacks?", "category": "panic_attack", "symptom": "frequency of panic attacks"},
     {"hi": "आप पैनिक अटैक के दौरान कौन-कौन से लक्षण अनुभव करते हैं (जैसे, तेज़ दिल की धड़कन, पसीना, छाती में दर्द, सांस लेने में कठिनाई)?", 
      "en": "What symptoms do you experience during a panic attack (e.g., rapid heartbeat, sweating, chest pain, shortness of breath)?", 
@@ -1339,7 +1339,7 @@ canonical_symptom_followup_questions = {
 ],
 
 'mood swings' : [
-    {"hi": "आपको कितने समय से मूड स्विंग्स का अनुभव हो रहा है?", "en": "How long have you been experiencing mood swings?", "category": "mood_swings", "symptom": "duration of mood swings"},
+    #{"hi": "आपको कितने समय से मूड स्विंग्स का अनुभव हो रहा है?", "en": "How long have you been experiencing mood swings?", "category": "mood_swings", "symptom": "duration of mood swings"},
     {"hi": "आपके मूड स्विंग्स कितनी बार होते हैं?", "en": "How often do your mood swings occur?", "category": "mood_swings", "symptom": "frequency of mood swings"},
     {"hi": "आप किस प्रकार के मूड परिवर्तनों का अनुभव करते हैं (जैसे, बहुत खुश या बहुत उदास महसूस करना)?", 
      "en": "What types of mood changes do you experience (e.g., feeling very happy or very sad)?", 
