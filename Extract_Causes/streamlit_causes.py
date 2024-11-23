@@ -2710,6 +2710,9 @@ def handle_yes_no_response(question, response):
 
 # -------------------- Main Streamlit Application -------------------- #
 
+import streamlit as st
+import csv
+
 def main():
     # Initialize session state variables
     if 'current_step' not in st.session_state:
@@ -2952,7 +2955,35 @@ def main():
     if st.session_state.current_step == 3 and not st.session_state.report_generated:
         st.session_state.report_generated = True
         with st.spinner("Analyzing your information..."):
-            generate_report(st.session_state.conversation_history)
+            report = generate_report(st.session_state.conversation_history)
+
+        # Display the report
+        st.header("📄 Final Report")
+        st.write(report)
+
+        # Assemble the transcript
+        transcript = "📝 **Conversation Transcript:**\n\n"
+        for idx, entry in enumerate(st.session_state.conversation_history):
+            if 'user' in entry:
+                transcript += f"**User Input:** {entry['user']}\n\n"
+            if 'followup_question_en' in entry and 'response' in entry:
+                transcript += f"**Question {idx}:** {entry['followup_question_en']}\n"
+                transcript += f"**Answer:** {entry['response']}\n\n"
+
+        # Display the transcript
+        st.header("📝 Conversation Transcript")
+        st.text_area("Transcript", value=transcript, height=300)
+
+        # Combine report and transcript for download
+        download_content = f"📄 **Final Report:**\n\n{report}\n\n" + transcript
+
+        # Add a download button
+        st.download_button(
+            label="📥 Download Report and Transcript as TXT",
+            data=download_content,
+            file_name="health_report_transcript.txt",
+            mime="text/plain"
+        )
 
     # Display conversation logs on the sidebar
     with st.sidebar:
@@ -2978,6 +3009,7 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info.get('medications'):
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
+
             
 if __name__ == "__main__":
     main()
