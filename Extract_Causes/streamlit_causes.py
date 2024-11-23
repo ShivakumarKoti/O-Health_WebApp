@@ -2710,9 +2710,6 @@ def handle_yes_no_response(question, response):
 
 # -------------------- Main Streamlit Application -------------------- #
 
-import streamlit as st
-import csv
-
 def main():
     # Initialize session state variables
     if 'current_step' not in st.session_state:
@@ -2793,6 +2790,14 @@ def main():
                         symptom_to_canonical
                     )
 
+                    # Update session state with extracted information
+                    st.session_state.matched_symptoms.update(matched_symptoms)
+                    for key, value in additional_info.items():
+                        if isinstance(value, list):
+                            st.session_state.additional_info[key].extend(value)
+                        else:
+                            st.session_state.additional_info[key] = value
+
                     # Determine follow-up questions using extracted data
                     followup_questions = determine_followup_questions(
                         matched_symptoms,
@@ -2835,6 +2840,14 @@ def main():
                     symptom_list,
                     symptom_to_canonical
                 )
+
+                # Update session state with extracted information
+                st.session_state.matched_symptoms.update(matched_symptoms)
+                for key, value in additional_info.items():
+                    if isinstance(value, list):
+                        st.session_state.additional_info[key].extend(value)
+                    else:
+                        st.session_state.additional_info[key] = value
 
                 # Determine follow-up questions using extracted data
                 followup_questions = determine_followup_questions(
@@ -2903,6 +2916,14 @@ def main():
                             symptom_to_canonical
                         )
 
+                        # Update session state with extracted information
+                        st.session_state.matched_symptoms.update(matched_symptoms)
+                        for key, value in additional_info.items():
+                            if isinstance(value, list):
+                                st.session_state.additional_info[key].extend(value)
+                            else:
+                                st.session_state.additional_info[key] = value
+
                         # Add current question category to asked categories
                         current_category = current_question.get('category')
                         if current_category:
@@ -2938,6 +2959,14 @@ def main():
                         symptom_to_canonical
                     )
 
+                    # Update session state with extracted information
+                    st.session_state.matched_symptoms.update(matched_symptoms)
+                    for key, value in additional_info.items():
+                        if isinstance(value, list):
+                            st.session_state.additional_info[key].extend(value)
+                        else:
+                            st.session_state.additional_info[key] = value
+
                     # Add current question category to asked categories
                     current_category = current_question.get('category')
                     if current_category:
@@ -2961,6 +2990,17 @@ def main():
         st.header("📄 Final Report")
         st.write(report)
 
+        # Extract the initial input
+        initial_input = ""
+        for entry in st.session_state.conversation_history:
+            if 'user' in entry:
+                initial_input = entry['user']
+                break  # Assuming only one initial input
+
+        # Display the initial input
+        st.subheader("📝 Initial Input:")
+        st.write(initial_input)
+
         # Assemble the transcript
         transcript = "📝 **Conversation Transcript:**\n\n"
         for idx, entry in enumerate(st.session_state.conversation_history):
@@ -2971,11 +3011,31 @@ def main():
                 transcript += f"**Answer:** {entry['response']}\n\n"
 
         # Display the transcript
-        st.header("📝 Conversation Transcript")
+        st.subheader("📝 Conversation Transcript")
         st.text_area("Transcript", value=transcript, height=300)
 
-        # Combine report and transcript for download
-        download_content = f"📄 **Final Report:**\n\n{report}\n\n" + transcript
+        # Extracted Information
+        extracted_info = "🔍 **Extracted Information:**\n\n"
+        extracted_info += f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}\n"
+        if st.session_state.additional_info.get('age'):
+            extracted_info += f"**Age:** {st.session_state.additional_info['age']} years old\n"
+        if st.session_state.additional_info.get('gender'):
+            extracted_info += f"**Gender:** {st.session_state.additional_info['gender'].title()}\n"
+        if st.session_state.additional_info.get('location'):
+            extracted_info += f"**Location:** {st.session_state.additional_info['location']}\n"
+        if st.session_state.additional_info.get('duration'):
+            extracted_info += f"**Duration:** {st.session_state.additional_info['duration']}\n"
+        if st.session_state.additional_info.get('medications'):
+            extracted_info += f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}\n"
+
+        st.subheader("🔍 Extracted Information")
+        st.write(extracted_info)
+
+        # Combine all content for download
+        download_content = f"📄 **Final Report:**\n\n{report}\n\n"
+        download_content += f"📝 **Initial Input:**\n\n{initial_input}\n\n"
+        download_content += f"📝 **Conversation Transcript:**\n\n{transcript}\n\n"
+        download_content += f"🔍 **Extracted Information:**\n\n{extracted_info}\n"
 
         # Add a download button
         st.download_button(
@@ -3009,7 +3069,6 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info.get('medications'):
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
-
             
 if __name__ == "__main__":
     main()
