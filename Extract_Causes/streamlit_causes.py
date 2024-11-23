@@ -2709,8 +2709,6 @@ def handle_yes_no_response(question, response):
         logger.info("Response not recognized as affirmative or negative.")
 
 # -------------------- Main Streamlit Application -------------------- #
-import streamlit as st
-import csv
 
 def main():
     # Initialize session state variables
@@ -3026,7 +3024,7 @@ def main():
 
         # Display the transcript
         st.header("📝 Transcript of Questions and Answers")
-        st.text_area("Transcript", value=transcript, height=300)
+        st.markdown(transcript)
 
         # Extracted Information
         extracted_info = "🔍 **Extracted Information:**\n\n"
@@ -3102,6 +3100,12 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info.get('medications'):
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
+
+# Ensure to define or import the following functions used in the main function:
+# load_symptom_list, generate_audio_with_api_key, embed_audio_autoplay_google,
+# save_audio_file, transcribe_audio, translate_and_correct, extract_all_symptoms,
+# determine_followup_questions, handle_yes_no_response, translate_to_english,
+# generate_report, audio_recorder
 
 if __name__ == "__main__":
     main()
