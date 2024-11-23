@@ -2709,6 +2709,8 @@ def handle_yes_no_response(question, response):
         logger.info("Response not recognized as affirmative or negative.")
 
 # -------------------- Main Streamlit Application -------------------- #
+import streamlit as st
+import csv
 
 def main():
     # Initialize session state variables
@@ -2988,30 +2990,42 @@ def main():
 
         # Display the report
         st.header("📄 Final Report")
-        st.write(report)
+        st.write(f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}")
+        if st.session_state.additional_info.get('age'):
+            st.write(f"**Age:** {st.session_state.additional_info['age']} years old")
+        if st.session_state.additional_info.get('gender'):
+            st.write(f"**Gender:** {st.session_state.additional_info['gender'].title()}")
+        if st.session_state.additional_info.get('location'):
+            st.write(f"**Location:** {st.session_state.additional_info['location']}")
+        if st.session_state.additional_info.get('duration'):
+            st.write(f"**Duration:** {st.session_state.additional_info['duration']}")
+        if st.session_state.additional_info.get('medications'):
+            st.write(f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}")
+        st.write(f"**Possible Cause:** {report}")
 
-        # Extract the initial input
+        # Assemble the transcript
+        transcript = "📝 **Transcript of Questions and Answers:**\n\n"
+        
+        # Extract initial input
         initial_input = ""
         for entry in st.session_state.conversation_history:
             if 'user' in entry:
                 initial_input = entry['user']
                 break  # Assuming only one initial input
 
-        # Display the initial input
-        st.subheader("📝 Initial Input:")
-        st.write(initial_input)
+        # Add Initial Input to the transcript
+        transcript += f"**Initial Input:** {initial_input}\n\n"
 
-        # Assemble the transcript
-        transcript = "📝 **Conversation Transcript:**\n\n"
-        for idx, entry in enumerate(st.session_state.conversation_history):
-            if 'user' in entry:
-                transcript += f"**User Input:** {entry['user']}\n\n"
+        # Add Q&A to the transcript
+        question_number = 1
+        for entry in st.session_state.conversation_history:
             if 'followup_question_en' in entry and 'response' in entry:
-                transcript += f"**Question {idx}:** {entry['followup_question_en']}\n"
-                transcript += f"**Answer:** {entry['response']}\n\n"
+                transcript += f"**Question {question_number} (English):** {entry['followup_question_en']}\n\n"
+                transcript += f"**Your Answer:** {entry['response']}\n\n"
+                question_number += 1
 
         # Display the transcript
-        st.subheader("📝 Conversation Transcript")
+        st.header("📝 Transcript of Questions and Answers")
         st.text_area("Transcript", value=transcript, height=300)
 
         # Extracted Information
@@ -3028,16 +3042,35 @@ def main():
         if st.session_state.additional_info.get('medications'):
             extracted_info += f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}\n"
 
-        st.subheader("🔍 Extracted Information")
+        st.header("🔍 Extracted Information")
         st.write(extracted_info)
 
         # Combine all content for download
-        download_content = f"📄 **Final Report:**\n\n{report}\n\n"
-        download_content += f"📝 **Initial Input:**\n\n{initial_input}\n\n"
-        download_content += f"📝 **Conversation Transcript:**\n\n{transcript}\n\n"
+        download_content = f"📄 **Final Report:**\n\n"
+        download_content += f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}\n"
+        if st.session_state.additional_info.get('age'):
+            download_content += f"**Age:** {st.session_state.additional_info['age']} years old\n"
+        if st.session_state.additional_info.get('gender'):
+            download_content += f"**Gender:** {st.session_state.additional_info['gender'].title()}\n"
+        if st.session_state.additional_info.get('location'):
+            download_content += f"**Location:** {st.session_state.additional_info['location']}\n"
+        if st.session_state.additional_info.get('duration'):
+            download_content += f"**Duration:** {st.session_state.additional_info['duration']}\n"
+        if st.session_state.additional_info.get('medications'):
+            download_content += f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}\n"
+        download_content += f"**Possible Cause:** {report}\n\n"
+        download_content += f"📝 **Transcript of Questions and Answers:**\n\n"
+        download_content += f"**Initial Input:** {initial_input}\n\n"
+        download_content += f"**Transcript of Questions and Answers:**\n\n"
+        question_number = 1
+        for entry in st.session_state.conversation_history:
+            if 'followup_question_en' in entry and 'response' in entry:
+                download_content += f"**Question {question_number} (English):** {entry['followup_question_en']}\n\n"
+                download_content += f"**Your Answer:** {entry['response']}\n\n"
+                question_number += 1
         download_content += f"🔍 **Extracted Information:**\n\n{extracted_info}\n"
 
-        # Add a download button
+        # Add a download button without displaying the downloadable content
         st.download_button(
             label="📥 Download Report and Transcript as TXT",
             data=download_content,
@@ -3069,6 +3102,6 @@ def main():
             st.write(f"**Duration:** {additional_info['duration']}")
         if additional_info.get('medications'):
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
-            
+
 if __name__ == "__main__":
     main()
