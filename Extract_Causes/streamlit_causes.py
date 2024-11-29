@@ -2386,88 +2386,75 @@ def extract_additional_entities(text):
         'medications': medications
     }
 
-def determine_followup_questions(initial_symptoms, additional_info, asked_question_categories):
+def determine_best_specialist(symptoms):
     """
-    Determine the next set of follow-up questions based on initial symptoms and additional information.
-    Ensures 3 to 7 questions, with each question from a different symptom group.
+    Determines the best specialist doctor based on the list of symptoms using ChatGPT.
+
+    Args:
+        symptoms (list): List of extracted symptoms.
+
+    Returns:
+        str: The type of specialist doctor.
     """
-    followup_questions = []
-    asked_categories = set(asked_question_categories)
+    try:
+        # Define a list of possible specialists
+        specialist_options = [
+            "Orthopedic Specialist",
+            "Neurologist",
+            "Cardiologist",
+            "Dermatologist",
+            "Gastroenterologist",
+            "Psychiatrist",
+            "General Practitioner",
+            "ENT Specialist",
+            "Pulmonologist",
+            "Rheumatologist",
+            "Endocrinologist",
+            "Urologist",
+            "Oncologist",
+            "Dentist"
+            # Add more as needed
+        ]
 
-    # Retrieve follow-up questions based on initial symptoms
-    symptom_based_questions = get_followup_questions(initial_symptoms)
+        # Prepare the prompt for ChatGPT
+        prompt = (
+            f"You are a medical assistant that recommends the most suitable specialist based on symptoms.\n"
+            f"Use the following explicit mappings for common keywords in symptoms:\n"
+            f"- Heart, chest pain, irregular heartbeat -> Cardiologist\n"
+            f"- Bones, joints, fractures, arthritis -> Orthopedic Specialist\n"
+            f"- Skin, rashes, acne -> Dermatologist\n"
+            f"- Stomach, digestion, acid reflux -> Gastroenterologist\n"
+            f"- Anxiety, depression, mental health -> Psychiatrist\n"
+            f"- Throat, ears, nose -> ENT Specialist\n"
+            f"- Lungs, shortness of breath, coughing -> Pulmonologist\n"
+            f"- Diabetes, hormones -> Endocrinologist\n"
+            f"- Urinary, bladder, kidney -> Urologist\n"
+            f"- Cancer -> Oncologist\n"
+            f"If symptoms don’t match any specific category, choose 'General Practitioner'.\n"
+            f"\nBased on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
+            f"Symptoms: {', '.join(symptoms)}\n"
+            f"Choose the specialist from the following list: {', '.join(specialist_options)}.\n"
+            f"Provide only the name of the specialist (e.g., 'Orthopedic Specialist')."
+        )
 
-    # Shuffle to randomize question selection
-    random.shuffle(symptom_based_questions)
+        # Make the API call to OpenAI's ChatCompletion
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a medical assistant that maps symptoms to specialists."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=10,  # Short response expected
+            temperature=0  # Deterministic response
+        )
 
-    # Select questions ensuring each is from a different symptom group
-    selected_symptom_questions = []
-    symptom_groups_asked = set()
-
-    for question in symptom_based_questions:
-        symptom = question['symptom']
-        if symptom and symptom not in symptom_groups_asked and question['category'] not in asked_categories:
-            selected_symptom_questions.append(question)
-            symptom_groups_asked.add(symptom)
-            asked_categories.add(question['category'])
-        if len(selected_symptom_questions) >= 5:
-            break  # Limit to maximum of 5 symptom-based questions
-
-    followup_questions.extend(selected_symptom_questions)
-
-    # Handle additional information questions only if not already provided
-    additional_followup_questions = [
-        {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
-        {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
-        {"hi": "आप वर्तमान में कहाँ स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
-        {"hi": "लक्षण कितने समय से हैं?", "en": "How long have you been experiencing these symptoms?", "category": "duration", "symptom": None},
-        {"hi": "क्या आप कोई दवा ले रहे हैं?", "en": "Are you taking any medications?", "category": "medications", "symptom": None},
-        # Add more additional follow-up questions as needed
-    ]
-
-    # Identify missing additional information
-    missing_additional_info = []
-    for add_q in additional_followup_questions:
-        category = add_q['category']
-        if not additional_info.get(category):
-            if add_q['category'] not in asked_categories:
-                missing_additional_info.append(add_q)
-
-    # Shuffle to randomize question selection
-    random.shuffle(missing_additional_info)
-
-    # Select additional questions up to 2
-    selected_additional_questions = []
-    for question in missing_additional_info:
-        if len(selected_additional_questions) >= 2:
-            break
-        selected_additional_questions.append(question)
-        asked_categories.add(question['category'])
-
-    followup_questions.extend(selected_additional_questions)
-
-    # Ensure the total number of questions is between 3 to 7
-    total_questions = len(followup_questions)
-    if total_questions < 3:
-        needed = 3 - total_questions
-        # Optionally, add "other symptoms" question if not already asked
-        if 'other_symptoms' not in asked_categories:
-            other_symptoms_question = {
-                "hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?",
-                "en": "Are you experiencing any other symptoms?",
-                "category": "other_symptoms",
-                "symptom": None
-            }
-            followup_questions.append(other_symptoms_question)
-            asked_categories.add('other_symptoms')
-            total_questions += 1
-
-    # Limit to maximum of 7 questions
-    if total_questions > 7:
-        followup_questions = followup_questions[:7]
-
-    logger.info(f"Determined Follow-Up Questions: {[q['en'] for q in followup_questions]}")
-    return followup_questions
+        # Extract the specialist from the response
+        specialist = response['choices'][0]['message']['content'].strip()
+        logging.info(f"Determined Specialist: {specialist}")
+        return specialist
+    except Exception as e:
+        logging.error(f"Failed to determine specialist: {e}")
+        return "General Practitioner"  # Fallback specialist
 
 def extract_all_symptoms(conversation_history, symptom_list, symptom_to_canonical):
     """
