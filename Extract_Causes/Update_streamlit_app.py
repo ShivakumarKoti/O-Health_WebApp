@@ -2087,7 +2087,20 @@ def determine_best_specialist(symptoms):
 
         # Prepare the prompt for ChatGPT
         prompt = (
-            f"Based on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
+            f"You are a medical assistant that recommends the most suitable specialist based on symptoms.\n"
+            f"Use the following explicit mappings for common keywords in symptoms:\n"
+            f"- Heart, chest pain, irregular heartbeat -> Cardiologist\n"
+            f"- Bones, joints, fractures, arthritis -> Orthopedic Specialist\n"
+            f"- Skin, rashes, acne -> Dermatologist\n"
+            f"- Stomach, digestion, acid reflux -> Gastroenterologist\n"
+            f"- Anxiety, depression, mental health -> Psychiatrist\n"
+            f"- Throat, ears, nose -> ENT Specialist\n"
+            f"- Lungs, shortness of breath, coughing -> Pulmonologist\n"
+            f"- Diabetes, hormones -> Endocrinologist\n"
+            f"- Urinary, bladder, kidney -> Urologist\n"
+            f"- Cancer -> Oncologist\n"
+            f"If symptoms don’t match any specific category, choose 'General Practitioner'.\n"
+            f"\nBased on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
             f"Symptoms: {', '.join(symptoms)}\n"
             f"Choose the specialist from the following list: {', '.join(specialist_options)}.\n"
             f"Provide only the name of the specialist (e.g., 'Orthopedic Specialist')."
@@ -2097,7 +2110,7 @@ def determine_best_specialist(symptoms):
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a medical assistant that recommends the most suitable specialist based on symptoms."},
+                {"role": "system", "content": "You are a medical assistant that maps symptoms to specialists."},
                 {"role": "user", "content": prompt}
             ],
             max_tokens=10,  # Short response expected
