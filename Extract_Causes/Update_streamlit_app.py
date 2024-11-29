@@ -2055,6 +2055,64 @@ def save_audio_file(audio_bytes, file_extension):
         logger.error(f"Failed to save audio file: {e}")
         return None
 
+def determine_best_specialist(symptoms):
+    """
+    Determines the best specialist doctor based on the list of symptoms using ChatGPT.
+
+    Args:
+        symptoms (list): List of extracted symptoms.
+
+    Returns:
+        str: The type of specialist doctor.
+    """
+    try:
+        # Define a list of possible specialists
+        specialist_options = [
+            "Orthopedic Specialist",
+            "Neurologist",
+            "Cardiologist",
+            "Dermatologist",
+            "Gastroenterologist",
+            "Psychiatrist",
+            "General Practitioner",
+            "ENT Specialist",
+            "Pulmonologist",
+            "Rheumatologist",
+            "Endocrinologist",
+            "Urologist",
+            "Oncologist",
+            "Dentist"
+            # Add more as needed
+        ]
+
+        # Prepare the prompt for ChatGPT
+        prompt = (
+            f"Based on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
+            f"Symptoms: {', '.join(symptoms)}\n"
+            f"Choose the specialist from the following list: {', '.join(specialist_options)}.\n"
+            f"Provide only the name of the specialist (e.g., 'Orthopedic Specialist')."
+        )
+
+        # Make the API call to OpenAI's ChatCompletion
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a medical assistant that recommends the most suitable specialist based on symptoms."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=10,  # Short response expected
+            temperature=0  # Deterministic response
+        )
+
+        # Extract the specialist from the response
+        specialist = response['choices'][0]['message']['content'].strip()
+        logging.info(f"Determined Specialist: {specialist}")
+        return specialist
+    except Exception as e:
+        logging.error(f"Failed to determine specialist: {e}")
+        return "General Practitioner"  # Fallback specialist
+        
+
 def transcribe_audio(file_path):
     """
     Transcribe the audio file using OpenAI's Whisper API with translation to English.
