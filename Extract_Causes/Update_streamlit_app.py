@@ -2535,8 +2535,8 @@ def generate_report(conversation_history):
     # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
     
     # Determine the best specialist based on symptoms
-    if exact_symptoms:
-        specialist = determine_best_specialist(list(exact_symptoms))
+    if matched_symptoms:
+        specialist = determine_best_specialist(list(matched_symptoms))
     else:
         specialist = "General Practitioner"  # Default specialist
 
