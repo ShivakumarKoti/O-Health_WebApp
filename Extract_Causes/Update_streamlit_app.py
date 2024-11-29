@@ -2078,6 +2078,8 @@ def transcribe_audio(file_path):
                 st.warning(f"Could not delete audio file {file_path}: {e}")
                 logger.warning(f"Could not delete audio file {file_path}: {e}")
 
+
+        
 def extract_symptoms(text):
     """
     Extract symptoms from the given text using BioBERT NER model and regex matching.
@@ -2531,7 +2533,16 @@ def generate_report(conversation_history):
             question_count += 1
 
     # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
+    
+    # Determine the best specialist based on symptoms
+    if exact_symptoms:
+        specialist = determine_best_specialist(list(exact_symptoms))
+    else:
+        specialist = "General Practitioner"  # Default specialist
 
+     # Translate the specialist to Hindi
+    translated_specialist = specialist
+        
     # Check if a possible cause was determined
     if possible_cause and possible_cause != "No suitable cause determined from the transcript.":
         # Translate the cause to Hindi
@@ -2549,7 +2560,7 @@ def generate_report(conversation_history):
     # Construct the Hindi message
     if translated_cause != "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।":
         # Specific message including symptoms and possible causes
-        message_hindi = f"आपके लक्षण: {translated_symptoms}. इन लक्षणों के कारण, संभावित कारण यह हैं: {translated_cause}. हम आपको सबसे उपयुक्त डॉक्टर से तुरंत जोड़ रहे हैं।"
+        message_hindi = f"आपके लक्षण: {translated_symptoms}. इन लक्षणों के कारण, संभावित कारण यह हैं: {translated_cause}. हम आपको सबसे उपयुक्त {translated_specialist} डॉक्टर से तुरंत जोड़ रहे हैं।"
     else:
         # If no possible cause, still inform the user about connecting to a doctor
         message_hindi = f"{translated_cause} हम आपकी मदद के लिए एक डॉक्टर से संपर्क कर रहे हैं।"
