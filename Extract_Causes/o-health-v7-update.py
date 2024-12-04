@@ -2079,7 +2079,7 @@ def save_audio_file(audio_bytes, file_extension):
         logger.error(f"Failed to save audio file: {e}")
         return None
 
-def def determine_best_specialist(symptoms):
+def determine_best_specialist(symptoms):
     """
     Determines the best specialist doctor based on the list of symptoms using ChatGPT.
 
