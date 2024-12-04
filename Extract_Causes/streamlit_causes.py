@@ -196,6 +196,7 @@ def load_symptom_list(csv_file_path='Extract_Causes/symptom_list_2.csv'):
     except Exception as e:
         st.error(f"An error occurred while loading symptoms: {e}")
         return [], {}
+        
 symptom_list = ['fever','cold'
 'runny nose', 'sneezing', 'rash', 'dizziness', 'dizzy', 'weakness', 'loss of appetite', 'cough'
     'muscle pain', 'joint pain', 'chest pain', 'back pain', 'constipation', 'throat pain',
