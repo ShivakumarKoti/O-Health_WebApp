@@ -209,6 +209,14 @@ symptom_list = ['fever','cold',
     # Add more symptoms and their variations as needed
 ]
 
+# Create a synonym mapping
+symptom_synonyms = {
+    'back spasm': ['back is spasming', 'back spasms', 'back spasm'],
+    'headache': ['head pain', 'head hurts', 'migraine'],
+    'allergies':['allergy'],
+    # Add more symptom synonyms here
+}
+
 # Expanded medications list
 medications_list = [
     "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen","Dolo 650",
@@ -283,6 +291,21 @@ def correct_spelling(text):
         logger.error(f"Spell correction failed: {e}")
         return text  # Return original text if correction fails
     """
+
+def normalize_symptom(phrase):
+    """
+    Normalize the symptom phrase to a standard format.
+    """
+    # Lowercase the phrase
+    phrase = phrase.lower()
+    # Lemmatize the phrase
+    doc = nlp(phrase)
+    lemmatized_tokens = [token.lemma_ for token in doc]
+    # Remove stop words and punctuation
+    tokens = [token for token in lemmatized_tokens if not nlp.vocab[token].is_stop and token.isalpha()]
+    # Join back into a string
+    normalized_phrase = ' '.join(tokens)
+    return normalized_phrase
 
 # -------------------- Symptom Follow-Up Questions -------------------- #
 
@@ -520,7 +543,7 @@ symptom_followup_questions = {
         {"hi": "क्या आपके घुटनों या पैरों में सुन्नता है?", "en": "Are you experiencing numbness in your knees or feet?", "category": "numbness", "symptom": "numbness"}
     ],
 
-    'allergies': [
+    'allergy': [
         {"hi": "क्या आपको किसी विशेष चीज़ से एलर्जी है?", "en": "Do you have allergies to any specific substance?", "category": "specific_allergy", "symptom": None},
         {"hi": "क्या आपकी त्वचा में खुजली या लालिमा है?", "en": "Do you have itching or redness on your skin?", "category": "skin_allergy_symptoms", "symptom": "itching"},
         {"hi": "क्या आपको सांस लेने में कठिनाई हो रही है?", "en": "Are you experiencing difficulty breathing?", "category": "breathing_difficulty", "symptom": "shortness of breath"},
@@ -981,6 +1004,17 @@ symptom_followup_questions = {
         {"hi": "क्या मांसपेशियों में स्पैसम्स के साथ सूजन भी हो रही है?", "en": "Is there any swelling along with muscle spasms?", "category": "swelling_with_muscle_spasms", "symptom": "swelling"},
         {"hi": "क्या स्पैसम्स के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with muscle spasms?", "category": "other_symptoms_with_muscle_spasms", "symptom": None}
     ],
+
+    'spasm': [
+        {"hi": "कक्या आप अचानक ऐंठन का अनुभव कर रहे हैं?", "en": "Are you experiencing sudden spasms?", "category": "sudden_spasms", "symptom": "mspasms"},
+        {"hi": "ऐंठन कहाँ स्थित है (जैसे निचली पीठ, ऊपरी पीठ, या गर्दन)?", "en": "Where is the spasm located (e.g., lower back, upper back, or neck)?", "category": "back_spasms", "symptom": "location of spasm"},
+        {"hi": "क्या ऐंठन लगातार या रुक-रुक कर हो रही है?", "en": "Are spasms occurring continuously or intermittently?", "category": "intermittent_muscle_spasms", "symptom": None},
+        {"hi": "क्या आप ऐंठन के साथ दर्द का भी अनुभव कर रहे हैं?", "en": "Are you experiencing pain along with spasms?", "category": "pain_with_muscle_spasms", "symptom": "pain"},
+        {"hi": "क्या किसी विशिष्ट गतिविधि के दौरान ऐंठन बढ़ जाती है?", "en": "Do spasms increase during any specific activity?", "category": "activity_related_muscle_spasms", "symptom": None},
+        {"hi": "क्या ऐंठन के कारण आपकी गतिशीलता प्रभावित हो रही है?", "en": "Are your mobility being affected due to spasms?", "category": "mobility_impact_with_muscle_spasms", "symptom": None},
+        {"hi": "क्या ऐंठन के साथ-साथ कोई सूजन भी है?", "en": "Is there any swelling along with spasms?", "category": "swelling_with_muscle_spasms", "symptom": "swelling"},
+        #{"hi": "क्या स्पैसम्स के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?", "en": "Are you experiencing any other symptoms along with muscle spasms?", "category": "other_symptoms_with_muscle_spasms", "symptom": None}
+        ],
 
     'muscle strains': [
         {"hi": "क्या आपको मांसपेशियों में खिंचाव या तनाव महसूस हो रहा है?", "en": "Are you feeling any muscle strain or tension?", "category": "muscle_strain", "symptom": "muscle strains"},
@@ -1666,7 +1700,7 @@ symptom_followup_questions = {
 ],
 
 'back spasm' : [
-    {"hi": "आपको पीठ में ऐंठन का अनुभव कितने समय से हो रहा है?", "en": "How long have you been experiencing back spasms?", "category": "back_spasms", "symptom": "duration of spasms"},
+    #{"hi": "आपको पीठ में ऐंठन का अनुभव कितने समय से हो रहा है?", "en": "How long have you been experiencing back spasms?", "category": "back_spasms", "symptom": "duration of spasms"},
     {"hi": "ऐंठन कहाँ स्थित है (जैसे निचली पीठ, ऊपरी पीठ, या गर्दन)?", "en": "Where is the spasm located (e.g., lower back, upper back, or neck)?", "category": "back_spasms", "symptom": "location of spasm"},
     {"hi": "क्या ऐंठन लगातार है, या यह आता-जाता रहता है?", "en": "Are the spasms constant, or do they come and go?", "category": "back_spasms", "symptom": "spasm pattern"},
     {"hi": "जब ऐंठन होती है, तो दर्द कितना तीव्र होता है? क्या यह तेज, हल्का या ऐंठन जैसा है?", "en": "How severe is the pain during the spasms? Is it sharp, dull, or cramping?", "category": "back_spasms", "symptom": "pain severity and type"},
@@ -1935,6 +1969,18 @@ symptom_list_lower = [symptom.lower() for symptom in symptom_list]
 known_symptoms_lemmatized = [lemmatize_phrase(symptom) for symptom in known_symptoms_lower]
 symptom_list_lemmatized = [lemmatize_phrase(symptom) for symptom in symptom_list_lower]
 
+# Normalize symptom lists
+known_symptoms_normalized = [normalize_symptom(symptom) for symptom in known_symptoms]
+symptom_list_normalized = [normalize_symptom(symptom) for symptom in symptom_list]
+
+# Normalize the synonym mapping
+normalized_symptom_synonyms = {}
+for key, synonyms in symptom_synonyms.items():
+    normalized_key = normalize_symptom(key)
+    normalized_synonyms = [normalize_symptom(syn) for syn in synonyms]
+    normalized_symptom_synonyms[normalized_key] = normalized_synonyms
+
+
 # Convert symptom_followup_questions keys to lowercase
 symptom_followup_questions_lower = {symptom.lower(): questions for symptom, questions in symptom_followup_questions.items()}
 
@@ -2181,35 +2227,61 @@ def transcribe_audio(file_path):
 
 def extract_symptoms(text):
     """
-    Extract symptoms from the given text using BioBERT NER model and regex matching.
+    Extract symptoms from the given text using BioBERT NER model, regex matching,
+    synonym mapping, and fuzzy matching.
     """
     try:
+        # Normalize the input text
+        text_normalized = normalize_symptom(text)
+        extracted_symptoms = set()
+
         # Use BioBERT NER model to extract symptoms
         ner_results = ner_pipeline(text)
-        extracted_symptoms = set()
         for entity in ner_results:
             if entity['entity_group'] == 'SYMPTOM':
                 symptom = entity['word'].strip().lower()
-                # Lemmatize the symptom
-                symptom_lemmatized = lemmatize_phrase(symptom)
-                # Ensure the symptom is in the known_symptoms_lemmatized list
-                if symptom_lemmatized in known_symptoms_lemmatized:
-                    extracted_symptoms.add(symptom_lemmatized)
-        logger.info(f"Extracted Symptoms using BioBERT: {extracted_symptoms}")
+                symptom_normalized = normalize_symptom(symptom)
+                # Check if the symptom is in the normalized symptom list
+                if symptom_normalized in symptom_list_normalized:
+                    extracted_symptoms.add(symptom_normalized)
+                else:
+                    # Check against the synonym mapping
+                    for standard_symptom, synonyms in normalized_symptom_synonyms.items():
+                        if symptom_normalized in synonyms:
+                            extracted_symptoms.add(standard_symptom)
+                            break
 
-        # Also match against the lemmatized symptom list for any missed symptoms
-        text_lower = text.lower()
-        text_lemmatized = lemmatize_phrase(text_lower)
+        # Use PhraseMatcher for multi-word symptoms
+        matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
+        patterns = [nlp.make_doc(symptom) for symptom in symptom_list_normalized]
+        matcher.add("SYMPTOMS", patterns)
+        doc = nlp(text_normalized)
+        matches = matcher(doc)
+        for match_id, start, end in matches:
+            span = doc[start:end]
+            symptom_normalized = normalize_symptom(span.text)
+            extracted_symptoms.add(symptom_normalized)
 
-        for symptom_lemmatized in symptom_list_lemmatized:
-            # Use word boundaries to avoid partial matches
-            if re.search(r'\b' + re.escape(symptom_lemmatized) + r'\b', text_lemmatized):
-                extracted_symptoms.add(symptom_lemmatized)
+        # Fuzzy matching against symptom list
+        threshold = 80  # Set a threshold for matching (0-100)
+        for symptom in symptom_list_normalized:
+            score = fuzz.partial_ratio(symptom, text_normalized)
+            if score >= threshold:
+                extracted_symptoms.add(symptom)
+
+        # Fuzzy matching with synonyms
+        for standard_symptom, synonyms in normalized_symptom_synonyms.items():
+            for synonym in synonyms:
+                syn_score = fuzz.partial_ratio(synonym, text_normalized)
+                if syn_score >= threshold:
+                    extracted_symptoms.add(standard_symptom)
+                    break
 
         logger.info(f"Final Extracted Symptoms: {extracted_symptoms}")
         # Remove generic affirmations and negations
         extracted_symptoms = [sym for sym in extracted_symptoms if sym not in {'no', 'yes', 'nothing', 'nothing else'}]
         return extracted_symptoms
+
     except Exception as e:
         st.error(f"An error occurred during symptom extraction: {e}")
         logger.error(f"Symptom extraction error: {e}")
@@ -2698,18 +2770,18 @@ def handle_yes_no_response(question, response):
         st.session_state.matched_symptoms = set()
 
     if is_affirmative and question['symptom']:
-        lemmatized_symptom = lemmatize_phrase(question['symptom'].lower())
-        st.session_state.matched_symptoms.add(lemmatized_symptom)
-        logger.info(f"Added symptom '{lemmatized_symptom}' based on affirmative response.")
+        normalized_symptom = normalize_symptom(question['symptom'])
+        st.session_state.matched_symptoms.add(normalized_symptom)
+        logger.info(f"Added symptom '{normalized_symptom}' based on affirmative response.")
         st.success(f"Added symptom: {question['symptom']}")
     elif is_negative and question['symptom']:
-        lemmatized_symptom = lemmatize_phrase(question['symptom'].lower())
-        if lemmatized_symptom in st.session_state.matched_symptoms:
-            st.session_state.matched_symptoms.remove(lemmatized_symptom)
-            logger.info(f"Removed symptom '{lemmatized_symptom}' based on negative response.")
+        normalized_symptom = normalize_symptom(question['symptom'])
+        if normalized_symptom in st.session_state.matched_symptoms:
+            st.session_state.matched_symptoms.remove(normalized_symptom)
+            logger.info(f"Removed symptom '{normalized_symptom}' based on negative response.")
             st.warning(f"Removed symptom: {question['symptom']}")
         else:
-            logger.info(f"No action taken for symptom '{lemmatized_symptom}' as it's not present.")
+            logger.info(f"No action taken for symptom '{normalized_symptom}' as it's not present.")
     else:
         logger.info("Response not recognized as affirmative or negative.")
 
