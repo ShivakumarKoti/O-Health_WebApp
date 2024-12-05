@@ -22,6 +22,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 from audio_recorder_streamlit import audio_recorder
 import random
+from spacy.matcher import PhraseMatcher
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 import json
 
 # -------------------- Environment Setup -------------------- #
