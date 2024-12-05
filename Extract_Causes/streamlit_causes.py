@@ -2249,7 +2249,7 @@ def determine_best_specialist(symptoms):
             "Gastroenterologist",
             "Psychiatrist",
             "General Practitioner",
-            "ENT Specialist",
+            "E N T Specialist",
             "Pulmonologist",
             "Rheumatologist",
             "Endocrinologist",
