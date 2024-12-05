@@ -1,4 +1,4 @@
-# corrected_input is uncommented and disabled
+# libraries download
 import os
 import io
 import re
@@ -24,12 +24,13 @@ from audio_recorder_streamlit import audio_recorder
 import random
 import json
 
-API_KEY="AIzaSyASUfCPNIKGs4tvsMkStfeW8wpCKqJmZzY"
-
 # -------------------- Environment Setup -------------------- #
 
 # Securely access the OpenAI API key from Streamlit Secrets
 openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+#google Text to Speech
+API_KEY="AIzaSyASUfCPNIKGs4tvsMkStfeW8wpCKqJmZzY"
 
 if not openai.api_key:
     st.error("OpenAI API key not found. Please set it in the Streamlit Secrets.")
@@ -155,49 +156,34 @@ known_symptoms = df_disease_symptom['SymptomName'].unique()
 
 # -------------------- Define Symptom and Medication Lists -------------------- #
 
-
 # Load the expanded symptom list from a CSV file
-def load_symptom_list(csv_file_path='Extract_Causes/symptom_list_2.csv'):
+def load_symptom_list(csv_file_path='symptom_list.csv'):
     """
-    Load symptoms from a CSV file into a Python list and mapping.
+    Load symptoms from a CSV file into a Python list.
 
     Args:
         csv_file_path (str): Path to the CSV file containing symptoms.
 
     Returns:
-        tuple: A tuple containing:
-            - symptom_list (list): A list of symptom variants.
-            - symptom_to_canonical (dict): A mapping from variant to canonical symptom.
+        list: A list of symptoms.
     """
     try:
         df_symptoms = pd.read_csv(csv_file_path)
-        # Validate required columns
-        if 'SymptomName' not in df_symptoms.columns or 'CanonicalSymptom' not in df_symptoms.columns:
-            st.error("CSV file must contain 'SymptomName' and 'CanonicalSymptom' columns.")
-            return [], {}
-        # Drop rows with missing values
-        df_symptoms = df_symptoms.dropna(subset=['SymptomName', 'CanonicalSymptom'])
-        # Create the mapping
-        symptom_to_canonical = {}
-        for _, row in df_symptoms.iterrows():
-            variant = row['SymptomName'].strip().lower()
-            canonical = row['CanonicalSymptom'].strip().lower()
-            symptom_to_canonical[variant] = canonical
-        # Create a list of unique variants
-        symptom_list = list(symptom_to_canonical.keys())
-        st.success(f"Loaded {len(symptom_list)} symptom variants from '{csv_file_path}'.")
-        return symptom_list, symptom_to_canonical
+        symptom_list = df_symptoms['SymptomName'].dropna().str.lower().tolist()
+        print(f"Loaded {len(symptom_list)} symptoms from '{csv_file_path}'.")
+        return symptom_list
     except FileNotFoundError:
-        st.error(f"Error: The file '{csv_file_path}' was not found.")
-        return [], {}
+        print(f"Error: The file '{csv_file_path}' was not found.")
+        return []
     except pd.errors.EmptyDataError:
-        st.error(f"Error: The file '{csv_file_path}' is empty.")
-        return [], {}
+        print(f"Error: The file '{csv_file_path}' is empty.")
+        return []
     except Exception as e:
-        st.error(f"An error occurred while loading symptoms: {e}")
-        return [], {}
-        
-symptom_list = ['fever','cold', 'runny nose', 'sneezing', 'rash', 'dizziness', 'dizzy', 'weakness', 'loss of appetite', 'cough',
+        print(f"An error occurred while loading symptoms: {e}")
+        return []
+
+symptom_list = ['fever','cold',
+'runny nose', 'sneezing', 'rash', 'dizziness', 'dizzy', 'weakness', 'loss of appetite', 'cough',
     'muscle pain', 'joint pain', 'chest pain', 'back pain', 'constipation', 'throat pain',
     'cold', 'flu', 'breathlessness', 'stomach pain', 'stomach ache', 'migraine', 'pain',
     'ache', 'sore', 'burning', 'itching', 'swelling', 'infection', 'inflammation',
@@ -222,6 +208,7 @@ symptom_list = ['fever','cold', 'runny nose', 'sneezing', 'rash', 'dizziness', '
     'fainting', 'feeling faint', 'unsteady gait', 'clumsiness', 'loss of coordination', 'seizures', 'convulsions', 'tremors', 'shakiness', 'nervousness', 'panic attacks', 'mood swings', 'irritability', 'agitation', 'restlessness', 'memory problems', 'difficulty concentrating', 'foggy mind', 'hallucinations', 'delusions', 'paranoia', 'euphoria', 'apathy', 'lack of motivation', 'social withdrawal', 'anhedonia', 'exhaustion', 'muscle weakness', 'muscle cramps', 'muscle stiffness', 'joint stiffness', 'joint swelling', 'joint redness', 'joint warmth', 'joint tenderness', 'bone pain', 'bone fractures', 'sprains', 'strains', 'ligament injuries', 'tendonitis', 'bursitis', 'arthritis', 'osteoarthritis', 'rheumatoid arthritis', 'gout', 'fibromyalgia', 'sciatica', 'herniated disc', 'spinal stenosis', 'back spasms', 'neck pain', 'whiplash', 'carpal tunnel syndrome', 'tenosynovitis', 'sinus pressure', 'sinus headache', 'sore muscles', 'muscle spasms', 'muscle strains', 'muscle injuries', 'skin rash', 'skin rashes', 'eczema', 'psoriasis', 'hives', 'urticaria', 'contact dermatitis', 'atopic dermatitis', 'seborrheic dermatitis', 'cutaneous lupus', 'cellulitis', 'impetigo', 'herpes', 'shingles', 'warts', 'moles', 'skin lesions', 'skin lumps', 'skin bumps', 'skin discoloration', 'skin dryness', 'skin peeling', 'skin cracking', 'skin itching', 'skin burning', 'skin pain', 'skin tenderness', 'skin redness', 'skin swelling', 'skin blisters', 'skin ulcers', 'skin sores', 'skin growths', 'hair thinning', 'hair breakage', 'hair brittleness', 'hair loss patterns', 'hair shedding', 'hair graying', 'hair texture changes', 'hair color changes', 'hair growth abnormalities', 'hair density changes', 'hair quality changes', 'nail discoloration', 'nail brittleness', 'nail separation', 'nail ridges', 'nail pitting', 'nail thickening', 'nail splitting', 'nail fragility', 'nail ulcers', 'nail pain', 'nail deformation', 'nail lesions', 'nail abnormalities', 'nail fungus', 'nail psoriasis', 'nail lichen planus', 'nail melanonychia', 'nail leukonychia', 'nail onychomycosis', 'nail paronychia', 'nail green nail syndrome', 'nail clubbing', 'nail concave nails', 'nail convex nails', 'nail horizontal ridges', 'nail vertical ridges', 'nail spoon nails', 'nail koilonychia', 'nail trachyonychia', 'nail dystrophy', 'skin bruising', 'skin redness', 'skin tenderness', 'skin swelling', 'joint tenderness', 'muscle tenderness', 'muscle weakness', 'joint instability', 'muscle atrophy', 'joint dislocation', 'joint deformity', 'bone deformity', 'bone tenderness', 'bone swelling', 'bone redness', 'bone warmth', 'bone stiffness', 'bone tenderness', 'joint redness', 'joint swelling', 'joint warmth', 'joint tenderness', 'joint pain during movement', 'joint pain at rest', 'joint locking', 'joint clicking', 'joint popping', 'joint swelling after activity', 'joint swelling in the morning', 'joint stiffness after inactivity', 'joint pain in the morning', 'joint pain after exercise', 'joint pain at night', 'joint swelling after injury', 'joint pain with swelling', 'joint pain without swelling', 'joint stiffness in the morning', 'joint stiffness after exercise', 'joint pain during exercise', 'joint stiffness after rest', 'joint pain with movement', 'joint pain without movement', 'joint pain during sleep', 'joint swelling during sleep', 'joint redness during exercise', 'joint warmth after exercise', 'joint tenderness after injury', 'muscle pain', 'muscle weakness after injury', 'muscle cramps at night', 'muscle spasms during sleep', 'muscle stiffness after rest', 'muscle tenderness after exercise', 'muscle weakness during activity', 'muscle atrophy due to disuse', 'muscle weakness without atrophy', 'muscle stiffness during movement', 'muscle weakness after injury', 'muscle pain', 'muscle tenderness after exercise', 'muscle spasms after exercise', 'skin dryness due to weather', 'skin peeling due to eczema', 'skin itching due to allergies', 'skin burning due to dermatitis', 'skin redness due to infection', 'skin swelling due to injury', 'skin tenderness due to inflammation', 'skin blisters due to friction', 'skin ulcers due to pressure', 'skin sores due to infection', 'skin growths due to cancer', 'skin discoloration due to sun exposure', 'skin dryness due to dehydration', 'skin cracking due to cold weather', 'skin itching due to insect bites', 'skin burning due to chemical exposure', 'skin pain due to burns', 'skin tenderness due to inflammation', 'eye dryness', 'eye irritation', 'eye discharge', 'eye redness', 'eye pain', 'eye swelling', 'eye tearing', 'eye blurriness', 'eye fatigue', 'eye strain', 'eye sensitivity to light', 'eye watering', 'eye twitching', 'eye congestion', 'eye dryness', 'eye itching', 'eye swelling', 'eye redness', 'eye pain', 'eye vision loss', 'eye floaters', 'eye flashes', 'ear itching', 'ear dryness', 'ear discharge', 'ear pain', 'ear redness', 'ear swelling', 'ear ringing', 'ear fullness', 'ear congestion', 'ear fluid', 'ear wax buildup', 'ear infection', 'earache', 'hearing loss', 'tinnitus', 'balance issues', 'vertigo', 'dizziness', 'swimming pool ear', 'outer ear pain', 'middle ear pain', 'inner ear pain', 'ear buzzing', 'ear clicking', 'ear popping', 'ear sensitivity', 'ear tightness', 'ear sensation of fullness', 'ear pressure', 'hearing noises', 'hearing muffled sounds', 'hearing fluctuating sounds', 'hearing loss in one ear', 'hearing loss in both ears', 'hearing difficulty', 'difficulty breathing', 'chest tightness', 'wheezing', 'dry cough', 'productive cough', 'barking cough', 'persistent cough', 'non-productive cough', 'wet cough', 'dry cough', 'unproductive cough', 'cough with phlegm', 'cough with mucus', 'cough with blood', 'cough with sputum', 'coughing up blood', 'coughing up phlegm', 'coughing up mucus', 'coughing up sputum', 'sneezing fits', 'frequent sneezing', 'sneezing spells', 'sneezing bouts', 'sneezing attacks', 'sneezing episodes', 'nasal congestion', 'stuffy nose', 'blocked nose', 'clogged nose', 'runny nose', 'clear runny nose', 'watery eyes', 'dry eyes', 'itchy eyes', 'burning eyes', 'red eyes', 'swollen eyes', 'painful eyes', 'vision changes', 'double vision', 'blurred vision', 'trouble seeing', 'difficulty seeing', 'night blindness', 'day blindness', 'light sensitivity', 'dark sensitivity', 'double vision', 'floaters', 'flashes of light', 'dim vision', 'loss of vision', 'partial vision loss', 'complete vision loss', 'slow vision', 'rapid vision', 'tunnel vision', 'peripheral vision loss', 'central vision loss', 'visual distortions', 'blind spots', 'sight flashing', 'sight flickering', 'sight tingling', 'sight buzzing', 'sight burning', 'sight itching', 'sight redness', 'sight swelling', 'sight pain', 'sight dryness', 'sight tearing', 'sight discharge', 'sight heaviness', 'sight tightness', 'sight fullness', 'sight sensitivity', 'sight irritation', 'sight inflammation', 'stomach is paining', 'backache', 'back ache', 'knee pain', 'knee is paining', 'knees are hurting', 'knee is paining', 'knee ache', 'eyes are paining', 'knees ache', 'knee discomfort', 'kneeling discomfort', 'knee soreness', 'knee tenderness', 'knee throbbing', 'knee swelling', 'cramps', 'muscle cramps', 'leg cramps', 'abdominal cramps', 'cramping sensations', 'cramp-like pain', 'cramps in legs', 'cramps during exercise', 'cramps at night', 'cramps and spasms', 'ulcers', 'bleeding', 'anxiety', 'insomnia', 'cancer', 'hypertension', 'diabetes', 'tinnitus', 'palpitations', 'urinary frequency', 'urinary urgency', 'tingling', 'night sweats', 'dry mouth', 'excessive thirst', 'acne', 'bruising', 'confusion', 'memory loss', 'hoarseness', 'wheezing', 'itchy eyes', 'dry eyes', 'difficulty swallowing', 'restlessness', 'yellow skin', 'yellow eyes', 'bloating', 'abdominal bloating', 'feeling bloated', 'stomach bloating', 'bloated stomach', 'bloating sensation', 'bloating and discomfort', 'chest bloating', 'bloating and gas', 'abdominal swelling', 'gas', 'excess gas', 'flatulence', 'intestinal gas', 'abdominal gas', 'gas buildup', 'excessive gas', 'gas pains', 'gas and bloating', 'gas discomfort', 'hiccups', 'singultus', 'persistent hiccups', 'constant hiccups', 'frequent hiccups', 'hiccup episodes', 'hiccups and discomfort', 'hiccups at night', 'hiccups and nausea', 'hiccups and pain', 'indigestion', 'dyspepsia', 'upset stomach', 'stomach discomfort', 'indigestion pain', 'indigestion and bloating', 'chronic indigestion', 'indigestion after eating', 'indigestion and nausea', 'indigestion and gas', 'heartburn', 'acid reflux', 'gastroesophageal reflux', 'burning sensation in chest', 'esophageal reflux', 'acid indigestion', 'burning in chest', 'chest burning', 'burning sensation after eating', 'heartburn and indigestion', 'mouth sores', 'canker sores', 'aphthous ulcers', 'oral ulcers', 'mouth ulcers', 'painful mouth sores', 'mouth lesions', 'sores in mouth', 'mouth pain', 'mouth sores and burning', 'nosebleeds', 'epistaxis', 'bleeding from nose', 'blood in nose', 'nose bleeding', 'frequent nosebleeds', 'nosebleeds and dizziness', 'nosebleeds and pain', 'nosebleeds after injury', 'nosebleeds and dryness', 'ear ringing', 'tinnitus', 'ringing in ears', 'buzzing in ears', 'hissing in ears', 'whistling in ears', 'ear noises', 'ringing sounds in ears', 'constant ear ringing', 'ear ringing and dizziness', 'double vision', 'diplopia', 'seeing double', 'blurry double vision', 'crossed eyes', 'double images', 'overlapping vision', 'dual vision', 'seeing two images', 'double sight', 'eye redness', 'eyes red', 'conjunctival redness', 'redness in eyes', 'reddened eyes', 'bloodshot eyes', 'eye irritation with redness', 'redness and itching in eyes', 'redness and tearing in eyes', 'eye discharge', 'runny eyes', 'watery eyes', 'greasy eye discharge', 'clear eye discharge', 'yellow eye discharge', 'green eye discharge', 'eye mucus', 'sticky eye discharge', 'eye fluid', 'ear discharge', 'otorrhea', 'fluid from ears', 'wet ears', 'ear fluid', 'ear wax buildup', 'ear infection', 'earache', 'hearing loss', 'decreased hearing', 'difficulty hearing', 'partial hearing loss', 'complete hearing loss', 'muffled hearing', 'hearing impairment', 'reduced hearing ability', 'hearing difficulty', 'sound muffling', 'balance problems', 'unsteadiness', 'difficulty balancing', 'lack of balance', 'imbalance', 'wobbly gait', 'unstable walking', 'balance instability', 'balance disorder', 'trouble maintaining balance', 'taste changes', 'altered taste', 'dysgeusia', 'changed taste', 'distorted taste', 'metallic taste', 'bitter taste', 'sweet taste alteration', 'savory taste changes', 'taste distortion', 'smell changes', 'altered smell', 'dysosmia', 'changed sense of smell', 'distorted smell', 'reduced smell', 'increased smell', 'loss of smell', 'olfactory changes', 'smell distortion', 'rapid breathing', 'tachypnea', 'fast breathing', 'quick breaths', 'breathing fast', 'increased respiratory rate', 'heavy breathing', 'shallow breathing', 'rapid breaths', 'breathlessness', 'irregular heartbeat', 'arrhythmia', 'heart rhythm irregularity', 'skipped beats', 'fluttering heart', 'palpitations', 'fluttering in chest', 'uneven heart rate', 'heart skipping beats', 'abnormal heartbeat'
     # Add more symptoms and their variations as needed
 ]
+
 # Expanded medications list
 medications_list = [
     "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen","Dolo 650",
@@ -271,15 +258,13 @@ def translate_to_hindi(text):
         logger.error(f"Translation error: {e}")
         return text
 
+
 def correct_spelling(text):
-    """
-    Corrects the spelling of the given text using TextBlob while preserving medical terms.
 
-    Args:
-        text (str): The input text to correct.
-
-    Returns:
-        str: The spell-corrected text.
+    #Corrects the spelling of the given text using TextBlob while preserving medical terms.
+    #Args:
+    #    text (str): The input text to correct.
+    #Returns: str: The spell-corrected text.
     """
     try:
         blob = TextBlob(text)
@@ -298,47 +283,13 @@ def correct_spelling(text):
     except Exception as e:
         logger.error(f"Spell correction failed: {e}")
         return text  # Return original text if correction fails
+    """
 
 # -------------------- Symptom Follow-Up Questions -------------------- #
 
-# Define a mapping from canonical symptoms to their variants
-canonical_symptom_mapping = {
-    'pain': ['pain', 'back pain', 'abdominal pain', 'chest pain', 'joint pain','stomach pain','stomach ache','stomach pain', 'stomachache', 'abdominal discomfort','stomachache','stomachpain','knee pain'],
-    #'stomach pain': ['stomach ache', 'stomach pain', 'stomachache', 'abdominal discomfort'],
-    'headache': ['headache', 'migraine', 'cephalalgia'],
-    'nausea': ['nausea', 'queasiness', 'sickness', 'upset stomach'],
-    'fever': ['fever', 'pyrexia','high temperature'],
-    'cough' : ['cough'],
-    'dizziness': ['dizziness', 'dizzy', 'lightheadedness', 'vertigo'],
-    'yellow eyes': ['yellow eyes', 'jaundice', 'scleral icterus'],
-    'acidity' : ['acidity','gastritis'],
-    'weakness' : ['weakness','dehydration','dehydrated'],
-    'skin rash' : ['skin rash', 'skin rashes'],
-    # Add more canonical symptoms and their variants as needed
-}
-
-# Generate a reverse mapping: any variant symptom maps to its canonical term
-symptom_to_canonical = {}
-for canonical, variants in canonical_symptom_mapping.items():
-    for variant in variants:
-        symptom_to_canonical[variant.lower()] = canonical.lower()
-
-# Define follow-up questions for each canonical symptom
-canonical_symptom_followup_questions = {
-    'pain': [
-        #{"hi": "क्या आपको पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain?", "category": "abdominal_pain", "symptom": "Abdominal pain"},
-        {"hi": "पेट दर्द कहाँ महसूस हो रहा है?", "en": "Where exactly are you feeling the pain?", "category": "pain_location", "symptom": None},
-        {"hi": "क्या पेट दर्द के साथ मतली है?", "en": "Do you have nausea along with the pain?", "category": "nausea", "symptom": "Nausea"},
-        {"hi": "क्या आपको उल्टी भी हो रही है?", "en": "Are you also vomiting?", "category": "vomiting", "symptom": "Vomiting"},
-        {"hi": "क्या आपके पेट में सूजन है?", "en": "Is there any swelling?", "category": "swelling", "symptom": "Abdominal swelling"},
-        {"hi": "क्या आपको कब्ज है या दस्त हो रहे हैं?", "en": "Are you experiencing constipation or diarrhea?", "category": "bowel_changes", "symptom": "Constipation or diarrhea"},
-        {"hi": "क्या पेट दर्द अचानक शुरू हुआ था या धीरे-धीरे?", "en": "Did the pain start suddenly or gradually?", "category": "pain_onset", "symptom": None},
-        {"hi": "क्या पेट दर्द खाने के बाद बढ़ता है?", "en": "Does the pain increase after eating?", "category": "postprandial_pain", "symptom": "Postprandial pain"},
-        {"hi": "क्या आपको पसीना आ रहा है पेट दर्द के साथ?", "en": "Are you sweating with the pain?", "category": "sweating", "symptom": "Sweating"},
-        {"hi": "क्या आपके पेट में कोई हार्टबिटिंग महसूस हो रहा है?", "en": "Do you feel any heartburn in your abdomen?", "category": "heartburn", "symptom": "Heartburn"},
-        {"hi": "क्या आप घायल हुए हैं?", "en": "Have you been injured?", "category": "injury", "symptom": "Injury"},
-    ],
-    'stomach ache': [
+# Define symptom-specific follow-up questions with associated symptoms
+symptom_followup_questions = {
+       'stomach ache': [
         {"hi": "आपने हाल ही में कौन से खाद्य पदार्थ खाए?", "en": "What foods did you recently eat?",  "category": "pain_location", "symptom": "stomach ache"},
         {"hi": "सीने में दर्द की तीव्रता क्या है?", "en": "What is the intensity of your stomach ache?", "category": "stomach ache", "symptom": "stomach ache"},
         {"hi": "क्या दर्द का स्थान स्पष्ट है?", "en": "Is the location of the pain specific?", "category": "pain_location", "symptom": "Specific pain location"},
@@ -363,7 +314,7 @@ canonical_symptom_followup_questions = {
          {"hi": "क्या आप प्रतिदिन व्यायाम करते हैं?", "en": "Do you exercise daily?", "category": "weakness", "symptom": "Weakness"},
         {"hi": "क्या आप शारीरिक रूप से विकलांग व्यक्ति हैं?", "en": "Are you physically challenged person?", "category": "weakness", "symptom": "Weakness"},
     ],
-    
+
     'headache': [
         {"hi": "क्या आपका सिरदर्द लगातार है या बीच-बीच में आता है?", "en": "Is your headache constant or intermittent?", "category": "headache_type", "symptom": None},
         {"hi": "क्या सिरदर्द की तीव्रता बढ़ रही है?", "en": "Is the intensity of your headache increasing?", "category": "intensity_increase", "symptom": None},
@@ -405,6 +356,19 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या आपके बवासीर या पेट में दर्द है साथ में पीली आँखें?", "en": "Do you have hemorrhoids or abdominal pain along with yellow eyes?", "category": "hemorrhoids_abdominal_pain", "symptom": "Hemorrhoids or abdominal pain"},
         {"hi": "क्या आपकी आँखों में जलन हो रही है?", "en": "Are your eyes feeling itchy along with yellowing?", "category": "itchy_eyes", "symptom": "Itchy eyes"},
         {"hi": "क्या आपके मुँह से पीली लार निकल रही है?", "en": "Is yellow saliva coming from your mouth?", "category": "yellow_saliva", "symptom": "Yellow saliva"},
+    ],
+        'pain': [
+        #{"hi": "क्या आपको पेट में दर्द हो रहा है?", "en": "Are you experiencing abdominal pain?", "category": "abdominal_pain", "symptom": "Abdominal pain"},
+        {"hi": "पेट दर्द कहाँ महसूस हो रहा है?", "en": "Where exactly are you feeling the pain?", "category": "pain_location", "symptom": None},
+        {"hi": "क्या पेट दर्द के साथ मतली है?", "en": "Do you have nausea along with the pain?", "category": "nausea", "symptom": "Nausea"},
+        {"hi": "क्या आपको उल्टी भी हो रही है?", "en": "Are you also vomiting?", "category": "vomiting", "symptom": "Vomiting"},
+        {"hi": "क्या आपके पेट में सूजन है?", "en": "Is there any swelling?", "category": "swelling", "symptom": "Abdominal swelling"},
+        {"hi": "क्या आपको कब्ज है या दस्त हो रहे हैं?", "en": "Are you experiencing constipation or diarrhea?", "category": "bowel_changes", "symptom": "Constipation or diarrhea"},
+        {"hi": "क्या पेट दर्द अचानक शुरू हुआ था या धीरे-धीरे?", "en": "Did the pain start suddenly or gradually?", "category": "pain_onset", "symptom": None},
+        {"hi": "क्या पेट दर्द खाने के बाद बढ़ता है?", "en": "Does the pain increase after eating?", "category": "postprandial_pain", "symptom": "Postprandial pain"},
+        {"hi": "क्या आपको पसीना आ रहा है पेट दर्द के साथ?", "en": "Are you sweating with the pain?", "category": "sweating", "symptom": "Sweating"},
+        {"hi": "क्या आपके पेट में कोई हार्टबिटिंग महसूस हो रहा है?", "en": "Do you feel any heartburn in your abdomen?", "category": "heartburn", "symptom": "Heartburn"},
+        {"hi": "क्या आप घायल हुए हैं?", "en": "Have you been injured?", "category": "injury", "symptom": "Injury"},
     ],
     'fever': [
         {"hi": "क्या आपका बुखार लगातार है या बीच-बीच में आता है?", "en": "Is your fever constant or intermittent?", "category": "fever_type", "symptom": None},
@@ -1168,7 +1132,7 @@ canonical_symptom_followup_questions = {
         {"hi": "क्या सूजन किसी विशेष समय पर अधिक होती है?", "en": "Does the swelling occur more frequently at any specific time?", "category": "time_related_skin_swelling", "symptom": None},
         {"hi": "क्या सूजन के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?", "en": "Are there any changes in your skin due to swelling?", "category": "skin_changes_with_skin_swelling", "symptom": "skin discoloration"}
     ],
-    
+
     'acne' : [
     #{"hi": "आपको कितने समय से एक्ने है?", "en": "How long have you had acne?", "category": "acne", "symptom": "acne duration"},
     {"hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?", "en": "Where do you typically get acne?", "category": "acne", "symptom": "acne location"},
@@ -1188,18 +1152,18 @@ canonical_symptom_followup_questions = {
     {"hi": "आपको सोने में सामान्यतः कितना समय लगता है?", "en": "How long does it typically take you to fall asleep?", "category": "insomnia", "symptom": "time to fall asleep"},
     {"hi": "क्या आप रात में उठते हैं? अगर हां, तो कितनी बार?", "en": "Do you wake up during the night? If so, how often?", "category": "insomnia", "symptom": "night waking"},
     {"hi": "क्या आप जब उठते हैं तो आराम महसूस करते हैं?", "en": "Do you feel rested when you wake up?", "category": "insomnia", "symptom": "restfulness"},
-    {"hi": "क्या आपने हाल ही में अपनी जीवनशैली में कोई बदलाव अनुभव किया है (जैसे तनाव, आहार, यात्रा)?", 
-     "en": "Have you experienced any changes in your lifestyle recently (e.g., stress, diet, travel)?", 
+    {"hi": "क्या आपने हाल ही में अपनी जीवनशैली में कोई बदलाव अनुभव किया है (जैसे तनाव, आहार, यात्रा)?",
+     "en": "Have you experienced any changes in your lifestyle recently (e.g., stress, diet, travel)?",
      "category": "lifestyle", "symptom": "lifestyle changes"},
     {"hi": "क्या आप कैफीन, निकोटीन, या शराब का सेवन करते हैं, और अगर हां, तो कब?", "en": "Do you consume caffeine, nicotine, or alcohol, and if so, when?", "category": "substance use", "symptom": "substance use"},
-    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं (प्रिस्क्रिप्शन, ओवर-द-काउंटर, या हर्बल)?", 
-     "en": "Are you taking any medications (prescription, over-the-counter, or herbal)?", 
+    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं (प्रिस्क्रिप्शन, ओवर-द-काउंटर, या हर्बल)?",
+     "en": "Are you taking any medications (prescription, over-the-counter, or herbal)?",
      "category": "medication", "symptom": "medication"},
-    {"hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं (जैसे दर्द, सांस लेने में समस्या, मानसिक स्वास्थ्य समस्याएँ)?", 
-     "en": "Do you have any other medical conditions (e.g., pain, breathing problems, mental health conditions)?", 
+    {"hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं (जैसे दर्द, सांस लेने में समस्या, मानसिक स्वास्थ्य समस्याएँ)?",
+     "en": "Do you have any other medical conditions (e.g., pain, breathing problems, mental health conditions)?",
      "category": "medical conditions", "symptom": "medical conditions"},
-    {"hi": "क्या आप सोने से पहले कोई गतिविधियाँ या दिनचर्या करते हैं (जैसे स्क्रीन टाइम, व्यायाम, विश्राम)?", 
-     "en": "Do you engage in any activities or routines before bed (e.g., screen time, exercise, relaxation)?", 
+    {"hi": "क्या आप सोने से पहले कोई गतिविधियाँ या दिनचर्या करते हैं (जैसे स्क्रीन टाइम, व्यायाम, विश्राम)?",
+     "en": "Do you engage in any activities or routines before bed (e.g., screen time, exercise, relaxation)?",
      "category": "bedtime routines", "symptom": "bedtime routine"}
 ],
 
@@ -1208,21 +1172,21 @@ canonical_symptom_followup_questions = {
     {"hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं?", "en": "What type of memory problems are you experiencing?", "category": "memory loss", "symptom": "memory problem type"},
     {"hi": "क्या याददाश्त की कमी समय के साथ बढ़ रही है?", "en": "Is the memory loss getting worse over time?", "category": "memory loss", "symptom": "memory loss progression"},
     {"hi": "क्या आपको हाल ही में कोई सिर की चोट या आघात हुआ है?", "en": "Have you had any recent head injuries or trauma?", "category": "head injury", "symptom": "head injury"},
-    {"hi": "क्या आपको विशिष्ट विवरण याद करने में परेशानी हो रही है, या यह सामान्य याददाश्त की कमी है?", 
-     "en": "Do you have trouble recalling specific details, or is it more about general memory loss?", 
+    {"hi": "क्या आपको विशिष्ट विवरण याद करने में परेशानी हो रही है, या यह सामान्य याददाश्त की कमी है?",
+     "en": "Do you have trouble recalling specific details, or is it more about general memory loss?",
      "category": "memory loss", "symptom": "specific vs general memory loss"},
-    {"hi": "क्या आप किसी अन्य संज्ञानात्मक समस्या का अनुभव कर रहे हैं, जैसे भ्रम या ध्यान केंद्रित करने में कठिनाई?", 
-     "en": "Are you experiencing any other cognitive problems, such as confusion or difficulty concentrating?", 
+    {"hi": "क्या आप किसी अन्य संज्ञानात्मक समस्या का अनुभव कर रहे हैं, जैसे भ्रम या ध्यान केंद्रित करने में कठिनाई?",
+     "en": "Are you experiencing any other cognitive problems, such as confusion or difficulty concentrating?",
      "category": "cognitive problems", "symptom": "cognitive problems"},
-    {"hi": "क्या आपके परिवार में किसी को याददाश्त की समस्याएँ या तंत्रिका तंत्र की बीमारियाँ हैं (जैसे अल्जाइमर, डिमेंशिया)?", 
-     "en": "Do you have any family history of memory problems or neurological conditions (e.g., Alzheimer’s, dementia)?", 
+    {"hi": "क्या आपके परिवार में किसी को याददाश्त की समस्याएँ या तंत्रिका तंत्र की बीमारियाँ हैं (जैसे अल्जाइमर, डिमेंशिया)?",
+     "en": "Do you have any family history of memory problems or neurological conditions (e.g., Alzheimer’s, dementia)?",
      "category": "family history", "symptom": "family history"},
-    {"hi": "क्या आपको हाल ही में किसी मूड परिवर्तन का अनुभव हो रहा है, जैसे अवसाद या चिंता?", 
-     "en": "Have you been experiencing any mood changes, such as depression or anxiety?", 
+    {"hi": "क्या आपको हाल ही में किसी मूड परिवर्तन का अनुभव हो रहा है, जैसे अवसाद या चिंता?",
+     "en": "Have you been experiencing any mood changes, such as depression or anxiety?",
      "category": "mood changes", "symptom": "mood changes"},
     {"hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?", "en": "Are you taking any medications or supplements?", "category": "medications", "symptom": "medication use"},
-    {"hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं, जैसे उच्च रक्तचाप, मधुमेह, या थायरॉयड की समस्याएँ?", 
-     "en": "Do you have any other medical conditions, such as high blood pressure, diabetes, or thyroid problems?", 
+    {"hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं, जैसे उच्च रक्तचाप, मधुमेह, या थायरॉयड की समस्याएँ?",
+     "en": "Do you have any other medical conditions, such as high blood pressure, diabetes, or thyroid problems?",
      "category": "medical conditions", "symptom": "medical conditions"}
 ],
 
@@ -1232,20 +1196,20 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या आप हर बार कितनी मात्रा में पेशाब करते हैं?", "en": "How much urine do you pass each time?", "category": "urinary frequency", "symptom": "urine amount"},
     {"hi": "क्या आपको पेशाब करते समय कोई दर्द या असुविधा महसूस हो रही है?", "en": "Are you experiencing any pain or discomfort while urinating?", "category": "urinary frequency", "symptom": "pain during urination"},
     {"hi": "क्या आपने अपने मूत्र के रंग या गंध में कोई बदलाव देखा है?", "en": "Have you noticed any changes in the color or odor of your urine?", "category": "urinary frequency", "symptom": "urine color/odor changes"},
-    {"hi": "क्या आपको पेशाब करने की तीव्र आवश्यकता महसूस होती है लेकिन इसे रोकने में कठिनाई होती है?", 
-     "en": "Do you have a strong urge to urinate but find it difficult to hold it in?", 
+    {"hi": "क्या आपको पेशाब करने की तीव्र आवश्यकता महसूस होती है लेकिन इसे रोकने में कठिनाई होती है?",
+     "en": "Do you have a strong urge to urinate but find it difficult to hold it in?",
      "category": "urinary frequency", "symptom": "urgency/difficulty holding urine"},
-    {"hi": "क्या आपको हाल ही में कोई मूत्राशय संक्रमण (UTI) या अन्य मूत्र संबंधी समस्याएँ हुई हैं?", 
-     "en": "Have you recently had any urinary tract infections (UTIs) or other urinary problems?", 
+    {"hi": "क्या आपको हाल ही में कोई मूत्राशय संक्रमण (UTI) या अन्य मूत्र संबंधी समस्याएँ हुई हैं?",
+     "en": "Have you recently had any urinary tract infections (UTIs) or other urinary problems?",
      "category": "urinary frequency", "symptom": "UTI or urinary issues"},
-    {"hi": "क्या आप बहुत अधिक तरल पदार्थ पीते हैं, खासकर कैफीन, शराब या शर्करा वाले पेय?", 
-     "en": "Do you drink a lot of fluids, especially caffeine, alcohol, or sugary drinks?", 
+    {"hi": "क्या आप बहुत अधिक तरल पदार्थ पीते हैं, खासकर कैफीन, शराब या शर्करा वाले पेय?",
+     "en": "Do you drink a lot of fluids, especially caffeine, alcohol, or sugary drinks?",
      "category": "urinary frequency", "symptom": "fluid intake habits"},
-    {"hi": "क्या आप अन्य कोई लक्षण अनुभव कर रहे हैं, जैसे तीव्रता, रिसाव, या पेशाब में खून?", 
-     "en": "Are you experiencing any other symptoms, such as urgency, leakage, or blood in your urine?", 
+    {"hi": "क्या आप अन्य कोई लक्षण अनुभव कर रहे हैं, जैसे तीव्रता, रिसाव, या पेशाब में खून?",
+     "en": "Are you experiencing any other symptoms, such as urgency, leakage, or blood in your urine?",
      "category": "urinary frequency", "symptom": "other urinary symptoms"},
-    {"hi": "क्या आपको हाल ही में अपने स्वास्थ्य में कोई बदलाव महसूस हुआ है, जैसे वजन बढ़ना, मधुमेह, या गर्भावस्था?", 
-     "en": "Have you had any recent changes in your health, such as weight gain, diabetes, or pregnancy?", 
+    {"hi": "क्या आपको हाल ही में अपने स्वास्थ्य में कोई बदलाव महसूस हुआ है, जैसे वजन बढ़ना, मधुमेह, या गर्भावस्था?",
+     "en": "Have you had any recent changes in your health, such as weight gain, diabetes, or pregnancy?",
      "category": "urinary frequency", "symptom": "health changes"}
 ],
 
@@ -1253,348 +1217,348 @@ canonical_symptom_followup_questions = {
     #{"hi": "आपको कितने समय से कान में दर्द हो रहा है?", "en": "How long have you been experiencing ear pain?", "category": "ear pain", "symptom": "ear pain duration"},
     {"hi": "क्या दर्द लगातार है, या यह आता-जाता है?", "en": "Is the pain constant, or does it come and go?", "category": "ear pain", "symptom": "pain pattern"},
     {"hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?", "en": "Do you have pain in one ear or both ears?", "category": "ear pain", "symptom": "ear affected"},
-    {"hi": "क्या आप अन्य लक्षण अनुभव कर रहे हैं, जैसे सुनाई में कमी, कान में घंटी बजने की आवाज (टिनिटस), या चक्कर आना?", 
-     "en": "Are you experiencing any other symptoms, such as hearing loss, ringing in the ear (tinnitus), or dizziness?", 
+    {"hi": "क्या आप अन्य लक्षण अनुभव कर रहे हैं, जैसे सुनाई में कमी, कान में घंटी बजने की आवाज (टिनिटस), या चक्कर आना?",
+     "en": "Are you experiencing any other symptoms, such as hearing loss, ringing in the ear (tinnitus), or dizziness?",
      "category": "ear pain", "symptom": "other symptoms"},
-    {"hi": "क्या दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ था?", 
-     "en": "Did the pain start after a cold, sinus infection, or upper respiratory infection?", 
+    {"hi": "क्या दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ था?",
+     "en": "Did the pain start after a cold, sinus infection, or upper respiratory infection?",
      "category": "ear pain", "symptom": "infection history"},
-    {"hi": "क्या आपको हाल ही में कान में कोई चोट या आघात हुआ है?", 
-     "en": "Have you had any recent injuries or trauma to the ear?", 
+    {"hi": "क्या आपको हाल ही में कान में कोई चोट या आघात हुआ है?",
+     "en": "Have you had any recent injuries or trauma to the ear?",
      "category": "ear pain", "symptom": "ear injury"},
-    {"hi": "क्या आपके कान से कोई रिसाव या डिस्चार्ज हो रहा है?", 
-     "en": "Do you have drainage or discharge coming from your ear?", 
+    {"hi": "क्या आपके कान से कोई रिसाव या डिस्चार्ज हो रहा है?",
+     "en": "Do you have drainage or discharge coming from your ear?",
      "category": "ear pain", "symptom": "ear discharge"},
-    {"hi": "क्या आप हाल ही में जोरदार शोर या पानी (जैसे तैराकी या स्नान) के संपर्क में आए हैं?", 
-     "en": "Have you recently been exposed to loud noises or water (e.g., swimming or bathing)?", 
+    {"hi": "क्या आप हाल ही में जोरदार शोर या पानी (जैसे तैराकी या स्नान) के संपर्क में आए हैं?",
+     "en": "Have you recently been exposed to loud noises or water (e.g., swimming or bathing)?",
      "category": "ear pain", "symptom": "noise or water exposure"},
-    {"hi": "क्या आपको बाहरी कान या कान के आस-पास के क्षेत्र को छूने या खींचने पर दर्द हो रहा है?", 
-     "en": "Are you experiencing any pain when touching or pulling on the outer ear or around the ear area?", 
+    {"hi": "क्या आपको बाहरी कान या कान के आस-पास के क्षेत्र को छूने या खींचने पर दर्द हो रहा है?",
+     "en": "Are you experiencing any pain when touching or pulling on the outer ear or around the ear area?",
      "category": "ear pain", "symptom": "touch pain"},
-    {"hi": "क्या आपको कान में संक्रमण या अन्य कान संबंधित समस्याओं का इतिहास है?", 
-     "en": "Do you have a history of ear infections or other ear-related issues?", 
+    {"hi": "क्या आपको कान में संक्रमण या अन्य कान संबंधित समस्याओं का इतिहास है?",
+     "en": "Do you have a history of ear infections or other ear-related issues?",
      "category": "ear pain", "symptom": "ear infection history"}
 ],
 
 'hypertension' : [
     #{"hi": "आपको उच्च रक्तचाप के बारे में कितने समय से पता है?", "en": "How long have you been aware of your high blood pressure?", "category": "hypertension", "symptom": "awareness of hypertension"},
     {"hi": "क्या आपके परिवार में उच्च रक्तचाप या हृदय रोग का इतिहास है?", "en": "Do you have a family history of high blood pressure or heart disease?", "category": "hypertension", "symptom": "family history"},
-    {"hi": "क्या आपको किसी अन्य चिकित्सा समस्याओं का निदान हुआ है (जैसे, मधुमेह, गुर्दे की बीमारी)?", 
-     "en": "Have you been diagnosed with any other medical conditions (e.g., diabetes, kidney disease)?", 
+    {"hi": "क्या आपको किसी अन्य चिकित्सा समस्याओं का निदान हुआ है (जैसे, मधुमेह, गुर्दे की बीमारी)?",
+     "en": "Have you been diagnosed with any other medical conditions (e.g., diabetes, kidney disease)?",
      "category": "hypertension", "symptom": "other medical conditions"},
-    {"hi": "क्या आप वर्तमान में कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ या सप्लीमेंट्स ले रहे हैं?", 
-     "en": "Are you currently taking any medications, including over-the-counter drugs or supplements?", 
+    {"hi": "क्या आप वर्तमान में कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+     "en": "Are you currently taking any medications, including over-the-counter drugs or supplements?",
      "category": "hypertension", "symptom": "medication use"},
-    {"hi": "क्या आपको धूम्रपान करने का इतिहास है या अत्यधिक शराब का सेवन करते हैं?", 
-     "en": "Do you have a history of smoking or excessive alcohol consumption?", 
+    {"hi": "क्या आपको धूम्रपान करने का इतिहास है या अत्यधिक शराब का सेवन करते हैं?",
+     "en": "Do you have a history of smoking or excessive alcohol consumption?",
      "category": "hypertension", "symptom": "smoking or alcohol use"},
-    {"hi": "आप अपनी आहार को कैसे वर्णित करेंगे (जैसे, नमक, प्रसंस्कृत खाद्य पदार्थों में अधिक)?", 
-     "en": "How would you describe your diet (e.g., high in salt, processed foods)?", 
+    {"hi": "आप अपनी आहार को कैसे वर्णित करेंगे (जैसे, नमक, प्रसंस्कृत खाद्य पदार्थों में अधिक)?",
+     "en": "How would you describe your diet (e.g., high in salt, processed foods)?",
      "category": "hypertension", "symptom": "diet habits"},
-    {"hi": "क्या आप नियमित रूप से शारीरिक गतिविधि या व्यायाम करते हैं?", 
-     "en": "Do you engage in regular physical activity or exercise?", 
+    {"hi": "क्या आप नियमित रूप से शारीरिक गतिविधि या व्यायाम करते हैं?",
+     "en": "Do you engage in regular physical activity or exercise?",
      "category": "hypertension", "symptom": "physical activity"},
-    {"hi": "क्या आप सिरदर्द, चक्कर आना, या सीने में दर्द जैसे लक्षण अनुभव कर रहे हैं?", 
-     "en": "Are you experiencing any symptoms like headaches, dizziness, or chest pain?", 
+    {"hi": "क्या आप सिरदर्द, चक्कर आना, या सीने में दर्द जैसे लक्षण अनुभव कर रहे हैं?",
+     "en": "Are you experiencing any symptoms like headaches, dizziness, or chest pain?",
      "category": "hypertension", "symptom": "hypertension symptoms"},
-    {"hi": "आप अपने दैनिक जीवन में कितना तनाव महसूस कर रहे हैं?", 
-     "en": "How much stress are you experiencing in your daily life?", 
+    {"hi": "आप अपने दैनिक जीवन में कितना तनाव महसूस कर रहे हैं?",
+     "en": "How much stress are you experiencing in your daily life?",
      "category": "hypertension", "symptom": "stress levels"},
-    {"hi": "क्या आप नियमित रूप से अपने रक्तचाप की निगरानी करते हैं? यदि हाँ, तो आपके सामान्य रक्तचाप के पठन क्या हैं?", 
-     "en": "Do you monitor your blood pressure regularly? If so, what are your typical readings?", 
+    {"hi": "क्या आप नियमित रूप से अपने रक्तचाप की निगरानी करते हैं? यदि हाँ, तो आपके सामान्य रक्तचाप के पठन क्या हैं?",
+     "en": "Do you monitor your blood pressure regularly? If so, what are your typical readings?",
      "category": "hypertension", "symptom": "blood pressure monitoring"}
 ],
 
 'tremors' : [
     #{"hi": "आपको कितने समय से कंपन महसूस हो रहे हैं?", "en": "How long have you been experiencing tremors?", "category": "tremors", "symptom": "duration of tremors"},
     {"hi": "क्या कंपन हमेशा होते हैं या यह आते-जाते हैं?", "en": "Are the tremors present all the time or do they come and go?", "category": "tremors", "symptom": "tremor frequency"},
-    {"hi": "क्या कंपन आपके शरीर के किसी विशेष हिस्से में होते हैं (जैसे, हाथ, सिर, आवाज)?", 
-     "en": "Do the tremors occur in specific parts of your body (e.g., hands, head, voice)?", 
+    {"hi": "क्या कंपन आपके शरीर के किसी विशेष हिस्से में होते हैं (जैसे, हाथ, सिर, आवाज)?",
+     "en": "Do the tremors occur in specific parts of your body (e.g., hands, head, voice)?",
      "category": "tremors", "symptom": "affected body parts"},
-    {"hi": "क्या कंपन किसी विशेष गतिविधि के साथ और अधिक बढ़ जाते हैं, जैसे कुछ पकड़ने या हिलाने के दौरान?", 
-     "en": "Do the tremors get worse with certain activities, like holding something or moving?", 
+    {"hi": "क्या कंपन किसी विशेष गतिविधि के साथ और अधिक बढ़ जाते हैं, जैसे कुछ पकड़ने या हिलाने के दौरान?",
+     "en": "Do the tremors get worse with certain activities, like holding something or moving?",
      "category": "tremors", "symptom": "activity-related worsening"},
-    {"hi": "क्या आप कोई अन्य लक्षण अनुभव कर रहे हैं, जैसे कमजोरी, कठोरता, या समन्वय में समस्या?", 
-     "en": "Are you experiencing any other symptoms, such as weakness, stiffness, or difficulty with coordination?", 
+    {"hi": "क्या आप कोई अन्य लक्षण अनुभव कर रहे हैं, जैसे कमजोरी, कठोरता, या समन्वय में समस्या?",
+     "en": "Are you experiencing any other symptoms, such as weakness, stiffness, or difficulty with coordination?",
      "category": "tremors", "symptom": "associated symptoms"},
-    {"hi": "क्या आपके परिवार में कंपन या न्यूरोलॉजिकल स्थितियों का इतिहास है (जैसे, पार्किंसंस रोग)?", 
-     "en": "Do you have a family history of tremors or neurological conditions (e.g., Parkinson’s disease)?", 
+    {"hi": "क्या आपके परिवार में कंपन या न्यूरोलॉजिकल स्थितियों का इतिहास है (जैसे, पार्किंसंस रोग)?",
+     "en": "Do you have a family history of tremors or neurological conditions (e.g., Parkinson’s disease)?",
      "category": "tremors", "symptom": "family history of neurological conditions"},
-    {"hi": "क्या आपने हाल ही में कोई तनाव, चिंता, या मानसिक परिवर्तन अनुभव किए हैं?", 
-     "en": "Have you recently experienced any stress, anxiety, or emotional changes?", 
+    {"hi": "क्या आपने हाल ही में कोई तनाव, चिंता, या मानसिक परिवर्तन अनुभव किए हैं?",
+     "en": "Have you recently experienced any stress, anxiety, or emotional changes?",
      "category": "tremors", "symptom": "emotional or stress-related changes"},
-    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें पर्ची वाली, ओवर-द-काउंटर दवाइयाँ, या सप्लीमेंट्स शामिल हैं?", 
-     "en": "Are you taking any medications, including prescription, over-the-counter, or supplements?", 
+    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें पर्ची वाली, ओवर-द-काउंटर दवाइयाँ, या सप्लीमेंट्स शामिल हैं?",
+     "en": "Are you taking any medications, including prescription, over-the-counter, or supplements?",
      "category": "tremors", "symptom": "medication use"},
-    {"hi": "क्या आपको हाल ही में कोई चोट, संक्रमण, या बीमारी हुई है जो आपके तंत्रिका तंत्र को प्रभावित कर सकती है?", 
-     "en": "Have you had any recent injuries, infections, or illnesses that might affect your nervous system?", 
+    {"hi": "क्या आपको हाल ही में कोई चोट, संक्रमण, या बीमारी हुई है जो आपके तंत्रिका तंत्र को प्रभावित कर सकती है?",
+     "en": "Have you had any recent injuries, infections, or illnesses that might affect your nervous system?",
      "category": "tremors", "symptom": "nervous system impact"},
-    {"hi": "क्या आप शराब पीते हैं या कैफीन का सेवन करते हैं, और यदि हां, तो कितनी मात्रा में और कितनी बार?", 
-     "en": "Do you drink alcohol or consume caffeine, and if so, how much and how often?", 
+    {"hi": "क्या आप शराब पीते हैं या कैफीन का सेवन करते हैं, और यदि हां, तो कितनी मात्रा में और कितनी बार?",
+     "en": "Do you drink alcohol or consume caffeine, and if so, how much and how often?",
      "category": "tremors", "symptom": "alcohol or caffeine consumption"}
 ],
 
 'panic attack' : [
     #{"hi": "आपको कितने समय से पैनिक अटैक का अनुभव हो रहा है?", "en": "How long have you been experiencing panic attacks?", "category": "panic_attack", "symptom": "duration of panic attacks"},
     {"hi": "आपको कितनी बार पैनिक अटैक होते हैं?", "en": "How often do you have panic attacks?", "category": "panic_attack", "symptom": "frequency of panic attacks"},
-    {"hi": "आप पैनिक अटैक के दौरान कौन-कौन से लक्षण अनुभव करते हैं (जैसे, तेज़ दिल की धड़कन, पसीना, छाती में दर्द, सांस लेने में कठिनाई)?", 
-     "en": "What symptoms do you experience during a panic attack (e.g., rapid heartbeat, sweating, chest pain, shortness of breath)?", 
+    {"hi": "आप पैनिक अटैक के दौरान कौन-कौन से लक्षण अनुभव करते हैं (जैसे, तेज़ दिल की धड़कन, पसीना, छाती में दर्द, सांस लेने में कठिनाई)?",
+     "en": "What symptoms do you experience during a panic attack (e.g., rapid heartbeat, sweating, chest pain, shortness of breath)?",
      "category": "panic_attack", "symptom": "symptoms during panic attack"},
-    {"hi": "क्या पैनिक अटैक अचानक होते हैं, या आपको कुछ विशेष उत्तेजक (जैसे, तनावपूर्ण स्थिति, भीड़) का पता चलता है?", 
-     "en": "Do the panic attacks occur unexpectedly, or do you notice specific triggers (e.g., stressful situations, crowds)?", 
+    {"hi": "क्या पैनिक अटैक अचानक होते हैं, या आपको कुछ विशेष उत्तेजक (जैसे, तनावपूर्ण स्थिति, भीड़) का पता चलता है?",
+     "en": "Do the panic attacks occur unexpectedly, or do you notice specific triggers (e.g., stressful situations, crowds)?",
      "category": "panic_attack", "symptom": "triggers of panic attacks"},
-    {"hi": "क्या आपको पैनिक अटैक के अलावा भी चिंता या घबराहट महसूस होती है?", 
-     "en": "Do you feel anxious or nervous even when you're not having a panic attack?", 
+    {"hi": "क्या आपको पैनिक अटैक के अलावा भी चिंता या घबराहट महसूस होती है?",
+     "en": "Do you feel anxious or nervous even when you're not having a panic attack?",
      "category": "panic_attack", "symptom": "general anxiety"},
-    {"hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन या आघातक घटना अनुभव की है?", 
-     "en": "Have you experienced any major life stressors or traumatic events recently?", 
+    {"hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन या आघातक घटना अनुभव की है?",
+     "en": "Have you experienced any major life stressors or traumatic events recently?",
      "category": "panic_attack", "symptom": "recent stressors or trauma"},
-    {"hi": "क्या आप पैनिक अटैक के डर से कुछ स्थानों या स्थितियों से बचते हैं?", 
-     "en": "Do you avoid certain situations or places because of the fear of having a panic attack?", 
+    {"hi": "क्या आप पैनिक अटैक के डर से कुछ स्थानों या स्थितियों से बचते हैं?",
+     "en": "Do you avoid certain situations or places because of the fear of having a panic attack?",
      "category": "panic_attack", "symptom": "avoidance behaviors"},
-    {"hi": "क्या आपको किसी अन्य मानसिक स्वास्थ्य समस्याओं का निदान हुआ है, जैसे चिंता, अवसाद, या PTSD?", 
-     "en": "Have you been diagnosed with any other mental health conditions, such as anxiety, depression, or PTSD?", 
+    {"hi": "क्या आपको किसी अन्य मानसिक स्वास्थ्य समस्याओं का निदान हुआ है, जैसे चिंता, अवसाद, या PTSD?",
+     "en": "Have you been diagnosed with any other mental health conditions, such as anxiety, depression, or PTSD?",
      "category": "panic_attack", "symptom": "co-occurring mental health conditions"},
-    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर या हर्बल सप्लीमेंट्स भी शामिल हैं?", 
-     "en": "Are you taking any medications, including over-the-counter or herbal supplements?", 
+    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर या हर्बल सप्लीमेंट्स भी शामिल हैं?",
+     "en": "Are you taking any medications, including over-the-counter or herbal supplements?",
      "category": "panic_attack", "symptom": "medication use"},
-    {"hi": "क्या आपने पैनिक अटैक के दौरान के अलावा कोई शारीरिक परिवर्तन महसूस किए हैं, जैसे सांस लेने में कठिनाई या छाती में दर्द?", 
-     "en": "Have you noticed any physical changes, such as difficulty breathing or chest pain, when you are not having a panic attack?", 
+    {"hi": "क्या आपने पैनिक अटैक के दौरान के अलावा कोई शारीरिक परिवर्तन महसूस किए हैं, जैसे सांस लेने में कठिनाई या छाती में दर्द?",
+     "en": "Have you noticed any physical changes, such as difficulty breathing or chest pain, when you are not having a panic attack?",
      "category": "panic_attack", "symptom": "physical changes outside of panic attacks"}
 ],
 
 'mood swings' : [
     #{"hi": "आपको कितने समय से मूड स्विंग्स का अनुभव हो रहा है?", "en": "How long have you been experiencing mood swings?", "category": "mood_swings", "symptom": "duration of mood swings"},
     {"hi": "आपके मूड स्विंग्स कितनी बार होते हैं?", "en": "How often do your mood swings occur?", "category": "mood_swings", "symptom": "frequency of mood swings"},
-    {"hi": "आप किस प्रकार के मूड परिवर्तनों का अनुभव करते हैं (जैसे, बहुत खुश या बहुत उदास महसूस करना)?", 
-     "en": "What types of mood changes do you experience (e.g., feeling very happy or very sad)?", 
+    {"hi": "आप किस प्रकार के मूड परिवर्तनों का अनुभव करते हैं (जैसे, बहुत खुश या बहुत उदास महसूस करना)?",
+     "en": "What types of mood changes do you experience (e.g., feeling very happy or very sad)?",
      "category": "mood_swings", "symptom": "types of mood changes"},
-    {"hi": "क्या आपके मूड स्विंग्स कुछ विशेष घटनाओं या परिस्थितियों द्वारा प्रेरित होते हैं?", 
-     "en": "Do your mood swings seem to be triggered by specific events or situations?", 
+    {"hi": "क्या आपके मूड स्विंग्स कुछ विशेष घटनाओं या परिस्थितियों द्वारा प्रेरित होते हैं?",
+     "en": "Do your mood swings seem to be triggered by specific events or situations?",
      "category": "mood_swings", "symptom": "triggers of mood swings"},
-    {"hi": "क्या आप मूड स्विंग्स के बीच चिड़चिड़े, चिंतित, या अवसादित महसूस करते हैं?", 
-     "en": "Do you feel irritable, anxious, or depressed between mood swings?", 
+    {"hi": "क्या आप मूड स्विंग्स के बीच चिड़चिड़े, चिंतित, या अवसादित महसूस करते हैं?",
+     "en": "Do you feel irritable, anxious, or depressed between mood swings?",
      "category": "mood_swings", "symptom": "mood between swings"},
-    {"hi": "क्या आपने अपने मूड परिवर्तनों में कोई पैटर्न देखा है, जैसे दिन के कुछ विशेष समयों या सप्ताह के दिनों में?", 
-     "en": "Have you noticed any patterns in your mood changes, such as certain times of the day or during the week?", 
+    {"hi": "क्या आपने अपने मूड परिवर्तनों में कोई पैटर्न देखा है, जैसे दिन के कुछ विशेष समयों या सप्ताह के दिनों में?",
+     "en": "Have you noticed any patterns in your mood changes, such as certain times of the day or during the week?",
      "category": "mood_swings", "symptom": "patterns of mood changes"},
-    {"hi": "क्या आप शारीरिक लक्षणों का अनुभव कर रहे हैं, जैसे नींद, भूख, या ऊर्जा स्तर में बदलाव?", 
-     "en": "Are you experiencing any physical symptoms, such as changes in sleep, appetite, or energy levels?", 
+    {"hi": "क्या आप शारीरिक लक्षणों का अनुभव कर रहे हैं, जैसे नींद, भूख, या ऊर्जा स्तर में बदलाव?",
+     "en": "Are you experiencing any physical symptoms, such as changes in sleep, appetite, or energy levels?",
      "category": "mood_swings", "symptom": "physical symptoms during mood swings"},
-    {"hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन, तनावपूर्ण घटना या आघातक अनुभव किया है?", 
-     "en": "Have you experienced any major life stressors, changes, or traumatic events recently?", 
+    {"hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन, तनावपूर्ण घटना या आघातक अनुभव किया है?",
+     "en": "Have you experienced any major life stressors, changes, or traumatic events recently?",
      "category": "mood_swings", "symptom": "recent life stressors or trauma"},
-    {"hi": "क्या आपके परिवार में मूड विकारों, जैसे बाइपोलर डिसऑर्डर या अवसाद का इतिहास है?", 
-     "en": "Do you have a family history of mood disorders, such as bipolar disorder or depression?", 
+    {"hi": "क्या आपके परिवार में मूड विकारों, जैसे बाइपोलर डिसऑर्डर या अवसाद का इतिहास है?",
+     "en": "Do you have a family history of mood disorders, such as bipolar disorder or depression?",
      "category": "mood_swings", "symptom": "family history of mood disorders"},
-    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर दवाइयाँ या हर्बल सप्लीमेंट्स शामिल हैं, जो आपके मूड को प्रभावित कर सकते हैं?", 
-     "en": "Are you taking any medications, including over-the-counter or herbal supplements, that could affect your mood?", 
+    {"hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर दवाइयाँ या हर्बल सप्लीमेंट्स शामिल हैं, जो आपके मूड को प्रभावित कर सकते हैं?",
+     "en": "Are you taking any medications, including over-the-counter or herbal supplements, that could affect your mood?",
      "category": "mood_swings", "symptom": "medication use affecting mood"}
 ],
 
 'memory loss' : [
     {"hi": "आपको कितने समय से याददाश्त की समस्या हो रही है?", "en": "How long have you been experiencing memory loss?", "category": "memory_loss", "symptom": "duration of memory loss"},
     {"hi": "क्या याददाश्त की समस्या धीरे-धीरे बढ़ी है या अचानक हुई है?", "en": "Is the memory loss gradual or sudden?", "category": "memory_loss", "symptom": "gradual or sudden memory loss"},
-    {"hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं (जैसे नाम, नियुक्तियां, या हाल की घटनाओं को भूलना)?", 
-     "en": "What type of memory problems are you experiencing (e.g., forgetting names, appointments, or recent events)?", 
+    {"hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं (जैसे नाम, नियुक्तियां, या हाल की घटनाओं को भूलना)?",
+     "en": "What type of memory problems are you experiencing (e.g., forgetting names, appointments, or recent events)?",
      "category": "memory_loss", "symptom": "types of memory problems"},
-    {"hi": "क्या आपको पुरानी घटनाओं को याद करने में कठिनाई हो रही है, या मुख्य रूप से हाल की याददाश्त प्रभावित हो रही है?", 
-     "en": "Do you have difficulty recalling past events, or is it mainly recent memory that's affected?", 
+    {"hi": "क्या आपको पुरानी घटनाओं को याद करने में कठिनाई हो रही है, या मुख्य रूप से हाल की याददाश्त प्रभावित हो रही है?",
+     "en": "Do you have difficulty recalling past events, or is it mainly recent memory that's affected?",
      "category": "memory_loss", "symptom": "recent vs past memory"},
-    {"hi": "क्या आप भ्रम या दिशाहीनता महसूस करते हैं (जैसे, परिचित स्थानों में खो जाना)?", 
-     "en": "Do you experience confusion or disorientation (e.g., getting lost in familiar places)?", 
+    {"hi": "क्या आप भ्रम या दिशाहीनता महसूस करते हैं (जैसे, परिचित स्थानों में खो जाना)?",
+     "en": "Do you experience confusion or disorientation (e.g., getting lost in familiar places)?",
      "category": "memory_loss", "symptom": "confusion or disorientation"},
-    {"hi": "क्या आपको कार्यों पर ध्यान केंद्रित करने में समस्या हो रही है?", 
-     "en": "Are you having trouble concentrating or focusing on tasks?", 
+    {"hi": "क्या आपको कार्यों पर ध्यान केंद्रित करने में समस्या हो रही है?",
+     "en": "Are you having trouble concentrating or focusing on tasks?",
      "category": "memory_loss", "symptom": "trouble concentrating"},
-    {"hi": "क्या आपको हाल ही में कोई सिर की चोट, संक्रमण, या बीमारी हुई है?", 
-     "en": "Have you had any recent head injuries, infections, or illnesses?", 
+    {"hi": "क्या आपको हाल ही में कोई सिर की चोट, संक्रमण, या बीमारी हुई है?",
+     "en": "Have you had any recent head injuries, infections, or illnesses?",
      "category": "memory_loss", "symptom": "recent head injuries or illnesses"},
-    {"hi": "क्या आपके परिवार में याददाश्त की समस्याओं या अल्जाइमर रोग या डिमेंशिया जैसी स्थितियों का इतिहास है?", 
-     "en": "Do you have a family history of memory problems or conditions like Alzheimer's disease or dementia?", 
+    {"hi": "क्या आपके परिवार में याददाश्त की समस्याओं या अल्जाइमर रोग या डिमेंशिया जैसी स्थितियों का इतिहास है?",
+     "en": "Do you have a family history of memory problems or conditions like Alzheimer's disease or dementia?",
      "category": "memory_loss", "symptom": "family history of memory problems"},
-    {"hi": "क्या आपने अपनी मानसिक स्थिति में कोई परिवर्तन महसूस किया है, जैसे अवसाद, चिंता, या चिड़चिड़ापन?", 
-     "en": "Have you noticed any changes in your mood, such as depression, anxiety, or irritability?", 
+    {"hi": "क्या आपने अपनी मानसिक स्थिति में कोई परिवर्तन महसूस किया है, जैसे अवसाद, चिंता, या चिड़चिड़ापन?",
+     "en": "Have you noticed any changes in your mood, such as depression, anxiety, or irritability?",
      "category": "memory_loss", "symptom": "mood changes"},
-    {"hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं जो आपकी याददाश्त को प्रभावित कर सकते हैं (जैसे, सोदीन, दर्द निवारक, या एंटीडिप्रेसेंट)?", 
-     "en": "Are you taking any medications or supplements that could affect your memory (e.g., sedatives, pain relievers, or antidepressants)?", 
+    {"hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं जो आपकी याददाश्त को प्रभावित कर सकते हैं (जैसे, सोदीन, दर्द निवारक, या एंटीडिप्रेसेंट)?",
+     "en": "Are you taking any medications or supplements that could affect your memory (e.g., sedatives, pain relievers, or antidepressants)?",
      "category": "memory_loss", "symptom": "medication affecting memory"}
 ],
 
 'difficulty concentrating' : [
     {"hi": "आपको कितने समय से एकाग्रता में कठिनाई हो रही है?", "en": "How long have you been experiencing difficulty concentrating?", "category": "difficulty_concentrating", "symptom": "duration of concentration difficulty"},
     {"hi": "क्या एकाग्रता में कठिनाई स्थायी है या कभी-कभी होती है?", "en": "Is the difficulty with concentration constant or does it come and go?", "category": "difficulty_concentrating", "symptom": "constant vs intermittent concentration difficulty"},
-    {"hi": "क्या आपको विशिष्ट कार्यों पर ध्यान केंद्रित करने में कठिनाई हो रही है, या यह अधिक सामान्य है?", 
-     "en": "Do you find it hard to focus on specific tasks, or is it more general?", 
+    {"hi": "क्या आपको विशिष्ट कार्यों पर ध्यान केंद्रित करने में कठिनाई हो रही है, या यह अधिक सामान्य है?",
+     "en": "Do you find it hard to focus on specific tasks, or is it more general?",
      "category": "difficulty_concentrating", "symptom": "focus on tasks"},
-    {"hi": "क्या आपको चीज़ों को याद करने या कार्यों को पूरा करने में समस्या हो रही है?", 
-     "en": "Do you have trouble remembering things or following through with tasks?", 
+    {"hi": "क्या आपको चीज़ों को याद करने या कार्यों को पूरा करने में समस्या हो रही है?",
+     "en": "Do you have trouble remembering things or following through with tasks?",
      "category": "difficulty_concentrating", "symptom": "memory and task completion"},
-    {"hi": "क्या आप अन्य लक्षणों का अनुभव कर रहे हैं, जैसे थकावट, चिड़चिड़ापन, या नींद की समस्याएं?", 
-     "en": "Are you experiencing any other symptoms, such as fatigue, irritability, or sleep problems?", 
+    {"hi": "क्या आप अन्य लक्षणों का अनुभव कर रहे हैं, जैसे थकावट, चिड़चिड़ापन, या नींद की समस्याएं?",
+     "en": "Are you experiencing any other symptoms, such as fatigue, irritability, or sleep problems?",
      "category": "difficulty_concentrating", "symptom": "associated symptoms (fatigue, irritability, sleep problems)"},
-    {"hi": "क्या आपने हाल ही में कोई महत्वपूर्ण तनाव, चिंता, या भावनात्मक समस्याएं अनुभव की हैं?", 
-     "en": "Have you recently experienced significant stress, anxiety, or emotional challenges?", 
+    {"hi": "क्या आपने हाल ही में कोई महत्वपूर्ण तनाव, चिंता, या भावनात्मक समस्याएं अनुभव की हैं?",
+     "en": "Have you recently experienced significant stress, anxiety, or emotional challenges?",
      "category": "difficulty_concentrating", "symptom": "stress, anxiety, or emotional challenges"},
-    {"hi": "क्या आपको मानसिक स्वास्थ्य स्थितियों का कोई इतिहास है, जैसे ADHD, अवसाद, या चिंता?", 
-     "en": "Do you have a history of mental health conditions, such as ADHD, depression, or anxiety?", 
+    {"hi": "क्या आपको मानसिक स्वास्थ्य स्थितियों का कोई इतिहास है, जैसे ADHD, अवसाद, या चिंता?",
+     "en": "Do you have a history of mental health conditions, such as ADHD, depression, or anxiety?",
      "category": "difficulty_concentrating", "symptom": "mental health history"},
-    {"hi": "क्या आप वर्तमान में कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं जो आपके ध्यान को प्रभावित कर सकते हैं?", 
-     "en": "Are you currently taking any medications or supplements that could affect your focus?", 
+    {"hi": "क्या आप वर्तमान में कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं जो आपके ध्यान को प्रभावित कर सकते हैं?",
+     "en": "Are you currently taking any medications or supplements that could affect your focus?",
      "category": "difficulty_concentrating", "symptom": "medications affecting concentration"},
-    {"hi": "क्या आपको कोई मेडिकल स्थितियां हैं, जैसे थायरॉयड समस्या, मधुमेह, या स्लीप एपनिया, जो आपकी एकाग्रता को प्रभावित कर सकती हैं?", 
-     "en": "Do you have any medical conditions, such as thyroid problems, diabetes, or sleep apnea, that could affect your concentration?", 
+    {"hi": "क्या आपको कोई मेडिकल स्थितियां हैं, जैसे थायरॉयड समस्या, मधुमेह, या स्लीप एपनिया, जो आपकी एकाग्रता को प्रभावित कर सकती हैं?",
+     "en": "Do you have any medical conditions, such as thyroid problems, diabetes, or sleep apnea, that could affect your concentration?",
      "category": "difficulty_concentrating", "symptom": "medical conditions affecting concentration"},
-    {"hi": "क्या आपने अपनी जीवनशैली में कोई परिवर्तन महसूस किया है, जैसे नींद की खराब आदतें, आहार, या व्यायाम स्तर, जो एकाग्रता में कठिनाई का कारण हो सकते हैं?", 
-     "en": "Have you had any changes in your lifestyle, such as poor sleep habits, diet, or exercise levels, that might be contributing to the difficulty concentrating?", 
+    {"hi": "क्या आपने अपनी जीवनशैली में कोई परिवर्तन महसूस किया है, जैसे नींद की खराब आदतें, आहार, या व्यायाम स्तर, जो एकाग्रता में कठिनाई का कारण हो सकते हैं?",
+     "en": "Have you had any changes in your lifestyle, such as poor sleep habits, diet, or exercise levels, that might be contributing to the difficulty concentrating?",
      "category": "difficulty_concentrating", "symptom": "lifestyle changes affecting concentration"}
 ],
 
 'hallucinations' : [
     {"hi": "आपको कितने समय से भ्रांतियाँ हो रही हैं?", "en": "How long have you been experiencing hallucinations?", "category": "hallucinations", "symptom": "duration of hallucinations"},
-    {"hi": "आप किस प्रकार की भ्रांतियाँ अनुभव कर रहे हैं (जैसे, आवाजें सुनना, चीज़ें देखना, गंध महसूस करना)?", 
-     "en": "What type of hallucinations are you experiencing (e.g., hearing voices, seeing things, smelling odors)?", 
+    {"hi": "आप किस प्रकार की भ्रांतियाँ अनुभव कर रहे हैं (जैसे, आवाजें सुनना, चीज़ें देखना, गंध महसूस करना)?",
+     "en": "What type of hallucinations are you experiencing (e.g., hearing voices, seeing things, smelling odors)?",
      "category": "hallucinations", "symptom": "type of hallucinations"},
-    {"hi": "क्या भ्रांतियाँ दिन में, रात में, या दोनों समय होती हैं?", 
-     "en": "Are the hallucinations occurring during the day, at night, or both?", 
+    {"hi": "क्या भ्रांतियाँ दिन में, रात में, या दोनों समय होती हैं?",
+     "en": "Are the hallucinations occurring during the day, at night, or both?",
      "category": "hallucinations", "symptom": "time of hallucinations"},
-    {"hi": "क्या भ्रांतियाँ आपको वास्तविक लगती हैं, या आप उन्हें झूठी पहचानते हैं?", 
-     "en": "Do the hallucinations seem real to you, or do you recognize them as being false?", 
+    {"hi": "क्या भ्रांतियाँ आपको वास्तविक लगती हैं, या आप उन्हें झूठी पहचानते हैं?",
+     "en": "Do the hallucinations seem real to you, or do you recognize them as being false?",
      "category": "hallucinations", "symptom": "real or false perception"},
-    {"hi": "क्या भ्रांतियाँ किसी विशिष्ट उत्तेजक से जुड़ी हुई हैं, जैसे तनाव, नींद की कमी, या कुछ परिस्थितियाँ?", 
-     "en": "Are the hallucinations associated with any specific triggers, such as stress, sleep deprivation, or certain situations?", 
+    {"hi": "क्या भ्रांतियाँ किसी विशिष्ट उत्तेजक से जुड़ी हुई हैं, जैसे तनाव, नींद की कमी, या कुछ परिस्थितियाँ?",
+     "en": "Are the hallucinations associated with any specific triggers, such as stress, sleep deprivation, or certain situations?",
      "category": "hallucinations", "symptom": "triggers for hallucinations"},
-    {"hi": "क्या आपने अपनी मानसिक स्थिति में कोई परिवर्तन महसूस किया है, जैसे मूड स्विंग्स, चिंता, या अवसाद?", 
-     "en": "Have you experienced any changes in your mental health, such as mood swings, anxiety, or depression?", 
+    {"hi": "क्या आपने अपनी मानसिक स्थिति में कोई परिवर्तन महसूस किया है, जैसे मूड स्विंग्स, चिंता, या अवसाद?",
+     "en": "Have you experienced any changes in your mental health, such as mood swings, anxiety, or depression?",
      "category": "hallucinations", "symptom": "mental health changes"},
-    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं?", 
-     "en": "Are you taking any medications, including prescription, over-the-counter, or recreational drugs?", 
+    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं?",
+     "en": "Are you taking any medications, including prescription, over-the-counter, or recreational drugs?",
      "category": "hallucinations", "symptom": "medications or drugs"},
-    {"hi": "क्या आपके पास मानसिक स्वास्थ्य स्थितियों का कोई इतिहास है, जैसे स्किजोफ्रेनिया, बाइपोलर डिसऑर्डर, या प्रमुख अवसाद?", 
-     "en": "Do you have any history of mental health conditions, such as schizophrenia, bipolar disorder, or major depression?", 
+    {"hi": "क्या आपके पास मानसिक स्वास्थ्य स्थितियों का कोई इतिहास है, जैसे स्किजोफ्रेनिया, बाइपोलर डिसऑर्डर, या प्रमुख अवसाद?",
+     "en": "Do you have any history of mental health conditions, such as schizophrenia, bipolar disorder, or major depression?",
      "category": "hallucinations", "symptom": "mental health history"},
-    {"hi": "क्या आपको हाल ही में सिर की चोट, संक्रमण, या तंत्रिका तंत्र से संबंधित कोई समस्या हुई है, जो आपके मस्तिष्क को प्रभावित कर सकती है?", 
-     "en": "Have you had any recent head injuries, infections, or neurological conditions that might affect your brain?", 
+    {"hi": "क्या आपको हाल ही में सिर की चोट, संक्रमण, या तंत्रिका तंत्र से संबंधित कोई समस्या हुई है, जो आपके मस्तिष्क को प्रभावित कर सकती है?",
+     "en": "Have you had any recent head injuries, infections, or neurological conditions that might affect your brain?",
      "category": "hallucinations", "symptom": "head injuries or neurological conditions"},
-    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का कोई इतिहास है, जैसे मानसिक विकृति या मादक पदार्थों का दुरुपयोग?", 
-     "en": "Do you have a family history of mental health disorders, such as psychosis or substance abuse?", 
+    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का कोई इतिहास है, जैसे मानसिक विकृति या मादक पदार्थों का दुरुपयोग?",
+     "en": "Do you have a family history of mental health disorders, such as psychosis or substance abuse?",
      "category": "hallucinations", "symptom": "family history of mental health disorders"}
 ],
 
 'delusions' : [
     {"hi": "आपको कितने समय से भ्रांतियाँ हो रही हैं?", "en": "How long have you been experiencing delusions?", "category": "delusions", "symptom": "duration of delusions"},
-    {"hi": "आप किस प्रकार की भ्रांतियाँ अनुभव कर रहे हैं (जैसे, संदेहवादी, महानता, विचित्र)?", 
-     "en": "What kind of delusions are you experiencing (e.g., paranoid, grandiose, bizarre)?", 
+    {"hi": "आप किस प्रकार की भ्रांतियाँ अनुभव कर रहे हैं (जैसे, संदेहवादी, महानता, विचित्र)?",
+     "en": "What kind of delusions are you experiencing (e.g., paranoid, grandiose, bizarre)?",
      "category": "delusions", "symptom": "type of delusions"},
-    {"hi": "क्या आपको लगता है कि दूसरे लोग आपको नुकसान पहुँचाने की कोशिश कर रहे हैं, या कि आपके पास विशेष शक्तियाँ या क्षमताएँ हैं?", 
-     "en": "Do you believe that others are out to harm you, or that you have special powers or abilities?", 
+    {"hi": "क्या आपको लगता है कि दूसरे लोग आपको नुकसान पहुँचाने की कोशिश कर रहे हैं, या कि आपके पास विशेष शक्तियाँ या क्षमताएँ हैं?",
+     "en": "Do you believe that others are out to harm you, or that you have special powers or abilities?",
      "category": "delusions", "symptom": "paranoia or grandiosity"},
-    {"hi": "क्या भ्रांतियाँ आपके दैनिक जीवन या रिश्तों को प्रभावित कर रही हैं?", 
-     "en": "Are the delusions affecting your daily life or relationships?", 
+    {"hi": "क्या भ्रांतियाँ आपके दैनिक जीवन या रिश्तों को प्रभावित कर रही हैं?",
+     "en": "Are the delusions affecting your daily life or relationships?",
      "category": "delusions", "symptom": "impact on daily life or relationships"},
-    {"hi": "क्या आप मानते हैं कि आपके विश्वास वास्तविक नहीं हो सकते, या क्या आप वास्तव में उन्हें सत्य मानते हैं?", 
-     "en": "Do you recognize that your beliefs may not be real, or do you truly believe them to be true?", 
+    {"hi": "क्या आप मानते हैं कि आपके विश्वास वास्तविक नहीं हो सकते, या क्या आप वास्तव में उन्हें सत्य मानते हैं?",
+     "en": "Do you recognize that your beliefs may not be real, or do you truly believe them to be true?",
      "category": "delusions", "symptom": "recognition of false beliefs"},
-    {"hi": "क्या आपने हाल ही में कोई महत्वपूर्ण तनाव, जीवन परिवर्तन, या आघातपूर्ण घटनाएँ अनुभव की हैं?", 
-     "en": "Have you experienced any major stressors, life changes, or traumatic events recently?", 
+    {"hi": "क्या आपने हाल ही में कोई महत्वपूर्ण तनाव, जीवन परिवर्तन, या आघातपूर्ण घटनाएँ अनुभव की हैं?",
+     "en": "Have you experienced any major stressors, life changes, or traumatic events recently?",
      "category": "delusions", "symptom": "recent stressors or trauma"},
-    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं?", 
-     "en": "Are you currently taking any medications, including prescription, over-the-counter, or recreational drugs?", 
+    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं?",
+     "en": "Are you currently taking any medications, including prescription, over-the-counter, or recreational drugs?",
      "category": "delusions", "symptom": "medications or drugs"},
-    {"hi": "क्या आपके पास मानसिक स्वास्थ्य स्थितियों का कोई इतिहास है, जैसे स्किजोफ्रेनिया, बाइपोलर डिसऑर्डर, या अवसाद?", 
-     "en": "Do you have a history of mental health conditions, such as schizophrenia, bipolar disorder, or depression?", 
+    {"hi": "क्या आपके पास मानसिक स्वास्थ्य स्थितियों का कोई इतिहास है, जैसे स्किजोफ्रेनिया, बाइपोलर डिसऑर्डर, या अवसाद?",
+     "en": "Do you have a history of mental health conditions, such as schizophrenia, bipolar disorder, or depression?",
      "category": "delusions", "symptom": "mental health history"},
-    {"hi": "क्या आपको हाल ही में सिर की चोट, संक्रमण, या तंत्रिका तंत्र से संबंधित कोई समस्या हुई है, जो आपके सोचने की क्षमता को प्रभावित कर सकती है?", 
-     "en": "Have you had any recent head injuries, infections, or neurological conditions that might affect your thinking?", 
+    {"hi": "क्या आपको हाल ही में सिर की चोट, संक्रमण, या तंत्रिका तंत्र से संबंधित कोई समस्या हुई है, जो आपके सोचने की क्षमता को प्रभावित कर सकती है?",
+     "en": "Have you had any recent head injuries, infections, or neurological conditions that might affect your thinking?",
      "category": "delusions", "symptom": "head injuries or neurological conditions"},
-    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का कोई इतिहास है, जैसे मानसिक विकृति, स्किजोफ्रेनिया, या बाइपोलर डिसऑर्डर?", 
-     "en": "Do you have a family history of mental health disorders, such as psychosis, schizophrenia, or bipolar disorder?", 
+    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का कोई इतिहास है, जैसे मानसिक विकृति, स्किजोफ्रेनिया, या बाइपोलर डिसऑर्डर?",
+     "en": "Do you have a family history of mental health disorders, such as psychosis, schizophrenia, or bipolar disorder?",
      "category": "delusions", "symptom": "family history of mental health disorders"}
 ],
 
 'paranoia' : [
-    {"hi": "आपको कितने समय से दूसरों के प्रति संदेह या भय महसूस हो रहा है?", 
-     "en": "How long have you been feeling paranoid or suspicious of others?", 
-     "category": "paranoia", 
+    {"hi": "आपको कितने समय से दूसरों के प्रति संदेह या भय महसूस हो रहा है?",
+     "en": "How long have you been feeling paranoid or suspicious of others?",
+     "category": "paranoia",
      "symptom": "duration of paranoia"},
-    {"hi": "आपके पास लोगों के बारे में क्या विशिष्ट डर या चिंता हैं (जैसे, यह मानना कि लोग आपके खिलाफ साजिश कर रहे हैं या आपकी जासूसी कर रहे हैं)?", 
-     "en": "What specific fears or concerns do you have about people (e.g., believing others are plotting against you or spying on you)?", 
-     "category": "paranoia", 
+    {"hi": "आपके पास लोगों के बारे में क्या विशिष्ट डर या चिंता हैं (जैसे, यह मानना कि लोग आपके खिलाफ साजिश कर रहे हैं या आपकी जासूसी कर रहे हैं)?",
+     "en": "What specific fears or concerns do you have about people (e.g., believing others are plotting against you or spying on you)?",
+     "category": "paranoia",
      "symptom": "specific fears or concerns"},
-    {"hi": "क्या आपको लगता है कि लोग जानबूझकर आपको नुकसान पहुँचाने या धोखा देने की कोशिश कर रहे हैं?", 
-     "en": "Do you feel that people are intentionally trying to harm or deceive you?", 
-     "category": "paranoia", 
+    {"hi": "क्या आपको लगता है कि लोग जानबूझकर आपको नुकसान पहुँचाने या धोखा देने की कोशिश कर रहे हैं?",
+     "en": "Do you feel that people are intentionally trying to harm or deceive you?",
+     "category": "paranoia",
      "symptom": "belief of harm or deception"},
-    {"hi": "क्या यह विचार स्थिर हैं, या क्या वे आते-जाते रहते हैं?", 
-     "en": "Are these thoughts persistent, or do they come and go?", 
-     "category": "paranoia", 
+    {"hi": "क्या यह विचार स्थिर हैं, या क्या वे आते-जाते रहते हैं?",
+     "en": "Are these thoughts persistent, or do they come and go?",
+     "category": "paranoia",
      "symptom": "persistence of thoughts"},
-    {"hi": "क्या आपने अपने संदेहपूर्ण विचारों के लिए कोई उत्तेजक देखा है (जैसे, कुछ लोग, परिस्थितियाँ, या स्थान)?", 
-     "en": "Have you noticed any triggers for your paranoid thoughts (e.g., certain people, situations, or places)?", 
-     "category": "paranoia", 
+    {"hi": "क्या आपने अपने संदेहपूर्ण विचारों के लिए कोई उत्तेजक देखा है (जैसे, कुछ लोग, परिस्थितियाँ, या स्थान)?",
+     "en": "Have you noticed any triggers for your paranoid thoughts (e.g., certain people, situations, or places)?",
+     "category": "paranoia",
      "symptom": "triggers for paranoid thoughts"},
-    {"hi": "क्या आपको दोस्तों, परिवार, या सहकर्मियों पर विश्वास करने में कठिनाई होती है?", 
-     "en": "Do you have difficulty trusting friends, family, or coworkers?", 
-     "category": "paranoia", 
+    {"hi": "क्या आपको दोस्तों, परिवार, या सहकर्मियों पर विश्वास करने में कठिनाई होती है?",
+     "en": "Do you have difficulty trusting friends, family, or coworkers?",
+     "category": "paranoia",
      "symptom": "difficulty trusting others"},
-    {"hi": "क्या आप अन्य कोई लक्षण अनुभव कर रहे हैं, जैसे चिंता, मूड स्विंग्स, या नींद में कठिनाई?", 
-     "en": "Are you experiencing any other symptoms, such as anxiety, mood swings, or difficulty sleeping?", 
-     "category": "paranoia", 
+    {"hi": "क्या आप अन्य कोई लक्षण अनुभव कर रहे हैं, जैसे चिंता, मूड स्विंग्स, या नींद में कठिनाई?",
+     "en": "Are you experiencing any other symptoms, such as anxiety, mood swings, or difficulty sleeping?",
+     "category": "paranoia",
      "symptom": "other symptoms (e.g., anxiety, sleep problems)"},
-    {"hi": "क्या आपने हाल ही में कोई महत्वपूर्ण तनाव, आघातपूर्ण घटनाएँ, या जीवन में कोई बड़ा परिवर्तन अनुभव किया है?", 
-     "en": "Have you experienced any major stressors, traumatic events, or significant life changes recently?", 
-     "category": "paranoia", 
+    {"hi": "क्या आपने हाल ही में कोई महत्वपूर्ण तनाव, आघातपूर्ण घटनाएँ, या जीवन में कोई बड़ा परिवर्तन अनुभव किया है?",
+     "en": "Have you experienced any major stressors, traumatic events, or significant life changes recently?",
+     "category": "paranoia",
      "symptom": "recent stressors or life changes"},
-    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं?", 
-     "en": "Are you taking any medications, including prescription, over-the-counter, or recreational drugs?", 
-     "category": "paranoia", 
+    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं?",
+     "en": "Are you taking any medications, including prescription, over-the-counter, or recreational drugs?",
+     "category": "paranoia",
      "symptom": "medications or drugs"},
-    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का कोई इतिहास है, जैसे स्किजोफ्रेनिया, बाइपोलर डिसऑर्डर, या चिंता विकार?", 
-     "en": "Do you have a family history of mental health conditions, such as schizophrenia, bipolar disorder, or anxiety disorders?", 
-     "category": "paranoia", 
+    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का कोई इतिहास है, जैसे स्किजोफ्रेनिया, बाइपोलर डिसऑर्डर, या चिंता विकार?",
+     "en": "Do you have a family history of mental health conditions, such as schizophrenia, bipolar disorder, or anxiety disorders?",
+     "category": "paranoia",
      "symptom": "family history of mental health conditions"}
 ],
 
 'euphoria' : [
-    {"hi": "आपको कितने समय से उत्साह (अत्यधिक खुशी या खुशी का अनुभव) हो रहा है?", 
-     "en": "How long have you been experiencing euphoria (feeling unusually happy or elated)?", 
-     "category": "euphoria", 
+    {"hi": "आपको कितने समय से उत्साह (अत्यधिक खुशी या खुशी का अनुभव) हो रहा है?",
+     "en": "How long have you been experiencing euphoria (feeling unusually happy or elated)?",
+     "category": "euphoria",
      "symptom": "duration of euphoria"},
-    {"hi": "इन उत्साही भावनाओं की तीव्रता कितनी है?", 
-     "en": "How intense are these feelings of euphoria?", 
-     "category": "euphoria", 
+    {"hi": "इन उत्साही भावनाओं की तीव्रता कितनी है?",
+     "en": "How intense are these feelings of euphoria?",
+     "category": "euphoria",
      "symptom": "intensity of euphoria"},
-    {"hi": "क्या आपको लगता है कि यह उत्साह आपके चारों ओर की स्थिति या घटनाओं के मुकाबले अत्यधिक है?", 
-     "en": "Do you feel that the euphoria is out of proportion to the situation or events around you?", 
-     "category": "euphoria", 
+    {"hi": "क्या आपको लगता है कि यह उत्साह आपके चारों ओर की स्थिति या घटनाओं के मुकाबले अत्यधिक है?",
+     "en": "Do you feel that the euphoria is out of proportion to the situation or events around you?",
+     "category": "euphoria",
      "symptom": "disproportionate euphoria"},
-    {"hi": "क्या आप अन्य कोई लक्षण अनुभव कर रहे हैं, जैसे दौड़ते विचार, अत्यधिक ऊर्जा, या आवेगी व्यवहार?", 
-     "en": "Are you experiencing any other symptoms, such as racing thoughts, excessive energy, or impulsive behavior?", 
-     "category": "euphoria", 
+    {"hi": "क्या आप अन्य कोई लक्षण अनुभव कर रहे हैं, जैसे दौड़ते विचार, अत्यधिक ऊर्जा, या आवेगी व्यवहार?",
+     "en": "Are you experiencing any other symptoms, such as racing thoughts, excessive energy, or impulsive behavior?",
+     "category": "euphoria",
      "symptom": "associated symptoms (e.g., racing thoughts, impulsivity)"},
-    {"hi": "क्या आपको असामान्य रूप से आत्मविश्वासी, ऊर्जावान, या 'दुनिया के शीर्ष पर' जैसा महसूस हो रहा है?", 
-     "en": "Do you feel unusually confident, energetic, or 'on top of the world'?", 
-     "category": "euphoria", 
+    {"hi": "क्या आपको असामान्य रूप से आत्मविश्वासी, ऊर्जावान, या 'दुनिया के शीर्ष पर' जैसा महसूस हो रहा है?",
+     "en": "Do you feel unusually confident, energetic, or 'on top of the world'?",
+     "category": "euphoria",
      "symptom": "feeling of being 'on top of the world'"},
-    {"hi": "क्या आपने अपने उत्साह के लिए कोई पैटर्न या उत्तेजक देखा है (जैसे, कुछ स्थितियाँ, समय का हिस्सा, या गतिविधियाँ)?", 
-     "en": "Have you noticed any patterns or triggers for your euphoria (e.g., certain situations, times of day, or activities)?", 
-     "category": "euphoria", 
+    {"hi": "क्या आपने अपने उत्साह के लिए कोई पैटर्न या उत्तेजक देखा है (जैसे, कुछ स्थितियाँ, समय का हिस्सा, या गतिविधियाँ)?",
+     "en": "Have you noticed any patterns or triggers for your euphoria (e.g., certain situations, times of day, or activities)?",
+     "category": "euphoria",
      "symptom": "triggers for euphoria"},
-    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं (जैसे, उत्तेजक या शराब)?", 
-     "en": "Are you taking any medications, including prescription, over-the-counter, or recreational drugs (e.g., stimulants or alcohol)?", 
-     "category": "euphoria", 
+    {"hi": "क्या आप कोई दवाइयाँ, ओवर-द-काउंटर दवाइयाँ, या अवैध नशीली दवाएँ ले रहे हैं (जैसे, उत्तेजक या शराब)?",
+     "en": "Are you taking any medications, including prescription, over-the-counter, or recreational drugs (e.g., stimulants or alcohol)?",
+     "category": "euphoria",
      "symptom": "medications or drugs"},
-    {"hi": "क्या आपके मानसिक स्वास्थ्य में कोई महत्वपूर्ण परिवर्तन हुए हैं, जैसे अवसाद, चिंता, या चिड़चिड़ापन?", 
-     "en": "Have you had any significant changes in your mental health, such as periods of depression, anxiety, or irritability?", 
-     "category": "euphoria", 
+    {"hi": "क्या आपके मानसिक स्वास्थ्य में कोई महत्वपूर्ण परिवर्तन हुए हैं, जैसे अवसाद, चिंता, या चिड़चिड़ापन?",
+     "en": "Have you had any significant changes in your mental health, such as periods of depression, anxiety, or irritability?",
+     "category": "euphoria",
      "symptom": "changes in mental health (e.g., depression, anxiety)"},
-    {"hi": "क्या आपके पास मानसिक स्वास्थ्य विकारों का इतिहास है, जैसे बाइपोलर डिसऑर्डर, उन्माद, या नशीली दवाओं का दुरुपयोग?", 
-     "en": "Do you have a history of mental health conditions, such as bipolar disorder, mania, or substance abuse?", 
-     "category": "euphoria", 
+    {"hi": "क्या आपके पास मानसिक स्वास्थ्य विकारों का इतिहास है, जैसे बाइपोलर डिसऑर्डर, उन्माद, या नशीली दवाओं का दुरुपयोग?",
+     "en": "Do you have a history of mental health conditions, such as bipolar disorder, mania, or substance abuse?",
+     "category": "euphoria",
      "symptom": "history of mental health conditions"},
-    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का इतिहास है, विशेष रूप से मूड विकारों जैसे बाइपोलर डिसऑर्डर या स्किजोफ्रेनिया?", 
-     "en": "Do you have a family history of mental health disorders, particularly mood disorders like bipolar disorder or schizophrenia?", 
-     "category": "euphoria", 
+    {"hi": "क्या आपके परिवार में मानसिक स्वास्थ्य विकारों का इतिहास है, विशेष रूप से मूड विकारों जैसे बाइपोलर डिसऑर्डर या स्किजोफ्रेनिया?",
+     "en": "Do you have a family history of mental health disorders, particularly mood disorders like bipolar disorder or schizophrenia?",
+     "category": "euphoria",
      "symptom": "family history of mood disorders"}
 ],
 
@@ -1949,11 +1913,10 @@ canonical_symptom_followup_questions = {
     {"hi": "क्या नाखूनों के प्रभावित हिस्सों में संक्रमण के लक्षण जैसे लालिमा, सूजन, या पस का स्राव हो रहा है?", "en": "Have you experienced any symptoms of infection, such as redness, swelling, or pus around the affected nails?", "category": "infection", "symptom": "infection symptoms"}
 ],
 
-    # Add more canonical symptoms and their follow-up questions as needed
 }
 
 # Additional general follow-up questions
-additional_followup_questions : [
+additional_followup_questions = [
     {"hi": "आपकी उम्र क्या है?", "en": "What is your age?", "category": "age", "symptom": None},
     {"hi": "आपका लिंग क्या है?", "en": "What is your gender?", "category": "gender", "symptom": None},
     {"hi": "आप वर्तमान में कहां स्थित हैं?", "en": "Where are you currently located?", "category": "location", "symptom": None},
@@ -1963,11 +1926,10 @@ additional_followup_questions : [
 
 # Normalize symptom lists
 known_symptoms_lower = [symptom.lower() for symptom in known_symptoms]
-#symptom_list_lower = [symptom.lower() for symptom in symptom_list]
+symptom_list_lower = [symptom.lower() for symptom in symptom_list]
 
 # Convert symptom_followup_questions keys to lowercase
-#symptom_followup_questions_lower = {symptom.lower(): questions for symptom, questions in symptom_followup_questions.items()}
-
+symptom_followup_questions_lower = {symptom.lower(): questions for symptom, questions in symptom_followup_questions.items()}
 
 # -------------------- Core Functions -------------------- #
 # Google TTS
@@ -2149,7 +2111,20 @@ def determine_best_specialist(symptoms):
 
         # Prepare the prompt for ChatGPT
         prompt = (
-            f"Based on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
+            f"You are a medical assistant that recommends the most suitable specialist based on symptoms.\n"
+            f"Use the following explicit mappings for common keywords in symptoms:\n"
+            f"- Heart, chest pain, irregular heartbeat -> Cardiologist\n"
+            f"- Bones, joints, fractures, arthritis -> Orthopedic Specialist\n"
+            f"- Skin, rashes, acne -> Dermatologist\n"
+            f"- Stomach, digestion, acid reflux -> Gastroenterologist\n"
+            f"- Anxiety, depression, mental health -> Psychiatrist\n"
+            f"- Throat, ears, nose -> ENT Specialist\n"
+            f"- Lungs, shortness of breath, coughing -> Pulmonologist\n"
+            f"- Diabetes, hormones -> Endocrinologist\n"
+            f"- Urinary, bladder, kidney -> Urologist\n"
+            f"- Cancer -> Oncologist\n"
+            f"If symptoms don’t match any specific category, choose 'General Practitioner'.\n"
+            f"\nBased on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
             f"Symptoms: {', '.join(symptoms)}\n"
             f"Choose the specialist from the following list: {', '.join(specialist_options)}.\n"
             f"Provide only the name of the specialist (e.g., 'Orthopedic Specialist')."
@@ -2159,7 +2134,7 @@ def determine_best_specialist(symptoms):
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a medical assistant that recommends the most suitable specialist based on symptoms."},
+                {"role": "system", "content": "You are a medical assistant that maps symptoms to specialists."},
                 {"role": "user", "content": prompt}
             ],
             max_tokens=10,  # Short response expected
@@ -2197,64 +2172,37 @@ def transcribe_audio(file_path):
                 st.warning(f"Could not delete audio file {file_path}: {e}")
                 logger.warning(f"Could not delete audio file {file_path}: {e}")
 
-def normalize_symptom(symptom):
+def extract_symptoms(text):
     """
-    Normalize a symptom to its canonical form.
-    """
-    symptom_lower = symptom.lower()
-    return symptom_to_canonical.get(symptom_lower, symptom_lower)  # Return the canonical form or the original if not found
-
-def get_followup_questions(initial_symptoms):
-    """
-    Retrieve follow-up questions based on the initial canonical symptoms.
-    """
-    followup_questions = []
-    for symptom in initial_symptoms:
-        canonical_symptom = normalize_symptom(symptom)
-        questions = canonical_symptom_followup_questions.get(canonical_symptom, [])
-        followup_questions.extend(questions)
-    return followup_questions
-
-def extract_symptoms(text, symptom_list, symptom_to_canonical):
-    """
-    Extract exact symptoms from the given text using symptom list and mapping.
-
-    Args:
-        text (str): The input text to extract symptoms from.
-        symptom_list (list): List of symptom variants.
-        symptom_to_canonical (dict): Mapping from variant to canonical symptom.
-
-    Returns:
-        list: A list of canonical symptoms extracted from the text.
+    Extract symptoms from the given text using BioBERT NER model and regex matching.
     """
     try:
-        text_lower = text.lower()
-        extracted_symptoms = set()
-
-        # Use NER to extract symptoms
+        # Use BioBERT NER model to extract symptoms
         ner_results = ner_pipeline(text)
+        extracted_symptoms = set()
         for entity in ner_results:
             if entity['entity_group'] == 'SYMPTOM':
                 symptom = entity['word'].strip().lower()
-                if symptom in symptom_to_canonical:
-                    canonical = symptom_to_canonical[symptom]
-                    extracted_symptoms.add(canonical)
-        
-        # Additionally, use keyword matching for any missed symptoms
-        for symptom_variant in symptom_list:
-            if re.search(r'\b' + re.escape(symptom_variant) + r'\b', text_lower):
-                canonical = symptom_to_canonical.get(symptom_variant, symptom_variant)
-                extracted_symptoms.add(canonical)
-        
-        # Remove generic terms
-        extracted_symptoms = [sym for sym in extracted_symptoms if sym not in {'no', 'yes', 'nothing', 'nothing else'}]
-        
+                # Ensure the symptom is in the known_symptoms list
+                if symptom in known_symptoms_lower:
+                    extracted_symptoms.add(symptom)
+        logger.info(f"Extracted Symptoms using BioBERT: {extracted_symptoms}")
+
+        # Also match against symptom list for any missed symptoms
+        text_lower = text.lower()
+        for symptom in symptom_list_lower:
+            # Use word boundaries to avoid partial matches
+            if re.search(r'\b' + re.escape(symptom) + r'\b', text_lower):
+                extracted_symptoms.add(symptom)
+
         logger.info(f"Final Extracted Symptoms: {extracted_symptoms}")
-        return list(extracted_symptoms)
+        # Remove generic affirmations and negations
+        extracted_symptoms = [sym for sym in extracted_symptoms if sym not in {'no', 'yes', 'nothing', 'nothing else'}]
+        return extracted_symptoms
     except Exception as e:
         st.error(f"An error occurred during symptom extraction: {e}")
         logger.error(f"Symptom extraction error: {e}")
-        return []
+        return set()
 
 def extract_possible_causes(text):
     """
@@ -2327,11 +2275,13 @@ def extract_additional_entities(text):
     duration = None
     medications = []
 
-    # Medications extraction: find medications in the text using regex for better accuracy
+    # Medications list
+    tokens = [token.text.lower() for token in doc]
     for med in medications_list:
-        pattern = re.compile(re.escape(med), re.IGNORECASE)
-        if pattern.search(text):
+        if med.lower() in tokens:
             medications.append(med.title())
+    medications = list(set(medications))  # remove duplicates
+    medications = [med for med in medications if med not in {'Yes', 'No'}]
 
     # Extract age
     age_patterns = [
@@ -2350,35 +2300,17 @@ def extract_additional_entities(text):
                 continue
 
     # Extract gender
-    gender_patterns = [
-        r'\b(?:i am|i\'m)\s+(?:a\s+)?(male|female|boy|girl|man|woman)\b',
-        r'\b(?:gender)\s*[:\-]?\s*(male|female|other)\b'
-    ]
-    for pattern in gender_patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            gender_candidate = match.group(1)
-            gender = gender_candidate.lower()
+    gender_keywords = {'male', 'female', 'man', 'woman', 'boy', 'girl'}
+    for token in doc:
+        if token.text.lower() in gender_keywords:
+            gender = token.text.lower()
             break
 
     # Extract location
-    location_patterns = [
-        r'\b(?:i am|i\'m)\s+(?:in|located in|located at|from)\s+([A-Za-z\s]+)\b',
-        r'\b(?:location)\s*[:\-]?\s*([A-Za-z\s]+)\b',
-        r'\b(?:state)\s*[:\-]?\s*([A-Za-z\s]+)\b'
-    ]
-    for pattern in location_patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            location_candidate = match.group(1)
-            location = location_candidate.strip()
+    for ent in doc.ents:
+        if ent.label_ in ['GPE', 'LOC']:
+            location = ent.text
             break
-    if not location:
-        # Try to extract GPE entities
-        for ent in doc.ents:
-            if ent.label_ in ['GPE', 'LOC']:
-                location = ent.text
-                break
 
     # Extract duration
     duration_patterns = [
@@ -2386,7 +2318,7 @@ def extract_additional_entities(text):
         r'\b(\w+\s+(?:day|days|week|weeks|month|months|year|years))\s+(?:ago|back)\b'
     ]
     for pattern in duration_patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
+        match = re.search(pattern, text)
         if match:
             duration_candidate = match.group(1)
             duration = duration_candidate.strip()
@@ -2411,91 +2343,99 @@ def extract_additional_entities(text):
         'medications': medications
     }
 
-def determine_best_specialist(symptoms):
+def determine_followup_questions(initial_symptoms, additional_info, asked_question_categories):
     """
-    Determines the best specialist doctor based on the list of symptoms using ChatGPT.
-
-    Args:
-        symptoms (list): List of extracted symptoms.
-
-    Returns:
-        str: The type of specialist doctor.
+    Determine the next set of follow-up questions based on initial symptoms and additional information.
     """
-    try:
-        # Define a list of possible specialists
-        specialist_options = [
-            "Orthopedic Specialist",
-            "Neurologist",
-            "Cardiologist",
-            "Dermatologist",
-            "Gastroenterologist",
-            "Psychiatrist",
-            "General Practitioner",
-            "ENT Specialist",
-            "Pulmonologist",
-            "Rheumatologist",
-            "Endocrinologist",
-            "Urologist",
-            "Oncologist",
-            "Dentist"
-            # Add more as needed
-        ]
+    followup_questions = []
+    asked_categories = set(asked_question_categories)
 
-        # Prepare the prompt for ChatGPT
-        prompt = (
-            f"You are a medical assistant that recommends the most suitable specialist based on symptoms.\n"
-            f"Use the following explicit mappings for common keywords in symptoms:\n"
-            f"- Heart, chest pain, irregular heartbeat -> Cardiologist\n"
-            f"- Bones, joints, fractures, arthritis -> Orthopedic Specialist\n"
-            f"- Skin, rashes, acne -> Dermatologist\n"
-            f"- Stomach, digestion, acid reflux -> Gastroenterologist\n"
-            f"- Anxiety, depression, mental health -> Psychiatrist\n"
-            f"- Throat, ears, nose -> ENT Specialist\n"
-            f"- Lungs, shortness of breath, coughing -> Pulmonologist\n"
-            f"- Diabetes, hormones -> Endocrinologist\n"
-            f"- Urinary, bladder, kidney -> Urologist\n"
-            f"- Cancer -> Oncologist\n"
-            f"If symptoms don’t match any specific category, choose 'General Practitioner'.\n"
-            f"\nBased on the following symptoms, determine the most suitable type of medical specialist to consult:\n"
-            f"Symptoms: {', '.join(symptoms)}\n"
-            f"Choose the specialist from the following list: {', '.join(specialist_options)}.\n"
-            f"Provide only the name of the specialist (e.g., 'Orthopedic Specialist')."
-        )
+    total_symptom_questions_needed = 3  # Minimum number of symptom questions
+    max_symptom_questions = 5  # Maximum number of symptom questions
 
-        # Make the API call to OpenAI's ChatCompletion
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are a medical assistant that maps symptoms to specialists."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=10,  # Short response expected
-            temperature=0  # Deterministic response
-        )
+    total_additional_questions_needed = 1  # Minimum number of additional questions
+    max_additional_questions = 2  # Maximum number of additional questions
 
-        # Extract the specialist from the response
-        specialist = response['choices'][0]['message']['content'].strip()
-        logging.info(f"Determined Specialist: {specialist}")
-        return specialist
-    except Exception as e:
-        logging.error(f"Failed to determine specialist: {e}")
-        return "General Practitioner"  # Fallback specialist
+    # Convert initial symptoms to lowercase
+    matched_symptoms = [symptom.lower() for symptom in initial_symptoms]
 
-def extract_all_symptoms(conversation_history, symptom_list, symptom_to_canonical):
+    # Collect possible questions for each matched symptom
+    symptom_questions_dict = {}
+    for symptom in matched_symptoms:
+        if symptom in symptom_followup_questions_lower:
+            symptom_questions = symptom_followup_questions_lower[symptom]
+            # Remove questions whose category has already been asked
+            symptom_questions = [q for q in symptom_questions if q.get('category') not in asked_categories]
+            symptom_questions_dict[symptom] = symptom_questions
+
+    # Collect all symptom questions
+    all_symptom_questions = []
+    for questions in symptom_questions_dict.values():
+        all_symptom_questions.extend(questions)
+
+    # Randomly select up to max_symptom_questions from all symptom questions
+    num_symptom_questions_to_ask = min(max_symptom_questions, len(all_symptom_questions))
+    selected_symptom_questions = random.sample(all_symptom_questions, num_symptom_questions_to_ask) if all_symptom_questions else []
+
+    # Ensure we have at least the minimum number of symptom questions
+    if len(selected_symptom_questions) < total_symptom_questions_needed and all_symptom_questions:
+        additional_needed = total_symptom_questions_needed - len(selected_symptom_questions)
+        remaining_questions = [q for q in all_symptom_questions if q not in selected_symptom_questions]
+        selected_symptom_questions.extend(remaining_questions[:additional_needed])
+
+    # Update asked_categories with selected symptom question categories
+    for q in selected_symptom_questions:
+        asked_categories.add(q.get('category'))
+
+    # Now handle additional information questions
+    # Collect missing additional info categories
+    missing_additional_info = []
+    for q in additional_followup_questions:
+        category = q.get('category')
+        if category not in additional_info or not additional_info.get(category):
+            if category not in asked_categories:
+                missing_additional_info.append(q)
+
+    # Randomly select up to max_additional_questions from missing additional info questions
+    num_additional_questions_to_ask = min(max_additional_questions, len(missing_additional_info))
+    selected_additional_questions = random.sample(missing_additional_info, num_additional_questions_to_ask) if missing_additional_info else []
+
+    # Ensure we have at least the minimum number of additional questions
+    if len(selected_additional_questions) < total_additional_questions_needed and missing_additional_info:
+        additional_needed = total_additional_questions_needed - len(selected_additional_questions)
+        remaining_questions = [q for q in missing_additional_info if q not in selected_additional_questions]
+        selected_additional_questions.extend(remaining_questions[:additional_needed])
+
+    # Update asked_categories with selected additional question categories
+    for q in selected_additional_questions:
+        asked_categories.add(q.get('category'))
+
+    # Combine symptom questions and additional questions
+    followup_questions = selected_symptom_questions + selected_additional_questions
+
+    # Update the session state's asked_question_categories
+    st.session_state.asked_question_categories.update(asked_categories)
+
+    # If no symptoms are extracted initially, ask "Are you experiencing any other symptoms?"
+    if not matched_symptoms and not st.session_state.get('asked_other_symptoms'):
+        other_symptoms_question = {
+            "hi": "क्या आप कोई अन्य लक्षण महसूस कर रहे हैं?",
+            "en": "Are you experiencing any other symptoms?",
+            "category": "other_symptoms",
+            "symptom": None
+        }
+        followup_questions.insert(0, other_symptoms_question)
+        st.session_state['asked_other_symptoms'] = True
+
+    logger.info(f"Determined Follow-Up Questions: {followup_questions}")
+    return followup_questions
+
+def extract_all_symptoms(conversation_history):
     """
-    Extract all exact symptoms and additional information from the conversation history.
+    Extract all symptoms and additional information from the conversation history.
     Collect all user inputs into a single transcript for cause analysis.
-
-    Args:
-        conversation_history (list): List of conversation entries.
-        symptom_list (list): List of symptom variants.
-        symptom_to_canonical (dict): Mapping from variant to canonical symptom.
-
-    Returns:
-        tuple: (matched_symptoms, additional_info, combined_transcript)
     """
-    exact_symptoms = set()
-    canonical_symptoms = set()
+    matched_symptoms = set()
     additional_info = {
         'age': None,
         'gender': None,
@@ -2506,14 +2446,14 @@ def extract_all_symptoms(conversation_history, symptom_list, symptom_to_canonica
     combined_transcript = ""
 
     affirmative_responses = {'yes', 'yeah', 'yep', 'yup', 'sure', 'of course', 'definitely', 'haan', 'ha'}
-    negative_responses = {'no', 'nah', 'nope', 'not really', "don't", 'nahi'}
+    negative_responses = {'no', 'nah', 'nope', 'not really', 'don\'t', 'nahi'}
 
     for entry in conversation_history:
         if 'user' in entry:
             user_text = entry['user']
             combined_transcript += " " + user_text  # Collecting all user inputs
-            symptoms = extract_symptoms(user_text, symptom_list, symptom_to_canonical)
-            exact_symptoms.update(symptoms)
+            symptoms = extract_symptoms(user_text)
+            matched_symptoms.update(symptoms)
             info = extract_additional_entities(user_text)
             for key in additional_info:
                 if key in info and info[key]:
@@ -2532,28 +2472,35 @@ def extract_all_symptoms(conversation_history, symptom_list, symptom_to_canonica
             is_negative = any(re.search(r'\b' + re.escape(word) + r'\b', response_text_lower) for word in negative_responses)
 
             if not is_negative:
-                # Extract symptoms from the response text
-                response_symptoms = extract_symptoms(response_text, symptom_list, symptom_to_canonical)
-                exact_symptoms.update(response_symptoms)
+           # Extract symptoms from the response text
+               response_symptoms = extract_symptoms(response_text)
+               matched_symptoms.update(response_symptoms)
 
-            # Get the 'symptom' associated with the question using canonical mapping
+            # Get the 'symptom' associated with the question
             symptom = None
-            for canonical_symptom, questions in canonical_symptom_followup_questions.items():
-                for q in questions:
-                    if q['en'].lower() == question_text.lower():
+            for symptom_category in symptom_followup_questions.values():
+                for q in symptom_category:
+                    if q['en'] == question_text:
                         symptom = q.get('symptom')
                         break
                 if symptom:
                     break
 
             if symptom and is_affirmative:
-                canonical_symptoms.add(symptom.lower())  # For follow-up mapping
+                matched_symptoms.add(symptom)
                 combined_transcript += " " + response_text  # Include affirmative response in transcript
             elif symptom and is_negative:
-                canonical_symptoms.discard(symptom.lower())  # Remove symptom if previously added
+                if symptom in matched_symptoms:
+                    matched_symptoms.remove(symptom)
                 # Do not include negative responses in transcript for cause analysis
             else:
                 combined_transcript += " " + response_text  # Include other responses
+
+            # Extract symptoms from the response text if not negative
+            if not is_negative:
+                # Extract symptoms from the response text
+                response_symptoms = extract_symptoms(response_text)
+                matched_symptoms.update(response_symptoms)
 
             # Extract additional entities from the response
             info = extract_additional_entities(response_text)
@@ -2565,35 +2512,11 @@ def extract_all_symptoms(conversation_history, symptom_list, symptom_to_canonica
                     else:
                         additional_info[key] = info[key]
 
-    # Update session_state with additional_info and exact_symptoms
-    if 'additional_info' not in st.session_state:
-        st.session_state.additional_info = {}
-    if 'matched_symptoms' not in st.session_state:
-        st.session_state.matched_symptoms = set()
-
-    # Update existing session state with new data
-    for key in additional_info:
-        if additional_info[key]:
-            if isinstance(additional_info[key], list):
-                st.session_state.additional_info.setdefault(key, []).extend(additional_info[key])
-                st.session_state.additional_info[key] = list(set(st.session_state.additional_info[key]))
-            else:
-                st.session_state.additional_info[key] = additional_info[key]
-
-    # Update matched_symptoms with exact_symptoms
-    st.session_state.matched_symptoms.update(exact_symptoms)
-
-    # For follow-up questions, use canonical_symptoms
-    if 'canonical_matched_symptoms' not in st.session_state:
-        st.session_state.canonical_matched_symptoms = set()
-    st.session_state.canonical_matched_symptoms.update(canonical_symptoms)
-
-    logger.info(f"Final Exact Symptoms: {st.session_state.matched_symptoms}")
-    logger.info(f"Canonical Symptoms for Follow-Up: {st.session_state.canonical_matched_symptoms}")
-    logger.info(f"Additional Information: {st.session_state.additional_info}")
+    logger.info(f"Final Matched Symptoms: {matched_symptoms}")
+    logger.info(f"Additional Information: {additional_info}")
     logger.info(f"Combined Transcript for Cause Analysis: {combined_transcript}")
 
-    return st.session_state.matched_symptoms, st.session_state.additional_info, combined_transcript
+    return matched_symptoms, additional_info, combined_transcript
 
 def extract_and_prepare_questions(conversation_history):
     """
@@ -2664,27 +2587,18 @@ def generate_report(conversation_history):
     Generate the final diagnostic report based on the conversation history.
     Additionally, generate and play an audio summary in Hindi.
     """
-    # Access session_state variables
-    exact_symptoms = st.session_state.get('matched_symptoms', set())
-    additional_info = st.session_state.get('additional_info', {})
-
-    # Combine transcript for possible cause analysis
-    combined_transcript = " ".join([entry['user'] for entry in conversation_history if 'user' in entry])
-    combined_transcript += " " + " ".join([entry['response'] for entry in conversation_history if 'response' in entry])
-
+    matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(conversation_history)
     st.subheader("📄 **Final Report:**")
-    st.write("**Symptoms:**", ', '.join(sorted(exact_symptoms)) if exact_symptoms else 'Not specified')
-
-    # Display Additional Information
-    if additional_info.get('age'):
+    st.write("**Symptoms:**", ', '.join(matched_symptoms) if matched_symptoms else 'Not specified')
+    if additional_info['age']:
         st.write(f"**Age:** {additional_info['age']} years old")
-    if additional_info.get('gender'):
+    if additional_info['gender']:
         st.write(f"**Gender:** {additional_info['gender'].title()}")
-    if additional_info.get('location'):
+    if additional_info['location']:
         st.write(f"**Location:** {additional_info['location']}")
-    if additional_info.get('duration'):
+    if additional_info['duration']:
         st.write(f"**Duration of Symptoms:** {additional_info['duration']}")
-    if additional_info.get('medications'):
+    if additional_info['medications']:
         st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
 
     # Generate a single possible cause using OpenAI API based on the combined transcript
@@ -2697,8 +2611,8 @@ def generate_report(conversation_history):
     else:
         st.write("**Possible Cause:** No possible causes determined.")
 
-    # Map symptoms to diseases (optional, depending on your implementation)
-    probable_diseases = map_symptoms_to_diseases(exact_symptoms, additional_info)
+    # Map symptoms to diseases
+    probable_diseases = map_symptoms_to_diseases(matched_symptoms, additional_info)
 
     st.subheader("📝 **Transcript of Questions and Answers:**")
     question_count = 1
@@ -2709,27 +2623,27 @@ def generate_report(conversation_history):
             st.write("---")
             question_count += 1
 
- # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
+    # -------------------- New Functionality: Speak Causes and Symptoms in Hindi -------------------- #
 
     # Determine the best specialist based on symptoms
-    if exact_symptoms:
-        specialist = determine_best_specialist(list(exact_symptoms))
+    if matched_symptoms:
+        specialist = determine_best_specialist(list(matched_symptoms))
     else:
         specialist = "General Practitioner"  # Default specialist
 
-    # Translate the specialist to Hindi
+     # Translate the specialist to Hindi
     translated_specialist = specialist
 
     # Check if a possible cause was determined
     if possible_cause and possible_cause != "No suitable cause determined from the transcript.":
         # Translate the cause to Hindi
-        translated_cause = translate_to_hindi(possible_cause)
+        translated_cause = translator.translate(possible_cause, src='en', dest='hi').text
     else:
         translated_cause = "आपके लक्षणों के आधार पर कोई संभावित कारण नहीं पाया गया।"
 
-    # Translate exact symptoms to Hindi
-    if exact_symptoms:
-        translated_symptoms_list = [translate_to_hindi(symptom) for symptom in exact_symptoms]
+    # Translate symptoms to Hindi
+    if matched_symptoms:
+        translated_symptoms_list = [translate_to_hindi(symptom) for symptom in matched_symptoms]
         translated_symptoms = ', '.join(translated_symptoms_list)
     else:
         translated_symptoms = "कोई लक्षण नहीं पहचाने गए।"
@@ -2773,12 +2687,12 @@ def handle_yes_no_response(question, response):
         st.session_state.matched_symptoms = set()
 
     if is_affirmative and question['symptom']:
-        st.session_state.matched_symptoms.add(question['symptom'].lower())  # Ensure lowercase
+        st.session_state.matched_symptoms.add(question['symptom'])
         logger.info(f"Added symptom '{question['symptom']}' based on affirmative response.")
         st.success(f"Added symptom: {question['symptom']}")
     elif is_negative and question['symptom']:
-        if question['symptom'].lower() in st.session_state.matched_symptoms:
-            st.session_state.matched_symptoms.remove(question['symptom'].lower())
+        if question['symptom'] in st.session_state.matched_symptoms:
+            st.session_state.matched_symptoms.remove(question['symptom'])
             logger.info(f"Removed symptom '{question['symptom']}' based on negative response.")
             st.warning(f"Removed symptom: {question['symptom']}")
         else:
@@ -2789,7 +2703,6 @@ def handle_yes_no_response(question, response):
 # -------------------- Main Streamlit Application -------------------- #
 
 def main():
-    # Initialize session state variables
     if 'current_step' not in st.session_state:
         st.session_state.current_step = 0  # Start at welcome
         st.session_state.conversation_history = []
@@ -2804,6 +2717,9 @@ def main():
             'medications': []
         }
         st.session_state.matched_symptoms = set()
+        st.session_state.initial_symptoms = set()  # Store initial symptoms separately
+        st.session_state.symptoms_processed = False
+        st.session_state.asked_other_symptoms = False
         st.session_state.asked_question_categories = set()  # Track asked question categories
 
     st.title("🩺 O-Health LLM App")
@@ -2811,25 +2727,21 @@ def main():
         Welcome to the O-Health LLM App. You can either speak your symptoms in Hindi or type them in English to receive potential disease recommendations based on your inputs.
     """)
 
-    # Load symptoms from CSV
-    symptom_list, symptom_to_canonical = load_symptom_list('Extract_Causes/symptom_list_2.csv')
-
-    if not symptom_list:
-        st.error("Symptom list is empty or failed to load. Please check the CSV file.")
-        return
-
     # Step 0: Welcome Message
     if st.session_state.current_step == 0:
-        # Generate and play the welcome audio in Hindi
+        # Generate the welcome audio in Hindi
         welcome_text = "ओ-हेल्थ में आपका स्वागत है। कृपया माइक्रोफ़ोन बटन दबाएं और अपने लक्षण बोलें।"
+       #audio_bytes = generate_audio(welcome_text, lang='hi')
         audio_bytes = generate_audio_with_api_key(welcome_text, API_KEY, lang='hi')
         if audio_bytes:
+            # Attempt to embed and autoplay the audio
+            #embed_audio_autoplay(audio_bytes)
             embed_audio_autoplay_google(audio_bytes)
         else:
             st.error("Failed to generate welcome audio.")
 
         # Display a welcome message
-        st.write("### Hello, Welcome to O-Health")
+        st.write("### Hello, Welcome to O-Health ")
         st.write("Please provide your symptoms to get started.")
 
         st.session_state.current_step = 1  # Proceed to the next step
@@ -2848,41 +2760,34 @@ def main():
                 transcribed_text = transcribe_audio(file_name)
                 if transcribed_text:
                     # Detect and translate to English if necessary
-                    corrected_text = translate_and_correct(transcribed_text)
+                    #translated_text = translate_to_english(transcribed_text)
+                    # Correct spelling in the translated text
+                    #corrected_text = correct_spelling(translated_text)
+
+                    corrected_input = translate_to_english(transcribed_text)
 
                     st.subheader("📝 Transcribed Text (English):")
-                    st.write(corrected_text)
-
-                    # Assign corrected_input to corrected_text
-                    corrected_input = corrected_text
-
+                    st.write(corrected_input)
                     # After processing initial input and updating conversation history
                     st.session_state.conversation_history.append({
                         'user': corrected_input
                     })
 
-                    # Extract symptoms and additional information
-                    matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
-                        st.session_state.conversation_history,
-                        symptom_list,
-                        symptom_to_canonical
-                    )
+                    # Extract initial symptoms
+                    matched_symptoms = extract_symptoms(corrected_input)
+                    st.session_state.initial_symptoms = set([symptom.lower() for symptom in matched_symptoms])
+                    st.session_state.matched_symptoms.update(st.session_state.initial_symptoms)
 
-                    # Update session state with extracted information
-                    st.session_state.matched_symptoms.update(matched_symptoms)
-                    for key, value in additional_info.items():
-                        if isinstance(value, list):
-                            st.session_state.additional_info[key].extend(value)
-                        else:
-                            st.session_state.additional_info[key] = value
+                    # Extract additional_info
+                    _, additional_info, possible_causes = extract_all_symptoms(st.session_state.conversation_history)
+                    st.session_state.additional_info = additional_info  # Update additional_info in session state
 
-                    # Determine follow-up questions using extracted data
-                    followup_questions = determine_followup_questions(
-                        matched_symptoms,
-                        additional_info,
+                    # Determine follow-up questions using initial symptoms
+                    st.session_state.followup_questions = determine_followup_questions(
+                        st.session_state.initial_symptoms,
+                        st.session_state.additional_info,
                         st.session_state.asked_question_categories
                     )
-                    st.session_state.followup_questions = followup_questions
 
                     st.session_state.current_step = 2  # Proceed to follow-up questions
                     st.session_state.symptoms_processed = True
@@ -2894,7 +2799,6 @@ def main():
                 st.error("Failed to save the audio file.")
         else:
             st.write("Please record your symptoms using the microphone button above.")
-
         # Optionally, provide a fallback text input
         st.write("**Alternatively, you can type your symptoms below:**")
         user_input = st.text_area("Enter your symptoms here...")
@@ -2904,42 +2808,24 @@ def main():
             else:
                 # Detect and translate to English if necessary
                 translated_input = translate_to_english(user_input)
+                # Correct spelling in the translated text
                 corrected_input = translated_input
-
+                #corrected_input = correct_spelling(translated_input)
                 st.subheader("📝 Your Input:")
                 st.write(corrected_input)
                 st.session_state.conversation_history.append({
                     'user': corrected_input
                 })
-
-                # Extract symptoms and additional information
-                matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
-                    st.session_state.conversation_history,
-                    symptom_list,
-                    symptom_to_canonical
-                )
-
-                # Update session state with extracted information
-                st.session_state.matched_symptoms.update(matched_symptoms)
-                for key, value in additional_info.items():
-                    if isinstance(value, list):
-                        st.session_state.additional_info[key].extend(value)
-                    else:
-                        st.session_state.additional_info[key] = value
-
-                # Determine follow-up questions using extracted data
-                followup_questions = determine_followup_questions(
-                    matched_symptoms,
-                    additional_info,
-                    st.session_state.asked_question_categories
-                )
-                st.session_state.followup_questions = followup_questions
-
+                # Extract additional_info
+                matched_symptoms, additional_info, possible_causes = extract_all_symptoms(st.session_state.conversation_history)
+                st.session_state.additional_info = additional_info  # Update additional_info in session state
+                # Determine follow-up questions with both conversation_history and additional_info
+                st.session_state.followup_questions = determine_followup_questions(st.session_state.conversation_history, additional_info)
                 st.session_state.current_step = 2  # Proceed to follow-up questions
                 st.session_state.symptoms_processed = True
                 st.experimental_rerun()
 
-    # Step 2: Follow-Up Questions
+     # Step 2: Follow-Up Questions
     if st.session_state.current_step == 2:
         total_questions = len(st.session_state.followup_questions)
         if total_questions == 0:
@@ -2977,36 +2863,28 @@ def main():
                     response_transcribed = transcribe_audio(response_file_name)
                     if response_transcribed:
                         # Detect and translate to English if necessary
-                        corrected_response = translate_and_correct(response_transcribed)
-
+                        translated_response = translate_to_english(response_transcribed)
+                        corrected_response = translated_response
                         st.subheader(f"📝 Response to Follow-Up Question {question_number} (English):")
                         st.write(corrected_response)
                         # Handle yes/no responses to add/remove symptoms
                         handle_yes_no_response(current_question, corrected_response)
                         # Extract any new symptoms from the response
-                        st.session_state.conversation_history.append({
-                            'followup_question_en': current_question['en'],
-                            'response': corrected_response
-                        })
-                        matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
-                            st.session_state.conversation_history,
-                            symptom_list,
-                            symptom_to_canonical
-                        )
-
-                        # Update session state with extracted information
-                        st.session_state.matched_symptoms.update(matched_symptoms)
-                        for key, value in additional_info.items():
-                            if isinstance(value, list):
-                                st.session_state.additional_info[key].extend(value)
-                            else:
-                                st.session_state.additional_info[key] = value
+                        extracted_new_symptoms = extract_symptoms(corrected_response)
+                        if extracted_new_symptoms:
+                            st.session_state.matched_symptoms.update(extracted_new_symptoms)
+                            st.success(f"New symptoms detected and added: {', '.join(extracted_new_symptoms)}")
+                            #st.session_state.new_symptoms_detected = True
 
                         # Add current question category to asked categories
                         current_category = current_question.get('category')
                         if current_category:
                             st.session_state.asked_question_categories.add(current_category)
 
+                        st.session_state.conversation_history.append({
+                            'followup_question_en': current_question['en'],
+                            'response': corrected_response
+                        })
                         st.session_state[f'answer_{st.session_state.current_followup}_processed'] = True
                         st.session_state.current_followup += 1
                         st.experimental_rerun()
@@ -3024,26 +2902,18 @@ def main():
                 if answer_input.strip() == "":
                     st.warning("Please enter your answer.")
                 else:
-                    corrected_answer = translate_to_english(answer_input)
-
+                    translated_answer = translate_to_english(answer_input)
+                    corrected_answer = translated_answer
                     st.session_state.conversation_history.append({
                         'followup_question_en': current_question['en'],
                         'response': corrected_answer
                     })
                     handle_yes_no_response(current_question, corrected_answer)
-                    matched_symptoms, additional_info, combined_transcript = extract_all_symptoms(
-                        st.session_state.conversation_history,
-                        symptom_list,
-                        symptom_to_canonical
-                    )
-
-                    # Update session state with extracted information
-                    st.session_state.matched_symptoms.update(matched_symptoms)
-                    for key, value in additional_info.items():
-                        if isinstance(value, list):
-                            st.session_state.additional_info[key].extend(value)
-                        else:
-                            st.session_state.additional_info[key] = value
+                    extracted_new_symptoms = extract_symptoms(corrected_answer)
+                    if extracted_new_symptoms:
+                        st.session_state.matched_symptoms.update(extracted_new_symptoms)
+                        st.success(f"New symptoms detected and added: {', '.join(extracted_new_symptoms)}")
+                        st.session_state.new_symptoms_detected = True
 
                     # Add current question category to asked categories
                     current_category = current_question.get('category')
@@ -3055,104 +2925,33 @@ def main():
                     st.experimental_rerun()
         else:
             # All follow-up questions have been asked
-            st.session_state.current_step = 3
-            st.experimental_rerun()
+            if st.session_state.get('new_symptoms_detected', False):
+                # Determine new follow-up questions based on updated symptoms
+                new_followup_questions = determine_followup_questions(
+                    st.session_state.conversation_history,
+                    st.session_state.additional_info,
+                    st.session_state.asked_question_categories
+                )
+                logger.info(f"New follow-up questions determined: {new_followup_questions}")
+                if new_followup_questions:
+                    st.session_state.followup_questions = new_followup_questions
+                    st.session_state.current_followup = 0
+                    st.session_state.new_symptoms_detected = False
+                    st.experimental_rerun()
+                else:
+                    # No new questions to ask, proceed to generate report
+                    st.session_state.current_step = 3
+                    st.session_state.new_symptoms_detected = False
+                    st.experimental_rerun()
+            else:
+                st.session_state.current_step = 3
+                st.experimental_rerun()
 
     # Step 3: Generate Report
     if st.session_state.current_step == 3 and not st.session_state.report_generated:
         st.session_state.report_generated = True
         with st.spinner("Analyzing your information..."):
-            report = generate_report(st.session_state.conversation_history)
-
-        # Display the report
-        #st.header("📄 Final Report")
-        #st.write(f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}")
-        #if st.session_state.additional_info.get('age'):
-        #    st.write(f"**Age:** {st.session_state.additional_info['age']} years old")
-        #if st.session_state.additional_info.get('gender'):
-        #    st.write(f"**Gender:** {st.session_state.additional_info['gender'].title()}")
-        #if st.session_state.additional_info.get('location'):
-        #    st.write(f"**Location:** {st.session_state.additional_info['location']}")
-        #if st.session_state.additional_info.get('duration'):
-        #    st.write(f"**Duration:** {st.session_state.additional_info['duration']}")
-        #if st.session_state.additional_info.get('medications'):
-        #    st.write(f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}")
-        #st.write(f"**Possible Cause:** {report}")
-
-        # Assemble the transcript
-        transcript = "📝 **Transcript of Questions and Answers:**\n\n"
-        
-        # Extract initial input
-        initial_input = ""
-        for entry in st.session_state.conversation_history:
-            if 'user' in entry:
-                initial_input = entry['user']
-                break  # Assuming only one initial input
-
-        # Add Initial Input to the transcript
-        transcript += f"**Initial Input:** {initial_input}\n\n"
-
-        # Add Q&A to the transcript
-        question_number = 1
-        for entry in st.session_state.conversation_history:
-            if 'followup_question_en' in entry and 'response' in entry:
-                transcript += f"**Question {question_number} (English):** {entry['followup_question_en']}\n\n"
-                transcript += f"**Your Answer:** {entry['response']}\n\n"
-                question_number += 1
-
-        # Display the transcript
-        #st.header("📝 Transcript of Questions and Answers")
-        #st.markdown(transcript)
-
-        # Extracted Information
-        extracted_info = "🔍 **Extracted Information:**\n\n"
-        extracted_info += f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}\n"
-        if st.session_state.additional_info.get('age'):
-            extracted_info += f"**Age:** {st.session_state.additional_info['age']} years old\n"
-        if st.session_state.additional_info.get('gender'):
-            extracted_info += f"**Gender:** {st.session_state.additional_info['gender'].title()}\n"
-        if st.session_state.additional_info.get('location'):
-            extracted_info += f"**Location:** {st.session_state.additional_info['location']}\n"
-        if st.session_state.additional_info.get('duration'):
-            extracted_info += f"**Duration:** {st.session_state.additional_info['duration']}\n"
-        if st.session_state.additional_info.get('medications'):
-            extracted_info += f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}\n"
-
-        #st.header("🔍 Extracted Information")
-        #st.write(extracted_info)
-
-        # Combine all content for download
-        download_content = f"📄 **Final Report:**\n\n"
-        download_content += f"**Symptoms:** {', '.join(st.session_state.matched_symptoms) if st.session_state.matched_symptoms else 'Not specified'}\n"
-        if st.session_state.additional_info.get('age'):
-            download_content += f"**Age:** {st.session_state.additional_info['age']} years old\n"
-        if st.session_state.additional_info.get('gender'):
-            download_content += f"**Gender:** {st.session_state.additional_info['gender'].title()}\n"
-        if st.session_state.additional_info.get('location'):
-            download_content += f"**Location:** {st.session_state.additional_info['location']}\n"
-        if st.session_state.additional_info.get('duration'):
-            download_content += f"**Duration:** {st.session_state.additional_info['duration']}\n"
-        if st.session_state.additional_info.get('medications'):
-            download_content += f"**Medications Taken:** {', '.join(st.session_state.additional_info['medications'])}\n"
-        download_content += f"**Possible Cause:** {report}\n\n"
-        download_content += f"📝 **Transcript of Questions and Answers:**\n\n"
-        download_content += f"**Initial Input:** {initial_input}\n\n"
-        download_content += f"**Transcript of Questions and Answers:**\n\n"
-        question_number = 1
-        for entry in st.session_state.conversation_history:
-            if 'followup_question_en' in entry and 'response' in entry:
-                download_content += f"**Question {question_number} (English):** {entry['followup_question_en']}\n\n"
-                download_content += f"**Your Answer:** {entry['response']}\n\n"
-                question_number += 1
-        download_content += f"🔍 **Extracted Information:**\n\n{extracted_info}\n"
-
-        # Add a download button without displaying the downloadable content
-        st.download_button(
-            label="📥 Download Report and Transcript as TXT",
-            data=download_content,
-            file_name="health_report_transcript.txt",
-            mime="text/plain"
-        )
+            generate_report(st.session_state.conversation_history)
 
     # Display conversation logs on the sidebar
     with st.sidebar:
@@ -3164,20 +2963,25 @@ def main():
                 st.write(f"**Question {idx+1}:** {entry['followup_question_en']}")
                 st.write(f"**Answer:** {entry['response']}")
         # Display extracted information
-        matched_symptoms = st.session_state.get('matched_symptoms', set())
-        additional_info = st.session_state.get('additional_info', {})
+        matched_symptoms, additional_info, possible_causes = extract_all_symptoms(st.session_state.conversation_history)
         st.write("**Extracted Information:**")
         st.write(f"**Symptoms:** {', '.join(matched_symptoms) if matched_symptoms else 'Not specified'}")
-        if additional_info.get('age'):
+        if additional_info['age']:
             st.write(f"**Age:** {additional_info['age']} years old")
-        if additional_info.get('gender'):
+        if additional_info['gender']:
             st.write(f"**Gender:** {additional_info['gender'].title()}")
-        if additional_info.get('location'):
+        if additional_info['location']:
             st.write(f"**Location:** {additional_info['location']}")
-        if additional_info.get('duration'):
+        if additional_info['duration']:
             st.write(f"**Duration:** {additional_info['duration']}")
-        if additional_info.get('medications'):
+        if additional_info['medications']:
             st.write(f"**Medications Taken:** {', '.join(additional_info['medications'])}")
+        #st.write("**Possible Causes:**")
+        #if possible_causes and possible_causes != "No possible causes determined.":
+            #for cause in possible_causes:
+                #st.write(f"- {cause.capitalize()}")
+        #else:
+            #st.write("No possible causes determined.")
 
 if __name__ == "__main__":
     main()
