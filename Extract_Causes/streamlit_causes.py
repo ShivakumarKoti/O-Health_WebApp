@@ -220,22 +220,116 @@ symptom_synonyms = {
     # Add more symptom synonyms here
 }
 
-# Expanded medications list
 medications_list = [
-    "ibuprofen", "dolo650", "paracetamol", "aspirin", "acetaminophen","Dolo 650",
-    "amoxicillin", "antibiotic", "metformin", "lisinopril", "atorvastatin",
-    "cetirizine", "azithromycin", "hydrochlorothiazide", "omeprazole",
-    "sertraline", "naproxen", "albuterol", "simvastatin", "loratadine",
-    "furosemide", "clopidogrel", "prednisone", "insulin", "levothyroxine",
-    "gabapentin", "citalopram", "hydrocodone", "codeine", "tramadol",
-    "doxycycline", "ciprofloxacin", "lorazepam", "diazepam", "clonazepam",
-    "pantoprazole", "escitalopram", "rosuvastatin", "omeprazole", "esomeprazole",
-    "tamsulosin", "atenolol", "amlodipine", "sildenafil", "tadalafil",
-    "clindamycin", "metronidazole", "acetylsalicylic acid", "nifedipine",
-    "warfarin", "heparin", "digoxin", "fexofenadine", "salbutamol",
-    "montelukast", "levocetirizine", "betahistine", "melatonin", "zinc",
-    "vitamin c", "vitamin d", "multivitamin", "antacid", "antidepressant"
-    # Add more medications as needed
+    # Pain relievers / Anti-inflammatory
+    "ibuprofen", "acetaminophen", "paracetamol", "aspirin", "naproxen", "acetylsalicylic acid", 
+    "diclofenac", "meloxicam", "celecoxib", "indomethacin", "ketorolac", "butalbital", "Dolo 650",
+
+    # Antibiotics
+    "amoxicillin", "azithromycin", "doxycycline", "ciprofloxacin", "clindamycin", "metronidazole",
+    "cephalexin", "amoxicillin-clavulanate", "levofloxacin", "linezolid", "meropenem", "vancomycin", 
+    "fluconazole", "tetracycline", "rifampin", "sulfamethoxazole-trimethoprim", "nystatin",
+
+    # Cardiovascular
+    "lisinopril", "atorvastatin", "simvastatin", "rosuvastatin", "furosemide", "clopidogrel", "warfarin", 
+    "heparin", "digoxin", "nifedipine", "amlodipine", "atenolol", "tamsulosin", "isosorbide mononitrate", 
+    "losartan", "metoprolol", "propranolol", "hydralazine", "captopril", "carvedilol", "valsartan", 
+    "eplerenone", "nicorandil", "ranolazine", "dobutamine", "nitrate", "statin",
+
+    # Diabetes and Endocrine
+    "metformin", "insulin", "glimepiride", "glipizide", "glyburide", "sitagliptin", "pioglitazone", 
+    "liraglutide", "exenatide", "liraglutide", "canagliflozin", "dapagliflozin", "levothyroxine", 
+    "sodium bicarbonate", "hydrocortisone", "prednisone", "levothyroxine", "desmopressin", "teriparatide",
+    
+    # Respiratory / Allergies
+    "albuterol", "cetirizine", "loratadine", "fexofenadine", "salbutamol", "montelukast", "levocetirizine", 
+    "betahistine", "fluticasone", "budesonide", "beclometasone", "theophylline", "ipratropium", "mometasone",
+    "salmeterol", "formoterol", "tuscalo", "aminophylline", "naloxone", "dextromethorphan",
+
+    # Mental Health / Neurology
+    "sertraline", "citalopram", "escitalopram", "gabapentin", "hydrocodone", "codeine", "tramadol", 
+    "lorazepam", "diazepam", "clonazepam", "melatonin", "antidepressant", "antianxiety", "clonidine", "aripiprazole", 
+    "quetiapine", "risperidone", "lithium", "vortioxetine", "duloxetine", "venlafaxine", "bupropion", "mirtazapine",
+    "buspirone", "modafinil", "carbamazepine", "topiramate", "lamotrigine", "valproic acid", "levetiracetam", 
+    "phenytoin", "oxcarbazepine", "zaleplon", "zolpidem", "eszopiclone",
+
+    # Gastrointestinal
+    "omeprazole", "pantoprazole", "antacid", "metoclopramide", "ranitidine", "famotidine", "esomeprazole", 
+    "lansoprazole", "hydrochlorothiazide", "bismuth subsalicylate", "bisacodyl", "docusate", "loperamide", "diphenoxylate", 
+    "aluminum hydroxide", "sucralfate", "misoprostol", "codeine phosphate",
+
+    # Vitamins and Supplements
+    "zinc", "vitamin c", "vitamin d", "multivitamin", "folic acid", "vitamin b12", "vitamin e", 
+    "iron sulfate", "calcium carbonate", "magnesium oxide", "potassium chloride", "manganese", "iodine", 
+    "biotin", "collagen", "probiotic", "omega-3", "fish oil",
+
+    # Other
+    "prednisone", "hydroxychloroquine", "betahistine", "antibiotic", "antiplatelet", "anticoagulant", "fentanyl", 
+    "methadone", "buprenorphine", "naloxone", "acetylcysteine", "digoxin", "thiamine", "fluphenazine", 
+    "morphine", "methocarbamol", "colchicine", "dantrolene", "loperamide", "theophylline", "apixaban", 
+    "dabigatran", "rivaroxaban", "pantoprazole", "benzonatate", "immunoglobulin", "neostigmine", "levodopa", 
+    "entacapone", "bromocriptine", "carbidopa", "tizanidine", "probenecid", "allopurinol", "febuxostat",
+    "colchicine", "methylprednisolone", "hydrocortisone", "bupropion", "clozapine", "chlorpromazine", "phenelzine",
+    "tranylcypromine", "bromocriptine", "tretinoin", "hydroxyzine", "terbinafine", "dapsone", "lidocaine",
+    "hydroxyurea", "azathioprine", "cyclophosphamide", "methotrexate", "sulfasalazine", "dimercaprol",
+    "dantrolene", "adrenaline", "epinephrine", "tylenol", "xanax", "valium", "ambien", "ativan", "prozac",
+
+    # Dermatology (Skin-related)
+    "clotrimazole", "ketoconazole", "hydrocortisone", "tretinoin", "benzoyl peroxide", "clindamycin gel", 
+    "adapalene", "hydroxychloroquine", "salicylic acid", "calcipotriene", "betamethasone", "mupirocin", 
+    "fluticasone cream", "permethrin", "coal tar", "finasteride", "isotretinoin", "gentamicin", "pimecrolimus", 
+    "tacrolimus", "azelaic acid",
+
+    # Musculoskeletal Disorders
+    "methocarbamol", "baclofen", "tizanidine", "carisoprodol", "cyclobenzaprine", "diclofenac gel", 
+    "celecoxib", "indomethacin", "colchicine", "allopurinol", "febuxostat", "naproxen", "hydroxychloroquine", 
+    "prednisone", "methylprednisolone", "gabapentin", "tramadol", "etoricoxib", "oxcarbazepine", "tizanidine",
+
+    # Immunosuppressants / Immunology
+    "methotrexate", "azathioprine", "mycophenolate mofetil", "cyclophosphamide", "tacrolimus", "sirolimus", 
+    "prednisolone", "bendamustine", "rituximab", "infliximab", "adalimumab", "etanercept", "leflunomide", 
+    "hydroxychloroquine", "intravenous immunoglobulin", "tofacitinib", "abatacept", "etanercept", "sulfasalazine", 
+    "cyclosporine", "belimumab",
+
+    # Ophthalmology (Eye-related)
+    "latanoprost", "timolol", "brimonidine", "prednisolone acetate", "neomycin-polymyxin-bacitracin", "pilocarpine", 
+    "dorzolamide", "bimatoprost", "hydroxychloroquine", "tobramycin", "moxifloxacin", "gentamicin drops", 
+    "sulfacetamide", "cyclopentolate", "hydrocortisone eye drops", "levofloxacin ophthalmic", "ketorolac ophthalmic", 
+    "flurbiprofen", "povidone-iodine", "dexamethasone eye drops", "lisinopril", "azithromycin eye drops", 
+    "acetazolamide (for glaucoma)",
+
+    # Urology
+    "finasteride", "tamsulosin", "sildenafil", "terazosin", "dutasteride", "vardenafil", "tadalafil", "alfuzosin", 
+    "oxybutynin", "tolterodine", "mirabegron", "desmopressin", "bethanechol", "dapoxetine", "flomax", "proscar", 
+    "silodosin", "bupropion", "indomethacin", "methyltestosterone", "tadalafil", "hydroxyurea", "gabapentin", 
+    "tramadol", "famotidine", "imipramine", "amitriptyline",
+
+    # Infection Management / Antivirals
+    "acyclovir", "oseltamivir", "zidovudine", "lopinavir", "ritonavir", "tenofovir", "emtricitabine", "boceprevir", 
+    "sofosbuvir", "daclatasvir", "favipiravir", "ribavirin", "ledipasvir", "baloxavir", "remdesivir", "valacyclovir", 
+    "maraviroc", "lamivudine", "nevirapine", "abacavir", "darunavir", "raltegravir", "dolutegravir",
+
+    # Antifungals
+    "fluconazole", "itraconazole", "ketoconazole", "voriconazole", "clotrimazole", "terbinafine", "nystatin", 
+    "miconazole", "posaconazole", "griseofulvin", "flucytosine", "amphotericin B", "caspofungin", "micafungin",
+
+    # Antiparasitic
+    "mebendazole", "albendazole", "ivermectin", "praziquantel", "decetylpyridinium chloride", "doxycycline", 
+    "metronidazole", "quinine", "proguanil", "chloroquine", "artemisinin", "tetracycline", "proguanil", 
+    "atovaquone",
+
+    # Antiemetics
+    "ondansetron", "promethazine", "metoclopramide", "granisetron", "dolasetron", "scopolamine", "prochlorperazine",
+    "dimenhydrinate", "meclizine", "dimenhydrinate", "hydroxyzine",
+
+    # Pain and Nerve Medications
+    "gabapentin", "tramadol", "buprenorphine", "pregabalin", "lidocaine", "carbamazepine", "oxcarbazepine", 
+    "amitriptyline", "clonidine", "methadone", "fentanyl",
+
+    # Thyroid and Hormonal Medications
+    "levothyroxine", "estradiol", "testosterone", "medroxyprogesterone", "levonorgestrel", "ethinyl estradiol", 
+    "progesterone", "desogestrel", "etonogestrel", "spironolactone", "norethindrone", "bromocriptine", 
+    "clomiphene", "metformin", "prasterone",
 ]
 
 # Initialize the translator
