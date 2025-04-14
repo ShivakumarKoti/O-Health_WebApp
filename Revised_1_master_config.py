@@ -572,7 +572,7 @@ symptom_synonyms = {
     'excessive gas', 'gas expulsion', 'intestinal discomfort', 'gas release', 'unwanted gas', 'gas in the stomach', 'passing wind'
 ],
 'acidity': [
-    'acid reflux', 'heartburn', 'sour stomach', 'acidic feeling', 'burning in chest', 'burning sensation',
+    'acid reflux', 'heartburn', 'sour stomach', 'acidic feeling', 'burning in chest', 'burning sensation','heartburning',
     'stomach acid', 'acid burps', 'sour taste in mouth', 'regurgitation', 'indigestion', 'upper abdominal burning',
     'acid in throat', 'stomach burning', 'gastric acid', 'acid buildup', 'acidic burping', 'throat burn',
     'reflux sensation', 'chest discomfort after eating', 'acid sensation', 'acidic regurgitation', 'acidic discomfort',
