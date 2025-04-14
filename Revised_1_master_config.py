@@ -567,20 +567,20 @@ symptom_synonyms = {
 ],
 
 'gas': [
-    'flatulence', 'intestinal gas', 'stomach gas', 'abdominal gas', 'gassy feeling', 'farting', 'passing gas', 'gas buildup',
+    'flatulence', 'intestinal gas', 'stomach gas', 'abdominal gas', 'gassy feeling', 'farting', 'passing gas', 'gas buildup', 'GERD',
     'wind', 'belching', 'burping', 'gas discomfort', 'gas pains', 'digestive gas', 'stomach is full', 'gassy stomach', 'trapped gas',
     'excessive gas', 'gas expulsion', 'intestinal discomfort', 'gas release', 'unwanted gas', 'gas in the stomach', 'passing wind'
 ],
+'acidity': [
+    'acid reflux', 'heartburn', 'sour stomach', 'acidic feeling', 'burning in chest', 'burning sensation',
+    'stomach acid', 'acid burps', 'sour taste in mouth', 'regurgitation', 'indigestion', 'upper abdominal burning',
+    'acid in throat', 'stomach burning', 'gastric acid', 'acid buildup', 'acidic burping', 'throat burn',
+    'reflux sensation', 'chest discomfort after eating', 'acid sensation', 'acidic regurgitation', 'acidic discomfort',
+    'burning after meals', 'acid coming up', 'bitter taste in throat'
+]
 
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach', 'belching', 'feeling of heaviness', 'difficulty digesting', 'food intolerance', 'excessive burping'
-],
-
-'heartburn': [
-    'acid reflux', 'gastroesophageal reflux', 'GERD', 'acid indigestion', 'stomach acid', 'burning sensation in the chest', 'burning throat',
-    'acidic taste in the mouth', 'chronic heartburn', 'esophageal burning', 'gastric reflux', 'burning chest pain', 'sour stomach', 'acid regurgitation',
-    'acid backflow', 'stomach acid reflux', 'acid reflux disease', 'heartburn symptoms', 'irritated esophagus', 'burning sensation after eating',
-    'heartburn discomfort'
 ],
 
 'mouth sore': [
