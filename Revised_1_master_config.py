@@ -2524,45 +2524,6 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "heartburn": [
-    {
-      "hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?",
-      "en": "Are you experiencing burning sensations in your stomach?",
-      "category": "burning_sensation_with_heartburn",
-      "symptom": "burning",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या जलन आपके छाती के क्षेत्र में हो रही है?",
-      "en": "Is the burning sensation occurring in your chest area?",
-      "category": "chest_burning",
-      "symptom": "chest burning",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको यह जलन खाने के बाद ज्यादा होती है?",
-      "en": "Does the burning sensation increase after eating?",
-      "category": "post_meal_heartburn",
-      "symptom": "heartburn",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या जलन के साथ आपको सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty breathing along with the burning sensation?",
-      "category": "breathing_difficulty_with_heartburn",
-      "symptom": "shortness of breath",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको जलन के साथ पेट में दर्द भी हो रहा है?",
-      "en": "Are you experiencing abdominal pain along with the burning sensation?",
-      "category": "abdominal_pain_with_heartburn",
-      "symptom": "abdominal pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या यह जलन रात में ज्यादा होती है?",
-      "en": "Does the burning sensation occur more at night?",
-      "category": "night_time_heartburn",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
-
   "mouth sore": [
     {
       "hi": "क्या आपके मुंह में घाव तेजी से बढ़ रहे हैं?",
