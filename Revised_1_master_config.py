@@ -950,6 +950,12 @@ symptom_followup_questions = {
       "category": "heartburn",
       "symptom": "acidity",
       "risk_factor": False,    },
+     {
+      "hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?",
+      "en": "Are you experiencing burning sensations in your stomach?",
+      "category": "burning_sensation_with_heartburn",
+      "symptom": "acidity",
+      "risk_factor": False,    },
     {
       "hi": "लक्षणों को क्या ट्रिगर करता है या बिगाड़ता है (जैसे कि कुछ खाद्य पदार्थ, लेट जाना, तनाव)?",
       "en": "What triggers or worsens the symptoms (e.g., certain foods, lying down, stress)?",
