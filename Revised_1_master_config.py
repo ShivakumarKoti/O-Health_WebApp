@@ -30,7 +30,8 @@ symptom_synonyms = {
         'muscle twitching in spine', 'sharp back pain', 'sudden back pain', 'painful muscle contraction', 'sharp spasms in back', 'throbbing back pain', 'spine twinge', 'muscle jerking in back',
         'painful back convulsion', 'tense back', 'tightness in back', 'cramping back muscles', 'pulled back muscle', 'twisting back pain', 'cramped spine', 'jerking back muscles', 'painful back tightening',
         'spinal muscle strain', 'back tension', 'muscle knots in back', 'spine tightening pain', 'painful back stiffness', 'spinal muscles seizing', 'back spasm attack', 'muscle discomfort in back',
-        'intense back strain', 'stiffened spine', 'spinal muscles hardening', 'acute back spasm', 'back contorting', 'back stiffness attack', 'back muscle tension', 'back pain with spasms'
+        'intense back strain', 'stiffened spine', 'spinal muscles hardening', 'acute back spasm', 'back contorting', 'back stiffness attack', 'back muscle tension', 'back pain with spasms', 'spasm in the back',
+        'back locked up','back clenched up'
     ],
     'headache': [
         'head pain', 'throbbing headache', 'pounding head', 'splitting headache', 'severe headache', 'migraine-like ache', 'cranial ache', 'head pressure', 'sinus headache', 'tension headache',
@@ -40,7 +41,7 @@ symptom_synonyms = {
         'persistent noggin ache', 'head tenderness', 'scalp-aching feeling', 'sensitive head region', 'brainache', 'mind-throbbing torment', 'front-lobe pressure', 'crown-of-head tension',
         'behind-the-eyes ache', 'skull-tight discomfort', 'never-ending head throb', 'grating ache inside skull', 'sinus-pressured ache', 'temple pounding', 'brain pulsation pain', 'cephalic torment',
         'oppressive ache under cranium', 'subtle persistent ache', 'gnawing head discomfort', 'dull pounding drumbeat in head', 'hammering inside skull walls', 'unyielding head tension', 'rote ache cycling through head',
-        'cranium under siege', 'deep-set head pang', 'swirling headache sensation', 'anchor-like pressure in head'
+        'cranium under siege', 'deep-set head pang', 'swirling headache sensation', 'anchor-like pressure in head','pain in head'
     ],
     'migraine': [
         'intense one-sided headache', 'migraine aura', 'pulsating pain in head', 'photophobia-associated headache', 'debilitating headache', 'migraine attack', 'searing half-skull ache', 'throbbing temple migraine',
@@ -99,7 +100,7 @@ symptom_synonyms = {
         'pain from gas buildup', 'pressure in the stomach', 'pain from constipation', 'distended abdomen', 'pain from ulcers', 'pain from bloating', 'pain from food intolerance',
         'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'pain from diarrhea', 'stomach flu pain', 'pain in the lower abdomen',
         'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'nausea with stomach pain', 'abdominal swelling with pain', 'abdominal pain',
-        'chronic stomach pain', 'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux'
+        'chronic stomach pain', 'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
     ],
     'weakness': [
         'tiredness', 'extreme tiredness','weariness', 'fatigued feeling', 'lack of energy', 'physical depletion', 'mental fatigue', 'chronic tiredness',
