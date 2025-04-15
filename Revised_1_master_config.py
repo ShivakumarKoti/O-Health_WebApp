@@ -233,7 +233,7 @@ symptom_synonyms = {
 
     'ear pain': [
         'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'sharp ear pain', 'dull ear pain', 'stabbing pain in ear', 'ringing ear pain',
-        'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'persistent ear pain', 'ear infection pain',
+        'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'persistent ear pain', 'ear infection pain', 'ear hurts',
         'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'stuffy ear pain', 'pain in ear canal', 'ear ache when swallowing',
         'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'acute ear pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
         'tender ear lobes', 'painful eardrum', 'painful earful feeling', 'pounding ear pain', 'sharp stabbing ear ache', 'swollen ear canal', 'eardrum sensitivity', 'sharp pressure sensation in ear',
@@ -505,7 +505,7 @@ symptom_synonyms = {
 ],
 
 'weight loss': [
-    'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
+    'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut', 'weight is going down',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction', 'weight loss journey', 'sustainable weight loss', 'rapid weight loss', 'gradual weight loss', 'controlled weight loss',
     'dieting', 'fitness weight loss', 'weight loss goals'
@@ -818,7 +818,7 @@ symptom_synonyms = {
 ],
 
 'weight gain': [
-'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase',
+'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 'weight is going up',
 'weight fluctuation', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'bloating-related weight gain', 'water retention weight gain',
 'unhealthy weight gain', 'sudden weight gain', 'weight gain from overeating', 'hormonal weight gain', 'stress-related weight gain', 'weight gain due to inactivity',
 'metabolic weight gain', 'post-pregnancy weight gain', 'age-related weight gain', 'diet-induced weight gain', 'weight gain from medication', 'insulin-related weight gain',
@@ -860,7 +860,7 @@ symptom_synonyms = {
 ],
 
 'jaundice': [
-'icterus', 'yellow skin', 'yellowing of the eyes', 'skin discoloration', 'yellowish tint', 'bilirubin buildup', 'yellow sclera', 'jaundiced appearance',
+'icterus', 'yellow skin', 'yellowing of the eyes', 'skin discoloration', 'yellowish tint', 'bilirubin buildup', 'yellow sclera', 'jaundiced appearance', ' eyes became yellow',
 'hepatic jaundice', 'neonatal jaundice', 'obstructive jaundice', 'hemolytic jaundice', 'yellowish skin tone', 'liver-related jaundice', 'gallbladder-related jaundice',
 'bile duct obstruction', 'elevated bilirubin levels', 'yellow pigmentation', 'pale stools', 'dark urine', 'liver dysfunction symptoms', 'bile buildup', 'yellow facial skin',
 'chronic jaundice', 'acute jaundice', 'jaundice-induced fatigue', 'itching with jaundice', 'skin yellowing disorder', 'bile pigment imbalance', 'bilirubin-induced yellowing',
