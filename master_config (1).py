@@ -534,7 +534,7 @@ symptom_synonyms = {
 ],
 
 'numbness': [
-    'loss of sensation', 'tingling', 'pins and needles', 'lack of feeling', 'reduced sensation', 'sensory loss', 'numb sensation', 'feeling of numbness',
+    'loss of sensation', 'lack of feeling', 'reduced sensation', 'sensory loss', 'numb sensation', 'feeling of numbness',
     'numb feeling', 'sensory numbness', 'partial numbness', 'temporary numbness', 'persistent numbness'
 ],
 
