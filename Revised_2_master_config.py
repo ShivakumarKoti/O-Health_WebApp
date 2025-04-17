@@ -8,7 +8,7 @@ symptom_list = [
 'chest pain', 'back pain', 'constipation', 'throat pain', 'diarrhea', 'flu', 'shortness of breath', 'rapid breathing', 'stomach pain', 'migraine',
 'skin burning', 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision', 'ear pain',
-'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
+'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating', 'neck pain',
 'gas', 'indigestion', 'acidity', 'mouth sore', 'nosebleed', 'ear ringing', 'dark urine', 'blood in urine', 'blood in stool', 'high blood pressure',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye pain',  'eye discharge', 'ear discharge', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
@@ -203,6 +203,14 @@ symptom_synonyms = {
         'lymph node tenderness under jaw', 'enlarged glands in the throat', 'neck lumps', 'swollen lymph nodes behind ears', 'tender swollen glands', 'neck lymphatic swelling',
         'swelling in the throat', 'pain in swollen glands', 'pain from swollen lymph nodes', 'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
     ],
+  'neck pain': [
+    'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
+    'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'chronic neck pain', 'acute neck pain', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 
+    'pain at the base of the skull', 'upper spine pain', 'neck injury pain', 'limited neck mobility', 'sharp neck pain', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
+    'burning sensation in neck', 'neck inflammation', 'neck tenderness', 'cervical spine discomfort', 'pain when turning head', 'pain along the side of neck', 'pain in back of neck', 'stabbing neck pain',
+    'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck', 'neck pain from poor posture', 'neck pain from sleeping wrong'
+],
+
     'joint pain': [
         'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
         'joint irritation', 'musculoskeletal pain', 'painful joints', 'joint stiffness', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
