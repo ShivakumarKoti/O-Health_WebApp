@@ -508,7 +508,7 @@ symptom_synonyms = {
     'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction', 'weight loss journey', 'sustainable weight loss', 'rapid weight loss', 'gradual weight loss', 'controlled weight loss',
-    'dieting', 'fitness weight loss', 'weight loss goals'
+    'dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight'
 ],
 
 'hair loss': [
@@ -826,7 +826,7 @@ symptom_synonyms = {
 'weight gain around the waist', 'poor diet weight gain', 'sedentary lifestyle weight gain', 'hormone imbalance weight gain', 'slow metabolism weight gain',
 'unexplained weight gain', 'overeating-induced weight gain', 'fat storage increase', 'weight gain from sugary foods', 'weight gain due to lack of exercise',
 'weight gain with bloating', 'hormone-related fat storage', 'weight gain caused by stress eating', 'body composition change', 'progressive weight gain',
-'weight gain due to emotional eating', 'weight gain from poor sleep', 'unbalanced diet weight gain','gained weight'
+'weight gain due to emotional eating', 'weight gain from poor sleep', 'unbalanced diet weight gain','gained weight', 'weight going up'
 ],
 
 'skin burning': [
@@ -866,7 +866,7 @@ symptom_synonyms = {
 'chronic jaundice', 'acute jaundice', 'jaundice-induced fatigue', 'itching with jaundice', 'skin yellowing disorder', 'bile pigment imbalance', 'bilirubin-induced yellowing',
 'eye yellowing', 'yellowish mucous membranes', 'jaundice rash', 'jaundice-related weakness', 'jaundice-related nausea', 'jaundice-related abdominal pain', 'hepatitis-related jaundice',
 'gallstone-related jaundice', 'pre-hepatic jaundice', 'post-hepatic jaundice', 'yellow palms', 'yellow tongue', 'biliary jaundice', 'jaundice-related weight loss',
-'yellow skin patches', 'jaundice-associated itching', 'systemic jaundice', 'yellowish complexion', 'jaundice in newborns', 'jaundice symptoms'
+'yellow skin patches', 'jaundice-associated itching', 'systemic jaundice', 'yellowish complexion', 'jaundice in newborns', 'jaundice symptoms', 'eyes became yellow', 'yellow colour eyes'
 ],
 
 'sleepy': [
