@@ -146,11 +146,11 @@ symptom_synonyms = {
     'muscle pain': [
         'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle injury', 'muscle cramps',
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
-        'muscle inflammation', 'deep muscle pain', 'sharp muscle pain', 'pulling sensation in muscles', 'muscle tenderness', 'delayed onset muscle soreness (DOMS)', 'straining muscle',
+        'muscle inflammation', 'deep muscle pain', 'sharp muscle pain', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
         'overused muscles', 'fatigue-related muscle pain', 'chronic muscle pain', 'localized muscle pain', 'muscle strain from overuse', 'aching from tension in muscles',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
-        'tensed muscles', 'muscle overextension', 'pain in the calves', 'pain in the upper arms', 'pain in the back muscles','pain in the muscle'
+        'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle'
     ],
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
@@ -260,7 +260,7 @@ symptom_synonyms = {
         'standard cold virus', 'low-grade nasal virus', 'mild runny-nose ailment', 'basic rhinovirus', 'everyday cold symptoms', 'short-term sniffles', 'routine winter bug', 'easy viral cold',
         'minor head stuffiness illness', 'typical seasonal illness', 'cold symptoms', 'stuffy nose cold', 'mild sore throat with cold', 'cold with slight fever', 'cough with cold',
         'runny nose cold', 'sneezing with cold', 'mild chest congestion', 'low-grade cold infection', 'itchy throat cold', 'general cold symptoms', 'nasal congestion from cold',
-        'watery eyes with cold', 'mild head congestion', 'cold-related fatigue', 'chilly viral infection', 'upper respiratory cold', 'typical cold symptoms', 'stuffy feeling from cold',
+        'watery eyes with cold', 'mild head congestion', 'cold-related fatigue','upper respiratory cold', 'typical cold symptoms', 'stuffy feeling from cold',
         'cough and cold', 'runny nose from cold', 'frequent sneezing cold', 'cold-related chills', 'feeling chilled from cold', 'aching muscles with cold', 'minor fever with cold',
         'slight cold discomfort', 'cold-induced sore throat' ,'feeling cold'
     ],
