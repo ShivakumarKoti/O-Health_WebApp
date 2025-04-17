@@ -245,7 +245,7 @@ symptom_synonyms = {
         'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'stuffy ear pain', 'pain in ear canal', 'ear ache when swallowing',
         'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'acute ear pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
         'tender ear lobes', 'painful eardrum', 'painful earful feeling', 'pounding ear pain', 'sharp stabbing ear ache', 'swollen ear canal', 'eardrum sensitivity', 'sharp pressure sensation in ear',
-        'soreness in ear cavity', 'clogged ear with pain', 'throbbing sensation in ear', 'ear ache during sleep', 'pain in eardrum'
+        'soreness in ear cavity', 'clogged ear with pain', 'throbbing sensation in ear', 'ear ache during sleep', 'pain in eardrum', 'ear hurts'
     ],
     'back pain': [
         'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back', 'sharp back pain', 'dull back pain', 'severe back pain', 'chronic back pain',
