@@ -914,6 +914,198 @@ symptom_synonyms = {
 'pneumonia': ['lung infection','alveolar infection'],
 
 'sugar': ['sugars', 'glucose', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
+
+  'waist pain': [
+    'pain in the waist', 'waist discomfort', 'waist ache', 'lower back and waist pain', 'sharp waist pain',
+    'throbbing waist pain', 'pain from waist injury', 'pain in the lower torso', 'pain around the belt line',
+    'pain from tight waistband', 'pain from muscle strain in waist', 'pain from overuse of waist muscles',
+    'waist pain when bending', 'waist pain when twisting', 'pain with waist movement', 'aching waist',
+    'pain in the sides of the waist', 'waist pain from bad posture', 'pain from lifting heavy objects',
+    'waist pain after exercise', 'pain in the waist and hips', 'pain from spinal issues near waist',
+    'pain in waist and lower back', 'pain from herniated disc near waist', 'pain after prolonged sitting',
+    'waist stiffness and pain', 'waist pain after sleeping', 'burning sensation in waist', 'pinching pain in waist',
+    'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
+    'numbness and waist pain', 'pain when walking from waist', 'pain from waist inflammation',
+    'pain after running affecting waist', 'waist pain from arthritis', 'waist pain from sciatica',
+    'waist pain from kidney issues', 'pain in back near waist', 'waist region pain'
+],
+
+'thigh pain': [
+    'pain in the thigh', 'thigh discomfort', 'thigh ache', 'sharp thigh pain', 'burning pain in thigh',
+    'throbbing thigh pain', 'pain from thigh injury', 'pain in upper leg', 'pain in front of thigh',
+    'pain in back of thigh', 'inner thigh pain', 'outer thigh pain', 'pain in upper thigh muscles',
+    'pain from pulled thigh muscle', 'pain from thigh strain', 'pain from hamstring injury',
+    'pain from quadriceps strain', 'pain in thigh when walking', 'pain in thigh when running',
+    'pain in thigh when sitting', 'numbness and pain in thigh', 'tingling pain in thigh',
+    'cramping in the thigh', 'pain from thigh overuse', 'sore thigh', 'tightness in thigh',
+    'pain in thigh and groin', 'pain from sciatica in thigh', 'pain radiating to thigh',
+    'pain after leg workout', 'pain from nerve compression in thigh', 'deep thigh pain',
+    'muscle soreness in thigh', 'pain after stretching thigh', 'aching in thigh area',
+    'pain in thigh after injury', 'pain from thigh bruise', 'pain in thigh after standing long',
+    'pain from blood clot in thigh', 'pain in both thighs', 'unilateral thigh pain'
+],
+
+'calf pain': [
+    'pain in the calf', 'calf discomfort', 'calf ache', 'sharp calf pain', 'throbbing calf pain',
+    'burning pain in calf', 'cramping in calf', 'tightness in calf', 'pain in back of lower leg',
+    'calf muscle pain', 'pain from calf strain', 'pain from pulled calf muscle',
+    'calf pain when walking', 'calf pain when running', 'pain after calf workout',
+    'calf soreness after exercise', 'calf pain after standing long', 'pain from overuse of calf muscles',
+    'pain from calf injury', 'calf pain from poor circulation', 'pain from deep vein thrombosis (DVT)',
+    'calf pain from blood clot', 'numbness and calf pain', 'tingling in calf with pain',
+    'pain in calf and ankle', 'calf pain after stretching', 'calf pain when flexing foot',
+    'pain from calf cramp', 'calf muscle tightness and pain', 'aching calves',
+    'pain in both calves', 'unilateral calf pain', 'pain in inner calf', 'pain in outer calf',
+    'calf pain from nerve compression', 'calf pain from sciatica', 'calf pain after hiking',
+    'pain behind the knee and calf', 'lower leg pain in calf area', 'pain in calf from walking uphill',
+    'pain in calf from torn muscle', 'pain in calf after injury'
+],
+
+'elbow pain': [
+    'pain in the elbow', 'elbow discomfort', 'elbow ache', 'sharp elbow pain', 'throbbing pain in elbow',
+    'burning sensation in elbow', 'pain from elbow injury', 'pain in outer elbow', 'pain in inner elbow',
+    'elbow joint pain', 'elbow soreness', 'pain from tennis elbow', 'pain from golfer’s elbow',
+    'pain from elbow strain', 'elbow pain when bending', 'elbow pain when straightening arm',
+    'elbow pain during lifting', 'pain in elbow when twisting', 'pain from overuse of elbow',
+    'elbow pain after exercise', 'pain in elbow when resting arm', 'numbness and elbow pain',
+    'tingling in elbow with pain', 'elbow pain from repetitive motion', 'elbow pain from arthritis',
+    'pain around the elbow', 'elbow muscle pain', 'elbow pain from tendinitis',
+    'pain from bursitis in elbow', 'elbow pain after injury', 'swelling and pain in elbow',
+    'stiffness in elbow with pain', 'elbow pain from trapped nerve', 'pain in elbow from weightlifting',
+    'elbow pain after throwing', 'radiating pain from elbow to forearm', 'pain in elbow and wrist',
+    'pain behind the elbow', 'pain on top of the elbow', 'pain under the elbow',
+    'pain in elbow crease', 'elbow pain with swelling'
+],
+
+'pelvic pain': [
+    'pain in the pelvis', 'pelvis discomfort', 'pelvic ache', 'lower abdominal pain', 'deep pelvic pain',
+    'sharp pelvic pain', 'throbbing pelvic pain', 'cramping in pelvis', 'pain in lower abdomen and pelvis',
+    'pelvic pressure and pain', 'aching pelvis', 'pelvic pain when sitting', 'pelvic pain when standing',
+    'pelvic pain when walking', 'pelvic pain during exercise', 'pelvic pain after physical activity',
+    'pelvic muscle pain', 'pelvic joint pain', 'pelvic bone pain', 'pelvic pain from injury',
+    'pelvic pain after childbirth', 'pelvic pain during menstruation', 'pelvic pain during ovulation',
+    'pelvic pain during sex', 'pelvic pain after sex', 'pelvic pain in pregnancy',
+    'pelvic pain postpartum', 'pelvic pain from endometriosis', 'pelvic pain from fibroids',
+    'pelvic pain from UTI', 'pelvic pain from ovarian cysts', 'pelvic pain from pelvic inflammatory disease',
+    'chronic pelvic pain', 'sudden pelvic pain', 'intermittent pelvic pain', 'pain in pelvic area',
+    'pain in lower pelvic region', 'pelvic pain with bloating', 'pelvic pain from digestive issues',
+    'pelvic pain from constipation', 'pain in groin and pelvis', 'pain in pelvis and lower back',
+    'pelvic pain from nerve compression', 'numbness and pelvic pain', 'burning sensation in pelvis'
+],
+
+'tingling': [
+    'tingling sensation', 'pins and needles', 'prickling sensation', 'numbness and tingling', 'burning and tingling',
+    'tingling in hands', 'tingling in feet', 'tingling in fingers', 'tingling in toes', 'tingling in arms',
+    'tingling in legs', 'tingling in face', 'tingling in scalp', 'tingling in lips', 'tingling in tongue',
+    'tingling in back', 'tingling in neck', 'tingling in spine', 'tingling in shoulder', 'tingling in chest',
+    'tingling in jaw', 'tingling after sitting too long', 'tingling after sleeping', 'tingling from nerve compression',
+    'tingling from poor circulation', 'tingling from anxiety', 'tingling during panic attack', 'tingling from neuropathy',
+    'tingling from diabetes', 'tingling from carpal tunnel', 'tingling from sciatica', 'tingling from multiple sclerosis',
+    'tingling due to vitamin deficiency', 'intermittent tingling', 'constant tingling', 'sudden tingling',
+    'random tingling', 'tingling and weakness', 'tingling and muscle twitching', 'tingling and pain',
+    'tingling and burning', 'tingling with cold sensation', 'tingling and numb feeling', 'buzzing sensation',
+    'electrical sensation', 'tingling like electricity', 'tingling when moving', 'tingling when still'
+],
+
+'difficulty speaking': [
+    'trouble speaking', 'speech difficulty', 'slurred speech', 'unclear speech', 'impaired speech',
+    'problems with speech', 'inability to speak clearly', 'difficulty forming words', 'trouble articulating words',
+    'speech impairment', 'difficulty talking', 'trouble talking', 'loss of speech', 'sudden speech difficulty',
+    'speech problems after stroke', 'difficulty speaking due to anxiety', 'difficulty speaking after head injury',
+    'difficulty finding words', 'difficulty with verbal communication', 'stuttering', 'stammering',
+    'broken speech', 'halting speech', 'speech delay', 'difficulty producing speech sounds',
+    'difficulty speaking due to muscle weakness', 'difficulty speaking due to nerve damage',
+    'difficulty speaking due to neurological disorder', 'hoarse voice with speech difficulty',
+    'raspy voice and trouble speaking', 'difficulty speaking when tired', 'trouble talking after seizure',
+    'difficulty pronouncing words', 'difficulty speaking under stress', 'slow speech', 'garbled speech',
+    'difficulty with fluent speech', 'disorganized speech', 'difficulty speaking due to emotional distress',
+    'speech changes', 'difficulty initiating speech', 'trouble expressing thoughts verbally',
+    'difficulty speaking with dry mouth', 'difficulty speaking after surgery', 'difficulty speaking due to throat issues',
+    'trouble speaking due to medication side effects', 'difficulty speaking with facial numbness',
+    'speech loss', 'difficulty speaking with drooping face'
+],
+
+'more hungry': [
+    'increased hunger', 'excessive hunger', 'extreme hunger', 'constant hunger', 'unusual hunger',
+    'frequent hunger', 'intense hunger', 'never feeling full', 'always hungry', 'feeling hungrier than usual',
+    'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite',
+    'overeating due to hunger', 'persistent hunger', 'craving food all the time', 'hungry shortly after eating',
+    'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat',
+    'eating more than usual', 'feeling hungry right after meals', 'unable to satisfy hunger',
+    'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
+    'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
+    'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
+    'hunger caused by blood sugar drops', 'hunger due to stress', 'hunger from emotional eating',
+    'more hunger than normal', 'overeating due to being hungrier'
+],
+
+'seizures': [
+    'seizure', 'seizure episode', 'seizure attack', 'epileptic seizure', 'epileptic episode',
+    'convulsions', 'fits', 'fitting episode', 'sudden convulsion', 'uncontrolled shaking',
+    'body shaking episode', 'jerking movements', 'loss of consciousness with shaking', 'grand mal seizure',
+    'tonic-clonic seizure', 'absence seizure', 'petit mal seizure', 'focal seizure', 'partial seizure',
+    'complex partial seizure', 'simple partial seizure', 'generalized seizure', 'seizure with staring spells',
+    'seizure with unresponsiveness', 'muscle spasms during seizure', 'twitching during seizure',
+    'sudden blackout with convulsions', 'drop seizure', 'atonic seizure',
+    'tonic seizure', 'myoclonic seizure', 'sudden seizure activity', 'seizure-like episode',
+    'electrical storm in the brain', 'neurological seizure', 'shaking episode without warning',
+    'sudden onset of convulsions', 'temporary loss of awareness', 'involuntary body movements',
+    'seizure triggered by flashing lights', 'nocturnal seizure', 'seizure during sleep',
+    'repetitive seizure episodes', 'breakthrough seizures', 'seizure after head injury',
+    'seizure after missing medication', 'seizure from alcohol withdrawal', 'seizure from fever (febrile seizure)',
+    'post-seizure confusion', 'postictal state', 'aura before seizure'
+],
+
+'dysentery': [
+    'dysentery', 'severe diarrhea', 'diarrhea with blood', 'diarrhea with mucus', 'severe intestinal distress'
+],
+'hiccups': [
+    'hiccoughs', 'jerking', 'involuntary hiccups', 'diaphragm spasms', 'gasping', 'hiccuping',
+    'jerky breathing', 'hiccup reflex', 'repetitive hiccups'
+],
+
+'obesity': [
+    'obese', 'high body mass index (BMI)','fatty tissue buildup', 'high levels of body fat', 'weight-related health issues',
+    'BMI is higher', 'high BMI'
+],
+
+'ulcers': [
+    'ulcerations', 'raw spots', 'skin ulcers', 'mucosal ulcers', 'internal ulcers',
+    'gastric ulcers', 'peptic ulcers', 'duodenal ulcers', 'stomach ulcers', 'mouth ulcers',
+    'oral ulcers', 'canker sores', 'pressure ulcers', 'bedsores', 'decubitus ulcers'
+],
+
+'brittle nails': [
+    'weak nails', 'fragile nails', 'thin nails', 'breaking nails', 'chipped nails', 'flaky nails', 'easily broken nails',
+    'damaged nails', 'dry nails', 'nail fragility', 'brittle fingernails', 'brittle toenails', 'nail breakage', 'nail weakness', 
+    'nails that crack easily', 'nails prone to breaking'
+],
+
+'malaria': [
+    'malarial infection', 'malarial fever', 'mosquito-borne disease', 'mosquito-related fever', 'vector-borne parasitic disease', 'protozoan infection'
+   
+],
+
+'dengue': [
+    'dengue fever', 'mosquito-borne illness', 'Aedes mosquito infection', 'mosquito-transmitted disease'
+],
+
+'covid': [
+    'covid-19', 'coronavirus', 'corona', 'corona virus', 'sars-cov-2 infection', 'pandemic virus', 'covid outbreak'
+],
+
+'hiv': [
+    'human immunodeficiency virus', 'HIV-positive', 'HIV', 'HIV/AIDS', 'acquired immunodeficiency virus'
+],
+
+'typhoid': [
+    'typhoid fever', 'enteric fever', 'Salmonella typhi infection', 'waterborne bacterial infection', 'fever from contaminated water'
+],
+
+'chickenpox': [
+    'varicella', 'varicella infection', 'chicken pox', 'varicella-zoster virus', 'viral exanthem'
+],
+
    }
 
 # ------------------------------------------------------------------ #
