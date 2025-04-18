@@ -392,10 +392,10 @@ symptom_synonyms = {
         'nerve-like pain in the arm'
     ],
     'leg pain': [
-        'pain in the leg', 'lower limb pain', 'leg discomfort', 'muscle pain in the leg', 'pain in the thigh', 'pain in the calf', 'pain in the knee', 'pain in the shin', 'pain from leg injury',
+        'pain in the leg', 'lower limb pain', 'leg discomfort', 'muscle pain in the leg', 'pain in the calf', 'pain in the shin', 'pain from leg injury',
         'sharp leg pain', 'throbbing leg pain', 'aching leg pain', 'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise',
-        'pain after running','pain in my legs','legs are paining','pain in leg', 'pain from overuse', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in the calf after activity', 'pain from leg fractures',
-        'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the thigh after sitting', 'pain in the foot and leg', 'pain with leg movement', 'pain from sciatica',
+        'pain after running','pain in my legs','legs are paining','pain in leg', 'pain from overuse', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
+        'pain in the calf after activity', 'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
         'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'sharp pain in the lower leg',
         'pain when walking on uneven ground', 'pain in the lower back and leg'
     ],
