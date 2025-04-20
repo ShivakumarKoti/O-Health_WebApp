@@ -772,7 +772,7 @@ symptom_synonyms = {
 
 'back bone issue': [
     'spinal problem', 'back bone pain', 'spinal condition', 'vertebral issue', 'spinal disorder', 'back injury', 'spinal misalignment', 'back bone is paining',
-    'disc herniation', 'sciatica', 'spinal injury', 'neck and back issues', 'spinal discomfort', 'lumbar pain', 'spinal cord issue', 'slipped disc', 'musculoskeletal disorder',
+    'disc herniation', 'spinal injury', 'neck and back issues', 'spinal discomfort', 'lumbar pain', 'spinal cord issue', 'slipped disc', 'musculoskeletal disorder',
     'spinal health issue', 'postural problems', 'spondylosis', 'degenerative disc disease', 'spine misalignment', 'spinal deformity', 'spinal arthritis', 'spinal stenosis'
 ],
 
@@ -7580,49 +7580,49 @@ symptom_followup_questions = {
       "en": "Where are you experiencing tingling? Is it in your hands, feet, or elsewhere in your body?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
     {
       "hi": "क्या झुनझुनी के साथ कोई अन्य लक्षण जैसे सुन्नपन, दर्द, या कमजोरी है?",
       "en": "Are you experiencing any other symptoms along with the tingling, like numbness, pain, or weakness?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
     {
       "hi": "क्या कोई गतिविधि, स्थिति या आराम से झुनझुनी बढ़ती या कम होती है?",
       "en": "Does any activity, position, or rest make the tingling better or worse?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
     {
       "hi": "क्या आपको हाल ही में कोई चोट लगी है या कोई तनावपूर्ण स्थिति का सामना करना पड़ा है?",
       "en": "Have you had any recent injuries or been under physical or emotional stress?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
     {
       "hi": "क्या आपको कोई पुरानी बीमारी जैसे डायबिटीज़, न्यूरोलॉजिकल समस्याएँ या तंत्रिका से संबंधित विकार हैं?",
       "en": "Do you have any chronic conditions like diabetes, neurological problems, or nerve-related disorders?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
     {
       "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
       "en": "Are you taking any medications or supplements currently?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
     {
       "hi": "क्या इस झुनझुनी से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
       "en": "How does the tingling affect your daily activities or sleep?",
       "category": "tingling",
       "symptom": "tingling",
-      "risk_factor": false,
+      "risk_factor": False,
     },
   ],
 
