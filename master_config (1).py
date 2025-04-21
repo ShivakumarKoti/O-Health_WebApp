@@ -353,7 +353,7 @@ symptom_synonyms = {
         'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain while walking', 'pain after exercise', 'pain from knee overuse', 'pain with knee movement',
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
         'knee joint inflammation', 'pain when climbing stairs', 'chronic knee pain','pain with swelling', 'pain from running', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain from patella dislocation',
-        'pain with knee instability','pain in knees','joint pain', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 'pain from cartilage damage', 'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees'
+        'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 'pain from cartilage damage', 'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees'
     ],
     'foot pain': [
         'pain in the foot', 'plantar pain', 'foot discomfort', 'foot ache', 'pain in the heel', 'sharp foot pain', 'throbbing foot pain', 'pain from foot injury', 'pain in the arch',
