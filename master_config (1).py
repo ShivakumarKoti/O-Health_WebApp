@@ -434,7 +434,7 @@ symptom_synonyms = {
         'drifting away from details', 'no anchor to past events'
     ],
   'hallucination': [
-    'delusion', 'illusion', 'false perception', 'sensory distortion', 'visual disturbance', 'auditory hallucination',
+    'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination',
     'perceptual distortion', 'false sensory experience', 'phantom perception', 'psychotic episode', 'imagined sight', 'imagined sound', 'mind illusion',
     'sensory misperception', 'hallucinatory experience', 'out-of-body experience', 'visual illusion', 'auditory illusion', 'mental delusion', 'altered reality'
 ],
@@ -496,7 +496,7 @@ symptom_synonyms = {
 ],
 
 'depression': [
-    'sadness', 'melancholy', 'despair', 'low mood', 'dismay', 'hopelessness', 'discouragement', 'despondency', 'blues', 'dejectedness', 'very sad', 'sad',
+    'sadness', 'melancholy', 'despair', 'low mood', 'dismay', 'hopelessness', 'discouragement', 'despondency', 'blues', 'dejectedness',
     'feeling down', 'feeling hopeless', 'loss of interest', 'unhappiness', 'mental exhaustion', 'loss of joy', 'major depressive disorder',
     'clinical depression', 'chronic depression', 'depressive episode', 'anhedonia', 'negative mood', 'downheartedness'
 ],
