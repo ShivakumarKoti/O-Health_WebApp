@@ -118,8 +118,8 @@ symptom_synonyms = {
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
         'uneasy stomach', 'upset belly', 'dizzy stomach', 'intense queasiness', 'morning sickness feeling',
         'stomach discomfort', 'feeling faint with nausea', 'stomach churn', 'constant nausea', 'puking feeling', 'nausea after eating', 'feeling like you could throw up',
-        'stomach upset with nausea', 'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'nausea with dizziness', 'craving nausea', 'stomach unease',
-        'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated', 'gurgling stomach with nausea'
+        'stomach upset with nausea', 'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease',
+        'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
     'dizziness': [
         'Lightheadedness', 'woozy sensation', 'spinning feeling', 'off-balance', 'unsteady', 'dizzy spells', 'giddy feeling', 'vertiginous sensation',
