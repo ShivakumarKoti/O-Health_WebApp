@@ -158,27 +158,25 @@ symptom_synonyms = {
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
         'early morning wakefulness', 'poor sleep quality', 'sleep deprivation', 'sleep disturbance', 'trouble staying asleep', 'sleep interruptions', 'unable to sleep through the night',
-        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'sleep issues', 'difficulty achieving deep sleep',
-        'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleep anxiety', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
+        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'sleep issues', 
+        'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'poor sleep habits', 'nighttime restlessness', 'waking in the middle of the night', 'sleep deprivation symptoms', 'daytime sleepiness from poor sleep', 'sleep fragmentation',
         'restless sleep', 'persistent insomnia', 'sleep troubles', 'light sleeping', 'short sleep duration', 'restorative sleep deprivation', 'fatigue from sleeplessness',
-        'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'insomnia due to stress', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
+        'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
         'unable to fall asleep', 'not able to fall asleep'
     ],
     'rash': [
-        'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'itchy rash', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
-        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'raised rash', 'painful rash', 'rash with blisters', 'dry rash', 'moist rash',
-        'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rash', 'prickly heat', 'rash on face', 'body rash', 'rashes on arms',
-        'welts on skin', 'itchy patches on skin', 'skin redness', 'chronic skin rash', 'dry, scaly rash', 'blistering rash', 'swollen rash', 'rash with swelling',
-        'inflamed, sore rash', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'skin irritation with swelling', 'flaky rash', 
-        'horrible itching rash', 'rashes from medication', 'painful itching on skin', 'burning sensation from rash'
+        'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
+        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
+        'welts on skin', 'itchy patches on skin', 'skin redness', 'inflamed, sore rash', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'skin irritation with swelling',
+        'rashes from medication', 'painful itching on skin'
     ],
     'congestion': [
-        'nasal congestion', 'blocked nose', 'stuffy nose', 'clogged nasal passages', 'nasal obstruction', 'sinus congestion', 'sinus blockage', 'stuffy sinuses', 'pressure in sinuses',
+        'nasal congestion', 'blocked nose', 'stuffy nose', 'clogged nasal passages', 'nasal obstruction', 'sinus blockage', 'stuffy sinuses', 'pressure in sinuses',
         'nasal blockage', 'swollen nasal passages', 'congested sinuses', 'nose congestion', 'nasal stuffiness', 'head congestion',
         'swelling of nasal tissues', 'sinus pressure', 'stuffy feeling in head', 'congestion in sinus cavities', 'nasal stuffy feeling',
         'inflamed nasal passages', 'feeling of a blocked nose', 'swollen nostrils', 'nasal airway blockage', 'sinus drainage blockage',
-        'clogged airways', 'full nose', 'stuffy head', 'excess mucus in nose', 'thick mucus in nostrils', 'nasal obstruction from mucus', 'inability to breathe through nose',
+        'clogged airways', 'excess mucus in nose', 'thick mucus in nostrils', 'nasal obstruction from mucus', 'inability to breathe through nose',
         'nasal phlegm buildup', 'blocked airways', 'increased mucus production', 'congested nasal lining', 'swelling in nasal cavity', 
         'nasal fullness', 'pressure behind the eyes from congestion', 'nasal sinus blockage', 'nasal breathing difficulties'
     ],
@@ -191,11 +189,9 @@ symptom_synonyms = {
         'dripping sinuses', 'mucus continuously dripping', 'snotty nose', 'stuffy nose with runny discharge','dripping all day long'
     ],
     'sneezing': [
-        'explosive sneezes', 'repetitive sneezes', 'unstoppable nasal explosions','serial sneezing', 'sneeze after sneeze', 'chain-sneezing', 'nasal expulsions',
+        'sneezes', 'repetitive sneezes', 'unstoppable nasal explosions', 'sneeze', 'chain-sneezing', 'nasal expulsions',
         'nasal reflex outbursts', 'convulsive sneezing', 'rapid-fire sneezes', 'machine-gun sneezing', 'surprise sneezes',
-        'tickling in nose triggering sneezes', 'staccato sneezing', 'sneeze cascades', 'recurrent sneezing', 'violent sneezing', 'spontaneous sneezes', 
-        'blasting sneezes', 'paroxysmal sneezing', 'intense sneezing', 'frequent sneezing attacks', 'sneezing with watery eyes', 'sudden fit of sneezing', 'uncontrollable nasal reflex',
-        'hayfever sneezing', 'sneeze bursts', 'nasal reflex reactions', 'multiple sneeze cycles'
+        'tickling in nose triggering sneezes', 'uncontrollable nasal reflex', 'sneeze bursts', 'nasal reflex reactions'
     ],
     'swollen lymph nodes': [
         'swollen glands', 'lymph node swelling', 'enlarged lymph nodes', 'swelling in neck', 'lumps in neck', 'tender lymph nodes', 'painful lymph nodes', 'swelling near jaw',
@@ -203,7 +199,7 @@ symptom_synonyms = {
         'lymphatic system swelling', 'lumps under the skin', 'swollen lymphatic glands', 'painful lumps in neck', 'inflamed lymph nodes', 'lymph node tenderness', 'neck swelling',
         'uncomfortable lumps in neck', 'tender neck lumps', 'swollen lymph glands in groin', 'swollen lymph nodes in armpit', 'painful swelling in neck', 'inflamed glands',
         'lymph node tenderness under jaw', 'enlarged glands in the throat', 'neck lumps', 'tender swollen glands', 'neck lymphatic swelling',
-        'swelling in the throat', 'pain in swollen glands', 'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
+        'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
     ],
   'neck pain': [
     'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
@@ -217,18 +213,17 @@ symptom_synonyms = {
         'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
         'joint irritation', 'musculoskeletal pain', 'painful joints', 'joint stiffness', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
         'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints',
-        'joint tenderness', 'joint soreness from strain', 'arthralgia', 
-        'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'swollen hands', 'weakening joint flexibility',
+        'joint tenderness', 'joint soreness from strain', 'arthralgia', 'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'weakening joint flexibility',
         'muscle and joint discomfort', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
     ],
+  
    'diarrhea': [
         'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
-        'stomach upset with diarrhea', 'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement',
+        'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement',
         'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements',
-        'diarrheal episode', 'loose stool rush', 'pale watery stools', 'intestinal upset',
-        'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
+        'diarrheal episode', 'loose stool rush', 'pale watery stools', 'intestinal upset', 'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
         'constantly running to the bathroom', 'liquid-filled intestines', 'intense gastrointestinal upset', 'abnormally frequent bowel movements', 'severe bowel looseness', 'bowel irregularity',
-        'involuntary liquid stools', 'digestive upset causing liquid stools', 'diarrhea with abdominal pain'
+        'liquid stools'
     ],
     'vomiting': [
         'throwing up', 'puking', 'stomach upset', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach',
@@ -256,7 +251,7 @@ symptom_synonyms = {
         'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
-        'Common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold','light upper respiratory infection', 'mild sniffle bug',
+        'common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold','light upper respiratory infection', 'mild sniffle bug',
         'standard cold virus', 'low-grade nasal virus', 'mild runny-nose ailment', 'basic rhinovirus', 'short-term sniffles', 'routine winter bug', 'easy viral cold',
         'feeling cold'
     ],
@@ -279,19 +274,19 @@ symptom_synonyms = {
         'shaking limbs', 'twitchy fingers', 'flickering motion', 'trembling body', 'shaky movements', 'muscle spasms', 'jerking', 'shivering body', 'shaky hands',
         'shaking from cold', 'nervous tremors', 'trembling sensation', 'shuddering', 'uncontrollable shaking', 'flickering muscles', 'twitching eyes', 'nervous jerks', 'shaky fingers',
         'twitching limbs', 'muscle jerks', 'nervous body shakes', 'involuntary shaking', 'feeling of tremors', 'trembling body parts', 'sporadic body shaking',
-        'hand shaking', 'shaky voice', 'rhythmic tremors', 'shivering fingers', 'body quivering', 'body shudders', 'shaking from anxiety'
+        'hand shaking', 'shaky voice', 'rhythmic tremors', 'shivering fingers', 'body quivering', 'body shudders'
     ],
     'chills': [
-        'Shivering', 'trembling with cold', 'goosebumps', 'feeling cold inside', 'uncontrollable shaking', 'teeth chattering', 'feeling frosty', 'quivering limbs', 'body shaking from cold',
+        'Shivering', 'trembling with cold', 'uncontrollable shaking', 'teeth chattering', 'feeling frosty', 'quivering limbs', 'body shaking from cold',
         'frigid vibrations', 'quaking with chill', 'hair standing on end', 'trembling internally', 'spasmodic shivers', 'cold-induced tremble', 'chilled to the bone',
         'freezing sensation', 'vibrating with cold', 'small uncontrollable shakes', 'persistent shuddering', 'subtle shivers', 'prickly gooseflesh', 'frost-like feeling', 'quivery muscles',
         'rattled by chill', 'shudders running down spine', 'uncontrollable cold tremors', 'shaky fingers and toes', 'rattling teeth', 'jittering from cold', 'frigid trembles',
-        'cold-induced shaking', 'body frozen in chills', 'deep chills', 'numbing cold'
+        'cold-induced shaking', 'numbing cold'
     ],
 
     'eye pain': [
         'ocular pain', 'eye discomfort', 'pain in the eye', 'eye ache', 'sore eye', 'sharp pain in the eye', 'pain around the eyes', 'painful vision', 'pain behind the eye',
-        'irritation in the eye', 'burning sensation in the eye', 'dry eye pain', 'stabbing eye pain', 'eye strain', 'pressure in the eye', 'throbbing in the eye',
+        'irritation in the eye', 'burning sensation in the eye', 'eye strain', 'pressure in the eye', 'throbbing in the eye',
         'sensitive eyes', 'eye tenderness', 'aching in the eye', 'eye inflammation', 'pulsing pain in the eye', 'intense eye discomfort', 'distorted vision from pain', 'foreign body sensation in the eye',
         'sharp eye ache', 'vision-related pain', 'severe eye pain', 'sharp stabbing pain in the eye', 'pain in the eyeball', 'tired eye pain', 'swollen eye discomfort', 'throbbing behind the eyes',
         'pain from light sensitivity', 'pain after reading', 'pain when blinking', 'gritty feeling in the eyes', 'intense eye pressure', 'pain around the eyelids', 'blurry vision with pain', 'puffy eyes with pain',
@@ -311,7 +306,7 @@ symptom_synonyms = {
         'sore throat', 'pain in the throat', 'scratchy throat', 'throat discomfort', 'painful swallowing', 'irritated throat', 'dry throat pain', 'burning sensation in the throat', 'throat tenderness',
         'throat scratchiness', 'swollen throat', 'pain from tonsillitis', 'strep throat pain', 'pain from a cold', 'inflammation of the throat', 'sore throat with fever', 'pain in the tonsils',
         'pain from acid reflux', 'hoarse throat', 'tight throat pain', 'painful voice box', 'pain in the larynx', 'pain with coughing', 'pain with dry mouth', 'pain with difficulty swallowing',
-        'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'pain from dry air', 'pain from smoking', 'throat dryness', 'severe throat discomfort',
+        'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'pain from dry air', 'throat dryness', 'severe throat discomfort',
         'pain after eating', 'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat', 'pain from sore mouth',
         'stabbing throat pain', 'pain when swallowing food', 'burning throat pain'
     ],
@@ -344,42 +339,42 @@ symptom_synonyms = {
         'knee discomfort', 'pain in the knee', 'painful knees','joint pain in the knee', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint',
         'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain while walking', 'pain after exercise', 'pain from knee overuse', 'pain with knee movement',
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
-        'knee joint inflammation', 'pain when climbing stairs', 'chronic knee pain','pain with swelling', 'pain from running', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain from patella dislocation',
-        'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 'pain from cartilage damage', 'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees'
+        'knee joint inflammation', 'pain when climbing stairs', 'chronic knee pain','pain with swelling', 'pain from running', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 
+        'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 'pain from cartilage damage',
+        'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees'
     ],
     'foot pain': [
         'pain in the foot', 'plantar pain', 'foot discomfort', 'foot ache', 'pain in the heel', 'sharp foot pain', 'throbbing foot pain', 'pain from foot injury', 'pain in the arch',
-        'pain from flat feet', 'pain from bunions', 'pain in the toes', 'pain from corns', 'pain from calluses', 'pain from foot fractures', 'pain from wearing tight shoes', 'pain with walking',
+        'pain from flat feet', 'pain from bunions', 'pain in the toes', 'pain from corns', 'pain from calluses', 'pain from wearing tight shoes', 'pain with walking',
         'pain from arthritis in foot', 'swollen foot', 'pain in the sole', 'pain when standing', 'pain from sprained ankle', 'pain from tendinitis', 'sharp pain in the foot arch', 'pain in foot joints',
-        'pain in the ball of the foot', 'numbness in foot with pain', 'heel pain', 'pain from Morton’s neuroma', 'pain in foot after exercise', 'pain from overuse', 'pain after running', 'foot cramping pain',
-        'pain after standing for long periods', 'pain in the toes after walking', 'sharp heel pain', 'foot pain from nerve issues', 'pain from diabetic neuropathy', 'foot pain from swelling', 'pain after wearing heels',
+        'pain in the ball of the foot', 'heel pain', 'pain from Morton’s neuroma', 'foot cramping pain',
+        'pain after standing for long periods', 'pain in the toes after walking', 'sharp heel pain', 'foot pain from nerve issues', 'pain from diabetic neuropathy', 'pain after wearing heels',
         'pain in feet', 'feet pain'
     ],
     'ankle pain': [
         'ankle discomfort', 'pain in the ankle', 'twisted ankle pain', 'pain from sprained ankle', 'swollen ankle', 'sharp ankle pain', 'throbbing pain in the ankle', 'pain when walking',
-        'pain after ankle injury', 'pain from overuse', 'pain after exercise', 'pain with ankle movement', 'pain with swelling', 'pain from torn ligament', 'pain in the outer ankle', 'pain in the inner ankle',
-        'pain in the ankle joint', 'pain from ligament strain', 'pain from ankle fracture', 'ankle tenderness', 'pain with ankle instability', 'pain when standing', 'sharp pain in the ankle',
+        'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
+        'pain in the ankle joint', 'pain from ligament strain', 'pain from ankle fracture', 'ankle tenderness', 'pain with ankle instability', 'pain when standing', 
         'pain in ankle tendon', 'pain after running', 'pain from ankle arthritis', 'pain with twisting', 'pain in ankle after jumping', 'pain in the Achilles tendon', 'stabbing pain in ankle',
-        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain during sports activities', 'pain when stretching ankle'
+        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain when stretching ankle'
     ],
      'wrist pain': [
-        'pain in the wrist', 'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist', 'stiff wrist pain', 'pain from repetitive strain',
-        'tenderness in the wrist', 'sharp wrist pain', 'throbbing wrist pain', 'pain after wrist injury', 'pain from wrist overuse', 'wrist sprain pain', 'pain in the wrist tendons', 'wrist joint stiffness',
-        'pain with wrist movement', 'pain during wrist flexion', 'pain in wrist ligaments', 'carpal tunnel syndrome pain', 'pain from arthritis in the wrist', 'pain with wrist rotation', 'pain in the wrist after typing',
+        'pain in the wrist', 'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist',
+        'tenderness in the wrist', 'pain after wrist injury', 'pain from wrist overuse', 'wrist sprain pain', 'pain in the wrist tendons', 'wrist joint stiffness',
+        'pain with wrist movement', 'pain during wrist flexion', 'carpal tunnel syndrome pain', 'pain from arthritis in the wrist', 'pain with wrist rotation', 'pain in the wrist after typing',
         'wrist discomfort from injury', 'pain around wrist bones', 'dull wrist pain', 'pain when lifting objects', 'pain in the wrist after exertion', 'pain from wrist fractures', 'wrist tendonitis pain',
-        'pain after hand movements', 'pain in the wrist when gripping', 'pain with wrist extension', 'stiff wrist from overuse', 'sharp sensation in the wrist', 'pain after extended typing', 'pain with wrist bending',
-        'swollen joints in the wrist', 'wrist pain with numbness', 'pain around wrist bones after activity', 'pain in the carpal region', 'wrist discomfort with tingling sensation'
+        'pain after hand movements', 'pain in the wrist when gripping', 'pain with wrist extension', 'stiff wrist from overuse', 'sharp sensation in the wrist', 'pain with wrist bending',
+        'swollen joints in the wrist', 'pain around wrist bones after activity'
     ],
     'hand pain': [
         'hand discomfort', 'pain in the hand', 'aching hand', 'sharp hand pain', 'throbbing hand pain', 'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles',
         'pain from hand injury', 'swollen hand', 'pain with hand movement', 'hand strain pain', 'numbness in the hand', 'pain after gripping', 'pain in the thumb', 'pain from arthritis in the hand',
-        'pain from repetitive motions', 'pain from carpal tunnel syndrome', 'pain from hand overuse', 'hand joint pain', 'pain from hand sprain', 'pain from tendonitis in the hand', 'pain in the wrist with hand use',
+        'pain from carpal tunnel syndrome', 'pain from hand overuse', 'hand joint pain', 'pain from hand sprain', 'pain from tendonitis in the hand', 
         'sharp pain when holding objects', 'burning pain in the hand', 'painful hand cramps', 'dull hand pain', 'pain from hand fracture', 'pain from swelling in the hand', 'joint stiffness in the hand',
-        'pain from typing', 'pain after using the hand excessively', 'pain when stretching the hand', 'pain in hand from trauma', 'pain when writing', 'pain with hand dexterity', 'pain in the hand after exercise',
-        'muscle pain in the hand', 'pain from cold in the hand', 'pain after lifting objects'
+        'pain after using the hand excessively', 'pain when stretching the hand'
     ],
     'arm pain': [
-        'pain in the arm', 'upper limb pain', 'arm discomfort', 'sharp arm pain', 'throbbing arm pain', 'pain in the elbow', 'pain in the forearm', 'pain in the biceps',
+        'pain in the arm', 'upper limb pain', 'arm discomfort', 'sharp arm pain', 'throbbing arm pain', 'pain in the forearm', 'pain in the biceps',
         'pain from arm injury', 'pain from repetitive arm movement', 'pain from tendonitis in the arm', 'muscle pain in the arm', 'nerve pain in the arm', 'pain in the upper arm muscles',
         'pain from arm sprain', 'pain in the wrist and arm', 'stiffness in the arm', 'swollen arm', 'pain when moving the arm', 'burning pain in the arm', 'aching in the arm', 'arm cramping',
         'pain from lifting with the arm', 'pain when raising the arm', 'pain from overuse of the arm', 'pain from arm fracture', 'pain in the arm muscles after exercise', 'pain from muscle strain in the arm',
@@ -388,11 +383,10 @@ symptom_synonyms = {
     ],
     'leg pain': [
         'pain in the leg', 'lower limb pain', 'leg discomfort', 'muscle pain in the leg',  'pain in the shin', 'pain from leg injury',
-        'sharp leg pain', 'throbbing leg pain', 'aching leg pain', 'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise',
-        'pain after running','pain in my legs','legs are paining','pain in leg', 'pain from overuse', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
-        'pain in the calf after activity', 'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
-        'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'sharp pain in the lower leg',
-        'pain when walking on uneven ground', 'pain in the lower back and leg'
+        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise',
+        'pain in my legs','legs are paining','pain in leg', 'pain from overuse', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
+        'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
+        'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'pain in the lower leg'
     ],
     'confusion': [
         'disorientation', 'muddled thinking', 'mental fog', 'trouble thinking clearly', 'brain fog', 'cognitive cloudiness', 'puzzled state', 'jumbled thoughts', 'incoherent reasoning', 'tangled mental process',
@@ -404,9 +398,9 @@ symptom_synonyms = {
     ],
     'hip pain': [
         'pain in the hip', 'hip discomfort', 'hip joint pain', 'pain from hip arthritis', 'sharp hip pain', 'throbbing hip pain', 'pain in the hip joint', 'pain in the hip area', 'pain from hip injury',
-        'hip inflammation', 'pain from hip strain', 'pain from bursitis in the hip', 'pain when moving the hip', 'pain from overuse of the hip', 'pain in the groin area',
+        'hip inflammation', 'pain from hip strain', 'pain from bursitis in the hip', 'pain when moving the hip', 'pain from overuse of the hip', 
         'pain from hip fracture', 'pain after standing for a long time', 'pain from hip surgery', 'pain when lying on the hip', 'pain with hip rotation', 'pain in the side of the hip',
-        'pain in the front of the hip', 'sharp hip joint pain', 'pain from hip flexor strain', 'deep hip pain', 'pain from hip dislocation', 'aching hip pain',
+        'pain in the front of the hip', 'hip joint pain', 'pain from hip flexor strain', 'deep hip pain', 'pain from hip dislocation',
         'pain from muscle strain around the hip'
     ],
   
@@ -434,23 +428,21 @@ symptom_synonyms = {
   'loss of appetite': [
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
-    'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 'nausea with food',
-    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite due to illness', 'loss of appetite from stress',
-    'loss of appetite from medication', 'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire'
+    'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
+    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 
+    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire'
 ],
 
 'constipation': [
     'difficulty passing stool', 'infrequent bowel movements', 'hard stools', 'painful bowel movements', 'feeling of incomplete evacuation', 'straining during bowel movement',
-    'constipated', 'dry stool', 'difficulty in defecation', 'delayed bowel movements', 'irregular bowel movements', 'hard and dry stool', 'chronic constipation', 'temporary constipation',
+    'constipated', 'dry stool', 'difficulty in defecation', 'delayed bowel movements', 'irregular bowel movements', 'hard and dry stool', 
     'trouble with bowel movements', 'trouble passing stool', 'slow bowel transit', 'stool retention', 'decreased bowel movement frequency', 'bowel sluggishness',
     'straining to poop', 'bowel movement difficulty', 'slow bowel function', 'lack of bowel movement', 'intestinal irregularity'
 ],
 
 'flu': [
-    'influenza', 'seasonal flu', 'viral flu', 'flu virus', 'common flu', 'flu infection', 'respiratory flu', 'flu-like symptoms', 'flu illness',
-    'acute influenza', 'viral infection', 'cold and flu', 'influenza virus', 'flu sickness', 'contagious flu', 'pandemic flu',
-    'swine flu', 'avian flu', 'H0N1 flu', 'influenza strain', 'cough and flu', 'flu symptoms', 'body aches from flu', 'cold flu',
-    'influenza fever', 'flu epidemic', 'general flu discomfort', 'influenza outbreak', 'flu season illness', 'sudden flu'
+    'influenza', 'seasonal flu', 'viral flu', 'flu virus', 'common flu', 'flu infection', 'respiratory flu', 
+    'viral infection', 'influenza virus', 'contagious flu', 'pandemic flu', 'influenza fever', 'flu epidemic'
 ],
 
 'infection': [
@@ -464,8 +456,7 @@ symptom_synonyms = {
 'inflammation': [
     'inflammatory response', 'immune response', 'inflammatory reaction', 'inflammation of tissues', 'inflammation in the body',
     'inflammation of the skin', 'joint inflammation', 'internal inflammation', 'inflammatory condition', 'inflammatory disorder', 
-    'systemic inflammation', 'inflammation from infection', 'inflammation from injury', 'inflammation from disease', 'inflammation in the joints',
-    'stiffness from inflammation', 'inflammation from trauma', 'inflammation due to allergies'
+    'inflammation from disease'
 ],
 
 'cramp': [
@@ -473,24 +464,23 @@ symptom_synonyms = {
 ],
 
 'bleeding': [
-    'blood loss', 'hemorrhage', 'hemorrhaging', 'bloodshed', 'wound bleeding', 'internal bleeding', 'external bleeding', 'bleeding from injury', 'blood flow',
-    'spurting blood', 'bleeding wound', 'gushing blood', 'cut bleeding', 'profuse bleeding', 'minor bleeding', 'heavy bleeding', 'excessive bleeding',
-    'periodic bleeding', 'bleeding from incision', 'bleeding from surgery', 'abnormal bleeding', 'uncontrolled bleeding', 'bleeding disorder'
+    'blood loss', 'hemorrhage', 'hemorrhaging', 'bloodshed', 'wound bleeding', 'internal bleeding', 'external bleeding', 'bleeding from injury'
+    'spurting blood', 'bleeding wound', 'gushing blood'
 ],
 
 'irritation': [
-    'annoyance', 'chronic irritation', 'temporary irritation', 'allergic irritation', 'irritated feeling'
+    'annoyance', 'allergic irritation', 'irritated feeling'
 ],
 
 'anxiety': [
-    'worry', 'unease', 'stress', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'nervous anxiety', 'social anxiety', 'generalized anxiety', 'anxiety disorder', 
+    'worry', 'unease', 'stress', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 
     'anticipatory anxiety', 'anxiety attack', 'apprehensive feeling', 'distress', 'emotional unease', 'worrying', 'overthinking', 'mental tension'
 ],
 
 'depression': [
     'sadness', 'melancholy', 'despair', 'low mood', 'dismay', 'hopelessness', 'discouragement', 'despondency', 'blues', 'dejectedness',
     'feeling down', 'feeling hopeless', 'loss of interest', 'unhappiness', 'mental exhaustion', 'loss of joy', 'major depressive disorder',
-    'clinical depression', 'chronic depression', 'depressive episode', 'anhedonia', 'negative mood', 'downheartedness'
+    'depressed', 'depressive episode', 'anhedonia', 'negative mood', 'downheartedness'
 ],
 
 'cancer': [
@@ -504,7 +494,7 @@ symptom_synonyms = {
     'diabetes mellitus', 'high blood sugar', 'high sugar', 'insulin resistance', 'type 0 diabetes', 'type 2 diabetes', 'gestational diabetes', 'sugar diabetes',
     'chronic high blood sugar', 'endocrine disorder', 'metabolic disorder', 'insulin deficiency', 'insulin imbalance', 'glucose intolerance', 'sugar level is high',
     'blood sugar imbalance', 'hyperglycemia', 'diabetic condition', 'diabetic disease', 'diabetic disorder', 'pancreatic disorder', 'non-insulin dependent diabetes',
-    'insulin-dependent diabetes', 'pre-diabetes', 'diabetic symptoms', 'diabetic complications', 'diabetes management', 'diabetes treatment'
+    'insulin-dependent diabetes', 'pre-diabetes', 'diabetic'
 ],
 
 'weight loss': [
