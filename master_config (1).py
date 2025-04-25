@@ -98,26 +98,26 @@ symptom_synonyms = {
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'sharp abdominal pain', 'dull abdominal pain',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'discomfort after meals',
         'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'feeling of indigestion', 'pain around stomach area', 'belly pain', 'pain in the abdomen', 'stomach discomfort',
-        'sharp stomach pain', 'dull abdominal pain', 'cramping in the abdomen', 'bloating with pain',
-        'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain from indigestion', 'pain after eating', 'nauseating abdominal pain',
+        'dull abdominal pain', 'cramping in the abdomen', 
+        'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 'nauseating abdominal pain',
         'pain from gas buildup', 'pressure in the stomach', 'pain from constipation', 'distended abdomen', 'pain from ulcers', 'pain from bloating', 'pain from food intolerance',
         'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'pain from diarrhea', 'stomach flu pain', 'pain in the lower abdomen',
-        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'nausea with stomach pain', 'abdominal swelling with pain', 'abdominal pain',
-        'chronic stomach pain', 'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
+        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'nausea with stomach pain', 'abdominal swelling with pain', 
+        'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
     ],
     'weakness': [
         'tiredness', 'extreme tiredness','weariness', 'fatigued feeling', 'lack of energy', 'physical depletion', 'mental fatigue', 'chronic tiredness',
         'drained', 'feeling wiped out', 'feeling run down', 'fatigue','low energy', 'severe fatigue', 'feeling sluggish', 'morning fatigue', 'fatigue after exertion',
         'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling lethargic', 'mental sluggishness', 'physical tiredness', 'difficulty keeping eyes open',
         'lack of vitality', 'energy depletion', 'feeling drained', 'listlessness', 'burned out', 'exhausted state', 'feeling zoned out', 'tired all the time', 'fatigued state',
-       'constant tiredness', 'no motivation', 'fatigued muscles', 'endless tiredness', 'lethargic movements',
+       'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements',
         'lacking strength', 'body fatigue',  'feeling disconnected'
     ],
     'nausea': [
         'feeling nauseous', 'upset stomach', 'queasy', 'stomach turning', 'sick feeling', 'feeling like vomiting', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
         'uneasy stomach', 'upset belly', 'dizzy stomach', 'intense queasiness', 'morning sickness feeling',
-        'stomach discomfort', 'feeling faint with nausea', 'stomach churn', 'constant nausea', 'puking feeling', 'nausea after eating', 'feeling like you could throw up',
+        'stomach discomfort', 'stomach churn', 'constant nausea', 'puking feeling', 'feeling like you could throw up',
         'stomach upset with nausea', 'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
@@ -128,7 +128,7 @@ symptom_synonyms = {
         'feeling like I might topple', 'wavy floor sensation', 'heady unsteadiness', 'murky equilibrium', 'airy head sensation', 'constant near-tip-over feeling', 'mental wobble',
         'feathery balance', 'gravity shifting under feet', 'rocking sensation', 'seasick feeling on land', 'fuzzy-headed instability', 'inner ear imbalance feeling',
         'wavy-field-of-view sensation', 'lurching environment', 'faltering steadiness', 'delicately balanced but slipping', 'rubbery legs feeling', 'giddy swirl in head',
-        'tilting world', 'swaying sensation', 'imbalance feeling', 'shaky equilibrium', 'floating dizziness', 'spinning sensation', 'feeling off-kilter'
+        'tilting world', 'swaying sensation', 'imbalance feeling', 'shaky equilibrium', 'spinning sensation', 'feeling off-kilter'
     ],
 
     'shortness of breath': [
@@ -151,7 +151,7 @@ symptom_synonyms = {
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
         'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
-        'overused muscles', 'fatigue-related muscle pain', 'chronic muscle pain', 'localized muscle pain', 'muscle strain from overuse', 'aching from tension in muscles',
+        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
         'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle'
     ],
@@ -187,12 +187,11 @@ symptom_synonyms = {
         'frequent nose blowing', 'excessive snot', 'thin nasal discharge', 'clear mucus', 'constant nose drip', 'streaming nose', 'watery runny nose', 'mucus dripping down from nose',
         'nose running uncontrollably', 'sticky nasal discharge', 'clear discharge from nostrils', 'frequent nasal wiping', 'constant nasal leaks', 'draining sinuses',
         'constant nasal secretions', 'wet nose', 'nose discharge', 'sinus leakage', 'flowing nose', 'uncontrolled nasal discharge',
-        'persistent runny nose', 'dripping from nostrils', 'clogged but dripping nose', 'excessive mucus from nostrils', 'constant nasal drip',
+        'dripping from nostrils', 'clogged but dripping nose', 'excessive mucus from nostrils', 'constant nasal drip',
         'dripping sinuses', 'mucus continuously dripping', 'snotty nose', 'stuffy nose with runny discharge','dripping all day long'
     ],
     'sneezing': [
-         'explosive sneezes',
-        'repetitive sneezes', 'unstoppable nasal explosions','serial sneezing', 'sneeze after sneeze', 'chain-sneezing', 'nasal expulsions',
+        'explosive sneezes', 'repetitive sneezes', 'unstoppable nasal explosions','serial sneezing', 'sneeze after sneeze', 'chain-sneezing', 'nasal expulsions',
         'nasal reflex outbursts', 'convulsive sneezing', 'rapid-fire sneezes', 'machine-gun sneezing', 'surprise sneezes',
         'tickling in nose triggering sneezes', 'staccato sneezing', 'sneeze cascades', 'recurrent sneezing', 'violent sneezing', 'spontaneous sneezes', 
         'blasting sneezes', 'paroxysmal sneezing', 'intense sneezing', 'frequent sneezing attacks', 'sneezing with watery eyes', 'sudden fit of sneezing', 'uncontrollable nasal reflex',
@@ -203,13 +202,13 @@ symptom_synonyms = {
         'lymphatic swelling', 'lymph node enlargement', 'swollen glands under arms', 'underarm lymph node swelling', 'swollen neck glands', 'increased lymph node size',
         'lymphatic system swelling', 'lumps under the skin', 'swollen lymphatic glands', 'painful lumps in neck', 'inflamed lymph nodes', 'lymph node tenderness', 'neck swelling',
         'uncomfortable lumps in neck', 'tender neck lumps', 'swollen lymph glands in groin', 'swollen lymph nodes in armpit', 'painful swelling in neck', 'inflamed glands',
-        'lymph node tenderness under jaw', 'enlarged glands in the throat', 'neck lumps', 'swollen lymph nodes behind ears', 'tender swollen glands', 'neck lymphatic swelling',
-        'swelling in the throat', 'pain in swollen glands', 'pain from swollen lymph nodes', 'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
+        'lymph node tenderness under jaw', 'enlarged glands in the throat', 'neck lumps', 'tender swollen glands', 'neck lymphatic swelling',
+        'swelling in the throat', 'pain in swollen glands', 'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
     ],
   'neck pain': [
     'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
-    'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'chronic neck pain', 'acute neck pain', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 
-    'pain at the base of the skull', 'upper spine pain', 'neck injury pain', 'limited neck mobility', 'sharp neck pain', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
+    'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 
+    'pain at the base of the skull', 'upper spine pain', 'neck injury pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
     'burning sensation in neck', 'neck inflammation', 'neck tenderness', 'cervical spine discomfort', 'pain when turning head', 'pain along the side of neck', 'pain in back of neck', 'stabbing neck pain',
     'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck'
 ],
@@ -217,15 +216,13 @@ symptom_synonyms = {
     'joint pain': [
         'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
         'joint irritation', 'musculoskeletal pain', 'painful joints', 'joint stiffness', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
-         'painful shoulders', 'pain in elbows', 'wrist joint pain', 'ankle joint pain', 'hip joint pain', 'persistent joint pain', 'severe joint pain', 'uncomfortable joint pressure',
-        'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints',
-        'joint tenderness', 'joint soreness from strain', 'arthralgia', 'sharp joint pain', 'stabbing joint pain', 'chronic joint ache', 'inflamed elbow joints',
-         'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'swollen hands', 'weakening joint flexibility',
-        'muscle and joint discomfort', 'continuous joint pain', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
-
+        'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints',
+        'joint tenderness', 'joint soreness from strain', 'arthralgia', 
+        'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'swollen hands', 'weakening joint flexibility',
+        'muscle and joint discomfort', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
     ],
    'diarrhea': [
-        'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 'explosive diarrhea',
+        'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
         'stomach upset with diarrhea', 'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement',
         'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements',
         'diarrheal episode', 'loose stool rush', 'pale watery stools', 'intestinal upset',
@@ -234,24 +231,24 @@ symptom_synonyms = {
         'involuntary liquid stools', 'digestive upset causing liquid stools', 'diarrhea with abdominal pain'
     ],
     'vomiting': [
-        'throwing up', 'puking', 'stomach upset', 'retching', 'emesis', 'nausea with vomiting', 'forcefully throwing up', 'heaving', 'vomiting episodes', 'sick stomach',
-        'gagging', 'expelling stomach contents', 'stomach expulsion', 'violent vomiting', 'repeated vomiting', 'uncontrollable vomiting', 'upchucking', 'spitting up', 'retching reflex',
-        'forceful expulsion of food', 'involuntary stomach release', 'emetic response', 'feeling of needing to vomit', 'gag reflex triggering', 'chronic vomiting', 'severe vomiting',
-        'nausea-induced vomiting', 'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
-        'nauseated vomiting', 'vomit-induced gagging', 'stomach-purging sensation', 'retching uncontrollably', 'throwing up after eating', 'puking episodes', 'sick and throwing up',
+        'throwing up', 'puking', 'stomach upset', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach',
+        'gagging', 'expelling stomach contents', 'stomach expulsion', 'upchucking', 'spitting up', 'retching reflex',
+        'forceful expulsion of food', 'involuntary stomach release', 'emetic response', 'feeling of needing to vomit', 'gag reflex triggering', 
+        'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
+        'vomit-induced gagging', 'stomach-purging sensation', 'retching uncontrollably', 'throwing up after eating', 'puking episodes', 'sick and throwing up',
         'puking from irritation', 'regurgitating food', 'empty stomach vomiting', 'morning sickness vomiting', 'nausea attacks with vomiting', 'emesis due to motion sickness', 'heaving up'
     ],
 
     'ear pain': [
-        'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'sharp ear pain', 'dull ear pain', 'stabbing pain in ear', 'ringing ear pain',
-        'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'persistent ear pain', 'ear infection pain',
-        'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'stuffy ear pain', 'pain in ear canal', 'ear ache when swallowing',
+        'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'stabbing pain in ear', 
+        'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'ear infection pain',
+        'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'pain in ear canal', 'ear ache when swallowing',
         'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
         'tender ear lobes', 'painful eardrum', 'painful earful feeling', 'pounding ear pain', 'sharp stabbing ear ache', 'swollen ear canal', 'eardrum sensitivity', 'sharp pressure sensation in ear',
-        'soreness in ear cavity', 'clogged ear with pain', 'throbbing sensation in ear', 'ear ache during sleep', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
+        'soreness in ear cavity', 'ear with pain', 'throbbing sensation in ear', 'ear ache during sleep', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
     ],
     'back pain': [
-        'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back', 'sharp back pain', 'dull back pain',  
+        'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back',  
         'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache from lifting',
         'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 'back pain after exercise',
         'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine',
@@ -259,18 +256,13 @@ symptom_synonyms = {
         'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
-        'Common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold', 'chest cold', 'light upper respiratory infection', 'mild sniffle bug',
-        'standard cold virus', 'low-grade nasal virus', 'mild runny-nose ailment', 'basic rhinovirus', 'everyday cold symptoms', 'short-term sniffles', 'routine winter bug', 'easy viral cold',
-        'minor head stuffiness illness', 'typical seasonal illness', 'cold symptoms', 'stuffy nose cold', 'mild sore throat with cold', 'cold with slight fever', 'cough with cold',
-        'runny nose cold', 'sneezing with cold', 'mild chest congestion', 'low-grade cold infection', 'itchy throat cold', 'general cold symptoms', 'nasal congestion from cold',
-        'watery eyes with cold', 'mild head congestion', 'cold-related fatigue','upper respiratory cold', 'typical cold symptoms', 'stuffy feeling from cold',
-        'cough and cold', 'runny nose from cold', 'frequent sneezing cold', 'cold-related chills', 'feeling chilled from cold', 'aching muscles with cold', 'minor fever with cold',
-        'slight cold discomfort', 'cold-induced sore throat' ,'feeling cold'
+        'Common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold','light upper respiratory infection', 'mild sniffle bug',
+        'standard cold virus', 'low-grade nasal virus', 'mild runny-nose ailment', 'basic rhinovirus', 'short-term sniffles', 'routine winter bug', 'easy viral cold',
+        'feeling cold'
     ],
     'sweat': [
-        'sweating', 'excessive sweating', 'unusual sweating', 'profuse sweating', 'drenched in sweat', 'perspiring heavily', 'sweating buckets', 'dripping perspiration',
-        'bead-like sweat on skin', 'moisture streaming down face', 'uncontrollable sweating', 'soaked in sweat', 'overactive sweat glands', 'sweaty and damp skin', 'sweat-soaked clothes',
-        'constant perspiration', 'sticky sweat', 'salty perspiration', 'glistening with sweat', 'sweat trickling down spine', 'nervous sweating', 'stress-induced sweat', 'drenching perspiration',
+        'sweating','perspiring heavily', 'sweating buckets', 'dripping perspiration', 'bead-like sweat on skin', 'moisture streaming down face', 
+        'constant perspiration','salty perspiration', 'glistening with sweat', 'sweat trickling down spine', 'drenching perspiration',
         'sweat-laden body', 'humid feeling', 'slick skin', 'warm moisture on skin', 'sweat beads forming everywhere', 'bodily moisture overload', 'persistent dampness', 'sweaty palms and forehead',
         'sweat dripping off hairline', 'sweat-soaked sheets', 'nocturnal sweating', 'smelly perspiration', 'standing in a pool of sweat', 'sweat forming under arms', 'shiny perspiring face',
         'sweat running down temples', 'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
