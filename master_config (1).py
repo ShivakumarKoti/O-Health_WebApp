@@ -327,20 +327,20 @@ symptom_synonyms = {
         'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'severe tooth pain', 'pain in front teeth'
     ],
     'chest pain': [
-        'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'sharp chest pain', 'tight chest feeling', 'stabbing chest pain', 'burning chest pain', 'aching chest',
-        'chest heaviness', 'pain in the breastbone', 'pain radiating from chest', 'dull chest pain', 'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
+        'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'sharp chest pain', 'tight chest feeling', 'aching chest',
+        'chest heaviness', 'pain in the breastbone', 'pain radiating from chest',  'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
         'sharp stabbing pain in chest', 'chest tightness', 'pain under the sternum', 'pain when breathing deeply', 'feeling of chest pressure', 'pain from pulmonary issues', 'heart-related chest pain',
-        'sharp pain in the breastbone', 'radiating chest discomfort', 'pain when moving', 'pain from costochondritis', 'pain from muscle strain in chest', 'deep chest discomfort', 'pain from anxiety',
-        'dull aching chest pain', 'pain in the upper left chest', 'pain when lying down', 'sore chest', 'pain from trauma to chest', 'persistent chest pain', 'discomfort after exercise',
+        'sharp pain in the breastbone', 'radiating chest discomfort', 'pain when moving', 'pain from costochondritis', 'pain from muscle strain in chest', 'deep chest discomfort', 
+        'dull aching chest pain', 'pain in the upper left chest', 'pain when lying down', 'sore chest', 
         'pain in the center of the chest', 'pain from chest cold', 'pain in the chest while breathing', 'sore chest area', 'pain in the left side of the chest', 'pain from coughing', 'pain from deep breathing'
     ],
 
     'knee pain': [
-        'knee discomfort', 'pain in the knee', 'painful knees','joint pain in the knee', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint',
-        'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain while walking', 'pain after exercise', 'pain from knee overuse', 'pain with knee movement',
+        'knee discomfort', 'pain in the knee', 'painful knees', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint',
+        'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain from knee overuse', 'pain with knee movement',
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
-        'knee joint inflammation', 'pain when climbing stairs', 'chronic knee pain','pain with swelling', 'pain from running', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 
-        'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 'pain from cartilage damage',
+        'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 
+        'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
         'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees'
     ],
     'foot pain': [
@@ -367,7 +367,7 @@ symptom_synonyms = {
         'swollen joints in the wrist', 'pain around wrist bones after activity'
     ],
     'hand pain': [
-        'hand discomfort', 'pain in the hand', 'aching hand', 'sharp hand pain', 'throbbing hand pain', 'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles',
+        'hand discomfort', 'pain in the hand', 'aching hand',  'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles',
         'pain from hand injury', 'swollen hand', 'pain with hand movement', 'hand strain pain', 'numbness in the hand', 'pain after gripping', 'pain in the thumb', 'pain from arthritis in the hand',
         'pain from carpal tunnel syndrome', 'pain from hand overuse', 'hand joint pain', 'pain from hand sprain', 'pain from tendonitis in the hand', 
         'sharp pain when holding objects', 'burning pain in the hand', 'painful hand cramps', 'dull hand pain', 'pain from hand fracture', 'pain from swelling in the hand', 'joint stiffness in the hand',
@@ -615,16 +615,16 @@ symptom_synonyms = {
 
 'high blood pressure': [
     'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
-    'high diastolic pressure', 'chronic hypertension', 'hypertensive condition', 'uncontrolled blood pressure', 'borderline hypertension', 'stage 0 hypertension',
-    'stage 1 hypertension', 'persistent high blood pressure', 'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 'cardiovascular hypertension',
-    'risk of hypertension', 'elevated BP', 'hypertensive state', 'BP is high'
+    'high diastolic pressure', 'hypertensive condition', 
+    'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 
+    'elevated BP', 'hypertensive state', 'BP is high'
 ],
 
 'low blood pressure': [
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
-    'low diastolic pressure', 'abnormally low blood pressure', 'postural hypotension', 'orthostatic hypotension', 'chronic hypotension', 'mild hypotension',
-    'severe hypotension', 'low blood pressure symptoms', 'blood pressure drop', 'low cardiovascular pressure', 'circulatory hypotension', 'inadequate blood pressure',
-    'dizzy blood pressure', 'low blood pressure episode', 'BP is low','low blood pressure'
+    'low diastolic pressure', 
+    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure',
+    'dizzy blood pressure', 'BP is low','low blood pressure'
 ],
 
 'excessive thirst': [
@@ -686,7 +686,7 @@ symptom_synonyms = {
 
 'panic attack': [
     'anxiety attack', 'nervous breakdown', 'stress attack', 'overwhelming fear', 'intense fear episode', 'fight-or-flight response', 'panic episode', 'emotional breakdown',
-    'sudden panic', 'heart-pounding anxiety', 'fear attack', 'panic episode', 'anxiety episode', 'intense panic', 'acute stress response', 'terror attack', 'nervous episode',
+    'sudden panic', 'heart-pounding anxiety', 'fear attack', 'intense panic', 'acute stress response', 'terror attack', 'nervous episode',
     'severe panic', 'acute emotional distress', 'uncontrollable fear', 'chronic panic disorder'
 ],
 
@@ -746,8 +746,8 @@ symptom_synonyms = {
 ],
 
 'bone fracture': [
-    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'bone injury', 'fracture', 'compound fracture', 'closed fracture',
-    'stress fracture', 'hairline fracture', 'complete fracture', 'incomplete fracture', 'displaced fracture', 'non-displaced fracture', 'bone splinter',
+    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'bone injury', 'fracture', 
+    'stress fracture', 'hairline fracture', 'bone splinter',
     'fractured limb', 'fractured bone segment', 'broken limb', 'broken bone segment', 'cracked bone injury', 'bone rupture', 'bone fracture symptoms',
     'fractured bone tissue', 'fracture of the bone', 'crack in bone'
 ],
@@ -790,46 +790,40 @@ symptom_synonyms = {
 
 'hearing loss': [
 'loss of hearing', 'partial hearing loss', 'complete hearing loss', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability',
-'hearing impairment', 'sensorineural hearing loss', 'conductive hearing loss', 'temporary hearing loss', 'permanent hearing loss', 'age-related hearing loss', 'noise-induced hearing loss',
+'hearing impairment', 
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
 'unilateral hearing loss', 'bilateral hearing loss', 'gradual hearing loss', 'sudden hearing loss', 'ear infection-related hearing loss', 'fluid in ear causing hearing loss',
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'nerve damage causing hearing loss', 'inability to detect sound frequencies', 'ear trauma',
 'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
-'temporary auditory loss', 'chronic hearing damage', 'progressive hearing loss'
+'temporary auditory loss', 'chronic hearing damage'
 ],
 
 'bone pain': [
-'bone tenderness', 'bone swelling', 'aching bones', 'deep bone pain', 'sharp bone pain', 'bone discomfort', 'persistent bone pain', 'localized bone pain',
-'throbbing bone sensation', 'bone sensitivity', 'bone ache during movement', 'chronic bone pain', 'bone bruising', 'bone soreness', 'inflammatory bone pain',
+'bone tenderness', 'bone swelling', 'aching bones', 'bone discomfort', 
+'throbbing bone sensation', 'bone sensitivity', 'bone ache during movement', 'bone bruising', 'bone soreness', 
 'fracture-related bone pain', 'joint and bone pain', 'dull bone ache', 'piercing bone pain', 'bone pain during rest', 'bone pain under pressure', 'bone stiffness',
-'osteopathic pain', 'bone fragility pain', 'bone strain', 'bone inflammation', 'bone pain with swelling', 'tender bone surface', 'aching joints and bones',
-'deep-seated bone ache', 'bone discomfort while standing', 'bone pain due to injury', 'radiating bone pain', 'stress fracture pain', 'bone pain from infection',
-'cancer-related bone pain', 'bone tenderness to touch', 'nighttime bone pain', 'sensitive bone tissue', 'bone marrow pain', 'bone pain during activity',
-'osteoporosis-related bone pain', 'bone pain with movement', 'skeletal pain', 'generalized bone pain', 'acute bone discomfort', 'bone stress pain',
-'pressure-induced bone pain', 'intense bone ache', 'stiff bone joints', 'localized skeletal pain'
+'osteopathic pain', 'bone fragility pain', 'bone strain', 'bone inflammation', 'tender bone surface', 'aching joints and bones',
+'deep-seated bone ache', 'bone discomfort while standing', 
+'bone tenderness to touch', 'sensitive bone tissue', 'bone marrow pain', 'bone pain during activity',
+'osteoporosis-related bone pain', 'bone pain with movement', 'skeletal pain', 'acute bone discomfort', 'bone stress pain',
+'intense bone ache', 'stiff bone joints', 'localized skeletal pain'
 ],
 
 'weight gain': [
 'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase',
-'weight fluctuation', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'bloating-related weight gain', 'water retention weight gain',
-'unhealthy weight gain', 'sudden weight gain', 'weight gain from overeating', 'hormonal weight gain', 'stress-related weight gain', 'weight gain due to inactivity',
-'metabolic weight gain', 'post-pregnancy weight gain', 'age-related weight gain', 'diet-induced weight gain', 'weight gain from medication', 'insulin-related weight gain',
-'abdominal weight gain', 'upper body weight gain', 'lower body weight gain', 'excess calorie intake', 'fluid retention weight gain', 'chronic weight gain',
-'weight gain around the waist', 'poor diet weight gain', 'sedentary lifestyle weight gain', 'hormone imbalance weight gain', 'slow metabolism weight gain',
-'unexplained weight gain', 'overeating-induced weight gain', 'fat storage increase', 'weight gain from sugary foods', 'weight gain due to lack of exercise',
-'weight gain with bloating', 'hormone-related fat storage', 'weight gain caused by stress eating', 'body composition change', 'progressive weight gain',
-'weight gain due to emotional eating', 'weight gain from poor sleep', 'unbalanced diet weight gain','gained weight', 'weight going up'
+'weight fluctuation', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
+'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up'
 ],
 
 'skin burning': [
 'burning feeling', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation', 'skin discomfort', 'tingling burn',
 'localized skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
 'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'nerve-related burning', 'itchy burning skin', 'skin damage from burn',
-'skin burning after contact', 'intense burning sensation', 'surface skin burn', 'skin blistering', 'persistent skin burn', 'burned skin surface',
-'red inflamed skin', 'skin discomfort from heat', 'skin burning from friction', 'skin chafing burn', 'thermal skin burn', 'abrasive skin burn', 'sensitive skin after burn',
-'stinging skin pain', 'skin burn from chemicals', 'skin damage sensation', 'skin peeling from burn', 'acute burning feeling', 'skin burn with swelling',
-'lingering skin burn', 'burnt skin tenderness', 'skin hot spot', 'irritated skin burn', 'sharp skin burn sensation', 'skin burning rash', 'skin burning itch'
+'skin burning after contact', 'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface',
+'red inflamed skin', 'skin discomfort from heat', 'skin burning from friction', 'skin chafing burn', 'sensitive skin after burn',
+'stinging skin pain', 'skin burn from chemicals', 'skin damage sensation', 'skin peeling from burn', 
+'lingering skin burn', 'burnt skin tenderness', 'skin hot spot', 'skin burning rash', 'skin burning itch'
 ],
 
 'itching': [
@@ -840,7 +834,7 @@ symptom_synonyms = {
 
 'injury': [
 'injured', 'wound', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury',
-'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'impact injury', 'blunt force trauma', 'puncture wound', 'injuries'
+'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries'
 ],
 
 'jaundice': [
@@ -884,28 +878,27 @@ symptom_synonyms = {
 'sugar': ['sugars', 'glucose', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
 
   'waist pain': [
-    'pain in the waist', 'waist discomfort', 'waist ache', 'lower back and waist pain', 'sharp waist pain',
+    'pain in the waist', 'waist discomfort', 'waist ache', 
     'throbbing waist pain', 'pain from waist injury', 'pain in the lower torso', 'pain around the belt line',
     'pain from tight waistband', 'pain from muscle strain in waist', 'pain from overuse of waist muscles',
     'waist pain when bending', 'waist pain when twisting', 'pain with waist movement', 'aching waist',
-    'pain in the sides of the waist', 'waist pain from bad posture', 'pain from lifting heavy objects',
+    'pain in the sides of the waist', 'pain from lifting heavy objects',
     'waist pain after exercise', 'pain in the waist and hips', 'pain from spinal issues near waist',
     'pain in waist and lower back', 'pain from herniated disc near waist', 'pain after prolonged sitting',
-    'waist stiffness and pain', 'waist pain after sleeping', 'burning sensation in waist', 'pinching pain in waist',
+    'waist stiffness and pain', 'burning sensation in waist', 'pinching pain in waist',
     'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
-    'numbness and waist pain', 'pain when walking from waist', 'pain from waist inflammation',
+    'pain when walking from waist', 'pain from waist inflammation',
     'pain after running affecting waist',  'pain in back near waist', 'waist region pain'
 ],
 
 'thigh pain': [
-    'pain in the thigh', 'thigh discomfort', 'thigh ache', 'sharp thigh pain', 'burning pain in thigh',
+    'pain in the thigh', 'thigh discomfort', 'thigh ache', 'burning pain in thigh',
     'throbbing thigh pain', 'pain from thigh injury', 'pain in upper leg', 'pain in front of thigh',
     'pain in back of thigh', 'inner thigh pain', 'outer thigh pain', 'pain in upper thigh muscles',
     'pain from pulled thigh muscle', 'pain from thigh strain', 'pain from hamstring injury',
-    'pain from quadriceps strain', 'pain in thigh when walking', 'pain in thigh when running',
-    'pain in thigh when sitting', 'numbness and pain in thigh', 'tingling pain in thigh',
+    'pain from quadriceps strain', 
     'cramping in the thigh', 'pain from thigh overuse', 'sore thigh', 'tightness in thigh',
-    'pain in thigh and groin', 'pain from sciatica in thigh', 'pain radiating to thigh',
+    'pain radiating to thigh',
     'pain after leg workout', 'pain from nerve compression in thigh', 'deep thigh pain',
     'muscle soreness in thigh', 'pain after stretching thigh', 'aching in thigh area',
     'pain in thigh after injury', 'pain from thigh bruise', 'pain in thigh after standing long',
@@ -913,54 +906,37 @@ symptom_synonyms = {
 ],
 
 'calf pain': [
-    'pain in the calf', 'calf discomfort', 'calf ache', 'sharp calf pain', 'throbbing calf pain',
+    'pain in the calf', 'calf discomfort', 'calf ache', 
     'burning pain in calf', 'cramping in calf', 'tightness in calf', 'pain in back of lower leg',
-    'calf muscle pain', 'pain from calf strain', 'pain from pulled calf muscle',
-    'calf pain when walking', 'calf pain when running', 'pain after calf workout',
-    'calf soreness after exercise', 'calf pain after standing long', 'pain from overuse of calf muscles',
-    'pain from calf injury', 'calf pain from poor circulation', 'pain from deep vein thrombosis (DVT)',
-    'calf pain from blood clot', 'numbness and calf pain', 'tingling in calf with pain',
-    'pain in calf and ankle', 'calf pain after stretching', 'calf pain when flexing foot',
-    'pain from calf cramp', 'calf muscle tightness and pain', 'aching calves',
-    'pain in both calves', 'unilateral calf pain', 'pain in inner calf', 'pain in outer calf',
-    'pain behind the knee and calf', 'lower leg pain in calf area', 'pain in calf from walking uphill',
-    'pain in calf from torn muscle', 'pain in calf after injury'
+    'calf muscle pain', 'pain from calf strain', 'pain from pulled calf muscle', 'pain after calf workout',
+    'calf soreness after exercise', 'pain from overuse of calf muscles',
+    'pain from calf injury', 'pain from deep vein thrombosis (DVT)',
+    'calf pain from blood clot', 'aching calves',
+    'pain in both calves', 'pain in inner calf', 'pain in outer calf'
 ],
 
 'elbow pain': [
-    'pain in the elbow', 'elbow discomfort', 'elbow ache', 'sharp elbow pain', 'throbbing pain in elbow',
-    'burning sensation in elbow', 'pain from elbow injury', 'pain in outer elbow', 'pain in inner elbow',
+    'pain in the elbow', 'elbow discomfort', 'elbow ache', 'throbbing pain in elbow',
+    'pain in outer elbow', 'pain in inner elbow',
     'elbow joint pain', 'elbow soreness', 'pain from tennis elbow', 'pain from golfer’s elbow',
-    'pain from elbow strain', 'elbow pain when bending', 'elbow pain when straightening arm',
+    'pain from elbow strain', 
     'elbow pain during lifting', 'pain in elbow when twisting', 'pain from overuse of elbow',
-    'elbow pain after exercise', 'pain in elbow when resting arm', 'numbness and elbow pain',
     'tingling in elbow with pain', 'elbow pain from repetitive motion', 'elbow pain from arthritis',
     'pain around the elbow', 'elbow muscle pain', 'elbow pain from tendinitis',
-    'pain from bursitis in elbow', 'elbow pain after injury', 'swelling and pain in elbow',
-    'stiffness in elbow with pain', 'elbow pain from trapped nerve', 'pain in elbow from weightlifting',
-    'elbow pain after throwing', 'radiating pain from elbow to forearm', 'pain in elbow and wrist',
+    'pain from bursitis in elbow', 
+    'elbow pain after throwing', 'radiating pain from elbow to forearm', 
     'pain behind the elbow', 'pain on top of the elbow', 'pain under the elbow',
-    'pain in elbow crease', 'elbow pain with swelling'
+    'pain in elbow crease'
 ],
 
 'pelvic pain': [
-    'pain in the pelvis', 'pelvis discomfort', 'pelvic ache', 'lower abdominal pain', 'deep pelvic pain',
-    'sharp pelvic pain', 'throbbing pelvic pain', 'cramping in pelvis', 'pain in lower abdomen and pelvis',
+    'pain in the pelvis', 'pelvis discomfort', 'pelvic ache', 'lower abdominal pain', 'cramping in pelvis', 'pain in lower abdomen and pelvis',
     'pelvic pressure and pain', 'aching pelvis', 'pelvic muscle pain', 'pelvic joint pain', 'pelvic bone pain', 'burning sensation in pelvis'
 ],
 
 'tingling': [
-    'tingling sensation', 'pins and needles', 'prickling sensation', 'numbness and tingling', 'burning and tingling',
-    'tingling in hands', 'tingling in feet', 'tingling in fingers', 'tingling in toes', 'tingling in arms',
-    'tingling in legs', 'tingling in face', 'tingling in scalp', 'tingling in lips', 'tingling in tongue',
-    'tingling in back', 'tingling in neck', 'tingling in spine', 'tingling in shoulder', 'tingling in chest',
-    'tingling in jaw', 'tingling after sitting too long', 'tingling after sleeping', 'tingling from nerve compression',
-    'tingling from poor circulation', 'tingling from anxiety', 'tingling during panic attack', 'tingling from neuropathy',
-    'tingling from diabetes', 'tingling from carpal tunnel', 'tingling from sciatica', 'tingling from multiple sclerosis',
-    'tingling due to vitamin deficiency', 'intermittent tingling', 'constant tingling', 'sudden tingling',
-    'random tingling', 'tingling and weakness', 'tingling and muscle twitching', 'tingling and pain',
-    'tingling and burning', 'tingling with cold sensation', 'tingling and numb feeling', 'buzzing sensation',
-    'electrical sensation', 'tingling like electricity', 'tingling when moving', 'tingling when still'
+    'tingling sensation', 'pins and needles', 'prickling sensation', 'buzzing sensation',
+    'electrical sensation'
 ],
 
 'difficulty speaking': [
