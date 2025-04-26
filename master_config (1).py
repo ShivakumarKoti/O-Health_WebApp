@@ -158,10 +158,8 @@ symptom_synonyms = {
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
         'early morning wakefulness', 'poor sleep quality', 'sleep deprivation', 'sleep disturbance', 'trouble staying asleep', 'sleep interruptions', 'unable to sleep through the night',
-        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'sleep issues', 
+        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
-        'poor sleep habits', 'nighttime restlessness', 'waking in the middle of the night', 'sleep deprivation symptoms', 'daytime sleepiness from poor sleep', 'sleep fragmentation',
-        'restless sleep', 'persistent insomnia', 'sleep troubles', 'light sleeping', 'short sleep duration', 'restorative sleep deprivation', 'fatigue from sleeplessness',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
         'unable to fall asleep', 'not able to fall asleep'
     ],
