@@ -16,6 +16,7 @@ symptom_list = [
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
+'caesarean section','pregnancy', 'pediatric symptoms',
 
 
 # weakness symtom
@@ -712,7 +713,10 @@ symptom_synonyms = {
     'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
     'overwhelming tiredness', 'complete fatigue', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 'chronic fatigue',
     'fatigued state', 'drowsiness', 'wearing out', 'energy depletion', 'fatigue syndrome', 'feeling drained', 'exhaustive tiredness', 'loss of energy',
-    'profound fatigue', 'fatigue and weakness'
+    'profound fatigue', 'fatigue and weakness', 'profound fatigue', 'fatigue and weakness',  'half asleep', 'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
+    'hard to stay awake', 'sleep craving', 'languid', 'wearied', 'brain fog',
+    'bed ready', 'sleep drawn', 'lazy eyed', 'unfocused from tiredness', 'nodding head', 'drifting off', 'sleepy sensation', 'slumberous', 'soporific', 'somnolent',
+    'half-awake', 'daytime sleepiness', 'overwhelming fatigue', 'rest-seeking', 'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
 ],
 
 'sprain': [
@@ -761,6 +765,12 @@ symptom_synonyms = {
     'vaginal infection', 'vaginal discharge', 'fertility issues', 'menopause', 'pre menopause', 'post menopause', 'infertility', 'vaginal dryness', 'prolapsed uterus',
     'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge','female issue','female issues', 'irregular periods'
 ],
+
+'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring'],
+
+'pregnancy' : ['pregnant','pregnate','childbirth'],
+
+'pediatric symptoms' : ['kid problems','pediatrics','child is unwell', 'child is facing issues', 'children health', 'child health'],
 
 'thyroid': [
     'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'goiter', 'thyroid dysfunction',
@@ -840,11 +850,7 @@ symptom_synonyms = {
 ],
 
 'sleepy': [
-'sleeping', 'sleepiness', 'drowsy', 'asleep', 'lethargic', 'groggy', 'sluggish', 'heavy-eyed', 'nodding off', 'fatigued', 'dozing',
-'half asleep', 'sleep-deprived', 'exhausted', 'yawning', 'slow-moving', 'low energy', 'ready for bed', 'snoozy', 'sleep-prone', 'droopy eyed', 'barely awake',
-'mentally tired', 'physically tired', 'overly relaxed', 'hard to stay awake', 'sleep craving', 'languid', 'wearied', 'brain fog',
-'bed ready', 'sleep drawn', 'lazy eyed', 'unfocused from tiredness', 'nodding head', 'drifting off', 'sleepy sensation', 'slumberous', 'soporific', 'somnolent',
-'half-awake', 'daytime sleepiness', 'overwhelming fatigue', 'rest-seeking', 'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
+'sleepy'
 ],
 
 'eye weakness': [
@@ -886,7 +892,7 @@ symptom_synonyms = {
     'waist stiffness and pain', 'burning sensation in waist', 'pinching pain in waist',
     'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
     'pain when walking from waist', 'pain from waist inflammation',
-    'pain after running affecting waist',  'pain in back near waist', 'waist region pain'
+    'pain after running affecting waist',  'pain in back near waist', 'waist region pain', 'pain in the side of the waist'
 ],
 
 'thigh pain': [
