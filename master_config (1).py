@@ -601,7 +601,7 @@ symptom_synonyms = {
 'blood in urine': [
     'hematuria', 'urinary blood', 'bloody urine', 'red urine', 'urine with blood', 'blood-tinged urine', 'blood in the urine stream', 'pink urine',
     'urinary tract bleeding', 'blood in the urinary tract', 'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder',
-    'bloody discharge in urine', 'urine with reddish tint', 'blood in the urine sample', 'bleeding from the kidneys', 'blood in the urine after urination',
+    'bloody discharge in urine', 'urine with reddish tint',
     'visible blood in urine', 'microscopic hematuria'
 ],
 
