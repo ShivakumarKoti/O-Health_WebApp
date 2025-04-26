@@ -8274,6 +8274,57 @@ symptom_followup_questions = {
       "risk_factor": True,
     },
   ],
+"kidney issue": [
+  {
+    "hi": "क्या आपके पेशाब में किसी प्रकार का बदलाव (जैसे रंग, गंध, झाग या मात्रा) हुआ है?",
+    "en": "Have you noticed any changes in your urine, such as color, odor, foaminess, or volume?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको पीठ के निचले हिस्से या पसलियों के नीचे दर्द होता है?",
+    "en": "Do you experience pain in your lower back or under your ribs?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको पेशाब करने में जलन या दर्द होता है?",
+    "en": "Do you feel a burning sensation or pain while urinating?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको उच्च रक्तचाप (ब्लड प्रेशर) की समस्या है?",
+    "en": "Do you have high blood pressure?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपके परिवार में किसी को किडनी की बीमारी रही है?",
+    "en": "Is there a family history of kidney disease?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपके शरीर में सूजन (जैसे टखनों, पैरों या चेहरे पर) आती है?",
+    "en": "Do you experience swelling in your body, such as in your ankles, feet, or face?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको मधुमेह (डायबिटीज) है या रहा है?",
+    "en": "Do you have or have had diabetes?",
+    "category": "kidney issue",
+    "symptom": "kidney issue",
+    "risk_factor": True,
+  },
+],
 
 }
 
