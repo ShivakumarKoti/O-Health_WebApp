@@ -766,7 +766,7 @@ symptom_synonyms = {
     'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge','female issue','female issues', 'irregular periods'
 ],
 
-'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring'],
+'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
 
 'pregnancy' : ['pregnant','pregnate','childbirth'],
 
