@@ -1025,7 +1025,7 @@ symptom_synonyms = {
 'kidney issue': [
     'kidney disease', 'acute kidney injury', 'kidney stones', 'renal failure', 'nephritis', 'glomerulonephritis',
     'pyelonephritis', 'urinary tract infection', 'kidney infection', 'hydronephrosis', 'protein in urine', 
-    'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'uremia', 'edema from kidney', 'nephropathy'
+    'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
 
    }
