@@ -593,16 +593,16 @@ symptom_synonyms = {
     'whistling in the ear', 'high-pitched sound', 'low-pitched ear sound', 'phantom sounds', 'ear sensation', 'auditory disturbance'
 ],
 
-'dark urine': [
+'urine issues': [
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
-    'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color'
+    'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
 ],
 
 'blood in urine': [
     'hematuria', 'urinary blood', 'bloody urine', 'red urine', 'urine with blood', 'blood-tinged urine', 'blood in the urine stream', 'pink urine',
-    'urinary tract bleeding', 'blood in the urinary tract', 'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder',
-    'bloody discharge in urine', 'urine with reddish tint',
+    'urinary tract bleeding', 'blood in the urinary tract', 'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood',
+    'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
     'visible blood in urine', 'microscopic hematuria'
 ],
 
@@ -892,7 +892,7 @@ symptom_synonyms = {
     'pain in waist and lower back', 'pain from herniated disc near waist', 'pain after prolonged sitting',
     'waist stiffness and pain', 'burning sensation in waist', 'pinching pain in waist',
     'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
-    'pain when walking from waist', 'pain from waist inflammation',
+    'pain when walking from waist', 'pain from waist inflammation','pain in waists',
     'pain after running affecting waist',  'pain in back near waist', 'waist region pain', 'pain in the side of the waist'
 ],
 
