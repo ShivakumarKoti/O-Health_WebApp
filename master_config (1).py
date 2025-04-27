@@ -244,10 +244,10 @@ symptom_synonyms = {
     'back pain': [
         'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back',  
         'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache from lifting',
-        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 'back pain after exercise',
-        'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine',
+        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 
+        'sharp stabbing pain in back', 'back tension', 'sore spine',
         'pinched nerve in back', 'back spasms', 'pain when bending', 'pain while standing up', 'pressure in upper back', 'burning pain in the back', 'pain in the sacral region',
-        'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
+        'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
         'common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold','light upper respiratory infection', 'mild sniffle bug',
