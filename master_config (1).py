@@ -151,7 +151,7 @@ symptom_synonyms = {
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
         'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
-        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 
+        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
         'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle'
     ],
@@ -827,7 +827,7 @@ symptom_synonyms = {
 ],
 
 'weight fluctuation': ['weight\'s been fluctuating', 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
- 'weight is different', 'weighing change', 'weight has changed'],
+ 'weight is different', 'weighing change', 'weight has changed','weight fluctuation'],
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
@@ -840,7 +840,7 @@ symptom_synonyms = {
 ],
 
 'itching': [
-'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itchy rash',
+'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itchy rash','itching',
 'burning itch', 'itching with redness', 'itching from dryness', 'irritated skin itch', 'tickling skin sensation',
 'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters',
 ],
