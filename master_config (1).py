@@ -1,5 +1,4 @@
-
-# ------------------------------------------------------------------ #
+ # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
 # Original symptom list with potential duplicates
@@ -9,14 +8,14 @@ symptom_list = [
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion', 
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision', 'ear pain',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating', 'neck pain',
-'gas', 'indigestion', 'acidity', 'mouth sore', 'nosebleed', 'ear ringing', 'urine issues', 'blood in urine', 'blood in stool', 'high blood pressure',
+'gas', 'indigestion', 'acidity', 'mouth sore', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye pain',  'eye discharge', 'ear discharge', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion', 'bone pain', 'wrist pain', 'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms',
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine',
 
 
 # weakness symtom
@@ -31,8 +30,8 @@ symptom_synonyms = {
   'back spasm': [
         'back is spasming', 'back spasms', 'back spasm', 'spinal contraction', 'muscle cramp in back', 'tight back muscles', 'back tightening', 'muscle spasm in lower back', 'spine spasming',
         'back muscle jerk', 'severe back cramp', 'spine knot', 'muscle twitch in back', 'spinal spasm', 'back stiffening', 'lower back stiffness', 'muscle contraction in back', 'back cramping',
-        'muscle twitching in spine', 'sharp back pain', 'sudden back pain', 'painful muscle contraction', 'sharp spasms in back', 'throbbing back pain', 'spine twinge', 'muscle jerking in back',
-        'painful back convulsion', 'tense back', 'tightness in back', 'cramping back muscles', 'pulled back muscle', 'twisting back pain', 'cramped spine', 'jerking back muscles', 'painful back tightening',
+        'muscle twitching in spine', 'sharp spasms in back', 'spine twinge', 'muscle jerking in back',
+        'painful back convulsion', 'tense back', 'tightness in back', 'cramping back muscles', 'pulled back muscle', 'cramped spine', 'jerking back muscles', 'painful back tightening',
         'spinal muscle strain', 'back tension', 'muscle knots in back', 'spine tightening pain', 'painful back stiffness', 'spinal muscles seizing', 'back spasm attack', 'muscle discomfort in back',
         'intense back strain', 'stiffened spine', 'spinal muscles hardening', 'back contorting', 'back stiffness attack', 'back muscle tension', 'back pain with spasms', 'spasm in the back',
         'back locked up','back clenched up'
@@ -134,7 +133,7 @@ symptom_synonyms = {
 
     'shortness of breath': [
         'Shortness of breath', 'breathlessness', 'difficulty breathing', 'feeling air hunger',  'shallow breathing', 'gasping for air',
-        'labored breathing', 'struggling to breathe', 'tightness in chest while inhaling', 'feeling suffocated', 'cannot catch my breath', 'panting heavily', 'air feeling thin',
+        'labored breathing', 'struggling to breathe', 'feeling suffocated', 'cannot catch my breath', 'panting heavily', 'air feeling thin',
         'lungs working overtime', 'chest feels restricted', 'fighting for each breath', 'difficulty in breathing', 'strained respiration', 'feeling smothered', 'desperate for oxygen',
         'winded easily', 'constant puffing', 'breathing feels blocked', 'inhaling with effort', 'forced breathing', 'breathless', 'sensation of drowning in open air',
         'chest heaviness on breathing', 'incomplete lung expansion', 'inadequate airflow', 'lungs not filling properly', 'needing to breathe harder', 'stuck in half-breath',
@@ -152,7 +151,7 @@ symptom_synonyms = {
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
         'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
-        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles',
+        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
         'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle'
     ],
@@ -244,10 +243,11 @@ symptom_synonyms = {
     'back pain': [
         'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back',  
         'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache from lifting',
-        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 
-        'sharp stabbing pain in back', 'back tension', 'sore spine',
+        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 'back pain after exercise',
+        'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine','stiffness in my back',
         'pinched nerve in back', 'back spasms', 'pain when bending', 'pain while standing up', 'pressure in upper back', 'burning pain in the back', 'pain in the sacral region',
-        'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
+        'sharp back pain', 'sudden back pain','twisting back pain', 'throbbing back pain', 'stiffness in back',
+        'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
         'common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold','light upper respiratory infection', 'mild sniffle bug',
@@ -330,7 +330,7 @@ symptom_synonyms = {
         'chest heaviness', 'pain in the breastbone', 'pain radiating from chest',  'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
         'sharp stabbing pain in chest', 'chest tightness', 'pain under the sternum', 'pain when breathing deeply', 'feeling of chest pressure', 'pain from pulmonary issues', 'heart-related chest pain',
         'sharp pain in the breastbone', 'radiating chest discomfort', 'pain when moving', 'pain from costochondritis', 'pain from muscle strain in chest', 'deep chest discomfort', 
-        'dull aching chest pain', 'pain in the upper left chest', 'pain when lying down', 'sore chest', 
+        'dull aching chest pain', 'pain in the upper left chest', 'pain when lying down', 'sore chest', 'tightness in my chest',
         'pain in the center of the chest', 'pain from chest cold', 'pain in the chest while breathing', 'sore chest area', 'pain in the left side of the chest', 'pain from coughing', 'pain from deep breathing'
     ],
 
@@ -597,11 +597,13 @@ symptom_synonyms = {
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
+  'bloody urine', 'red urine', 'urine with blood', 'blood-tinged urine', 'blood in the urine stream', 'pink urine',
+    'urinary tract bleeding', 'blood in the urinary tract'
 ],
 
 'blood in urine': [
-    'hematuria', 'urinary blood', 'bloody urine', 'red urine', 'urine with blood', 'blood-tinged urine', 'blood in the urine stream', 'pink urine',
-    'urinary tract bleeding', 'blood in the urinary tract', 'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood',
+    'hematuria', 'urinary blood', 'blood in urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 'burning while passing the urine',
+   'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood',
     'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
     'visible blood in urine', 'microscopic hematuria'
 ],
@@ -822,7 +824,7 @@ symptom_synonyms = {
 'weight gain': [
 'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase',
 'weight fluctuation', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
-'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up'
+'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating'
 ],
 
 'skin burning': [
@@ -903,7 +905,7 @@ symptom_synonyms = {
     'pain from pulled thigh muscle', 'pain from thigh strain', 'pain from hamstring injury',
     'pain from quadriceps strain', 
     'cramping in the thigh', 'pain from thigh overuse', 'sore thigh', 'tightness in thigh',
-    'pain radiating to thigh',
+    'pain radiating to thigh', 'thigh muscle contraction',
     'pain after leg workout', 'pain from nerve compression in thigh', 'deep thigh pain',
     'muscle soreness in thigh', 'pain after stretching thigh', 'aching in thigh area',
     'pain in thigh after injury', 'pain from thigh bruise', 'pain in thigh after standing long',
@@ -927,7 +929,7 @@ symptom_synonyms = {
     'pain from elbow strain', 
     'elbow pain during lifting', 'pain in elbow when twisting', 'pain from overuse of elbow',
     'tingling in elbow with pain', 'elbow pain from repetitive motion', 'elbow pain from arthritis',
-    'pain around the elbow', 'elbow muscle pain', 'elbow pain from tendinitis',
+    'pain around the elbow', 'elbow pain from tendinitis',
     'pain from bursitis in elbow', 
     'elbow pain after throwing', 'radiating pain from elbow to forearm', 
     'pain behind the elbow', 'pain on top of the elbow', 'pain under the elbow',
