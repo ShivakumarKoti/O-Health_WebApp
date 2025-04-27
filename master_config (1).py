@@ -15,7 +15,7 @@ symptom_list = [
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine',
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','weight fluctuation',
 
 
 # weakness symtom
@@ -93,7 +93,7 @@ symptom_synonyms = {
     ],
     'stomach pain': [
         'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 
-        'sharp stomach pain', 'stomach tenderness', 'sharp abdominal cramps', 'stomach upset', 'abdominal tenderness', 'intestinal bloating', 'tummy pain', 'swollen belly',
+        'sharp stomach pain', 'stomach tenderness', 'sharp abdominal cramps', 'abdominal tenderness', 'intestinal bloating', 'tummy pain', 'swollen belly',
         'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 'nausea and stomach ache',
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'sharp abdominal pain', 'dull abdominal pain',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'discomfort after meals',
@@ -118,7 +118,7 @@ symptom_synonyms = {
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
         'uneasy stomach', 'upset belly', 'dizzy stomach', 'intense queasiness', 'morning sickness feeling',
         'stomach discomfort', 'stomach churn', 'constant nausea', 'puking feeling', 'feeling like you could throw up',
-        'stomach upset with nausea', 'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease',
+        'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
     'dizziness': [
@@ -209,7 +209,7 @@ symptom_synonyms = {
 
     'joint pain': [
         'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
-        'joint irritation', 'musculoskeletal pain', 'painful joints', 'joint stiffness', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
+        'joint irritation', 'musculoskeletal pain', 'painful joints', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
         'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints',
         'joint tenderness', 'joint soreness from strain', 'arthralgia', 'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'weakening joint flexibility',
         'muscle and joint discomfort', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
@@ -221,10 +221,10 @@ symptom_synonyms = {
         'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements',
         'diarrheal episode', 'loose stool rush', 'pale watery stools', 'intestinal upset', 'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
         'constantly running to the bathroom', 'liquid-filled intestines', 'intense gastrointestinal upset', 'abnormally frequent bowel movements', 'severe bowel looseness', 'bowel irregularity',
-        'liquid stools'
+        'liquid stools', 'stomach upset'
     ],
     'vomiting': [
-        'throwing up', 'puking', 'stomach upset', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach',
+        'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach',
         'gagging', 'expelling stomach contents', 'stomach expulsion', 'upchucking', 'spitting up', 'retching reflex',
         'forceful expulsion of food', 'involuntary stomach release', 'emetic response', 'feeling of needing to vomit', 'gag reflex triggering', 
         'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
@@ -790,7 +790,7 @@ symptom_synonyms = {
 ],
 
 'vomiting': [
-'food throwing up', 'puking', 'stomach upset', 'retching', 'nauseated vomiting', 'projectile vomiting', 'forceful expulsion', 'stomach evacuation',
+'food throwing up', 'puking', 'retching', 'nauseated vomiting', 'projectile vomiting', 'forceful expulsion', 'stomach evacuation',
 'regurgitation', 'gag reflex', 'vomit episode', 'bilious vomiting', 'dry heaving', 'stomach upheaval', 'continuous vomiting', 'acidic vomit', 'vomiting bile',
 'upset stomach leading to vomiting', 'cyclic vomiting', 'food rejection', 'nausea-induced vomiting', 'vomiting spells', 'recurrent vomiting', 'violent vomiting',
 'vomiting after eating', 'motion sickness vomiting', 'morning sickness vomiting', 'dehydration from vomiting', 'vomiting blood', 'gastrointestinal vomiting',
@@ -822,10 +822,12 @@ symptom_synonyms = {
 ],
 
 'weight gain': [
-'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase',
-'weight fluctuation', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
+'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating'
 ],
+
+'weight fluctuation': ['weight\'s been fluctuating', 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
+ 'weight is different', 'weighing change', 'weight has changed'],
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
@@ -2394,6 +2396,40 @@ symptom_followup_questions = {
       "symptom": "depression",
       "risk_factor": False,    },
   ],
+
+   "weight fluctuation": [
+{
+   "hi": "क्या आपको वजन तेजी से बढ़ रहा है?",
+      "en": "Are you gaining weight rapidly?",
+      "category": "rapid_weight_gain",
+      "symptom": "weight gain",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपको थकान महसूस हो रही है?",
+      "en": "Are you feeling fatigued due to weight fluctuation?",
+      "category": "fatigue_with_weight_gain",
+      "symptom": "fatigue",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपकी त्वचा पर कोई परिवर्तन आ रहा है?",
+      "en": "Are there any changes in your skin due to weight fluctuation?",
+      "category": "skin_changes_with_weight_gain",
+      "symptom": "skin changes",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपको किसी विशेष हिस्से में दर्द हो रहा है?",
+      "en": "Are you experiencing pain in any specific area due to weight fluctuation?",
+      "category": "localized_pain_with_weight_gain",
+      "symptom": None,
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपका मूड भी प्रभावित हो रहा है?",
+      "en": "Is your mood being affected along with weight fluctuation?",
+      "category": "mood_changes_with_weight_gain",
+      "symptom": "depression",
+      "risk_factor": False,    },
+
+],
 
   "hair loss": [
     {
