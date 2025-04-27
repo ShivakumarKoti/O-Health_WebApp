@@ -72,7 +72,7 @@ symptom_synonyms = {
         'molten interior heat', 'near boiling point', 'incapacitating heat', 'relentless feverishness', 'sizzling body temp', 'flaming sensation', 'constant burning feeling', 'heat wave inside me', 'sweating due to internal heat',
         'red-hot core', 'smoldering embers of warmth', 'furnace-like core', 'pulsating heat', 'unremitting temperature rise', 'searing body condition', 'fire coursing through veins', 'endlessly hot', 'elevated reading on the thermometer',
         'no relief from heat', 'intense internal burning', 'volcanic warmth', 'torched from inside', 'superheated body', 'radical temperature spike', 'roasting sensation', 'tropical internal climate', 'heat-induced misery',
-        'stoked internal fires', 'hothouse conditions inside', 'stifling fever fire', 'blazing internal inferno', 'relentless temperature climb', 'fever wave'
+        'stoked internal fires', 'hothouse conditions inside', 'stifling fever fire', 'blazing internal inferno', 'relentless temperature climb', 'fever wave', 'bookar', 'booker','bukhar','bokhar'
     ],
     'cough': [
         'Persistent cough', 'hacking cough', 'dry cough', 'wet cough', 'productive cough (with phlegm)', 'barking cough', 'non-productive cough', 'chronic cough',
@@ -773,7 +773,8 @@ symptom_synonyms = {
 
 'pregnancy' : ['pregnant','pregnate','childbirth'],
 
-'pediatric symptoms' : ['kid problems','pediatrics','child is unwell', 'child is facing issues', 'children health', 'child health'],
+'pediatric symptoms' : ['kid problems','pediatrics','child is unwell', 'child is facing issues', 'children health', 'child health','feeding problems',
+                       'cry patterns', 'growth problems', 'refusal to breastfeed' , 'developmental delay', 'bowed legs', 'bedwetting'],
 
 'thyroid': [
     'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'goiter', 'thyroid dysfunction',
@@ -851,7 +852,7 @@ symptom_synonyms = {
 ],
 
 'jaundice': [
-'icterus', 'jaundiced appearance'
+'icterus', 'jaundiced appearance','john dice','johnlist','john list','john diskey','john dries'
 ],
 
 'sleepy': [
