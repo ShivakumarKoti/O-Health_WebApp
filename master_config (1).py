@@ -72,7 +72,7 @@ symptom_synonyms = {
         'molten interior heat', 'near boiling point', 'incapacitating heat', 'relentless feverishness', 'sizzling body temp', 'flaming sensation', 'constant burning feeling', 'heat wave inside me', 'sweating due to internal heat',
         'red-hot core', 'smoldering embers of warmth', 'furnace-like core', 'pulsating heat', 'unremitting temperature rise', 'searing body condition', 'fire coursing through veins', 'endlessly hot', 'elevated reading on the thermometer',
         'no relief from heat', 'intense internal burning', 'volcanic warmth', 'torched from inside', 'superheated body', 'radical temperature spike', 'roasting sensation', 'tropical internal climate', 'heat-induced misery',
-        'stoked internal fires', 'hothouse conditions inside', 'stifling fever fire', 'blazing internal inferno', 'relentless temperature climb', 'fever wave', 'bookar', 'booker','bukhar','bokhar'
+        'stoked internal fires', 'hothouse conditions inside', 'stifling fever fire', 'blazing internal inferno', 'relentless temperature climb', 'fever wave', 'bookar', 'booker','bukhar','bokhar','ukar','ukhar'
     ],
     'cough': [
         'Persistent cough', 'hacking cough', 'dry cough', 'wet cough', 'productive cough (with phlegm)', 'barking cough', 'non-productive cough', 'chronic cough',
@@ -81,7 +81,7 @@ symptom_synonyms = {
         'repetitive cough bursts', 'phlegmy hacking', 'coughing', 'dry tickling cough', 'persistent throat tickle',
         'strangling cough', 'wheezing cough', 'loud barking cough', 'cracking cough', 'sputum-laden cough', 'cough with gagging', 'spasmodic cough', 'stubborn dry cough',
         'overwhelming coughing sensation', 'sharp, dry cough', 'cough with sharp throat pain', 'violent coughing fits', 
-        'chronic phlegm cough', 'intense wheezing cough', 'grating cough', 'wet chesty cough', 'gurgling cough'
+        'chronic phlegm cough', 'intense wheezing cough', 'grating cough', 'wet chesty cough', 'gurgling cough','khasi','kansi'
     ],
     'sore throat': [
         'scratchy throat', 'painful throat', 'burning throat', 'irritated throat', 'swollen throat', 'inflamed throat', 'throat discomfort', 'throat scratchiness',
@@ -116,13 +116,13 @@ symptom_synonyms = {
     'nausea': [
         'feeling nauseous', 'upset stomach', 'queasy', 'stomach turning', 'sick feeling', 'feeling like vomiting', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
-        'uneasy stomach', 'upset belly', 'dizzy stomach', 'intense queasiness', 'morning sickness feeling',
+        'uneasy stomach', 'upset belly', 'intense queasiness', 'morning sickness feeling',
         'stomach discomfort', 'stomach churn', 'constant nausea', 'puking feeling', 'feeling like you could throw up',
         'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
     'dizziness': [
-        'Lightheadedness', 'woozy sensation', 'spinning feeling', 'off-balance', 'unsteady', 'dizzy spells', 'giddy feeling', 'vertiginous sensation',
+        'Lightheadedness', 'woozy sensation', 'spinning feeling', 'off-balance', 'unsteady', 'giddy feeling', 'vertiginous sensation',
         'wobbly feeling', 'swaying in mind', 'head swimming', 'feeling as if room is turning', 'disoriented equilibrium', 'teetering sense', 'tipsy sensation without alcohol',
         'floating head', 'unstable ground feeling', 'swirling environment', 'sense of being on a boat', 'nauseating spin', 'loss of spatial orientation', 'drifting balance',
         'feeling like I might topple', 'wavy floor sensation', 'heady unsteadiness', 'murky equilibrium', 'airy head sensation', 'constant near-tip-over feeling', 'mental wobble',
@@ -625,7 +625,7 @@ symptom_synonyms = {
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
     'low diastolic pressure', 
     'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure',
-    'dizzy blood pressure', 'BP is low','low blood pressure'
+    'BP is low','low blood pressure'
 ],
 
 'excessive thirst': [
@@ -676,9 +676,9 @@ symptom_synonyms = {
 
 'fainting': [
     'syncope', 'passing out', 'loss of consciousness', 'blackout', 'going unconscious', 'faint', 'collapse', 'temporary unconsciousness',
-    'sudden fainting', 'faint spell', 'dizziness and fainting', 'dizzy spell', 'feeling lightheaded', 'near fainting', 'brief loss of consciousness',
+    'sudden fainting', 'faint spell', 'dizziness and fainting', 'feeling lightheaded', 'near fainting', 'brief loss of consciousness',
     'head rush', 'staggering', 'fainting episode', 'loss of awareness', 'unconsciousness', 'momentary blackout', 'unconscious',
-    'dizzy and lightheaded', 'feeling woozy'
+    'feeling woozy'
 ],
 
 'nervousness': [
@@ -1230,7 +1230,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको लगातार मतली महसूस हो रही है?",
       "en": "Are you experiencing constant nausea?",
       "category": "constant_nausea",
-      "symptom": "Constant nausea",
+      "symptom": "nausea",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको खाने के बाद मतली होती है?",
@@ -1303,7 +1303,7 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
-
+ 
   "dizziness": [
 
     {
