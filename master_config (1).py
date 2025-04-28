@@ -1344,12 +1344,6 @@ symptom_followup_questions = {
       "symptom": "Chills",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपने कोई दवा ली है?",
-      "en": "Have you taken any medication?",
-      "category": "medications",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपको सिरदर्द है?",
       "en": "Are you experiencing headaches?",
       "category": "headache",
