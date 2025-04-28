@@ -1258,6 +1258,52 @@ symptom_followup_questions = {
       "risk_factor": False,    },
 
   ],
+
+ "congestion": [
+  {
+    "hi": "क्या आपकी नाक में दबाव या जकड़न महसूस हो रही है?",
+    "en": "Do you feel pressure or tightness in your nasal passages?",
+    "category": "nasal_pressure",
+    "symptom": "Nasal pressure or tightness",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी नाक बह रही है?",
+    "en": "Do you have a runny nose?",
+    "category": "runny_nose",
+    "symptom": "Runny nose",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी आवाज़ भारी लग रही है?",
+    "en": "Does your voice sound congested or muffled?",
+    "category": "voice_congestion",
+    "symptom": "Voice congestion",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी नाक से बदबू आ रही है या गंध नहीं आ रही?",
+    "en": "Are you experiencing a bad smell or loss of smell through your nose?",
+    "category": "loss_of_smell",
+    "symptom": "Loss or change in smell",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको सुबह उठने पर नाक में ज्यादा जकड़न महसूस होती है?",
+    "en": "Do you feel more nasal congestion in the mornings?",
+    "category": "morning_congestion",
+    "symptom": "Morning nasal congestion",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको गले में खराश है साथ ही नाक बंद है?",
+    "en": "Do you have a sore throat along with nasal congestion?",
+    "category": "sore_throat_congestion",
+    "symptom": "Sore throat with congestion",
+    "risk_factor": False,
+  },
+],
+
   "dizziness": [
 
     {
