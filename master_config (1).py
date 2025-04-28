@@ -802,7 +802,7 @@ symptom_synonyms = {
 
 'hearing loss': [
 'loss of hearing', 'partial hearing loss', 'complete hearing loss', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability',
-'hearing impairment', 
+'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low',
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
 'unilateral hearing loss', 'bilateral hearing loss', 'gradual hearing loss', 'sudden hearing loss', 'ear infection-related hearing loss', 'fluid in ear causing hearing loss',
