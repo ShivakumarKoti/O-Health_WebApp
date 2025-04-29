@@ -846,7 +846,7 @@ symptom_synonyms = {
 
 'injury': [
 'injured', 'wound', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury',
-'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries'
+'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries','injure'
 ],
 
 'jaundice': [
