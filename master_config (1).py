@@ -201,7 +201,7 @@ symptom_synonyms = {
     ],
   'neck pain': [
     'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
-    'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 
+    'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 'neckpain',
     'pain at the base of the skull', 'upper spine pain', 'neck injury pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
     'burning sensation in neck', 'neck inflammation', 'neck tenderness', 'cervical spine discomfort', 'pain when turning head', 'pain along the side of neck', 'pain in back of neck', 'stabbing neck pain',
     'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck'
@@ -246,7 +246,7 @@ symptom_synonyms = {
         'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 'back pain after exercise',
         'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine','stiffness in my back',
         'pinched nerve in back', 'back spasms', 'pain when bending', 'pain while standing up', 'pressure in upper back', 'burning pain in the back', 'pain in the sacral region',
-        'sharp back pain', 'sudden back pain','twisting back pain', 'throbbing back pain', 'stiffness in back',
+        'sharp back pain', 'sudden back pain','twisting back pain', 'throbbing back pain', 'stiffness in back','backpain',
         'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
@@ -262,7 +262,7 @@ symptom_synonyms = {
         'sweat running down temples', 'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
     ],
     'swelling': [
-        'swollen area', 'edema', 'swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness',
+        'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness',
         'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swelling due to injury', 'swollen belly',
         'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
         'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes',
@@ -323,7 +323,7 @@ symptom_synonyms = {
         'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'dull tooth pain',
         'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort',
         'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'severe tooth pain', 'pain in front teeth', 'teeth knocked out'
+        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'severe tooth pain', 'pain in front teeth', 'teeth knocked out','tooth knocked out','tooth issue','teeth issue'
     ],
     'chest pain': [
         'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'sharp chest pain', 'tight chest feeling', 'aching chest',
@@ -500,14 +500,14 @@ symptom_synonyms = {
     'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight',
-    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight'
+    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss'
 ],
 
 'hair loss': [
     'alopecia', 'balding', 'thinning hair', 'hair thinning', 'hair shedding', 'hair fall', 'scalp hair loss', 'bald spots', 'receding hairline',
     'hairline recession', 'hair breakage', 'excessive hair loss', 'temporary hair loss', 'pattern baldness', 'male pattern baldness', 'female pattern baldness',
     'androgenic alopecia', 'patchy hair loss', 'diffuse hair loss', 'hair loss due to stress', 'postpartum hair loss', 'age-related hair loss', 'genetic hair loss',
-    'hair fall disorder', 'alopecia areata', 'hair loss condition', 'scalp thinning', 'hair loss treatment'
+    'hair fall disorder', 'alopecia areata', 'hair loss condition', 'scalp thinning', 'hair loss treatment','hairloss'
 ],
 
 'blurred vision': [
