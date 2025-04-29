@@ -479,7 +479,7 @@ symptom_synonyms = {
 'depression': [
     'sadness', 'melancholy', 'despair', 'low mood', 'dismay', 'hopelessness', 'discouragement', 'despondency', 'blues', 'dejectedness',
     'feeling down', 'feeling hopeless', 'loss of interest', 'unhappiness', 'mental exhaustion', 'loss of joy', 'major depressive disorder',
-    'depressed', 'depressive episode', 'anhedonia', 'negative mood', 'downheartedness'
+    'depressed', 'depressive episode', 'anhedonia', 'negative mood', 'downheartedness', 'so sad'
 ],
 
 'cancer': [
@@ -504,7 +504,7 @@ symptom_synonyms = {
 ],
 
 'hair loss': [
-    'alopecia', 'balding', 'thinning hair', 'hair thinning', 'hair shedding', 'hair fall', 'scalp hair loss', 'bald spots', 'receding hairline',
+    'alopecia', 'balding', 'thinning hair', 'hair thinning', 'hair shedding', 'hair fall', 'scalp hair loss', 'bald spots', 'receding hairline', 'loosened hair roots',
     'hairline recession', 'hair breakage', 'excessive hair loss', 'temporary hair loss', 'pattern baldness', 'male pattern baldness', 'female pattern baldness',
     'androgenic alopecia', 'patchy hair loss', 'diffuse hair loss', 'hair loss due to stress', 'postpartum hair loss', 'age-related hair loss', 'genetic hair loss',
     'hair fall disorder', 'alopecia areata', 'hair loss condition', 'scalp thinning', 'hair loss treatment','hairloss'
