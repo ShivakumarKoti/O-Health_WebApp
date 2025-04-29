@@ -288,7 +288,7 @@ symptom_synonyms = {
         'irritation in the eye', 'burning sensation in the eye', 'eye strain', 'pressure in the eye', 'throbbing in the eye',
         'sensitive eyes', 'eye tenderness', 'aching in the eye', 'eye inflammation', 'pulsing pain in the eye', 'intense eye discomfort', 'distorted vision from pain', 'foreign body sensation in the eye',
         'sharp eye ache', 'vision-related pain', 'severe eye pain', 'sharp stabbing pain in the eye', 'pain in the eyeball', 'tired eye pain', 'swollen eye discomfort', 'throbbing behind the eyes',
-        'pain from light sensitivity', 'pain after reading', 'pain when blinking', 'gritty feeling in the eyes', 'intense eye pressure', 'pain around the eyelids', 'blurry vision with pain', 'puffy eyes with pain',
+        'pain from light sensitivity', 'pain after reading', 'pain when blinking', 'gritty feeling in the eyes', 'intense eye pressure', 'pain around the eyelids', 'puffy eyes with pain',
         'pain near the cornea', 'stinging pain in the eye', 'pain with redness in the eye', 'ocular discomfort', 'persistent eye pain', 'painful feeling when moving eyes', 'pressure sensation in the eyes',
         'pain from eye strain', 'pain with dry eyes', 'eye irritation', 'eye swelling', 'eye tearing','pain in my eye','pain in my eyes'
     ],
@@ -416,7 +416,7 @@ symptom_synonyms = {
         'memory wires disconnected', 'stuttering recollection attempts', 'defragmented mental records', 'shaky mental camera', 'fading mental impressions', 'mind like a sieve', 'losing info instantly',
         'rattled mental library', 'concept slip-through', 'flickering data in mind', 'barren mental shelves', 'no retrieval of recent facts', 'thinking it’s on the tip of my tongue but never surfacing',
         'losing track of recent conversations', 'difficulty holding new info', 'memory short-circuits frequently', 'mental vacancy', 'ephemeral recollections', 'passing mental clouds with no retention',
-        'drifting away from details', 'no anchor to past events'
+        'drifting away from details', 'no anchor to past events','do not remember anything'
     ],
   'hallucination': [
     'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination',
@@ -514,7 +514,7 @@ symptom_synonyms = {
     'vision impairment', 'unclear vision', 'fuzzy vision', 'distorted vision', 'foggy vision', 'hazy vision', 'blurry eyesight', 'impaired vision', 'cannot see properly',
     'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance',
     'unclear eyesight', 'visual impairment', 'blurry sight', 'sight distortion', 'vision problems', 'temporary blurred vision', 'chronic blurred vision',
-    'blurry perception'
+    'blurry perception', 'not well visible'
 ],
 
 'numbness': [
