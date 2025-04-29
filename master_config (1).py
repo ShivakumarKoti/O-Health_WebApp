@@ -428,7 +428,7 @@ symptom_synonyms = {
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
     'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
-    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 
+    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less',
     'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire'
 ],
 
@@ -966,8 +966,8 @@ symptom_synonyms = {
     'frequent hunger', 'intense hunger', 'never feeling full', 'always hungry', 'feeling hungrier than usual',
     'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite',
     'overeating due to hunger', 'persistent hunger', 'craving food all the time', 'hungry shortly after eating',
-    'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat',
-    'eating more than usual', 'feeling hungry right after meals', 'unable to satisfy hunger',
+    'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat', 
+    'eating more than usual', 'feeling hungry', 'unable to satisfy hunger',
     'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
     'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
     'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
