@@ -2644,7 +2644,7 @@ symptom_followup_questions = {
       "hi": "क्या गैस के साथ आपका मूड भी प्रभावित हो रहा है?",
       "en": "Is your mood being affected along with gas?",
       "category": "mood_changes_with_gas",
-      "symptom": "depression",
+      "symptom": "mood changes",
       "risk_factor": False,    },
     {
       "hi": "क्या गैस के कारण आपकी नींद प्रभावित हो रही है?",
@@ -2929,7 +2929,7 @@ symptom_followup_questions = {
       "hi": "क्या भूख में वृद्धि के साथ आपका मूड भी प्रभावित हो रहा है?",
       "en": "Is your mood being affected along with increased appetite?",
       "category": "mood_changes_with_increased_appetite",
-      "symptom": "depression",
+      "symptom": "mood changes",
       "risk_factor": False,    },
   ],
 
@@ -3649,7 +3649,7 @@ symptom_followup_questions = {
       "hi": "क्या गंध में बदलाव के साथ आपके मूड में भी कोई परिवर्तन आया है?",
       "en": "Has your mood changed along with smell changes?",
       "category": "mood_changes_with_smell_changes",
-      "symptom": "depression",
+      "symptom": "mood changes",
       "risk_factor": False,    },
     {
       "hi": "क्या गंध में बदलाव के कारण आपको खाने में कोई समस्या हो रही है?",
