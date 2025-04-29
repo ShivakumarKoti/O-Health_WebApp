@@ -883,7 +883,7 @@ symptom_synonyms = {
 
 'pneumonia': ['lung infection','alveolar infection'],
 
-'sugar': ['sugars', 'glucose', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
+'sugar': ['sugars', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
 
   'waist pain': [
     'pain in the waist', 'waist discomfort', 'waist ache', 
