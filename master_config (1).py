@@ -48,8 +48,8 @@ symptom_synonyms = {
     ],
     'migraine': [
         'intense one-sided headache', 'migraine aura', 'pulsating pain in head', 'photophobia-associated headache', 'debilitating headache', 'migraine attack', 'searing half-skull ache', 'throbbing temple migraine',
-        'nausea-laced head pain', 'light-sensitive head torture', 'migraine episode', 'crippling one-sided ache', 'sharp lancing head pain', 'skull-splitting half-side ache', 'throbbing migraine pulse', 'debilitating cranial assault',
-        'severe sensory headache', 'disabling one-sided throb', 'catastrophic temple pounding', 'migraine-induced nausea', 'half-head agony', 'sharp lancing head pain', 'stabbing head sensation', 'pulsating migraine',
+        'light-sensitive head torture', 'migraine episode', 'crippling one-sided ache', 'sharp lancing head pain', 'skull-splitting half-side ache', 'throbbing migraine pulse', 'debilitating cranial assault',
+        'severe sensory headache', 'disabling one-sided throb', 'catastrophic temple pounding',  'half-head agony', 'sharp lancing head pain', 'stabbing head sensation', 'pulsating migraine',
         'tension-triggered migraine', 'blinding headache', 'brain-splitting side ache', 'overwhelming migraine pressure', 'incapacitating headache event', 'shattering unilateral head pain', 'sensitive to slightest sound',
         'migraine meltdown', 'severe sensitivity headache', 'hammering half-head ache', 'aura shimmer leading to pain', 'throbbing unilateral agony', 'needle-like head stab', 'crushing half-skull sensation',
         'crippling light-triggered pain', 'tidal wave of head torment', 'incapacitating halo of pain', 'ear-to-temple throbbing on one side'
@@ -94,15 +94,15 @@ symptom_synonyms = {
     'stomach pain': [
         'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 
         'sharp stomach pain', 'stomach tenderness', 'sharp abdominal cramps', 'abdominal tenderness', 'intestinal bloating', 'tummy pain', 'swollen belly',
-        'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 'nausea and stomach ache',
+        'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'sharp abdominal pain', 'dull abdominal pain',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'discomfort after meals',
         'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'feeling of indigestion', 'pain around stomach area', 'belly pain', 'pain in the abdomen', 'stomach discomfort',
         'dull abdominal pain', 'cramping in the abdomen', 
-        'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 'nauseating abdominal pain',
+        'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
         'pain from gas buildup', 'pressure in the stomach', 'pain from constipation', 'distended abdomen', 'pain from ulcers', 'pain from bloating', 'pain from food intolerance',
         'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'pain from diarrhea', 'stomach flu pain', 'pain in the lower abdomen',
-        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'nausea with stomach pain', 'abdominal swelling with pain', 
+        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'abdominal swelling with pain', 
         'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
     ],
     'weakness': [
@@ -238,7 +238,7 @@ symptom_synonyms = {
         'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'pain in ear canal', 'ear ache when swallowing',
         'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
         'tender ear lobes', 'painful eardrum', 'painful earful feeling', 'pounding ear pain', 'sharp stabbing ear ache', 'swollen ear canal', 'eardrum sensitivity', 'sharp pressure sensation in ear',
-        'soreness in ear cavity', 'ear with pain', 'throbbing sensation in ear', 'ear ache during sleep', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
+        'soreness in ear cavity', 'ear with pain', 'throbbing sensation in ear', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
     ],
     'back pain': [
         'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back',  
@@ -315,7 +315,7 @@ symptom_synonyms = {
         'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the ear and jaw', 'pain from dental issues', 'pain with jaw movement',
         'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw pain from stress', 'jaw swelling', 'pain when yawning',
         'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'pain from wisdom teeth', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
-        'pain after jaw surgery', 'pain during biting', 'jaw discomfort while sleeping'
+        'pain after jaw surgery', 'pain during biting'
     ],
     'tooth pain': [
         'toothache', 'dental pain', 'pain in the tooth', 'sharp tooth pain', 'throbbing tooth pain', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
@@ -649,7 +649,7 @@ symptom_synonyms = {
 'eye discharge': [
     'ocular discharge', 'eye mucus', 'eye secretion', 'eye crust', 'sticky eyes', 'eye pus', 'yellow eye discharge', 'clear eye discharge', 'water coming out of eyes',
     'green eye discharge', 'gunky eyes', 'eye drainage', 'teary eyes', 'eye secretion buildup', 'crusty eyes', 'eye fluid', 'excessive tear production',
-    'morning eye crust', 'sticky eyelids', 'eye infection discharge', 'pus from the eye', 'watery eye discharge', 'eye discharge after sleep',
+    'morning eye crust', 'sticky eyelids', 'eye infection discharge', 'pus from the eye', 'watery eye discharge',
     'discharge from the tear duct', 'rheum in the eye','something coming out of eyes'
 ],
 
@@ -714,12 +714,12 @@ symptom_synonyms = {
 
 'exhaustion': [
     'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
-    'overwhelming tiredness', 'complete fatigue', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 'chronic fatigue',
+    'overwhelming tiredness', 'complete fatigue', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 
     'fatigued state', 'drowsiness', 'wearing out', 'energy depletion', 'fatigue syndrome', 'feeling drained', 'exhaustive tiredness', 'loss of energy',
-    'profound fatigue', 'fatigue and weakness', 'profound fatigue', 'fatigue and weakness',  'half asleep', 'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
+    'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
     'hard to stay awake', 'sleep craving', 'languid', 'wearied', 'brain fog',
-    'bed ready', 'sleep drawn', 'lazy eyed', 'unfocused from tiredness', 'nodding head', 'drifting off', 'sleepy sensation', 'slumberous', 'soporific', 'somnolent',
-    'half-awake', 'daytime sleepiness', 'overwhelming fatigue', 'rest-seeking', 'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
+    'bed ready', 'lazy eyed', 'unfocused from tiredness', 'nodding head', 'drifting off', 'slumberous', 'soporific', 'somnolent',
+    'rest-seeking', 'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
 ],
 
 'sprain': [
@@ -854,7 +854,7 @@ symptom_synonyms = {
 ],
 
 'sleepy': [
-'sleepy'
+'sleepy', 'falling asleep', 'fallen asleep'
 ],
 
 'eye weakness': [
