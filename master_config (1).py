@@ -124,9 +124,9 @@ symptom_synonyms = {
     'dizziness': [
         'Lightheadedness', 'woozy sensation', 'spinning feeling', 'off-balance', 'unsteady', 'giddy feeling', 'vertiginous sensation',
         'wobbly feeling', 'swaying in mind', 'head swimming', 'feeling as if room is turning', 'disoriented equilibrium', 'teetering sense', 'tipsy sensation without alcohol',
-        'floating head', 'unstable ground feeling', 'swirling environment', 'sense of being on a boat', 'nauseating spin', 'loss of spatial orientation', 'drifting balance',
+        'floating head', 'unstable ground feeling', 'swirling environment', 'sense of being on a boat', 'loss of spatial orientation', 'drifting balance',
         'feeling like I might topple', 'wavy floor sensation', 'heady unsteadiness', 'murky equilibrium', 'airy head sensation', 'constant near-tip-over feeling', 'mental wobble',
-        'feathery balance', 'gravity shifting under feet', 'rocking sensation', 'seasick feeling on land', 'fuzzy-headed instability', 'inner ear imbalance feeling',
+        'gravity shifting under feet', 'seasick feeling on land', 'fuzzy-headed instability', 
         'wavy-field-of-view sensation', 'lurching environment', 'faltering steadiness', 'delicately balanced but slipping', 'rubbery legs feeling', 'giddy swirl in head',
         'tilting world', 'swaying sensation', 'imbalance feeling', 'shaky equilibrium', 'spinning sensation', 'feeling off-kilter'
     ],
@@ -662,7 +662,7 @@ symptom_synonyms = {
 ],
 
 'balance problem': [
-    'vertigo', 'loss of balance', 'balance disorder', 'impaired balance', 'unsteady gait', 'lack of coordination', 'dizziness and unsteadiness',
+    'vertigo', 'loss of balance', 'balance disorder', 'impaired balance', 'unsteady gait', 'lack of coordination', 'unsteadiness',
     'balance difficulty', 'feeling of instability', 'spatial disorientation', 'postural imbalance', 'equilibrium disturbance', 'feeling off-balance',
     'gait imbalance', 'disequilibrium', 'vestibular dysfunction', 'balance issues', 'vertiginous symptoms', 'coordination problems', 'stumbling', 'feeling lightheaded'
 ],
@@ -791,13 +791,11 @@ symptom_synonyms = {
 ],
 
 'vomiting': [
-'food throwing up', 'puking', 'retching', 'nauseated vomiting', 'projectile vomiting', 'forceful expulsion', 'stomach evacuation',
+'food throwing up', 'puking', 'retching',  'projectile vomiting', 'forceful expulsion', 'stomach evacuation',
 'regurgitation', 'gag reflex', 'vomit episode', 'bilious vomiting', 'dry heaving', 'stomach upheaval', 'continuous vomiting', 'acidic vomit', 'vomiting bile',
-'upset stomach leading to vomiting', 'cyclic vomiting', 'food rejection', 'nausea-induced vomiting', 'vomiting spells', 'recurrent vomiting', 'violent vomiting',
-'vomiting after eating', 'motion sickness vomiting', 'morning sickness vomiting', 'dehydration from vomiting', 'vomiting blood', 'gastrointestinal vomiting',
-'digestive tract expulsion', 'vomiting sensation', 'persistent nausea', 'induced vomiting', 'uncontrollable vomiting', 'abdominal vomiting', 'stomach spasms causing vomiting',
-'vomiting reflex', 'vomiting from food poisoning', 'travel sickness vomiting', 'chronic vomiting episodes', 'sudden vomiting', 'intense vomiting', 'frequent retching',
-'vomiting with dizziness', 'vomiting due to illness', 'nervous vomiting', 'vomiting from indigestion', 'bitter vomit taste', 'post-vomit weakness', 'vomiting accompanied by sweating'
+'upset stomach leading to vomiting', 'cyclic vomiting', 'food rejection', 'vomit', 'recurrent vomiting', 'violent vomiting',
+'digestive tract expulsion', 'vomiting sensation', 
+'vomiting reflex', 'vomiting from food poisoning', 'travel sickness vomiting', 'chronic vomiting episodes', 'sudden vomiting', 'intense vomiting', 'frequent retching'
 ],
 
 'hearing loss': [
