@@ -676,8 +676,8 @@ symptom_synonyms = {
 
 'fainting': [
     'syncope', 'passing out', 'loss of consciousness', 'blackout', 'going unconscious', 'faint', 'collapse', 'temporary unconsciousness',
-    'sudden fainting', 'faint spell', 'dizziness and fainting', 'feeling lightheaded', 'near fainting', 'brief loss of consciousness',
-    'head rush', 'staggering', 'fainting episode', 'loss of awareness', 'unconsciousness', 'momentary blackout', 'unconscious',
+    'fainted','feeling lightheaded', 'brief loss of consciousness',
+    'head rush', 'staggering', 'loss of awareness', 'unconsciousness', 'momentary blackout', 'unconscious',
     'feeling woozy'
 ],
 
