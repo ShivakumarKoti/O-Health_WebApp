@@ -967,7 +967,7 @@ symptom_synonyms = {
     'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite',
     'overeating due to hunger', 'persistent hunger', 'craving food all the time', 'hungry shortly after eating',
     'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat', 
-    'eating more than usual', 'feeling hungry', 'unable to satisfy hunger',
+    'eating more than usual', 'feeling hungry', 'unable to satisfy hunger', 'eating more than I need to',
     'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
     'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
     'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
