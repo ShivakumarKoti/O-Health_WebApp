@@ -500,7 +500,7 @@ symptom_synonyms = {
     'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight',
-    'lost a lot of weight','lost weight','lost some weight','weighing less',
+    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight'
 ],
 
 'hair loss': [
@@ -822,7 +822,7 @@ symptom_synonyms = {
 
 'weight gain': [
 'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
-'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating'
+'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight'
 ],
 
 'weight fluctuation': ['weight\'s been fluctuating', 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
