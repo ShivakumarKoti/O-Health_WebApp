@@ -2667,7 +2667,7 @@ symptom_followup_questions = {
       "hi": "क्या सिकुड़न के साथ आपको दर्द भी हो रहा है?",
       "en": "Are you experiencing pain along with hiccups?",
       "category": "pain_with_hiccups",
-      "symptom": "chest pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सिकुड़न के दौरान सांस लेने में कठिनाई हो रही है?",
@@ -2751,7 +2751,7 @@ symptom_followup_questions = {
       "hi": "क्या मुंह के घाव खाने या पीने में दर्द पैदा करते हैं?",
       "en": "Do your mouth sores cause pain while eating or drinking?",
       "category": "pain_with_mouth_sores",
-      "symptom": "pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको मुंह के घावों से रक्तस्राव हो रहा है?",
@@ -2784,7 +2784,7 @@ symptom_followup_questions = {
       "hi": "क्या नाक से खून बहने के साथ दर्द भी हो रहा है?",
       "en": "Are you experiencing pain along with nosebleeds?",
       "category": "pain_with_nosebleeds",
-      "symptom": "chest pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या नाक से खून बहने का कोई विशेष कारण है?",
