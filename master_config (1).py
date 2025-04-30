@@ -80,7 +80,7 @@ symptom_synonyms = {
         'rattling cough', 'deep-chested cough', 'shallow annoying cough', 'tickling cough', 'lingering throat hack', 'spasm-like coughs', 'throaty expulsions',
         'repetitive cough bursts', 'phlegmy hacking', 'coughing', 'dry tickling cough', 'persistent throat tickle',
         'strangling cough', 'wheezing cough', 'loud barking cough', 'cracking cough', 'sputum-laden cough', 'cough with gagging', 'spasmodic cough', 'stubborn dry cough',
-        'overwhelming coughing sensation', 'sharp, dry cough', 'cough with sharp throat pain', 'violent coughing fits', 
+        'overwhelming coughing sensation', 'violent coughing fits', 
         'chronic phlegm cough', 'intense wheezing cough', 'grating cough', 'wet chesty cough', 'gurgling cough','khasi','kansi'
     ],
     'sore throat': [
@@ -89,7 +89,7 @@ symptom_synonyms = {
         'gritty throat', 'tender throat', 'raspy throat', 'dry throat', 'throat burning sensation', 'feeling of throat swelling', 'pain on swallowing', 'raw feeling in throat',
         'sore feeling when talking', 'throat soreness', 'painful swallowing', 'constant throat irritation', 'throat muscle soreness', 'tight feeling in throat',
         'throat dryness', 'itchy throat', 'burning sensation in throat', 'scratching feeling in throat', 'tenderness in throat', 'chronic throat discomfort', 'raspiness in voice',
-        'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'dry cough with sore throat', 'sharp throat pain'
+        'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness'
     ],
     'stomach pain': [
         'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 
@@ -302,19 +302,19 @@ symptom_synonyms = {
         'pain from sniffing'
     ],
     'throat pain': [
-        'sore throat', 'pain in the throat', 'scratchy throat', 'throat discomfort', 'painful swallowing', 'irritated throat', 'dry throat pain', 'burning sensation in the throat', 'throat tenderness',
-        'throat scratchiness', 'swollen throat', 'pain from tonsillitis', 'strep throat pain', 'pain from a cold', 'inflammation of the throat', 'sore throat with fever', 'pain in the tonsils',
-        'pain from acid reflux', 'hoarse throat', 'tight throat pain', 'painful voice box', 'pain in the larynx', 'pain with coughing', 'pain with dry mouth', 'pain with difficulty swallowing',
+        'pain in the throat', 'scratchy throat', 'throat discomfort', 'painful swallowing', 'irritated throat','burning sensation in the throat', 'throat tenderness',
+        'throat scratchiness', 'swollen throat', 'pain from tonsillitis','inflammation of the throat', 'pain in the tonsils',
+        'hoarse throat', 'painful voice box', 'pain in the larynx', 
         'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'pain from dry air', 'throat dryness', 'severe throat discomfort',
-        'pain after eating', 'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat', 'pain from sore mouth',
-        'stabbing throat pain', 'pain when swallowing food', 'burning throat pain'
+        'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat', 'pain from sore mouth',
+        'pain when swallowing food'
     ],
     'jaw pain': [
         'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
         'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain near the jawline',
-        'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the ear and jaw', 'pain from dental issues', 'pain with jaw movement',
+        'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the jaw', 'pain with jaw movement',
         'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw pain from stress', 'jaw swelling', 'pain when yawning',
-        'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'pain from wisdom teeth', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
+        'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
         'pain after jaw surgery', 'pain during biting'
     ],
     'tooth pain': [
