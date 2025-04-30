@@ -399,8 +399,8 @@ symptom_synonyms = {
     ],
     'leg pain': [
         'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs', 'pain during walk',
-        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking'
-        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking',
+        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking', 'leg becomes numb',
+        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking', 'legs become numb',
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
         'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'pain in the lower leg'
     ],
@@ -409,7 +409,7 @@ symptom_synonyms = {
         'unclear comprehension', 'befuddled mind', 'scrambled logic', 'perplexed state', 'hazy understanding', 'blurred mental picture', 'fuzzy reasoning', 'perplexity', 'baffled intellect',
         'uncertain grasp', 'foggy mental landscape', 'clouded judgment', 'unclear headspace', 'mixed-up thoughts', 'lack of mental clarity', 'distorted perspective', 'murky understanding',
         'minds in knots', 'head scrambled eggs feeling', 'no clear thread of thought', 'haphazard reasoning', 'bewildered stance', 'lost mental bearings', 'mental haze', 'unclear mental signals',
-        'vague cognitive process', 'mental static', 'mentally adrift', 'diluted focus', 'no sharpness in mind', 'blinking confusion', 'unsure mental footing', 'perplexed awareness',
+        'vague cognitive process', 'mental static', 'mentally adrift', 'diluted focus', 'no sharpness in mind', 'blinking confusion', 'unsure mental footing', 'perplexed awareness', 'legs become numb
         'reduced mental acuity', 'messy mental white noise'
     ],
     'hip pain': [
