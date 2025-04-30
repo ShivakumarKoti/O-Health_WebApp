@@ -331,7 +331,8 @@ symptom_synonyms = {
     'tooth broken from accident', 'tooth broken from impact', 'crumbling tooth', 'tooth worn down', 'weakened tooth', 'tooth chip', 'dental fracture',
     'minor tooth crack', 'severe tooth crack', 'cracked molar', 'hairline tooth fracture', 'vertical tooth fracture', 'tooth split vertically', 'tooth broken horizontally',
     'partial tooth break', 'tooth edge broken', 'tooth enamel chipped', 'tooth surface damaged', 'damaged dental work', 'broken back tooth', 'tooth structure loss'
-    'teeth knocked out','tooth knocked out', 'tooth is just broken', 'tooth broke off', 'teeth broken'
+    'teeth knocked out','tooth knocked out', 'tooth is just broken', 'tooth broke off', 'teeth broken','tooth knocked out','teeth knocked off','tooth is knocked out',
+     'teeth are knocked off','tooth knocked out', 'teeth knocked out'
  ],
  'tooth decay': [
     'dental decay', 'cavities', 'dental caries', 'rotten tooth', 'tooth rot', 'tooth cavity', 'carious tooth', 'decayed tooth', 'tooth erosion',
