@@ -15,7 +15,7 @@ symptom_list = [
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth',
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay',
 
 
 # weakness symtom
@@ -323,7 +323,7 @@ symptom_synonyms = {
         'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'dull tooth pain',
         'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort', 'tooth broken', 
         'teeth broken', 'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'tooth issue','teeth issue'
+        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth'
         
     ],
  'broken tooth': [
@@ -336,6 +336,15 @@ symptom_synonyms = {
     'partial tooth break', 'tooth edge broken', 'tooth enamel chipped', 'tooth surface damaged', 'damaged dental work', 'broken back tooth', 'tooth structure loss'
     'teeth knocked out','tooth knocked out', 'tooth is just broken', 'tooth broke off', 'teeth broken'
  ],
+ 'tooth decay': [
+    'dental decay', 'cavities', 'dental caries', 'rotten tooth', 'tooth rot', 'tooth cavity', 'carious tooth', 'decayed tooth', 'tooth erosion',
+    'dental cavity', 'tooth demineralization', 'decay in teeth', 'tooth surface decay', 'tooth infection from decay', 
+    'black spots on teeth', 'holes in teeth', 'soft tooth surface', 'tooth deterioration', 'tooth with decay', 'tooth damage from sugar',
+    'enamel decay', 'inner tooth decay', 'tooth discoloration from decay', 'tooth sensitivity due to decay', 'tooth weakened by decay',
+    'tooth enamel erosion', 'tooth lesion', 'tooth darkening', 'brown tooth spots', 'tooth decay from poor hygiene', 'decayed teeth',
+    'tooth caries', 'decaying molar', 'decaying premolar', 'decay in baby tooth', 'tooth plaque damage', 'acid erosion on teeth', 'teeth decay'
+],
+
 
     'chest pain': [
         'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'sharp chest pain', 'tight chest feeling', 'aching chest',
@@ -6238,6 +6247,82 @@ symptom_followup_questions = {
       "risk_factor": True,
     }
 ],
+ "broken tooth": [
+  {
+    "hi": "क्या आपके दांत में दरार, टूट-फूट, या चिप लगी हुई है?",
+    "en": "Do you have a crack, fracture, or chip in your tooth?",
+    "category": "broken tooth",
+    "symptom": "broken tooth",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आप चबाते समय दांत में दर्द या संवेदनशीलता महसूस कर रहे हैं?",
+    "en": "Do you feel pain or sensitivity in the tooth while chewing?",
+    "category": "broken tooth",
+    "symptom": "broken tooth",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपका टूटा हुआ दांत खाने, पीने या बोलने में परेशानी पैदा कर रहा है?",
+    "en": "Is the broken tooth causing difficulty while eating, drinking, or speaking?",
+    "category": "broken tooth",
+    "symptom": "broken tooth",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपने हाल ही में किसी दुर्घटना, गिरावट या कठोर चीज काटने के बाद दांत टूटने का अनुभव किया है?",
+    "en": "Did the tooth break after an accident, fall, or biting something hard?",
+    "category": "broken tooth",
+    "symptom": "broken tooth",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके पास पहले से दांत क्षय (कीड़ा लगना) या कमजोर दांतों का इतिहास है?",
+    "en": "Do you have a history of tooth decay or weakened teeth?",
+    "category": "broken tooth",
+    "symptom": "broken tooth",
+    "risk_factor": True,
+  },
+],
+ "tooth decay": [
+  {
+    "hi": "क्या आपके किसी दांत में काले धब्बे, गड्ढे या छेद दिखाई दे रहे हैं?",
+    "en": "Do you see black spots, pits, or holes in any of your teeth?",
+    "category": "tooth decay",
+    "symptom": "tooth decay",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको मीठे, गर्म या ठंडे खाद्य पदार्थों से दांत में संवेदनशीलता या दर्द होता है?",
+    "en": "Do you feel sensitivity or pain in your tooth when eating sweet, hot, or cold foods?",
+    "category": "tooth decay",
+    "symptom": "tooth decay",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके मुंह से दुर्गंध आती है या कोई खराब स्वाद बना रहता है?",
+    "en": "Do you experience bad breath or a persistent unpleasant taste in your mouth?",
+    "category": "tooth decay",
+    "symptom": "tooth decay",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके मसूड़े सूजे हुए हैं या उनमें से खून आता है?",
+    "en": "Are your gums swollen or do they bleed?",
+    "category": "tooth decay",
+    "symptom": "tooth decay",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आप नियमित रूप से मीठे खाद्य पदार्थ खाते हैं या दिन में कई बार स्नैक्स लेते हैं?",
+    "en": "Do you frequently eat sugary foods or snack multiple times a day?",
+    "category": "tooth decay",
+    "symptom": "tooth decay",
+    "risk_factor": True,
+  },
+],
+
+
 "fainting": [
     {
       "hi": "आपने आखिरी बार बेहोशी या बेहोशी के निकट अनुभव कब किया था?",
