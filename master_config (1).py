@@ -15,7 +15,7 @@ symptom_list = [
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay',
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice'
 
 
 # weakness symtom
@@ -124,7 +124,7 @@ symptom_synonyms = {
         'wobbly feeling', 'swaying in mind', 'head swimming', 'feeling as if room is turning', 'disoriented equilibrium', 'teetering sense', 'tipsy sensation without alcohol',
         'floating head', 'unstable ground feeling', 'swirling environment', 'sense of being on a boat', 'loss of spatial orientation', 'drifting balance',
         'feeling like I might topple', 'wavy floor sensation', 'heady unsteadiness', 'murky equilibrium', 'airy head sensation', 'constant near-tip-over feeling', 'mental wobble',
-        'gravity shifting under feet', 'seasick feeling on land', 'fuzzy-headed instability', 
+        'gravity shifting under feet', 'seasick feeling on land', 'fuzzy-headed instability', 'dizzy',
         'wavy-field-of-view sensation', 'lurching environment', 'faltering steadiness', 'delicately balanced but slipping', 'rubbery legs feeling', 'giddy swirl in head',
         'tilting world', 'swaying sensation', 'imbalance feeling', 'shaky equilibrium', 'spinning sensation', 'feeling off-kilter'
     ],
@@ -159,7 +159,7 @@ symptom_synonyms = {
         'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'can\'t sleep',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
-        'unable to fall asleep', 'not able to fall asleep'
+        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep'
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
@@ -208,7 +208,7 @@ symptom_synonyms = {
     'joint pain': [
         'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
         'joint irritation', 'musculoskeletal pain', 'painful joints', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
-        'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints',
+        'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints','joint pain',
         'joint tenderness', 'joint soreness from strain', 'arthralgia', 'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'weakening joint flexibility',
         'muscle and joint discomfort', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
     ],
@@ -261,7 +261,7 @@ symptom_synonyms = {
     ],
     'swelling': [
         'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness',
-        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly',
+        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly','swells',
         'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
         'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes','swelling',
         'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints','bruising'
@@ -482,7 +482,7 @@ symptom_synonyms = {
 
 'bleeding': [
     'blood loss', 'hemorrhage', 'hemorrhaging', 'bloodshed', 'wound bleeding', 'internal bleeding', 'external bleeding', 'bleeding from injury'
-    'spurting blood', 'bleeding wound', 'gushing blood'
+    'spurting blood', 'bleeding wound', 'gushing blood','bleeding'
 ],
 
 'irritation': [
@@ -532,7 +532,7 @@ symptom_synonyms = {
     'vision impairment', 'unclear vision', 'fuzzy vision', 'distorted vision', 'foggy vision', 'hazy vision', 'blurry eyesight', 'impaired vision', 'cannot see properly',
     'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance',
     'unclear eyesight', 'visual impairment', 'blurry sight', 'sight distortion', 'vision problems', 'temporary blurred vision', 'chronic blurred vision',
-    'blurry perception', 'not well visible'
+    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see'
 ],
 
 'numbness': [
@@ -583,7 +583,7 @@ symptom_synonyms = {
 ],
 'acidity': [
     'acid reflux', 'heartburn', 'sour stomach', 'acidic feeling', 'burning in chest', 'burning sensation in throat','heartburning',
-    'stomach acid', 'acid burps', 'sour taste in mouth', 'regurgitation', 'indigestion', 'upper abdominal burning',
+    'stomach acid', 'acid burps', 'sour taste in mouth', 'regurgitation', 'upper abdominal burning',
     'acid in throat', 'stomach burning', 'gastric acid', 'acid buildup', 'acidic burping', 'throat burn',
     'reflux sensation', 'chest discomfort after eating', 'acid sensation', 'acidic regurgitation', 'acidic discomfort',
     'burning after meals', 'acid coming up', 'bitter taste in throat'
@@ -591,6 +591,7 @@ symptom_synonyms = {
 
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance'
+     'nothing is digested','not digesting'
 ],
 
 'mouth sore': [
@@ -636,7 +637,7 @@ symptom_synonyms = {
     'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
     'high diastolic pressure', 'hypertensive condition', 
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 
-    'elevated BP', 'hypertensive state', 'BP is high'
+    'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP'
 ],
 
 'low blood pressure': [
@@ -649,7 +650,7 @@ symptom_synonyms = {
 'excessive thirst': [
     'polydipsia', 'intense thirst', 'uncontrollable thirst', 'extreme thirst', 'constant thirst', 'increased thirst', 'abnormal thirst', 'drinking more water', 'consuming more water',
     'compulsive thirst', 'thirsty all the time', 'unquenchable thirst', 'chronic thirst', 'intense desire to drink', 'frequent thirst', 'dehydration thirst','thirsty feeling',
-    'abnormal fluid intake desire', 'thirst without relief', 'excessive fluid consumption', 'thirst due to dehydration', 'thirsty feeling', 'abnormal hydration needs'
+    'abnormal fluid intake desire', 'thirst without relief', 'excessive fluid consumption', 'thirst due to dehydration', 'thirsty feeling', 'abnormal hydration needs','BP is getting low','BP is low'
 ],
 
 'dehydration': [
@@ -714,7 +715,7 @@ symptom_synonyms = {
     'emotional swing', 'mood fluctuation', 'emotional rollercoaster', 'mood shift', 'mood change', 'mood variation', 'mood disorder',
     'rapid mood change', 'emotional instability', 'mood instability', 'mood alteration', 'emotional shift', 'temper fluctuation',
     'emotional lability', 'mood fluctuations', 'unstable mood', 'irregular mood', 'affective swing', 'mood imbalance', 'emotional outbursts',
-    'highs and lows', 'emotional extremes'
+    'highs and lows', 'emotional extremes','mood is low','mood is very low'
 ],
 
 'difficulty concentrating': [
@@ -757,7 +758,7 @@ symptom_synonyms = {
 ],
 
 'gout': [
-    'uric acid buildup', 'acute gout', 'chronic gout', 'gout attack', 'joint pain from gout', 'gout flare-up', 'gouty inflammation', 'gouty attack',
+    'uric acid buildup', 'acute gout', 'chronic gout', 'gout attack', 'gouty inflammation', 'gouty attack',
     'painful gout episode', 'gouty swelling', 'gout in the foot', 'gout in the big toe', 'gouty condition', 'uric acid crystals', 'gouty joint disease'
 ],
 
@@ -824,7 +825,7 @@ symptom_synonyms = {
 'unilateral hearing loss', 'bilateral hearing loss', 'gradual hearing loss', 'sudden hearing loss', 'ear infection-related hearing loss', 'fluid in ear causing hearing loss',
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'nerve damage causing hearing loss', 'inability to detect sound frequencies', 'ear trauma',
 'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
-'temporary auditory loss', 'chronic hearing damage'
+'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing'
 ],
 
 'bone pain': [
@@ -840,7 +841,7 @@ symptom_synonyms = {
 
 'weight gain': [
 'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
-'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight'
+'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
 'weight fluctuation': ['weight\'s been fluctuating', 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
@@ -864,7 +865,7 @@ symptom_synonyms = {
 
 'injury': [
 'injured', 'wound', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury', 'fallen from stairs'
-'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries','injure', 'fell down from stairs',
+'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries','injure', 'fell down from stairs','fell down'
 ],
 
 'jaundice': [
@@ -872,7 +873,7 @@ symptom_synonyms = {
 ],
 
 'sleepy': [
-'sleepy', 'falling asleep', 'fallen asleep'
+'sleepy', 'falling asleep', 'fallen asleep','feeling sleepy'
 ],
 
 'eye weakness': [
@@ -908,7 +909,7 @@ symptom_synonyms = {
     'throbbing waist pain', 'pain from waist injury', 'pain in the lower torso', 'pain around the belt line',
     'pain from tight waistband', 'pain from muscle strain in waist', 'pain from overuse of waist muscles',
     'waist pain when bending', 'waist pain when twisting', 'pain with waist movement', 'aching waist',
-    'pain in the sides of the waist', 'pain from lifting heavy objects',
+    'pain in the sides of the waist', 'pain from lifting heavy objects','difficulty in bending', 'difficult to bend','hard to bend',
     'waist pain after exercise', 'pain in the waist and hips', 'pain from spinal issues near waist',
     'pain in waist and lower back', 'pain from herniated disc near waist', 'pain after prolonged sitting',
     'waist stiffness and pain', 'burning sensation in waist', 'pinching pain in waist',
@@ -7003,7 +7004,7 @@ symptom_followup_questions = {
     "hi": "क्या आपको सोने में कठिनाई होती है, नींद में रुकावट आती है, या आप बहुत जल्दी उठ जाते हैं?",
     "en": "Do you have trouble falling asleep, staying asleep, or waking up too early?",
     "category": "sleepy",
-    "symptom": "sleepy",
+    "symptom": "insomnia",
     "risk_factor": False,
   },
   {
