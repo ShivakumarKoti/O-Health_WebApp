@@ -1004,7 +1004,7 @@ symptom_synonyms = {
 ],
 
 'dysentery': [
-    'dysentery', 'severe diarrhea', 'diarrhea with blood', 'diarrhea with mucus', 'severe intestinal distress','diarrhoea'
+    'dysentery', 'diarrhea with blood', 'diarrhea with mucus', 'severe intestinal distress'
 ],
 'hiccups': [
     'hiccoughs', 'jerking', 'involuntary hiccups', 'diaphragm spasms', 'gasping', 'hiccuping',
