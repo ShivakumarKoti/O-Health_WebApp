@@ -132,7 +132,7 @@ symptom_synonyms = {
     ],
 
     'shortness of breath': [
-        'Shortness of breath', 'breathlessness', 'difficulty breathing', 'feeling air hunger',  'shallow breathing', 'gasping for air',
+        'shortness of breath', 'breathlessness', 'difficulty breathing', 'feeling air hunger',  'shallow breathing', 'gasping for air',
         'labored breathing', 'struggling to breathe', 'feeling suffocated', 'cannot catch my breath', 'panting heavily', 'air feeling thin',
         'lungs working overtime', 'chest feels restricted', 'fighting for each breath', 'difficulty in breathing', 'strained respiration', 'feeling smothered', 'desperate for oxygen',
         'winded easily', 'constant puffing', 'breathing feels blocked', 'inhaling with effort', 'forced breathing', 'breathless', 'sensation of drowning in open air',
@@ -158,7 +158,7 @@ symptom_synonyms = {
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
         'early morning wakefulness', 'poor sleep quality', 'sleep deprivation', 'sleep disturbance', 'trouble staying asleep', 'sleep interruptions', 'unable to sleep through the night',
-        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 
+        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'can\'t sleep',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
         'unable to fall asleep', 'not able to fall asleep'
@@ -340,7 +340,7 @@ symptom_synonyms = {
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
         'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 
         'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
-        'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees'
+        'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees','pain in a knee'
     ],
     'foot pain': [
         'pain in the foot', 'plantar pain', 'foot discomfort', 'foot ache', 'pain in the heel', 'sharp foot pain', 'throbbing foot pain', 'pain from foot injury', 'pain in the arch',
@@ -381,7 +381,7 @@ symptom_synonyms = {
         'nerve-like pain in the arm'
     ],
     'leg pain': [
-        'pain in the leg', 'lower limb pain', 'leg discomfort', 'muscle pain in the leg',  'pain in the shin', 'pain from leg injury',
+        'pain in the leg', 'lower limb pain', 'leg discomfort', 'muscle pain in the leg',  'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs',
         'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise',
         'pain in my legs','legs are paining','pain in leg', 'pain from overuse', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
@@ -984,7 +984,7 @@ symptom_synonyms = {
 ],
 
 'dysentery': [
-    'dysentery', 'severe diarrhea', 'diarrhea with blood', 'diarrhea with mucus', 'severe intestinal distress'
+    'dysentery', 'severe diarrhea', 'diarrhea with blood', 'diarrhea with mucus', 'severe intestinal distress','diarrhoea'
 ],
 'hiccups': [
     'hiccoughs', 'jerking', 'involuntary hiccups', 'diaphragm spasms', 'gasping', 'hiccuping',
@@ -1228,7 +1228,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको लगातार मतली महसूस हो रही है?",
       "en": "Are you experiencing constant nausea?",
       "category": "constant_nausea",
-      "symptom": "nausea",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको खाने के बाद मतली होती है?",
