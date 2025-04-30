@@ -15,7 +15,7 @@ symptom_list = [
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine',
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth',
 
 
 # weakness symtom
