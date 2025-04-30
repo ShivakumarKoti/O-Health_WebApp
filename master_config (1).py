@@ -106,12 +106,10 @@ symptom_synonyms = {
         'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
     ],
     'weakness': [
-        'tiredness', 'extreme tiredness','weariness', 'fatigued feeling', 'lack of energy', 'physical depletion', 'mental fatigue', 'chronic tiredness',
-        'drained', 'feeling wiped out', 'feeling run down', 'fatigue','low energy', 'severe fatigue', 'feeling sluggish', 'morning fatigue', 'fatigue after exertion',
-        'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling lethargic', 'mental sluggishness', 'physical tiredness', 'difficulty keeping eyes open',
-        'lack of vitality', 'energy depletion', 'feeling drained', 'listlessness', 'burned out', 'exhausted state', 'feeling zoned out', 'tired all the time', 'fatigued state',
-       'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements',
-        'lacking strength', 'body fatigue',  'feeling disconnected'
+      
+        'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open',
+        'lack of vitality', 'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements',
+        'lacking strength', 'feeling disconnected'
     ],
     'nausea': [
         'feeling nauseous', 'upset stomach', 'queasy', 'stomach turning', 'sick feeling', 'feeling like vomiting', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
