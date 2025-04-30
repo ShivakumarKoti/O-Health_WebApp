@@ -302,12 +302,11 @@ symptom_synonyms = {
         'pain from sniffing'
     ],
     'throat pain': [
-        'pain in the throat', 'scratchy throat', 'throat discomfort', 'painful swallowing', 'irritated throat','burning sensation in the throat', 'throat tenderness',
+        'pain in the throat', 'scratchy throat', 'throat discomfort', 'irritated throat','burning sensation in the throat', 'throat tenderness',
         'throat scratchiness', 'swollen throat', 'pain from tonsillitis','inflammation of the throat', 'pain in the tonsils',
         'hoarse throat', 'painful voice box', 'pain in the larynx', 
-        'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'pain from dry air', 'throat dryness', 'severe throat discomfort',
-        'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat', 'pain from sore mouth',
-        'pain when swallowing food'
+        'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'throat dryness', 'severe throat discomfort',
+        'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat'
     ],
     'jaw pain': [
         'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
@@ -563,7 +562,7 @@ symptom_synonyms = {
     'dysphagia', 'trouble swallowing', 'swallowing difficulty', 'painful swallowing', 'difficulty with swallowing', 'difficulty in swallowing food',
     'difficulty swallowing liquids', 'inability to swallow', 'swallowing discomfort', 'choking sensation', 'difficulty swallowing pills', 'food getting stuck',
     'difficulty in throat swallowing', 'swallowing obstruction', 'swallowing problems', 'gagging while swallowing', 'swallowing trouble',
-    'feeling of blockage while swallowing'
+    'feeling of blockage while swallowing', 'difficulties swallowing'
 ],
 
 'restlessness': [
