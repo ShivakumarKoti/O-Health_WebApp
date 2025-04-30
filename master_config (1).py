@@ -166,7 +166,7 @@ symptom_synonyms = {
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
         'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
-        'welts on skin', 'itchy patches on skin', 'skin redness', 'inflamed, sore rash', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'skin irritation with swelling',
+        'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction',
         'rashes from medication', 'painful itching on skin'
     ],
     'congestion': [
@@ -400,9 +400,9 @@ symptom_synonyms = {
         'pain in the forearm', 'nerve-like pain in the arm', 'pain in the arms', 'pain in my arms'
     ],
     'leg pain': [
-        'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs',
-        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise',
-        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
+        'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs', 'pain during walk',
+        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking'
+        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking',
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
         'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'pain in the lower leg'
     ],
