@@ -8508,6 +8508,58 @@ symptom_followup_questions = {
     "risk_factor": True,
   },
 ],
+ "broken voice": [
+  {
+    "hi": "क्या आपकी आवाज़ भारी, कर्कश या सामान्य से अलग लग रही है?",
+    "en": "Does your voice sound hoarse, rough, or different from normal?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या बोलते समय आपकी आवाज़ टूटती है या रुक-रुक कर आती है?",
+    "en": "Does your voice crack or break while speaking?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको लंबे समय तक ऊँची आवाज़ में बोलने या चिल्लाने के बाद गले में परेशानी होती है?",
+    "en": "Do you feel throat discomfort after speaking loudly or shouting for a long time?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको धूम्रपान करने की आदत है?",
+    "en": "Do you smoke regularly?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आप पेशेवर रूप से बहुत अधिक बोलते हैं, जैसे शिक्षक या गायक?",
+    "en": "Do you speak a lot professionally, such as being a teacher or singer?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी आवाज़ में बदलाव 2 सप्ताह से अधिक समय से है?",
+    "en": "Has your voice change persisted for more than two weeks?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके गले में किसी प्रकार की गांठ या सूजन महसूस होती है?",
+    "en": "Do you feel any lump or swelling in your throat?",
+    "category": "broken voice",
+    "symptom": "broken voice",
+    "risk_factor": True,
+  },
+],
+
 
 }
 
