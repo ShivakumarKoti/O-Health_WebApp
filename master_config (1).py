@@ -321,10 +321,22 @@ symptom_synonyms = {
         'toothache', 'dental pain', 'pain in the tooth', 'sharp tooth pain', 'throbbing tooth pain', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
         'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
         'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'dull tooth pain',
-        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort', 'tooth broken', 'teeth broken',
-        'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'severe tooth pain', 'pain in front teeth', 'teeth knocked out','tooth knocked out','tooth issue','teeth issue'
+        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort', 'tooth broken', 
+        'teeth broken', 'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
+        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'tooth issue','teeth issue'
+        
     ],
+ 'broken tooth': [
+    'chipped tooth', 'cracked tooth', 'fractured tooth', 'split tooth', 'tooth fracture', 'tooth chipped', 'tooth cracked', 'partially broken tooth',
+    'broken molar', 'broken front tooth', 'tooth with a crack', 'tooth broken in half', 'tooth broken at gum line', 'damaged tooth', 'tooth with a piece missing',
+    'tooth with a sharp edge', 'tooth with enamel loss', 'broken tooth pain', 'tooth with structural damage', 'tooth injury', 'tooth trauma', 'tooth breakage',
+    'broken dental crown', 'broken filling', 'tooth broken from biting', 'tooth broken while eating', 'tooth broken from grinding', 'tooth broken due to decay',
+    'tooth broken from accident', 'tooth broken from impact', 'crumbling tooth', 'tooth worn down', 'weakened tooth', 'tooth chip', 'dental fracture',
+    'minor tooth crack', 'severe tooth crack', 'cracked molar', 'hairline tooth fracture', 'vertical tooth fracture', 'tooth split vertically', 'tooth broken horizontally',
+    'partial tooth break', 'tooth edge broken', 'tooth enamel chipped', 'tooth surface damaged', 'damaged dental work', 'broken back tooth', 'tooth structure loss'
+    'teeth knocked out','tooth knocked out', 'tooth is just broken', 'tooth broke off', 'teeth broken'
+ ],
+
     'chest pain': [
         'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'sharp chest pain', 'tight chest feeling', 'aching chest',
         'chest heaviness', 'pain in the breastbone', 'pain radiating from chest',  'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
