@@ -151,7 +151,7 @@ symptom_synonyms = {
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
         'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
-        'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle'
+        'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in muscle', 'pain in muscles', 'pain in the muscle', 'pain in the muscles', 'pain in my muscle', 'pain in my muscles'
     ],
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
@@ -294,7 +294,7 @@ symptom_synonyms = {
     'nose pain': [
         'pain in the nose', 'nasal pain', 'sinus pain', 'stabbing pain in the nose', 'sharp nasal discomfort', 'painful sinus area', 'throbbing pain in the nose', 'blocked nose pain',
         'pain from sinusitis', 'nasal congestion pain', 'pain from cold in the nose', 'swollen nose', 'pressure in the sinuses', 'pain from a cold', 'tenderness in the nose', 'painful nostrils',
-        'pain from nasal polyps', 'pain around the nostrils', 'nosebleed-related pain', 'pain with nasal drip', 'stuffy nose pain', 'burning sensation in the nose',
+        'pain from nasal polyps', 'pain around the nostrils', 'nosebleed-related pain', 'pain with nasal drip', 'stuffy nose pain', 'burning sensation in the nose', 'nostril pain',
         'painful nasal congestion', 'aching nose', 'chronic nasal pain', 'pain when breathing through nose', 'nose pressure', 'pain at the bridge of the nose', 'pain in nasal cavity', 'itchy nose with pain',
         'pain from external nose injury', 'pain from sniffles', 'swelling in the nasal area', 'facial pain near the nose', 'pain from sinus congestion', 'painful nasal passages', 'pain in the septum',
         'pain from sniffing'
@@ -312,8 +312,9 @@ symptom_synonyms = {
         'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the jaw', 'pain with jaw movement',
         'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw pain from stress', 'jaw swelling', 'pain when yawning',
         'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
-        'pain after jaw surgery', 'pain during biting'
-    ],
+        'pain after jaw surgery', 'pain during biting','pain in jaw', 'pain in jaws', 'pain in the jaw', 'pain in the jaws', 'pain in my jaw', 'pain in my jaws'
+
+   ],
     'tooth pain': [
         'toothache', 'dental pain', 'pain in the tooth', 'sharp tooth pain', 'throbbing tooth pain', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
         'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
@@ -359,23 +360,27 @@ symptom_synonyms = {
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
         'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain in the knees', 'kneepain',
         'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
-        'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees','pain in a knee'
-    ],
+        'pain after knee surgery', 'pain in the back of the knee', 'pain in knee', 'pain in knees', 'pain in the knee', 'pain in the knees', 'pain in my knee', 'pain in my knees'
+
+   ],
     'foot pain': [
         'pain in the foot', 'plantar pain', 'foot discomfort', 'foot ache', 'pain in the heel', 'sharp foot pain', 'throbbing foot pain', 'pain from foot injury', 'pain in the arch',
         'pain from flat feet', 'pain from bunions', 'pain in the toes', 'pain from corns', 'pain from calluses', 'pain from wearing tight shoes', 'pain with walking',
         'pain from arthritis in foot', 'swollen foot', 'pain in the sole', 'pain when standing', 'pain from sprained ankle', 'pain from tendinitis', 'sharp pain in the foot arch', 'pain in foot joints',
         'pain in the ball of the foot', 'heel pain', 'pain from Morton’s neuroma', 'foot cramping pain',
         'pain after standing for long periods', 'pain in the toes after walking', 'sharp heel pain', 'foot pain from nerve issues', 'pain from diabetic neuropathy', 'pain after wearing heels',
-        'pain in feet', 'feet pain'
-    ],
+        'feet pain', 'pain in foot', 'pain in feet', 'pain in the foot', 'pain in the feet', 'pain in my foot', 'pain in my feet'
+
+   ],
     'ankle pain': [
         'ankle discomfort', 'pain in the ankle', 'twisted ankle pain', 'pain from sprained ankle', 'swollen ankle', 'sharp ankle pain', 'throbbing pain in the ankle', 'pain when walking',
         'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
         'pain in the ankle joint', 'pain from ligament strain', 'pain from ankle fracture', 'ankle tenderness', 'pain with ankle instability', 'pain when standing', 
         'pain in ankle tendon', 'pain after running', 'pain from ankle arthritis', 'pain with twisting', 'pain in ankle after jumping', 'pain in the Achilles tendon', 'stabbing pain in ankle',
-        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain when stretching ankle'
-    ],
+        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain when stretching ankle',
+        'pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
+
+   ],
      'wrist pain': [
         'pain in the wrist', 'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist',
         'tenderness in the wrist', 'pain after wrist injury', 'pain from wrist overuse', 'wrist sprain pain', 'pain in the wrist tendons', 'wrist joint stiffness',
@@ -822,10 +827,9 @@ symptom_synonyms = {
 'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low',
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
-'unilateral hearing loss', 'bilateral hearing loss', 'gradual hearing loss', 'sudden hearing loss', 'ear infection-related hearing loss', 'fluid in ear causing hearing loss',
-'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'nerve damage causing hearing loss', 'inability to detect sound frequencies', 'ear trauma',
+'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma',
 'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
-'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing'
+'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss',
 ],
 
 'bone pain': [
@@ -851,7 +855,7 @@ symptom_synonyms = {
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
 'localized skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
 'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'nerve-related burning', 'itchy burning skin', 'skin damage from burn',
-'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface',
+'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface', 'burning sensation on the skin', 'burning sensation on the skin',
 'red inflamed skin', 'skin discomfort from heat', 'skin chafing burn', 'sensitive skin after burn',
 'stinging skin pain', 'skin burn from chemicals', 'skin damage sensation', 'skin peeling from burn', 
 'lingering skin burn', 'burnt skin tenderness', 'skin hot spot'
@@ -1080,7 +1084,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
       "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?",
       "category": "digestive symptoms",
-      "symptom": "nausea, vomiting, diarrhea, fever",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
@@ -1092,7 +1096,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको पाचन समस्याओं का इतिहास है (जैसे कि अम्लता, IBS, अल्सर आदि)?",
       "en": "Do you have a history of digestive problems (e.g., acid reflux, IBS, ulcers)?",
       "category": "digestive history",
-      "symptom": "digestive problems",
+      "symptom": "indigestion",
       "risk_factor": True,    },
   ],
   "acidity": [
@@ -1140,37 +1144,37 @@ symptom_followup_questions = {
       "hi": "क्या आपको नींद की कमी का सामना करना पड़ता है?",
       "en": "Do you face lack of sleep?",
       "category": "lack of sleep",
-      "symptom": "sleep deprivation",
+      "symptom": "insomnia",
       "risk_factor": False,    },
     {
       "hi": "क्या आप खुद को हाइड्रेटेड रखते हैं?",
       "en": "Do you keep yourself hydrated??",
       "category": "dehydration",
-      "symptom": "dehydration",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको मांसपेशियों में कमजोरी है?",
       "en": "Do you have muscle weakness?",
       "category": "weakness",
-      "symptom": "Weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या आप पौष्टिक भोजन खाते हैं?",
       "en": "Do you eat nutritious food?",
       "category": "weakness",
-      "symptom": "Weakness",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप प्रतिदिन व्यायाम करते हैं?",
       "en": "Do you exercise daily?",
       "category": "weakness",
-      "symptom": "Weakness",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप शारीरिक रूप से विकलांग व्यक्ति हैं?",
       "en": "Are you physically challenged person?",
       "category": "weakness",
-      "symptom": "Weakness",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -1191,7 +1195,7 @@ symptom_followup_questions = {
       "hi": "क्या सिरदर्द के साथ दृष्टि में परिवर्तन है?",
       "en": "Are you experiencing any changes in vision along with headache?",
       "category": "vision_changes",
-      "symptom": "Vision changes",
+      "symptom": "vision changes",
       "risk_factor": False,    },
     {
       "hi": "क्या सिरदर्द की शुरुआत अचानक हुई थी या धीरे-धीरे?",
@@ -1209,7 +1213,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको मिचली हो रही है साथ ही सिरदर्द?",
       "en": "Are you feeling nauseous along with headache?",
       "category": "nausea_headache",
-      "symptom": "Nausea",
+      "symptom": "nausea",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको ध्वनि या रोशनी से संवेदनशीलता है साथ ही सिरदर्द?",
@@ -1233,7 +1237,7 @@ symptom_followup_questions = {
       "hi": "क्या आपकी नींद में कोई कमी है साथ ही सिरदर्द?",
       "en": "Are you lacking sleep along with headache?",
       "category": "sleep_deprivation",
-      "symptom": "Sleep deprivation",
+      "symptom": "insomnia",
       "risk_factor": False,    },
   ],
   "nausea": [
@@ -1241,7 +1245,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको उल्टी हो रही है?",
       "en": "Are you vomiting?",
       "category": "vomiting",
-      "symptom": "Vomiting",
+      "symptom": "vomiting",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको लगातार मतली महसूस हो रही है?",
