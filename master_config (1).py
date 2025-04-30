@@ -233,7 +233,7 @@ symptom_synonyms = {
     ],
 
     'ear pain': [
-        'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'stabbing pain in ear', 
+        'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'stabbing pain in ear', 'pain in the ears', 'pain in ear',
         'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'ear infection pain',
         'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'pain in ear canal', 'ear ache when swallowing',
         'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
@@ -311,7 +311,7 @@ symptom_synonyms = {
     ],
     'jaw pain': [
         'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
-        'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'muscle pain in the jaw', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain from jaw injury', 'pain near the jawline',
+        'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain from jaw injury', 'pain near the jawline',
         'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the ear and jaw', 'pain from dental issues', 'pain with jaw movement',
         'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw pain from stress', 'jaw swelling', 'pain when yawning',
         'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'pain from wisdom teeth', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
@@ -338,7 +338,7 @@ symptom_synonyms = {
         'knee discomfort', 'pain in the knee', 'painful knees', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint',
         'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain from knee overuse', 'pain with knee movement',
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
-        'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 
+        'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain in the knees', 'kneepain',
         'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
         'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees','pain in a knee'
     ],
@@ -374,16 +374,15 @@ symptom_synonyms = {
     ],
     'arm pain': [
         'pain in the arm', 'upper limb pain', 'arm discomfort', 'sharp arm pain', 'throbbing arm pain', 'pain in the forearm', 'pain in the biceps',
-        'pain from arm injury', 'pain from repetitive arm movement', 'pain from tendonitis in the arm', 'muscle pain in the arm', 'nerve pain in the arm', 'pain in the upper arm muscles',
+        'pain from arm injury', 'pain from repetitive arm movement', 'pain from tendonitis in the arm','nerve pain in the arm', 'pain in the upper arm muscles',
         'pain from arm sprain', 'pain in the wrist and arm', 'stiffness in the arm', 'swollen arm', 'pain when moving the arm', 'burning pain in the arm', 'aching in the arm', 'arm cramping',
         'pain from lifting with the arm', 'pain when raising the arm', 'pain from overuse of the arm', 'pain from arm fracture', 'pain in the arm muscles after exercise', 'pain from muscle strain in the arm',
-        'pain from joint inflammation', 'sharp pain in the arm muscles', 'pain in the elbow joint', 'pain in the shoulder joint', 'pain in the forearm when lifting', 'shooting arm pain',
-        'nerve-like pain in the arm'
+        'pain in the forearm', 'nerve-like pain in the arm', 'pain in the arms', 'pain in my arms'
     ],
     'leg pain': [
-        'pain in the leg', 'lower limb pain', 'leg discomfort', 'muscle pain in the leg',  'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs',
+        'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs',
         'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise',
-        'pain in my legs','legs are paining','pain in leg', 'pain from overuse', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
+        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
         'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'pain in the lower leg'
     ],
@@ -448,12 +447,12 @@ symptom_synonyms = {
     'contamination', 'infectious disease', 'germ infection', 'bacterial infection', 'viral infection', 'fungal infection', 'parasite infection', 'microbial infection',
     'pathogen invasion', 'infected area', 'infection outbreak', 'systemic infection', 'local infection', 'wound infection', 'skin infection', 'respiratory infection',
     'urinary tract infection', 'ear infection', 'sinus infection', 'blood infection', 'sepsis', 'foodborne illness', 'infected tissue', 'infection of the bloodstream',
-    'infection of the lungs', 'bacterial contamination', 'inflammation from infection', 'infectious agent', 'disease-causing infection', 'contagion', 'infection symptoms',
+    'infection of the lungs', 'bacterial contamination', 'infectious agent', 'disease-causing infection', 'contagion', 'infection symptoms',
     'chronic infection', 'acute infection', 'health infection', 'infection spread', 'infection risk', 'infectious condition', 'contagious disease'
 ],
 
 'inflammation': [
-    'inflammatory response', 'immune response', 'inflammatory reaction', 'inflammation of tissues', 'inflammation in the body',
+    'inflammatory response', 'immune response', 'inflammatory reaction', 'inflammation of tissues', 'inflammation in the body', 'inflamed',
     'inflammation of the skin', 'joint inflammation', 'internal inflammation', 'inflammatory condition', 'inflammatory disorder', 
     'inflammation from disease'
 ],
@@ -519,7 +518,7 @@ symptom_synonyms = {
 
 'numbness': [
     'loss of sensation', 'lack of feeling', 'reduced sensation', 'sensory loss', 'numb sensation', 'feeling of numbness',
-    'numb feeling', 'sensory numbness', 'partial numbness', 'temporary numbness', 'persistent numbness'
+    'numb feeling', 'sensory numbness', 'partial numbness', 'temporary numbness', 'persistent numbness', 'numb'
 ],
 
 'dry mouth': [
