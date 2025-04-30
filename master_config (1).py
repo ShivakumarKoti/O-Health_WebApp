@@ -147,7 +147,7 @@ symptom_synonyms = {
          'heavy breathing', 'fast breathing', 'heart skipping beats'
     ],
     'muscle pain': [
-        'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle injury', 'muscle cramps',
+        'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle cramps',
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
         'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
@@ -202,7 +202,7 @@ symptom_synonyms = {
   'neck pain': [
     'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
     'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 'neckpain',
-    'pain at the base of the skull', 'upper spine pain', 'neck injury pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
+    'pain at the base of the skull', 'upper spine pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
     'burning sensation in neck', 'neck inflammation', 'neck tenderness', 'cervical spine discomfort', 'pain when turning head', 'pain along the side of neck', 'pain in back of neck', 'stabbing neck pain',
     'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck'
 ],
@@ -263,7 +263,7 @@ symptom_synonyms = {
     ],
     'swelling': [
         'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness',
-        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swelling due to injury', 'swollen belly',
+        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly',
         'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
         'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes','swelling',
         'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints','bruising'
@@ -311,7 +311,7 @@ symptom_synonyms = {
     ],
     'jaw pain': [
         'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
-        'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain from jaw injury', 'pain near the jawline',
+        'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain near the jawline',
         'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the ear and jaw', 'pain from dental issues', 'pain with jaw movement',
         'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw pain from stress', 'jaw swelling', 'pain when yawning',
         'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'pain from wisdom teeth', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
@@ -844,8 +844,8 @@ symptom_synonyms = {
 ],
 
 'injury': [
-'injured', 'wound', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury',
-'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries','injure'
+'injured', 'wound', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury', 'fallen from stairs'
+'bruise', 'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries','injure', 'fell down from stairs',
 ],
 
 'jaundice': [
