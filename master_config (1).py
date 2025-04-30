@@ -873,9 +873,9 @@ symptom_synonyms = {
 'legs giving out', 'trembling legs', 'poor leg endurance', 'reduced leg strength', 'weak leg muscles', 'unstable lower limbs', 'leg instability',
 'feeling of leg collapse', 'limb weakness', 'leg exhaustion', 'legs feel drained', 'weakness in thigh muscles', 'weakness in calf muscles',
 'legs feel powerless', 'numb legs', 'tingling in legs', 'cramping legs', 'difficulty supporting weight', 'legs feel rubbery', 'shaking lower limbs',
-'legs feel unstable after exertion', 'difficulty lifting legs', 'leg weakness while climbing stairs', 'leg weakness after standing long',
+'legs feel unstable after exertion', 'difficulty lifting legs', 'leg weakness while climbing stairs', 'leg weakness after standing long', 
 'legs feel like jelly', 'legs feel heavy and weak', 'poor leg control', 'unstable footing', 'weakness after prolonged standing', 'leg stiffness',
-'inability to bear weight on legs', 'sensation of leg failure', 'unresponsive legs'
+'inability to bear weight on legs', 'sensation of leg failure', 'unresponsive legs', 'legs are numb'
 ],
 
 'asthma': ['wheezing', 'reactive airway disease', 'hyperresponsive airway disease', 'asthmatic condition', 'asthmas', 'asthama','whistling sound while breathing'],
