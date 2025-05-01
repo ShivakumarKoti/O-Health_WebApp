@@ -8759,6 +8759,58 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
+ "hand dryness": [
+  {
+    "hi": "क्या आपकी हथेलियाँ रूखी या खुरदरी महसूस होती हैं?",
+    "en": "Do your palms feel dry or rough to the touch?",
+    "category": "hand dryness",
+    "symptom": "hand dryness",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी त्वचा पर सफेद पपड़ी या झुर्रियां दिखाई देती हैं?",
+    "en": "Do you notice flaking or white patches on the skin?",
+    "category": "hand dryness",
+    "symptom": "patches on skin",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या हाथों की त्वचा में खुजली या जलन होती है?",
+    "en": "Do you experience itching or irritation on the hands?",
+    "category": "hand dryness",
+    "symptom": None,
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आप दिन में बार-बार साबुन या सैनिटाइज़र का उपयोग करते हैं?",
+    "en": "Do you frequently use soap or hand sanitizer during the day?",
+    "category": "hand dryness",
+    "symptom": None,
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आप ठंडी या शुष्क जलवायु में रहते हैं?",
+    "en": "Do you live in a cold or dry climate?",
+    "category": "hand dryness",
+    "symptom": None,
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपके हाथों की त्वचा पर दरारें या खून आने जैसे लक्षण हैं?",
+    "en": "Do you have cracks or bleeding on the skin of your hands?",
+    "category": "hand dryness",
+    "symptom": None,
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको एग्ज़िमा या त्वचा से जुड़ी कोई पुरानी समस्या है?",
+    "en": "Do you have eczema or any chronic skin condition?",
+    "category": "hand dryness",
+    "symptom": None,
+    "risk_factor": True,
+  },
+],
+
 
 
 
