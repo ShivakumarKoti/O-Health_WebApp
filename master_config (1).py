@@ -260,7 +260,7 @@ symptom_synonyms = {
         'sweat running down temples', 'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
     ],
     'swelling': [
-        'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness',
+        'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness','swollen',
         'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly','swells',
         'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
         'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes','swelling',
