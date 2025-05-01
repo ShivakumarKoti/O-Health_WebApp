@@ -116,7 +116,7 @@ symptom_synonyms = {
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
         'uneasy stomach', 'upset belly', 'intense queasiness', 'morning sickness feeling',
         'stomach discomfort', 'stomach churn', 'constant nausea', 'puking feeling', 'feeling like you could throw up',
-        'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease',
+        'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease','nauseous',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
     'dizziness': [
@@ -151,7 +151,7 @@ symptom_synonyms = {
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
         'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
-        'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in muscle', 'pain in muscles', 'pain in the muscle', 'pain in the muscles', 'pain in my muscle', 'pain in my muscles'
+        'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle','pain in the muscles', 'pain in my muscle', 'pain in my muscles'
     ],
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
@@ -294,7 +294,7 @@ symptom_synonyms = {
     'nose pain': [
         'pain in the nose', 'nasal pain', 'sinus pain', 'stabbing pain in the nose', 'sharp nasal discomfort', 'painful sinus area', 'throbbing pain in the nose', 'blocked nose pain',
         'pain from sinusitis', 'nasal congestion pain', 'pain from cold in the nose', 'swollen nose', 'pressure in the sinuses', 'pain from a cold', 'tenderness in the nose', 'painful nostrils',
-        'pain from nasal polyps', 'pain around the nostrils', 'nosebleed-related pain', 'pain with nasal drip', 'stuffy nose pain', 'burning sensation in the nose', 'nostril pain',
+        'pain from nasal polyps', 'pain around the nostrils', 'nosebleed-related pain', 'pain with nasal drip', 'stuffy nose pain', 'burning sensation in the nose','nostril pain',
         'painful nasal congestion', 'aching nose', 'chronic nasal pain', 'pain when breathing through nose', 'nose pressure', 'pain at the bridge of the nose', 'pain in nasal cavity', 'itchy nose with pain',
         'pain from external nose injury', 'pain from sniffles', 'swelling in the nasal area', 'facial pain near the nose', 'pain from sinus congestion', 'painful nasal passages', 'pain in the septum',
         'pain from sniffing'
@@ -314,7 +314,7 @@ symptom_synonyms = {
         'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
         'pain after jaw surgery', 'pain during biting','pain in jaw', 'pain in jaws', 'pain in the jaw', 'pain in the jaws', 'pain in my jaw', 'pain in my jaws'
 
-   ],
+    ],
     'tooth pain': [
         'toothache', 'dental pain', 'pain in the tooth', 'sharp tooth pain', 'throbbing tooth pain', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
         'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
@@ -360,27 +360,23 @@ symptom_synonyms = {
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
         'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain in the knees', 'kneepain',
         'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
-        'pain after knee surgery', 'pain in the back of the knee', 'pain in knee', 'pain in knees', 'pain in the knee', 'pain in the knees', 'pain in my knee', 'pain in my knees'
-
-   ],
+        'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees','pain in a knee','pain in my knee', 'pain in my knees'
+    ],
     'foot pain': [
         'pain in the foot', 'plantar pain', 'foot discomfort', 'foot ache', 'pain in the heel', 'sharp foot pain', 'throbbing foot pain', 'pain from foot injury', 'pain in the arch',
         'pain from flat feet', 'pain from bunions', 'pain in the toes', 'pain from corns', 'pain from calluses', 'pain from wearing tight shoes', 'pain with walking',
         'pain from arthritis in foot', 'swollen foot', 'pain in the sole', 'pain when standing', 'pain from sprained ankle', 'pain from tendinitis', 'sharp pain in the foot arch', 'pain in foot joints',
         'pain in the ball of the foot', 'heel pain', 'pain from Morton’s neuroma', 'foot cramping pain',
         'pain after standing for long periods', 'pain in the toes after walking', 'sharp heel pain', 'foot pain from nerve issues', 'pain from diabetic neuropathy', 'pain after wearing heels',
-        'feet pain', 'pain in foot', 'pain in feet', 'pain in the foot', 'pain in the feet', 'pain in my foot', 'pain in my feet'
-
-   ],
+        'pain in feet', 'feet pain','feet pain', 'pain in foot', 'pain in feet', 'pain in the foot', 'pain in the feet', 'pain in my foot', 'pain in my feet'
+    ],
     'ankle pain': [
         'ankle discomfort', 'pain in the ankle', 'twisted ankle pain', 'pain from sprained ankle', 'swollen ankle', 'sharp ankle pain', 'throbbing pain in the ankle', 'pain when walking',
         'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
         'pain in the ankle joint', 'pain from ligament strain', 'pain from ankle fracture', 'ankle tenderness', 'pain with ankle instability', 'pain when standing', 
         'pain in ankle tendon', 'pain after running', 'pain from ankle arthritis', 'pain with twisting', 'pain in ankle after jumping', 'pain in the Achilles tendon', 'stabbing pain in ankle',
-        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain when stretching ankle',
-        'pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
-
-   ],
+        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain when stretching ankle','pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
+    ],
      'wrist pain': [
         'pain in the wrist', 'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist',
         'tenderness in the wrist', 'pain after wrist injury', 'pain from wrist overuse', 'wrist sprain pain', 'pain in the wrist tendons', 'wrist joint stiffness',
@@ -1337,7 +1333,7 @@ symptom_followup_questions = {
       "hi": "क्या चक्कर आने के साथ मतली या उल्टी हो रही है?",
       "en": "Are you experiencing nausea or vomiting along with dizziness?",
       "category": "dizziness_nausea_vomiting",
-      "symptom": "Nausea or vomiting",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या चक्कर आना चलने या खड़े होने पर बढ़ता है?",
@@ -1349,7 +1345,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको सिरदर्द हो रहा है साथ में चक्कर आना?",
       "en": "Are you having headaches along with dizziness?",
       "category": "headache_dizziness",
-      "symptom": "Headache",
+      "symptom": "headache",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको संतुलन बिगड़ रहा है?",
@@ -1408,46 +1404,45 @@ symptom_followup_questions = {
       "hi": "क्या आपको ठंड लग रही है?",
       "en": "Are you experiencing any chills?",
       "category": "chills",
-      "symptom": "Chills",
+      "symptom": "chills",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सिरदर्द है?",
       "en": "Are you experiencing headaches?",
       "category": "headache",
-      "symptom": "Headache",
+      "symptom": "headache",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको उल्टी जैसा महसूस हो रहा है?",
       "en": "Are you feeling nauseous?",
       "category": "nausea",
-      "symptom": "Nausea",
+      "symptom": "nausea",
       "risk_factor": False,    },
     {
       "hi": "क्या आपका तापमान सामान्य से अधिक है?",
       "en": "Is your temperature higher than normal?",
       "category": "high_temperature",
-      "symptom": "High temperature",
+      "symptom": "high temperature",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको रात में पसीना आता है?",
       "en": "Do you experience night sweats?",
       "category": "night_sweats",
-      "symptom": "Night sweats",
+      "symptom": "night sweats",
       "risk_factor": False,    },
 
-     
         {
             "hi": "क्या आप बेहोश, चक्कर, या भ्रम में हैं?",
             "en": "Are you feeling faint, dizzy, or confused?",
             "category": "neurological",
-            "symptom": "fever",
+            "symptom": None,
             "risk_factor": False,
         },
     {
       "hi": "क्या आपको भूख कम लग रही है?",
       "en": "Are you experiencing loss of appetite?",
       "category": "loss_of_appetite",
-      "symptom": "Loss of appetite",
+      "symptom": "loss of appetite",
       "risk_factor": False,    },
   ],
 
@@ -1462,13 +1457,13 @@ symptom_followup_questions = {
       "hi": "क्या आपके खांसी के साथ बुखार है?",
       "en": "Do you have a fever along with your cough?",
       "category": "fever",
-      "symptom": "Fever",
+      "symptom": "fever",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Are you experiencing difficulty breathing?",
       "category": "breathing",
-      "symptom": "Shortness of breath",
+      "symptom": "shortness of breath",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी खांसी रात में बढ़ जाती है?",
@@ -1480,31 +1475,31 @@ symptom_followup_questions = {
       "hi": "क्या आपको सीने में दर्द है?",
       "en": "Are you experiencing chest pain?",
       "category": "chest_pain",
-      "symptom": "Chest pain",
+      "symptom": "chest pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको गले में खराश है?",
       "en": "Do you have a sore throat?",
       "category": "sore_throat",
-      "symptom": "Sore throat",
+      "symptom": "sore throat",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी आवाज़ बदल गई है?",
       "en": "Has your voice changed?",
       "category": "voice_change",
-      "symptom": "Hoarseness",
+      "symptom": "broken voice",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सांस लेने में सीटी जैसी आवाज़ आती है?",
       "en": "Do you experience wheezing?",
       "category": "wheezing",
-      "symptom": "Wheezing",
+      "symptom": "wheezing",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके खांसी के साथ बलगम में खून है?",
       "en": "Is there blood in your phlegm with your cough?",
       "category": "hemoptysis",
-      "symptom": "Hemoptysis",
+      "symptom": "bleeding",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी खांसी के साथ तेज सांस लेना शामिल है?",
@@ -1590,43 +1585,43 @@ symptom_followup_questions = {
       "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
       "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
       "en": "Does the knee pain occur constantly, or does it come and go?",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "दर्द आपके घुटने के किस हिस्से में महसूस हो रहा है? (सामने, पीछे, किनारे)",
       "en": "Where exactly in the knee do you feel the pain (front, back, sides)?",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या चलने या सीढ़ियाँ चढ़ने जैसी कुछ गतिविधियों से घुटने का दर्द बढ़ जाता है?",
       "en": "Does the knee pain get worse with certain activities, like walking or climbing stairs?",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या घुटने के आसपास सूजन, लाली या गर्मी महसूस हो रही है?",
       "en": "Have you noticed any swelling, redness, or warmth around the knee?",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको घुटने को मोड़ने या सीधा करने में कोई समस्या हो रही है?",
       "en": "Are you having trouble bending or straightening your knee?",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको घुटने में अस्थिरता या ऐसा लगता है जैसे घुटना 'गिर' रहा हो?",
       "en": "Do you feel any instability or like your knee is 'giving way'?",
       "category": "knee pain",
-      "symptom": "knee pain",
+      "symptom": None,
       "risk_factor": False,    },
   ],
   "wrist pain": [
@@ -1635,49 +1630,49 @@ symptom_followup_questions = {
       "hi": "क्या आप कलाई के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
       "en": "Can you describe the wrist pain? (Sharp, dull, aching, etc.)",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "कौन सी गतिविधियाँ कलाई के दर्द को बदतर बना देती हैं?",
       "en": "What activities make the wrist pain worse?",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
       "en": "Is there swelling or bruising around the wrist?",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके हाथ या अंगुलियों में सुन्नता या झनझनाहट महसूस हो रही है?",
       "en": "Do you have numbness or tingling in your hand or fingers?",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": "tingling",
       "risk_factor": False,    },
     {
       "hi": "क्या आपने हाल ही में कलाई को चोट पहुँचाई है? (गिरना, मुड़ना, सीधा असर)",
       "en": "Have you injured the wrist recently? (e.g., fall, twist, direct blow)",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": "injury",
       "risk_factor": False,    },
     {
       "hi": "क्या आपने हाल ही में कोई पुनरावृत्त गतिविधियाँ या अधिक उपयोग किया है?",
       "en": "Have you had any recent repetitive activities or overuse?",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
       "en": "Is the wrist pain constant or intermittent?",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आराम करने से कलाई का दर्द ठीक हो जाता है या बिगड़ जाता है?",
       "en": "Does the wrist pain improve or worsen with rest?",
       "category": "wrist pain",
-      "symptom": "wrist pain",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -1686,55 +1681,55 @@ symptom_followup_questions = {
       "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
       "en": "Was there any specific injury or event that triggered the leg pain?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
       "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
       "en": "Does the leg pain occur constantly, or does it come and go?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, बछड़ा, पंजा)",
       "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या चलने, दौड़ने या खड़े होने से पैर का दर्द बढ़ जाता है?",
       "en": "Does the leg pain get worse with walking, running, or standing?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपने पैरों में सूजन, लालिमा या गर्मी महसूस की है?",
       "en": "Have you noticed any swelling, redness, or warmth in the leg?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या दर्द पैर के अन्य हिस्सों तक फैलता है (जैसे कि जांघ से पंजे तक)?",
       "en": "Does the pain radiate to other parts of the leg (e.g., from the thigh to the foot)?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपने पहले अपने पैरों में किसी चोट या समस्या का अनुभव किया है?",
       "en": "Have you had any previous injuries or problems with your legs?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": "injury",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
       "en": "Do you feel weakness, numbness, or tingling in the leg?",
       "category": "leg pain",
-      "symptom": "leg pain",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -1812,7 +1807,7 @@ symptom_followup_questions = {
             "hi": "क्या दर्द तेज/चुभन वाला, मट्टा, या जलन जैसा है?",
             "en": "Is the pain sharp/stabbing, dull, or burning?",
             "category": "pain_quality",
-            "symptom": "back pain",
+            "symptom": None,
             "risk_factor": False,
         },
         
@@ -1820,7 +1815,7 @@ symptom_followup_questions = {
             "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
             "en": "Are you having difficulty walking, standing, or sitting for long periods?",
             "category": "mobility_impairment",
-            "symptom": "back pain",
+            "symptom": None,
             "risk_factor": False,
         },
         
@@ -1828,7 +1823,7 @@ symptom_followup_questions = {
             "hi": "क्या आपके पिछवाड़े या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
             "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
             "category": "history_of_injury",
-            "symptom": "back pain",
+            "symptom": "injury",
             "risk_factor": False,
         },
     ],
@@ -1889,13 +1884,13 @@ symptom_followup_questions = {
       "hi": "क्या आपकी आवाज़ में परिवर्तन आया है?",
       "en": "Has there been any change in your voice?",
       "category": "voice_changes",
-      "symptom": "voice changes",
+      "symptom": "broken voice",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको गले में जलन महसूस हो रही है?",
       "en": "Are you experiencing any burning sensation in your throat?",
       "category": "burning_sensation",
-      "symptom": "burning",
+      "symptom": "burning throat",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके गले में कोई गड़गड़ाहट है?",
@@ -1928,7 +1923,7 @@ symptom_followup_questions = {
       "hi": "क्या आप अपने शरीर से अधिक पानी खो रहे हैं?",
       "en": "Are you losing more water from your body?",
       "category": "dehydration",
-      "symptom": "dehydration",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या दस्त के साथ बुखार भी है?",
@@ -1982,7 +1977,7 @@ symptom_followup_questions = {
       "hi": "क्या ठंडक की अनुभूति लगातार है या आता-जाता है?",
       "en": "Is your feeling of chills constant or intermittent?",
       "category": "intermittent_chills",
-      "symptom": None,
+      "symptom": "chills",
       "risk_factor": False,    },
     {
       "hi": "क्या ठंडक के साथ पसीना आना भी शुरू हो गया है?",
@@ -2189,7 +2184,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको गले में खुजली या सूजन महसूस हो रही है?",
       "en": "Are you feeling itchiness or swelling in your throat?",
       "category": "throat_allergy_symptoms",
-      "symptom": "swelling",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके लक्षण किसी खास मौसम या वातावरण में अधिक होते हैं?",
@@ -2211,49 +2206,49 @@ symptom_followup_questions = {
     "hi": "क्या आपके परिवार में उच्च रक्तचाप, हृदय रोग, या स्ट्रोक का इतिहास है?",
     "en": "Do you have a family history of high blood pressure, heart disease, or stroke?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप सिरदर्द, चक्कर, छाती में दर्द, या सांस की तकलीफ जैसे लक्षण महसूस कर रहे हैं?",
     "en": "Are you experiencing any symptoms like headaches, dizziness, chest pain, or shortness of breath?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने अपनी जीवनशैली में कोई बदलाव महसूस किया है, जैसे तनाव में वृद्धि, खराब आहार, या व्यायाम की कमी?",
     "en": "Have you noticed any changes in your lifestyle, such as increased stress, poor diet, or lack of exercise?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप वर्तमान में उच्च रक्तचाप या अन्य स्वास्थ्य समस्याओं के लिए कोई दवाएं ले रहे हैं?",
     "en": "Are you currently taking any medications for high blood pressure or other health conditions?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप शराब, कैफीन, या तंबाकू का सेवन करते हैं, और यदि हां, तो कितनी मात्रा में?",
     "en": "Do you consume alcohol, caffeine, or tobacco, and if so, how much?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में वजन बढ़ाया है या अपने आहार या शारीरिक गतिविधि स्तर में बदलाव महसूस किया है?",
     "en": "Have you recently gained weight or experienced changes in your diet or physical activity levels?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको ऐसी कोई अन्य स्वास्थ्य समस्याएं हैं, जैसे मधुमेह, गुर्दे की बीमारी, या स्लीप एपनिया, जो उच्च रक्तचाप में योगदान कर सकती हैं?",
     "en": "Do you have any other health conditions, such as diabetes, kidney disease, or sleep apnea, that might contribute to high blood pressure?",
     "category": "high blood pressure",
-    "symptom": "high blood pressure",
+    "symptom": None,
     "risk_factor": False,
   }
 ],
@@ -2262,49 +2257,49 @@ symptom_followup_questions = {
     "hi": "क्या आप चक्कर, हल्कापन, थकान, या धुंधली दृष्टि जैसे विशिष्ट लक्षण महसूस कर रहे हैं?",
     "en": "Are you experiencing any specific symptoms like dizziness, lightheadedness, fatigue, or blurred vision?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको जल्दी खड़ा होने पर या कुछ समय तक लेटे रहने के बाद हल्का चक्कर या बेहोशी का एहसास होता है?",
     "en": "Do you feel lightheaded or faint when standing up quickly or after lying down for a while?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में कोई बीमारी, संक्रमण, या स्वास्थ्य में कोई बदलाव अनुभव किया है जो आपके रक्तचाप को प्रभावित कर सकता है?",
     "en": "Have you had any recent illnesses, infections, or changes in your health that could affect your blood pressure?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप वर्तमान में कोई दवाएं ले रहे हैं, जैसे डाययुरेटिक्स, एंटीडिप्रेसेंट्स, या रक्तचाप की दवाएं, जो निम्न रक्तचाप का कारण बन सकती हैं?",
     "en": "Are you currently taking any medications, such as diuretics, antidepressants, or blood pressure medications, that could cause low blood pressure?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में अपने आहार, तरल पदार्थों का सेवन, या शारीरिक गतिविधि स्तर में कोई महत्वपूर्ण बदलाव महसूस किया है?",
     "en": "Have you experienced any significant changes in your diet, fluid intake, or activity level recently?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको ऐसी कोई स्वास्थ्य समस्याएं हैं, जैसे हृदय संबंधी समस्याएं, अंतःस्रावी विकार, या निर्जलीकरण, जो निम्न रक्तचाप में योगदान कर सकती हैं?",
     "en": "Do you have any medical conditions, such as heart problems, endocrine disorders, or dehydration, that could contribute to low blood pressure?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में किसी तनाव का अनुभव किया है या खून की महत्वपूर्ण हानि (जैसे चोट या सर्जरी से) हुई है?",
     "en": "Have you been under any recent stress or experienced a significant loss of blood (e.g., from an injury or surgery)?",
     "category": "low blood pressure",
-    "symptom": "low blood pressure",
+    "symptom": None,
     "risk_factor": False,
   }
 ],
@@ -2946,7 +2941,7 @@ symptom_followup_questions = {
       "hi": "क्या आपकी भूख में वृद्धि के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is your sleep being affected due to increased appetite?",
       "category": "sleep_disturbance_with_increased_appetite",
-      "symptom": "insomnia",
+      "symptom": "sleeping",
       "risk_factor": False,    },
     {
       "hi": "क्या भूख में वृद्धि के साथ आपका मूड भी प्रभावित हो रहा है?",
@@ -3364,7 +3359,7 @@ symptom_followup_questions = {
       "hi": "क्या ठंड महसूस होने के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is feeling cold affecting your sleep?",
       "category": "sleep_disturbance_with_feeling_cold",
-      "symptom": "insomnia",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या ठंड महसूस होने के कारण आपके शरीर में कोई कमजोरी आ रही है?",
@@ -3678,7 +3673,7 @@ symptom_followup_questions = {
       "hi": "क्या गंध में बदलाव के कारण आपको खाने में कोई समस्या हो रही है?",
       "en": "Are you having any issues with eating due to smell changes?",
       "category": "eating_issues_with_smell_changes",
-      "symptom": "difficulty swallowing",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -3790,7 +3785,7 @@ symptom_followup_questions = {
       "hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?",
       "en": "Did your neck pain start suddenly or gradually?",
       "category": "sudden_graduate_neck_pain",
-      "symptom": None,
+      "symptom": "neck pain",
       "risk_factor": False,    },
   ],
 
@@ -7446,7 +7441,7 @@ symptom_followup_questions = {
       "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
       "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
       "category": "waist pain",
-      "symptom": None,
+      "symptom": "injury",
       "risk_factor": False,
     },
     {
@@ -8711,8 +8706,8 @@ symptom_followup_questions = {
     "symptom": None,
     "risk_factor": False,
   },
-],
- "urine issues": [
+
+   "urine issues": [
   {
     "hi": "क्या आपको पेशाब करते समय जलन या दर्द होता है?",
     "en": "Do you feel a burning sensation or pain while urinating?",
@@ -8763,7 +8758,6 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
-
 
 
 
