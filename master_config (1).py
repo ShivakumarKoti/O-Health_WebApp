@@ -8731,6 +8731,7 @@ symptom_followup_questions = {
     "symptom": None,
     "risk_factor": False,
   },
+]
 
    "urine issues": [
   {
