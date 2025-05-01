@@ -1057,6 +1057,26 @@ symptom_synonyms = {
     'pyelonephritis', 'urinary tract infection', 'kidney infection', 'hydronephrosis', 'protein in urine', 'kidney fail',
     'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
+ 'hand dryness': [
+    'dry hands', 'chapped hands', 'rough hands', 'flaky hands',
+    'dehydrated hands', 'cracked skin on hands', 'dry skin on hands',
+    'scaly hands', 'itchy dry hands'
+],
+'wound': [
+    'laceration', 'abrasion', 'open wound',
+    'skin break', 'gash', 'lesion', 'puncture wound', 'tear in skin'
+],
+'body ache': [
+    'body pain', 'aching body', 'muscle ache', 'general pain', 'bodyache',
+    'whole body ache', 'sore body', 'body discomfort', 'all-over ache',
+    'aching all over'
+],
+'bruises': [
+    'contusions', 'black and blue marks', 'skin discoloration', 'hematoma', 'bruising',
+    'purple marks', 'banged up', 'bruised skin', 'minor bleeding under skin',
+    'bluish patches','blue marks on skin', 'black marks on skin', 'bruise', 'bruised'
+],
+
 
    }
 
