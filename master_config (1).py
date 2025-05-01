@@ -106,7 +106,6 @@ symptom_synonyms = {
         'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
     ],
     'weakness': [
-      
         'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open',
         'lack of vitality', 'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements',
         'lacking strength', 'feeling disconnected'
@@ -764,15 +763,15 @@ symptom_synonyms = {
 ],
 
 'shoulder pain': [
-    'shoulder discomfort', 'pain in the shoulder', 'shoulder ache', 'sharp shoulder pain', 'dull shoulder pain', 'shoulder stiffness', 'rotator cuff pain',
-    'shoulder joint pain', 'pain in the shoulder joint', 'shoulder strain', 'shoulder injury', 'shoulder inflammation', 'pain in the upper arm',
+    'shoulder discomfort', 'pain in the shoulder', 'shoulder ache', 'sharp shoulder pain', 'dull shoulder pain', 'shoulder stiffness', 'rotator cuff pain','pain in my shoulders',
+    'shoulder joint pain', 'pain in the shoulder joint', 'shoulder strain', 'shoulder injury', 'shoulder inflammation', 'pain in the upper arm', 'pain in the shoulders',
     'muscle pain in the shoulder', 'shoulder tenderness', 'pain when moving the shoulder', 'shoulder sprain', 'pain in the deltoid', 'shoulder dislocation pain',
     'pain in the scapula', 'pain after shoulder surgery', 'shoulder impingement pain', 'frozen shoulder', 'pain from shoulder overuse', 'referred shoulder pain'
 ],
 
 'bone fracture': [
-    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'bone injury', 'fracture', 
-    'stress fracture', 'hairline fracture', 'bone splinter',
+    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'bone injury', 'fracture', 'crack in my bone','crack in a bone',
+    'stress fracture', 'hairline fracture', 'bone splinter','fracture in bone','crack in bone','bone has cracked','cracks in bone', 'bone cracked',
     'fractured limb', 'fractured bone segment', 'broken limb', 'broken bone segment', 'cracked bone injury', 'bone rupture', 'bone fracture symptoms',
     'fractured bone tissue', 'fracture of the bone', 'crack in bone'
 ],
@@ -6880,8 +6879,8 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको हाल ही में कंधे में कोई चोट या आघात हुआ है?",
-      "en": "Have you had any recent injuries or trauma to your shoulder?",
+      "hi": "क्या आपको हाल ही में कंधे में कोई चोट हुआ है?",
+      "en": "Have you had any recent injuries to your shoulder?",
       "category": "shoulder pain",
       "symptom": None,
       "risk_factor": False,
