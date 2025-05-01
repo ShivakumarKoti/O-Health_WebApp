@@ -554,7 +554,7 @@ symptom_synonyms = {
 ],
 
 'acne': [
-    'pimples', 'blemishes', 'zits', 'whiteheads', 'blackheads', 'cystic acne', 'teenage acne', 'adult acne', 'pimple outbreaks', 'clogged pores', 'acne vulgaris', 'skin spots', 
+    'pimples', 'pimple', 'blemishes', 'zits', 'whiteheads', 'blackheads', 'cystic acne', 'teenage acne', 'adult acne', 'pimple outbreaks', 'clogged pores', 'acne vulgaris', 'skin spots', 
     'face pimples', 'hormonal acne', 'acne lesions', 'acne scars', 'clogged follicles', 'sebaceous gland activity', 'oil acne', 'acne on the back', 'acne on the chest'
 ],
 
