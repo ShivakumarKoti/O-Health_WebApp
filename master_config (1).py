@@ -374,36 +374,41 @@ symptom_synonyms = {
         'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
         'pain in the ankle joint', 'pain from ligament strain', 'pain from ankle fracture', 'ankle tenderness', 'pain with ankle instability', 'pain when standing', 
         'pain in ankle tendon', 'pain after running', 'pain from ankle arthritis', 'pain with twisting', 'pain in ankle after jumping', 'pain in the Achilles tendon', 'stabbing pain in ankle',
-        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 'pain when stretching ankle','pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
+        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 
+        'pain when stretching ankle','pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
     ],
      'wrist pain': [
-        'pain in the wrist', 'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist',
+        'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist',
         'tenderness in the wrist', 'pain after wrist injury', 'pain from wrist overuse', 'wrist sprain pain', 'pain in the wrist tendons', 'wrist joint stiffness',
         'pain with wrist movement', 'pain during wrist flexion', 'carpal tunnel syndrome pain', 'pain from arthritis in the wrist', 'pain with wrist rotation', 'pain in the wrist after typing',
         'wrist discomfort from injury', 'pain around wrist bones', 'dull wrist pain', 'pain when lifting objects', 'pain in the wrist after exertion', 'pain from wrist fractures', 'wrist tendonitis pain',
         'pain after hand movements', 'pain in the wrist when gripping', 'pain with wrist extension', 'stiff wrist from overuse', 'sharp sensation in the wrist', 'pain with wrist bending',
-        'swollen joints in the wrist', 'pain around wrist bones after activity'
+        'swollen joints in the wrist', 'pain around wrist bones after activity','pain in wrist', 'pain in wrists', 'pain in the wrist', 'pain in the wrists', 'pain in my wrist', 'pain in my wrists'
+
     ],
     'hand pain': [
-        'hand discomfort', 'pain in the hand', 'aching hand',  'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles',
+        'hand discomfort', 'aching hand',  'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles',
         'pain from hand injury', 'swollen hand', 'pain with hand movement', 'hand strain pain', 'numbness in the hand', 'pain after gripping', 'pain in the thumb', 'pain from arthritis in the hand',
         'pain from carpal tunnel syndrome', 'pain from hand overuse', 'hand joint pain', 'pain from hand sprain', 'pain from tendonitis in the hand', 
         'sharp pain when holding objects', 'burning pain in the hand', 'painful hand cramps', 'dull hand pain', 'pain from hand fracture', 'pain from swelling in the hand', 'joint stiffness in the hand',
-        'pain after using the hand excessively', 'pain when stretching the hand'
+        'pain after using the hand excessively', 'pain when stretching the hand','pain in hand', 'pain in hands', 'pain in the hand', 'pain in the hands', 'pain in my hand', 'pain in my hands'
+
     ],
     'arm pain': [
-        'pain in the arm', 'upper limb pain', 'arm discomfort', 'sharp arm pain', 'throbbing arm pain', 'pain in the forearm', 'pain in the biceps',
+        'upper limb pain', 'arm discomfort', 'sharp arm pain', 'throbbing arm pain', 'pain in the forearm', 'pain in the biceps',
         'pain from arm injury', 'pain from repetitive arm movement', 'pain from tendonitis in the arm','nerve pain in the arm', 'pain in the upper arm muscles',
         'pain from arm sprain', 'pain in the wrist and arm', 'stiffness in the arm', 'swollen arm', 'pain when moving the arm', 'burning pain in the arm', 'aching in the arm', 'arm cramping',
         'pain from lifting with the arm', 'pain when raising the arm', 'pain from overuse of the arm', 'pain from arm fracture', 'pain in the arm muscles after exercise', 'pain from muscle strain in the arm',
-        'pain in the forearm', 'nerve-like pain in the arm', 'pain in the arms', 'pain in my arms'
+        'pain in the forearm', 'nerve-like pain in the arm', 'pain in arm', 'pain in arms', 'pain in the arm', 'pain in the arms', 'pain in my arm', 'pain in my arms'
+
     ],
     'leg pain': [
         'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs', 'pain during walk',
         'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking', 'leg becomes numb',
         'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking', 'legs become numb',
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
-        'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 'pain in the lower leg'
+        'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 
+        'pain in the lower leg', 'pain in leg', 'pain in legs', 'pain in the leg', 'pain in the legs', 'pain in my leg', 'pain in my legs'
     ],
     'confusion': [
         'disorientation', 'muddled thinking', 'mental fog', 'trouble thinking clearly', 'brain fog', 'cognitive cloudiness', 'puzzled state', 'jumbled thoughts', 'incoherent reasoning', 'tangled mental process',
@@ -418,7 +423,8 @@ symptom_synonyms = {
         'hip inflammation', 'pain from hip strain', 'pain from bursitis in the hip', 'pain when moving the hip', 'pain from overuse of the hip', 
         'pain from hip fracture', 'pain after standing for a long time', 'pain from hip surgery', 'pain when lying on the hip', 'pain with hip rotation', 'pain in the side of the hip',
         'pain in the front of the hip', 'hip joint pain', 'pain from hip flexor strain', 'deep hip pain', 'pain from hip dislocation',
-        'pain from muscle strain around the hip'
+        'pain from muscle strain around the hip', 'pain in hip', 'pain in hips', 'pain in the hip', 'pain in the hips', 'pain in my hip', 'pain in my hips'
+
     ],
   
     'memory loss': [
@@ -616,15 +622,14 @@ symptom_synonyms = {
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
-  'bloody urine', 'red urine', 'urine with blood', 'blood-tinged urine', 'blood in the urine stream', 'pink urine',
-    'urinary tract bleeding', 'blood in the urinary tract'
+    'pink urine'
 ],
 
 'blood in urine': [
     'hematuria', 'urinary blood', 'blood in urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 'burning while passing the urine',
-   'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood',
+   'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood','bloody urine', 'red urine',
     'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
-    'visible blood in urine', 'microscopic hematuria'
+    'visible blood in urine', 'microscopic hematuria','blood in the urinary tract'
 ],
 
 'blood in stool': [
@@ -635,16 +640,16 @@ symptom_synonyms = {
 
 'high blood pressure': [
     'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
-    'high diastolic pressure', 'hypertensive condition', 
+    'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure',
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 
     'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP'
 ],
 
 'low blood pressure': [
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
-    'low diastolic pressure', 
+    'low diastolic pressure', 'lower BP', 'lower blood pressure',
     'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure',
-    'BP is low','low blood pressure'
+    'BP is low'
 ],
 
 'excessive thirst': [
@@ -763,10 +768,12 @@ symptom_synonyms = {
 ],
 
 'shoulder pain': [
-    'shoulder discomfort', 'pain in the shoulder', 'shoulder ache', 'sharp shoulder pain', 'dull shoulder pain', 'shoulder stiffness', 'rotator cuff pain','pain in my shoulders',
-    'shoulder joint pain', 'pain in the shoulder joint', 'shoulder strain', 'shoulder injury', 'shoulder inflammation', 'pain in the upper arm', 'pain in the shoulders',
+    'shoulder discomfort', 'pain in the shoulder', 'shoulder ache', 'sharp shoulder pain', 'dull shoulder pain', 'shoulder stiffness', 'rotator cuff pain',
+    'shoulder joint pain', 'pain in the shoulder joint', 'shoulder strain', 'shoulder injury', 'shoulder inflammation', 'pain in the upper arm', 
     'muscle pain in the shoulder', 'shoulder tenderness', 'pain when moving the shoulder', 'shoulder sprain', 'pain in the deltoid', 'shoulder dislocation pain',
-    'pain in the scapula', 'pain after shoulder surgery', 'shoulder impingement pain', 'frozen shoulder', 'pain from shoulder overuse', 'referred shoulder pain'
+    'pain in the scapula', 'pain after shoulder surgery', 'shoulder impingement pain', 'frozen shoulder', 'pain from shoulder overuse', 'referred shoulder pain',
+    'pain in shoulder', 'pain in shoulders', 'pain in the shoulder', 'pain in the shoulders', 'pain in my shoulder', 'pain in my shoulders'
+
 ],
 
 'bone fracture': [
@@ -779,13 +786,15 @@ symptom_synonyms = {
 'back bone issue': [
     'spinal problem', 'back bone pain', 'spinal condition', 'vertebral issue', 'spinal disorder', 'back injury', 'spinal misalignment', 'back bone is paining',
     'disc herniation', 'spinal injury', 'neck and back issues', 'spinal discomfort', 'lumbar pain', 'spinal cord issue', 'slipped disc', 'musculoskeletal disorder',
-    'spinal health issue', 'postural problems', 'spondylosis', 'degenerative disc disease', 'spine misalignment', 'spinal deformity', 'spinal arthritis', 'spinal stenosis'
+    'spinal health issue', 'postural problems', 'spondylosis', 'degenerative disc disease', 'spine misalignment', 'spinal deformity', 'spinal arthritis', 'spinal stenosis',
+    'backbone issue'
 ],
 
 'female issue': [
     'women’s health', 'gynecological issue', 'female reproductive health', 'menstrual problems', 'menstrual irregularities', 'PCOS', 'endometriosis', 'fibroids', 'ovarian cysts',
     'vaginal infection', 'vaginal discharge', 'fertility issues', 'menopause', 'pre menopause', 'post menopause', 'infertility', 'vaginal dryness', 'prolapsed uterus',
-    'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge','female issue','female issues', 'irregular periods'
+    'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge', 'female issues', 'irregular periods', 'woman issue', 'women issue',
+    'woman issues', 'women issues'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
@@ -812,14 +821,14 @@ symptom_synonyms = {
 'vomiting': [
 'food throwing up', 'puking', 'retching',  'projectile vomiting', 'forceful expulsion', 'stomach evacuation',
 'regurgitation', 'gag reflex', 'vomit episode', 'bilious vomiting', 'dry heaving', 'stomach upheaval', 'continuous vomiting', 'acidic vomit', 'vomiting bile',
-'upset stomach leading to vomiting', 'cyclic vomiting', 'food rejection', 'vomit', 'recurrent vomiting', 'violent vomiting',
+'upset stomach leading to vomiting', 'cyclic vomiting', 'food rejection', 'vomit', 
 'digestive tract expulsion', 'vomiting sensation', 
-'vomiting reflex', 'vomiting from food poisoning', 'travel sickness vomiting', 'chronic vomiting episodes', 'sudden vomiting', 'intense vomiting', 'frequent retching'
+'vomiting reflex', 'vomiting from food poisoning', 'travel sickness vomiting', 'chronic vomiting episodes', 'frequent retching'
 ],
 
 'hearing loss': [
 'loss of hearing', 'partial hearing loss', 'complete hearing loss', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability',
-'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low',
+'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low', 'not hearing', 'unable to hear', 
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma',
@@ -830,10 +839,10 @@ symptom_synonyms = {
 'bone pain': [
 'bone tenderness', 'bone swelling', 'aching bones', 'bone discomfort', 
 'throbbing bone sensation', 'bone sensitivity', 'bone ache during movement', 'bone bruising', 'bone soreness', 
-'fracture-related bone pain', 'joint and bone pain', 'dull bone ache', 'piercing bone pain', 'bone pain during rest', 'bone pain under pressure', 'bone stiffness',
-'osteopathic pain', 'bone fragility pain', 'bone strain', 'bone inflammation', 'tender bone surface', 'aching joints and bones',
-'deep-seated bone ache', 'bone discomfort while standing', 
-'bone tenderness to touch', 'sensitive bone tissue', 'bone marrow pain', 'bone pain during activity',
+'fracture-related bone pain', 'joint and bone pain', 'dull bone ache', 'piercing bone pain', 'bone pain during rest', 'bone pain under pressure', 
+'bone stiffness', 'osteopathic pain', 'bone fragility pain', 'bone strain', 'bone inflammation', 'tender bone surface', 'aching joints and bones',
+'deep-seated bone ache', 'bone discomfort while standing', 'pain in bone', 'pain in bones', 'pain in the bone', 'pain in the bones', 'pain in my bone', 
+'pain in my bones', 'bone tenderness to touch', 'sensitive bone tissue', 'bone marrow pain', 'bone pain during activity',
 'osteoporosis-related bone pain', 'bone pain with movement', 'skeletal pain', 'acute bone discomfort', 'bone stress pain',
 'intense bone ache', 'stiff bone joints', 'localized skeletal pain'
 ],
@@ -905,35 +914,33 @@ symptom_synonyms = {
 'sugar': ['sugars', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
 
   'waist pain': [
-    'pain in the waist', 'waist discomfort', 'waist ache', 
+    'pain in the waist', 'waist discomfort', 'waist ache', 'pain in waist', 'pain in waists', 'pain in the waist', 
+    'pain in the waists', 'pain in my waist', 'pain in my waists',
     'throbbing waist pain', 'pain from waist injury', 'pain in the lower torso', 'pain around the belt line',
     'pain from tight waistband', 'pain from muscle strain in waist', 'pain from overuse of waist muscles',
     'waist pain when bending', 'waist pain when twisting', 'pain with waist movement', 'aching waist',
-    'pain in the sides of the waist', 'pain from lifting heavy objects','difficulty in bending', 'difficult to bend','hard to bend',
-    'waist pain after exercise', 'pain in the waist and hips', 'pain from spinal issues near waist',
-    'pain in waist and lower back', 'pain from herniated disc near waist', 'pain after prolonged sitting',
+    'pain in the sides of the waist', 'difficulty in bending', 'difficult to bend','hard to bend',
+    'pain from herniated disc near waist', 'pain after prolonged sitting',
     'waist stiffness and pain', 'burning sensation in waist', 'pinching pain in waist',
     'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
-    'pain when walking from waist', 'pain from waist inflammation','pain in waists',
+    'pain when walking from waist', 'pain from waist inflammation',
     'pain after running affecting waist',  'pain in back near waist', 'waist region pain', 'pain in the side of the waist'
 ],
 
 'thigh pain': [
-    'pain in the thigh', 'thigh discomfort', 'thigh ache', 'burning pain in thigh',
-    'throbbing thigh pain', 'pain from thigh injury', 'pain in upper leg', 'pain in front of thigh',
+    'thigh discomfort', 'thigh ache', 'burning pain in thigh', 'pain in thigh', 'pain in thighs', 'pain in the thigh', 'pain in the thighs',
+    'pain in my thigh', 'pain in my thighs', 'throbbing thigh pain', 'pain from thigh injury', 'pain in upper leg', 'pain in front of thigh',
     'pain in back of thigh', 'inner thigh pain', 'outer thigh pain', 'pain in upper thigh muscles',
     'pain from pulled thigh muscle', 'pain from thigh strain', 'pain from hamstring injury',
-    'pain from quadriceps strain', 
-    'cramping in the thigh', 'pain from thigh overuse', 'sore thigh', 'tightness in thigh',
+    'pain from quadriceps strain', 'cramping in the thigh', 'pain from thigh overuse', 'sore thigh', 'tightness in thigh',
     'pain radiating to thigh', 'thigh muscle contraction',
-    'pain after leg workout', 'pain from nerve compression in thigh', 'deep thigh pain',
     'muscle soreness in thigh', 'pain after stretching thigh', 'aching in thigh area',
     'pain in thigh after injury', 'pain in thigh after standing long',
     'pain from blood clot in thigh', 'pain in both thighs'
 ],
 
 'calf pain': [
-    'pain in the calf', 'calf discomfort', 'calf ache', 
+    'calf discomfort', 'calf ache', 'pain in calf', 'pain in calves', 'pain in the calf', 'pain in the calves', 'pain in my calf', 'pain in my calves',
     'burning pain in calf', 'cramping in calf', 'tightness in calf', 'pain in back of lower leg',
     'calf muscle pain', 'pain from calf strain', 'pain from pulled calf muscle', 'pain after calf workout',
     'calf soreness after exercise', 'pain from overuse of calf muscles',
@@ -943,22 +950,20 @@ symptom_synonyms = {
 ],
 
 'elbow pain': [
-    'pain in the elbow', 'elbow discomfort', 'elbow ache', 'throbbing pain in elbow',
-    'pain in outer elbow', 'pain in inner elbow',
-    'elbow joint pain', 'elbow soreness', 'pain from tennis elbow', 'pain from golfer’s elbow',
-    'pain from elbow strain', 
+    'pain in the elbow', 'elbow discomfort', 'elbow ache', 'throbbing pain in elbow', 'pain in outer elbow', 'pain in inner elbow',
+    'elbow joint pain', 'elbow soreness', 'pain from tennis elbow', 'pain from golfer’s elbow', 'pain from elbow strain', 
     'elbow pain during lifting', 'pain in elbow when twisting', 'pain from overuse of elbow',
-    'tingling in elbow with pain', 'elbow pain from repetitive motion', 'elbow pain from arthritis',
-    'pain around the elbow', 'elbow pain from tendinitis',
-    'pain from bursitis in elbow', 
-    'elbow pain after throwing', 'radiating pain from elbow to forearm', 
-    'pain behind the elbow', 'pain on top of the elbow', 'pain under the elbow',
+    'tingling in elbow with pain', 'elbow pain from repetitive motion', 'elbow pain from arthritis', 'pain around the elbow', 'elbow pain from tendinitis',
+    'pain from bursitis in elbow', 'pain in elbow', 'pain in elbows', 'pain in the elbow', 'pain in the elbows', 'pain in my elbow', 'pain in my elbows',
+    'elbow pain after throwing', 'radiating pain from elbow to forearm', 'pain behind the elbow', 'pain on top of the elbow', 'pain under the elbow',
     'pain in elbow crease'
 ],
 
 'pelvic pain': [
-    'pain in the pelvis', 'pelvis discomfort', 'pelvic ache', 'lower abdominal pain', 'cramping in pelvis', 'pain in lower abdomen and pelvis',
-    'pelvic pressure and pain', 'aching pelvis', 'pelvic muscle pain', 'pelvic joint pain', 'pelvic bone pain', 'burning sensation in pelvis'
+    'pelvis discomfort', 'pelvic ache', 'lower abdominal pain', 'cramping in pelvis', 'pain in lower abdomen and pelvis',
+    'pelvic pressure and pain', 'aching pelvis', 'pelvic muscle pain', 'pelvic joint pain', 'pelvic bone pain', 'burning sensation in pelvis',
+    'pain in pelvic', 'pain in pelvis', 'pain in the pelvic', 'pain in the pelvis', 'pain in my pelvic', 'pain in my pelvis'
+
 ],
 
 'tingling': [
