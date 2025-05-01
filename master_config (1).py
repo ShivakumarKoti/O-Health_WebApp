@@ -310,7 +310,7 @@ symptom_synonyms = {
         'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
         'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain near the jawline',
         'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the jaw', 'pain with jaw movement',
-        'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw pain from stress', 'jaw swelling', 'pain when yawning',
+        'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw swelling', 'pain when yawning',
         'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
         'pain after jaw surgery', 'pain during biting','pain in jaw', 'pain in jaws', 'pain in the jaw', 'pain in the jaws', 'pain in my jaw', 'pain in my jaws'
 
@@ -716,7 +716,7 @@ symptom_synonyms = {
     'emotional swing', 'mood fluctuation', 'emotional rollercoaster', 'mood shift', 'mood change', 'mood variation', 'mood disorder',
     'rapid mood change', 'emotional instability', 'mood instability', 'mood alteration', 'emotional shift', 'temper fluctuation',
     'emotional lability', 'mood fluctuations', 'unstable mood', 'irregular mood', 'affective swing', 'mood imbalance', 'emotional outbursts',
-    'highs and lows', 'emotional extremes','mood is low','mood is very low'
+    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad'
 ],
 
 'difficulty concentrating': [
@@ -840,7 +840,8 @@ symptom_synonyms = {
 ],
 
 'weight gain': [
-'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 
+'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 
+ 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 'gaining weight', 'gained weight',
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
