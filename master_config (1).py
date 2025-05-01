@@ -350,7 +350,7 @@ symptom_synonyms = {
         'chest heaviness', 'pain in the breastbone', 'pain radiating from chest',  'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
         'sharp stabbing pain in chest', 'chest tightness', 'pain under the sternum', 'pain when breathing deeply', 'feeling of chest pressure', 'pain from pulmonary issues', 'heart-related chest pain',
         'sharp pain in the breastbone', 'radiating chest discomfort', 'pain from costochondritis', 'pain from muscle strain in chest', 'deep chest discomfort', 
-        'pain in the upper left chest', 'pain when lying down', 'sore chest', 'tightness in my chest',
+        'pain in the upper left chest', 'pain when lying down', 'sore chest', 'tightness in my chest','burning sensation in chest','burning sensation in the chest',
         'pain in the center of the chest', 'pain from chest cold', 'pain in the chest while breathing', 'sore chest area', 'pain in the left side of the chest', 'pain from coughing', 'pain from deep breathing'
     ],
 
