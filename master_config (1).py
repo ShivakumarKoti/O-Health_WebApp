@@ -387,7 +387,7 @@ symptom_synonyms = {
 
     ],
     'hand pain': [
-        'hand discomfort', 'aching hand',  'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles',
+        'hand discomfort', 'aching hand',  'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles','hand is broken',
         'pain from hand injury', 'swollen hand', 'pain with hand movement', 'hand strain pain', 'numbness in the hand', 'pain after gripping', 'pain in the thumb', 'pain from arthritis in the hand',
         'pain from carpal tunnel syndrome', 'pain from hand overuse', 'hand joint pain', 'pain from hand sprain', 'pain from tendonitis in the hand', 
         'sharp pain when holding objects', 'burning pain in the hand', 'painful hand cramps', 'dull hand pain', 'pain from hand fracture', 'pain from swelling in the hand', 'joint stiffness in the hand',
