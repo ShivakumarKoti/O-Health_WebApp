@@ -8712,6 +8712,58 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
+ "urine issues": [
+  {
+    "hi": "क्या आपको पेशाब करते समय जलन या दर्द होता है?",
+    "en": "Do you feel a burning sensation or pain while urinating?",
+    "category": "urine issues",
+    "symptom": "urine issues",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी पेशाब का रंग सामान्य से अलग है (जैसे गहरा पीला, लाल या बदरंग)?",
+    "en": "Is the color of your urine different from normal (e.g., dark yellow, red, or cloudy)?",
+    "category": "urine issues",
+    "symptom": "urine issues",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी पेशाब से दुर्गंध आती है?",
+    "en": "Does your urine have a strong or unusual odor?",
+    "category": "urine issues",
+    "symptom": None,
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको पेशाब में खून दिखा है?",
+    "en": "Have you noticed blood in your urine?",
+    "category": "urine issues",
+    "symptom": "blood in urine",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको मधुमेह (डायबिटीज़) है?",
+    "en": "Do you have diabetes?",
+    "category": "urine issues",
+    "symptom": "diabetes",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपने हाल ही में पानी या तरल पदार्थ कम पिया है?",
+    "en": "Have you recently been drinking less water or fluids?",
+    "category": "urine issues",
+    "symptom": None,
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपको बार-बार पेशाब आने के साथ-साथ अधूरी पेशाब महसूस होती है?",
+    "en": "Do you feel the urge to urinate frequently but pass only a small amount each time?",
+    "category": "urine issues",
+    "symptom": "urine issues",
+    "risk_factor": False,
+  },
+],
+
 
 
 
