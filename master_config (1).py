@@ -98,12 +98,12 @@ symptom_synonyms = {
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'sharp abdominal pain', 'dull abdominal pain',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'discomfort after meals',
         'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'feeling of indigestion', 'pain around stomach area', 'belly pain', 'pain in the abdomen', 'stomach discomfort',
-        'dull abdominal pain', 'cramping in the abdomen', 
+        'dull abdominal pain', 'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
         'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
         'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from ulcers', 'pain from bloating', 'pain from food intolerance',
-        'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'pain from diarrhea', 'stomach flu pain', 'pain in the lower abdomen',
+        'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'stomach flu pain', 'pain in the lower abdomen',
         'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'abdominal swelling with pain', 
-        'pain with digestive issues', 'pain from food poisoning', 'pain from gallbladder issues', 'pain from acid reflux','pain in stomach'
+        'pain with digestive issues', 'pain from food poisoning'
     ],
     'weakness': [
         'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open',
@@ -114,7 +114,7 @@ symptom_synonyms = {
         'feeling nauseous', 'upset stomach', 'queasy', 'stomach turning', 'sick feeling', 'feeling like vomiting', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
         'uneasy stomach', 'upset belly', 'intense queasiness', 'morning sickness feeling',
-        'stomach discomfort', 'stomach churn', 'constant nausea', 'puking feeling', 'feeling like you could throw up',
+        'stomach discomfort', 'stomach churn', 'puking feeling', 'feeling like you could throw up',
         'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease','nauseous',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
