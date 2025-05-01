@@ -15,7 +15,7 @@ symptom_list = [
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice'
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice','hand dryness', 'wound', 'body ache','bruises',
 
 
 # weakness symtom
@@ -865,8 +865,8 @@ symptom_synonyms = {
 ],
 
 'injury': [
-'injured', 'wound', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury', 'fallen from stairs',
-'cut', 'abrasion', 'laceration', 'contusion', 'puncture wound', 'injuries','injure', 'fell down from stairs','fell down', 'injuries',
+'injured', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury', 'fallen from stairs',
+'cut', 'abrasion', 'laceration', 'contusion', 'injuries','injure', 'fell down from stairs','fell down'
 ],
 
 'jaundice': [
@@ -929,7 +929,7 @@ symptom_synonyms = {
     'pain radiating to thigh', 'thigh muscle contraction',
     'pain after leg workout', 'pain from nerve compression in thigh', 'deep thigh pain',
     'muscle soreness in thigh', 'pain after stretching thigh', 'aching in thigh area',
-    'pain in thigh after injury', 'pain from thigh bruise', 'pain in thigh after standing long',
+    'pain in thigh after injury', 'pain in thigh after standing long',
     'pain from blood clot in thigh', 'pain in both thighs'
 ],
 
