@@ -869,7 +869,7 @@ symptom_synonyms = {
 'itching': [
 'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itchy rash','itching',
 'burning itch', 'itching with redness', 'itching from dryness', 'irritated skin itch', 'tickling skin sensation',
-'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters',
+'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters', 'itchiness'
 ],
 
 'injury': [
