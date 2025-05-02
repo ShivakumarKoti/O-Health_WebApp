@@ -1072,7 +1072,7 @@ symptom_synonyms = {
 ],
 'body ache': [
     'body pain', 'aching body', 'muscle ache', 'general pain', 'bodyache',
-    'whole body ache', 'sore body', 'body discomfort', 'all-over ache', 'overall body pain'
+    'whole body ache', 'sore body', 'body discomfort', 'all-over ache', 'overall body pain',
     'aching all over', 'body aches', 'bodyaches', 'body pains', 'pain in body', 'pain all over body'
 ],
 'bruises': [
