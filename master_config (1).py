@@ -30,7 +30,7 @@ symptom_synonyms = {
   'back spasm': [
         'back is spasming', 'back spasms', 'back spasm', 'spinal contraction', 'muscle cramp in back', 'tight back muscles', 'back tightening', 'muscle spasm in lower back', 'spine spasming',
         'back muscle jerk', 'severe back cramp', 'spine knot', 'muscle twitch in back', 'spinal spasm', 'back stiffening', 'lower back stiffness', 'muscle contraction in back', 'back cramping',
-        'muscle twitching in spine', 'sharp spasms in back', 'spine twinge', 'muscle jerking in back',
+        'muscle twitching in spine', 'sharp spasms in back', 'spine twinge', 'muscle jerking in back', 'back spasms', 'backspasm',
         'painful back convulsion', 'tense back', 'tightness in back', 'cramping back muscles', 'pulled back muscle', 'cramped spine', 'jerking back muscles', 'painful back tightening',
         'spinal muscle strain', 'back tension', 'muscle knots in back', 'spine tightening pain', 'painful back stiffness', 'spinal muscles seizing', 'back spasm attack', 'muscle discomfort in back',
         'intense back strain', 'stiffened spine', 'spinal muscles hardening', 'back contorting', 'back stiffness attack', 'back muscle tension', 'back pain with spasms', 'spasm in the back',
@@ -252,12 +252,12 @@ symptom_synonyms = {
         'soreness in ear cavity', 'ear with pain', 'throbbing sensation in ear', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
     ],
     'back pain': [
-        'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back',  
-        'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache from lifting',
+        'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back', 'back ache',
+        'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache',
         'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain',
         'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine','stiffness in my back',
         'pinched nerve in back', 'back spasms', 'pain when bending', 'pain while standing up', 'pressure in upper back', 'burning pain in the back', 'pain in the sacral region',
-        'stiffness in back','backpain', 'pain in my back', 'sore back', 
+        'stiffness in back','backpain', 'pain in my back', 'sore back', 'pain all over my back',
         'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
