@@ -443,7 +443,7 @@ symptom_synonyms = {
         'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything'
     ],
   'hallucination': [
-    'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination',
+    'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions',
     'perceptual distortion', 'false sensory experience', 'phantom perception', 'psychotic episode', 'imagined sight', 'imagined sound', 'mind illusion',
     'sensory misperception', 'hallucinatory experience', 'out-of-body experience', 'visual illusion', 'auditory illusion', 'mental delusion', 'altered reality'
 ],
@@ -640,7 +640,7 @@ symptom_synonyms = {
 
 'high blood pressure': [
     'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
-    'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure',
+    'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 
     'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP'
 ],
@@ -861,7 +861,7 @@ symptom_synonyms = {
 'localized skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
 'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'nerve-related burning', 'itchy burning skin', 'skin damage from burn',
 'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface', 'burning sensation on the skin', 'burning sensation on the skin',
-'red inflamed skin', 'skin discomfort from heat', 'skin chafing burn', 'sensitive skin after burn',
+'red inflamed skin', 'skin discomfort from heat', 'skin chafing burn', 'sensitive skin after burn', 'burning sensation in the skin',
 'stinging skin pain', 'skin burn from chemicals', 'skin damage sensation', 'skin peeling from burn', 
 'lingering skin burn', 'burnt skin tenderness', 'skin hot spot'
 ],
