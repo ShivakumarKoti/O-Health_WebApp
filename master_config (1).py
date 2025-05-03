@@ -496,7 +496,7 @@ symptom_synonyms = {
 ],
 
 'cramp': [
-    'paining cramp', 'cramped muscle', 'cramping sensation', 'cramping'
+    'paining cramp', 'cramped muscle', 'cramping sensation', 'cramping', 'cramps'
 ],
 
 'bleeding': [
