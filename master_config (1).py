@@ -838,13 +838,13 @@ symptom_synonyms = {
 ],
 
 'hearing loss': [
-'loss of hearing', 'partial hearing loss', 'complete hearing loss', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability',
-'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low', 'not hearing', 'unable to hear', 
+'loss of hearing', 'lost hearing', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability', 'deaf',
+'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low', 'not hearing', 'unable to hear', 'one ear not listening',
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
-'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma',
+'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma', 'ears not listening',
 'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
-'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss',
+'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss'
 ],
 
 'bone pain': [
@@ -878,7 +878,7 @@ symptom_synonyms = {
 ],
 
 'itching': [
-'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itchy rash','itching',
+'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itchy rash','itching', 'itchy',
 'burning itch', 'itching with redness', 'itching from dryness', 'irritated skin itch', 'tickling skin sensation',
 'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters', 'itchiness'
 ],
@@ -1028,7 +1028,7 @@ symptom_synonyms = {
 
 'obesity': [
     'obese', 'high body mass index (BMI)','fatty tissue buildup', 'high levels of body fat', 'weight-related health issues',
-    'BMI is higher', 'high BMI'
+    'BMI is higher', 'high BMI', 'BMI excess'
 ],
 
 'ulcers': [
@@ -1073,7 +1073,7 @@ symptom_synonyms = {
     'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
  'hand dryness': [
-    'dry hands', 'chapped hands', 'rough hands', 'flaky hands',
+    'dry hands', 'chapped hands', 'rough hands', 'flaky hands', 'hands are dry' , 'hand is dry',
     'dehydrated hands', 'cracked skin on hands', 'dry skin on hands',
     'scaly hands', 'itchy dry hands'
 ],
@@ -1082,7 +1082,7 @@ symptom_synonyms = {
     'skin break', 'gash', 'lesion', 'puncture wound', 'tear in skin'
 ],
 'body ache': [
-    'body pain', 'aching body', 'muscle ache', 'general pain', 'bodyache',
+    'body pain', 'aching body', 'muscle ache', 'general pain', 'bodyache', 'aching body',
     'whole body ache', 'sore body', 'body discomfort', 'all-over ache', 'overall body pain',
     'aching all over', 'body aches', 'bodyaches', 'body pains', 'pain in body', 'pain all over body'
 ],
