@@ -215,7 +215,7 @@ symptom_synonyms = {
    'diarrhea': [
         'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
         'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement',
-        'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements',
+        'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements', 'diarrhoea',
         'diarrheal episode', 'loose stool rush', 'pale watery stools', 'intestinal upset', 'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
         'constantly running to the bathroom', 'liquid-filled intestines', 'intense gastrointestinal upset', 'abnormally frequent bowel movements', 'severe bowel looseness', 'bowel irregularity',
         'liquid stools', 'stomach upset'
