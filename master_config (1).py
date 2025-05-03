@@ -37,7 +37,7 @@ symptom_synonyms = {
         'back locked up','back clenched up'
     ],
     'headache': [
-        'head pain', 'throbbing headache', 'pounding head', 'migraine-like ache', 'cranial ache', 'head pressure', 
+        'head pain', 'throbbing headache', 'pounding head', 'migraine-like ache', 'cranial ache', 'head pressure', 'pressure on the head', 'pressure in the head',
         'hammering pain in skull', 'aching brain', 'full-head ache', 'temple-throbbing pain', 'dull ache behind eyes', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
         'relentless cranial pounding', 'forehead-tightening discomfort', 'vice-like grip on head', 'pulsating headache', 'dull throb', 'piercing head agony', 'continuous headache hum', 'low-level head strain',
         'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp', 'brain-squeezing feeling', 'top-heavy ache', 'all-encompassing head discomfort', 'band-like pressure around head',
@@ -57,11 +57,11 @@ symptom_synonyms = {
     'allergy': [
         'allergies', 'allergic reaction', 'allergic response', 'allergic rhinitis', 'pollen sensitivity', 'dust mite allergy', 'food allergy', 'skin allergy', 'seasonal allergies',
         'environmental allergies', 'allergic condition', 'allergic response to pollen', 'sensitive to allergens', 'sneezing due to allergies', 'wheezing from allergic reaction',
-        'swollen nasal passages', 'runny nose from allergies', 'sinus congestion from allergies', 'allergic rashes', 'eczema flare-up', 'hives', 'itchy skin from allergens', 'swollen face from allergies',
+        'swollen nasal passages', 'runny nose from allergies', 'sinus congestion from allergies', 'allergic rashes', 'eczema flare-up', 'hives', 'itchy skin from allergens', 
         'respiratory allergy', 'allergic reactions in skin', 'excessive histamine release', 'redness from allergy', 'swollen throat from allergies', 'asthma attack triggered by allergens', 'increased mucus production',
-        'throat irritation due to allergens', 'difficulty breathing from allergies', 'sneezing fits due to pollen', 'allergic asthma', 'seasonal allergic reactions', 'itchy nose', 'nasal discharge from allergies',
-        'blocked sinuses', 'itchy throat from allergies', 'dry throat from allergies', 'allergy flare-up', 'anaphylactic reaction', 'anaphylaxis', 'allergic dermatitis', 'rashes from allergens', 'swelling of lips',
-        'swollen tongue', 'red eyes from allergies', 'tearing eyes from allergies', 'itchy and watery eyes'
+        'throat irritation due to allergens', 'difficulty breathing from allergies', 'sneezing fits due to pollen', 'allergic asthma', 'seasonal allergic reactions',  'nasal discharge from allergies',
+        'blocked sinuses', 'itchy throat from allergies', 'dry throat from allergies', 'allergy flare-up', 'anaphylactic reaction', 'anaphylaxis', 'allergic dermatitis', 'rashes from allergens', 
+        'swollen tongue', 'red eyes from allergies', 'itchy and watery eyes'
     ],
     'fever': [
         'high temperature', 'elevated body temperature', 'feeling feverish', 'fevering', 'running a fever', 'burning up', 'feeling internally hot', 'having a temperature', 'spiking a fever', 'febrile state',
@@ -89,27 +89,33 @@ symptom_synonyms = {
         'gritty throat', 'tender throat', 'raspy throat', 'dry throat', 'throat burning sensation', 'feeling of throat swelling', 'pain on swallowing', 'raw feeling in throat',
         'sore feeling when talking', 'throat soreness', 'painful swallowing', 'constant throat irritation', 'throat muscle soreness', 'tight feeling in throat',
         'throat dryness', 'itchy throat', 'burning sensation in throat', 'scratching feeling in throat', 'tenderness in throat', 'chronic throat discomfort', 'raspiness in voice',
-        'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness'
+        'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'throat is sore'
     ],
     'stomach pain': [
-        'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 
+        'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 'pain inside the stomach',
         'sharp stomach pain', 'stomach tenderness', 'sharp abdominal cramps', 'abdominal tenderness', 'intestinal bloating', 'tummy pain', 'swollen belly',
-        'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 
-        'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'sharp abdominal pain', 'dull abdominal pain',
-        'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'discomfort after meals',
-        'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'feeling of indigestion', 'pain around stomach area', 'belly pain', 'pain in the abdomen', 'stomach discomfort',
-        'dull abdominal pain', 'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
+        'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 'pain inside the abdomen',
+        'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'pain in the lower abdomen',
+        'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'pain in the abdomen', 'stomach discomfort',
+        'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'feeling of indigestion', 'pain around stomach area', 'belly pain', 
+        'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
         'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
-        'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from ulcers', 'pain from bloating', 'pain from food intolerance',
-        'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'stomach flu pain', 'pain in the lower abdomen',
-        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'sharp abdominal cramps', 'abdominal swelling with pain', 
+        'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from bloating', 'pain from food intolerance',
+        'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'stomach flu pain', 
+        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'abdominal cramps', 'abdominal swelling with pain', 
         'pain with digestive issues', 'pain from food poisoning'
     ],
-    'weakness': [
-        'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open',
-        'lack of vitality', 'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements',
-        'lacking strength', 'feeling disconnected'
-    ],
+   'weakness': [
+    'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
+    'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
+    'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements', 'lacking strength', 
+    'body feels heavy', 'brain fog', 'struggling to stay awake', 'can’t focus due to fatigue', 'slow to move', 'slow to think',
+    'exhausted no matter how much I sleep', 'general weakness', 'barely functioning', 'worn out', 'can’t get out of bed',
+    'out of energy', 'lack of strength in limbs', 'sluggish reaction time','trouble keeping eyes open during the day', 
+    'body feels like lead', 'can’t finish daily tasks', 'short bursts of energy followed by crashes',
+    'muscle weakness without exertion', 'tired even after sleeping well'
+],
+
     'nausea': [
         'feeling nauseous', 'upset stomach', 'queasy', 'stomach turning', 'sick feeling', 'feeling like vomiting', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
@@ -119,18 +125,18 @@ symptom_synonyms = {
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
     ],
     'dizziness': [
-        'Lightheadedness', 'woozy sensation', 'spinning feeling', 'off-balance', 'unsteady', 'giddy feeling', 'vertiginous sensation',
+        'Lightheadedness', 'woozy sensation', 'spinning feeling', 'off-balance', 'unsteady', 'giddy feeling', 'vertiginous sensation', 
         'wobbly feeling', 'swaying in mind', 'head swimming', 'feeling as if room is turning', 'disoriented equilibrium', 'teetering sense', 'tipsy sensation without alcohol',
         'floating head', 'unstable ground feeling', 'swirling environment', 'sense of being on a boat', 'loss of spatial orientation', 'drifting balance',
         'feeling like I might topple', 'wavy floor sensation', 'heady unsteadiness', 'murky equilibrium', 'airy head sensation', 'constant near-tip-over feeling', 'mental wobble',
-        'gravity shifting under feet', 'seasick feeling on land', 'fuzzy-headed instability', 'dizzy',
+        'gravity shifting under feet', 'seasick feeling on land', 'fuzzy-headed instability', 'dizzy', 
         'wavy-field-of-view sensation', 'lurching environment', 'faltering steadiness', 'delicately balanced but slipping', 'rubbery legs feeling', 'giddy swirl in head',
         'tilting world', 'swaying sensation', 'imbalance feeling', 'shaky equilibrium', 'spinning sensation', 'feeling off-kilter'
     ],
 
     'shortness of breath': [
-        'shortness of breath', 'breathlessness', 'difficulty breathing', 'feeling air hunger',  'shallow breathing', 'gasping for air',
-        'labored breathing', 'struggling to breathe', 'feeling suffocated', 'cannot catch my breath', 'panting heavily', 'air feeling thin',
+        'shortness of breath', 'breathlessness', 'difficulty breathing', 'feeling air hunger',  'shallow breathing', 'gasping for air', 'less breath happening', 'lower breathing',
+        'labored breathing', 'struggling to breathe', 'feeling suffocated', 'cannot catch my breath', 'panting heavily', 'air feeling thin', 'breathing struggle', 'lack of oxygen',
         'lungs working overtime', 'chest feels restricted', 'fighting for each breath', 'difficulty in breathing', 'strained respiration', 'feeling smothered', 'desperate for oxygen',
         'winded easily', 'constant puffing', 'breathing feels blocked', 'inhaling with effort', 'forced breathing', 'breathless', 'sensation of drowning in open air',
         'chest heaviness on breathing', 'incomplete lung expansion', 'inadequate airflow', 'lungs not filling properly', 'needing to breathe harder', 'stuck in half-breath',
@@ -138,11 +144,20 @@ symptom_synonyms = {
         'muscle effort just to breathe', 'chest oppression', 'suffocating sensation even in open space', 'feeling strangled by lack of air', 'restrictive breathing pattern',
         'breathing feels like pushing through a straw', 'air-starved lungs', 'cannot take a deep breath', 'strained oxygen intake', 'feeling like each breath is a struggle',
         'never fully satisfied inhalation', 'gasping between words', 'needy breathing pattern', 'barely pulling in enough air', 'lungs working at half capacity', 'respiratory distress',
-        'continuous short-windedness'
+        'continuous short-windedness', 'lack of breath', 'shortage of breath', ' breath shortage', 'light breathing', 'mild breathing', 'unable to breathe',
+        'lacking breath','can\’t breathe deeply', 'can\’t take my breath', 'can\’t breathe','breathing rate is low', 'breathing rate is slow'
     ],
    'rapid breathing': [
-         'heavy breathing', 'fast breathing', 'heart skipping beats', 'heart begins to beat faster','heart begins to beat fast'
-    ],
+    # Original entries
+    'heavy breathing', 'fast breathing', 'heart skipping beats', 'heart begins to beat faster', 'heart begins to beat fast',
+    'breathing feels rushed', 'breathing heavily after little effort',
+    'quickened breath', 'rapid chest movement', 'breathing faster', 'increased breathing rate', 'breathing rate is high',
+    'feeling winded', 'hyperventilating', 'hard to slow down breathing', 'chest rising quickly', 'labored rapid breaths',
+    'breathing feels out of control', 'feeling like I’m suffocating',  'lungs working overtime', 'breathing feels unnatural',
+    'breathing in short bursts', 'breathing too fast to speak properly', 'racing heart and fast breathing', 
+    'anxious breathing', 'fluttering heartbeat with fast breath', 'heart pounding and rapid breath'
+]
+
     'muscle pain': [
         'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle cramps',
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
