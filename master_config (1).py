@@ -148,7 +148,6 @@ symptom_synonyms = {
         'lacking breath','can\’t breathe deeply', 'can\’t take my breath', 'can\’t breathe','breathing rate is low', 'breathing rate is slow'
     ],
    'rapid breathing': [
-    # Original entries
     'heavy breathing', 'fast breathing', 'heart skipping beats', 'heart begins to beat faster', 'heart begins to beat fast',
     'breathing feels rushed', 'breathing heavily after little effort',
     'quickened breath', 'rapid chest movement', 'breathing faster', 'increased breathing rate', 'breathing rate is high',
@@ -161,16 +160,16 @@ symptom_synonyms = {
     'muscle pain': [
         'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle cramps',
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
-        'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle',
+        'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle','pain inside the muscles',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
-        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches',
+        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches', 'pain inside the muscle',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
         'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle','pain in the muscles', 'pain in my muscle', 'pain in my muscles'
     ],
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
         'early morning wakefulness', 'poor sleep quality', 'sleep deprivation', 'sleep disturbance', 'trouble staying asleep', 'sleep interruptions', 'unable to sleep through the night',
-        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'can\'t sleep',
+        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'can\'t sleep', 'sleep not coming',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
         'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep'
@@ -178,12 +177,12 @@ symptom_synonyms = {
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
         'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
-        'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction',
+        'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'rashes', 'skinrash',
         'rashes from medication', 'painful itching on skin'
     ],
     'congestion': [
         'nasal congestion', 'blocked nose', 'stuffy nose', 'clogged nasal passages', 'nasal obstruction', 'sinus blockage', 'stuffy sinuses', 'pressure in sinuses',
-        'nasal blockage', 'swollen nasal passages', 'congested sinuses', 'nose congestion', 'nasal stuffiness', 'head congestion',
+        'nasal blockage', 'swollen nasal passages', 'congested sinuses', 'nose congestion', 'nasal stuffiness', 'head congestion', 'nose got blocked', 'nose is blocked',
         'swelling of nasal tissues', 'sinus pressure', 'stuffy feeling in head', 'congestion in sinus cavities', 'nasal stuffy feeling',
         'inflamed nasal passages', 'feeling of a blocked nose', 'swollen nostrils', 'nasal airway blockage', 'sinus drainage blockage',
         'clogged airways', 'excess mucus in nose', 'thick mucus in nostrils', 'nasal obstruction from mucus', 'inability to breathe through nose',
@@ -191,16 +190,16 @@ symptom_synonyms = {
         'nasal fullness', 'pressure behind the eyes from congestion', 'nasal sinus blockage', 'nasal breathing difficulties', 'nose is closed'
     ],
     'runny nose': [
-        'nasal discharge', 'drippy nose', 'clear runny nose', 'watery nose', 'excessive mucus secretion', 'nose dripping', 'watery nasal discharge', 'runny mucus from nose',
+        'nasal discharge', 'drippy nose', 'clear runny nose', 'watery nose', 'excessive mucus secretion', 'nose dripping', 'watery nasal discharge', 'mucus from nose',
         'frequent nose blowing', 'excessive snot', 'thin nasal discharge', 'clear mucus', 'constant nose drip', 'streaming nose', 'watery runny nose', 'mucus dripping down from nose',
         'nose running uncontrollably', 'sticky nasal discharge', 'clear discharge from nostrils', 'frequent nasal wiping', 'constant nasal leaks', 'draining sinuses',
-        'constant nasal secretions', 'wet nose', 'nose discharge', 'sinus leakage', 'flowing nose', 'uncontrolled nasal discharge',
-        'dripping from nostrils', 'clogged but dripping nose', 'excessive mucus from nostrils', 'constant nasal drip',
+        'constant nasal secretions', 'wet nose', 'nose discharge', 'sinus leakage', 'flowing nose', 'uncontrolled nasal discharge', 'nose leakage', 'mucus leaking',
+        'dripping from nostrils', 'clogged but dripping nose', 'excessive mucus from nostrils', 'constant nasal drip', 'nose leaking', 'mucus nose', 'mucus leakage',
         'dripping sinuses', 'mucus continuously dripping', 'snotty nose', 'stuffy nose with runny discharge','dripping all day long'
     ],
     'sneezing': [
-        'sneezes', 'repetitive sneezes', 'unstoppable nasal explosions', 'sneeze', 'chain-sneezing', 'nasal expulsions',
-        'nasal reflex outbursts', 'convulsive sneezing', 'rapid-fire sneezes', 'machine-gun sneezing', 'surprise sneezes',
+        'sneezes', 'repetitive sneezes', 'unstoppable nasal explosions', 'sneeze', 'chain-sneezing', 'nasal expulsions', 'unable to control sneeze',
+        'nasal reflex outbursts', 'convulsive sneezing', 'rapid-fire sneezes', 'machine-gun sneezing', 'surprise sneezes', 'sneezy',
         'tickling in nose triggering sneezes', 'uncontrollable nasal reflex', 'sneeze bursts', 'nasal reflex reactions'
     ],
     'swollen lymph nodes': [
@@ -214,15 +213,15 @@ symptom_synonyms = {
   'neck pain': [
     'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
     'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 'neckpain',
-    'pain at the base of the skull', 'upper spine pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore',
+    'pain at the base of the skull', 'upper spine pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore', 'pain after neck fracture',
     'burning sensation in neck', 'neck inflammation', 'neck tenderness', 'cervical spine discomfort', 'pain when turning head', 'pain along the side of neck', 'pain in back of neck', 'stabbing neck pain',
-    'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck'
-],
+    'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck', 'pain in my neck'
+   ],
 
     'joint pain': [
         'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
         'joint irritation', 'musculoskeletal pain', 'painful joints', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
-        'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints','joint pain',
+        'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints','joint pain', 'pain after joint fracture',
         'joint tenderness', 'joint soreness from strain', 'arthralgia', 'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'weakening joint flexibility',
         'muscle and joint discomfort', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
     ],
@@ -236,12 +235,12 @@ symptom_synonyms = {
         'liquid stools', 'stomach upset'
     ],
     'vomiting': [
-        'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach',
-        'gagging', 'expelling stomach contents', 'stomach expulsion', 'upchucking', 'spitting up', 'retching reflex',
+        'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach', 'food coming out', 'food came out',
+        'gagging', 'expelling stomach contents', 'stomach expulsion', 'upchucking', 'spitting up', 'retching reflex', 'vomit',
         'forceful expulsion of food', 'involuntary stomach release', 'emetic response', 'feeling of needing to vomit', 'gag reflex triggering', 
         'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
         'vomit-induced gagging', 'stomach-purging sensation', 'retching uncontrollably', 'throwing up after eating', 'puking episodes', 'sick and throwing up',
-        'puking from irritation', 'regurgitating food', 'empty stomach vomiting', 'morning sickness vomiting', 'nausea attacks with vomiting', 'emesis due to motion sickness', 'heaving up'
+        'puking from irritation', 'regurgitating food', 'empty stomach vomiting', 'morning sickness vomiting', 'emesis due to motion sickness', 'heaving up'
     ],
 
     'ear pain': [
@@ -255,10 +254,10 @@ symptom_synonyms = {
     'back pain': [
         'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back',  
         'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache from lifting',
-        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain', 'back pain after exercise',
+        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain',
         'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine','stiffness in my back',
         'pinched nerve in back', 'back spasms', 'pain when bending', 'pain while standing up', 'pressure in upper back', 'burning pain in the back', 'pain in the sacral region',
-        'sharp back pain', 'sudden back pain','twisting back pain', 'throbbing back pain', 'stiffness in back','backpain',
+        'stiffness in back','backpain', 'pain in my back', 'sore back', 
         'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
@@ -271,14 +270,14 @@ symptom_synonyms = {
         'constant perspiration','salty perspiration', 'glistening with sweat', 'sweat trickling down spine', 'drenching perspiration',
         'sweat-laden body', 'humid feeling', 'slick skin', 'warm moisture on skin', 'sweat beads forming everywhere', 'bodily moisture overload', 'persistent dampness', 'sweaty palms and forehead',
         'sweat dripping off hairline', 'sweat-soaked sheets', 'nocturnal sweating', 'smelly perspiration', 'standing in a pool of sweat', 'sweat forming under arms', 'shiny perspiring face',
-        'sweat running down temples', 'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
+        'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
     ],
     'swelling': [
         'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness','swollen',
         'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly','swells',
         'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
         'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes','swelling',
-        'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints','bruising'
+        'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints'
     ],
     'tremor': [
         'shaking', 'shivering', 'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
@@ -315,8 +314,8 @@ symptom_synonyms = {
     ],
     'throat pain': [
         'pain in the throat', 'scratchy throat', 'throat discomfort', 'irritated throat','burning sensation in the throat', 'throat tenderness',
-        'throat scratchiness', 'swollen throat', 'pain from tonsillitis','inflammation of the throat', 'pain in the tonsils',
-        'hoarse throat', 'painful voice box', 'pain in the larynx', 
+        'throat scratchiness', 'swollen throat', 'pain from tonsillitis','inflammation of the throat', 'pain in the tonsils', 'voice gone',
+        'hoarse throat', 'painful voice box', 'pain in the larynx', 'voice is gone', 'pain while talking',
         'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'throat dryness', 'severe throat discomfort',
         'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat'
     ],
@@ -333,9 +332,9 @@ symptom_synonyms = {
         'toothache', 'dental pain', 'pain in the tooth', 'sharp tooth pain', 'throbbing tooth pain', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
         'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
         'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'dull tooth pain',
-        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort', 'tooth broken', 
-        'teeth broken', 'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth'
+        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort',  
+        'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
+        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth'
         
     ],
  'broken tooth': [
@@ -357,10 +356,8 @@ symptom_synonyms = {
     'tooth enamel erosion', 'tooth lesion', 'tooth darkening', 'brown tooth spots', 'tooth decay from poor hygiene', 'decayed teeth',
     'tooth caries', 'decaying molar', 'decaying premolar', 'decay in baby tooth', 'tooth plaque damage', 'acid erosion on teeth', 'teeth decay'
 ],
-
-
     'chest pain': [
-        'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'chest is full', 'tight chest feeling', 'aching chest',
+        'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'chest is full', 'tight chest feeling', 'aching chest', 'chest tightness',
         'chest heaviness', 'pain in the breastbone', 'pain radiating from chest',  'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
         'sharp stabbing pain in chest', 'chest tightness', 'pain under the sternum', 'pain when breathing deeply', 'feeling of chest pressure', 'pain from pulmonary issues', 'heart-related chest pain',
         'sharp pain in the breastbone', 'radiating chest discomfort', 'pain from costochondritis', 'pain from muscle strain in chest', 'deep chest discomfort', 
@@ -369,10 +366,10 @@ symptom_synonyms = {
     ],
 
     'knee pain': [
-        'knee discomfort', 'pain in the knee', 'painful knees', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint',
+        'knee discomfort', 'pain in the knee', 'painful knees', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint', 'pain around knee',
         'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain from knee overuse', 'pain with knee movement',
         'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
-        'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain in the knees', 'kneepain',
+        'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain in the knees', 'kneepain', 'pain around the knees',
         'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
         'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees','pain in a knee','pain in my knee', 'pain in my knees'
     ],
@@ -423,7 +420,7 @@ symptom_synonyms = {
         'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking', 'legs become numb',
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
         'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 
-        'pain in the lower leg', 'pain in leg', 'pain in legs', 'pain in the leg', 'pain in the legs', 'pain in my leg', 'pain in my legs'
+        'pain in the lower leg', 'pain in leg', 'pain in legs', 'pain in the leg', 'pain in the legs', 'pain in my leg', 'pain in my legs', 'pain from leg fracture'
     ],
     'confusion': [
         'disorientation', 'muddled thinking', 'mental fog', 'trouble thinking clearly', 'brain fog', 'cognitive cloudiness', 'puzzled state', 'jumbled thoughts', 'incoherent reasoning', 'tangled mental process',
@@ -455,7 +452,7 @@ symptom_synonyms = {
         'memory wires disconnected', 'stuttering recollection attempts', 'defragmented mental records', 'shaky mental camera', 'fading mental impressions', 'mind like a sieve', 'losing info instantly',
         'rattled mental library', 'concept slip-through', 'flickering data in mind', 'barren mental shelves', 'no retrieval of recent facts', 'thinking it’s on the tip of my tongue but never surfacing',
         'losing track of recent conversations', 'difficulty holding new info', 'memory short-circuits frequently', 'mental vacancy', 'ephemeral recollections', 'passing mental clouds with no retention',
-        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything'
+        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything'
     ],
   'hallucination': [
     'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions',
@@ -468,14 +465,15 @@ symptom_synonyms = {
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
     'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
     'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less',
-    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire'
+    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less'
 ],
 
 'constipation': [
     'difficulty passing stool', 'infrequent bowel movements', 'hard stools', 'painful bowel movements', 'feeling of incomplete evacuation', 'straining during bowel movement',
     'constipated', 'dry stool', 'difficulty in defecation', 'delayed bowel movements', 'irregular bowel movements', 'hard and dry stool', ' don\'t have any motion',' don\'t have clear stomach',
-    'trouble with bowel movements', 'trouble passing stool', 'slow bowel transit', 'stool retention', 'decreased bowel movement frequency', 'bowel sluggishness',
-    'straining to poop', 'bowel movement difficulty', 'slow bowel function', 'lack of bowel movement', 'intestinal irregularity', 'do not have clear stomach',
+    'trouble with bowel movements', 'trouble passing stool', 'slow bowel transit', 'stool retention', 'decreased bowel movement frequency', 'bowel sluggishness', 'motion not passing',
+    'straining to poop', 'bowel movement difficulty', 'slow bowel function', 'lack of bowel movement', 'intestinal irregularity', 'do not have clear stomach', 'unclear motion', 'unclear stomach',
+    'excreta not coming'
 ],
 
 'flu': [
@@ -488,7 +486,7 @@ symptom_synonyms = {
     'pathogen invasion', 'infected area', 'infection outbreak', 'systemic infection', 'local infection', 'wound infection', 'skin infection', 'respiratory infection',
     'urinary tract infection', 'ear infection', 'sinus infection', 'blood infection', 'sepsis', 'foodborne illness', 'infected tissue', 'infection of the bloodstream',
     'infection of the lungs', 'bacterial contamination', 'infectious agent', 'disease-causing infection', 'contagion', 'infection symptoms',
-    'chronic infection', 'acute infection', 'health infection', 'infection spread', 'infection risk', 'infectious condition', 'contagious disease'
+    'infection spread', 'infection risk', 'infectious condition', 'contagious disease'
 ],
 
 'inflammation': [
@@ -538,22 +536,23 @@ symptom_synonyms = {
 'weight loss': [
     'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
-    'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight',
-    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss'
+    'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight', 'lost weight',
+    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight, 'loss of weight'
 ],
 
 'hair loss': [
     'alopecia', 'balding', 'thinning hair', 'hair thinning', 'hair shedding', 'hair fall', 'scalp hair loss', 'bald spots', 'receding hairline', 'loosened hair roots',
     'hairline recession', 'hair breakage', 'excessive hair loss', 'temporary hair loss', 'pattern baldness', 'male pattern baldness', 'female pattern baldness',
     'androgenic alopecia', 'patchy hair loss', 'diffuse hair loss', 'hair loss due to stress', 'postpartum hair loss', 'age-related hair loss', 'genetic hair loss',
-    'hair fall disorder', 'alopecia areata', 'hair loss condition', 'scalp thinning', 'hair loss treatment','hairloss'
+    'hair fall disorder', 'alopecia areata', 'hair loss condition', 'scalp thinning', 'hair loss treatment','hairloss', 'lost hairs', 'loosing hairs', 'loosing my hairs',
+    'hair lost', 'hair got lost'
 ],
 
 'blurred vision': [
     'vision impairment', 'unclear vision', 'fuzzy vision', 'distorted vision', 'foggy vision', 'hazy vision', 'blurry eyesight', 'impaired vision', 'cannot see properly',
     'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance',
     'unclear eyesight', 'visual impairment', 'blurry sight', 'sight distortion', 'vision problems', 'temporary blurred vision', 'chronic blurred vision',
-    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see'
+    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible'
 ],
 
 'numbness': [
@@ -564,7 +563,8 @@ symptom_synonyms = {
 'dry mouth': [
     'xerostomia', 'cottonmouth', 'parched mouth', 'thirsty mouth', 'dryness in the mouth', 'lack of saliva', 'reduced saliva production', 'mouth dryness',
     'sticky mouth', 'dryness of the oral cavity', 'uncomfortable dry mouth', 'dry tongue', 'thirsty feeling in the mouth', 'saliva deficiency', 'oral dryness',
-    'mouth discomfort', 'dryness in the mouth and throat', 'sore dry mouth', 'dehydrated mouth', 'dryness due to medication', 'mouth feels dry', 'no saliva'
+    'mouth discomfort', 'dryness in the mouth and throat', 'sore dry mouth', 'dehydrated mouth', 'dryness due to medication', 'mouth feels dry', 'no saliva',
+    'mouth is dry'
 ],
 
 'frequent urination': [
@@ -582,12 +582,12 @@ symptom_synonyms = {
     'dysphagia', 'trouble swallowing', 'swallowing difficulty', 'painful swallowing', 'difficulty with swallowing', 'difficulty in swallowing food',
     'difficulty swallowing liquids', 'inability to swallow', 'swallowing discomfort', 'choking sensation', 'difficulty swallowing pills', 'food getting stuck',
     'difficulty in throat swallowing', 'swallowing obstruction', 'swallowing problems', 'gagging while swallowing', 'swallowing trouble',
-    'feeling of blockage while swallowing', 'difficulties swallowing'
+    'feeling of blockage while swallowing', 'difficulties swallowing', 'can\'t swallow food'
 ],
 
 'restlessness': [
     'unease', 'fidgeting', 'inability to relax', 'impatience', 'uneasiness', 'hyperactivity', 'jitteriness', 'inability to stay still', 'unsettledness',
-    'fidgety feeling', 'lack of calm'
+    'fidgety feeling', 'lack of calm', 'restless feeling'
 ],
 
 'bloating': [
@@ -611,8 +611,8 @@ symptom_synonyms = {
 ],
 
 'indigestion': [
-    'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance'
-     'nothing is digested','not digesting'
+    'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance',
+     'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening'
 ],
 
 'mouth sore': [
@@ -625,30 +625,30 @@ symptom_synonyms = {
     'epistaxis', 'bleeding from the nose', 'nasal hemorrhage', 'nose bleeding', 'bloody nose', 'hemorrhaging from the nose', 'nose blood flow',
     'spontaneous nosebleed', 'anterior nosebleed', 'posterior nosebleed', 'frequent nosebleeds', 'nosebleed episode', 'bleeding nostrils',
     'blood coming out from the nose', 'nasal bleeding', 'bloody discharge from the nose', 'nasal passage bleeding', 'nosebleed symptoms', 'internal nasal bleeding',
-    'nose injury bleeding'
+    'nose injury bleeding', 'blood coming out of nose', 'bloody nose'
 ],
 'ear ringing': [
     'tinnitus', 'ringing in the ears', 'ear buzzing', 'ear noise', 'persistent ear sound', 'ear whistling', 'ear humming', 'sounds in the ears',
     'ear roaring', 'ringing sound in the ear', 'constant ringing', 'ear congestion', 'noises in the ear', 'buzzing in the ear', 'hissing in the ear',
-    'whistling in the ear', 'high-pitched sound', 'low-pitched ear sound', 'phantom sounds', 'ear sensation', 'auditory disturbance'
+    'whistling in the ear', 'high-pitched sound', 'low-pitched ear sound', 'phantom sounds', 'ear sensation', 'auditory disturbance', 'ear rings'
 ],
 
 'urine issues': [
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
-    'pink urine'
+    'pink urine', 'urinary issues'
 ],
 
 'blood in urine': [
-    'hematuria', 'urinary blood', 'blood in urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 'burning while passing the urine',
+    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 
    'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood','bloody urine', 'red urine',
     'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
     'visible blood in urine', 'microscopic hematuria','blood in the urinary tract'
 ],
 
 'blood in stool': [
-    'hematochezia', 'rectal bleeding', 'bloody stool', 'stool with blood', 'bright red blood in stool', 'dark blood in stool', 'blood in the bowel movement',
+    'hematochezia', 'rectal bleeding', 'bloody stool', 'stool with blood', 'bright red blood in stool', 'blood in the stool', 'blood in the bowel movement',
     'blood-tinged stool', 'bloody feces', 'blood in feces', 'stool with reddish tint', 'blood in the stool sample', 'melena', 'dark tarry stool',
     'fecal blood', 'visible blood in stool', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
 ],
@@ -656,14 +656,15 @@ symptom_synonyms = {
 'high blood pressure': [
     'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
     'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
-    'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 
-    'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP'
+    'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis',  'BP is getting high',  'BP is going high', 'BP gone high',
+    'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP',  'BP is coming high',
+    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP'
 ],
 
 'low blood pressure': [
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
-    'low diastolic pressure', 'lower BP', 'lower blood pressure',
-    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure',
+    'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low',  'BP is going low', 'BP gone low',  'BP is coming low',
+    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP'
     'BP is low'
 ],
 
@@ -676,7 +677,7 @@ symptom_synonyms = {
 'dehydration': [
     'fluid loss', 'water depletion', 'lack of hydration', 'electrolyte imbalance', 'insufficient water intake', 'dehydrating',
     'dehydrated state', 'water deficiency', 'reduced fluid levels', 'severe dehydration', 'mild dehydration', 'dehydration symptoms',
-    'fluid imbalance', 'low body water', 'loss of body fluids', 'heat exhaustion', 'low hydration', 'hypohydration'
+    'fluid imbalance', 'low body water', 'loss of body fluids', 'heat exhaustion', 'low hydration', 'hypohydration', water drained out'
 ],
 
 'red eyes': [
@@ -689,7 +690,7 @@ symptom_synonyms = {
     'ocular discharge', 'eye mucus', 'eye secretion', 'eye crust', 'sticky eyes', 'eye pus', 'yellow eye discharge', 'clear eye discharge', 'water coming out of eyes',
     'green eye discharge', 'gunky eyes', 'eye drainage', 'teary eyes', 'eye secretion buildup', 'crusty eyes', 'eye fluid', 'excessive tear production',
     'morning eye crust', 'sticky eyelids', 'eye infection discharge', 'pus from the eye', 'watery eye discharge',
-    'discharge from the tear duct', 'rheum in the eye','something coming out of eyes'
+    'discharge from the tear duct', 'rheum in the eye','something coming out of eyes', 'something coming out of my eyes'
 ],
 
 'ear discharge': [
@@ -697,7 +698,7 @@ symptom_synonyms = {
     'yellow ear discharge', 'green ear discharge', 'watery ear discharge', 'bloody ear discharge', 'ear mucus', 'crust in the ear', 'excessive ear fluid',
     'ear leakage', 'ear wax buildup', 'discharge from the ear canal', 'discharge from the middle ear', 'infection-related ear discharge', 'ear discharge after swimming',
     'ear drainage after injury', 'something coming out of ears','pus comes out from inside the ear','pus is coming out of the ear' 'pus from ear','ear pus''pus comes from ear',
-    'pus comes from the ear','pus is coming from an ear','pus is coming from left ear','pus in ear','pus in the ear'
+    'pus comes from the ear','pus is coming from an ear','pus is coming from left ear','pus in ear','pus in the ear', 'something coming out of ears', 'something coming out of my ears'
 ],
 
 'balance problem': [
@@ -742,7 +743,7 @@ symptom_synonyms = {
     'inability to focus', 'lack of focus', 'poor concentration', 'trouble focusing', 'concentration problems', 'distractibility',
     'difficulty paying attention', 'lack of mental clarity', 'difficulty staying focused', 'inattention', 'short attention span', 'mind wandering',
     'difficulty concentrating on tasks', 'poor attention span', 'difficulty maintaining focus', 'lack of mental focus', 'difficulty with concentration',
-    'easily distracted', 'unable to focus', 'attention issues', 'concentration challenges'
+    'easily distracted', 'unable to focus', 'attention issues', 'concentration challenges', 'lack of concentration'
 ],
 
 'lack of motivation': [
@@ -795,7 +796,7 @@ symptom_synonyms = {
     'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'bone injury', 'fracture', 'crack in my bone','crack in a bone',
     'stress fracture', 'hairline fracture', 'bone splinter','fracture in bone','crack in bone','bone has cracked','cracks in bone', 'bone cracked',
     'fractured limb', 'fractured bone segment', 'broken limb', 'broken bone segment', 'cracked bone injury', 'bone rupture', 'bone fracture symptoms',
-    'fractured bone tissue', 'fracture of the bone', 'crack in bone'
+    'fractured bone tissue', 'fracture of the bone', 'crack in bone', 'fractured'
 ],
 
 'back bone issue': [
@@ -814,10 +815,13 @@ symptom_synonyms = {
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
 
-'pregnancy' : ['pregnant','pregnate','childbirth'],
+'pregnancy' : ['pregnant','pregnate','childbirth', 'expecting a child', 
+                 'carrying a fetus', 'gestating', 'positive HCG test'
+   ],
 
 'pediatric symptoms' : ['kid problems','pediatrics','child is unwell', 'child is facing issues', 'children health', 'child health','feeding problems',
-                       'cry patterns', 'growth problems', 'refusal to breastfeed' , 'developmental delay', 'bowed legs', 'bedwetting'],
+                       'cry patterns', 'growth problems', 'refusal to breastfeed' , 'developmental delay', 'bowed legs', 'bedwetting', 'kids problem'
+                       ],
 
 'thyroid': [
     'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'goiter', 'thyroid dysfunction',
@@ -831,14 +835,6 @@ symptom_synonyms = {
     'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
     'itchy anus', 'hemorrhoid treatment', 'hemorrhoid relief'
-],
-
-'vomiting': [
-'food throwing up', 'puking', 'retching',  'projectile vomiting', 'forceful expulsion', 'stomach evacuation',
-'regurgitation', 'gag reflex', 'vomit episode', 'bilious vomiting', 'dry heaving', 'stomach upheaval', 'continuous vomiting', 'acidic vomit', 'vomiting bile',
-'upset stomach leading to vomiting', 'cyclic vomiting', 'food rejection', 'vomit', 
-'digestive tract expulsion', 'vomiting sensation', 
-'vomiting reflex', 'vomiting from food poisoning', 'travel sickness vomiting', 'chronic vomiting episodes', 'frequent retching'
 ],
 
 'hearing loss': [
