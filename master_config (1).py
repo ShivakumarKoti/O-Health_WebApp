@@ -9191,7 +9191,27 @@ trigger_keywords = {
         'brittle': ['brittle', 'crack', 'split', 'break'],
         'growth': ['not growing', 'slow growth', 'deformed', 'misshaped']
     },
-    
+   joint': {
+        'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
+        'swelling': ['swollen', 'inflammation', 'swelling', 'puffiness'],
+        'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
+        'weakness': ['weak', 'unstable', 'giving way', 'can’t move'],
+        'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
+    },
+    'skin': {
+        'rash': ['rash', 'redness', 'itchy', 'inflamed', 'blotchy'],
+        'dryness': ['dry', 'flaky', 'cracked', 'itchy skin'],
+        'swelling': ['swollen', 'puffy', 'swelling', 'edema'],
+        'burn': ['burn', 'sunburn', 'scald', 'blister'],
+        'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
+    },
+    'muscle': {
+        'pain': ['pain', 'ache', 'sore', 'cramping', 'stiff'],
+        'weakness': ['weak', 'fatigued', 'loss of strength', 'unable to lift'],
+        'spasm': ['spasm', 'cramp', 'tightness', 'twitching'],
+        'injury': ['injury', 'strain', 'pull', 'tear'],
+        'swelling': ['swollen', 'inflammation', 'bump', 'swelling']
+    },
 
  
     # add ear / skin / etc…
@@ -9218,10 +9238,10 @@ body_part_followup_questions = {
 'leg': {
         'injury': [
             {
-                'hi': "आपकी टांग में चोट कैसे और कब लगी?",
-                'en': "How and when did you injure your leg?",
-                'category': 'leg_injury_time'
-            }
+    'hi': "कौन सी टांग या टांगे घायल हैं?",
+    'en': "Which leg or legs are injured?",
+    'category': 'leg_injury_location'
+      }
         ],
         'pain': [
             {
@@ -9304,10 +9324,10 @@ body_part_followup_questions = {
         ],
         'injury': [
             {
-                'hi': "आपके हाथ में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your hand?",
-                'category': 'hand_injury_time'
-            }
+    'hi': "कौन सा हाथ या दोनों हाथ घायल हैं?",
+    'en': "Which hand or hands are injured?",
+    'category': 'hand_injury_location'
+           }
         ],
         'default': [
             {
@@ -9334,11 +9354,12 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-            {
-                'hi': "आपके हाथ में चोट कैसे और कब लगी थी?",
-                'en': "How and when did you injure your arm?",
-                'category': 'arm_injury_time'
-            }
+           {
+    'hi': "कौन सा बाजू या दोनों बाजू घायल हैं?",
+    'en': "Which arm or arms are injured?",
+    'category': 'arm_injury_location'
+}
+
         ],
         'weakness': [
             {
@@ -9394,11 +9415,11 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-            {
-                'hi': "आपकी पीठ में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your back?",
-                'category': 'back_injury_time'
-            }
+           {
+    'hi': "क्या आप आजकल अपनी पीठ मोड़ पा रहे हैं?",
+    'en': "Are you able to bend your back nowadays?",
+    'category': 'back_mobility_current'
+           }
         ],
         'numbness': [
             {
@@ -9455,9 +9476,9 @@ body_part_followup_questions = {
 'wrist': {
         'pain': [
             {
-                'hi': "क्या आपकी कलाई में दर्द किसी खास गतिविधि से बढ़ता है?",
-                'en': "Does the pain in your wrist get worse with specific activities?",
-                'category': 'wrist_pain_activity'
+    'hi': "क्या दोनों कलाइयों में दर्द है?",
+    'en': "Is the pain in both wrists?",
+    'category': 'wrist_pain_location'
             }
         ],
         'swelling': [
@@ -9608,10 +9629,10 @@ body_part_followup_questions = {
         ],
         'injury': [
             {
-                'hi': "गर्दन में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your neck?",
-                'category': 'neck_injury_time'
-            }
+    'hi': "चोट ठीक कहां पर है?",
+    'en': "Where exactly is the injury?",
+    'category': 'neck_injury_location'
+           }
         ],
         'numbness': [
             {
@@ -9651,11 +9672,11 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-            {
-                'hi': "घुटने में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your knee?",
-                'category': 'knee_injury_time'
-            }
+           {
+    'hi': "क्या दोनों घुटनों में चोट लगी है?",
+    'en': "Are both knees injured?",
+    'category': 'knee_injury_location'
+           }
         ],
         'weakness': [
             {
@@ -9696,9 +9717,9 @@ body_part_followup_questions = {
         ],
         'injury': [
             {
-                'hi': "पैर में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your foot?",
-                'category': 'foot_injury_time'
+    'hi': "क्या दोनों पैरों में चोट लगी है?",
+    'en': "Are both feet injured?",
+    'category': 'foot_injury_location'
             }
         ],
         'stiffness': [
@@ -9732,11 +9753,11 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-            {
-                'hi': "कंधे में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your shoulder?",
-                'category': 'shoulder_injury_time'
-            }
+           {
+    'hi': "क्या दोनों कंधों में चोट लगी है?",
+    'en': "Are both shoulders injured?",
+    'category': 'shoulder_injury_location'
+           }
         ],
         'numbness': [
             {
@@ -9892,6 +9913,138 @@ body_part_followup_questions = {
             }
         ]
 },
+'joint': {
+        'pain': [
+            {
+                'hi': "क्या जोड़ों में दर्द गतिविधि करते समय या मौसम बदलने पर बढ़ता है?",
+                'en': "Does the joint pain increase with activity or during weather changes?",
+                'category': 'joint_pain_activity_weather'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ जोड़ में गर्माहट या लालिमा महसूस होती है?",
+                'en': "Is there warmth or redness along with the swelling in the joint?",
+                'category': 'joint_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या जोड़ों में जकड़न या कठोरता सुबह उठने पर ज्यादा महसूस होती है?",
+                'en': "Does the stiffness or rigidity in your joints feel worse in the morning?",
+                'category': 'joint_stiffness_morning'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या जोड़ों में कमजोरी के कारण चलते वक्त अस्थिरता महसूस होती है?",
+                'en': "Does the weakness in the joint cause instability while walking?",
+                'category': 'joint_weakness_instability'
+            }
+        ],
+        'injury': [
+            {
+    'hi': "कौन से जोड़ में चोट लगी है?",
+    'en': "Which joints are injured?",
+    'category': 'joint_injury_location'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने जोड़ों की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your joint issue in more detail.",
+                'category': 'joint_detail'
+            }
+        ]
+    },
+     'skin': {
+        'rash': [
+            {
+                'hi': "क्या रैश पूरे शरीर में फैला है या एक ही जगह पर है?",
+                'en': "Is the rash spread across your body or limited to one area?",
+                'category': 'skin_rash_spread'
+            }
+        ],
+        'dryness': [
+            {
+                'hi': "क्या आपकी त्वचा में सूखापन अन्य लक्षणों के साथ है जैसे कि खुजली?",
+                'en': "Is the dryness of your skin accompanied by other symptoms like itching?",
+                'category': 'skin_dryness_symptoms'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन में दर्द या जलन महसूस होती है?",
+                'en': "Does the swelling come with pain or burning sensations?",
+                'category': 'skin_swelling_pain'
+            }
+        ],
+        'burn': [
+            {
+                'hi': "क्या जलने के कारण त्वचा में छाले या पपड़ी बन रही है?",
+                'en': "Are blisters or scabs forming due to the burn?",
+                'category': 'skin_burn_blisters'
+            }
+        ],
+        'infection': [
+            {
+                'hi': "क्या त्वचा में किसी प्रकार के घाव, मवाद या लालिमा है?",
+                'en': "Is there any wound, pus, or redness on the skin?",
+                'category': 'skin_infection_signs'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी त्वचा की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your skin issue in more detail.",
+                'category': 'skin_detail'
+            }
+        ]
+    },
+    'muscle': {
+        'pain': [
+            {
+                'hi': "क्या मांसपेशियों में दर्द गतिविधि करने पर बढ़ता है?",
+                'en': "Does the muscle pain increase with activity?",
+                'category': 'muscle_pain_activity'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या मांसपेशियों में कमजोरी के कारण आपको भारी चीज़ें उठाने में परेशानी होती है?",
+                'en': "Does muscle weakness make it hard for you to lift heavy objects?",
+                'category': 'muscle_weakness_function'
+            }
+        ],
+        'spasm': [
+            {
+                'hi': "क्या मांसपेशियों में ऐंठन या मरोड़ लगातार हो रही है?",
+                'en': "Are the muscle spasms or cramps happening frequently?",
+                'category': 'muscle_spasm_frequency'
+            }
+        ],
+        'injury': [
+            {
+    'hi': "क्या दोनों मांसपेशियों में चोट लगी है?",
+    'en': "Are both muscles injured?",
+    'category': 'muscle_injury_location'
+           }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ दर्द या गर्माहट महसूस हो रही है?",
+                'en': "Is there pain or warmth along with the swelling in the muscle?",
+                'category': 'muscle_swelling_signs'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी मांसपेशियों की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your muscle issue in more detail.",
+                'category': 'muscle_detail'
+            }
+        ]
+    },
 
     
 }
