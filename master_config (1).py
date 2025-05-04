@@ -9088,9 +9088,41 @@ trigger_keywords = {
         'injury'      : ['injury', 'fell', 'fall', 'knock', 'blow', 'hit'],
         'sensitivity' : ['hard', 'gum', 'gums', 'sensitive', 'bleeding']
     },
-    'eye': {
-        'burn'        : ['burn', 'burning', 'chemical', 'irritation']
+    'leg': {
+        'injury'      : ['twist', 'sprain', 'fracture', 'broke', 'fall', 'hurt', 'accident'],
+        'pain'        : ['ache', 'throbbing', 'sharp', 'dull', 'cramp', 'stiff'],
+        'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge']
     },
+
+    'eye': {
+        'itching': ['itchy', 'itching', 'scratchy', 'irritated'],
+        'redness': ['red', 'bloodshot', 'pink', 'inflamed'],
+        'burn'        : ['burn', 'burning', 'chemical', 'irritation'],
+        'blurry_vision': ['blurry', 'blurry vision', 'not clear', 'foggy', 'unclear']
+    },
+    'hand': {
+        'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles', 'asleep'],
+        'swelling': ['swollen', 'puffy', 'inflamed', 'bump'],
+        'injury': ['fracture', 'broke', 'crack', 'broken', 'injury', 'hit']
+    },
+'arm': {
+        'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles', 'asleep'],
+        'injury': ['fracture', 'broke', 'injury', 'fall', 'hit', 'bruise'],
+        'weakness': ['weak', 'no strength', 'tired', 'fatigue', 'can’t lift']
+    },
+  'head': {
+        'injury': ['bump', 'hit', 'fall', 'injury', 'knock'],
+        'pressure': ['pressure', 'tightness', 'heaviness']
+    },  
+'back': {
+        'pain': ['backache', 'pain', 'hurt', 'sore', 'stiff', 'ache'],
+        'stiffness': ['stiff', 'tight', 'tense', 'rigid'],
+        'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles']
+    },
+
     # add ear / skin / etc…
 }
 
@@ -9112,19 +9144,209 @@ body_part_followup_questions = {
              'category': 'tooth_detail'}
         ]
     },
-    'eye': {
+'leg': {
+        'injury': [
+            {
+                'hi': "आपकी टांग में चोट कैसे और कब लगी?",
+                'en': "How and when did you injure your leg?",
+                'category': 'leg_injury_time'
+            }
+        ],
+        'pain': [
+            {
+                'hi': "क्या दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
+                'en': "Does the pain increase while walking or is it constant?",
+                'category': 'leg_pain_detail'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ लालिमा या गर्माहट भी महसूस हो रही है?",
+                'en': "Is there any redness or warmth along with the swelling?",
+                'category': 'leg_swelling_symptoms'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी टांग की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your leg issue in more detail.",
+                'category': 'leg_detail'
+            }
+        ]
+},
+'eye': {
+        'itching': [
+            {
+                'hi': "क्या आपकी आँखों में खुजली लगातार हो रही है या कभी-कभी?",
+                'en': "Is the itching in your eyes constant or occasional?",
+                'category': 'eye_itching_frequency'
+            }
+        ],
+        'redness': [
+            {
+                'hi': "क्या आपकी आँखें लाल होने के साथ दर्द भी कर रही हैं?",
+                'en': "Are your eyes also painful along with the redness?",
+                'category': 'eye_redness_pain'
+            }
+        ],
         'burn': [
             {'hi': "आँखों में जलन कब से हो रही है?",
              'en': "Since when have your eyes been burning?",
              'category': 'eye_burn_duration'}
         ],
+        'blurry_vision': [
+            {
+                'hi': "धुंधली दृष्टि कितने समय से हो रही है?",
+                'en': "How long have you had blurry vision?",
+                'category': 'eye_blurry_duration'
+            }
+        ],
         'default': [
-            {'hi': "कृपया अपनी आँख की समस्या के बारे में विस्तार से बताएँ।",
-             'en': "Tell me more about your eye problem.",
-             'category': 'eye_detail'}
+            {
+                'hi': "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your eye issue in more detail.",
+                'category': 'eye_detail'
+            }
         ]
-    }
+    },
+'hand': {
+        'pain': [
+            {
+                'hi': "क्या हाथ में दर्द लगातार है या किसी गतिविधि के साथ बढ़ता है?",
+                'en': "Is the pain in your hand constant or does it worsen with activity?",
+                'category': 'hand_pain_detail'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या झुनझुनी या सुन्नपन उंगलियों तक सीमित है?",
+                'en': "Is the numbness or tingling limited to the fingers?",
+                'category': 'hand_numbness_area'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ हाथ गर्म या लाल दिख रहा है?",
+                'en': "Is the hand warm or red along with the swelling?",
+                'category': 'hand_swelling_symptoms'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "आपके हाथ में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your hand?",
+                'category': 'hand_injury_time'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने हाथ की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your hand issue in more detail.",
+                'category': 'hand_detail'
+            }
+        ]
+    },
+
+   'arm': {
+        'pain': [
+            {
+                'hi': "क्या आपके हाथ में दर्द लगातार बना रहता है?",
+                'en': "Is the pain in your arm persistent?",
+                'category': 'arm_pain_detail'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या सुन्नपन पूरे हाथ में है या किसी खास हिस्से में?",
+                'en': "Is the numbness in your entire arm or a specific part?",
+                'category': 'arm_numbness_location'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "आपके हाथ में चोट कैसे और कब लगी थी?",
+                'en': "How and when did you injure your arm?",
+                'category': 'arm_injury_time'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या हाथ में कमजोरी किसी विशेष क्रिया के बाद महसूस होती है?",
+                'en': "Do you feel weakness in your arm after any specific activity?",
+                'category': 'arm_weakness_context'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने हाथ की समस्या के बारे में अधिक जानकारी दें।",
+                'en': "Please describe your arm issue in more detail.",
+                'category': 'arm_detail'
+            }
+        ]
+    },
+  'head': {
+        'injury': [
+            {
+                'hi': "आपके सिर में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your head?",
+                'category': 'head_injury_time'
+            }
+        ],
+        'pressure': [
+            {
+                'hi': "क्या सिर में भारीपन लगातार रहता है या कभी-कभी होता है?",
+                'en': "Is the pressure in your head constant or does it come and go?",
+                'category': 'head_pressure_pattern'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने सिर की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your head issue in more detail.",
+                'category': 'head_detail'
+            }
+        ]
+    },  
+'back': {
+        'pain': [
+            {
+                'hi': "क्या पीठ का दर्द चलते समय बढ़ता है या आराम करते समय भी होता है?",
+                'en': "Does your back pain increase while moving or is it present even at rest?",
+                'category': 'back_pain_detail'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर पीठ में ज्यादा जकड़न महसूस होती है?",
+                'en': "Do you feel more stiffness in your back after waking up?",
+                'category': 'back_stiffness_morning'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "आपकी पीठ में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your back?",
+                'category': 'back_injury_time'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या सुन्नपन पीठ से टांगों तक फैलता है?",
+                'en': "Does the numbness in your back extend down to your legs?",
+                'category': 'back_numbness_radiation'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी पीठ की समस्या के बारे में अधिक जानकारी दें।",
+                'en': "Please describe your back issue in more detail.",
+                'category': 'back_detail'
+            }
+        ]
+    },
+
 }
+
 
 # -----------------------------------------------------------------
 # Map lone body parts → default specialists (used if NO symptoms)
