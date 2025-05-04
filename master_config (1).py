@@ -9122,7 +9122,28 @@ trigger_keywords = {
         'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled'],
         'numbness': ['numb', 'tingling', 'pins', 'needles']
     },
+'chest': {
+        'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning'],
+        'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness'],
+        'breathing': ['shortness of breath', 'breathing', 'difficulty breathing', 'can’t breathe', 'tight chest'],
+        'palpitations': ['palpitations', 'heart racing', 'fluttering', 'fast heartbeat']
+    },
+   'wrist': {
+        'pain': ['pain', 'hurt', 'ache', 'throbbing', 'burning'],
+        'swelling': ['swollen', 'swelling', 'puffy', 'inflamed'],
+        'stiffness': ['stiff', 'tight', 'restricted', 'rigid'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles', 'asleep'],
+        'injury': ['injury', 'fall', 'fracture', 'twist', 'sprain', 'broke']
+},
+    'throat': {
+        'pain': ['sore', 'pain', 'scratchy', 'hurt', 'throat ache'],
+        'swelling': ['swollen', 'lump', 'tightness', 'inflamed'],
+        'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing'],
+        'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice'],
+        'infection': ['infection', 'fever', 'cold', 'flu', 'strep']
+    },
 
+ 
     # add ear / skin / etc…
 }
 
@@ -9344,7 +9365,132 @@ body_part_followup_questions = {
             }
         ]
     },
-
+'chest': {
+        'pain': [
+            {
+                'hi': "क्या छाती में दर्द चलने या सीढ़ियाँ चढ़ने पर बढ़ता है?",
+                'en': "Does the chest pain increase when walking or climbing stairs?",
+                'category': 'chest_pain_exertion'
+            }
+        ],
+        'discomfort': [
+            {
+                'hi': "क्या छाती में असहजता के साथ मतली या पसीना भी आता है?",
+                'en': "Do you experience nausea or sweating along with the discomfort?",
+                'category': 'chest_discomfort_symptoms'
+            }
+        ],
+        'breathing': [
+            {
+                'hi': "क्या आपको सांस लेने में कठिनाई हाल ही में शुरू हुई है?",
+                'en': "Did the difficulty in breathing start recently?",
+                'category': 'chest_breathing_onset'
+            }
+        ],
+        'palpitations': [
+            {
+                'hi': "क्या दिल की धड़कन तेज होने के साथ चक्कर या बेहोशी महसूस हुई?",
+                'en': "Have you felt dizzy or faint along with the rapid heartbeat?",
+                'category': 'chest_palpitations_symptoms'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी छाती की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your chest issue in more detail.",
+                'category': 'chest_detail'
+            }
+        ]
+    },
+'wrist': {
+        'pain': [
+            {
+                'hi': "क्या आपकी कलाई में दर्द किसी खास गतिविधि से बढ़ता है?",
+                'en': "Does the pain in your wrist get worse with specific activities?",
+                'category': 'wrist_pain_activity'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ कलाई में गर्माहट या लालिमा भी है?",
+                'en': "Is there warmth or redness along with the wrist swelling?",
+                'category': 'wrist_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठते समय कलाई में जकड़न होती है?",
+                'en': "Do you feel wrist stiffness in the morning?",
+                'category': 'wrist_stiffness_time'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या झुनझुनी या सुन्नपन उंगलियों तक भी पहुंचता है?",
+                'en': "Does the numbness or tingling extend to your fingers?",
+                'category': 'wrist_numbness_extent'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "कलाई में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your wrist?",
+                'category': 'wrist_injury_time'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी कलाई की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your wrist issue in more detail.",
+                'category': 'wrist_detail'
+            }
+        ]
+    },
+   'throat': {
+        'pain': [
+            {
+                'hi': "क्या गले में दर्द लगातार बना रहता है या किसी विशेष समय में बढ़ता है?",
+                'en': "Is the pain in your throat constant, or does it worsen at a particular time?",
+                'category': 'throat_pain_pattern'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या गले में सूजन के साथ निगलने में भी कठिनाई हो रही है?",
+                'en': "Is the swelling in your throat making it difficult to swallow?",
+                'category': 'throat_swelling_swallowing'
+            }
+        ],
+        'difficulty_swallowing': [
+            {
+                'hi': "क्या आपको खाने-पीने में कठिनाई महसूस हो रही है?",
+                'en': "Are you having difficulty with eating or drinking?",
+                'category': 'throat_swallowing_difficulty'
+            }
+        ],
+        'hoarseness': [
+            {
+                'hi': "क्या आपकी आवाज में खराश हाल ही में आई है?",
+                'en': "Did the hoarseness in your voice start recently?",
+                'category': 'throat_hoarseness_onset'
+            }
+        ],
+        'infection': [
+            {
+                'hi': "क्या आपको बुखार, सर्दी या फ्लू के अन्य लक्षण भी हैं?",
+                'en': "Do you also have symptoms like fever, cold, or flu?",
+                'category': 'throat_infection_symptoms'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने गले की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your throat issue in more detail.",
+                'category': 'throat_detail'
+            }
+        ]
+    },
+    
 }
 
 
