@@ -9102,13 +9102,13 @@ trigger_keywords = {
     },
     'hand': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles', 'asleep'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles'],
         'swelling': ['swollen', 'puffy', 'inflamed', 'bump'],
         'injury': ['fracture', 'broke', 'crack', 'broken', 'injury', 'hit']
     },
 'arm': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles', 'asleep'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles'],
         'injury': ['fracture', 'broke', 'injury', 'fall', 'hit', 'bruise'],
         'weakness': ['weak', 'no strength', 'tired', 'fatigue', 'can’t lift']
     },
@@ -9132,7 +9132,7 @@ trigger_keywords = {
         'pain': ['pain', 'hurt', 'ache', 'throbbing', 'burning'],
         'swelling': ['swollen', 'swelling', 'puffy', 'inflamed'],
         'stiffness': ['stiff', 'tight', 'restricted', 'rigid'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles', 'asleep'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles'],
         'injury': ['injury', 'fall', 'fracture', 'twist', 'sprain', 'broke']
 },
     'throat': {
@@ -9149,8 +9149,49 @@ trigger_keywords = {
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool'],
         'indigestion': ['indigestion', 'heartburn', 'acid reflux', 'upset stomach']
     },
+    'neck': {
+        'pain': ['pain', 'ache', 'sore', 'hurt', 'throbbing'],
+        'stiffness': ['stiff', 'tight', 'rigid', 'locked'],
+        'swelling': ['swollen', 'lump', 'bump', 'enlarged'],
+        'injury': ['injury', 'whiplash', 'fall', 'hit', 'twist'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles']
+    },
+'knee': {
+        'pain': ['pain', 'ache', 'hurt', 'throbbing', 'sharp'],
+        'swelling': ['swollen', 'swelling', 'puffy', 'inflamed'],
+        'stiffness': ['stiff', 'locked', 'tight', 'rigid'],
+        'injury': ['injury', 'twist', 'fall', 'hit', 'sprain', 'fracture'],
+        'weakness': ['weak', 'unstable', 'giving way', 'can’t stand']
+    },
+  foot': {
+        'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
+        'swelling': ['swollen', 'puffy', 'swelling', 'inflamed'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles'],
+        'injury': ['injury', 'fall', 'twist', 'fracture', 'sprain', 'broke'],
+        'stiffness': ['stiff', 'tight', 'rigid', 'locked']
+    },  
+ 'shoulder': {
+        'pain': ['pain', 'ache', 'hurt', 'throbbing', 'sharp'],
+        'stiffness': ['stiff', 'tight', 'frozen', 'locked'],
+        'injury': ['injury', 'fall', 'twist', 'dislocate', 'fracture'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles'],
+        'weakness': ['weak', 'can’t lift', 'unstable']
+    },
+'ear': {
+        'pain': ['pain', 'ache', 'hurt', 'sharp', 'throbbing'],
+        'hearing_loss': ['hearing loss', 'can’t hear', 'muffled', 'low hearing'],
+        'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear'],
+        'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage'],
+        'infection': ['infection', 'fever', 'swelling', 'ear infection']
+    },
+ 'nails': {
+        'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
+        'pain': ['pain', 'ache', 'hurt', 'sore', 'tender'],
+        'infection': ['infection', 'pus', 'swelling', 'redness', 'fungus'],
+        'brittle': ['brittle', 'crack', 'split', 'break'],
+        'growth': ['not growing', 'slow growth', 'deformed', 'misshaped']
+    },
     
-}
 
  
     # add ear / skin / etc…
@@ -9543,6 +9584,314 @@ body_part_followup_questions = {
             }
         ]
     },
+'neck': {
+        'pain': [
+            {
+                'hi': "क्या गर्दन का दर्द सिर या कंधों तक भी फैलता है?",
+                'en': "Does the neck pain radiate to your head or shoulders?",
+                'category': 'neck_pain_radiation'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठते समय गर्दन में जकड़न महसूस होती है?",
+                'en': "Do you feel neck stiffness when you wake up in the morning?",
+                'category': 'neck_stiffness_morning'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या गर्दन की सूजन के साथ बुखार या गिल्टी महसूस हो रही है?",
+                'en': "Is there fever or a lump felt along with the neck swelling?",
+                'category': 'neck_swelling_lump'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "गर्दन में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your neck?",
+                'category': 'neck_injury_time'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या सुन्नपन गर्दन से कंधों या हाथों तक फैलता है?",
+                'en': "Does the numbness spread from your neck to your shoulders or arms?",
+                'category': 'neck_numbness_radiation'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी गर्दन की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your neck issue in more detail.",
+                'category': 'neck_detail'
+            }
+        ]
+    },
+  'knee': {
+        'pain': [
+            {
+                'hi': "क्या घुटने का दर्द चलने या बैठने पर बढ़ता है?",
+                'en': "Does the knee pain worsen while walking or sitting?",
+                'category': 'knee_pain_activity'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ गर्माहट या लालिमा भी महसूस हो रही है?",
+                'en': "Is there warmth or redness along with the swelling?",
+                'category': 'knee_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर घुटने जकड़े हुए महसूस होते हैं?",
+                'en': "Do your knees feel stiff when you wake up in the morning?",
+                'category': 'knee_stiffness_morning'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "घुटने में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your knee?",
+                'category': 'knee_injury_time'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या घुटना कमजोर महसूस होता है या चलते समय लड़खड़ाता है?",
+                'en': "Does the knee feel weak or give way while walking?",
+                'category': 'knee_weakness_instability'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your knee issue in more detail.",
+                'category': 'knee_detail'
+            }
+        ]
+    },
+  'foot': {
+        'pain': [
+            {
+                'hi': "क्या पैर में दर्द चलने या खड़े होने पर बढ़ता है?",
+                'en': "Does the foot pain increase while walking or standing?",
+                'category': 'foot_pain_activity'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ पैर में गर्माहट या लालिमा है?",
+                'en': "Is there warmth or redness along with the swelling in your foot?",
+                'category': 'foot_swelling_signs'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या सुन्नपन पूरे पैर में है या सिर्फ उंगलियों तक सीमित है?",
+                'en': "Is the numbness throughout your foot or just in the toes?",
+                'category': 'foot_numbness_location'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "पैर में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your foot?",
+                'category': 'foot_injury_time'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर पैर में जकड़न महसूस होती है?",
+                'en': "Do you feel stiffness in your foot when you wake up?",
+                'category': 'foot_stiffness_morning'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने पैर की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your foot issue in more detail.",
+                'category': 'foot_detail'
+            }
+        ]
+    },
+    'shoulder': {
+        'pain': [
+            {
+                'hi': "क्या कंधे का दर्द हाथ उठाने पर बढ़ता है?",
+                'en': "Does the shoulder pain increase when you lift your arm?",
+                'category': 'shoulder_pain_movement'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या कंधा पूरी तरह घुमाने में परेशानी होती है?",
+                'en': "Is it difficult to fully rotate your shoulder?",
+                'category': 'shoulder_stiffness_range'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "कंधे में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your shoulder?",
+                'category': 'shoulder_injury_time'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या झुनझुनी या सुन्नपन कंधे से हाथ तक फैलता है?",
+                'en': "Does the numbness or tingling extend from your shoulder to your arm?",
+                'category': 'shoulder_numbness_extent'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या कंधे में कमजोरी के कारण भारी चीजें उठाना मुश्किल है?",
+                'en': "Is it hard to lift heavy objects due to shoulder weakness?",
+                'category': 'shoulder_weakness_function'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने कंधे की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your shoulder issue in more detail.",
+                'category': 'shoulder_detail'
+            }
+        ]
+    },
+ 'ear': {
+        'pain': [
+            {
+                'hi': "क्या कान में दर्द के साथ बुखार या सुनाई देने में दिक्कत है?",
+                'en': "Do you have fever or difficulty hearing along with the ear pain?",
+                'category': 'ear_pain_additional_symptoms'
+            }
+        ],
+        'hearing_loss': [
+            {
+                'hi': "क्या सुनाई देने में समस्या एक कान में है या दोनों में?",
+                'en': "Is the hearing loss in one ear or both?",
+                'category': 'ear_hearing_loss_side'
+            }
+        ],
+        'ringing': [
+            {
+                'hi': "क्या कान में घंटी या गूंजने जैसी आवाज़ लगातार रहती है?",
+                'en': "Is the ringing or buzzing in your ear constant?",
+                'category': 'ear_ringing_frequency'
+            }
+        ],
+        'discharge': [
+            {
+                'hi': "क्या कान से तरल पदार्थ निकल रहा है?",
+                'en': "Is there fluid coming out of your ear?",
+                'category': 'ear_discharge_presence'
+            }
+        ],
+        'infection': [
+            {
+                'hi': "क्या डॉक्टर ने कभी कान के संक्रमण की पुष्टि की है?",
+                'en': "Have you ever been diagnosed with an ear infection before?",
+                'category': 'ear_infection_history'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने कान की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your ear issue in more detail.",
+                'category': 'ear_detail'
+            }
+        ]
+    },   
+   'nails': {
+        'discoloration': [
+            {
+                'hi': "क्या नाखूनों का रंग हाल ही में बदला है?",
+                'en': "Has the color of your nails changed recently?",
+                'category': 'nail_discoloration_change'
+            }
+        ],
+        'pain': [
+            {
+                'hi': "क्या नाखून में दर्द किसी चोट के बाद शुरू हुआ?",
+                'en': "Did the nail pain start after any injury?",
+                'category': 'nail_pain_injury'
+            }
+        ],
+        'infection': [
+            {
+                'hi': "क्या नाखून के पास सूजन, मवाद या लालिमा है?",
+                'en': "Is there swelling, pus, or redness near the nail?",
+                'category': 'nail_infection_signs'
+            }
+        ],
+        'brittle': [
+            {
+                'hi': "क्या आपके नाखून आसानी से टूट या चटक जाते हैं?",
+                'en': "Do your nails crack or break easily?",
+                'category': 'nail_brittle_frequency'
+            }
+        ],
+        'growth': [
+            {
+                'hi': "क्या आपने नाखूनों की वृद्धि में कमी या बदलाव देखा है?",
+                'en': "Have you noticed any changes or slowdown in nail growth?",
+                'category': 'nail_growth_change'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने नाखूनों की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your nail issue in more detail.",
+                'category': 'nail_detail'
+            }
+        ]
+    }, 
+    'bone': {
+        'pain': [
+            {
+                'hi': "क्या यह हड्डी का दर्द किसी विशेष गतिविधि से जुड़ा है?",
+                'en': "Is the bone pain related to any specific activity?",
+                'category': 'bone_pain_activity'
+            }
+        ],
+        'fracture': [
+            {
+                'hi': "क्या आपको एक्स-रे या स्कैन में फ्रैक्चर की पुष्टि हुई है?",
+                'en': "Has a fracture been confirmed through an X-ray or scan?",
+                'category': 'bone_fracture_diagnosed'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ दर्द या हड्डी पर दबाव से तकलीफ़ होती है?",
+                'en': "Is the swelling painful or tender to touch over the bone?",
+                'category': 'bone_swelling_pain'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या आपकी हड्डियाँ आसानी से टूट जाती हैं या कमजोर महसूस होती हैं?",
+                'en': "Do your bones break easily or feel weak?",
+                'category': 'bone_weakness_frequency'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "हड्डी को चोट कब और कैसे लगी थी?",
+                'en': "When and how did you injure the bone?",
+                'category': 'bone_injury_time'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी हड्डियों की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your bone issue in more detail.",
+                'category': 'bone_detail'
+            }
+        ]
+},
 
     
 }
