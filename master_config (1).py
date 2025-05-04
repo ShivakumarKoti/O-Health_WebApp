@@ -9142,6 +9142,15 @@ trigger_keywords = {
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice'],
         'infection': ['infection', 'fever', 'cold', 'flu', 'strep']
     },
+    'stomach': {
+        'pain': ['stomach ache', 'pain', 'cramps', 'hurt', 'stomach discomfort'],
+        'bloating': ['bloating', 'fullness', 'gas', 'gassy', 'swollen stomach'],
+        'nausea': ['nausea', 'feeling sick', 'queasy', 'vomiting'],
+        'diarrhea': ['diarrhea', 'loose stool', 'watery stool'],
+        'indigestion': ['indigestion', 'heartburn', 'acid reflux', 'upset stomach']
+    },
+    
+}
 
  
     # add ear / skin / etc…
@@ -9490,6 +9499,51 @@ body_part_followup_questions = {
             }
         ]
     },
+   'stomach': {
+        'pain': [
+            {
+                'hi': "क्या पेट में दर्द खाने के बाद बढ़ता है?",
+                'en': "Does the stomach pain increase after eating?",
+                'category': 'stomach_pain_after_eating'
+            }
+        ],
+        'bloating': [
+            {
+                'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
+                'en': "Do you experience gas or belching along with the bloating?",
+                'category': 'stomach_bloating_gas'
+            }
+        ],
+        'nausea': [
+            {
+                'hi': "क्या आपको उल्टी के अलावा मिचली भी महसूस हो रही है?",
+                'en': "Are you feeling nauseous, in addition to vomiting?",
+                'category': 'stomach_nausea_additional_symptoms'
+            }
+        ],
+        'diarrhea': [
+            {
+                'hi': "क्या दस्त के साथ बुखार या कमजोरी भी महसूस हो रही है?",
+                'en': "Do you experience fever or weakness along with the diarrhea?",
+                'category': 'stomach_diarrhea_additional_symptoms'
+            }
+        ],
+        'indigestion': [
+            {
+                'hi': "क्या आपको बार-बार एसिड रिफ्लक्स या जलन महसूस हो रही है?",
+                'en': "Are you frequently experiencing acid reflux or heartburn?",
+                'category': 'stomach_indigestion_reflux'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your stomach issue in more detail.",
+                'category': 'stomach_detail'
+            }
+        ]
+    },
+
     
 }
 
