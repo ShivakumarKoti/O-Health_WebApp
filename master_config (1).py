@@ -97,7 +97,7 @@ symptom_synonyms = {
         'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 'pain inside the abdomen',
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'pain in the lower abdomen',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'pain in the abdomen', 'stomach discomfort',
-        'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'feeling of indigestion', 'pain around stomach area', 'belly pain', 
+        'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'pain around stomach area', 'belly pain', 
         'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
         'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
         'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from bloating', 'pain from food intolerance',
