@@ -155,7 +155,7 @@ symptom_synonyms = {
     'breathing feels out of control', 'feeling like I’m suffocating',  'lungs working overtime', 'breathing feels unnatural',
     'breathing in short bursts', 'breathing too fast to speak properly', 'racing heart and fast breathing', 
     'anxious breathing', 'fluttering heartbeat with fast breath', 'heart pounding and rapid breath'
-]
+],
 
     'muscle pain': [
         'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle cramps',
@@ -329,11 +329,11 @@ symptom_synonyms = {
 
     ],
     'tooth pain': [
-        'toothache', 'dental pain', 'pain in the tooth', 'sharp tooth pain', 'throbbing tooth pain', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
+        'toothache', 'dental pain', 'pain in the tooth', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
         'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
-        'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'dull tooth pain',
-        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'sharp shooting tooth pain', 'pain from tooth trauma', 'dental discomfort',  
-        'pain in the tooth nerve', 'pain from filling', 'gum-related tooth pain', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup',
+        'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'tooth pain', 'tooth aches',
+        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'pain from tooth trauma', 'dental discomfort','teeth pain', 'tooth ache', 'teeth ache',
+        'pain in the tooth nerve', 'pain from filling', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup', 'teeth are aching', 'tooth is aching',
         'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth'
         
     ],
@@ -496,7 +496,7 @@ symptom_synonyms = {
 ],
 
 'cramp': [
-    'paining cramp', 'cramped muscle', 'cramping sensation', 'cramping', 'cramps'
+    'paining cramp', 'cramped muscle', 'cramping sensation', 'cramping'
 ],
 
 'bleeding': [
@@ -537,7 +537,7 @@ symptom_synonyms = {
     'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight', 'lost weight',
-    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight, 'loss of weight'
+    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight', 'loss of weight'
 ],
 
 'hair loss': [
@@ -677,7 +677,7 @@ symptom_synonyms = {
 'dehydration': [
     'fluid loss', 'water depletion', 'lack of hydration', 'electrolyte imbalance', 'insufficient water intake', 'dehydrating',
     'dehydrated state', 'water deficiency', 'reduced fluid levels', 'severe dehydration', 'mild dehydration', 'dehydration symptoms',
-    'fluid imbalance', 'low body water', 'loss of body fluids', 'heat exhaustion', 'low hydration', 'hypohydration', water drained out'
+    'fluid imbalance', 'low body water', 'loss of body fluids', 'heat exhaustion', 'low hydration', 'hypohydration', 'water drained out'
 ],
 
 'red eyes': [
@@ -6746,13 +6746,7 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     },
-    {
-      "hi": "क्या आपको आंखों से संबंधित कोई समस्या का इतिहास है, जैसे ग्लूकोमा या सूखी आंखें?",
-      "en": "Do you have a history of eye conditions, such as glaucoma or dry eyes?",
-      "category": "eye pain",
-      "symptom": None,
-      "risk_factor": True,
-    },
+
     {
       "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
       "en": "Have you been exposed to smoke, chemicals, or other irritants?",
@@ -9095,10 +9089,10 @@ trigger_keywords = {
     },
 
     'eye': {
-        'itching': ['itchy', 'itching', 'scratchy', 'irritated'],
+        'itching': ['itchy', 'itching', 'scratchy', 'irritated','irritation'],
         'redness': ['red', 'bloodshot', 'pink', 'inflamed'],
         'burn'        : ['burn', 'burning', 'chemical', 'irritation'],
-        'blurry_vision': ['blurry', 'blurry vision', 'not clear', 'foggy', 'unclear']
+        'blurry vision': ['blurry', 'blurry vision', 'not clear', 'foggy', 'unclear','blurred']
     },
     'hand': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
@@ -9163,7 +9157,7 @@ trigger_keywords = {
         'injury': ['injury', 'twist', 'fall', 'hit', 'sprain', 'fracture'],
         'weakness': ['weak', 'unstable', 'giving way', 'can’t stand']
     },
-  foot': {
+  'foot': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
         'swelling': ['swollen', 'puffy', 'swelling', 'inflamed'],
         'numbness': ['numb', 'tingling', 'pins', 'needles'],
@@ -9191,7 +9185,7 @@ trigger_keywords = {
         'brittle': ['brittle', 'crack', 'split', 'break'],
         'growth': ['not growing', 'slow growth', 'deformed', 'misshaped']
     },
-   joint': {
+   'joint': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
         'swelling': ['swollen', 'inflammation', 'swelling', 'puffiness'],
         'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
@@ -9199,7 +9193,7 @@ trigger_keywords = {
         'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
     },
     'skin': {
-        'rash': ['rash', 'redness', 'itchy', 'inflamed', 'blotchy'],
+        'rash': ['rash', 'redness', 'itchy', 'inflamed', 'blotchy','rashes'],
         'dryness': ['dry', 'flaky', 'cracked', 'itchy skin'],
         'swelling': ['swollen', 'puffy', 'swelling', 'edema'],
         'burn': ['burn', 'sunburn', 'scald', 'blister'],
@@ -10064,10 +10058,22 @@ body_part_to_specialist = {
     # extend as needed
 }
 
+body_part_aliases = {
+    'teeth': 'tooth',
+    'tooth': 'tooth',
+    'molars': 'tooth',
+    'wisdom tooth': 'tooth',
+    'eye': 'eye',
+    'eyes': 'eye',
+    'ear': 'ear',
+    'ears': 'ear'
+    # Add more synonyms here
+}
+
 body_parts = [
     'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
     'neck', 'knee','knees', 'foot','foots', 'shoulder', 'shoulders', 'ear', 'ears','nail' , 'nails', 'bone','bones', 'joint','joints', 'skin','abdomen',
-    'mouth', 'nose', 'tooth', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
+    'mouth', 'nose', 'tooth', 'tooths', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial',
