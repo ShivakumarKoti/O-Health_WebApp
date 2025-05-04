@@ -334,7 +334,7 @@ symptom_synonyms = {
         'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'tooth pain', 'tooth aches',
         'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'pain from tooth trauma', 'dental discomfort','teeth pain', 'tooth ache', 'teeth ache',
         'pain in the tooth nerve', 'pain from filling', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup', 'teeth are aching', 'tooth is aching',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth'
+        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth', 'pain in the teeth'
         
     ],
  'broken tooth': [
