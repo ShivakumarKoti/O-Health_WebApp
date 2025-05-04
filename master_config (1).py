@@ -612,7 +612,8 @@ symptom_synonyms = {
 
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance',
-     'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening'
+     'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening', 'not being digested',
+     'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems'
 ],
 
 'mouth sore': [
