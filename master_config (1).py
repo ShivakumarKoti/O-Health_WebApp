@@ -9139,3 +9139,14 @@ body_part_to_specialist = {
     'foot' : 'Orthopedic Specialist',
     # extend as needed
 }
+
+body_parts = [
+    'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
+    'neck', 'knee','knees', 'foot','foots', 'shoulder', 'shoulders', 'ear', 'ears','nail' , 'nails', 'bone','bones', 'joint','joints', 'skin','abdomen',
+    'mouth', 'nose', 'tooth', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
+    'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
+    'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
+    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial',
+    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal',
+    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic'
+] 
