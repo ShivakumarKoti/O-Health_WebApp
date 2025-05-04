@@ -9082,3 +9082,60 @@ medications_list = [
     "terbinafine", "itraconazole", "nystatin", "clotrimazole", "ketoconazole", "miconazole", "fluconazole", "terbinafine",
     "griseofulvin", "miconazole", "nystatin", "terbinafine"
 ]
+
+trigger_keywords = {
+    'tooth': {
+        'injury'      : ['injury', 'fell', 'fall', 'knock', 'blow', 'hit'],
+        'sensitivity' : ['hard', 'gum', 'gums', 'sensitive', 'bleeding']
+    },
+    'eye': {
+        'burn'        : ['burn', 'burning', 'chemical', 'irritation']
+    },
+    # add ear / skin / etc…
+}
+
+body_part_followup_questions = {
+    'tooth': {
+        'injury': [
+            {'hi': "आपके दाँत में चोट कब लगी थी?",
+             'en': "How long ago did you injure the tooth?",
+             'category': 'tooth_injury_time'}
+        ],
+        'sensitivity': [
+            {'hi': "क्या दाँत या मसूड़े छूने पर संवेदनशील लग रहे हैं?",
+             'en': "Are your teeth or gums feeling sensitive to touch?",
+             'category': 'tooth_sensitivity'}
+        ],
+        'default': [
+            {'hi': "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
+             'en': "Can you describe more about your tooth issue?",
+             'category': 'tooth_detail'}
+        ]
+    },
+    'eye': {
+        'burn': [
+            {'hi': "आँखों में जलन कब से हो रही है?",
+             'en': "Since when have your eyes been burning?",
+             'category': 'eye_burn_duration'}
+        ],
+        'default': [
+            {'hi': "कृपया अपनी आँख की समस्या के बारे में विस्तार से बताएँ।",
+             'en': "Tell me more about your eye problem.",
+             'category': 'eye_detail'}
+        ]
+    }
+}
+
+# -----------------------------------------------------------------
+# Map lone body parts → default specialists (used if NO symptoms)
+# -----------------------------------------------------------------
+body_part_to_specialist = {
+    'tooth': 'Dentist',
+    'teeth': 'Dentist',
+    'eye'  : 'Ophthalmologist',
+    'ear'  : 'ENT Specialist',
+    'skin' : 'Dermatologist',
+    'hand' : 'Orthopedic Specialist',
+    'foot' : 'Orthopedic Specialist',
+    # extend as needed
+}
