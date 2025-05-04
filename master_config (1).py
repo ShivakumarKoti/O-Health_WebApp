@@ -332,9 +332,9 @@ symptom_synonyms = {
         'toothache', 'dental pain', 'pain in the tooth', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
         'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
         'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'tooth pain', 'tooth aches',
-        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'pain from tooth trauma', 'dental discomfort','teeth pain', 'tooth ache', 'teeth ache',
-        'pain in the tooth nerve', 'pain from filling', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup', 'teeth are aching', 'tooth is aching',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth', 'pain in the teeth'
+        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'pain from tooth trauma', 'dental discomfort','teeth pain', 'tooth ache', 'teeth ache', 'teeth are paining',
+        'pain in the tooth nerve', 'pain from filling', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup', 'teeth are aching', 'tooth is aching', 'tooth is paining',
+        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth','pain in the teeth','pain in teeth'
         
     ],
  'broken tooth': [
@@ -9101,19 +9101,19 @@ trigger_keywords = {
         'injury': ['fracture', 'broke', 'crack', 'broken', 'injury', 'hit']
     },
 'arm': {
-        'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles'],
-        'injury': ['fracture', 'broke', 'injury', 'fall', 'hit', 'bruise'],
-        'weakness': ['weak', 'no strength', 'tired', 'fatigue', 'can’t lift']
+        'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing','pains','hurts'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles','numbing'],
+        'injury': ['fracture', 'broke', 'injury', 'fall', 'hit', 'bruise','injured'],
+        'weakness': ['weak', 'no strength', 'tired', 'fatigue']
     },
   'head': {
-        'injury': ['bump', 'hit', 'fall', 'injury', 'knock'],
+        'injury': ['bump', 'hit', 'fall', 'injury', 'knock','fell'],
         'pressure': ['pressure', 'tightness', 'heaviness']
     },  
 'back': {
         'pain': ['backache', 'pain', 'hurt', 'sore', 'stiff', 'ache'],
         'stiffness': ['stiff', 'tight', 'tense', 'rigid'],
-        'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled'],
+        'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled','fell'],
         'numbness': ['numb', 'tingling', 'pins', 'needles']
     },
 'chest': {
@@ -9137,11 +9137,11 @@ trigger_keywords = {
         'infection': ['infection', 'fever', 'cold', 'flu', 'strep']
     },
     'stomach': {
-        'pain': ['stomach ache', 'pain', 'cramps', 'hurt', 'stomach discomfort'],
-        'bloating': ['bloating', 'fullness', 'gas', 'gassy', 'swollen stomach'],
+        'pain': ['stomach ache', 'pain', 'cramps', 'cramp','hurt', 'discomfort'],
+        'bloating': ['bloating', 'fullness', 'gas', 'gassy', 'swollen'],
         'nausea': ['nausea', 'feeling sick', 'queasy', 'vomiting'],
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool'],
-        'indigestion': ['indigestion', 'heartburn', 'acid reflux', 'upset stomach']
+        'indigestion': ['indigestion', 'heartburn', 'acid reflux', 'upset']
     },
     'neck': {
         'pain': ['pain', 'ache', 'sore', 'hurt', 'throbbing'],
@@ -9206,7 +9206,24 @@ trigger_keywords = {
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swollen', 'inflammation', 'bump', 'swelling']
     },
+ 
+ 'heart': {
+        'pain': ['pain', 'ache', 'sore', 'cramping', 'stiff', 'tightness', 'pressure', 'squeezing','stabbing'],
+        'burn': ['burns', 'burning', 'burnt', 'burnt'],
+        'palpitation': ['flutter', 'palpitation', 'racing', 'fast heartbeat', 'skipped beat']
+ }
 
+ 'urinary': {
+        'pain': ['burn', 'burning', 'pain', 'stinging', 'discomfort'],
+        'frequency': ['frequent', 'often', 'urge', 'need to go', 'multiple times'],
+        'blood': ['blood', 'bloody', 'red urine', 'hematuria'],
+        'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing']
+    },
+    'toes': {
+        'pain': ['ache', 'throbbing', 'sharp', 'burn', 'tingling', 'numbness'],
+        'swelling': ['swollen', 'puffy', 'inflamed', 'red', 'tender'],
+        'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush']
+    }
  
     # add ear / skin / etc…
 }
@@ -10040,9 +10057,80 @@ body_part_followup_questions = {
         ]
     },
 
-    
-}
+     'heart': {
+        'pain': [
+            {'hi': "क्या दर्द सीने के बीच में है या बाईं तरफ?",
+             'en': "Is the pain in the center of the chest or on the left side?",
+             'category': 'heart_pain_location'}
+        ],
+        'palpitation': [
+            {'hi': "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
+             'en': "Do you feel your heartbeat is fast or irregular?",
+             'category': 'heart_palpitations'}
+        ],
+      
+    'burn': [
+            {'hi': "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
+             'en': "Do you feel your heartbeat is fast or irregular?",
+             'category': 'heart_palpitations'}
+        ],
+        'default': [
+            {'hi': "कृपया अपने दिल से जुड़ी समस्या के बारे में और बताएं।",
+             'en': "Please tell me more about your heart-related issue.",
+             'category': 'heart_detail'}
+        ]
+    },
 
+    'urinary': {
+        'pain': [
+            {'hi': "क्या पेशाब करते समय जलन या दर्द होता है?",
+             'en': "Do you experience burning or pain while urinating?",
+             'category': 'urinary_pain'}
+        ],
+        'frequency': [
+            {'hi': "दिन में कितनी बार पेशाब करने की जरूरत महसूस होती है?",
+             'en': "How many times do you feel the need to urinate in a day?",
+             'category': 'urinary_frequency'}
+        ],
+        'blood': [
+            {'hi': "क्या पेशाब में खून दिखा है?",
+             'en': "Have you noticed any blood in your urine?",
+             'category': 'urinary_blood'}
+        ],
+        'difficulty': [
+            {'hi': "क्या पेशाब करने में कठिनाई या रुकावट हो रही है?",
+             'en': "Are you experiencing difficulty or blockage while urinating?",
+             'category': 'urinary_difficulty'}
+        ],
+        'default': [
+            {'hi': "कृपया अपनी पेशाब से जुड़ी समस्या के बारे में और जानकारी दें।",
+             'en': "Please tell me more about your urinary issue.",
+             'category': 'urinary_detail'}
+        ]
+    },
+    'toes': {
+        'injury': [
+            {'hi': "कौन सी उंगली या उंगलियाँ घायल हैं?",
+             'en': "Which toe or toes are injured?",
+             'category': 'toes_injury_location'}
+        ],
+        'pain': [
+            {'hi': "क्या दर्द चलने पर ज्यादा होता है या आराम करते समय भी रहता है?",
+             'en': "Does the pain worsen while walking or is it present even at rest?",
+             'category': 'toes_pain_detail'}
+        ],
+        'swelling': [
+            {'hi': "क्या सूजन के साथ लालिमा या गर्माहट भी है?",
+             'en': "Is there redness or warmth along with the swelling?",
+             'category': 'toes_swelling_symptoms'}
+        ],
+        'default': [
+            {'hi': "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
+             'en': "Please describe your toe issue in more detail.",
+             'category': 'toes_detail'}
+        ]
+    }
+}
 
 # -----------------------------------------------------------------
 # Map lone body parts → default specialists (used if NO symptoms)
@@ -10050,13 +10138,101 @@ body_part_followup_questions = {
 body_part_to_specialist = {
     'tooth': 'Dentist',
     'teeth': 'Dentist',
-    'eye'  : 'Ophthalmologist',
-    'ear'  : 'ENT Specialist',
-    'skin' : 'Dermatologist',
-    'hand' : 'Orthopedic Specialist',
-    'foot' : 'Orthopedic Specialist',
-    # extend as needed
+    'tooths': 'Dentist',
+    'mouth': 'Dentist',
+    'tongue': 'Dentist',
+    'lip': 'Dentist',
+    'lips': 'Dentist',
+    'cheek': 'Dentist',
+    'cheeks': 'Dentist',
+    'chin': 'Dentist',
+    'oral': 'Dentist',
+    'buccal': 'Dentist',
+    'eye': 'Ophthalmologist',
+    'eyes': 'Ophthalmologist',
+    'ocular': 'Ophthalmologist',
+    'ear': 'ENT Specialist',
+    'ears': 'ENT Specialist',
+    'otologic': 'ENT Specialist',
+    'nose': 'ENT Specialist',
+    'nasal': 'ENT Specialist',
+    'throat': 'ENT Specialist',
+    'pharyngeal': 'ENT Specialist',
+    'laryngeal': 'ENT Specialist',
+    'skin': 'Dermatologist',
+    'nail': 'Dermatologist',
+    'nails': 'Dermatologist',
+    'head': 'Neurologist',
+    'forehead': 'Neurologist',
+    'cranial': 'Neurologist',
+    'trigeminal': 'Neurologist',
+    'facial': 'Neurologist',
+    'neck': 'Orthopedic Specialist',
+    'back': 'Orthopedic Specialist',
+    'spinal': 'Orthopedic Specialist',
+    'lumbar': 'Orthopedic Specialist',
+    'thoracic': 'Orthopedic Specialist',
+    'cervical': 'Orthopedic Specialist',
+    'arm': 'Orthopedic Specialist',
+    'arms': 'Orthopedic Specialist',
+    'hand': 'Orthopedic Specialist',
+    'hands': 'Orthopedic Specialist',
+    'finger': 'Orthopedic Specialist',
+    'fingers': 'Orthopedic Specialist',
+    'thumb': 'Orthopedic Specialist',
+    'thumbs': 'Orthopedic Specialist',
+    'wrist': 'Orthopedic Specialist',
+    'wrists': 'Orthopedic Specialist',
+    'elbow': 'Orthopedic Specialist',
+    'elbows': 'Orthopedic Specialist',
+    'shoulder': 'Orthopedic Specialist',
+    'shoulders': 'Orthopedic Specialist',
+    'leg': 'Orthopedic Specialist',
+    'legs': 'Orthopedic Specialist',
+    'knee': 'Orthopedic Specialist',
+    'knees': 'Orthopedic Specialist',
+    'foot': 'Orthopedic Specialist',
+    'foots': 'Orthopedic Specialist',  # included typo variant
+    'feet': 'Orthopedic Specialist',   # common plural
+    'ankle': 'Orthopedic Specialist',
+    'ankles': 'Orthopedic Specialist',
+    'heel': 'Orthopedic Specialist',
+    'heels': 'Orthopedic Specialist',
+    'toe': 'Orthopedic Specialist',
+    'toes': 'Orthopedic Specialist',
+    'palm': 'Orthopedic Specialist',
+    'palms': 'Orthopedic Specialist',
+    'fingertip': 'Orthopedic Specialist',
+    'fingertips': 'Orthopedic Specialist',
+    'instep': 'Orthopedic Specialist',
+    'calf': 'Orthopedic Specialist',
+    'shin': 'Orthopedic Specialist',
+    'joint': 'Orthopedic Specialist',
+    'joints': 'Orthopedic Specialist',
+    'bone': 'Orthopedic Specialist',
+    'bones': 'Orthopedic Specialist',
+    'chest': 'Pulmonologist',
+    'respiratory': 'Pulmonologist',
+    'pulmonary': 'Pulmonologist',
+    'cardiac': 'Cardiologist',
+    'heart': 'Cardiologist',
+    'stomach': 'Gastroenterologist',
+    'abdomen': 'Gastroenterologist',
+    'abdominal': 'Gastroenterologist',
+    'gastrointestinal': 'Gastroenterologist',
+    'digestive': 'Gastroenterologist',
+    'biliary': 'Gastroenterologist',
+    'rectal': 'Gastroenterologist',
+    'liver': 'Hepatologist',
+    'hepatic': 'Hepatologist',
+    'renal': 'Nephrologist',
+    'urinary': 'Urologist',
+    'genital': 'Gynecologist',
+    'soles': 'Podiatrist',
+    'visceral': 'General Surgeon',
+    'peripheral': 'Neurologist',
 }
+
 
 body_part_aliases = {
     'teeth': 'tooth',
