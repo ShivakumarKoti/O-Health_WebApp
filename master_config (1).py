@@ -9211,7 +9211,7 @@ trigger_keywords = {
         'pain': ['pain', 'ache', 'sore', 'cramping', 'stiff', 'tightness', 'pressure', 'squeezing','stabbing'],
         'burn': ['burns', 'burning', 'burnt', 'burnt'],
         'palpitation': ['flutter', 'palpitation', 'racing', 'fast heartbeat', 'skipped beat']
- }
+ },
 
  'urinary': {
         'pain': ['burn', 'burning', 'pain', 'stinging', 'discomfort'],
