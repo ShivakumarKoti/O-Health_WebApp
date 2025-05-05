@@ -291,7 +291,7 @@ symptom_synonyms = {
         'frigid vibrations', 'quaking with chill', 'hair standing on end', 'trembling internally', 'spasmodic shivers', 'cold-induced tremble', 'chilled to the bone',
         'freezing sensation', 'vibrating with cold', 'small uncontrollable shakes', 'persistent shuddering', 'subtle shivers', 'prickly gooseflesh', 'frost-like feeling', 'quivery muscles',
         'rattled by chill', 'shudders running down spine', 'uncontrollable cold tremors', 'shaky fingers and toes', 'rattling teeth', 'jittering from cold', 'frigid trembles',
-        'cold-induced shaking', 'numbing cold'
+        'cold-induced shaking', 'numbing cold', 'shiver', 'shivers'
     ],
 
     'eye pain': [
