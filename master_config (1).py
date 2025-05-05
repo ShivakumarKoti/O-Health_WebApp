@@ -860,7 +860,7 @@ symptom_synonyms = {
 ],
 
 'weight gain': [
-'increase in weight', 'gain in body mass', 'unintended weight gain', 'gradual weight gain', 'rapid weight gain', 'excess body weight', 'body mass increase', 
+'increase in weight', 'gain in body mass', 'weight gain', 'excess body weight', 'body mass increase', 'weight is increasing','weight increased','weight is more',
  'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 'gaining weight', 'gained weight',
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
