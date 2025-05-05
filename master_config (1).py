@@ -9224,6 +9224,13 @@ trigger_keywords = {
         'pain': ['ache', 'throbbing', 'sharp', 'burn', 'tingling', 'numbness'],
         'swelling': ['swollen', 'puffy', 'inflamed', 'red', 'tender'],
         'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush']
+    },
+ 'nose': {
+        'injury': ['injury', 'hit', 'fracture', 'bump', 'hurt'],
+        'burning': ['burning', 'stinging', 'irritation', 'hot sensation'],
+        'sniffing': ['sniffing', 'sniff', 'smelling', 'inhale', 'breathing in'],
+        'pain': ['pain', 'ache', 'sore', 'pressure'],
+        'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis']
     }
  
     # add ear / skin / etc…
@@ -10129,6 +10136,50 @@ body_part_followup_questions = {
             {'hi': "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
              'en': "Please describe your toe issue in more detail.",
              'category': 'toes_detail'}
+        ]
+    },
+ 'nose': {
+        'injury': [
+            {
+                'hi': "नाक में चोट कब और कैसे लगी थी?",
+                'en': "How and when did you injure your nose?",
+                'category': 'nose_injury_time'
+            }
+        ],
+        'burning': [
+            {
+                'hi': "क्या नाक में जलन लगातार रहती है या कुछ खास चीज़ों से होती है?",
+                'en': "Is the burning sensation in your nose constant or triggered by something specific?",
+                'category': 'nose_burning_trigger'
+            }
+        ],
+        'sniffing': [
+            {
+                'hi': "क्या आपको सूंघने में कठिनाई हो रही है?",
+                'en': "Are you having trouble smelling things?",
+                'category': 'nose_sniffing_difficulty'
+            }
+        ],
+        'pain': [
+            {
+                'hi': "क्या नाक में दर्द दबाने पर बढ़ता है?",
+                'en': "Does the pain in your nose worsen when you press on it?",
+                'category': 'nose_pain_touch'
+            }
+        ],
+        'infection': [
+            {
+                'hi': "क्या आपको सर्दी, जुकाम या साइनस जैसी समस्या भी है?",
+                'en': "Are you also experiencing cold, congestion, or sinus problems?",
+                'category': 'nose_infection_symptoms'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी नाक की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your nose issue in more detail.",
+                'category': 'nose_detail'
+            }
         ]
     }
 }
