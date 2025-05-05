@@ -6706,7 +6706,7 @@ symptom_followup_questions = {
       "category": "sneezing",
       "symptom": None,
       "risk_factor": False,
-    }
+    },
 ],
  "throat pain": [
     {
@@ -6743,7 +6743,7 @@ symptom_followup_questions = {
       "category": "throat pain",
       "symptom": None,
       "risk_factor": False,
-    }
+    },
 ],
 "nose pain": [
     {
@@ -6780,10 +6780,10 @@ symptom_followup_questions = {
       "category": "nose pain",
       "symptom": None,
       "risk_factor": False,
-    }
+    },
 ],
-
-  "eye pain": [
+   
+ "eye pain": [
     {
       "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
       "en": "Is the pain in one eye or both eyes?",
@@ -6798,7 +6798,6 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     },
-
     {
       "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
       "en": "Have you been exposed to smoke, chemicals, or other irritants?",
@@ -6806,7 +6805,22 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     },
+    {
+      "hi": "क्या आपकी आंखें लाल हैं या उनमें सूजन है?",
+      "en": "Are your eyes red or swollen?",
+      "category": "eye pain",
+      "symptom": None,
+      "risk_factor": False,
+    },
+    {
+      "hi": "क्या आपकी दृष्टि धुंधली हो गई है या आपको रोशनी से संवेदनशीलता महसूस होती है?",
+      "en": "Has your vision become blurry or are you experiencing sensitivity to light?",
+      "category": "eye pain",
+      "symptom": None,
+      "risk_factor": False,
+    },
 ],
+
   "hand pain": [
     {
       "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
