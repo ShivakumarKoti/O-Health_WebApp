@@ -1,4 +1,3 @@
-
  # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
@@ -81,7 +80,7 @@ symptom_synonyms = {
         'rattling cough', 'deep-chested cough', 'shallow annoying cough', 'tickling cough', 'lingering throat hack', 'spasm-like coughs', 'throaty expulsions',
         'repetitive cough bursts', 'phlegmy hacking', 'coughing', 'dry tickling cough', 'persistent throat tickle',
         'strangling cough', 'wheezing cough', 'loud barking cough', 'cracking cough', 'sputum-laden cough', 'cough with gagging', 'spasmodic cough', 'stubborn dry cough',
-        'overwhelming coughing sensation', 'violent coughing fits', 'mucus in throat', 'mucus in mouth',
+        'overwhelming coughing sensation', 'violent coughing fits', 
         'chronic phlegm cough', 'intense wheezing cough', 'grating cough', 'wet chesty cough', 'gurgling cough','khasi','kansi'
     ],
     'sore throat': [
@@ -90,7 +89,7 @@ symptom_synonyms = {
         'gritty throat', 'tender throat', 'raspy throat', 'dry throat', 'throat burning sensation', 'feeling of throat swelling', 'pain on swallowing', 'raw feeling in throat',
         'sore feeling when talking', 'throat soreness', 'painful swallowing', 'constant throat irritation', 'throat muscle soreness', 'tight feeling in throat',
         'throat dryness', 'itchy throat', 'burning sensation in throat', 'scratching feeling in throat', 'tenderness in throat', 'chronic throat discomfort', 'raspiness in voice',
-        'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'throat is sore'
+        'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'throat is sore','mucus in throat', 'mucus in mouth'
     ],
     'stomach pain': [
         'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 'pain inside the stomach',
@@ -99,12 +98,12 @@ symptom_synonyms = {
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'pain in the lower abdomen',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'pain in the abdomen', 'stomach discomfort',
         'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'pain around stomach area', 'belly pain', 
-        'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach','pain within the stomach',
+        'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
         'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
         'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from bloating', 'pain from food intolerance',
         'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'stomach flu pain', 
         'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'abdominal cramps', 'abdominal swelling with pain', 
-        'pain with digestive issues', 'pain from food poisoning'
+        'pain with digestive issues', 'pain from food poisoning','pain within the stomach'
     ],
    'weakness': [
     'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
@@ -999,16 +998,16 @@ symptom_synonyms = {
 ],
 
 'more hungry': [
-    'increased hunger', 'excessive hunger', 'extreme hunger', 'constant hunger', 'unusual hunger', 'very hungry',
+    'increased hunger', 'excessive hunger', 'extreme hunger', 'constant hunger', 'unusual hunger',
     'frequent hunger', 'intense hunger', 'never feeling full', 'always hungry', 'feeling hungrier than usual',
-    'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite','hungry','hunger',
+    'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite',
     'overeating due to hunger', 'persistent hunger', 'craving food all the time', 'hungry shortly after eating',
-    'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat', 'eager to eat more',
+    'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat', 
     'eating more than usual', 'feeling hungry', 'unable to satisfy hunger', 'eating more than I need to',
     'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
     'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
     'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
-    'hunger caused by blood sugar drops', 'hunger due to stress', 'hunger from emotional eating',
+    'hunger caused by blood sugar drops', 'hunger due to stress', 'hunger from emotional eating','hungry','eager to eat more',
     'more hunger than normal', 'overeating due to being hungrier'
 ],
 
@@ -4372,6 +4371,12 @@ symptom_followup_questions = {
 
   "acne": [
     {
+      "hi": "आपको कितने समय से एक्ने है?",
+      "en": "How long have you had acne?",
+      "category": "acne",
+      "symptom": "acne duration",
+      "risk_factor": False,    },
+    {
       "hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?",
       "en": "Where do you typically get acne?",
       "category": "acne",
@@ -4581,6 +4586,12 @@ symptom_followup_questions = {
   ],
 
   "ear pain": [
+    {
+      "hi": "आपको कितने समय से कान में दर्द हो रहा है?",
+      "en": "How long have you been experiencing ear pain?",
+      "category": "ear pain",
+      "symptom": "ear pain duration",
+      "risk_factor": False,    },
     {
       "hi": "क्या कान में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
       "en": "Is the ear pain constant, or does it come and go?",
@@ -9221,8 +9232,8 @@ trigger_keywords = {
 body_part_followup_questions = {
     'tooth': {
         'injury': [
-            {'hi': "दाँत की चोट किस क्षेत्र में स्थित है?",
-             'en': "Which area is the tooth injury located?",
+            {'hi': "आपके दाँत में चोट कब लगी थी?",
+             'en': "How long ago did you injure the tooth?",
              'category': 'tooth_injury_time'}
         ],
         'sensitivity': [
@@ -9239,8 +9250,8 @@ body_part_followup_questions = {
 'leg': {
         'injury': [
             {
-    'hi': "आपके पैर का कौन सा हिस्सा घायल है?",
-    'en': "Which area of you leg is injured?",
+    'hi': "कौन सी टांग या टांगे घायल हैं?",
+    'en': "Which leg or legs are injured?",
     'category': 'leg_injury_location'
       }
         ],
@@ -9282,14 +9293,14 @@ body_part_followup_questions = {
             }
         ],
         'burn': [
-            {'hi': "क्या आप अपनी आँखें सामान्य रूप से खोल सकते हैं?",
-             'en': "Can you open your eyes normally?",
+            {'hi': "आँखों में जलन कब से हो रही है?",
+             'en': "Since when have your eyes been burning?",
              'category': 'eye_burn_duration'}
         ],
         'blurry_vision': [
             {
-                'hi': "क्या आप धुंधली दृष्टि से पास की वस्तुओं को देख सकते हैं?",
-                'en': "Can you see objects nearby with the blurred vision?",
+                'hi': "धुंधली दृष्टि कितने समय से हो रही है?",
+                'en': "How long have you had blurry vision?",
                 'category': 'eye_blurry_duration'
             }
         ],
@@ -10135,7 +10146,7 @@ body_part_to_specialist = {
     'lips': 'Dentist',
     'cheek': 'Dentist',
     'cheeks': 'Dentist',
-    'chin': 'Orthopedic specialist',
+    'chin': 'Dentist',
     'oral': 'Dentist',
     'buccal': 'Dentist',
     'eye': 'Ophthalmologist',
@@ -10156,7 +10167,7 @@ body_part_to_specialist = {
     'forehead': 'Neurologist',
     'cranial': 'Neurologist',
     'trigeminal': 'Neurologist',
-    'facial': 'Dermatologist',
+    'facial': 'Neurologist',
     'neck': 'Orthopedic Specialist',
     'back': 'Orthopedic Specialist',
     'spinal': 'Orthopedic Specialist',
@@ -10235,6 +10246,22 @@ body_part_aliases = {
     'ears': 'ear'
     # Add more synonyms here
 }
+
+BP_CANON = {
+    'teeth':      'tooth',
+    'tooth':      'tooth',
+    'molars':     'tooth',
+    'feet':       'foot',
+    'foot':       'foot',
+    'eyes':       'eye',
+    'eye':        'eye',
+    'ears':       'ear',
+    'ear':        'ear',
+    'toes': 'toes',
+     'toe': 'toes'
+    # …and so on for whatever you support
+}
+
 
 body_parts = [
     'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
