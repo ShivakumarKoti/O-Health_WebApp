@@ -1,3 +1,4 @@
+
  # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
@@ -162,7 +163,7 @@ symptom_synonyms = {
         'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
         'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle','pain inside the muscles',
         'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
-        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches', 'pain inside the muscle',
+        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches', 'pain inside the muscle','muscle pain',
         'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
         'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle','pain in the muscles', 'pain in my muscle', 'pain in my muscles'
     ],
@@ -280,7 +281,7 @@ symptom_synonyms = {
         'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints'
     ],
     'tremor': [
-        'shaking', 'shivering', 'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
+        'shivering', 'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
         'shaking limbs', 'twitchy fingers', 'flickering motion', 'trembling body', 'shaky movements', 'muscle spasms', 'jerking', 'shivering body', 'shaky hands',
         'shaking from cold', 'nervous tremors', 'trembling sensation', 'shuddering', 'uncontrollable shaking', 'flickering muscles', 'twitching eyes', 'nervous jerks', 'shaky fingers',
         'twitching limbs', 'muscle jerks', 'nervous body shakes', 'involuntary shaking', 'feeling of tremors', 'trembling body parts', 'sporadic body shaking',
@@ -534,7 +535,7 @@ symptom_synonyms = {
 ],
 
 'weight loss': [
-    'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut', 'weight has reduced',
+    'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight', 'lost weight',
     'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight', 'loss of weight'
@@ -613,7 +614,7 @@ symptom_synonyms = {
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance',
      'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening', 'not being digested',
-     'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems'
+      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems'
 ],
 
 'mouth sore': [
@@ -10254,6 +10255,6 @@ body_parts = [
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial',
-    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal',
+    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic'
 ] 
