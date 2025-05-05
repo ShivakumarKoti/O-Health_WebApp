@@ -280,11 +280,11 @@ symptom_synonyms = {
         'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints'
     ],
     'tremor': [
-        'shivering', 'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
-        'shaking limbs', 'twitchy fingers', 'flickering motion', 'trembling body', 'shaky movements', 'muscle spasms', 'jerking', 'shivering body', 'shaky hands',
+        'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
+        'shaking limbs', 'twitchy fingers', 'flickering motion', 'trembling body', 'shaky movements', 'muscle spasms', 'jerking', 'shaky hands',
         'shaking from cold', 'nervous tremors', 'trembling sensation', 'shuddering', 'uncontrollable shaking', 'flickering muscles', 'twitching eyes', 'nervous jerks', 'shaky fingers',
         'twitching limbs', 'muscle jerks', 'nervous body shakes', 'involuntary shaking', 'feeling of tremors', 'trembling body parts', 'sporadic body shaking',
-        'hand shaking', 'shaky voice', 'rhythmic tremors', 'shivering fingers', 'body quivering', 'body shudders'
+        'hand shaking', 'shaky voice', 'rhythmic tremors', 'body quivering', 'body shudders'
     ],
     'chills': [
         'Shivering', 'trembling with cold', 'uncontrollable shaking', 'teeth chattering', 'feeling frosty', 'quivering limbs', 'body shaking from cold',
