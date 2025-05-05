@@ -9298,6 +9298,13 @@ trigger_keywords = {
        'congestion'  : ['congestion', 'blocked', 'clogged', 'stuffy', 'stopped up'],
         'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis'],
       'bleed' : ['bleed', 'bleeding', 'nosebleed', 'epistaxis', 'blood']
+    },
+ 'thigh': {
+        'pain': ['thigh pain', 'ache in thigh', 'thigh sore', 'thigh cramp'],
+        'weakness': ['thigh weakness', 'can’t lift leg', 'leg feels weak'],
+        'spasm': ['thigh spasm', 'thigh twitch', 'tight thigh'],
+        'injury': ['thigh injury', 'pulled thigh', 'thigh strain', 'torn thigh muscle'],
+        'swelling': ['thigh swelling', 'thigh is swollen', 'bump on thigh']
     }
  
     # add ear / skin / etc…
@@ -10256,6 +10263,50 @@ body_part_followup_questions = {
                 'hi': "कृपया अपनी नाक की समस्या के बारे में और जानकारी दें।",
                 'en': "Please describe your nose issue in more detail.",
                 'category': 'nose_detail'
+            }
+        ]
+    },
+ 'thigh': {
+        'pain': [
+            {
+                'hi': "क्या जांघ में दर्द चलने या दौड़ने से बढ़ता है?",
+                'en': "Does the thigh pain worsen when walking or running?",
+                'category': 'thigh_pain_activity'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या जांघ की कमजोरी के कारण सीढ़ियाँ चढ़ने में दिक्कत होती है?",
+                'en': "Is thigh weakness making it hard to climb stairs?",
+                'category': 'thigh_weakness_function'
+            }
+        ],
+        'spasm': [
+            {
+                'hi': "क्या जांघ में बार-बार मरोड़ या ऐंठन हो रही है?",
+                'en': "Are you experiencing frequent cramps or spasms in your thigh?",
+                'category': 'thigh_spasm_frequency'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या जांघ में किसी गतिविधि के दौरान चोट लगी थी?",
+                'en': "Did the thigh injury happen during any specific activity?",
+                'category': 'thigh_injury_cause'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजी हुई जांघ को छूने पर गर्म लगती है?",
+                'en': "Does the swollen thigh feel warm to the touch?",
+                'category': 'thigh_swelling_signs'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी जांघ की समस्या के बारे में अधिक जानकारी दें।",
+                'en': "Please provide more details about your thigh issue.",
+                'category': 'thigh_detail'
             }
         ]
     }
