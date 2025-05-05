@@ -4372,12 +4372,6 @@ symptom_followup_questions = {
 
   "acne": [
     {
-      "hi": "आपको कितने समय से एक्ने है?",
-      "en": "How long have you had acne?",
-      "category": "acne",
-      "symptom": "acne duration",
-      "risk_factor": False,    },
-    {
       "hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?",
       "en": "Where do you typically get acne?",
       "category": "acne",
@@ -4587,12 +4581,6 @@ symptom_followup_questions = {
   ],
 
   "ear pain": [
-    {
-      "hi": "आपको कितने समय से कान में दर्द हो रहा है?",
-      "en": "How long have you been experiencing ear pain?",
-      "category": "ear pain",
-      "symptom": "ear pain duration",
-      "risk_factor": False,    },
     {
       "hi": "क्या कान में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
       "en": "Is the ear pain constant, or does it come and go?",
@@ -9233,8 +9221,8 @@ trigger_keywords = {
 body_part_followup_questions = {
     'tooth': {
         'injury': [
-            {'hi': "आपके दाँत में चोट कब लगी थी?",
-             'en': "How long ago did you injure the tooth?",
+            {'hi': "दाँत की चोट किस क्षेत्र में स्थित है?",
+             'en': "Which area is the tooth injury located?",
              'category': 'tooth_injury_time'}
         ],
         'sensitivity': [
@@ -9251,8 +9239,8 @@ body_part_followup_questions = {
 'leg': {
         'injury': [
             {
-    'hi': "कौन सी टांग या टांगे घायल हैं?",
-    'en': "Which leg or legs are injured?",
+    'hi': "आपके पैर का कौन सा हिस्सा घायल है?",
+    'en': "Which area of you leg is injured?",
     'category': 'leg_injury_location'
       }
         ],
@@ -9294,14 +9282,14 @@ body_part_followup_questions = {
             }
         ],
         'burn': [
-            {'hi': "आँखों में जलन कब से हो रही है?",
-             'en': "Since when have your eyes been burning?",
+            {'hi': "क्या आप अपनी आँखें सामान्य रूप से खोल सकते हैं?",
+             'en': "Can you open your eyes normally?",
              'category': 'eye_burn_duration'}
         ],
         'blurry_vision': [
             {
-                'hi': "धुंधली दृष्टि कितने समय से हो रही है?",
-                'en': "How long have you had blurry vision?",
+                'hi': "क्या आप धुंधली दृष्टि से पास की वस्तुओं को देख सकते हैं?",
+                'en': "Can you see objects nearby with the blurred vision?",
                 'category': 'eye_blurry_duration'
             }
         ],
