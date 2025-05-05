@@ -10260,6 +10260,9 @@ BP_CANON = {
     'toes': 'toes',
      'toe': 'toes',
      'legs':'leg',
+     'shoulders':'shoulder',
+     'shoulder':'shoulder',
+     'arms':'arm',
      'leg':'leg'
     # …and so on for whatever you support
 }
