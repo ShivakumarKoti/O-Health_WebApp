@@ -10147,7 +10147,7 @@ body_part_to_specialist = {
     'lips': 'Dentist',
     'cheek': 'Dentist',
     'cheeks': 'Dentist',
-    'chin': 'Dentist',
+    'chin': 'Orthopedic specialist',
     'oral': 'Dentist',
     'buccal': 'Dentist',
     'eye': 'Ophthalmologist',
