@@ -6708,8 +6708,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     }
 ],
-
-  "throat pain": [
+ "throat pain": [
     {
       "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
       "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
@@ -6731,7 +6730,59 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     },
+    {
+      "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
+      "en": "Are you experiencing a fever along with your sore throat?",
+      "category": "throat pain",
+      "symptom": None,
+      "risk_factor": False,
+    },
+    {
+      "hi": "क्या आपके गले में सूजन या लालिमा है?",
+      "en": "Do you have any swelling or redness in your throat?",
+      "category": "throat pain",
+      "symptom": None,
+      "risk_factor": False,
+    }
 ],
+"nose pain": [
+    {
+      "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
+      "en": "Are you experiencing persistent pain or burning sensation in your nose?",
+      "category": "nose pain",
+      "symptom": None,
+      "risk_factor": False,
+    },
+    {
+      "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
+      "en": "Do you feel pain when touching or pressing on your nose?",
+      "category": "nose pain",
+      "symptom": "nose pain",
+      "risk_factor": False,
+    },
+    {
+      "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
+      "en": "Is there any swelling or redness in your nose?",
+      "category": "nose pain",
+      "symptom": None,
+      "risk_factor": False,
+    },
+    {
+      "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
+      "en": "Have you recently had a cold, allergies, or sinus issues?",
+      "category": "nose pain",
+      "symptom": None,
+      "risk_factor": False,
+    },
+    {
+      "hi": "क्या आपकी नाक से किसी प्रकार का डिस्चार्ज या खून आ रहा है?",
+      "en": "Is there any discharge or bleeding from your nose?",
+      "category": "nose pain",
+      "symptom": None,
+      "risk_factor": False,
+    }
+],
+
   "eye pain": [
     {
       "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
