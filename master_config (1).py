@@ -839,7 +839,7 @@ symptom_synonyms = {
 ],
 
 'hearing loss': [
-'loss of hearing', 'lost hearing', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability', 'deaf',
+'loss of hearing', 'lost hearing', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability', 'deaf', 'cannot hear','no hearing',
 'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low', 'not hearing', 'unable to hear', 'one ear not listening',
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
@@ -10152,14 +10152,14 @@ body_part_to_specialist = {
     'eye': 'Ophthalmologist',
     'eyes': 'Ophthalmologist',
     'ocular': 'Ophthalmologist',
-    'ear': 'ENT Specialist',
-    'ears': 'ENT Specialist',
-    'otologic': 'ENT Specialist',
-    'nose': 'ENT Specialist',
-    'nasal': 'ENT Specialist',
-    'throat': 'ENT Specialist',
-    'pharyngeal': 'ENT Specialist',
-    'laryngeal': 'ENT Specialist',
+    'ear': 'E N T Specialist',
+    'ears': 'E N T Specialist',
+    'otologic': 'E N T Specialist',
+    'nose': 'E N T Specialist',
+    'nasal': 'E N T Specialist',
+    'throat': 'E N T Specialist',
+    'pharyngeal': 'E N T Specialist',
+    'laryngeal': 'E N T Specialist',
     'skin': 'Dermatologist',
     'nail': 'Dermatologist',
     'nails': 'Dermatologist',
@@ -10259,10 +10259,7 @@ BP_CANON = {
     'ear':        'ear',
     'toes': 'toes',
      'toe': 'toes',
-     'legs':'leg',
-     'shoulders':'shoulder',
-     'shoulder':'shoulder',
-     'arms':'arm',
+      'legs':'leg',
      'leg':'leg'
     # …and so on for whatever you support
 }
