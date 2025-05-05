@@ -9277,11 +9277,13 @@ trigger_keywords = {
         'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush']
     },
  'nose': {
-        'injury': ['injury', 'hit', 'fracture', 'bump', 'hurt'],
-        'burning': ['burning', 'stinging', 'irritation', 'hot sensation'],
+        'injury': ['injury', 'hit', 'fracture', 'bump', 'hurt','broken','broke'],
+        'burning': ['burning', 'stinging', 'irritation', 'hot sensation','burns'],
         'sniffing': ['sniffing', 'sniff', 'smelling', 'inhale', 'breathing in'],
         'pain': ['pain', 'ache', 'sore', 'pressure'],
-        'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis']
+       'congestion'  : ['congestion', 'blocked', 'clogged', 'stuffy', 'stopped up'],
+        'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis'],
+      'bleed' : ['bleed', 'bleeding', 'nosebleed', 'epistaxis', 'blood']
     }
  
     # add ear / skin / etc…
@@ -10225,6 +10227,16 @@ body_part_followup_questions = {
                 'category': 'nose_infection_symptoms'
             }
         ],
+   'congestion': [
+            {'hi': "क्या आपकी नाक पूरी तरह से बंद है या आंशिक रूप से?",
+             'en': "Is your nose completely blocked or partially blocked?",
+             'category': 'nose_congestion'}
+        ],
+        'bleed': [
+            {'hi': "क्या नाक से खून बहना जारी है या रुक गया है?",
+             'en': "Is the nosebleed still continuing or has it stopped?",
+             'category': 'nose_bleed_status'}
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी नाक की समस्या के बारे में और जानकारी दें।",
@@ -10370,7 +10382,6 @@ BP_CANON = {
  'wrists':'wrist'
     # …and so on for whatever you support
 }
-
 
 body_parts = [
     'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
