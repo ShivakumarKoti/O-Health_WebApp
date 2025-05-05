@@ -10168,7 +10168,7 @@ body_part_to_specialist = {
     'forehead': 'Neurologist',
     'cranial': 'Neurologist',
     'trigeminal': 'Neurologist',
-    'facial': 'Neurologist',
+    'facial': 'Dermatologist',
     'neck': 'Orthopedic Specialist',
     'back': 'Orthopedic Specialist',
     'spinal': 'Orthopedic Specialist',
