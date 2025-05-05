@@ -9311,6 +9311,13 @@ trigger_keywords = {
         'swelling': ['forehead swelling', 'bump on forehead', 'swollen forehead'],
         'injury': ['forehead injury', 'hit forehead', 'forehead bruise'],
         'tingling': ['forehead tingling', 'numb forehead', 'tingly sensation forehead']
+    },
+ 'tongue': {
+        'pain': ['tongue pain', 'sore tongue', 'hurts to move tongue', 'aching tongue'],
+        'swelling': ['swollen tongue', 'tongue is puffy', 'tongue inflammation'],
+        'burning': ['burning tongue', 'tongue feels hot', 'scalded tongue sensation'],
+        'numbness': ['numb tongue', 'no sensation tongue', 'tongue feels numb'],
+        'ulcers': ['tongue ulcer', 'tongue sore spot', 'mouth ulcer on tongue']
     }
  
     # add ear / skin / etc…
@@ -10350,6 +10357,50 @@ body_part_followup_questions = {
                 'hi': "कृपया अपनी माथे की समस्या के बारे में और जानकारी दें।",
                 'en': "Please describe your forehead issue in more detail.",
                 'category': 'forehead_detail'
+            }
+        ]
+    },
+ 'tongue': {
+        'pain': [
+            {
+                'hi': "क्या जीभ में दर्द खाने या बोलने से बढ़ता है?",
+                'en': "Does the tongue pain increase when eating or speaking?",
+                'category': 'tongue_pain_activity'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजी हुई जीभ के कारण निगलने या साँस लेने में परेशानी हो रही है?",
+                'en': "Is the swollen tongue making it hard to swallow or breathe?",
+                'category': 'tongue_swelling_difficulty'
+            }
+        ],
+        'burning': [
+            {
+                'hi': "क्या जीभ में जलन किसी गर्म या मसालेदार चीज़ के सेवन के बाद शुरू हुई?",
+                'en': "Did the tongue burning start after eating something hot or spicy?",
+                'category': 'tongue_burning_trigger'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या जीभ की सुन्नता अचानक शुरू हुई थी?",
+                'en': "Did the numbness in your tongue start suddenly?",
+                'category': 'tongue_numbness_onset'
+            }
+        ],
+        'ulcers': [
+            {
+                'hi': "क्या जीभ के छाले खाने-पीने में तकलीफ देते हैं?",
+                'en': "Do the tongue ulcers cause discomfort while eating or drinking?",
+                'category': 'tongue_ulcers_discomfort'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी जीभ की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your tongue issue in more detail.",
+                'category': 'tongue_detail'
             }
         ]
     }
