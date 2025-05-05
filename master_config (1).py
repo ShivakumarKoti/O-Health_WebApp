@@ -81,7 +81,7 @@ symptom_synonyms = {
         'rattling cough', 'deep-chested cough', 'shallow annoying cough', 'tickling cough', 'lingering throat hack', 'spasm-like coughs', 'throaty expulsions',
         'repetitive cough bursts', 'phlegmy hacking', 'coughing', 'dry tickling cough', 'persistent throat tickle',
         'strangling cough', 'wheezing cough', 'loud barking cough', 'cracking cough', 'sputum-laden cough', 'cough with gagging', 'spasmodic cough', 'stubborn dry cough',
-        'overwhelming coughing sensation', 'violent coughing fits', 
+        'overwhelming coughing sensation', 'violent coughing fits', 'mucus in throat', 'mucus in mouth',
         'chronic phlegm cough', 'intense wheezing cough', 'grating cough', 'wet chesty cough', 'gurgling cough','khasi','kansi'
     ],
     'sore throat': [
@@ -99,7 +99,7 @@ symptom_synonyms = {
         'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'pain in the lower abdomen',
         'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'pain in the abdomen', 'stomach discomfort',
         'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'pain around stomach area', 'belly pain', 
-        'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
+        'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach','pain within the stomach',
         'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
         'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from bloating', 'pain from food intolerance',
         'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'stomach flu pain', 
