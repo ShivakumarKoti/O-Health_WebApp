@@ -55,7 +55,7 @@ symptom_synonyms = {
         'crippling light-triggered pain', 'tidal wave of head torment', 'incapacitating halo of pain', 'ear-to-temple throbbing on one side'
     ],
     'allergy': [
-        'allergies', 'allergic reaction', 'allergic response', 'allergic rhinitis', 'pollen sensitivity', 'dust mite allergy', 'food allergy', 'skin allergy', 'seasonal allergies',
+        'allergies', 'allergic reaction', 'allergic response', 'allergic rhinitis', 'pollen sensitivity', 'dust mite allergy', 'food allergy', 'skin allergy', 'seasonal allergies', 'allergic',
         'environmental allergies', 'allergic condition', 'allergic response to pollen', 'sensitive to allergens', 'sneezing due to allergies', 'wheezing from allergic reaction',
         'swollen nasal passages', 'runny nose from allergies', 'sinus congestion from allergies', 'allergic rashes', 'eczema flare-up', 'hives', 'itchy skin from allergens', 
         'respiratory allergy', 'allergic reactions in skin', 'excessive histamine release', 'redness from allergy', 'swollen throat from allergies', 'asthma attack triggered by allergens', 'increased mucus production',
