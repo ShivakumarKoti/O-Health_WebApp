@@ -10258,7 +10258,9 @@ BP_CANON = {
     'ears':       'ear',
     'ear':        'ear',
     'toes': 'toes',
-     'toe': 'toes'
+     'toe': 'toes',
+     'legs':'leg',
+     'leg':'leg'
     # …and so on for whatever you support
 }
 
