@@ -9305,6 +9305,12 @@ trigger_keywords = {
         'spasm': ['thigh spasm', 'thigh twitch', 'tight thigh'],
         'injury': ['thigh injury', 'pulled thigh', 'thigh strain', 'torn thigh muscle'],
         'swelling': ['thigh swelling', 'thigh is swollen', 'bump on thigh']
+    },
+ 'forehead': {
+        'pain': ['forehead pain', 'headache front', 'ache in forehead', 'brow pain'],
+        'swelling': ['forehead swelling', 'bump on forehead', 'swollen forehead'],
+        'injury': ['forehead injury', 'hit forehead', 'forehead bruise'],
+        'tingling': ['forehead tingling', 'numb forehead', 'tingly sensation forehead']
     }
  
     # add ear / skin / etc…
@@ -10307,6 +10313,43 @@ body_part_followup_questions = {
                 'hi': "कृपया अपनी जांघ की समस्या के बारे में अधिक जानकारी दें।",
                 'en': "Please provide more details about your thigh issue.",
                 'category': 'thigh_detail'
+            }
+        ]
+    },
+ 'forehead': {
+        'pain': [
+            {
+                'hi': "क्या माथे का दर्द लगातार बना रहता है या समय-समय पर आता है?",
+                'en': "Is the forehead pain constant or does it come and go?",
+                'category': 'forehead_pain_pattern'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ माथे पर लालिमा या गर्माहट है?",
+                'en': "Is there redness or warmth along with the forehead swelling?",
+                'category': 'forehead_swelling_signs'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या माथे में चोट किसी गिरावट या टक्कर से लगी थी?",
+                'en': "Was the forehead injury caused by a fall or impact?",
+                'category': 'forehead_injury_cause'
+            }
+        ],
+        'tingling': [
+            {
+                'hi': "क्या माथे में झनझनाहट के साथ सुन्नपन भी महसूस होता है?",
+                'en': "Do you feel numbness along with the tingling in your forehead?",
+                'category': 'forehead_tingling_symptoms'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी माथे की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your forehead issue in more detail.",
+                'category': 'forehead_detail'
             }
         ]
     }
