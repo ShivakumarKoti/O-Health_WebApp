@@ -808,7 +808,7 @@ symptom_synonyms = {
 ],
 
 'female issue': [
-    'women’s health', 'gynecological issue', 'female reproductive health', 'menstrual problems', 'menstrual irregularities', 'PCOS', 'endometriosis', 'fibroids', 'ovarian cysts',
+    'women’s health', 'gynecological issue', 'female reproductive health', 'menstrual problems', 'menstrual irregularities', 'PCOS', 'PCOD', 'endometriosis', 'fibroids', 'ovarian cysts',
     'vaginal infection', 'vaginal discharge', 'fertility issues', 'menopause', 'pre menopause', 'post menopause', 'infertility', 'vaginal dryness', 'prolapsed uterus',
     'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge', 'female issues', 'irregular periods', 'woman issue', 'women issue',
     'woman issues', 'women issues'
