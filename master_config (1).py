@@ -814,7 +814,7 @@ symptom_synonyms = {
     'women’s health', 'gynecological issue', 'female reproductive health', 'menstrual problems', 'menstrual irregularities', 'PCOS', 'PCOD', 'endometriosis', 'fibroids', 'ovarian cysts',
     'vaginal infection', 'vaginal discharge', 'fertility issues', 'menopause', 'pre menopause', 'post menopause', 'infertility', 'vaginal dryness', 'prolapsed uterus',
     'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge', 'female issues', 'irregular periods', 'woman issue', 'women issue',
-    'woman issues', 'women issues'
+    'woman issues', 'women issues','periods are irregular', 'pain during periods', 'periods pain', 'period pain', 'period is irregular', 'pain during period', 'abnormal periods'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
