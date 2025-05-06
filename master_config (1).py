@@ -9074,6 +9074,8 @@ symptom_followup_questions = {
 medications_list = [
     "ibuprofen", "acetaminophen", "paracetamol", "aspirin", "naproxen", "acetylsalicylic acid",
     "diclofenac", "meloxicam", "celecoxib", "indomethacin", "ketorolac", "butalbital", "dolo" ,"dolo 650",
+    "algal oil",  "cod liver oil",  "flaxseed oil", "fish oil", "omega-3 softgel", "ORS", "ORS sachets", 
+    "Electral", "Glucon-D", "Prolyte", "Winlyte", "Manpasand ORS", "eye drops", "ear drops", "eye drop", "ear drop",
     # Antibiotics
     "amoxicillin", "azithromycin", "doxycycline", "ciprofloxacin", "clindamycin", "metronidazole",
     "cephalexin", "amoxicillin-clavulanate", "levofloxacin", "linezolid", "meropenem", "vancomycin",
