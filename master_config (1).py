@@ -812,16 +812,19 @@ symptom_synonyms = {
 
 'female issue': [
     'women’s health', 'gynecological issue', 'female reproductive health', 'menstrual problems', 'menstrual irregularities', 'PCOS', 'PCOD', 'endometriosis', 'fibroids', 'ovarian cysts',
-    'vaginal infection', 'vaginal discharge', 'fertility issues', 'menopause', 'pre menopause', 'post menopause', 'infertility', 'vaginal dryness', 'prolapsed uterus','period pains', 'periods',
+    'vaginal infection', 'vaginal discharge', 'fertility issues', 'menopause', 'pre menopause', 'post menopause', 'infertility', 'vaginal dryness', 'prolapsed uterus','period pains',
     'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge', 'female issues', 'irregular periods', 'woman issue', 'women issue', 'periods pain',
-    'woman issues', 'women issues','periods are irregular', 'pain during periods', 'periods pain', 'period pain', 'period is irregular', 'pain during period', 'abnormal periods'
+    'woman issues', 'women issues','periods are irregular', 'pain during periods', 'periods pain', 'period pain', 'period is irregular', 'pain during period', 'abnormal periods',
+
+    'heavy periods', 'spotting between periods', 'missed periods','pelvic pain', 'uterine bleeding','menopause', 'vaginal itching', 'vaginal odor',
+    'ovulation pain', 'breast tenderness', 'breast lumps', 'nipple discharge', 'breast pain', 'breast swelling','difficulty conceiving',
+    'urinary tract infection', 'cervical issue', 'itchy vulva', 'burning vulva','menopausal', 'clotting during periods',
+    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods','no periods', 'absent periods', 'amenorrhea'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
 
-'pregnancy' : ['pregnant','pregnate','childbirth', 'expecting a child', 
-                 'carrying a fetus', 'gestating', 'positive HCG test'
-   ],
+'pregnancy' : ['pregnant','pregnate','childbirth', 'expecting a child', 'carrying a fetus', 'gestating', 'positive HCG test'],
 
 'pediatric symptoms' : ['kid problems','pediatrics','child is unwell', 'child is facing issues', 'children health', 'child health','feeding problems',
                        'cry patterns', 'growth problems', 'refusal to breastfeed' , 'developmental delay', 'bowed legs', 'bedwetting', 'kids problem'
