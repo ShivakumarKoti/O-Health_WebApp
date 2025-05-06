@@ -9348,6 +9348,14 @@ trigger_keywords = {
         'burning': ['burning tongue', 'tongue feels hot', 'scalded tongue sensation'],
         'numbness': ['numb tongue', 'no sensation tongue', 'tongue feels numb'],
         'ulcers': ['tongue ulcer', 'tongue sore spot', 'mouth ulcer on tongue']
+    },
+ 'mouth': {
+        'pain': ['pain', 'soreness', 'ache', 'burning', 'sharp pain'],
+        'ulcer': ['ulcer', 'wound', 'canker', 'blister', 'lesion'],
+        'dryness': ['dry', 'dryness', 'parched', 'no saliva'],
+        'swelling': ['swollen', 'bump', 'inflammation', 'swelling'],
+        'bleeding': ['bleed', 'bleeding', 'blood in mouth'],
+        'bad_breath': ['bad breath', 'halitosis', 'foul smell']
     }
  
     # add ear / skin / etc…
@@ -10452,6 +10460,57 @@ body_part_followup_questions = {
                 'hi': "कृपया अपनी जीभ की समस्या के बारे में और जानकारी दें।",
                 'en': "Please describe your tongue issue in more detail.",
                 'category': 'tongue_detail'
+            }
+        ]
+    },
+ 'mouth': {
+        'pain': [
+            {
+                'hi': "क्या मुँह में दर्द खाना खाते समय बढ़ता है?",
+                'en': "Does the mouth pain increase while eating?",
+                'category': 'mouth_pain_eating'
+            }
+        ],
+        'ulcer': [
+            {
+                'hi': "क्या मुँह के छाले लंबे समय से हैं?",
+                'en': "Have the mouth ulcers been present for a long time?",
+                'category': 'mouth_ulcer_duration'
+            }
+        ],
+        'dryness': [
+            {
+                'hi': "क्या आपके मुँह में अक्सर सूखापन महसूस होता है?",
+                'en': "Do you frequently feel dryness in your mouth?",
+                'category': 'mouth_dryness_frequency'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या मुँह में सूजन के साथ दर्द या गर्मी भी महसूस हो रही है?",
+                'en': "Is there pain or warmth along with the swelling in your mouth?",
+                'category': 'mouth_swelling_signs'
+            }
+        ],
+        'bleeding': [
+            {
+                'hi': "क्या मुँह से खून brushing या खाने के समय आता है?",
+                'en': "Does your mouth bleed while brushing or eating?",
+                'category': 'mouth_bleeding_trigger'
+            }
+        ],
+        'bad_breath': [
+            {
+                'hi': "क्या आपको लंबे समय से मुँह से दुर्गंध आ रही है?",
+                'en': "Have you been experiencing bad breath for a long time?",
+                'category': 'mouth_bad_breath_duration'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने मुँह की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your mouth issue in more detail.",
+                'category': 'mouth_detail'
             }
         ]
     }
