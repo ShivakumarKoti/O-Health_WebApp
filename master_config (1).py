@@ -246,7 +246,7 @@ symptom_synonyms = {
     'ear pain': [
         'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'stabbing pain in ear', 'pain in the ears', 'pain in ear',
         'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'ear infection pain', 'pain in my ears',
-        'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'ear ache from cold', 'pain in ear canal', 'ear ache when swallowing',
+        'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'pain in ear canal', 'ear ache when swallowing',
         'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
         'tender ear lobes', 'painful eardrum', 'painful earful feeling', 'pounding ear pain', 'sharp stabbing ear ache', 'swollen ear canal', 'eardrum sensitivity', 'sharp pressure sensation in ear',
         'soreness in ear cavity', 'ear with pain', 'throbbing sensation in ear', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
@@ -274,7 +274,7 @@ symptom_synonyms = {
     ],
     'swelling': [
         'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness','swollen',
-        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly','swells',
+        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly','swells','swelling',
         'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
         'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes','swelling',
         'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints'
@@ -3390,23 +3390,25 @@ symptom_followup_questions = {
       "symptom": "pain",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको ठंड महसूस होने के साथ त्वचा में कोई परिवर्तन हो रहा है?",
-      "en": "Are you noticing any changes in your skin due to feeling cold?",
-      "category": "skin_changes_with_feeling_cold",
-      "symptom": "skin discoloration",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या ठंड महसूस होने के कारण आपकी नींद प्रभावित हो रही है?",
-      "en": "Is feeling cold affecting your sleep?",
-      "category": "sleep_disturbance_with_feeling_cold",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या ठंड महसूस होने के कारण आपके शरीर में कोई कमजोरी आ रही है?",
       "en": "Is feeling cold causing any weakness in your body?",
       "category": "weakness_with_feeling_cold",
       "symptom": "weakness",
       "risk_factor": False,    },
+    {
+      "hi": "क्या आपको सांस लेने में कठिनाई हो रही है?",
+      "en": "Are you having difficulty breathing?",
+      "category": "breathing_difficulty_with_cold",
+      "symptom": "breathing difficulty",
+      "risk_factor": True
+    },
+    {
+      "hi": "क्या आपको अचानक से ठंड लगना शुरू हुआ?",
+      "en": "Did the feeling of cold start suddenly?",
+      "category": "sudden_onset_cold",
+      "symptom": None,
+      "risk_factor": False
+    },
   ],
 
   "double vision": [
@@ -3606,7 +3608,6 @@ symptom_followup_questions = {
   ],
 
   "balance problem": [
-
     {
       "hi": "क्या संतुलन बिगड़ने के साथ चक्कर आना भी हो रहा है?",
       "en": "Are you experiencing dizziness along with balance problems?",
