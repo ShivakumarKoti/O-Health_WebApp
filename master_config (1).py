@@ -534,10 +534,13 @@ symptom_synonyms = {
 ],
 
 'weight loss': [
-    'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut',
+    'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut', 'weight is decreasing',
+    'weight got decreased', 'weight decrease', 'weight is decreased', 'weight went down',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight', 'lost weight',
-    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight', 'loss of weight'
+    'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight', 'loss of weight',
+    'fatty loss', 'shedding pounds', 'slimming down', 'cutting body fat', 'trimming weight', 'dropping excess mass', 'losing inches', 'weight has reduced',
+    'reducing body size', 'burning fatness', 'getting leaner', 'calorie deficit', 'cutting weight', 'body recomposition', 'weight is reduced', weight has been reduced'
 ],
 
 'hair loss': [
