@@ -10657,9 +10657,9 @@ body_parts = [
 symptom_to_specialist = {
     # Nephrologist: Kidney-related symptoms
     'kidney issue': 'Nephrologist',
-    'dark urine': 'Nephrologist',
-    'blood in urine': 'Nephrologist',
-    'frequent urination': 'Nephrologist',
+    'dark urine': 'Urologist',
+    'blood in urine': 'Urologist',
+    'frequent urination': 'Urologist',
 
     # Gynecologist: Female-specific, pregnancy, and cesarean symptoms
     'female issue': 'Gynecologist',
@@ -10785,7 +10785,7 @@ symptom_to_specialist = {
     # Ophthalmologist: Eye-related symptoms
     'blurred vision': 'Ophthalmologist',
     'eye pain': 'Ophthalmologist',
-    'eyes pain' : 'Opthalmologist',
+    'eyes pain' : 'Ophthalmologist',
     'eye discharge': 'Ophthalmologist',
     'eye weakness': 'Ophthalmologist',
 
@@ -10831,7 +10831,7 @@ symptom_to_specialist = {
     'piles': 'General Practitioner',
     'broken tooth': 'Dentist',
     'tooth decay': 'Dentist',
-    'broken voice': 'ENT Specialist',
+    'broken voice': 'E N T Specialist',
     'hand dryness': 'Dermatologist',
     'wound': 'General Surgeon',
     'body ache': 'General Practitioner',
