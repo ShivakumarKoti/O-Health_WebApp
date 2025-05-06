@@ -9264,12 +9264,37 @@ trigger_keywords = {
         'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
     },
     'skin': {
-        'rash': ['rash', 'redness', 'itchy', 'inflamed', 'blotchy','rashes'],
-        'dryness': ['dry', 'flaky', 'cracked', 'itchy skin'],
-        'swelling': ['swollen', 'puffy', 'swelling', 'edema'],
-        'burn': ['burn', 'sunburn', 'scald', 'blister'],
-        'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
+        'rash': [
+            'rash', 'red spots', 'bumps', 'patches', 'eruption', 
+            'blotchy', 'hives', 'welts', 'raised spots'
+        ],
+        'itching': [
+            'itch', 'itching', 'scratching', 'irritation', 
+            'pruritus', 'tingling', 'crawling sensation'
+        ],
+        'dryness': [
+            'dry', 'flaky', 'scaly', 'rough', 'peeling', 
+            'cracked', 'tight skin', 'ashy', 'parched'
+        ],
+        'discoloration': [
+            'dark spots', 'light patches', 'discoloration', 
+            'pigmentation', 'blotch', 'uneven skin tone', 
+            'white spots', 'hyperpigmentation', 'hypopigmentation',
+            'freckles', 'melasma'
+        ],
+        'swelling': [
+            'swollen', 'lump', 'bump', 'puffy', 'inflammation', 
+            'raised area', 'knot', 'engorged', 'bulge'
+        ],
+        'acne': [
+            'pimples', 'acne', 'zits', 'whiteheads', 'blackheads', 
+            'breakouts', 'spots', 'pustules', 'cysts', 'nodules'
+        ],
+     'burn': ['burn', 'sunburn', 'scald', 'blister'],
+     'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
     },
+
+
     'muscle': {
         'pain': ['pain', 'ache', 'sore', 'cramping', 'stiff'],
         'weakness': ['weak', 'fatigued', 'loss of strength', 'unable to lift'],
@@ -10068,29 +10093,50 @@ body_part_followup_questions = {
             }
         ]
     },
-     'skin': {
+ 'skin': {
         'rash': [
             {
-                'hi': "क्या रैश पूरे शरीर में फैला है या एक ही जगह पर है?",
-                'en': "Is the rash spread across your body or limited to one area?",
-                'category': 'skin_rash_spread'
+                'hi': "क्या यह चकत्ते शरीर के किसी खास हिस्से पर हैं?",
+                'en': "Is the rash located on a specific part of your body?",
+                'category': 'skin_rash_location'
+            }
+        ],
+        'itching': [
+            {
+                'hi': "क्या खुजली लगातार होती है या समय-समय पर?",
+                'en': "Is the itching constant or does it come and go?",
+                'category': 'skin_itching_duration'
             }
         ],
         'dryness': [
             {
-                'hi': "क्या आपकी त्वचा में सूखापन अन्य लक्षणों के साथ है जैसे कि खुजली?",
-                'en': "Is the dryness of your skin accompanied by other symptoms like itching?",
-                'category': 'skin_dryness_symptoms'
+                'hi': "क्या सूखी त्वचा पर दरारें या खून आना भी होता है?",
+                'en': "Is the dry skin cracking or bleeding?",
+                'category': 'skin_dryness_severity'
+            }
+        ],
+        'discoloration': [
+            {
+                'hi': "क्या त्वचा का रंग धीरे-धीरे बदल रहा है या अचानक?",
+                'en': "Did the skin discoloration happen gradually or suddenly?",
+                'category': 'skin_discoloration_timeline'
             }
         ],
         'swelling': [
             {
-                'hi': "क्या सूजन में दर्द या जलन महसूस होती है?",
-                'en': "Does the swelling come with pain or burning sensations?",
-                'category': 'skin_swelling_pain'
+                'hi': "क्या सूजन वाली जगह पर दर्द या गर्मी महसूस हो रही है?",
+                'en': "Is there pain or warmth at the swollen area on the skin?",
+                'category': 'skin_swelling_symptoms'
             }
         ],
-        'burn': [
+  'acne': [
+    {
+        'hi': "क्या मुहांसों के साथ दर्द या पस भी होता है?",
+        'en': "Do the pimples come with pain or pus?",
+        'category': 'skin_acne_severity'
+    }
+],
+  'burn': [
             {
                 'hi': "क्या जलने के कारण त्वचा में छाले या पपड़ी बन रही है?",
                 'en': "Are blisters or scabs forming due to the burn?",
