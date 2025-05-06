@@ -583,7 +583,7 @@ symptom_synonyms = {
 
 'difficulty swallowing': [
     'dysphagia', 'trouble swallowing', 'swallowing difficulty', 'painful swallowing', 'difficulty with swallowing', 'difficulty in swallowing food',
-    'difficulty swallowing liquids', 'inability to swallow', 'swallowing discomfort', 'choking sensation', 'difficulty swallowing pills', 'food getting stuck',
+    'inability to swallow', 'swallowing discomfort', 'choking sensation', 'difficulty swallowing pills', 'food getting stuck', 'hard time swallowing',
     'difficulty in throat swallowing', 'swallowing obstruction', 'swallowing problems', 'gagging while swallowing', 'swallowing trouble',
     'feeling of blockage while swallowing', 'difficulties swallowing', 'can\'t swallow food'
 ],
