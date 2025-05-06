@@ -7198,13 +7198,6 @@ symptom_followup_questions = {
       "risk_factor": True,
     },
     {
-      "hi": "क्या आपने कोई असामान्य योनि स्राव या गंध महसूस की है?",
-      "en": "Have you noticed any unusual vaginal discharge or odors?",
-      "category": "female issue",
-      "symptom": "female issue",
-      "risk_factor": False,
-    },
-    {
       "hi": "क्या आपको कोई गाइनकोलॉजिकल स्थितियाँ हैं, जैसे कि फाइब्रॉयड्स, एंडोमेट्रियोसिस, या अंडकोषीय सिस्ट?",
       "en": "Do you have any history of gynecological conditions, such as fibroids, endometriosis, or ovarian cysts?",
       "category": "female issue",
@@ -7231,6 +7224,13 @@ symptom_followup_questions = {
       "category": "female issue",
       "symptom": "hormonal imbalance",
       "risk_factor": False,
+    },
+   {
+      "hi": "क्या आपके पेट के निचले हिस्से में किसी प्रकार की गाँठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel any lump or swelling in your lower abdomen or pelvis?",
+      "category": "pelvic_mass",
+      "symptom": "pelvic mass",
+      "risk_factor": True
     },
 ],
 
@@ -8690,13 +8690,6 @@ symptom_followup_questions = {
     "hi": "क्या आप गर्भधारण की योजना बना रही हैं या प्रयास कर रही हैं?",
     "en": "Are you planning or trying to conceive?",
     "category": "pregnancy",
-    "symptom": "pregnancy",
-    "risk_factor": True,
-  },
-  {
-    "hi": "क्या आपने हाल ही में असुरक्षित यौन संबंध बनाए हैं?",
-    "en": "Have you recently had unprotected sexual intercourse?",
-    "category": "pregnancy",
     "symptom": None,
     "risk_factor": True,
   },
@@ -8765,13 +8758,6 @@ symptom_followup_questions = {
     "en": "Was your previous delivery done via C-section?",
     "category": "caesarean section",
     "symptom": "caesarean section",
-    "risk_factor": True,
-  },
-  {
-    "hi": "क्या आपके गर्भ में बच्चा उल्टी पोजीशन (ब्रिच) में है?",
-    "en": "Is your baby in breech position (feet or bottom first)?",
-    "category": "caesarean section",
-    "symptom": None,
     "risk_factor": True,
   },
   {
