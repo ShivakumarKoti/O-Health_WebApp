@@ -9074,8 +9074,8 @@ symptom_followup_questions = {
 medications_list = [
     "ibuprofen", "acetaminophen", "paracetamol", "aspirin", "naproxen", "acetylsalicylic acid",
     "diclofenac", "meloxicam", "celecoxib", "indomethacin", "ketorolac", "butalbital", "dolo" ,"dolo 650",
-    "algal oil",  "cod liver oil",  "flaxseed oil", "fish oil", "omega-3 softgel", "ORS", "ORS sachets", 
-    "Electral", "Glucon-D", "Prolyte", "Winlyte", "Manpasand ORS", "eye drops", "ear drops", "eye drop", "ear drop",
+    "algal oil",  "cod liver oil",  "flaxseed oil", "fish oil", "omega 3", "ORS sachets", 
+    "Electral", "Glucon-D", "Prolyte", "Winlyte", "ORS", "eye drops", "ear drops", "eye drop", "ear drop",
     # Antibiotics
     "amoxicillin", "azithromycin", "doxycycline", "ciprofloxacin", "clindamycin", "metronidazole",
     "cephalexin", "amoxicillin-clavulanate", "levofloxacin", "linezolid", "meropenem", "vancomycin",
@@ -9106,7 +9106,7 @@ medications_list = [
     # Vitamins and Supplements
     "zinc", "vitamin c", "vitamin d", "multivitamin", "folic acid", "vitamin b12", "vitamin e",
     "iron sulfate", "calcium carbonate", "magnesium oxide", "potassium chloride", "manganese", "iodine",
-    "biotin", "collagen", "probiotic", "omega-3", "fish oil",
+    "biotin", "collagen", "probiotic", "omega-3", "fish oil","vitamin D",
     # Other
     "prednisone", "hydroxychloroquine", "betahistine", "antibiotic", "antiplatelet", "anticoagulant", "fentanyl",
     "methadone", "buprenorphine", "naloxone", "acetylcysteine", "digoxin", "thiamine", "fluphenazine",
@@ -9134,8 +9134,8 @@ medications_list = [
     # Ophthalmology (Eye-related)
     "latanoprost", "timolol", "brimonidine", "prednisolone acetate", "neomycin-polymyxin-bacitracin", "pilocarpine",
     "dorzolamide", "bimatoprost", "hydroxychloroquine", "tobramycin", "moxifloxacin", "gentamicin drops",
-    "sulfacetamide", "cyclopentolate", "hydrocortisone eye drops", "levofloxacin ophthalmic", "ketorolac ophthalmic",
-    "flurbiprofen", "povidone-iodine", "dexamethasone eye drops", "lisinopril", "azithromycin eye drops",
+    "sulfacetamide", "cyclopentolate", "hydrocortisone", "levofloxacin ophthalmic", "ketorolac ophthalmic",
+    "flurbiprofen", "povidone-iodine", "dexamethasone", "lisinopril", "azithromycin",
     "acetazolamide (for glaucoma)",
     # Urology
     "finasteride", "tamsulosin", "sildenafil", "terazosin", "dutasteride", "vardenafil", "tadalafil", "alfuzosin",
