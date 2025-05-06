@@ -540,7 +540,7 @@ symptom_synonyms = {
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight', 'lost weight',
     'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight', 'loss of weight',
     'fatty loss', 'shedding pounds', 'slimming down', 'cutting body fat', 'trimming weight', 'dropping excess mass', 'losing inches', 'weight has reduced',
-    'reducing body size', 'burning fatness', 'getting leaner', 'calorie deficit', 'cutting weight', 'body recomposition', 'weight is reduced', weight has been reduced'
+    'reducing body size', 'burning fatness', 'getting leaner', 'calorie deficit', 'cutting weight', 'body recomposition', 'weight is reduced', 'weight has been reduced'
 ],
 
 'hair loss': [
