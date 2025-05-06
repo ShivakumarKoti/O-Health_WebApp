@@ -338,7 +338,7 @@ symptom_synonyms = {
         
     ],
  'broken tooth': [
-    'chipped tooth', 'cracked tooth', 'fractured tooth', 'split tooth', 'tooth fracture', 'tooth chipped', 'tooth cracked', 'partially broken tooth',
+    'chipped tooth', 'cracked tooth', 'fractured tooth', 'split tooth', 'tooth fracture', 'tooth chipped', 'tooth cracked', 'broken tooth',
     'broken molar', 'broken front tooth', 'tooth with a crack', 'tooth broken in half', 'tooth broken at gum line', 'damaged tooth', 'tooth with a piece missing',
     'tooth with a sharp edge', 'tooth with enamel loss', 'broken tooth pain', 'tooth with structural damage', 'tooth injury', 'tooth trauma', 'tooth breakage',
     'broken dental crown', 'broken filling', 'tooth broken from biting', 'tooth broken while eating', 'tooth broken from grinding', 'tooth broken due to decay',
