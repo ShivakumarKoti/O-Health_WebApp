@@ -9691,43 +9691,96 @@ body_part_followup_questions = {
             }
         ]
     },
-   'stomach': {
-        'pain': [
-            {
-                'hi': "क्या पेट में दर्द खाने के बाद बढ़ता है?",
-                'en': "Does the stomach pain increase after eating?",
-                'category': 'stomach_pain_after_eating'
-            }
-        ],
-        'bloating': [
-            {
-                'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
-                'en': "Do you experience gas or belching along with the bloating?",
-                'category': 'stomach_bloating_gas'
-            }
-        ],
-        'nausea': [
-            {
-                'hi': "क्या आपको उल्टी के अलावा मिचली भी महसूस हो रही है?",
-                'en': "Are you feeling nauseous, in addition to vomiting?",
-                'category': 'stomach_nausea_additional_symptoms'
-            }
-        ],
-        'diarrhea': [
-            {
-                'hi': "क्या दस्त के साथ बुखार या कमजोरी भी महसूस हो रही है?",
-                'en': "Do you experience fever or weakness along with the diarrhea?",
-                'category': 'stomach_diarrhea_additional_symptoms'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your stomach issue in more detail.",
-                'category': 'stomach_detail'
-            }
-        ]
-    },
+   
+'stomach': {
+    'pain': [
+        {
+            'hi': "क्या पेट में दर्द खाने के बाद बढ़ता है?",
+            'en': "Does the stomach pain increase after eating?",
+            'category': 'stomach_pain_after_eating'
+        },
+        {
+            'hi': "क्या दर्द पेट के ऊपरी हिस्से में है या निचले हिस्से में?",
+            'en': "Is the pain in the upper part of your abdomen or the lower part?",
+            'category': 'stomach_pain_location'
+        },
+        {
+            'hi': "क्या पेट दर्द के साथ ऐंठन या चुभन जैसा महसूस होता है?",
+            'en': "Does the stomach pain feel like cramping or stabbing?",
+            'category': 'stomach_pain_nature'
+        }
+    ],
+    'bloating': [
+        {
+            'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
+            'en': "Do you experience gas or belching along with the bloating?",
+            'category': 'stomach_bloating_gas'
+        },
+        {
+            'hi': "क्या सूजन भोजन करने के तुरंत बाद होती है?",
+            'en': "Does the bloating occur immediately after eating?",
+            'category': 'stomach_bloating_trigger_food'
+        },
+        {
+            'hi': "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
+            'en': "Does your stomach feel heavy or tight due to bloating?",
+            'category': 'stomach_bloating_heaviness'
+        }
+    ],
+    'nausea': [
+        {
+            'hi': "क्या आपको उल्टी के अलावा मिचली भी महसूस हो रही है?",
+            'en': "Are you feeling nauseous, in addition to vomiting?",
+            'category': 'stomach_nausea_additional_symptoms'
+        },
+        {
+            'hi': "क्या मिचली खास तौर पर किसी गंध या खाने से बढ़ जाती है?",
+            'en': "Does the nausea get worse with certain smells or foods?",
+            'category': 'stomach_nausea_trigger'
+        },
+        {
+            'hi': "क्या मिचली के साथ चक्कर या थकान भी होती है?",
+            'en': "Do you feel dizzy or tired along with the nausea?",
+            'category': 'stomach_nausea_dizziness'
+        }
+    ],
+    'diarrhea': [
+        {
+            'hi': "क्या दस्त के साथ बुखार या कमजोरी भी महसूस हो रही है?",
+            'en': "Do you experience fever or weakness along with the diarrhea?",
+            'category': 'stomach_diarrhea_additional_symptoms'
+        },
+        {
+            'hi': "क्या मल पानी जैसा है या उसमें कोई बदलाव दिखाई दे रहा है?",
+            'en': "Is your stool watery or has it changed in appearance?",
+            'category': 'stomach_diarrhea_stool_character'
+        },
+        {
+            'hi': "क्या दस्त के साथ पेट में मरोड़ या ऐंठन भी हो रही है?",
+            'en': "Do you have abdominal cramps along with the diarrhea?",
+            'category': 'stomach_diarrhea_cramps'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your stomach issue in more detail.",
+            'category': 'stomach_detail'
+        },
+        {
+            'hi': "क्या यह समस्या खाने-पीने की आदतों से जुड़ी लगती है?",
+            'en': "Does this issue seem related to your eating habits?",
+            'category': 'stomach_eating_habit_relation'
+        },
+        {
+            'hi': "क्या आप कोई दवा ले रहे हैं जिससे पेट पर असर पड़ रहा हो?",
+            'en': "Are you taking any medications that might be affecting your stomach?",
+            'category': 'stomach_medication_link'
+        }
+    ]
+},
+
+	
 'neck': {
         'pain': [
             {
