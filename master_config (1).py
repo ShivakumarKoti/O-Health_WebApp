@@ -5285,11 +5285,13 @@ symptom_followup_questions = {
       "symptom": "injured joint or area",
       "risk_factor": False,    },
     {
-      "hi": "क्या चोट के समय कोई पॉपिंग या स्नैपिंग की आवाज आई थी?",
-      "en": "Did you hear a popping or snapping sound when the injury occurred?",
-      "category": "ligament injury",
-      "symptom": "popping or snapping sounds",
-      "risk_factor": False,    },
+  "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+  "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+  "category": "ligament injury",
+  "symptom": "swelling, bleeding, or bruising",
+  "risk_factor": False,
+},
+
     {
       "hi": "क्या चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने या विशिष्ट गतिविधियों से यह बढ़ जाता है?",
       "en": "Is the pain after injury constant, or does it worsen with movement or specific activities?",
@@ -5307,12 +5309,6 @@ symptom_followup_questions = {
       "en": "Have you had any previous injuries or recurring problems in the same area?",
       "category": "ligament injury",
       "symptom": "previous injuries",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, या आपने बर्फ, संपीड़न, या ऊँचाई जैसे उपचार का उपयोग किया है?",
-      "en": "Are you currently taking any medications, or have you used any treatments like ice, compression, or elevation?",
-      "category": "ligament injury",
-      "symptom": "treatment used",
       "risk_factor": False,    },
   ],
 
