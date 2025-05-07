@@ -1231,12 +1231,6 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या सिरदर्द के साथ दृष्टि में परिवर्तन है?",
-      "en": "Are you experiencing any changes in vision along with headache?",
-      "category": "vision_changes",
-      "symptom": "vision changes",
-      "risk_factor": False,    },
-    {
       "hi": "क्या सिरदर्द की शुरुआत अचानक हुई थी या धीरे-धीरे?",
       "en": "Did the headache start suddenly or gradually?",
       "category": "onset",
@@ -1249,22 +1243,10 @@ symptom_followup_questions = {
       "symptom": "Location-specific headache",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको मिचली हो रही है साथ ही सिरदर्द?",
-      "en": "Are you feeling nauseous along with headache?",
-      "category": "nausea_headache",
-      "symptom": "nausea",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपको ध्वनि या रोशनी से संवेदनशीलता है साथ ही सिरदर्द?",
       "en": "Do you have sensitivity to sound or light along with headache?",
       "category": "sensory_sensitivity",
       "symptom": "Sensitivity to sound or light",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने कोई नया स्टाइलिश हैडबैग या चश्मा पहनना शुरू किया है?",
-      "en": "Have you started wearing a new stylish hat or glasses?",
-      "category": "external_factors",
-      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको तनाव है साथ ही सिरदर्द?",
@@ -1455,12 +1437,7 @@ symptom_followup_questions = {
       "category": "headache",
       "symptom": "headache",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको उल्टी जैसा महसूस हो रहा है?",
-      "en": "Are you feeling nauseous?",
-      "category": "nausea",
-      "symptom": "nausea",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या आपका तापमान सामान्य से अधिक है?",
       "en": "Is your temperature higher than normal?",
@@ -1474,13 +1451,6 @@ symptom_followup_questions = {
       "symptom": "night sweats",
       "risk_factor": False,    },
 
-        {
-            "hi": "क्या आप बेहोश, चक्कर, या भ्रम में हैं?",
-            "en": "Are you feeling faint, dizzy, or confused?",
-            "category": "neurological",
-            "symptom": None,
-            "risk_factor": False,
-        },
     {
       "hi": "क्या आपको भूख कम लग रही है?",
       "en": "Are you experiencing loss of appetite?",
@@ -2024,12 +1994,6 @@ symptom_followup_questions = {
       "symptom": "chills",
       "risk_factor": False,    },
     {
-      "hi": "क्या ठंडक के साथ पसीना आना भी शुरू हो गया है?",
-      "en": "Have you started sweating along with chills?",
-      "category": "sweating_with_chills",
-      "symptom": "sweating",
-      "risk_factor": False,    },
-    {
       "hi": "क्या ठंडक के साथ कमजोरी महसूस हो रही है?",
       "en": "Are you experiencing any weakness along with chills?",
       "category": "weakness",
@@ -2100,12 +2064,6 @@ symptom_followup_questions = {
       "en": "Are you feeling weak due to the infection?",
       "category": "weakness",
       "symptom": "weakness",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या संक्रमण के साथ कोई अन्य लक्षण भी हैं?",
-      "en": "Are there any other symptoms along with the infection?",
-      "category": "other_symptoms",
-      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या संक्रमण के कारण आपको त्वचा में लालिमा आ रही है?",
@@ -2186,12 +2144,6 @@ symptom_followup_questions = {
       "symptom": "weight loss",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको धुंधली दृष्टि हो रही है?",
-      "en": "Are you experiencing blurred vision?",
-      "category": "blurred_vision",
-      "symptom": "blurred vision",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपको ऊँची या नीची रक्तचाप की समस्या है?",
       "en": "Do you have high or low blood pressure?",
       "category": "blood_pressure",
@@ -2268,13 +2220,6 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
-    "hi": "क्या आप वर्तमान में उच्च रक्तचाप या अन्य स्वास्थ्य समस्याओं के लिए कोई दवाएं ले रहे हैं?",
-    "en": "Are you currently taking any medications for high blood pressure or other health conditions?",
-    "category": "high blood pressure",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
     "hi": "क्या आप शराब, कैफीन, या तंबाकू का सेवन करते हैं, और यदि हां, तो कितनी मात्रा में?",
     "en": "Do you consume alcohol, caffeine, or tobacco, and if so, how much?",
     "category": "high blood pressure",
@@ -2314,13 +2259,6 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपने हाल ही में कोई बीमारी, संक्रमण, या स्वास्थ्य में कोई बदलाव अनुभव किया है जो आपके रक्तचाप को प्रभावित कर सकता है?",
     "en": "Have you had any recent illnesses, infections, or changes in your health that could affect your blood pressure?",
-    "category": "low blood pressure",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आप वर्तमान में कोई दवाएं ले रहे हैं, जैसे डाययुरेटिक्स, एंटीडिप्रेसेंट्स, या रक्तचाप की दवाएं, जो निम्न रक्तचाप का कारण बन सकती हैं?",
-    "en": "Are you currently taking any medications, such as diuretics, antidepressants, or blood pressure medications, that could cause low blood pressure?",
     "category": "low blood pressure",
     "symptom": None,
     "risk_factor": False,
