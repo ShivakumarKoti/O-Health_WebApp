@@ -5153,12 +5153,13 @@ symptom_followup_questions = {
       "symptom": "location and type of fracture",
       "risk_factor": False,    },
 
-    {
-      "hi": "क्या आपको चोट लगते समय कोई पॉपिंग या क्रैकिंग की आवाज़ सुनाई दी थी?",
-      "en": "Did you hear a popping or cracking sound when the injury occurred?",
-      "category": "bone_fracture",
-      "symptom": "sound during injury",
-      "risk_factor": False,    },
+   {
+  "hi": "क्या आपको फ्रैक्चर के बाद हड्डी में दर्द, सूजन या असामान्य रूप से गर्मी महसूस हो रही है?",
+  "en": "After the fracture, are you experiencing pain, swelling, or unusual warmth in the bone?",
+  "category": "bone_fracture",
+  "symptom": "pain, swelling, or warmth",
+  "risk_factor": False,
+},
     {
       "hi": "क्या आपको प्रभावित अंग या जोड़ों को हिलाने में कठिनाई हो रही है?",
       "en": "Do you have difficulty moving the affected limb or joint?",
@@ -5170,12 +5171,6 @@ symptom_followup_questions = {
       "en": "Have you had any previous fractures or bone injuries?",
       "category": "bone_fracture",
       "symptom": "history of fractures or bone injuries",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें कैल्शियम या विटामिन D जैसे सप्लीमेंट शामिल हैं?",
-      "en": "Are you currently taking any medications, including supplements like calcium or vitamin D?",
-      "category": "bone_fracture",
-      "symptom": "current medications or supplements",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में हड्डी संबंधित समस्याएँ या हड्डी की मजबूती को प्रभावित करने वाली स्थितियाँ हैं?",
@@ -5227,12 +5222,6 @@ symptom_followup_questions = {
       "en": "Have you noticed any weakness, numbness, or difficulty moving the affected limb or joint?",
       "category": "bone_pain",
       "symptom": "weakness or difficulty moving",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं, जैसे कि कैल्शियम या विटामिन D?",
-      "en": "Are you taking any medications or supplements, including calcium or vitamin D?",
-      "category": "bone_pain",
-      "symptom": "medications or supplements",
       "risk_factor": False,    },
   ],
 
