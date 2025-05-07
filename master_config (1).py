@@ -145,7 +145,7 @@ symptom_synonyms = {
         'breathing feels like pushing through a straw', 'air-starved lungs', 'cannot take a deep breath', 'strained oxygen intake', 'feeling like each breath is a struggle',
         'never fully satisfied inhalation', 'gasping between words', 'needy breathing pattern', 'barely pulling in enough air', 'lungs working at half capacity', 'respiratory distress',
         'continuous short-windedness', 'lack of breath', 'shortage of breath', ' breath shortage', 'light breathing', 'mild breathing', 'unable to breathe',
-        'lacking breath','can\’t breathe deeply', 'can\’t take my breath', 'can\’t breathe','breathing rate is low', 'breathing rate is slow'
+        'lacking breath','can\’t breathe deeply', 'can\’t take my breath', 'can\’t breathe','breathing rate is low', 'breathing rate is slow', 'dyspnea'
     ],
    'rapid breathing': [
     'heavy breathing', 'fast breathing', 'heart skipping beats', 'heart begins to beat faster', 'heart begins to beat fast',
