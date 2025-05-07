@@ -10721,7 +10721,7 @@ symptom_to_specialist = {
 
     # Cardiologist: Heart-related symptoms
     'chest pain': 'Cardiologist',
-    'shortness of breath': 'Cardiologist',
+    'shortness of breath': 'Pulmonologist',
     'rapid breathing': 'Cardiologist',
     'irregular heartbeat': 'Cardiologist',
     'high blood pressure': 'Cardiologist',
