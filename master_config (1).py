@@ -9425,40 +9425,93 @@ body_part_followup_questions = {
         ]
 },
 'eye': {
-        'itching': [
-            {
-                'hi': "क्या आपकी आँखों में खुजली लगातार हो रही है या कभी-कभी?",
-                'en': "Is the itching in your eyes constant or occasional?",
-                'category': 'eye_itching_frequency'
-            }
-        ],
-        'redness': [
-            {
-                'hi': "क्या आपकी आँखें लाल होने के साथ दर्द भी कर रही हैं?",
-                'en': "Are your eyes also painful along with the redness?",
-                'category': 'eye_redness_pain'
-            }
-        ],
-        'burn': [
-            {'hi': "आँखों में जलन कब से हो रही है?",
-             'en': "Since when have your eyes been burning?",
-             'category': 'eye_burn_duration'}
-        ],
-        'blurry_vision': [
-            {
-                'hi': "धुंधली दृष्टि कितने समय से हो रही है?",
-                'en': "How long have you had blurry vision?",
-                'category': 'eye_blurry_duration'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your eye issue in more detail.",
-                'category': 'eye_detail'
-            }
-        ]
-    },
+    'itching': [
+        {
+            'hi': "क्या आपकी आँखों में खुजली लगातार हो रही है या कभी-कभी?",
+            'en': "Is the itching in your eyes constant or occasional?",
+            'category': 'eye_itching_frequency'
+        },
+        {
+            'hi': "क्या खुजली दोनों आँखों में हो रही है या सिर्फ एक में?",
+            'en': "Is the itching in both eyes or just one?",
+            'category': 'eye_itching_side'
+        },
+        {
+            'hi': "क्या खुजली के साथ आँखों से पानी भी निकल रहा है?",
+            'en': "Is there any watering from the eyes along with the itching?",
+            'category': 'eye_itching_tearing'
+        }
+    ],
+    'redness': [
+        {
+            'hi': "क्या आपकी आँखें लाल होने के साथ दर्द भी कर रही हैं?",
+            'en': "Are your eyes also painful along with the redness?",
+            'category': 'eye_redness_pain'
+        },
+        {
+            'hi': "क्या लालपन पूरी आँख में है या किसी खास हिस्से में?",
+            'en': "Is the redness in the entire eye or a specific part?",
+            'category': 'eye_redness_area'
+        },
+        {
+            'hi': "क्या आँखों में सूजन या जलन भी है?",
+            'en': "Is there any swelling or burning sensation in your eyes?",
+            'category': 'eye_redness_swelling'
+        }
+    ],
+    'burn': [
+        {
+            'hi': "क्या आँखों में जलन के साथ रोशनी सहन नहीं होती?",
+            'en': "Do your eyes feel sensitive to light along with the burning?",
+            'category': 'eye_burn_light_sensitivity'
+        },
+        {
+            'hi': "क्या आँखों में जलन किसी केमिकल या धूल के संपर्क के बाद शुरू हुई?",
+            'en': "Did the burning start after contact with dust or chemicals?",
+            'category': 'eye_burn_trigger'
+        },
+        {
+            'hi': "क्या आप जलन के कारण आँखें बार-बार मसलते हैं?",
+            'en': "Are you rubbing your eyes frequently because of the burning?",
+            'category': 'eye_burn_rubbing'
+        }
+    ],
+    'blurry_vision': [
+        {
+            'hi': "क्या धुंधली दृष्टि दूर की चीज़ें देखने में होती है या पास की?",
+            'en': "Is your blurry vision affecting distance or near vision?",
+            'category': 'eye_blurry_distance_near'
+        },
+        {
+            'hi': "क्या धुंधली दृष्टि पूरे दिन रहती है या किसी विशेष समय पर होती है?",
+            'en': "Is your blurry vision constant or does it occur at certain times?",
+            'category': 'eye_blurry_timing'
+        },
+        {
+            'hi': "क्या आँखों पर ज़ोर डालने पर धुंधली दृष्टि और बढ़ जाती है?",
+            'en': "Does your blurry vision get worse when you strain your eyes?",
+            'category': 'eye_blurry_eye_strain'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your eye issue in more detail.",
+            'category': 'eye_detail'
+        },
+        {
+            'hi': "क्या आपकी समस्या दोनों आँखों को प्रभावित कर रही है?",
+            'en': "Is the issue affecting both eyes?",
+            'category': 'eye_side'
+        },
+        {
+            'hi': "क्या आपको आँखें खोलने या बंद करने में परेशानी हो रही है?",
+            'en': "Are you having trouble opening or closing your eyes?",
+            'category': 'eye_open_close_difficulty'
+        }
+    ]
+},
+
 'hand': {
         'pain': [
             {
@@ -9940,50 +9993,6 @@ body_part_followup_questions = {
             }
         ]
     },
- 'ear': {
-        'pain': [
-            {
-                'hi': "क्या कान में दर्द के साथ बुखार या सुनाई देने में दिक्कत है?",
-                'en': "Do you have fever or difficulty hearing along with the ear pain?",
-                'category': 'ear_pain_additional_symptoms'
-            }
-        ],
-        'hearing_loss': [
-            {
-                'hi': "क्या सुनाई देने में समस्या एक कान में है या दोनों में?",
-                'en': "Is the hearing loss in one ear or both?",
-                'category': 'ear_hearing_loss_side'
-            }
-        ],
-        'ringing': [
-            {
-                'hi': "क्या कान में घंटी या गूंजने जैसी आवाज़ लगातार रहती है?",
-                'en': "Is the ringing or buzzing in your ear constant?",
-                'category': 'ear_ringing_frequency'
-            }
-        ],
-        'discharge': [
-            {
-                'hi': "क्या कान से तरल पदार्थ निकल रहा है?",
-                'en': "Is there fluid coming out of your ear?",
-                'category': 'ear_discharge_presence'
-            }
-        ],
-        'infection': [
-            {
-                'hi': "क्या डॉक्टर ने कभी कान के संक्रमण की पुष्टि की है?",
-                'en': "Have you ever been diagnosed with an ear infection before?",
-                'category': 'ear_infection_history'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने कान की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your ear issue in more detail.",
-                'category': 'ear_detail'
-            }
-        ]
-    }, 
 'ear': {
     'pain': [
         {
