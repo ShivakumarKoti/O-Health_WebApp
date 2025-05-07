@@ -616,7 +616,7 @@ symptom_synonyms = {
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance',
      'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening', 'not being digested',
-      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems'
+      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset'
 ],
 
 'mouth sore': [
@@ -9170,8 +9170,7 @@ trigger_keywords = {
         'pain': ['stomach ache', 'pain', 'cramps', 'cramp','hurt', 'discomfort'],
         'bloating': ['bloating', 'fullness', 'gas', 'gassy'],
         'nausea': ['nausea', 'feeling sick', 'queasy', 'vomiting'],
-        'diarrhea': ['diarrhea', 'loose stool', 'watery stool'],
-        'indigestion': ['indigestion', 'upset']
+        'diarrhea': ['diarrhea', 'loose stool', 'watery stool']
     },
     'neck': {
         'pain': ['pain', 'ache', 'sore', 'hurt', 'throbbing'],
@@ -9781,13 +9780,6 @@ body_part_followup_questions = {
                 'hi': "क्या दस्त के साथ बुखार या कमजोरी भी महसूस हो रही है?",
                 'en': "Do you experience fever or weakness along with the diarrhea?",
                 'category': 'stomach_diarrhea_additional_symptoms'
-            }
-        ],
-        'indigestion': [
-            {
-                'hi': "क्या आपको बार-बार एसिड रिफ्लक्स या जलन महसूस हो रही है?",
-                'en': "Are you frequently experiencing acid reflux or heartburn?",
-                'category': 'stomach_indigestion_reflux'
             }
         ],
         'default': [
