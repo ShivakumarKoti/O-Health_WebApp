@@ -9983,7 +9983,112 @@ body_part_followup_questions = {
                 'category': 'ear_detail'
             }
         ]
-    },   
+    }, 
+'ear': {
+    'pain': [
+        {
+            'hi': "क्या कान में दर्द के साथ बुखार या सुनाई देने में दिक्कत है?",
+            'en': "Do you have fever or difficulty hearing along with the ear pain?",
+            'category': 'ear_pain_additional_symptoms'
+        },
+        {
+            'hi': "क्या दर्द अचानक शुरू हुआ था या धीरे-धीरे बढ़ा?",
+            'en': "Did the pain start suddenly or build up gradually?",
+            'category': 'ear_pain_onset'
+        },
+        {
+            'hi': "क्या कान को छूने पर दर्द और बढ़ जाता है?",
+            'en': "Does touching the ear worsen the pain?",
+            'category': 'ear_pain_touch'
+        }
+    ],
+    'hearing_loss': [
+        {
+            'hi': "क्या सुनाई देने में समस्या एक कान में है या दोनों में?",
+            'en': "Is the hearing loss in one ear or both?",
+            'category': 'ear_hearing_loss_side'
+        },
+        {
+            'hi': "क्या सुनाई कम होना अचानक हुआ या धीरे-धीरे?",
+            'en': "Did the hearing loss happen suddenly or gradually?",
+            'category': 'ear_hearing_loss_onset'
+        },
+        {
+            'hi': "क्या सुनाई देने में बदलाव दिन के समय के अनुसार बदलता है?",
+            'en': "Does your hearing change depending on the time of day?",
+            'category': 'ear_hearing_loss_variation'
+        }
+    ],
+    'ringing': [
+        {
+            'hi': "क्या कान में घंटी या गूंजने जैसी आवाज़ लगातार रहती है?",
+            'en': "Is the ringing or buzzing in your ear constant?",
+            'category': 'ear_ringing_frequency'
+        },
+        {
+            'hi': "क्या यह आवाज़ किसी खास स्थिति में तेज़ हो जाती है, जैसे रात में?",
+            'en': "Does the sound get louder in specific situations, like at night?",
+            'category': 'ear_ringing_conditions'
+        },
+        {
+            'hi': "क्या इस आवाज़ के साथ चक्कर या संतुलन की समस्या भी होती है?",
+            'en': "Do you also experience dizziness or balance issues with the ringing?",
+            'category': 'ear_ringing_dizziness'
+        }
+    ],
+    'discharge': [
+        {
+            'hi': "क्या कान से तरल पदार्थ निकल रहा है?",
+            'en': "Is there fluid coming out of your ear?",
+            'category': 'ear_discharge_presence'
+        },
+        {
+            'hi': "क्या निकले हुए तरल का रंग या गंध अलग है?",
+            'en': "Does the fluid have an unusual color or smell?",
+            'category': 'ear_discharge_characteristics'
+        },
+        {
+            'hi': "क्या तरल निकलना लगातार है या रुक-रुक कर होता है?",
+            'en': "Is the discharge constant or intermittent?",
+            'category': 'ear_discharge_frequency'
+        }
+    ],
+    'infection': [
+        {
+            'hi': "क्या डॉक्टर ने कभी कान के संक्रमण की पुष्टि की है?",
+            'en': "Have you ever been diagnosed with an ear infection before?",
+            'category': 'ear_infection_history'
+        },
+        {
+            'hi': "क्या संक्रमण के समय दर्द, बुखार या बहाव जैसे लक्षण थे?",
+            'en': "Did you have symptoms like pain, fever, or discharge during the infection?",
+            'category': 'ear_infection_symptoms'
+        },
+        {
+            'hi': "क्या आपने पहले भी इसी तरह के संक्रमण का अनुभव किया है?",
+            'en': "Have you experienced similar infections before?",
+            'category': 'ear_infection_recurrence'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपने कान की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your ear issue in more detail.",
+            'category': 'ear_detail'
+        },
+        {
+            'hi': "क्या समस्या कान के अंदर महसूस होती है या बाहरी हिस्से में?",
+            'en': "Is the problem felt inside the ear or on the outer part?",
+            'category': 'ear_location'
+        },
+        {
+            'hi': "क्या आपकी नींद या रोज़मर्रा के काम इस समस्या से प्रभावित हो रहे हैं?",
+            'en': "Is this issue affecting your sleep or daily activities?",
+            'category': 'ear_impact'
+        }
+    ]
+},
+	
    'nails': {
         'discoloration': [
             {
