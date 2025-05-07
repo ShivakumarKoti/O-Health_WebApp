@@ -117,9 +117,9 @@ symptom_synonyms = {
 ],
 
     'nausea': [
-        'feeling nauseous', 'upset stomach', 'queasy', 'stomach turning', 'sick feeling', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
-        'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'intense nausea', 'gagging feeling', 'feeling on the verge of throwing up',
-        'uneasy stomach', 'upset belly', 'intense queasiness', 'morning sickness feeling',
+        'feeling nauseous', 'queasy', 'stomach turning', 'sick feeling', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
+        'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'gagging feeling', 'feeling on the verge of throwing up',
+        'uneasy stomach', 'intense queasiness', 'morning sickness feeling',
         'stomach discomfort', 'stomach churn', 'puking feeling', 'feeling like you could throw up',
         'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease','nauseous',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
@@ -230,9 +230,9 @@ symptom_synonyms = {
         'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
         'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement',
         'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements', 'diarrhoea',
-        'diarrheal episode', 'loose stool rush', 'pale watery stools', 'intestinal upset', 'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
-        'constantly running to the bathroom', 'liquid-filled intestines', 'intense gastrointestinal upset', 'abnormally frequent bowel movements', 'severe bowel looseness', 'bowel irregularity',
-        'liquid stools', 'stomach upset'
+        'diarrheal episode', 'loose stool rush', 'pale watery stools', 'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
+        'constantly running to the bathroom', 'liquid-filled intestines', 'abnormally frequent bowel movements', 'severe bowel looseness', 'bowel irregularity',
+        'liquid stools'
     ],
     'vomiting': [
         'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach', 'food coming out', 'food came out',
@@ -9168,10 +9168,10 @@ trigger_keywords = {
     },
     'stomach': {
         'pain': ['stomach ache', 'pain', 'cramps', 'cramp','hurt', 'discomfort'],
-        'bloating': ['bloating', 'fullness', 'gas', 'gassy', 'swollen'],
+        'bloating': ['bloating', 'fullness', 'gas', 'gassy'],
         'nausea': ['nausea', 'feeling sick', 'queasy', 'vomiting'],
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool'],
-        'indigestion': ['indigestion', 'heartburn', 'acid reflux', 'upset']
+        'indigestion': ['indigestion', 'upset']
     },
     'neck': {
         'pain': ['pain', 'ache', 'sore', 'hurt', 'throbbing'],
