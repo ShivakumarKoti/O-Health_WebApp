@@ -1,4 +1,3 @@
-
 # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
@@ -9133,7 +9132,7 @@ trigger_keywords = {
         'sensitivity' : ['hard', 'gum', 'gums', 'sensitive', 'bleeding']
     },
     'leg': {
-        'injury'      : ['twist', 'sprain', 'fracture', 'broke', 'fall', 'hurt', 'accident'],
+        'injury'      : ['twist', 'sprain', 'fracture', 'broke', 'fall', 'hurt', 'accident','fractured'],
         'pain'        : ['ache', 'throbbing', 'sharp', 'dull', 'cramp', 'stiff'],
         'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge']
     },
