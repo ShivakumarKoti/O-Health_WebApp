@@ -4378,12 +4378,6 @@ symptom_followup_questions = {
 
   "acne": [
     {
-      "hi": "आपको कितने समय से एक्ने है?",
-      "en": "How long have you had acne?",
-      "category": "acne",
-      "symptom": "acne duration",
-      "risk_factor": False,    },
-    {
       "hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?",
       "en": "Where do you typically get acne?",
       "category": "acne",
@@ -4593,12 +4587,6 @@ symptom_followup_questions = {
   ],
 
   "ear pain": [
-    {
-      "hi": "आपको कितने समय से कान में दर्द हो रहा है?",
-      "en": "How long have you been experiencing ear pain?",
-      "category": "ear pain",
-      "symptom": "ear pain duration",
-      "risk_factor": False,    },
     {
       "hi": "क्या कान में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
       "en": "Is the ear pain constant, or does it come and go?",
