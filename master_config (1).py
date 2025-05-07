@@ -9340,24 +9340,61 @@ trigger_keywords = {
 }
 
 body_part_followup_questions = {
+   
     'tooth': {
-        'injury': [
-            {'hi': "आपके दाँत में चोट कब लगी थी?",
-             'en': "How long ago did you injure the tooth?",
-             'category': 'tooth_injury_time'}
-        ],
-        'sensitivity': [
-            {'hi': "क्या दाँत या मसूड़े छूने पर संवेदनशील लग रहे हैं?",
-             'en': "Are your teeth or gums feeling sensitive to touch?",
-             'category': 'tooth_sensitivity'}
-        ],
-        'default': [
-            {'hi': "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
-             'en': "Can you describe more about your tooth issue?",
-             'category': 'tooth_detail'}
-        ]
-    },
-'leg': {
+    'injury': [
+        {
+            'hi': "क्या चोट लगने के बाद दाँत में दर्द है?",
+            'en': "Is there pain in the tooth after the injury?",
+            'category': 'tooth_injury_pain'
+        },
+        {
+            'hi': "चोट कैसे लगी थी?",
+            'en': "How did the injury happen?",
+            'category': 'tooth_injury_cause'
+        },
+        {
+            'hi': "क्या चोट लगने के बाद दाँत हिलने लगा है?",
+            'en': "Is the tooth loose after the injury?",
+            'category': 'tooth_injury_looseness'
+        }
+    ],
+    'sensitivity': [
+        {
+            'hi': "क्या दाँत या मसूड़े छूने पर संवेदनशील लग रहे हैं?",
+            'en': "Are your teeth or gums feeling sensitive to touch?",
+            'category': 'tooth_sensitivity'
+        },
+        {
+            'hi': "क्या गर्म या ठंडा खाने पर दर्द होता है?",
+            'en': "Do you feel pain when eating or drinking something hot or cold?",
+            'category': 'tooth_sensitivity_temp'
+        },
+        {
+            'hi': "क्या मीठा खाने पर भी संवेदनशीलता होती है?",
+            'en': "Do you feel sensitivity when eating sweets?",
+            'category': 'tooth_sensitivity_sweets'
+        }
+    ],
+    'default': [
+        {
+            'hi': "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
+            'en': "Can you describe more about your tooth issue?",
+            'category': 'tooth_detail'
+        },
+        {
+            'hi': "क्या यह समस्या अचानक शुरू हुई या धीरे-धीरे बढ़ी?",
+            'en': "Did this issue start suddenly or gradually?",
+            'category': 'tooth_onset'
+        },
+        {
+            'hi': "क्या आपको चबाने में कोई तकलीफ होती है?",
+            'en': "Do you have trouble chewing?",
+            'category': 'tooth_chewing_difficulty'
+        }
+    ]
+},
+	 'leg': {
         'injury': [
             {
     'hi': "कौन सी टांग या टांगे घायल हैं?",
