@@ -1611,11 +1611,12 @@ symptom_followup_questions = {
       "symptom": "stiffness",
       "risk_factor": False,    },
     {
-      "hi": "क्या जोड़ों में दर्द के साथ कोई आवाज़ भी सुनाई देती है?",
-      "en": "Do you hear any clicking or popping sounds in your joints along with pain?",
-      "category": "sounds_with_pain",
-      "symptom": None,
-      "risk_factor": False,    },
+  "hi": "क्या आपको जोड़ों में दर्द के साथ कोई गर्मी या लाली महसूस हो रही है?",
+  "en": "Do you feel any warmth or redness in your joints along with the pain?",
+  "category": "warmth_redness",
+  "symptom": "warmth_redness",
+  "risk_factor": False,
+},
   ],
   "knee pain": [
     {
@@ -5267,22 +5268,17 @@ symptom_followup_questions = {
       "symptom": "joint movement",
       "risk_factor": False,    },
     {
-      "hi": "क्या चोट लगने के समय कोई पॉपिंग या स्नैपिंग की आवाज आई थी?",
-      "en": "Did you hear any popping or snapping sounds when the injury occurred?",
-      "category": "sprain",
-      "symptom": "popping or snapping sounds",
-      "risk_factor": False,    },
+  "hi": "क्या चोट के बाद आपको जोड़े में स्थिरता या अस्थिरता का अनुभव हो रहा है?",
+  "en": "After the injury, do you feel any instability or weakness in the joint?",
+  "category": "sprain",
+  "symptom": "joint instability or weakness",
+  "risk_factor": False,
+},
     {
       "hi": "क्या आपने उसी जोड़े में पहले कभी कोई स्ट्रेन या चोट लगाई है?",
       "en": "Have you had any previous sprains or injuries to the same joint?",
       "category": "sprain",
       "symptom": "previous injuries",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, या आपने चोट पर बर्फ, गर्मी, या अन्य उपचार का उपयोग किया है?",
-      "en": "Are you currently taking any medications, or have you used ice, heat, or other treatments on the injury?",
-      "category": "sprain",
-      "symptom": "treatment used",
       "risk_factor": False,    },
   ],
 
