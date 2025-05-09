@@ -4188,20 +4188,20 @@ symptom_followup_questions = {
 
   "itching": [
     {
-      "hi": "क्या आपकी त्वचा में खुजली लगातार है या कभी-कभी आती है?",
-      "en": "Is the itching on your skin continuous or intermittent?",
+      "hi": "क्या आपकी खुजली लगातार है या कभी-कभी आती है?",
+      "en": "Is the itching continuous or intermittent?",
       "category": "intermittent_skin_itching",
       "symptom": "skin itching",
       "risk_factor": False,    },
     {
-      "hi": "क्या खुजली के साथ त्वचा में लालिमा भी है?",
-      "en": "Is there any redness on your skin along with itching?",
+      "hi": "क्या खुजली के साथ लालिमा भी है?",
+      "en": "Is there any redness along with itching?",
       "category": "redness_with_skin_itching",
       "symptom": "redness",
       "risk_factor": False,    },
     {
-      "hi": "क्या खुजली के कारण आपको त्वचा में सूजन हो रही है?",
-      "en": "Is itching causing any swelling on your skin?",
+      "hi": "क्या खुजली के कारण सूजन हो रही है?",
+      "en": "Is itching causing any swelling?",
       "category": "swelling_with_skin_itching",
       "symptom": "swelling",
       "risk_factor": False,    },
@@ -4213,13 +4213,13 @@ symptom_followup_questions = {
       "risk_factor": False,    },
     {
       "hi": "क्या खुजली के साथ त्वचा में कोई दरार या फफोले हो रहे हैं?",
-      "en": "Are there any cracks or blisters on your skin along with itching?",
+      "en": "Are there any cracks or blisters along with itching?",
       "category": "cracks_blisters_with_skin_itching",
       "symptom": "skin lesions",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपकी त्वचा में खुजली के कारण कोई अन्य परिवर्तन हो रहा है?",
-      "en": "Are there any other changes in your skin due to itching?",
+      "hi": "क्या खुजली के कारण कोई अन्य परिवर्तन हो रहा है?",
+      "en": "Are there any other changes due to itching?",
       "category": "skin_changes_with_skin_itching",
       "symptom": "skin discoloration",
       "risk_factor": False,    },
@@ -9053,11 +9053,12 @@ trigger_keywords = {
     'leg': {
         'injury'      : ['twist', 'sprain', 'fracture', 'broke', 'fall', 'hurt', 'accident','fractured'],
         'pain'        : ['ache', 'throbbing', 'sharp', 'dull', 'cramp', 'stiff'],
-        'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge']
+        'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge'],
+	'itching'     : ['itching','itch','itches','itchiness','itched']
     },
 
     'eye': {
-        'itching': ['itchy', 'itching', 'scratchy', 'irritated','irritation'],
+        'itching': ['itchy', 'itching', 'scratchy', 'itches','irritated','irritation'],
         'redness': ['red', 'bloodshot', 'pink', 'inflamed'],
         'burn'        : ['burn', 'burning', 'chemical', 'irritation'],
         'blurry vision': ['blurry', 'blurry vision', 'not clear', 'foggy', 'unclear','blurred']
@@ -9066,7 +9067,8 @@ trigger_keywords = {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
         'numbness': ['numb', 'tingling', 'pins', 'needles'],
         'swelling': ['swollen', 'puffy', 'inflamed', 'bump'],
-        'injury': ['fracture', 'broke', 'crack', 'broken', 'injury', 'hit']
+        'injury': ['fracture', 'broke', 'crack', 'broken', 'injury', 'hit'],
+	'itching'     : ['itching','itch','itches','itchiness','itched']
     },
 'arm': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing','pains','hurts'],
