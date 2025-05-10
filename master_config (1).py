@@ -1107,18 +1107,19 @@ symptom_synonyms = {
 # ------------------------------------------------------------------ #
 symptom_followup_questions = {
   "stomach pain": [
-    {
+{
+      "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
+      "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
+      "category": "stomach ache",
+      "symptom": "stomach ache",
+      "risk_factor": False,    },   
+{
       "hi": "पेट दर्द वास्तव में कहाँ स्थित है?",
       "en": "Where exactly is the stomach pain located?",
       "category": "stomach ache",
       "symptom": "stomach ache",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
-      "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
-      "category": "stomach ache",
-      "symptom": "stomach ache",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
       "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?",
@@ -1179,11 +1180,11 @@ symptom_followup_questions = {
       "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको नींद की कमी का सामना करना पड़ता है?",
-      "en": "Do you face lack of sleep?",
-      "category": "lack of sleep",
-      "symptom": "insomnia",
+  {
+      "hi": "क्या आप पौष्टिक भोजन खाते हैं?",
+      "en": "Do you eat nutritious food?",
+      "category": "weakness",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप खुद को हाइड्रेटेड रखते हैं?",
@@ -1197,12 +1198,7 @@ symptom_followup_questions = {
       "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आप पौष्टिक भोजन खाते हैं?",
-      "en": "Do you eat nutritious food?",
-      "category": "weakness",
-      "symptom": None,
-      "risk_factor": False,    },
+   
     {
       "hi": "क्या आप प्रतिदिन व्यायाम करते हैं?",
       "en": "Do you exercise daily?",
@@ -1254,12 +1250,6 @@ symptom_followup_questions = {
       "category": "stress_headache",
       "symptom": "Stress-related headache",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपकी नींद में कोई कमी है साथ ही सिरदर्द?",
-      "en": "Are you lacking sleep along with headache?",
-      "category": "sleep_deprivation",
-      "symptom": "insomnia",
-      "risk_factor": False,    },
   ],
   "nausea": [
     {
@@ -1275,17 +1265,18 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको खाने के बाद मतली होती है?",
-      "en": "Do you feel nauseous after eating?",
-      "category": "postprandial_nausea",
-      "symptom": "Postprandial nausea",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपको पेट में दर्द हो रहा है साथ ही मतली?",
       "en": "Are you experiencing abdominal pain along with nausea?",
       "category": "abdominal_pain_nausea",
       "symptom": "abdominal_pain_nausea",
       "risk_factor": False,    },
+ 	{
+      "hi": "क्या आपको खाने के बाद मतली होती है?",
+      "en": "Do you feel nauseous after eating?",
+      "category": "postprandial_nausea",
+      "symptom": "Postprandial nausea",
+      "risk_factor": False,    },
+    
     {
       "hi": "क्या आपको सिरदर्द है साथ ही मतली?",
       "en": "Do you have headaches along with nausea?",
@@ -1347,7 +1338,12 @@ symptom_followup_questions = {
 ],
  
   "dizziness": [
-
+   {
+      "hi": "क्या आपको सिरदर्द हो रहा है साथ में चक्कर आना?",
+      "en": "Are you having headaches along with dizziness?",
+      "category": "headache_dizziness",
+      "symptom": "headache",
+      "risk_factor": False,    },
     {
       "hi": "क्या चक्कर आना अचानक शुरू हुआ था या धीरे-धीरे?",
       "en": "Did the dizziness start suddenly or gradually?",
@@ -1366,12 +1362,7 @@ symptom_followup_questions = {
       "category": "position_related_dizziness",
       "symptom": "Position-related dizziness",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको सिरदर्द हो रहा है साथ में चक्कर आना?",
-      "en": "Are you having headaches along with dizziness?",
-      "category": "headache_dizziness",
-      "symptom": "headache",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या आपको संतुलन बिगड़ रहा है?",
       "en": "Are you losing your balance?",
@@ -1426,6 +1417,12 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
     {
+      "hi": "क्या आपका तापमान सामान्य से अधिक है?",
+      "en": "Is your temperature higher than normal?",
+      "category": "high_temperature",
+      "symptom": "high temperature",
+      "risk_factor": False,    },
+    {
       "hi": "क्या आपको ठंड लग रही है?",
       "en": "Are you experiencing any chills?",
       "category": "chills",
@@ -1438,12 +1435,7 @@ symptom_followup_questions = {
       "symptom": "headache",
       "risk_factor": False,    },
     
-    {
-      "hi": "क्या आपका तापमान सामान्य से अधिक है?",
-      "en": "Is your temperature higher than normal?",
-      "category": "high_temperature",
-      "symptom": "high temperature",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या आपको रात में पसीना आता है?",
       "en": "Do you experience night sweats?",
@@ -1501,18 +1493,6 @@ symptom_followup_questions = {
       "en": "Has your voice changed?",
       "category": "voice_change",
       "symptom": "broken voice",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको सांस लेने में सीटी जैसी आवाज़ आती है?",
-      "en": "Do you experience wheezing?",
-      "category": "wheezing",
-      "symptom": "wheezing",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके खांसी के साथ बलगम में खून है?",
-      "en": "Is there blood in your phlegm with your cough?",
-      "category": "hemoptysis",
-      "symptom": "bleeding",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी खांसी के साथ तेज सांस लेना शामिल है?",
@@ -1590,17 +1570,18 @@ symptom_followup_questions = {
   ],
   "knee pain": [
     {
-      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
-      "en": "Was there any specific injury or event that triggered the knee pain?",
-      "category": "knee pain",
-      "symptom": "knee pain",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
       "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
       "category": "knee pain",
       "symptom": None,
       "risk_factor": False,    },
+	  {
+      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
+      "en": "Was there any specific injury or event that triggered the knee pain?",
+      "category": "knee pain",
+      "symptom": "knee pain",
+      "risk_factor": False,    },
+    
     {
       "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
       "en": "Does the knee pain occur constantly, or does it come and go?",
@@ -1671,12 +1652,6 @@ symptom_followup_questions = {
       "symptom": "injury",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपने हाल ही में कोई पुनरावृत्त गतिविधियाँ या अधिक उपयोग किया है?",
-      "en": "Have you had any recent repetitive activities or overuse?",
-      "category": "wrist pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
       "en": "Is the wrist pain constant or intermittent?",
       "category": "wrist pain",
@@ -1692,17 +1667,18 @@ symptom_followup_questions = {
 
   "leg pain": [
     {
-      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
-      "en": "Was there any specific injury or event that triggered the leg pain?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
       "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
       "category": "leg pain",
       "symptom": None,
       "risk_factor": False,    },
+    {
+      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
+      "en": "Was there any specific injury or event that triggered the leg pain?",
+      "category": "leg pain",
+      "symptom": None,
+      "risk_factor": False,    },
+   
     {
       "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
       "en": "Does the leg pain occur constantly, or does it come and go?",
@@ -1748,6 +1724,12 @@ symptom_followup_questions = {
   ],
 
   "chest pain": [
+     {
+      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
+      "en": "Is your chest pain radiating to your arms, neck, or back?",
+      "category": "radiating_pain",
+      "symptom": None,
+      "risk_factor": True,    },
     {
       "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
       "en": "Is your chest pain sharp or dull?",
@@ -1772,12 +1754,7 @@ symptom_followup_questions = {
       "category": "activity_related_pain",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
-      "en": "Is your chest pain radiating to your arms, neck, or back?",
-      "category": "radiating_pain",
-      "symptom": None,
-      "risk_factor": False,    },
+   
   ],
 
   "back pain": [
@@ -1861,16 +1838,17 @@ symptom_followup_questions = {
       "category": "diet_fiber",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या कब्ज की समस्या के साथ कोई अन्य लक्षण हैं?",
-      "en": "Are there any other symptoms associated with your constipation?",
-      "category": "other_symptoms",
-      "symptom": None,
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या आप नियमित रूप से व्यायाम करते हैं?",
       "en": "Do you exercise regularly?",
       "category": "exercise",
+      "symptom": None,
+      "risk_factor": False,    },
+    {
+      "hi": "क्या कब्ज की समस्या के साथ कोई अन्य लक्षण हैं?",
+      "en": "Are there any other symptoms associated with your constipation?",
+      "category": "other_symptoms",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1882,24 +1860,26 @@ symptom_followup_questions = {
       "category": "intermittent_pain",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको निगलने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty swallowing?",
-      "category": "difficulty_swallowing",
-      "symptom": "difficulty swallowing",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गले में दर्द के साथ सूजन भी है?",
-      "en": "Is there any swelling along with your sore throat?",
-      "category": "swelling",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
+     {
       "hi": "क्या आपकी आवाज़ में परिवर्तन आया है?",
       "en": "Has there been any change in your voice?",
       "category": "voice_changes",
       "symptom": "broken voice",
       "risk_factor": False,    },
+     {
+      "hi": "क्या आपको निगलने में कठिनाई हो रही है?",
+      "en": "Are you having difficulty swallowing?",
+      "category": "difficulty_swallowing",
+      "symptom": "difficulty swallowing",
+      "risk_factor": False,    },
+   
+     {
+      "hi": "क्या गले में दर्द के साथ सूजन भी है?",
+      "en": "Is there any swelling along with your sore throat?",
+      "category": "swelling",
+      "symptom": "swelling",
+      "risk_factor": False,    },
+    
     {
       "hi": "क्या आपको गले में जलन महसूस हो रही है?",
       "en": "Are you experiencing any burning sensation in your throat?",
@@ -2177,17 +2157,18 @@ symptom_followup_questions = {
       "symptom": "itchy eyes",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको गले में खुजली या सूजन महसूस हो रही है?",
-      "en": "Are you feeling itchiness or swelling in your throat?",
-      "category": "throat_allergy_symptoms",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपके लक्षण किसी खास मौसम या वातावरण में अधिक होते हैं?",
       "en": "Do your symptoms worsen in certain seasons or environments?",
       "category": "environmental_allergy_triggers",
       "symptom": None,
       "risk_factor": False,    },
+     {
+      "hi": "क्या आपको गले में खुजली या सूजन महसूस हो रही है?",
+      "en": "Are you feeling itchiness or swelling in your throat?",
+      "category": "throat_allergy_symptoms",
+      "symptom": None,
+      "risk_factor": False,    },
+    
   ],
 
  "high blood pressure": [
@@ -2634,18 +2615,19 @@ symptom_followup_questions = {
       "category": "abdominal_pain_with_gas",
       "symptom": "abdominal pain",
       "risk_factor": False,    },
+     {
+      "hi": "क्या गैस के साथ आपका मूड भी प्रभावित हो रहा है?",
+      "en": "Is your mood being affected along with gas?",
+      "category": "mood_changes_with_gas",
+      "symptom": "mood changes",
+      "risk_factor": False,    },
     {
       "hi": "क्या गैस के कारण आपको पेट फूलने का अनुभव हो रहा है?",
       "en": "Are you experiencing bloating due to gas?",
       "category": "bloating_with_gas",
       "symptom": "bloating",
       "risk_factor": False,    },
-    {
-      "hi": "क्या गैस के साथ आपका मूड भी प्रभावित हो रहा है?",
-      "en": "Is your mood being affected along with gas?",
-      "category": "mood_changes_with_gas",
-      "symptom": "mood changes",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या गैस के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is gas affecting your sleep?",
@@ -2801,12 +2783,6 @@ symptom_followup_questions = {
       "en": "Are you feeling weak after nosebleeds?",
       "category": "weakness_with_nosebleeds",
       "symptom": "weakness",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या नाक से खून बहने के कारण आपके आँखों में भी कोई समस्या हो रही है?",
-      "en": "Are you experiencing any issues with your eyes due to nosebleeds?",
-      "category": "eye_issues_with_nosebleeds",
-      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या नाक से खून बहने के साथ आपको सिरदर्द भी हो रहा है?",
@@ -3562,12 +3538,7 @@ symptom_followup_questions = {
       "category": "time_situation_related_balance_problems",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या संतुलन बिगड़ने के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?",
-      "en": "Are you experiencing any other symptoms along with balance problems?",
-      "category": "other_symptoms_with_balance_problems",
-      "symptom": None,
-      "risk_factor": False,    },
+  
     {
       "hi": "क्या संतुलन बिगड़ने के कारण आपकी दैनिक गतिविधियाँ प्रभावित हो रही हैं?",
       "en": "Are your daily activities being affected due to balance problems?",
@@ -3578,6 +3549,12 @@ symptom_followup_questions = {
       "hi": "क्या संतुलन बिगड़ने के कारण आपको चलने-फिरने में कठिनाई हो रही है?",
       "en": "Are you having difficulty walking due to balance problems?",
       "category": "walking_difficulty_with_balance_problems",
+      "symptom": None,
+      "risk_factor": False,    },
+      {
+      "hi": "क्या संतुलन बिगड़ने के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?",
+      "en": "Are you experiencing any other symptoms along with balance problems?",
+      "category": "other_symptoms_with_balance_problems",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -3701,6 +3678,12 @@ symptom_followup_questions = {
       "category": "irregular_heartbeat",
       "symptom": "irregular heartbeat",
       "risk_factor": False,    },
+     {
+      "hi": "क्या अनियमित धड़कन के कारण आपको सांस लेने में कठिनाई हो रही है?",
+      "en": "Are you having difficulty breathing due to an irregular heartbeat?",
+      "category": "breathing_difficulty_with_irregular_heartbeat",
+      "symptom": "shortness of breath",
+      "risk_factor": False,    },
     {
       "hi": "क्या अनियमित धड़कन के साथ आपको चक्कर आ रहे हैं?",
       "en": "Are you experiencing dizziness along with an irregular heartbeat?",
@@ -3719,12 +3702,7 @@ symptom_followup_questions = {
       "category": "fast_heartbeat_with_irregular_heartbeat",
       "symptom": "heart palpitations",
       "risk_factor": False,    },
-    {
-      "hi": "क्या अनियमित धड़कन के कारण आपको सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty breathing due to an irregular heartbeat?",
-      "category": "breathing_difficulty_with_irregular_heartbeat",
-      "symptom": "shortness of breath",
-      "risk_factor": False,    },
+   
     {
       "hi": "क्या अनियमित धड़कन अचानक शुरू हुई है या धीरे-धीरे?",
       "en": "Did your irregular heartbeat start suddenly or gradually?",
@@ -3747,6 +3725,12 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
     {
+      "hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?",
+      "en": "Is your mobility being affected due to neck pain?",
+      "category": "mobility_impact_with_neck_pain",
+      "symptom": None,
+      "risk_factor": False,    },
+    {
       "hi": "क्या गर्दन के दर्द के साथ सिरदर्द भी हो रहा है?",
       "en": "Are you experiencing headaches along with neck pain?",
       "category": "headache_with_neck_pain",
@@ -3757,12 +3741,6 @@ symptom_followup_questions = {
       "en": "Is there any swelling along with neck pain?",
       "category": "swelling_with_neck_pain",
       "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?",
-      "en": "Is your mobility being affected due to neck pain?",
-      "category": "mobility_impact_with_neck_pain",
-      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?",
@@ -4322,6 +4300,12 @@ symptom_followup_questions = {
       "category": "acne",
       "symptom": "acne location",
       "risk_factor": False,    },
+	  {
+      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
+      "en": "Have you tried any treatments for your acne?",
+      "category": "acne treatments",
+      "symptom": "acne treatment",
+      "risk_factor": False,    },
     {
       "hi": "आपके पास किस प्रकार का एक्ने है?",
       "en": "What type of acne do you have?",
@@ -4334,12 +4318,7 @@ symptom_followup_questions = {
       "category": "acne",
       "symptom": "acne severity",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
-      "en": "Have you tried any treatments for your acne?",
-      "category": "acne treatments",
-      "symptom": "acne treatment",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या आप वर्तमान में कोई स्किनकेयर या मेकअप उत्पाद उपयोग कर रहे हैं?",
       "en": "Are you currently using any skincare or makeup products?",
@@ -7098,6 +7077,13 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
+      "hi": "क्या आपके शरीर में कोई हार्मोनल असंतुलन है?",
+      "en": "Is there any hormonal imbalance in your body?",
+      "category": "female issue",
+      "symptom": "hormonal imbalance",
+      "risk_factor": False,
+    },
+    {
       "hi": "क्या आपको मूत्र संबंधी कोई लक्षण हैं, जैसे बार-बार पेशाब आना या पेशाब करते समय दर्द होना?",
       "en": "Do you have any history of urinary symptoms, such as frequent urination or pain while urinating?",
       "category": "female issue",
@@ -7123,13 +7109,6 @@ symptom_followup_questions = {
       "en": "Are you experiencing any pain or cramping before or during your period?",
       "category": "female issue",
       "symptom": "female issue",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपके शरीर में कोई हार्मोनल असंतुलन है?",
-      "en": "Is there any hormonal imbalance in your body?",
-      "category": "female issue",
-      "symptom": "hormonal imbalance",
       "risk_factor": False,
     },
    {
