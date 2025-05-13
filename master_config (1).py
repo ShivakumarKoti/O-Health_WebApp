@@ -9060,13 +9060,13 @@ trigger_keywords = {
         'pressure': ['pressure', 'tightness', 'heaviness']
     },  
 'back': {
-        'pain': ['backache', 'pain', 'hurt', 'sore', 'stiff', 'ache'],
-        'stiffness': ['stiff', 'tight', 'tense', 'rigid'],
-        'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled','fell'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles']
+        'pain': ['backache', 'pain', 'hurt', 'sore', 'stiff', 'ache','aches','sores','hurts'],
+        'stiffness': ['stiff', 'tight', 'tense', 'rigid','stiffs'],
+        'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled','fell','twists'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles','numbed']
     },
 'chest': {
-        'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning'],
+        'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning','aches'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness'],
         'breathing': ['shortness of breath', 'breathing', 'difficulty breathing', 'can’t breathe', 'tight chest'],
         'palpitations': ['palpitations', 'heart racing', 'fluttering', 'fast heartbeat']
@@ -9539,13 +9539,6 @@ body_part_followup_questions = {
                 'category': 'back_numbness_radiation'
             }
         ],
-        'default': [
-            {
-                'hi': "कृपया अपनी पीठ की समस्या के बारे में अधिक जानकारी दें।",
-                'en': "Please describe your back issue in more detail.",
-                'category': 'back_detail'
-            }
-        ]
     },
 'chest': {
         'pain': [
