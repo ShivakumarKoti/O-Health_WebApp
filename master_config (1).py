@@ -109,10 +109,10 @@ symptom_synonyms = {
     'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
     'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
     'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements', 'lacking strength', 
-    'body feels heavy', 'brain fog', 'struggling to stay awake', 'can’t focus due to fatigue', 'slow to move', 'slow to think',
-    'exhausted no matter how much I sleep', 'general weakness', 'barely functioning', 'worn out', 'can’t get out of bed',
+    'body feels heavy', 'brain fog', 'struggling to stay awake', "can’t focus due to fatigue", 'slow to move', 'slow to think',
+    'exhausted no matter how much I sleep', 'general weakness', 'barely functioning', 'worn out', "can’t get out of bed",
     'out of energy', 'lack of strength in limbs', 'sluggish reaction time','trouble keeping eyes open during the day', 
-    'body feels like lead', 'can’t finish daily tasks', 'short bursts of energy followed by crashes',
+    'body feels like lead', "can’t finish daily tasks", 'short bursts of energy followed by crashes',
     'muscle weakness without exertion', 'tired even after sleeping well'
 ],
 
@@ -145,7 +145,7 @@ symptom_synonyms = {
         'breathing feels like pushing through a straw', 'air-starved lungs', 'cannot take a deep breath', 'strained oxygen intake', 'feeling like each breath is a struggle',
         'never fully satisfied inhalation', 'gasping between words', 'needy breathing pattern', 'barely pulling in enough air', 'lungs working at half capacity', 'respiratory distress',
         'continuous short-windedness', 'lack of breath', 'shortage of breath', ' breath shortage', 'light breathing', 'mild breathing', 'unable to breathe',
-        'lacking breath','can\’t breathe deeply', 'can\’t take my breath', 'can\’t breathe','breathing rate is low', 'breathing rate is slow', 'dyspnea'
+        'lacking breath',"can’t breathe deeply", "can’t take my breath", "can’t breathe",'breathing rate is low', 'breathing rate is slow', 'dyspnea'
     ],
    'rapid breathing': [
     'heavy breathing', 'fast breathing', 'heart skipping beats', 'heart begins to beat faster', 'heart begins to beat fast',
@@ -169,7 +169,7 @@ symptom_synonyms = {
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
         'early morning wakefulness', 'poor sleep quality', 'sleep deprivation', 'sleep disturbance', 'trouble staying asleep', 'sleep interruptions', 'unable to sleep through the night',
-        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', 'can\'t sleep', 'sleep not coming',
+        'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', "can’t sleep", 'sleep not coming',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
         'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep'
@@ -585,7 +585,7 @@ symptom_synonyms = {
     'dysphagia', 'trouble swallowing', 'swallowing difficulty', 'painful swallowing', 'difficulty with swallowing', 'difficulty in swallowing food',
     'inability to swallow', 'swallowing discomfort', 'choking sensation', 'difficulty swallowing pills', 'food getting stuck', 'hard time swallowing',
     'difficulty in throat swallowing', 'swallowing obstruction', 'swallowing problems', 'gagging while swallowing', 'swallowing trouble',
-    'feeling of blockage while swallowing', 'difficulties swallowing', 'can\'t swallow food'
+    'feeling of blockage while swallowing', "can’t swallow food", 'difficulties swallowing'
 ],
 
 'restlessness': [
@@ -9068,7 +9068,7 @@ trigger_keywords = {
 'chest': {
         'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning','aches'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness'],
-        'breathing': ['shortness of breath', 'breathing', 'difficulty breathing', 'can’t breathe', 'tight chest'],
+        'breathing': ['shortness of breath', 'breathing', 'difficulty breathing', "can’t breathe", 'tight chest'],
         'palpitations': ['palpitations', 'heart racing', 'fluttering', 'fast heartbeat']
     },
    'wrist': {
@@ -9103,7 +9103,7 @@ trigger_keywords = {
         'swelling': ['swollen', 'swelling', 'puffy', 'inflamed'],
         'stiffness': ['stiff', 'locked', 'tight', 'rigid'],
         'injury': ['injury', 'twist', 'fall', 'hit', 'sprain', 'fracture'],
-        'weakness': ['weak', 'unstable', 'giving way', 'can’t stand']
+        'weakness': ['weak', 'unstable', 'giving way', "can’t stand"]
     },
   'foot': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
@@ -9117,11 +9117,11 @@ trigger_keywords = {
         'stiffness': ['stiff', 'tight', 'frozen', 'locked'],
         'injury': ['injury', 'fall', 'twist', 'dislocate', 'fracture'],
         'numbness': ['numb', 'tingling', 'pins', 'needles'],
-        'weakness': ['weak', 'can’t lift', 'unstable']
+        'weakness': ['weak', "can’t lift", 'unstable']
     },
 'ear': {
         'pain': ['pain', 'ache', 'hurt', 'sharp', 'throbbing'],
-        'hearing_loss': ['hearing loss', 'can’t hear', 'muffled', 'low hearing'],
+        'hearing_loss': ['hearing loss', "can’t hear", 'muffled', 'low hearing'],
         'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear'],
         'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage'],
         'infection': ['infection', 'fever', 'swelling', 'ear infection']
@@ -9137,7 +9137,7 @@ trigger_keywords = {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
         'swelling': ['swollen', 'inflammation', 'swelling', 'puffiness'],
         'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
-        'weakness': ['weak', 'unstable', 'giving way', 'can’t move'],
+        'weakness': ['weak', 'unstable', 'giving way', "can’t move"],
         'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
     },
     'skin': {
@@ -9208,7 +9208,7 @@ trigger_keywords = {
     },
  'thigh': {
         'pain': ['thigh pain', 'ache in thigh', 'thigh sore', 'thigh cramp'],
-        'weakness': ['thigh weakness', 'can’t lift leg', 'leg feels weak'],
+        'weakness': ['thigh weakness', "can’t lift leg", 'leg feels weak'],
         'spasm': ['thigh spasm', 'thigh twitch', 'tight thigh'],
         'injury': ['thigh injury', 'pulled thigh', 'thigh strain', 'torn thigh muscle'],
         'swelling': ['thigh swelling', 'thigh is swollen', 'bump on thigh']
