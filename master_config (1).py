@@ -8,7 +8,7 @@ symptom_list = [
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion', 'nose pain',
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision', 'ear pain',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating', 'neck pain',
-'gas', 'indigestion', 'acidity', 'mouth sore', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
+'gas', 'indigestion', 'acidity', 'mouth pain', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye pain',  'eye discharge', 'ear discharge', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion', 'bone pain', 'wrist pain', 'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
@@ -619,7 +619,7 @@ symptom_synonyms = {
       'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset'
 ],
 
-'mouth sore': [
+'mouth pain': [
     'oral ulcer', 'canker sore', 'cold sore', 'blister in the mouth', 'mouth ulcer', 'painful mouth lesion', 'sores in the mouth', 'lesions on the gums',
     'painful spot in the mouth', 'mouth blister', 'mouth irritation', 'gum ulcer', 'sore inside the mouth', 'ulcerated mouth tissue', 'painful mouth spot',
     'burning mouth', 'painful tongue spot', 'sores on the lips', 'swollen mouth tissue', 'open mouth wound', 'oral lesion', 'mouth wound', 'infected mouth area'
@@ -2714,40 +2714,40 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "mouth sore": [
+ "mouth pain": [
     {
-      "hi": "क्या आपके मुंह में घाव तेजी से बढ़ रहे हैं?",
-      "en": "Are your mouth sores spreading rapidly?",
+      "hi": "क्या आपके मुंह का दर्द तेजी से फैल रहा है",
+      "en": "Is your mouth pain spreading rapidly?",
       "category": "rapid_spread_mouth_sores",
       "symptom": "mouth sores",
       "risk_factor": False,    },
     {
-      "hi": "क्या मुंह के घावों के साथ सूजन भी है?",
-      "en": "Is there any swelling along with your mouth sores?",
+      "hi": "क्या आपके मुंह में दर्द के साथ सूजन भी है?",
+      "en": "Is there any swelling along with your mouth pain?",
       "category": "swelling_with_mouth_sores",
       "symptom": "swelling",
       "risk_factor": False,    },
     {
-      "hi": "क्या मुंह के घाव खाने या पीने में दर्द पैदा करते हैं?",
-      "en": "Do your mouth sores cause pain while eating or drinking?",
+      "hi": "क्या खाने या पीने के दौरान आपके मुंह में दर्द बढ़ जाता है?",
+      "en": "Does your mouth pain increase while eating or drinking?",
       "category": "pain_with_mouth_sores",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको मुंह के घावों से रक्तस्राव हो रहा है?",
-      "en": "Are your mouth sores bleeding?",
+      "en": "Is your mouth bleeding?",
       "category": "bleeding_mouth_sores",
       "symptom": "bleeding",
       "risk_factor": False,    },
     {
-      "hi": "क्या मुंह के घावों के साथ आपके दांतों में दर्द है?",
+      "hi": "क्या आपके मुंह से खून बह रहा है?",
       "en": "Are you experiencing tooth pain along with mouth sores?",
       "category": "tooth_pain_with_mouth_sores",
       "symptom": "tooth pain",
       "risk_factor": False,    },
     {
-      "hi": "क्या मुंह के घावों के कारण आपकी बोलने में कठिनाई हो रही है?",
-      "en": "Are your mouth sores causing difficulty in speaking?",
+      "hi": "क्या मुंह में दर्द के कारण बोलने में कठिनाई हो रही है?",
+      "en": "Is the mouth pain causing difficulty in speaking?",
       "category": "speech_difficulty_with_mouth_sores",
       "symptom": "difficulty speaking",
       "risk_factor": False,    },
@@ -10745,7 +10745,7 @@ symptom_to_specialist = {
 
     # Dentist: Dental-related symptoms
     'tooth pain': 'Dentist',
-    'mouth sore': 'Dentist',
+    'mouth pain': 'Dentist',
     'dry mouth': 'Dentist',
 
     # Neurologist: Neurological and brain-related symptoms
@@ -10977,7 +10977,7 @@ HINDI_OFFLINE_DICT = {
             "gas": "गैस",
             "indigestion": "बदहजमी",
             "heartburn": "सीने में जलन",
-            "mouth sore": "मुंह के छाले",
+            "mouth sore": "मुँह दर्द",
             "nosebleed": "नाक से खून आना",
             "ear ringing": "कानों में घंटी बजना",
             "dark urine": "गहरा मूत्र",
