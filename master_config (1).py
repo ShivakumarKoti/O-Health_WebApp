@@ -620,9 +620,9 @@ symptom_synonyms = {
 ],
 
 'mouth pain': [
-    'oral ulcer', 'canker sore', 'cold sore', 'blister in the mouth', 'mouth ulcer', 'painful mouth lesion', 'sores in the mouth', 'lesions on the gums',
-    'painful spot in the mouth', 'mouth blister', 'mouth irritation', 'gum ulcer', 'sore inside the mouth', 'ulcerated mouth tissue', 'painful mouth spot',
-    'burning mouth', 'painful tongue spot', 'sores on the lips', 'swollen mouth tissue', 'open mouth wound', 'oral lesion', 'mouth wound', 'infected mouth area'
+    'painful mouth lesion', 'pain in the mouth', 'pain inside the mouth', 'pain in mouth', 'mouth having pain', 'pain on mouth', 
+    'painful spot in the mouth','mouth irritation', 'gum ulcer', 'painful mouth spot', 'painful mouth',
+    'burning mouth', 'swollen mouth tissue', 'open mouth wound', 'oral lesion', 'mouth wound'
 ],
 
 'nosebleed': [
