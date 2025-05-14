@@ -2719,7 +2719,7 @@ symptom_followup_questions = {
       "hi": "क्या आपके मुंह का दर्द तेजी से फैल रहा है",
       "en": "Is your mouth pain spreading rapidly?",
       "category": "rapid_spread_mouth_sores",
-      "symptom": "mouth sores",
+      "symptom": "mouth pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके मुंह में दर्द के साथ सूजन भी है?",
@@ -2734,14 +2734,14 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको मुंह के घावों से रक्तस्राव हो रहा है?",
+      "hi": "क्या आपके मुंह से खून बह रहा है?",
       "en": "Is your mouth bleeding?",
       "category": "bleeding_mouth_sores",
       "symptom": "bleeding",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपके मुंह से खून बह रहा है?",
-      "en": "Are you experiencing tooth pain along with mouth sores?",
+      "hi": "क्या आपको मुंह के दर्द के साथ दांत में भी दर्द हो रहा है?",
+      "en": "Are you experiencing tooth pain along with mouth pain?",
       "category": "tooth_pain_with_mouth_sores",
       "symptom": "tooth pain",
       "risk_factor": False,    },
