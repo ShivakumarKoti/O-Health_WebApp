@@ -900,7 +900,7 @@ symptom_synonyms = {
 ],
 
 'sleepy': [
-'sleepy', 'falling asleep', 'fallen asleep','feeling sleepy'
+'sleepy', 'falling asleep', 'fallen asleep','feeling sleepy', 'sleep problems'
 ],
 
 'eye weakness': [
