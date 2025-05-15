@@ -9063,7 +9063,8 @@ trigger_keywords = {
         'pain': ['backache', 'pain', 'hurt', 'sore', 'stiff', 'ache','aches','sores','hurts'],
         'stiffness': ['stiff', 'tight', 'tense', 'rigid','stiffs'],
         'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled','fell','twists'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles','numbed']
+        'numbness': ['numb', 'tingling', 'pins', 'needles','numbed'],
+	'issue': ['issues', 'problem', 'problems']
     },
 'chest': {
         'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning','aches'],
@@ -9539,6 +9540,13 @@ body_part_followup_questions = {
                 'category': 'back_numbness_radiation'
             }
         ],
+	'issue': [
+            {
+                'hi': "कृपया अपनी कलाई की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your back issue in more detail.",
+                'category': 'back_detail'
+            }
+        ]
     },
 'chest': {
         'pain': [
