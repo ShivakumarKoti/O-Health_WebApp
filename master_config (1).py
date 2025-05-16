@@ -904,7 +904,7 @@ symptom_synonyms = {
 ],
 
 'eye weakness': [
-'weakness in eyes', 'weak eyes', 'eyes are weak', 'eyes are becoming weak', 'eye is weak', 'tired eyes', 'eye strain', 'blurred vision',
+'weakness in eyes', 'weak eyes', 'eyes are weak', 'eyes are becoming weak', 'eye is weak', 'tired eyes', 'eye strain', 
 'fatigued eyes', 'heavy eyes', 'difficulty focusing', 'eye muscle weakness', 'strained vision', 'eye discomfort', 'droopy eyelids', 'lack of eye strength',
 'vision fatigue', 'eye exhaustion', 'eye tiredness', 'reduced eye stamina', 'difficulty keeping eyes open', 'eye sensitivity', 'failing eye strength',
 'eye fatigue after reading', 'poor eye endurance', 'eye weakness from screen use', 'eye weariness', 'visual tiredness', 'eye fragility', 'weak eye muscles',
