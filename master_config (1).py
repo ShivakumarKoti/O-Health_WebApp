@@ -55,13 +55,9 @@ symptom_synonyms = {
         'crippling light-triggered pain', 'tidal wave of head torment', 'incapacitating halo of pain', 'ear-to-temple throbbing on one side'
     ],
     'allergy': [
-        'allergies', 'allergic reaction', 'allergic response', 'allergic rhinitis', 'pollen sensitivity', 'dust mite allergy', 'food allergy', 'skin allergy', 'seasonal allergies', 'allergic',
-        'environmental allergies', 'allergic condition', 'allergic response to pollen', 'sensitive to allergens', 'sneezing due to allergies', 'wheezing from allergic reaction',
-        'swollen nasal passages', 'runny nose from allergies', 'sinus congestion from allergies', 'allergic rashes', 'eczema flare-up', 'hives', 'itchy skin from allergens', 
-        'respiratory allergy', 'allergic reactions in skin', 'excessive histamine release', 'redness from allergy', 'swollen throat from allergies', 'asthma attack triggered by allergens', 'increased mucus production',
-        'throat irritation due to allergens', 'difficulty breathing from allergies', 'sneezing fits due to pollen', 'allergic asthma', 'seasonal allergic reactions',  'nasal discharge from allergies',
-        'blocked sinuses', 'itchy throat from allergies', 'dry throat from allergies', 'allergy flare-up', 'anaphylactic reaction', 'anaphylaxis', 'allergic dermatitis', 'rashes from allergens', 
-        'swollen tongue', 'red eyes from allergies', 'itchy and watery eyes'
+        'allergies',  'pollen sensitivity', 'allergic','sensitive to allergens', 
+        'swollen nasal passages', 'eczema flare-up', 'itchy skin from allergens','allergic reactions in skin', 'excessive histamine release', 'increased mucus production',
+        'blocked sinuses', 'allergy', 'anaphylactic reaction', 'anaphylaxis'
     ],
     'fever': [
         'high temperature', 'elevated body temperature', 'feeling feverish', 'fevering', 'running a fever', 'burning up', 'feeling internally hot', 'having a temperature', 'spiking a fever', 'febrile state',
@@ -176,7 +172,7 @@ symptom_synonyms = {
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
-        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
+        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes','hives',
         'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'rashes', 'skinrash',
         'rashes from medication', 'painful itching on skin'
     ],
