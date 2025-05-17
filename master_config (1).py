@@ -102,8 +102,8 @@ symptom_synonyms = {
         'pain with digestive issues', 'pain from food poisoning','pain within the stomach'
     ],
    'weakness': [
-    'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
-    'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
+    'feeling sluggish', 'debilitating tiredness', 'chronic fatigue syndrome',
+    'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 
     'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements', 'lacking strength', 
     'body feels heavy', 'brain fog', 'struggling to stay awake', "can’t focus due to fatigue", 'slow to move', 'slow to think',
     'exhausted no matter how much I sleep', 'general weakness', 'barely functioning', 'worn out', "can’t get out of bed",
@@ -753,7 +753,7 @@ symptom_synonyms = {
 ],
 
 'exhaustion': [
-    'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
+    'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'weaknessphysical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
     'overwhelming tiredness', 'complete fatigue', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 
     'fatigued state', 'drowsiness', 'wearing out', 'energy depletion', 'fatigue syndrome', 'feeling drained', 'exhaustive tiredness', 'loss of energy',
     'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
