@@ -9064,7 +9064,7 @@ trigger_keywords = {
         'stiffness': ['stiff', 'tight', 'tense', 'rigid','stiffs'],
         'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled','fell','twists'],
         'numbness': ['numb', 'tingling', 'pins', 'needles','numbed'],
-	'issue': ['issues', 'problem', 'problems']
+	'issue': ['issues', 'problem', 'problems','issue','situation']
     },
 'chest': {
         'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning','aches'],
