@@ -650,7 +650,7 @@ symptom_synonyms = {
 'blood in stool': [
     'hematochezia', 'rectal bleeding', 'bloody stool', 'stool with blood', 'bright red blood in stool', 'blood in the stool', 'blood in the bowel movement',
     'blood-tinged stool', 'bloody feces', 'blood in feces', 'stool with reddish tint', 'blood in the stool sample', 'melena', 'dark tarry stool',
-    'fecal blood', 'visible blood in stool', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
+    'fecal blood', 'blood in stools', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
 ],
 
 'high blood pressure': [
