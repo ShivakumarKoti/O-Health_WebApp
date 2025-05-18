@@ -9230,7 +9230,12 @@ trigger_keywords = {
         'swelling': ['swollen', 'bump', 'inflammation', 'swelling'],
         'bleeding': ['bleed', 'bleeding', 'blood in mouth'],
         'bad_breath': ['bad breath', 'halitosis', 'foul smell']
-    }
+    },
+  'period' : {
+  'pain':     ['paining','pains','hurts','hurting'],
+  'bleeding': ['bleeds','bleeding','bled','blood'],
+  'default':  ['issue']   # no “default” words here; we’ll ask to confirm
+}
  
     # add ear / skin / etc…
 }
@@ -10584,7 +10589,33 @@ body_part_followup_questions = {
                 'category': 'mouth_detail'
             }
         ]
-    }
+    },
+
+'period' : {
+    'pain': [
+        {
+            'hi': "क्या आपकी मासिक धर्म के दौरान दर्द होता है?",
+            'en': "Do you experience pain during your menstrual period?",
+            'category': 'period_pain'
+        }
+    ],
+    'bleeding': [
+        {
+            'hi': "क्या आपकी मासिक धर्म में असामान्य रक्तस्राव होता है?",
+            'en': "Do you have abnormal bleeding during your period?",
+            'category': 'period_bleeding'
+        }
+    ],
+    'default': [
+        {
+            'hi': "क्या यह आपकी मासिक धर्म से संबंधित समस्या है?",
+            'en': "Is this related to your menstrual periods?",
+            'category': 'confirm_period',
+            'symptom': None
+        }
+    ]
+  }
+
 }
 
 # -----------------------------------------------------------------
@@ -10697,7 +10728,8 @@ body_part_aliases = {
     'eye': 'eye',
     'eyes': 'eye',
     'ear': 'ear',
-    'ears': 'ear'
+    'ears': 'ear',
+    'periods' : 'period'
     # Add more synonyms here
 }
 
@@ -10720,7 +10752,8 @@ BP_CANON = {
  'lips':'lip',
  'hands':'hand',
  'wrists':'wrist',
-  'thighs':'thigh'
+  'thighs':'thigh',
+   'periods' : 'period'
     # …and so on for whatever you support
 }
 
@@ -10732,7 +10765,7 @@ body_parts = [
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
-    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic'
+    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period' 
 ] 
 
 symptom_to_specialist = {
