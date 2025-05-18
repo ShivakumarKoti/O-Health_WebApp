@@ -459,7 +459,7 @@ symptom_synonyms = {
   'loss of appetite': [
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
-    'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
+    'decrease in food intake', 'disinterest in eating', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
     'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less',
     'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less'
 ],
@@ -622,7 +622,7 @@ symptom_synonyms = {
 ],
 
 'nosebleed': [
-    'epistaxis', 'bleeding from the nose', 'nasal hemorrhage', 'nose bleeding', 'bloody nose', 'hemorrhaging from the nose', 'nose blood flow',
+    'epistaxis', 'bleeding from the nose', 'nasal hemorrhage', 'nose bleeding', 'bloody nose', 'hemorrhaging from the nose', 'nose blood flow', 'nose bleed',
     'spontaneous nosebleed', 'anterior nosebleed', 'posterior nosebleed', 'frequent nosebleeds', 'nosebleed episode', 'bleeding nostrils',
     'blood coming out from the nose', 'nasal bleeding', 'bloody discharge from the nose', 'nasal passage bleeding', 'nosebleed symptoms', 'internal nasal bleeding',
     'nose injury bleeding', 'blood coming out of nose', 'bloody nose'
