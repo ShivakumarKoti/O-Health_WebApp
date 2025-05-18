@@ -658,7 +658,7 @@ symptom_synonyms = {
     'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis',  'BP is getting high',  'BP is going high', 'BP gone high',
     'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP',  'BP is coming high',
-    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP'
+    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP', 'hyper tension'
 ],
 
 'low blood pressure': [
