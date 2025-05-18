@@ -621,7 +621,7 @@ symptom_synonyms = {
 
 'mouth pain': [
     'painful mouth lesion', 'pain in the mouth', 'pain inside the mouth', 'pain in mouth', 'mouth having pain', 'pain on mouth', 
-    'painful spot in the mouth','mouth irritation', 'gum ulcer', 'painful mouth spot', 'painful mouth',
+    'painful spot in the mouth','mouth irritation', 'painful mouth spot', 'painful mouth',
     'burning mouth', 'swollen mouth tissue', 'open mouth wound', 'oral lesion', 'mouth wound'
 ],
 
@@ -1039,7 +1039,7 @@ symptom_synonyms = {
 ],
 
 'ulcers': [
-    'ulcerations', 'raw spots', 'skin ulcers', 'mucosal ulcers', 'internal ulcers',
+    'ulcerations', 'raw spots', 'skin ulcers', 'mucosal ulcers', 'internal ulcers', 'ulcer',
     'gastric ulcers', 'peptic ulcers', 'duodenal ulcers', 'stomach ulcers', 'mouth ulcers',
     'oral ulcers', 'canker sores', 'pressure ulcers', 'bedsores', 'decubitus ulcers'
 ],
