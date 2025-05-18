@@ -736,7 +736,7 @@ symptom_synonyms = {
     'emotional swing', 'mood fluctuation', 'emotional rollercoaster', 'mood shift', 'mood change', 'mood variation', 'mood disorder',
     'rapid mood change', 'emotional instability', 'mood instability', 'mood alteration', 'emotional shift', 'temper fluctuation',
     'emotional lability', 'mood fluctuations', 'unstable mood', 'irregular mood', 'affective swing', 'mood imbalance', 'emotional outbursts',
-    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad'
+    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad', 'mood swings', 'moodswing', 'moodswings'
 ],
 
 'difficulty concentrating': [
