@@ -558,7 +558,7 @@ symptom_synonyms = {
     'loss of sensation', 'lack of feeling', 'reduced sensation', 'sensory loss', 'numb sensation', 'feeling of numbness',
     'numb feeling', 'sensory numbness', 'partial numbness', 'temporary numbness', 'persistent numbness', 'numb'
 ],
-'sciatica' = [
+'sciatica': [
     'sciatic nerve pain', 'pain along sciatic nerve', 'lumbar radiculopathy', 'sciatic pain', 'sciatic issue', 'sciatic',
     'sciatic nerve irritation', 'pain from lower back to foot', 'compression of sciatic nerve'
 ],
