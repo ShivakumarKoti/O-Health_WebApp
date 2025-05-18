@@ -9,12 +9,12 @@ symptom_list = [
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision', 'ear pain',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating', 'neck pain',
 'gas', 'indigestion', 'acidity', 'mouth pain', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
-'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye pain',  'eye discharge', 'ear discharge', 'jaundice', 'sciatica',
+'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye pain',  'eye discharge', 'ear discharge', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion', 'bone pain', 'wrist pain', 'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
 'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
-'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid', 'hiv', 'typhoid', 'chickenpox', 'kidney issue',
+'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice','hand dryness', 'wound', 'body ache','bruises',
 
 
@@ -102,8 +102,8 @@ symptom_synonyms = {
         'pain with digestive issues', 'pain from food poisoning','pain within the stomach'
     ],
    'weakness': [
-    'feeling sluggish', 'debilitating tiredness', 'chronic fatigue syndrome',
-    'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 
+    'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
+    'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
     'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements', 'lacking strength', 
     'body feels heavy', 'brain fog', 'struggling to stay awake', "can’t focus due to fatigue", 'slow to move', 'slow to think',
     'exhausted no matter how much I sleep', 'general weakness', 'barely functioning', 'worn out', "can’t get out of bed",
@@ -140,7 +140,7 @@ symptom_synonyms = {
         'muscle effort just to breathe', 'chest oppression', 'suffocating sensation even in open space', 'feeling strangled by lack of air', 'restrictive breathing pattern',
         'breathing feels like pushing through a straw', 'air-starved lungs', 'cannot take a deep breath', 'strained oxygen intake', 'feeling like each breath is a struggle',
         'never fully satisfied inhalation', 'gasping between words', 'needy breathing pattern', 'barely pulling in enough air', 'lungs working at half capacity', 'respiratory distress',
-        'continuous short-windedness', 'lack of breath', 'shortage of breath', ' breath shortage', 'light breathing', 'mild breathing', 'unable to breathe',
+        'continuous short-windedness', 'lack of breath', 'shortage of breath', ' breath shortage', 'light breathing', 'mild breathing', 'unable to breathe', 'wheezing',
         'lacking breath',"can’t breathe deeply", "can’t take my breath", "can’t breathe",'breathing rate is low', 'breathing rate is slow', 'dyspnea'
     ],
    'rapid breathing': [
@@ -172,8 +172,8 @@ symptom_synonyms = {
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
-        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes','hives',
-        'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'rashes', 'skinrash',
+        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
+        'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'rashes', 'skinrash', 'hives',
         'rashes from medication', 'painful itching on skin'
     ],
     'congestion': [
@@ -459,7 +459,7 @@ symptom_synonyms = {
   'loss of appetite': [
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
-    'decrease in food intake', 'disinterest in eating', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
+    'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'sudden loss of appetite', 'absence of hunger', 
     'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less',
     'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less'
 ],
@@ -551,16 +551,12 @@ symptom_synonyms = {
     'vision impairment', 'unclear vision', 'fuzzy vision', 'distorted vision', 'foggy vision', 'hazy vision', 'blurry eyesight', 'impaired vision', 'cannot see properly',
     'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance',
     'unclear eyesight', 'visual impairment', 'blurry sight', 'sight distortion', 'vision problems', 'temporary blurred vision', 'chronic blurred vision',
-    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible', 'double vision'
+    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible'
 ],
 
 'numbness': [
     'loss of sensation', 'lack of feeling', 'reduced sensation', 'sensory loss', 'numb sensation', 'feeling of numbness',
     'numb feeling', 'sensory numbness', 'partial numbness', 'temporary numbness', 'persistent numbness', 'numb'
-],
-'sciatica': [
-    'sciatic nerve pain', 'pain along sciatic nerve', 'lumbar radiculopathy', 'sciatic pain', 'sciatic issue', 'sciatic',
-    'sciatic nerve irritation', 'pain from lower back to foot', 'compression of sciatic nerve'
 ],
 
 'dry mouth': [
@@ -621,12 +617,12 @@ symptom_synonyms = {
 
 'mouth pain': [
     'painful mouth lesion', 'pain in the mouth', 'pain inside the mouth', 'pain in mouth', 'mouth having pain', 'pain on mouth', 
-    'painful spot in the mouth','mouth irritation', 'painful mouth spot', 'painful mouth',
+    'painful spot in the mouth','mouth irritation', 'gum ulcer', 'painful mouth spot', 'painful mouth',
     'burning mouth', 'swollen mouth tissue', 'open mouth wound', 'oral lesion', 'mouth wound'
 ],
 
 'nosebleed': [
-    'epistaxis', 'bleeding from the nose', 'nasal hemorrhage', 'nose bleeding', 'bloody nose', 'hemorrhaging from the nose', 'nose blood flow', 'nose bleed',
+    'epistaxis', 'bleeding from the nose', 'nasal hemorrhage', 'nose bleeding', 'bloody nose', 'hemorrhaging from the nose', 'nose blood flow',
     'spontaneous nosebleed', 'anterior nosebleed', 'posterior nosebleed', 'frequent nosebleeds', 'nosebleed episode', 'bleeding nostrils',
     'blood coming out from the nose', 'nasal bleeding', 'bloody discharge from the nose', 'nasal passage bleeding', 'nosebleed symptoms', 'internal nasal bleeding',
     'nose injury bleeding', 'blood coming out of nose', 'bloody nose'
@@ -640,12 +636,12 @@ symptom_synonyms = {
 'urine issues': [
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
-    'urine with abnormal color', 'dark urine', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
+    'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
     'pink urine', 'urinary issues'
 ],
 
 'blood in urine': [
-    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 'urine with blood',
+    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 
    'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood','bloody urine', 'red urine',
     'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
     'visible blood in urine', 'microscopic hematuria','blood in the urinary tract'
@@ -654,7 +650,7 @@ symptom_synonyms = {
 'blood in stool': [
     'hematochezia', 'rectal bleeding', 'bloody stool', 'stool with blood', 'bright red blood in stool', 'blood in the stool', 'blood in the bowel movement',
     'blood-tinged stool', 'bloody feces', 'blood in feces', 'stool with reddish tint', 'blood in the stool sample', 'melena', 'dark tarry stool',
-    'fecal blood', 'blood in stools', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
+    'fecal blood', 'visible blood in stool', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
 ],
 
 'high blood pressure': [
@@ -662,7 +658,7 @@ symptom_synonyms = {
     'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis',  'BP is getting high',  'BP is going high', 'BP gone high',
     'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP',  'BP is coming high',
-    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP', 'hyper tension'
+    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP'
 ],
 
 'low blood pressure': [
@@ -740,7 +736,7 @@ symptom_synonyms = {
     'emotional swing', 'mood fluctuation', 'emotional rollercoaster', 'mood shift', 'mood change', 'mood variation', 'mood disorder',
     'rapid mood change', 'emotional instability', 'mood instability', 'mood alteration', 'emotional shift', 'temper fluctuation',
     'emotional lability', 'mood fluctuations', 'unstable mood', 'irregular mood', 'affective swing', 'mood imbalance', 'emotional outbursts',
-    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad', 'mood swings', 'moodswing', 'moodswings'
+    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad'
 ],
 
 'difficulty concentrating': [
@@ -757,7 +753,7 @@ symptom_synonyms = {
 ],
 
 'exhaustion': [
-    'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'weaknessphysical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
+    'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
     'overwhelming tiredness', 'complete fatigue', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 
     'fatigued state', 'drowsiness', 'wearing out', 'energy depletion', 'fatigue syndrome', 'feeling drained', 'exhaustive tiredness', 'loss of energy',
     'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
@@ -876,7 +872,7 @@ symptom_synonyms = {
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
-'skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
+'localized skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
 'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'nerve-related burning', 'itchy burning skin', 'skin damage from burn',
 'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface', 'burning sensation on the skin', 'burning sensation on the skin',
 'red inflamed skin', 'skin discomfort from heat', 'skin chafing burn', 'sensitive skin after burn', 'burning sensation in the skin',
@@ -925,7 +921,7 @@ symptom_synonyms = {
 'inability to bear weight on legs', 'sensation of leg failure', 'unresponsive legs', 'legs are numb'
 ],
 
-'asthma': ['wheezing', 'reactive airway disease', 'hyperresponsive airway disease', 'asthmatic condition', 'asthmas', 'asthama','whistling sound while breathing'],
+'asthma': ['reactive airway disease', 'hyperresponsive airway disease', 'asthmatic condition', 'asthmas', 'asthama','whistling sound while breathing'],
 
 'pneumonia': ['lung infection','alveolar infection'],
 
@@ -1030,7 +1026,7 @@ symptom_synonyms = {
 ],
 'hiccups': [
     'hiccoughs', 'jerking', 'involuntary hiccups', 'diaphragm spasms', 'gasping', 'hiccuping',
-    'jerky breathing', 'hiccup', 'repetitive hiccups'
+    'jerky breathing', 'hiccup reflex', 'repetitive hiccups'
 ],
 
 'obesity': [
@@ -1039,7 +1035,7 @@ symptom_synonyms = {
 ],
 
 'ulcers': [
-    'ulcerations', 'raw spots', 'skin ulcers', 'mucosal ulcers', 'internal ulcers', 'ulcer',
+    'ulcerations', 'raw spots', 'skin ulcers', 'mucosal ulcers', 'internal ulcers',
     'gastric ulcers', 'peptic ulcers', 'duodenal ulcers', 'stomach ulcers', 'mouth ulcers',
     'oral ulcers', 'canker sores', 'pressure ulcers', 'bedsores', 'decubitus ulcers'
 ],
@@ -2632,6 +2628,45 @@ symptom_followup_questions = {
       "hi": "क्या गैस के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is gas affecting your sleep?",
       "category": "sleep_disturbance_with_gas",
+      "symptom": "insomnia",
+      "risk_factor": False,    },
+  ],
+
+  "hiccup": [
+    {
+      "hi": "क्या आपके सिकुड़न लगातार हो रही है या आती-जाती हैं?",
+      "en": "Are your hiccups continuous or intermittent?",
+      "category": "intermittent_hiccups",
+      "symptom": None,
+      "risk_factor": False,    },
+    {
+      "hi": "क्या सिकुड़न के साथ आपको दर्द भी हो रहा है?",
+      "en": "Are you experiencing pain along with hiccups?",
+      "category": "pain_with_hiccups",
+      "symptom": None,
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपको सिकुड़न के दौरान सांस लेने में कठिनाई हो रही है?",
+      "en": "Are you having difficulty breathing during hiccups?",
+      "category": "breathing_difficulty_with_hiccups",
+      "symptom": "shortness of breath",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या सिकुड़न के कारण आपका खाना निगलने में कठिनाई हो रही है?",
+      "en": "Are hiccups causing difficulty in swallowing your food?",
+      "category": "swallowing_difficulty_with_hiccups",
+      "symptom": "difficulty swallowing",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या सिकुड़न के साथ आपके पेट में दर्द हो रहा है?",
+      "en": "Are you experiencing abdominal pain along with hiccups?",
+      "category": "abdominal_pain_with_hiccups",
+      "symptom": "abdominal pain",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपके सिकुड़न के कारण आपकी नींद प्रभावित हो रही है?",
+      "en": "Are your hiccups affecting your sleep?",
+      "category": "sleep_disturbance_with_hiccups",
       "symptom": "insomnia",
       "risk_factor": False,    },
   ],
@@ -8911,7 +8946,7 @@ symptom_followup_questions = {
 medications_list = [
     "ibuprofen", "acetaminophen", "paracetamol", "aspirin", "naproxen", "acetylsalicylic acid",
     "diclofenac", "meloxicam", "celecoxib", "indomethacin", "ketorolac", "butalbital", "dolo" ,"dolo 650",
-    "algal oil",  "cod liver oil",  "flaxseed oil", "fish oil", "omega 3", "ORS sachets", "ointment", "boroplus", "bandage",
+    "algal oil",  "cod liver oil",  "flaxseed oil", "fish oil", "omega 3", "ORS sachets", "ointment",
     "Electral", "Glucon-D", "Prolyte", "Winlyte", "ORS", "eye drops", "ear drops", "eye drop", "ear drop",
     # Antibiotics
     "amoxicillin", "azithromycin", "doxycycline", "ciprofloxacin", "clindamycin", "metronidazole",
