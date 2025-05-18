@@ -636,12 +636,12 @@ symptom_synonyms = {
 'urine issues': [
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
-    'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
+    'urine with abnormal color', 'dark urine', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
     'pink urine', 'urinary issues'
 ],
 
 'blood in urine': [
-    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 
+    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 'urine with blood',
    'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood','bloody urine', 'red urine',
     'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
     'visible blood in urine', 'microscopic hematuria','blood in the urinary tract'
