@@ -558,6 +558,10 @@ symptom_synonyms = {
     'loss of sensation', 'lack of feeling', 'reduced sensation', 'sensory loss', 'numb sensation', 'feeling of numbness',
     'numb feeling', 'sensory numbness', 'partial numbness', 'temporary numbness', 'persistent numbness', 'numb'
 ],
+'sciatica' = [
+    'sciatic nerve pain', 'pain along sciatic nerve', 'lumbar radiculopathy', 'sciatic pain', 'sciatic issue', 'sciatic',
+    'sciatic nerve irritation', 'pain from lower back to foot', 'compression of sciatic nerve'
+],
 
 'dry mouth': [
     'xerostomia', 'cottonmouth', 'parched mouth', 'thirsty mouth', 'dryness in the mouth', 'lack of saliva', 'reduced saliva production', 'mouth dryness',
