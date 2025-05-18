@@ -551,7 +551,7 @@ symptom_synonyms = {
     'vision impairment', 'unclear vision', 'fuzzy vision', 'distorted vision', 'foggy vision', 'hazy vision', 'blurry eyesight', 'impaired vision', 'cannot see properly',
     'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance',
     'unclear eyesight', 'visual impairment', 'blurry sight', 'sight distortion', 'vision problems', 'temporary blurred vision', 'chronic blurred vision',
-    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible'
+    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible', 'double vision'
 ],
 
 'numbness': [
