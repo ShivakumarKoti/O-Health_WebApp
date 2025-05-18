@@ -872,7 +872,7 @@ symptom_synonyms = {
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
-'localized skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
+'skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
 'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'nerve-related burning', 'itchy burning skin', 'skin damage from burn',
 'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface', 'burning sensation on the skin', 'burning sensation on the skin',
 'red inflamed skin', 'skin discomfort from heat', 'skin chafing burn', 'sensitive skin after burn', 'burning sensation in the skin',
