@@ -1026,7 +1026,7 @@ symptom_synonyms = {
 ],
 'hiccups': [
     'hiccoughs', 'jerking', 'involuntary hiccups', 'diaphragm spasms', 'gasping', 'hiccuping',
-    'jerky breathing', 'hiccup reflex', 'repetitive hiccups'
+    'jerky breathing', 'hiccup', 'repetitive hiccups'
 ],
 
 'obesity': [
@@ -2628,45 +2628,6 @@ symptom_followup_questions = {
       "hi": "क्या गैस के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is gas affecting your sleep?",
       "category": "sleep_disturbance_with_gas",
-      "symptom": "insomnia",
-      "risk_factor": False,    },
-  ],
-
-  "hiccup": [
-    {
-      "hi": "क्या आपके सिकुड़न लगातार हो रही है या आती-जाती हैं?",
-      "en": "Are your hiccups continuous or intermittent?",
-      "category": "intermittent_hiccups",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सिकुड़न के साथ आपको दर्द भी हो रहा है?",
-      "en": "Are you experiencing pain along with hiccups?",
-      "category": "pain_with_hiccups",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको सिकुड़न के दौरान सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty breathing during hiccups?",
-      "category": "breathing_difficulty_with_hiccups",
-      "symptom": "shortness of breath",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सिकुड़न के कारण आपका खाना निगलने में कठिनाई हो रही है?",
-      "en": "Are hiccups causing difficulty in swallowing your food?",
-      "category": "swallowing_difficulty_with_hiccups",
-      "symptom": "difficulty swallowing",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सिकुड़न के साथ आपके पेट में दर्द हो रहा है?",
-      "en": "Are you experiencing abdominal pain along with hiccups?",
-      "category": "abdominal_pain_with_hiccups",
-      "symptom": "abdominal pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके सिकुड़न के कारण आपकी नींद प्रभावित हो रही है?",
-      "en": "Are your hiccups affecting your sleep?",
-      "category": "sleep_disturbance_with_hiccups",
       "symptom": "insomnia",
       "risk_factor": False,    },
   ],
