@@ -478,11 +478,9 @@ symptom_synonyms = {
 ],
 
 'infection': [
-    'contamination', 'infectious disease', 'germ infection', 'bacterial infection', 'viral infection', 'fungal infection', 'parasite infection', 'microbial infection',
-    'pathogen invasion', 'infected area', 'infection outbreak', 'systemic infection', 'local infection', 'wound infection', 'skin infection', 'respiratory infection',
-    'urinary tract infection', 'ear infection', 'sinus infection', 'blood infection', 'sepsis', 'foodborne illness', 'infected tissue', 'infection of the bloodstream',
-    'infection of the lungs', 'bacterial contamination', 'infectious agent', 'disease-causing infection', 'contagion', 'infection symptoms',
-    'infection spread', 'infection risk', 'infectious condition', 'contagious disease'
+    'contamination', 'infectious disease', 'fungal infection', 
+    'pathogen invasion', 'infected area', 'infection outbreak', 
+    'infectious agent', 'infection spread', 'infection risk', 'infectious condition'
 ],
 
 'inflammation': [
