@@ -662,7 +662,7 @@ symptom_synonyms = {
 'low blood pressure': [
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
     'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low',  'BP is going low', 'BP gone low',  'BP is coming low',
-    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP'
+    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP''low blood pressure',
     'BP is low'
 ],
 
