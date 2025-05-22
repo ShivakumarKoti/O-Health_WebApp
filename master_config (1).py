@@ -708,7 +708,7 @@ symptom_synonyms = {
 ],
 
 'irregular heartbeat': [
-    'arrhythmia', 'abnormal heartbeat', 'heart palpitations', 'irregular pulse', 'heart rhythm disorder', 'uneven heartbeat', 'skipped heartbeat',
+    'arrhythmia', 'abnormal heartbeat', 'heart palpitations', 'irregular pulse', 'heart rhythm disorder', 'uneven heartbeat', 'skipped heartbeat', 'fast heartbeat',
     'rapid heartbeat', 'slow heartbeat', 'tachycardia', 'bradycardia', 'atrial fibrillation', 'ventricular fibrillation', 'heart flutter', 'irregular heart rhythm',
     'heart irregularities', 'palpitations', 'fluttering heart', 'cardiac arrhythmia', 'dysrhythmia', 'irregular pulse rate', 'heartbeat irregularity',
     'irregular heart rate', 'heart pounding','heartbeat is late','heart beat is late','heartbeat is early','heart beat is early','late heart beat','late heartbeat','heartrate is fast','rapid heartrate',
