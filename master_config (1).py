@@ -64,7 +64,7 @@ symptom_synonyms = {
         'raised core temperature', 'overheated body', 'intense body heat', 'thermal imbalance', 'body overheating', 'raging fever', 'heated condition', 'abnormally warm body', 'pyrexia', 'uncontrolled internal heat',
         'feeling aflame', 'body heat surging', 'hot to the touch', 'internal ignition of warmth', 'body temperature surging', 'excessive warmth inside', 'bodily heat overload', 'intense flush', 'thermometer reading high',
         'scorching internal climate', 'burning sensation from within', 'sweltering body feel', 'thermal elevation', 'heated bloodstream', 'furnace-like feeling', 'feeling like an oven', 'heat radiating under skin',
-        'internal fire', 'ignited from the inside', 'excessive internal warmth', 'body boiling over', 'intense internal glow', 'unrelenting heat', 'blazing warmth','feeling hot',
+        'internal fire', 'ignited from the inside', 'excessive internal warmth', 'body boiling over', 'intense internal glow', 'unrelenting heat', 'blazing warmth',
         'molten interior heat', 'near boiling point', 'incapacitating heat', 'relentless feverishness', 'sizzling body temp', 'heat wave inside me', 'sweating due to internal heat',
         'red-hot core', 'smoldering embers of warmth', 'furnace-like core', 'pulsating heat', 'unremitting temperature rise', 'searing body condition', 'fire coursing through veins', 'endlessly hot', 'elevated reading on the thermometer',
         'no relief from heat', 'intense internal burning', 'volcanic warmth', 'torched from inside', 'superheated body', 'radical temperature spike', 'roasting sensation', 'tropical internal climate', 'heat-induced misery',
@@ -478,9 +478,11 @@ symptom_synonyms = {
 ],
 
 'infection': [
-    'contamination', 'infectious disease', 'fungal infection', 
-    'pathogen invasion', 'infected area', 'infection outbreak', 
-    'infectious agent', 'infection spread', 'infection risk', 'infectious condition'
+    'contamination', 'infectious disease', 'germ infection', 'bacterial infection', 'viral infection', 'fungal infection', 'parasite infection', 'microbial infection',
+    'pathogen invasion', 'infected area', 'infection outbreak', 'systemic infection', 'local infection', 'wound infection', 'skin infection', 'respiratory infection',
+    'urinary tract infection', 'ear infection', 'sinus infection', 'blood infection', 'sepsis', 'foodborne illness', 'infected tissue', 'infection of the bloodstream',
+    'infection of the lungs', 'bacterial contamination', 'infectious agent', 'disease-causing infection', 'contagion', 'infection symptoms',
+    'infection spread', 'infection risk', 'infectious condition', 'contagious disease'
 ],
 
 'inflammation': [
@@ -567,8 +569,7 @@ symptom_synonyms = {
 'frequent urination': [
     'urinary frequency', 'increased urination', 'urinary urgency', 'excessive urination', 'frequent trips to the bathroom', 'overactive bladder',
     'need to urinate often', 'urination urgency', 'recurrent urination', 'constant urination', 'frequent need to pee', 'urgent urination', 'pollakiuria',
-    'urinary incontinence', 'nighttime urination', 'nocturia', 'constant need to urinate', 'increased frequency of urination','urination again and again',
-    'again and again urination'
+    'urinary incontinence', 'nighttime urination', 'nocturia', 'constant need to urinate', 'increased frequency of urination','frequent urination'
 ],
 
 'acne': [
@@ -654,16 +655,16 @@ symptom_synonyms = {
 
 'high blood pressure': [
     'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
-    'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher', 'BP high',
+    'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis',  'BP is getting high',  'BP is going high', 'BP gone high',
     'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP',  'BP is coming high',
-    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP', 'BP is too high'
+    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP'
 ],
 
 'low blood pressure': [
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
-    'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low',  'BP is going low', 'BP gone low',  'BP is coming low', 'BP low',
-    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP''low blood pressure', 'BP is too low',
+    'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low',  'BP is going low', 'BP gone low',  'BP is coming low',
+    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP','low blood pressure',
     'BP is low'
 ],
 
@@ -900,13 +901,13 @@ symptom_synonyms = {
 ],
 
 'eye weakness': [
-'weakness in eyes', 'weak eyes', 'eyes are weak', 'eyes are becoming weak', 'eye is weak', 'tired eyes', 'eye strain', 
-'fatigued eyes', 'heavy eyes', 'difficulty focusing', 'eye muscle weakness', 'strained vision', 'eye discomfort', 'droopy eyelids', 'lack of eye strength',
+'weakness in eyes', 'weak eyes', 'eyes are weak', 'eyes are becoming weak', 'eye is weak','eye strain', 
+'fatigued eyes', 'heavy eyes', 'eye muscle weakness', 'eye discomfort', 'droopy eyelids', 'lack of eye strength',
 'vision fatigue', 'eye exhaustion', 'eye tiredness', 'reduced eye stamina', 'difficulty keeping eyes open', 'eye sensitivity', 'failing eye strength',
-'eye fatigue after reading', 'poor eye endurance', 'eye weakness from screen use', 'eye weariness', 'visual tiredness', 'eye fragility', 'weak eye muscles',
-'prolonged eye strain', 'focus difficulty', 'unstable eye movement', 'eye soreness', 'eye heaviness', 'visual exhaustion', 'difficulty maintaining focus',
+'eye fatigue after reading', 'poor eye endurance', 'eye weariness',  'eye fragility', 'weak eye muscles',
+'unstable eye movement', 'eye soreness', 'eye heaviness','eye weakness',
 'eyes feeling overworked', 'weak visual acuity', 'eye tiredness at night', 'eye discomfort after long tasks', 'loss of eye strength', 'drooping eyes',
-'strained eye muscles', 'eye fatigue with headaches', 'difficulty keeping eyes focused', 'eye tension', 'sensitivity to light', 'eye weakness from fatigue'
+'strained eye muscles', 'eye tension', 'sensitivity to light'
 ],
 
 
@@ -9453,16 +9454,16 @@ symptom_to_specialist = {
     'covid': 'Pulmonologist',
 
     # Psychiatrist: Mental health symptoms
-    'anxiety': 'Psychologist',
+    'anxiety': 'General',
     'depression': 'Psychologist',
-    'insomnia': 'Psychologist',
-    'restlessness': 'Psychologist',
-    'nervousness': 'Psychologist',
+    'insomnia': 'General Practitioner',
+    'restlessness': 'General Practitioner',
+    'nervousness': 'General Practitioner',
     'panic attack': 'Psychologist',
     'mood swing': 'Psychologist',
-    'difficulty concentrating': 'Psychologist',
-    'hallucination': 'Psychologist',
-    'lack of motivation': 'Psychologist',
+    'difficulty concentrating': 'General Practitioner',
+    'hallucination': 'General Practitioner',
+    'lack of motivation': 'General Practitioner',
 
     # Endocrinologist: Metabolic and hormonal symptoms
     'diabetes': 'Endocrinologist',
@@ -9698,5 +9699,35 @@ HINDI_OFFLINE_DICT = {
         "knee swelling": "घुटने में सूजन",
         "shoulder weakness": "कंधे में कमजोरी",
         "ear ringing": "कान में घंटी बजना",
-        "nosebleed": "नाक से खून आना"
+        "nosebleed": "नाक से खून आना",
+
+	#newly added
+    "nose pain": "नाक में दर्द",
+    "mouth pain": "मुंह में दर्द",
+    "weight fluctuation": "वजन में उतार-चढ़ाव",
+    "obesity": "मोटापा",
+    "more hungry": "अत्यधिक भूख लगना",
+    "brittle nails": "नाखूनों का टूटना",
+    "difficulty speaking": "बोलने में कठिनाई",
+    "ulcers": "छाले",
+    "hiccups": "हिचकी",
+    "seizures": "दौरे",
+    "dysentery": "पेचिश",
+    "malaria": "मलेरिया",
+    "dengue": "डेंगू",
+    "covid": "कोविड",
+    "typhoid": "टाइफाइड",
+    "chickenpox": "चेचक",
+    "kidney issue": "गुर्दे की समस्या",
+    "broken tooth": "टूटा हुआ दांत",
+    "tooth decay": "दांत सड़ना",
+    "broken voice": "टूटी आवाज़",
+    "hand dryness": "हाथों का सूखापन",
+    "wound": "घाव",
+    "body ache": "शरीर में दर्द",
+    "bruises": "नील",
+    "thigh pain": "जांघ में दर्द",
+    "pelvic pain": "पेल्विक दर्द",
+    "elbow pain": "कोहनी में दर्द",
+    "calf pain": "पिंडली में दर्द"
         }
