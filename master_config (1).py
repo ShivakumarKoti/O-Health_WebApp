@@ -16,7 +16,7 @@ symptom_list = [
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice','hand dryness', 'wound', 'body ache','bruises',
-'cold intolerance', 'goiter',
+'cold intolerance', 'goiter', 'slow reflexes',
 
 # weakness symtom
 'eye weakness' #'leg weakness'
