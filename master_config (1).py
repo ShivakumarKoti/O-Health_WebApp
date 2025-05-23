@@ -794,7 +794,7 @@ symptom_synonyms = {
 ],
 
 'bone fracture': [
-    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'fracture', 'crack in my bone','crack in a bone',
+    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'fracture', 'crack in my bone','crack in a bone','bone fracture',
     'stress fracture', 'hairline fracture', 'bone splinter','fracture in bone','crack in bone','bone has cracked','cracks in bone', 'bone cracked',
     'fractured limb', 'fractured bone segment', 'broken limb', 'broken bone segment', 'cracked bone injury', 'bone rupture', 'bone fracture symptoms',
     'fractured bone tissue', 'fracture of the bone', 'crack in bone', 'fractured'
@@ -7513,6 +7513,7 @@ symptom_followup_questions = {
     "symptom": None,
     "risk_factor": False,
   },
+],
 
 "eye_weakness": [
     {
