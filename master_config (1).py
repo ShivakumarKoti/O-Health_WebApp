@@ -8887,7 +8887,236 @@ body_part_followup_questions = {
             'symptom': None
         }
     ]
-  }
+  },
+'hip': {
+        'pain': [
+            {
+                'hi': "क्या कूल्हे में दर्द चलने या खड़े होने पर बढ़ता है?",
+                'en': "Does the hip pain increase when walking or standing?",
+                'category': 'hip_pain_activity'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर कूल्हे में जकड़न ज्यादा होती है?",
+                'en': "Is the hip stiffness worse in the morning?",
+                'category': 'hip_stiffness_morning'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या कूल्हे की सूजन के साथ गर्माहट या लालिमा भी है?",
+                'en': "Is there warmth or redness along with the hip swelling?",
+                'category': 'hip_swelling_inflammation'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या कूल्हे की कमजोरी के कारण आपको खड़ा होने या चलने में दिक्कत होती है?",
+                'en': "Does hip weakness make it hard for you to stand or walk?",
+                'category': 'hip_weakness_mobility'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या हाल ही में कूल्हे में गिरावट या चोट लगी थी?",
+                'en': "Did you recently have a fall or injury to the hip?",
+                'category': 'hip_injury_recent'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने कूल्हे की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your hip issue in more detail.",
+                'category': 'hip_detail'
+            }
+        ]
+    },
+	
+    'waist': {
+        'pain': [
+            {
+                'hi': "क्या कमर में दर्द बैठने या झुकने पर बढ़ता है?",
+                'en': "Does the waist pain get worse when sitting or bending?",
+                'category': 'waist_pain_position'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह के समय कमर में ज्यादा जकड़न महसूस होती है?",
+                'en': "Is the waist stiffness more noticeable in the morning?",
+                'category': 'waist_stiffness_morning'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या कमर में सूजन के साथ दर्द या गर्माहट भी है?",
+                'en': "Is there pain or warmth along with the swelling in your waist?",
+                'category': 'waist_swelling_signs'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या कमर की कमजोरी के कारण चलने या उठने में कठिनाई होती है?",
+                'en': "Does waist weakness make it difficult for you to walk or get up?",
+                'category': 'waist_weakness_mobility'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या हाल ही में कमर में कोई चोट या मोच आई थी?",
+                'en': "Did you recently experience any injury or strain in the waist?",
+                'category': 'waist_injury_recent'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी कमर की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your waist issue in more detail.",
+                'category': 'waist_detail'
+            }
+        ]
+    },
+
+    'pelvic': {
+        'pain': [
+            {
+                'hi': "क्या श्रोणि क्षेत्र में दर्द बैठने या पेशाब करते समय बढ़ता है?",
+                'en': "Does the pelvic pain increase when sitting or during urination?",
+                'category': 'pelvic_pain_triggers'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या आपको श्रोणि क्षेत्र को हिलाने में कठिनाई होती है?",
+                'en': "Do you find it difficult to move your pelvic area?",
+                'category': 'pelvic_stiffness_mobility'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या श्रोणि क्षेत्र में सूजन के साथ गर्माहट या दबाव महसूस हो रहा है?",
+                'en': "Is there warmth or a feeling of pressure along with swelling in the pelvic area?",
+                'category': 'pelvic_swelling_signs'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या श्रोणि की कमजोरी के कारण आपको खड़े होने में परेशानी होती है?",
+                'en': "Does pelvic weakness make it hard for you to stand?",
+                'category': 'pelvic_weakness_function'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या हाल ही में आपके श्रोणि क्षेत्र में कोई चोट या गिरावट हुई है?",
+                'en': "Did you recently have a fall or injury to your pelvic area?",
+                'category': 'pelvic_injury_recent'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने श्रोणि क्षेत्र की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your pelvic issue in more detail.",
+                'category': 'pelvic_detail'
+            }
+        ]
+},
+
+    'elbow': {
+        'pain': [
+            {
+                'hi': "क्या कोहनी में दर्द कुछ उठाने या मोड़ने पर बढ़ता है?",
+                'en': "Does the elbow pain increase when lifting or bending?",
+                'category': 'elbow_pain_movement'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर कोहनी में जकड़न महसूस होती है?",
+                'en': "Do you feel stiffness in the elbow after waking up in the morning?",
+                'category': 'elbow_stiffness_morning'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या कोहनी की सूजन के साथ गर्माहट या लालिमा भी है?",
+                'en': "Is there warmth or redness along with swelling in the elbow?",
+                'category': 'elbow_swelling_signs'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या कोहनी की कमजोरी के कारण आपको चीजें उठाने में दिक्कत होती है?",
+                'en': "Is it difficult to lift things due to weakness in your elbow?",
+                'category': 'elbow_weakness_function'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या आपने हाल ही में कोहनी में चोट या गिरावट का अनुभव किया है?",
+                'en': "Did you recently experience an injury or fall affecting your elbow?",
+                'category': 'elbow_injury_recent'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी कोहनी की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your elbow issue in more detail.",
+                'category': 'elbow_detail'
+            }
+        ]
+},
+
+    'calf': {
+        'pain': [
+            {
+                'hi': "क्या बछड़े में दर्द चलने या खड़े होने पर बढ़ता है?",
+                'en': "Does the calf pain increase when walking or standing?",
+                'category': 'calf_pain_activity'
+            }
+        ],
+        'spasm': [
+            {
+                'hi': "क्या बछड़े में ऐंठन या मरोड़ अक्सर हो रही है?",
+                'en': "Are the calf spasms or cramps happening frequently?",
+                'category': 'calf_spasm_frequency'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या बछड़े में सूजन के साथ गर्माहट या लालिमा भी है?",
+                'en': "Is there warmth or redness along with the swelling in the calf?",
+                'category': 'calf_swelling_signs'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या बछड़े की कमजोरी के कारण आपको खड़े रहने या चलने में परेशानी होती है?",
+                'en': "Does calf weakness make it hard for you to stand or walk?",
+                'category': 'calf_weakness_function'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या बछड़े में हाल ही में कोई चोट या खिंचाव हुआ है?",
+                'en': "Did you recently have any injury or strain in your calf?",
+                'category': 'calf_injury_recent'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने बछड़े की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your calf issue in more detail.",
+                'category': 'calf_detail'
+            }
+        ]
+    }
+
+
+
+
+
 
 }
 
