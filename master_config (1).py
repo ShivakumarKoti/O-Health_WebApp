@@ -4447,14 +4447,14 @@ symptom_followup_questions = {
 ],
 "anxiety": [
     {
-      "hi": "क्या आपकी चिंता के कारण विशेष परिस्थितियाँ, विचार, या घटनाएँ हैं?",
+      "hi": "क्या आपकी चिंता का कारण विशेष परिस्थितियाँ, विचार, या घटनाएँ हैं?",
       "en": "What triggers your anxiety (specific situations, thoughts, or events)?",
       "category": "anxiety",
       "symptom": "anxiety",
       "risk_factor": False,
     },
     {
-      "hi": "क्या आप अपनी चिंता के कारण कुछ विशेष परिस्थितियों से बचते हैं?",
+      "hi": "क्या आप अपनी चिंता का कारण कुछ विशेष परिस्थितियों से बचते हैं?",
       "en": "Do you avoid certain situations because of your anxiety?",
       "category": "anxiety",
       "symptom": "anxiety",
