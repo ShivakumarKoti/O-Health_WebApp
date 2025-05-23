@@ -1334,11 +1334,11 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको संतुलन बिगड़ रहा है?",
-    "en": "Are you losing your balance?",
-      "category": "balance_issues",
-      "symptom": "Balance issues",
-      "risk_factor": False,    },
+  "hi": "क्या आप चलते वक्त संतुलन खो रहे हैं?",
+  "en": "Are you losing your balance while moving?",
+  "category": "balance_issues",
+  "symptom": "Balance issues",
+  "risk_factor": False,    },
 
 {
       "hi": "क्या चक्कर आना चलने या खड़े होने पर बढ़ता है?",
