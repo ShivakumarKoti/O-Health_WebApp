@@ -16,7 +16,7 @@ symptom_list = [
 'hip pain','sleepy', 'bone fracture','back bone issue',
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes','pain',''
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',
 ]
 
 # ------------------------------------------------------------------ #
