@@ -6663,6 +6663,14 @@ trigger_keywords = {
         'brittle': ['brittle', 'crack', 'split', 'break'],
         'growth': ['not growing', 'slow growth', 'deformed', 'misshaped']
     },
+'bone': {
+    'pain': ['pain', 'pains', 'ache', 'aches', 'aching', 'soreness', 'tender', 'tenderness', 'throbbing', 'sharp', 'dull', 'paining'],
+    'fracture': ['fracture', 'broken', 'break', 'crack', 'snap', 'shattered', 'hairline'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'enlarged', 'inflamed'],
+    'weakness': ['weakness', 'weak', 'brittle', 'fragile', 'soft', 'thin', 'osteopenia', 'osteoporosis'],
+    'injury': ['injury', 'trauma', 'impact', 'blow', 'contusion', 'bruise', 'damage']
+},
+	
    'joint': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
