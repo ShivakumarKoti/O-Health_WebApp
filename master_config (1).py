@@ -231,16 +231,6 @@ symptom_synonyms = {
         'cold-induced shaking', 'numbing cold', 'shiver', 'shivers'
     ],
 
-    'jaw pain': [
-        'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
-        'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain near the jawline',
-        'pain around the mouth area', 'pain when chewing', 'discomfort in the jaw', 'jaw lock', 'jaw popping pain', 'pain around the jaw', 'pain with jaw movement',
-        'swollen jaw area', 'pain in the temporomandibular joint', 'facial pain near the jaw', 'pain from misaligned teeth', 'jaw swelling', 'pain when yawning',
-        'sharp pain in jaw joint', 'stiffness in jaw', 'dull aching jaw pain', 'pain from jaw trauma', 'jaw clicking', 'pain in the side of the jaw', 'pain from jaw misalignment',
-        'pain after jaw surgery', 'pain during biting','pain in jaw', 'pain in jaws', 'pain in the jaw', 'pain in the jaws', 'pain in my jaw', 'pain in my jaws'
-
-    ],
-
     'ankle pain': [
         'ankle discomfort', 'pain in the ankle', 'twisted ankle pain', 'pain from sprained ankle', 'swollen ankle', 'sharp ankle pain', 'throbbing pain in the ankle', 'pain when walking',
         'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
@@ -8628,39 +8618,28 @@ body_part_followup_questions = {
                 'en': "Does the pain in your nose worsen when you press on it?",
                 'category': 'nose_pain_touch'
             },
-            {
-              "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
-              "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
-              "category": "throat pain",
-            },
-            {
-              "hi": "क्या आपने हाल ही में किसी ऐसे व्यक्ति से संपर्क किया है जिसे गले में दर्द या सर्दी हो?",
-              "en": "Have you been exposed to anyone with a sore throat or cold recently?",
-              "category": "throat pain",
-            },
-            {
-              "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
-              "en": "Do you smoke or have you been exposed to smoke or other irritants?",
-              "category": "throat pain",
-            },
-            {
-              "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
-              "en": "Are you experiencing a fever along with your sore throat?",
-              "category": "throat pain",
 
-            },
             {
-              "hi": "क्या आपके गले में सूजन या लालिमा है?",
-              "en": "Do you have any swelling or redness in your throat?",
-              "category": "throat pain",
-
+              "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
+              "en": "Are you experiencing persistent pain or burning sensation in your nose?",
+              "category": "nose pain",
             },
-            {
-              "hi": "क्या आपको गले में सूजन या लालिमा है?",
-              "en": "Do you have any swelling or redness in your throat?",
-              "category": "throat pain",
-            },
-        ],
+    {
+      "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
+      "en": "Do you feel pain when touching or pressing on your nose?",
+      "category": "nose pain",
+    },
+    {
+      "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
+      "en": "Is there any swelling or redness in your nose?",
+      "category": "nose pain",
+    },
+    {
+      "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
+      "en": "Have you recently had a cold, allergies, or sinus issues?",
+      "category": "nose pain",
+    },     
+    ],
         'infection': [
             {
                 'hi': "क्या आपको सर्दी, जुकाम या साइनस जैसी समस्या भी है?",
@@ -8985,7 +8964,7 @@ body_part_followup_questions = {
       "category": "jaw pain",
     },
     ],
-    
+
     'swelling': [
         {
             'hi': "क्या सूजन के साथ जबड़े में जकड़न या गर्माहट है?",
@@ -9563,5 +9542,9 @@ HINDI_OFFLINE_DICT = {
     "thigh pain": "जांघ में दर्द",
     "pelvic pain": "पेल्विक दर्द",
     "elbow pain": "कोहनी में दर्द",
-    "calf pain": "पिंडली में दर्द"
+    "calf pain": "पिंडली में दर्द",
+    "pain" : "दर्द",
+    "jaw injury": "जबड़े में चोट",
+    "jaw swelling": "जबड़े में सूजन",
+    "jaw stiffness": "जबड़े में जकड़न",
         }
