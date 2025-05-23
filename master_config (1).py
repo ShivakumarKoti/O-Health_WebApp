@@ -6539,6 +6539,14 @@ trigger_keywords = {
         'brittle': ['brittle', 'crack', 'split', 'break'],
         'growth': ['not growing', 'slow growth', 'deformed', 'misshaped']
     },
+'bone': {
+    'pain': ['pain', 'pains', 'ache', 'aches', 'aching', 'soreness', 'tender', 'tenderness', 'throbbing', 'sharp', 'dull'],
+    'fracture': ['fracture', 'broken', 'break', 'crack', 'snap', 'shattered', 'hairline'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'enlarged', 'inflamed'],
+    'weakness': ['weakness', 'weak', 'brittle', 'fragile', 'soft', 'thin', 'osteopenia', 'osteoporosis'],
+    'injury': ['injury', 'trauma', 'impact', 'blow', 'contusion', 'bruise', 'damage']
+},
+
    'joint': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
@@ -6650,7 +6658,43 @@ trigger_keywords = {
       'pain':     ['paining','pains','hurts','hurting'],
       'bleeding': ['bleeds','bleeding','bled','blood'],
       'default':  ['issue']   # no “default” words here; we’ll ask to confirm
-}
+},
+'hip': {
+    'pain': ['pain', 'ache', 'aches', 'aching', 'soreness', 'throbbing', 'sharp', 'burning', 'dull', 'stabbing'],
+    'stiffness': ['stiffness', 'stiff', 'rigid', 'tight', 'limited motion', 'can’t bend', 'hard to move'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
+    'weakness': ['weakness', 'weak', 'unstable', 'giving way', 'can’t bear weight', 'wobbly', 'tired'],
+    'injury': ['injury', 'fracture', 'dislocation', 'sprain', 'strain', 'bruise', 'fall', 'trauma']
+},
+'waist': {
+        'pain': ['pain', 'ache', 'aching', 'soreness', 'throbbing', 'burning', 'sharp', 'dull', 'stabbing'],
+        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'limited motion', 'can’t bend', 'hard to twist'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
+        'weakness': ['weakness', 'weak', 'unstable', 'can’t support', 'giving way', 'tired', 'fatigued'],
+        'injury': ['injury', 'strain', 'sprain', 'pull', 'twist', 'trauma', 'fall']
+    },
+
+'pelvic': {
+        'pain': ['pain', 'ache', 'aching', 'sharp', 'cramping', 'burning', 'stabbing', 'pressure', 'discomfort'],
+        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'restricted', 'hard to move'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'bloating'],
+        'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
+        'injury': ['injury', 'fall', 'fracture', 'trauma', 'strain', 'sprain']
+    },
+'elbow': {
+        'pain': ['pain', 'ache', 'aching', 'sharp', 'burning', 'stabbing', 'soreness', 'discomfort', 'throbbing'],
+        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'can’t bend', 'limited motion'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
+        'weakness': ['weak', 'unstable', 'fatigued', 'can’t lift', 'loss of strength'],
+        'injury': ['injury', 'strain', 'sprain', 'bruise', 'fracture', 'fall', 'trauma']
+    },
+ 'calf': {
+        'pain': ['pain', 'ache', 'aching', 'soreness', 'cramping', 'sharp', 'burning', 'throbbing'],
+        'spasm': ['spasm', 'cramp', 'tightness', 'twitching'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
+        'weakness': ['weakness', 'weak', 'fatigued', 'loss of strength', 'unable to stand', 'unstable'],
+        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'fall']
+    },
  
     # add ear / skin / etc…
 }
