@@ -7514,7 +7514,7 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 
-'eye_weakness': [
+"eye_weakness": [
     {
         'hi': "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
         'en': "Do your eyes feel tired after reading or using a screen for a long time?",
