@@ -7617,7 +7617,7 @@ trigger_keywords = {
     },
     'leg': {
         'injury'      : ['twist', 'sprain', 'fracture', 'broke', 'fall', 'hurt', 'accident','fractured'],
-        'pain'        : ['ache', 'throbbing', 'sharp', 'dull', 'cramp', 'stiff'],
+        'pain'        : ['ache', 'throbbing', 'sharp', 'dull', 'cramp', 'stiff','pain'],
         'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge'],
 	'itching'     : ['itching','itch','itches','itchiness','itched']
     },
