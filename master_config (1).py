@@ -7780,6 +7780,13 @@ trigger_keywords = {
         'blood': ['blood', 'bloody', 'red urine', 'hematuria'],
         'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing']
     },
+
+'bone': {
+    'pain': ['pain', 'ache', 'hurts', 'sore', 'throbbing', 'tender'],
+    'fracture': ['fracture', 'crack', 'broken','bloated'],
+    'swelling': ['swelling', 'swollen', 'inflamed'],
+    'injury': ['injury', 'hit', 'fall', 'accident'],
+},
     'toes': {
         'pain': ['ache', 'throbbing', 'sharp', 'burn', 'tingling', 'numbness'],
         'swelling': ['swollen', 'puffy', 'inflamed', 'red', 'tender'],
