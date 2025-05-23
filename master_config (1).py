@@ -33,7 +33,7 @@ symptom_synonyms = {
         'back locked up','back clenched up'
     ],
     'headache': [
-        'head pain', 'throbbing headache', 'pounding head', 'migraine-like ache', 'cranial ache', 'head pressure', 'pressure on the head', 'pressure in the head',
+        'head pain', 'throbbing headache', 'pounding head', 'migraine-like ache', 'cranial ache', 'head pressure', 'pressure on the head', 'pressure in the head','head pains','head is paining','pain in the head','head is hurting',
         'hammering pain in skull', 'aching brain', 'full-head ache', 'temple-throbbing pain', 'dull ache behind eyes', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
         'relentless cranial pounding', 'forehead-tightening discomfort', 'vice-like grip on head', 'pulsating headache', 'dull throb', 'piercing head agony', 'continuous headache hum', 'low-level head strain',
         'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp', 'brain-squeezing feeling', 'top-heavy ache', 'all-encompassing head discomfort', 'band-like pressure around head',
@@ -1275,156 +1275,6 @@ symptom_followup_questions = {
       "symptom": "cramps",
       "risk_factor": False,    },   
   ],
-
-  "joint pain": [
-        {
-      "hi": "क्या आपके जोड़ों में सूजन भी है?",
-      "en": "Is there any swelling in your joints?",
-      "category": "swelling",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-{
-      "hi": "क्या आपके जोड़ों में दर्द लगातार है या आता-जाता है?",
-     "en": "Is your joint pain constant or does it come and go?",
-      "category": "intermittent_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या किसी विशेष गतिविधि के दौरान जोड़ों में दर्द बढ़ता है?",
-      "en": "Does your joint pain increase during any specific activity?",
-      "category": "activity_related_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-  "hi": "क्या आपको जोड़ों में दर्द के साथ कोई गर्मी या लाली महसूस हो रही है?",
-  "en": "Do you feel any warmth or redness in your joints along with the pain?",
-  "category": "warmth_redness",
-  "symptom": "warmth_redness",
-  "risk_factor": False,
-},
-{
-      "hi": "क्या आपको जोड़ों में कठोरता महसूस हो रही है?",
-     "en": "Are you experiencing stiffness in your joints?",
-      "category": "stiffness",
-      "symptom": "stiffness",
-      "risk_factor": False,    },
-  ],
-
-  "leg pain": [
-    {
-      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
-      "en": "Was there any specific injury or event that triggered the leg pain?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, बछड़ा, पंजा)",
-      "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या चलने, दौड़ने या खड़े होने से पैर का दर्द बढ़ जाता है?",
-     "en": "Does the leg pain get worse with walking, running, or standing?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने पैरों में सूजन, लालिमा या गर्मी महसूस की है?",
-      "en": "Have you noticed any swelling, redness, or warmth in the leg?",
-      "category": "leg pain",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने पहले अपने पैरों में किसी चोट या समस्या का अनुभव किया है?",
-     "en": "Have you had any previous injuries or problems with your legs?",
-      "category": "leg pain",
-      "symptom": "injury",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
-      "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
-      "en": "Does the leg pain occur constantly, or does it come and go?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या दर्द पैर के अन्य हिस्सों तक फैलता है (जैसे कि जांघ से पंजे तक)?",
-      "en": "Does the pain radiate to other parts of the leg (e.g., from the thigh to the foot)?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
-      "en": "Do you feel weakness, numbness, or tingling in the leg?",
-      "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
-
-  "back pain": [
-        {
-            "hi": "क्या पीठ दर्द लगातार है या आता-जाता है?",
-           "en": "Is your back pain constant or does it come and go?",
-            "category": "intermittent_pain",
-            "symptom": None,
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या किसी विशेष गतिविधि के दौरान पीठ दर्द बढ़ता है?",
-           "en": "Does your back pain increase during any specific activity?",
-            "category": "activity_related_pain",
-            "symptom": None,
-            "risk_factor": False,
-        },
-{
-            "hi": "क्या दर्द तेज/चुभन वाला, मट्टा, या जलन जैसा है?",
-           "en": "Is the pain sharp/stabbing, dull, or burning?",
-            "category": "pain_quality",
-            "symptom": None,
-            "risk_factor": False,
-        },  
-        {
-            "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
-            "en": "Are you having difficulty walking, standing, or sitting for long periods?",
-            "category": "mobility_impairment",
-            "symptom": None,
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या आपके पिछवाड़े या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
-            "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
-            "category": "history_of_injury",
-            "symptom": "injury",
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?",
-            "en": "Is your back pain in the lower or upper back?",
-            "category": "pain_location",
-            "symptom": None,
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या पीठ दर्द के साथ सूजन है?",
-            "en": "Is there any swelling along with your back pain?",
-            "category": "swelling",
-            "symptom": "swelling",
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या पीठ दर्द के साथ कमजोरी महसूस हो रही है?",
-            "en": "Are you experiencing any weakness along with back pain?",
-            "category": "weakness",
-            "symptom": "weakness",
-            "risk_factor": False,
-        },  
-    ],
 
   "constipation": [
     {
@@ -4128,43 +3978,6 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     }
-],
-    "jaw pain": [
-    {
-      "hi": "क्या आप जबड़े के दर्द (तीव्र, सुस्त, धड़कन या दर्द) का वर्णन कर सकते हैं?",
-      "en": "Can you describe the jaw pain (sharp, dull, throbbing, or aching)?",
-      "category": "jaw pain",
-      "symptom": "jaw pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या जबड़े का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the jaw pain constant, or does it come and go?",
-      "category": "jaw pain",
-      "symptom": "jaw pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या दर्द चबाने, बोलने, या मुँह खोलने से बढ़ जाता है?",
-      "en": "Does the pain worsen with chewing, speaking, or opening your mouth wide?",
-      "category": "jaw pain",
-      "symptom": "jaw pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको अपने काटने या जबड़े की गति में कोई कठिनाई हो रही है?",
-      "en": "Are you having any difficulty with your bite or jaw movement?",
-      "category": "jaw pain",
-      "symptom": "jaw pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप रात में अपने दांतों को पीसते हैं या जबड़े को दबाते हैं?",
-      "en": "Do you grind your teeth or clench your jaw, especially at night?",
-      "category": "jaw pain",
-      "symptom": "jaw pain",
-      "risk_factor": False,
-    },
 ],
 
 
@@ -7596,31 +7409,29 @@ body_part_followup_questions = {
                 'en': "Does your back pain increase while moving or is it present even at rest?",
                 'category': 'back_pain_detail'
             },
-    {
-      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
-      "en": "Is your chest pain radiating to your arms, neck, or back?",
-      "category": "radiating_pain",
-   },
-    {
-      "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
-     "en": "Is your chest pain sharp or dull?",
-      "category": "pain_intensity",
-   },
-    {
-      "hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?",
-      "en": "Did the chest pain start suddenly or gradually?",
-      "category": "onset",
-    },
-    {
-      "hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you experiencing difficulty breathing along with chest pain?",
-      "category": "breathing_difficulty",
-   },
-    {
-      "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-     "en": "Does your chest pain increase during any specific activity?",
-      "category": "activity_related_pain",
-      }
+
+ {
+            "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
+            "en": "Are you having difficulty walking, standing, or sitting for long periods?",
+            "category": "mobility_impairment",
+            "symptom": None,
+            "risk_factor": False,
+        },
+        {
+            "hi": "क्या आपके पिछवाड़े या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
+            "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
+            "category": "history_of_injury",
+            "symptom": "injury",
+            "risk_factor": False,
+        },
+        {
+            "hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?",
+            "en": "Is your back pain in the lower or upper back?",
+            "category": "pain_location",
+            "symptom": None,
+            "risk_factor": False,
+        },
+    
         ],
         'stiffness': [
             {
@@ -8529,7 +8340,20 @@ body_part_followup_questions = {
                 'hi': "क्या जोड़ों में दर्द गतिविधि करते समय या मौसम बदलने पर बढ़ता है?",
                 'en': "Does the joint pain increase with activity or during weather changes?",
                 'category': 'joint_pain_activity_weather'
-            }
+            },
+            
+          {
+                "hi": "क्या आपके जोड़ों में दर्द लगातार है या आता-जाता है?",
+              "en": "Is your joint pain constant or does it come and go?",
+                "category": "intermittent_pain",
+                "symptom": None,
+                "risk_factor": False,    },
+              {
+                "hi": "क्या किसी विशेष गतिविधि के दौरान जोड़ों में दर्द बढ़ता है?",
+                "en": "Does your joint pain increase during any specific activity?",
+                "category": "activity_related_pain",
+                "symptom": None,
+                "risk_factor": False,    },
         ],
         'swelling': [
             {
@@ -9134,8 +8958,34 @@ body_part_followup_questions = {
             'hi': "क्या जबड़े में दर्द चबाने या बोलने पर बढ़ता है?",
             'en': "Does the jaw pain worsen while chewing or speaking?",
             'category': 'jaw_pain_trigger'
-        }
+        },
+        {
+      "hi": "क्या आप जबड़े के दर्द (तीव्र, सुस्त, धड़कन या दर्द) का वर्णन कर सकते हैं?",
+      "en": "Can you describe the jaw pain (sharp, dull, throbbing, or aching)?",
+      "category": "jaw pain",
+    },
+    {
+      "hi": "क्या जबड़े का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+      "en": "Is the jaw pain constant, or does it come and go?",
+      "category": "jaw pain",
+    },
+    {
+      "hi": "क्या दर्द चबाने, बोलने, या मुँह खोलने से बढ़ जाता है?",
+      "en": "Does the pain worsen with chewing, speaking, or opening your mouth wide?",
+      "category": "jaw pain",
+    },
+    {
+      "hi": "क्या आपको अपने काटने या जबड़े की गति में कोई कठिनाई हो रही है?",
+      "en": "Are you having any difficulty with your bite or jaw movement?",
+      "category": "jaw pain",
+    },
+    {
+      "hi": "क्या आप रात में अपने दांतों को पीसते हैं या जबड़े को दबाते हैं?",
+      "en": "Do you grind your teeth or clench your jaw, especially at night?",
+      "category": "jaw pain",
+    },
     ],
+    
     'swelling': [
         {
             'hi': "क्या सूजन के साथ जबड़े में जकड़न या गर्माहट है?",
