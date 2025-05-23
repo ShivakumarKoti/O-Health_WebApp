@@ -9,14 +9,15 @@ symptom_list = [
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
-'gas', 'indigestion', 'acidity', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
-'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye discharge', 'ear discharge', 'jaundice',
+'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
+'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
-'hallucination', 'lack of motivation', 'exhaustion', 'bone pain', 'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
-'hip pain','sleepy', 'bone fracture','back bone issue',
-'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
+'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
+'sleepy', 'bone fracture','back bone issue',
+'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',
+#'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',''
 ]
 
 # ------------------------------------------------------------------ #
@@ -500,13 +501,6 @@ symptom_synonyms = {
     'eye redness', 'bloodshot eyes', 'conjunctival redness', 'inflamed eyes', 'eye irritation', 'eyes with blood vessels',
     'swollen eyes', 'sore eyes', 'tired eyes', 'watery eyes', 'eye inflammation', 'pink eye', 'eye congestion', 'eye discomfort', 'eyes looking inflamed',
     'redness in the eyes', 'burning eyes', 'allergic eyes', 'eyes with a reddish tint'
-],
-
-'eye discharge': [
-    'ocular discharge', 'eye mucus', 'eye secretion', 'eye crust', 'sticky eyes', 'eye pus', 'yellow eye discharge', 'clear eye discharge', 'water coming out of eyes',
-    'green eye discharge', 'gunky eyes', 'eye drainage', 'teary eyes', 'eye secretion buildup', 'crusty eyes', 'eye fluid', 'excessive tear production',
-    'morning eye crust', 'sticky eyelids', 'eye infection discharge', 'pus from the eye', 'watery eye discharge',
-    'discharge from the tear duct', 'rheum in the eye','something coming out of eyes', 'something coming out of my eyes'
 ],
 
 'ear discharge': [
@@ -2132,51 +2126,6 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "ear ringing": [
-    {
-      "hi": "क्या कानों में बजने वाली आवाजें लगातार हैं या कभी-कभी आती हैं?",
-      "en": "Are the ringing sounds in your ears constant or intermittent?",
-      "category": "intermittent_ringing",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कानों में बजने वाली आवाजें तेज हो रही हैं?",
-      "en": "Are the ringing sounds in your ears becoming louder?",
-      "category": "intensity_increase_ringing",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कानों में बजने वाली आवाजें आपके सुनने में कठिनाई पैदा कर रही हैं?",
-      "en": "Are the ringing sounds in your ears causing difficulty in hearing?",
-      "category": "hearing_difficulty_with_ringing",
-      "symptom": "hearing loss",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कानों में बजने वाली आवाजें किसी विशेष समय पर अधिक होती हैं?",
-      "en": "Do the ringing sounds in your ears occur more frequently at any specific time?",
-      "category": "time_related_ringing",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कानों में बजने वाली आवाजें किसी विशेष गतिविधि के दौरान बढ़ती हैं?",
-      "en": "Do the ringing sounds in your ears increase during any specific activity?",
-      "category": "activity_related_ringing",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको कानों में बजने वाली आवाजें सुनने के साथ साथ सूजन या दर्द भी महसूस हो रहा है?",
-      "en": "Are you experiencing swelling or pain in your ears along with ringing sounds?",
-      "category": "swelling_pain_with_ringing",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कानों में बजने वाली आवाजें किसी विशेष दवा के सेवन के कारण हो रही हैं?",
-      "en": "Are the ringing sounds in your ears caused by taking any specific medication?",
-      "category": "medication_related_ringing",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
-
   "blood in urine": [
     {
       "hi": "क्या खून की मात्रा बढ़ रही है?",
@@ -2434,79 +2383,6 @@ symptom_followup_questions = {
       "en": "Have you started experiencing watering of the eyes along with redness?",
       "category": "watering_with_eye_redness",
       "symptom": "eye tearing",
-      "risk_factor": False,    },
-  ],
-
-  "eye discharge": [
-    {
-      "hi": "क्या आपकी आँखों से अधिक मात्रा में स्राव आ रहा है?",
-      "en": "Are you experiencing excessive discharge from your eyes?",
-      "category": "excessive_eye_discharge",
-      "symptom": "eye discharge",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आँखों में स्राव के साथ सूजन भी है?",
-      "en": "Is there any swelling along with discharge in your eyes?",
-      "category": "swelling_with_eye_discharge",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आँखों में स्राव के साथ खुजली या जलन हो रही है?",
-      "en": "Are you experiencing itching or burning sensations in your eyes along with discharge?",
-      "category": "itching_burning_with_eye_discharge",
-      "symptom": "itching",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आँखों में स्राव के कारण आपकी दृष्टि प्रभावित हो रही है?",
-      "en": "Is the discharge in your eyes affecting your vision?",
-      "category": "vision_impact_with_eye_discharge",
-      "symptom": "blurred vision",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव में रंग में कोई परिवर्तन आया है?",
-      "en": "Has there been any change in the color of the discharge?",
-      "category": "discharge_color_change",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव के कारण आपकी आँखों में सूजन हो रही है?",
-      "en": "Is there any swelling in your eyes due to discharge?",
-      "category": "swelling_with_eye_discharge",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-  ],
-
-  "ear discharge": [
-
-    {
-      "hi": "क्या स्राव के साथ कान में दर्द भी हो रहा है?",
-      "en": "Are you experiencing pain in your ears along with discharge?",
-      "category": "pain_with_ear_discharge",
-      "symptom": "ear pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव का रंग में कोई परिवर्तन आया है?",
-      "en": "Has there been any change in the color of the discharge?",
-      "category": "discharge_color_change_ear",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव के कारण कान में सूजन हो रही है?",
-      "en": "Is there any swelling in your ears due to discharge?",
-      "category": "swelling_with_ear_discharge",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव के साथ आपको सुनने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty hearing along with ear discharge?",
-      "category": "hearing_difficulty_with_ear_discharge",
-      "symptom": "hearing loss",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव के कारण कान में खुजली हो रही है?",
-      "en": "Are you experiencing itching in your ears due to discharge?",
-      "category": "itching_with_ear_discharge",
-      "symptom": "itching",
       "risk_factor": False,    },
   ],
 
@@ -6652,8 +6528,8 @@ trigger_keywords = {
 'ear': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'hearing_loss': ['hearing loss', "can’t hear", 'muffled', 'low hearing'],
-        'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear'],
-        'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage'],
+        'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear','rings','ring'],
+        'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage','discharges','discharged'],
         'infection': ['infection', 'fever', 'swelling', 'ear infection']
     },
  'nails': {
@@ -6663,14 +6539,6 @@ trigger_keywords = {
         'brittle': ['brittle', 'crack', 'split', 'break'],
         'growth': ['not growing', 'slow growth', 'deformed', 'misshaped']
     },
-'bone': {
-    'pain': ['pain', 'pains', 'ache', 'aches', 'aching', 'soreness', 'tender', 'tenderness', 'throbbing', 'sharp', 'dull', 'paining'],
-    'fracture': ['fracture', 'broken', 'break', 'crack', 'snap', 'shattered', 'hairline'],
-    'swelling': ['swelling', 'swollen', 'puffy', 'enlarged', 'inflamed'],
-    'weakness': ['weakness', 'weak', 'brittle', 'fragile', 'soft', 'thin', 'osteopenia', 'osteoporosis'],
-    'injury': ['injury', 'trauma', 'impact', 'blow', 'contusion', 'bruise', 'damage']
-},
-	
    'joint': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
@@ -7119,6 +6987,17 @@ body_part_followup_questions = {
         }
     ],
 
+    'discharge':[
+    {
+      "hi": "क्या आँखों में स्राव के कारण आपकी दृष्टि प्रभावित हो रही है?",
+      "en": "Is the discharge in your eyes affecting your vision?",
+      "category": "vision_impact_with_eye_discharge",   },
+    {
+      "hi": "क्या स्राव में रंग में कोई परिवर्तन आया है?",
+      "en": "Has there been any change in the color of the discharge?",
+      "category": "discharge_color_change", },
+    ],
+
   'pain':[
           {
       "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
@@ -7187,12 +7066,6 @@ body_part_followup_questions = {
 
     },
     {
-      "hi": "क्या हाथ में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the hand pain constant, or does it come and go?",
-      "category": "hand pain",
-
-    },
-    {
       "hi": "क्या आपको हाल ही में हाथों में चोट या आघात लगा है?",
       "en": "Have you had any recent injuries or trauma to your hands?",
       "category": "hand pain",
@@ -7214,7 +7087,6 @@ body_part_followup_questions = {
       "hi": "क्या आप उन गतिविधियों में शामिल हैं जो आपके हाथों पर दबाव डालती हैं, जैसे टाइपिंग या उठाना?",
       "en": "Are you involved in activities that put strain on your hands, like typing or lifting?",
       "category": "hand pain",
-
     },
         ],
         'numbness': [
@@ -8115,16 +7987,7 @@ body_part_followup_questions = {
             'en': "Did the pain start suddenly or build up gradually?",
             'category': 'ear_pain_onset'
         },
-        {
-            'hi': "क्या कान को छूने पर दर्द और बढ़ जाता है?",
-            'en': "Does touching the ear worsen the pain?",
-            'category': 'ear_pain_touch'
-        },
-        {
-          "hi": "क्या कान में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
-          "en": "Is the ear pain constant, or does it come and go?",
-          "category": "ear pain",
-   },
+
         {
           "hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?",
           "en": "Do you have pain in one ear or both ears?",
@@ -8133,26 +7996,6 @@ body_part_followup_questions = {
         {
           "hi": "क्या कान में दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ?",
           "en": "Did the ear pain start after a cold, sinus infection, or upper respiratory infection?",
-          "category": "ear pain",
-  },
-        {
-          "hi": "क्या आपको हाल ही में कान में कोई चोट या आघात हुआ है?",
-          "en": "Have you had any recent injuries or trauma to the ear?",
-          "category": "ear pain",
-  },
-        {
-          "hi": "क्या आपके कान से कोई रिसाव या डिस्चार्ज हो रहा है?",
-          "en": "Do you have drainage or discharge coming from your ear?",
-          "category": "ear pain",
-   },
-        {
-          "hi": "क्या आप हाल ही में जोरदार शोर या पानी (जैसे तैराकी या स्नान) के संपर्क में आए हैं?",
-          "en": "Have you recently been exposed to loud noises or water (e.g., swimming or bathing)?",
-          "category": "ear pain",
-  },
-        {
-          "hi": "क्या आपको बाहरी कान या कान के आस-पास के क्षेत्र को छूने या खींचने पर दर्द हो रहा है?",
-          "en": "Are you experiencing any pain when touching or pulling on the outer ear or around the ear area?",
           "category": "ear pain",
   },
 
@@ -8192,21 +8035,18 @@ body_part_followup_questions = {
         }
     ],
     'discharge': [
-        {
-            'hi': "क्या कान से तरल पदार्थ निकल रहा है?",
-            'en': "Is there fluid coming out of your ear?",
-            'category': 'ear_discharge_presence'
-        },
-        {
-            'hi': "क्या निकले हुए तरल का रंग या गंध अलग है?",
-            'en': "Does the fluid have an unusual color or smell?",
-            'category': 'ear_discharge_characteristics'
-        },
-        {
-            'hi': "क्या तरल निकलना लगातार है या रुक-रुक कर होता है?",
-            'en': "Is the discharge constant or intermittent?",
-            'category': 'ear_discharge_frequency'
-        }
+    {
+      "hi": "क्या स्राव के कारण कान में सूजन हो रही है?",
+      "en": "Is there any swelling in your ears due to discharge?",
+      "category": "swelling_with_ear_discharge",
+      "symptom": "swelling",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या स्राव के साथ आपको सुनने में कठिनाई हो रही है?",
+      "en": "Are you having difficulty hearing along with ear discharge?",
+      "category": "hearing_difficulty_with_ear_discharge",
+      "symptom": "hearing loss",
+      "risk_factor": False,    },
     ],
     'infection': [
         {
@@ -8622,31 +8462,15 @@ body_part_followup_questions = {
         ],
         'pain': [
             {
-                'hi': "क्या नाक में दर्द दबाने पर बढ़ता है?",
-                'en': "Does the pain in your nose worsen when you press on it?",
-                'category': 'nose_pain_touch'
-            },
-
-            {
               "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
               "en": "Are you experiencing persistent pain or burning sensation in your nose?",
               "category": "nose pain",
             },
-    {
-      "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
-      "en": "Do you feel pain when touching or pressing on your nose?",
-      "category": "nose pain",
-    },
-    {
-      "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
-      "en": "Is there any swelling or redness in your nose?",
-      "category": "nose pain",
-    },
-    {
-      "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
-      "en": "Have you recently had a cold, allergies, or sinus issues?",
-      "category": "nose pain",
-    },     
+            {
+              "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
+              "en": "Have you recently had a cold, allergies, or sinus issues?",
+              "category": "nose pain",
+            },     
     ],
         'infection': [
             {
