@@ -411,9 +411,9 @@ symptom_synonyms = {
 
     ],
     'leg pain': [
-        'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs', 'pain during walk',
-        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking', 'leg becomes numb',
-        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking', 'legs become numb',
+        'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs', 
+        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking', 
+        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking', 
         'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
         'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 
         'pain in the lower leg', 'pain in leg', 'pain in legs', 'pain in the leg', 'pain in the legs', 'pain in my leg', 'pain in my legs', 'pain from leg fracture'
