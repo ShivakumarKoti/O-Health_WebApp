@@ -1,26 +1,22 @@
+
 # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
 # Original symptom list with potential duplicates
 symptom_list = [
-'fever', 'cold', 'runny nose', 'sneezing', 'rash', 'back spasm', 'dizziness', 'weakness', 'loss of appetite', 'cough', 'muscle pain', 'joint pain',
-'chest pain', 'back pain', 'constipation', 'throat pain', 'diarrhea', 'flu', 'shortness of breath', 'rapid breathing', 'stomach pain', 'migraine',
-'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion', 'nose pain',
-'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision', 'ear pain',
-'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating', 'neck pain',
-'gas', 'indigestion', 'acidity', 'mouth pain', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
-'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye pain',  'eye discharge', 'ear discharge', 'jaundice',
+'fever', 'cold', 'runny nose', 'sneezing', 'rash', 'back spasm', 'dizziness', 'weakness', 'loss of appetite', 'cough',
+'constipation', 'diarrhea', 'flu', 'shortness of breath', 'rapid breathing','migraine',
+'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
+'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
+'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
+'gas', 'indigestion', 'acidity', 'nosebleed', 'ear ringing', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
+'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'eye discharge', 'ear discharge', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
-'hallucination', 'lack of motivation', 'exhaustion', 'bone pain', 'wrist pain', 'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
-'leg pain', 'hand pain', 'arm pain', 'foot pain', 'knee pain', 'shoulder pain', 'hip pain', 'jaw pain', 'tooth pain','sleepy', 'bone fracture','back bone issue',
-'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
+'hallucination', 'lack of motivation', 'exhaustion', 'bone pain', 'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
+'hip pain', 'jaw pain','sleepy', 'bone fracture','back bone issue',
+'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice','hand dryness', 'wound', 'body ache','bruises',
-'cold intolerance', 'goiter', 'slow reflexes',
-
-# weakness symtom
-'eye weakness' #'leg weakness'
-  #'yellow eyes', 'red eyes'
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',''
 ]
 
 # ------------------------------------------------------------------ #
@@ -87,20 +83,7 @@ symptom_synonyms = {
         'throat dryness', 'itchy throat', 'burning sensation in throat', 'scratching feeling in throat', 'tenderness in throat', 'chronic throat discomfort', 'raspiness in voice',
         'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'throat is sore','mucus in throat', 'mucus in mouth'
     ],
-    'stomach pain': [
-        'stomach pain', 'stomach ache', 'abdominal pain', 'belly ache', 'intestinal discomfort', 'stomach cramps', 'pain inside the stomach',
-        'sharp stomach pain', 'stomach tenderness', 'sharp abdominal cramps', 'abdominal tenderness', 'intestinal bloating', 'tummy pain', 'swollen belly',
-        'feeling of fullness', 'feeling heavy in stomach', 'digestive pain', 'stomach spasms', 'soreness in abdomen', 'pain inside the abdomen',
-        'gastric pain', 'pain after eating', 'belly discomfort', 'gurgling stomach', 'stomach churning', 'pain in the lower abdomen',
-        'abdominal tightness', 'aching belly', 'painful digestion', 'pain under ribs', 'pain in the abdomen', 'stomach discomfort',
-        'uncomfortable stomach', 'intestinal cramps', 'sharp pain in lower abdomen', 'pain around stomach area', 'belly pain', 
-        'cramping in the abdomen', 'pain in stomach', 'pain in the stomach', 'pain in my stomach',
-        'gas pain in the abdomen', 'stabbing pain in the belly', 'abdominal cramps', 'sharp pain in the stomach area', 'pain after eating', 
-        'pain from gas buildup', 'pressure in the stomach', 'distended abdomen', 'pain from bloating', 'pain from food intolerance',
-        'sore stomach', 'pain from intestinal issues', 'gastrointestinal pain', 'tenderness in the stomach', 'pain near the navel', 'stomach flu pain', 
-        'feeling of fullness with pain', 'pain in the upper abdomen', 'stomach cramping', 'abdominal cramps', 'abdominal swelling with pain', 
-        'pain with digestive issues', 'pain from food poisoning','pain within the stomach'
-    ],
+
    'weakness': [
     'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
     'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
@@ -115,7 +98,7 @@ symptom_synonyms = {
     'nausea': [
         'feeling nauseous', 'queasy', 'stomach turning', 'sick feeling', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'gagging feeling', 'feeling on the verge of throwing up',
-        'uneasy stomach', 'intense queasiness', 'morning sickness feeling', 'feel like vomiting',
+        'uneasy stomach', 'intense queasiness', 'morning sickness feeling','feel like vomiting',
         'stomach discomfort', 'stomach churn', 'puking feeling', 'feeling like you could throw up',
         'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease','nauseous',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
@@ -153,15 +136,6 @@ symptom_synonyms = {
     'anxious breathing', 'fluttering heartbeat with fast breath', 'heart pounding and rapid breath'
 ],
 
-    'muscle pain': [
-        'muscle ache', 'muscle soreness', 'muscle strain', 'muscle discomfort', 'muscle stiffness', 'muscle tension', 'muscle fatigue', 'muscle cramps',
-        'muscle spasm', 'muscle pulling', 'muscle tears', 'muscle tightness', 'muscle throbbing', 'aching muscles', 'sore muscles', 'tender muscles', 'painful muscles',
-        'muscle inflammation', 'pulling sensation in muscles', 'muscle tenderness',  'muscle soreness', 'straining muscle','pain inside the muscles',
-        'muscle weakness', 'fatigued muscles', 'muscle stiffness after exercise', 'muscle burning', 'swollen muscles', 'muscle discomfort on movement', 'muscle ache after exertion',
-        'overused muscles', 'muscle strain from overuse', 'aching from tension in muscles','pain in muscles', 'muscle aches', 'pain inside the muscle','muscle pain',
-        'muscle soreness from heavy lifting', 'muscle discomfort from exercise', 'muscle pain after activity', 'muscle distress', 'inflamed muscle tissue', 'muscle spasm after effort',
-        'tensed muscles', 'muscle overextension', 'pain in the back muscles','pain in the muscle','pain in the muscles', 'pain in my muscle', 'pain in my muscles'
-    ],
     'insomnia': [
         'difficulty sleeping', 'trouble sleeping', 'sleeplessness', 'restlessness at night', 'inability to fall asleep', 'waking up during the night', 'frequent wake-ups',
         'early morning wakefulness', 'poor sleep quality', 'sleep deprivation', 'sleep disturbance', 'trouble staying asleep', 'sleep interruptions', 'unable to sleep through the night',
@@ -206,21 +180,6 @@ symptom_synonyms = {
         'lymph node tenderness under jaw', 'enlarged glands in the throat', 'neck lumps', 'tender swollen glands', 'neck lymphatic swelling',
         'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
     ],
-  'neck pain': [
-    'stiff neck', 'sore neck', 'cervical pain', 'neck ache', 'aching neck', 'neck discomfort', 'pain in the neck','neck stiffness', 'tense neck muscles', 'painful neck movement', 'neck is sore',
-    'muscle strain in neck', 'neck muscle soreness', 'tight neck muscles', 'neck crick', 'neck tension', 'pinched nerve in neck', 'radiating neck pain', 'neckpain',
-    'pain at the base of the skull', 'upper spine pain', 'limited neck mobility', 'dull neck ache', 'neck strain', 'neck throbbing', 'neck is little sore', 'pain after neck fracture',
-    'burning sensation in neck', 'neck inflammation', 'neck tenderness', 'cervical spine discomfort', 'pain when turning head', 'pain along the side of neck', 'pain in back of neck', 'stabbing neck pain',
-    'tension in upper neck', 'cervical tension', 'neck muscle fatigue', 'pain in neck muscles','sensation of pressure in neck', 'pain in my neck'
-   ],
-
-    'joint pain': [
-        'joint ache', 'joint discomfort', 'joint inflammation', 'joint stiffness', 'joint tenderness', 'pain in joints', 'arthritic pain', 'swollen joint', 'joint soreness',
-        'joint irritation', 'musculoskeletal pain', 'painful joints', 'grating joint feeling', 'aching joints', 'joint tightness', 'joint swelling', 'rheumatoid pain', 'stiff joints',
-        'uncomfortable joint pressure', 'popping joints', 'clicking joints', 'cracking joints', 'joint inflammation in fingers', 'inflamed joints','joint pain', 'pain after joint fracture',
-        'joint tenderness', 'joint soreness from strain', 'arthralgia', 'joint damage', 'strained joint', 'degenerative joint disease', 'discomfort in joints', 'dull joint ache', 'weakening joint flexibility',
-        'muscle and joint discomfort', 'painful back joints', 'arthritic inflammation', 'joint locking', 'joint clicking', 'joint popping', 'joint dislocation'
-    ],
   
    'diarrhea': [
         'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
@@ -237,24 +196,6 @@ symptom_synonyms = {
         'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
         'vomit-induced gagging', 'stomach-purging sensation', 'retching uncontrollably', 'throwing up after eating', 'puking episodes', 'sick and throwing up',
         'puking from irritation', 'regurgitating food', 'empty stomach vomiting', 'morning sickness vomiting', 'emesis due to motion sickness', 'heaving up'
-    ],
-
-    'ear pain': [
-        'ear ache', 'pain in the ear', 'ear discomfort', 'ear irritation', 'painful ear', 'throbbing ear ache', 'stabbing pain in ear', 'pain in the ears', 'pain in ear',
-        'pressure in ear', 'ear sensitivity', 'intense ear discomfort', 'itchy ear', 'swollen ear', 'ear tenderness', 'ear pulsations', 'ear infection pain', 'pain in my ears',
-        'ear tenderness', 'pain behind ear', 'soreness in ear', 'ear pressure', 'ear inflammation', 'pain in ear canal', 'ear ache when swallowing',
-        'painful inner ear', 'hearing sensitivity with pain', 'fluid in ear causing pain', 'chronic ear ache', 'pain after water exposure', 'ear infection causing pain',
-        'tender ear lobes', 'painful eardrum', 'painful earful feeling', 'pounding ear pain', 'sharp stabbing ear ache', 'swollen ear canal', 'eardrum sensitivity', 'sharp pressure sensation in ear',
-        'soreness in ear cavity', 'ear with pain', 'throbbing sensation in ear', 'pain in eardrum', 'ear hurts', 'pain in eardrums'
-    ],
-    'back pain': [
-        'lower back pain', 'upper back pain', 'pain in lower back', 'pain in upper back', 'spinal pain', 'pain in the back', 'back is paining', 'achy back', 'back ache',
-        'stiff back', 'muscle soreness in back', 'pressure in lower back', 'pain between shoulder blades', 'sharp pain in spine', 'pain in back muscles', 'backache',
-        'back discomfort', 'spinal discomfort', 'pain in lumbar region', 'back injury', 'radiating back pain', 'tight back muscles', 'spinal stiffness', 'lower back strain',
-        'muscle strain in the back', 'burning sensation in back', 'intense back pain', 'nagging back pain', 'sharp stabbing pain in lower back', 'back tension', 'sore spine','stiffness in my back',
-        'pinched nerve in back', 'back spasms', 'pain when bending', 'pain while standing up', 'pressure in upper back', 'burning pain in the back', 'pain in the sacral region',
-        'stiffness in back','backpain', 'pain in my back', 'sore back', 'pain all over my back',
-        'pain with back movement', 'back pain when sitting', 'lower back discomfort', 'muscular back pain', 'upper spinal discomfort', 'radiating pain down the back', 'back is sore'
     ],
     'cold': [
         'common cold', 'head cold', 'mild viral infection', 'slight sniffles', 'catching a cold', 'seasonal cold','light upper respiratory infection', 'mild sniffle bug',
@@ -290,31 +231,6 @@ symptom_synonyms = {
         'cold-induced shaking', 'numbing cold', 'shiver', 'shivers'
     ],
 
-    'eye pain': [
-        'ocular pain', 'eye discomfort', 'pain in the eye', 'eye ache', 'sore eye', 'sharp pain in the eye', 'pain around the eyes', 'painful vision', 'pain behind the eye',
-        'irritation in the eye', 'burning sensation in the eye', 'eye strain', 'pressure in the eye', 'throbbing in the eye',
-        'sensitive eyes', 'eye tenderness', 'aching in the eye', 'eye inflammation', 'pulsing pain in the eye', 'intense eye discomfort', 'distorted vision from pain', 'foreign body sensation in the eye',
-        'sharp eye ache', 'vision-related pain', 'severe eye pain', 'sharp stabbing pain in the eye', 'pain in the eyeball', 'tired eye pain', 'swollen eye discomfort', 'throbbing behind the eyes',
-        'pain from light sensitivity', 'pain after reading', 'pain when blinking', 'gritty feeling in the eyes', 'intense eye pressure', 'pain around the eyelids', 'puffy eyes with pain',
-        'pain near the cornea', 'stinging pain in the eye', 'pain with redness in the eye', 'ocular discomfort', 'persistent eye pain', 'painful feeling when moving eyes', 'pressure sensation in the eyes',
-        'pain from eye strain', 'pain with dry eyes', 'eye irritation', 'eye swelling', 'eye tearing','pain in my eye','pain in my eyes'
-    ],
-   
-    'nose pain': [
-        'pain in the nose', 'nasal pain', 'sinus pain', 'stabbing pain in the nose', 'sharp nasal discomfort', 'painful sinus area', 'throbbing pain in the nose', 'blocked nose pain',
-        'pain from sinusitis', 'nasal congestion pain', 'pain from cold in the nose', 'swollen nose', 'pressure in the sinuses', 'pain from a cold', 'tenderness in the nose', 'painful nostrils',
-        'pain from nasal polyps', 'pain around the nostrils', 'nosebleed-related pain', 'pain with nasal drip', 'stuffy nose pain', 'burning sensation in the nose','nostril pain',
-        'painful nasal congestion', 'aching nose', 'chronic nasal pain', 'pain when breathing through nose', 'nose pressure', 'pain at the bridge of the nose', 'pain in nasal cavity', 'itchy nose with pain',
-        'pain from external nose injury', 'pain from sniffles', 'swelling in the nasal area', 'facial pain near the nose', 'pain from sinus congestion', 'painful nasal passages', 'pain in the septum',
-        'pain from sniffing'
-    ],
-    'throat pain': [
-        'pain in the throat', 'scratchy throat', 'throat discomfort', 'irritated throat','burning sensation in the throat', 'throat tenderness',
-        'throat scratchiness', 'swollen throat', 'pain from tonsillitis','inflammation of the throat', 'pain in the tonsils', 'voice gone',
-        'hoarse throat', 'painful voice box', 'pain in the larynx', 'voice is gone', 'pain while talking',
-        'pain in the pharynx', 'pain with swollen glands', 'throat congestion', 'pain after excessive talking', 'throat dryness', 'severe throat discomfort',
-        'pain from post-nasal drip', 'sore and swollen throat', 'pain from throat infection', 'swollen tonsils with pain', 'tightness in the throat'
-    ],
     'jaw pain': [
         'pain in the jaw', 'jaw discomfort', 'jaw ache', 'pain in the temporomandibular joint', 'TMJ pain', 'painful jaw muscles', 'pain from jaw clenching', 'tooth-related jaw pain',
         'sharp jaw pain', 'throbbing jaw pain', 'jaw tension', 'pain from grinding teeth', 'jaw stiffness', 'pain in the lower jaw', 'pain near the jawline',
@@ -324,59 +240,7 @@ symptom_synonyms = {
         'pain after jaw surgery', 'pain during biting','pain in jaw', 'pain in jaws', 'pain in the jaw', 'pain in the jaws', 'pain in my jaw', 'pain in my jaws'
 
     ],
-    'tooth pain': [
-        'toothache', 'dental pain', 'pain in the tooth', 'pain from cavity', 'pain from tooth infection', 'pain in the gums', 'sensitive teeth pain',
-        'pain from a dental abscess', 'pain when chewing', 'pain from tooth decay', 'pain with tooth sensitivity', 'pain after dental work', 'pain in the tooth root', 'pain from tooth fracture',
-        'pain from gum disease', 'tooth pressure', 'pain after eating', 'pain when brushing teeth', 'pain from wisdom teeth', 'pain in the molars', 'pain from misaligned teeth', 'tooth pain', 'tooth aches',
-        'pain from tooth eruption', 'pain from a cracked tooth', 'pain with swollen gums', 'constant toothache', 'pain from tooth trauma', 'dental discomfort','teeth pain', 'tooth ache', 'teeth ache', 'teeth are paining',
-        'pain in the tooth nerve', 'pain from filling', 'pain from chipped tooth', 'pain from teeth grinding', 'pain from dental infection', 'pain from plaque buildup', 'teeth are aching', 'tooth is aching', 'tooth is paining',
-        'tooth pressure with pain', 'pain from oral sores', 'pain in upper teeth', 'pain in front teeth', 'pain in my tooth', 'pain in my teeth','pain in teeth', 'pain in tooth','pain in the teeth','pain in teeth'
-        
-    ],
- 'broken tooth': [
-    'chipped tooth', 'cracked tooth', 'fractured tooth', 'split tooth', 'tooth fracture', 'tooth chipped', 'tooth cracked', 'broken tooth',
-    'broken molar', 'broken front tooth', 'tooth with a crack', 'tooth broken in half', 'tooth broken at gum line', 'damaged tooth', 'tooth with a piece missing',
-    'tooth with a sharp edge', 'tooth with enamel loss', 'broken tooth pain', 'tooth with structural damage', 'tooth injury', 'tooth trauma', 'tooth breakage',
-    'broken dental crown', 'broken filling', 'tooth broken from biting', 'tooth broken while eating', 'tooth broken from grinding', 'tooth broken due to decay',
-    'tooth broken from accident', 'tooth broken from impact', 'crumbling tooth', 'tooth worn down', 'weakened tooth', 'tooth chip', 'dental fracture',
-    'minor tooth crack', 'severe tooth crack', 'cracked molar', 'hairline tooth fracture', 'vertical tooth fracture', 'tooth split vertically', 'tooth broken horizontally',
-    'partial tooth break', 'tooth edge broken', 'tooth enamel chipped', 'tooth surface damaged', 'damaged dental work', 'broken back tooth', 'tooth structure loss'
-    'teeth knocked out','tooth knocked out', 'tooth is just broken', 'tooth broke off', 'teeth broken','tooth knocked out','teeth knocked off','tooth is knocked out',
-     'teeth are knocked off','tooth knocked out', 'teeth knocked out'
- ],
- 'tooth decay': [
-    'dental decay', 'cavities', 'dental caries', 'rotten tooth', 'tooth rot', 'tooth cavity', 'carious tooth', 'decayed tooth', 'tooth erosion',
-    'dental cavity', 'tooth demineralization', 'decay in teeth', 'tooth surface decay', 'tooth infection from decay', 
-    'black spots on teeth', 'holes in teeth', 'soft tooth surface', 'tooth deterioration', 'tooth with decay', 'tooth damage from sugar',
-    'enamel decay', 'inner tooth decay', 'tooth discoloration from decay', 'tooth sensitivity due to decay', 'tooth weakened by decay',
-    'tooth enamel erosion', 'tooth lesion', 'tooth darkening', 'brown tooth spots', 'tooth decay from poor hygiene', 'decayed teeth',
-    'tooth caries', 'decaying molar', 'decaying premolar', 'decay in baby tooth', 'tooth plaque damage', 'acid erosion on teeth', 'teeth decay'
-],
-    'chest pain': [
-        'pain in the chest', 'chest discomfort', 'tightness in chest', 'pressure in the chest', 'chest is full', 'tight chest feeling', 'aching chest', 'chest tightness',
-        'chest heaviness', 'pain in the breastbone', 'pain radiating from chest',  'pain from heartburn', 'pain from acid reflux', 'pain in the ribs', 'pain in the upper chest',
-        'sharp stabbing pain in chest', 'chest tightness', 'pain under the sternum', 'pain when breathing deeply', 'feeling of chest pressure', 'pain from pulmonary issues', 'heart-related chest pain',
-        'sharp pain in the breastbone', 'radiating chest discomfort', 'pain from costochondritis', 'pain from muscle strain in chest', 'deep chest discomfort', 
-        'pain in the upper left chest', 'pain when lying down', 'sore chest', 'tightness in my chest','burning sensation in chest','burning sensation in the chest',
-        'pain in the center of the chest', 'pain from chest cold', 'pain in the chest while breathing', 'sore chest area', 'pain in the left side of the chest', 'pain from coughing', 'pain from deep breathing'
-    ],
 
-    'knee pain': [
-        'knee discomfort', 'pain in the knee', 'painful knees', 'knee ache', 'stabbing pain in the knee', 'pain in the knee joint', 'pain around knee',
-        'pain from knee injury', 'pain from knee strain', 'knee swelling', 'pain when bending knee', 'pain from knee overuse', 'pain with knee movement',
-        'pain in the kneecap', 'pain on the outer knee', 'pain on the inner knee', 'pain from ligament injury', 'pain from torn meniscus', 'sharp pain in the knee cap',
-        'knee joint inflammation', 'pain from twisting knee', 'pain when standing up', 'knee tenderness', 'pain in the knees', 'kneepain', 'pain around the knees',
-        'pain from patella dislocation', 'pain with knee instability','pain in knees', 'pain from bursitis', 'aching knees','sore knees','pain with osteoarthritis', 
-        'pain after knee surgery', 'pain in the back of the knee', 'pain in my knee', 'pain in my knees','pain in a knee','pain in my knee', 'pain in my knees'
-    ],
-    'foot pain': [
-        'pain in the foot', 'plantar pain', 'foot discomfort', 'foot ache', 'pain in the heel', 'sharp foot pain', 'throbbing foot pain', 'pain from foot injury', 'pain in the arch',
-        'pain from flat feet', 'pain from bunions', 'pain in the toes', 'pain from corns', 'pain from calluses', 'pain from wearing tight shoes', 'pain with walking',
-        'pain from arthritis in foot', 'swollen foot', 'pain in the sole', 'pain when standing', 'pain from sprained ankle', 'pain from tendinitis', 'sharp pain in the foot arch', 'pain in foot joints',
-        'pain in the ball of the foot', 'heel pain', 'pain from Morton’s neuroma', 'foot cramping pain',
-        'pain after standing for long periods', 'pain in the toes after walking', 'sharp heel pain', 'foot pain from nerve issues', 'pain from diabetic neuropathy', 'pain after wearing heels',
-        'pain in feet', 'feet pain','feet pain', 'pain in foot', 'pain in feet', 'pain in the foot', 'pain in the feet', 'pain in my foot', 'pain in my feet'
-    ],
     'ankle pain': [
         'ankle discomfort', 'pain in the ankle', 'twisted ankle pain', 'pain from sprained ankle', 'swollen ankle', 'sharp ankle pain', 'throbbing pain in the ankle', 'pain when walking',
         'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
@@ -385,39 +249,7 @@ symptom_synonyms = {
         'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 
         'pain when stretching ankle','pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
     ],
-     'wrist pain': [
-        'wrist discomfort', 'carpal pain', 'wrist ache', 'pain in the wrist joint', 'wrist inflammation', 'swollen wrist',
-        'tenderness in the wrist', 'pain after wrist injury', 'pain from wrist overuse', 'wrist sprain pain', 'pain in the wrist tendons', 'wrist joint stiffness',
-        'pain with wrist movement', 'pain during wrist flexion', 'carpal tunnel syndrome pain', 'pain from arthritis in the wrist', 'pain with wrist rotation', 'pain in the wrist after typing',
-        'wrist discomfort from injury', 'pain around wrist bones', 'dull wrist pain', 'pain when lifting objects', 'pain in the wrist after exertion', 'pain from wrist fractures', 'wrist tendonitis pain',
-        'pain after hand movements', 'pain in the wrist when gripping', 'pain with wrist extension', 'stiff wrist from overuse', 'sharp sensation in the wrist', 'pain with wrist bending',
-        'swollen joints in the wrist', 'pain around wrist bones after activity','pain in wrist', 'pain in wrists', 'pain in the wrist', 'pain in the wrists', 'pain in my wrist', 'pain in my wrists'
 
-    ],
-    'hand pain': [
-        'hand discomfort', 'aching hand',  'pain in hand joints', 'pain in the palm of the hand', 'pain in the fingers', 'pain in the knuckles','hand is broken',
-        'pain from hand injury', 'swollen hand', 'pain with hand movement', 'hand strain pain', 'numbness in the hand', 'pain after gripping', 'pain in the thumb', 'pain from arthritis in the hand',
-        'pain from carpal tunnel syndrome', 'pain from hand overuse', 'hand joint pain', 'pain from hand sprain', 'pain from tendonitis in the hand', 
-        'sharp pain when holding objects', 'burning pain in the hand', 'painful hand cramps', 'dull hand pain', 'pain from hand fracture', 'pain from swelling in the hand', 'joint stiffness in the hand',
-        'pain after using the hand excessively', 'pain when stretching the hand','pain in hand', 'pain in hands', 'pain in the hand', 'pain in the hands', 'pain in my hand', 'pain in my hands'
-
-    ],
-    'arm pain': [
-        'upper limb pain', 'arm discomfort', 'sharp arm pain', 'throbbing arm pain', 'pain in the forearm', 'pain in the biceps',
-        'pain from arm injury', 'pain from repetitive arm movement', 'pain from tendonitis in the arm','nerve pain in the arm', 'pain in the upper arm muscles',
-        'pain from arm sprain', 'pain in the wrist and arm', 'stiffness in the arm', 'swollen arm', 'pain when moving the arm', 'burning pain in the arm', 'aching in the arm', 'arm cramping',
-        'pain from lifting with the arm', 'pain when raising the arm', 'pain from overuse of the arm', 'pain from arm fracture', 'pain in the arm muscles after exercise', 'pain from muscle strain in the arm',
-        'pain in the forearm', 'nerve-like pain in the arm', 'pain in arm', 'pain in arms', 'pain in the arm', 'pain in the arms', 'pain in my arm', 'pain in my arms'
-
-    ],
-    'leg pain': [
-        'pain in the leg', 'lower limb pain', 'leg discomfort', 'pain in the shin', 'pain from leg injury','pain in a leg', 'pain in legs', 
-        'pain in the leg muscles', 'pain in the leg joints', 'pain when walking', 'pain from leg cramps', 'pain after leg exercise', 'pain while walking', 
-        'pain in my legs','legs are paining','pain in leg', 'pain in the hamstring', 'pain from leg sprain', 'muscle soreness in the leg', 'pain in walking', 
-        'pain from leg fractures', 'burning pain in the leg', 'pain from restless legs', 'pain when standing', 'pain in the foot and leg', 'pain with leg movement', 
-        'leg pain from sitting too long', 'pain when bending the leg', 'pain in the shin muscles', 'swollen leg', 'pain from arthritis in the leg', 'dull pain in the leg', 
-        'pain in the lower leg', 'pain in leg', 'pain in legs', 'pain in the leg', 'pain in the legs', 'pain in my leg', 'pain in my legs', 'pain from leg fracture'
-    ],
     'confusion': [
         'disorientation', 'muddled thinking', 'mental fog', 'trouble thinking clearly', 'brain fog', 'cognitive cloudiness', 'puzzled state', 'jumbled thoughts', 'incoherent reasoning', 'tangled mental process',
         'unclear comprehension', 'befuddled mind', 'scrambled logic', 'perplexed state', 'hazy understanding', 'blurred mental picture', 'fuzzy reasoning', 'perplexity', 'baffled intellect',
@@ -615,12 +447,6 @@ symptom_synonyms = {
       'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset'
 ],
 
-'mouth pain': [
-    'painful mouth lesion', 'pain in the mouth', 'pain inside the mouth', 'pain in mouth', 'mouth having pain', 'pain on mouth', 
-    'painful spot in the mouth','mouth irritation', 'gum ulcer', 'painful mouth spot', 'painful mouth',
-    'burning mouth', 'swollen mouth tissue', 'open mouth wound', 'oral lesion', 'mouth wound'
-],
-
 'nosebleed': [
     'epistaxis', 'bleeding from the nose', 'nasal hemorrhage', 'nose bleeding', 'bloody nose', 'hemorrhaging from the nose', 'nose blood flow',
     'spontaneous nosebleed', 'anterior nosebleed', 'posterior nosebleed', 'frequent nosebleeds', 'nosebleed episode', 'bleeding nostrils',
@@ -784,15 +610,6 @@ symptom_synonyms = {
     'painful gout episode', 'gouty swelling', 'gout in the foot', 'gout in the big toe', 'gouty condition', 'uric acid crystals', 'gouty joint disease'
 ],
 
-'shoulder pain': [
-    'shoulder discomfort', 'pain in the shoulder', 'shoulder ache', 'sharp shoulder pain', 'dull shoulder pain', 'shoulder stiffness', 'rotator cuff pain',
-    'shoulder joint pain', 'pain in the shoulder joint', 'shoulder strain', 'shoulder injury', 'shoulder inflammation', 'pain in the upper arm', 
-    'muscle pain in the shoulder', 'shoulder tenderness', 'pain when moving the shoulder', 'shoulder sprain', 'pain in the deltoid', 'shoulder dislocation pain',
-    'pain in the scapula', 'pain after shoulder surgery', 'shoulder impingement pain', 'frozen shoulder', 'pain from shoulder overuse', 'referred shoulder pain',
-    'pain in shoulder', 'pain in shoulders', 'pain in the shoulder', 'pain in the shoulders', 'pain in my shoulder', 'pain in my shoulders'
-
-],
-
 'bone fracture': [
     'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'fracture', 'crack in my bone','crack in a bone','bone fracture',
     'stress fracture', 'hairline fracture', 'bone splinter','fracture in bone','crack in bone','bone has cracked','cracks in bone', 'bone cracked',
@@ -816,7 +633,7 @@ symptom_synonyms = {
     'heavy periods', 'spotting between periods', 'missed periods','pelvic pain', 'uterine bleeding','menopause', 'vaginal itching', 'vaginal odor',
     'ovulation pain', 'breast tenderness', 'breast lumps', 'nipple discharge', 'breast pain', 'breast swelling','difficulty conceiving',
     'urinary tract infection', 'cervical issue', 'itchy vulva', 'burning vulva','menopausal', 'clotting during periods',
-    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods','no periods', 'absent periods', 'amenorrhea', 'masik dharm'
+    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods','no periods', 'absent periods', 'amenorrhea','masik dharm'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
@@ -830,7 +647,7 @@ symptom_synonyms = {
 'thyroid': [
     'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'goiter', 'thyroid dysfunction',
     'thyroid disease', 'thyroid cancer', 'thyroiditis', 'low thyroid function', 'high thyroid function', 'endocrine disorder', 'thyroid nodules', 'thyroid hormone imbalance',
-    'TSH imbalance', 'thyroid problems', 'autoimmune thyroid disease', 'pituitary-thyroid dysfunction', 'thyroid testing', 'TSH'
+    'TSH imbalance', 'thyroid problems', 'autoimmune thyroid disease', 'pituitary-thyroid dysfunction', 'thyroid testing'
 ],
 
 'piles': [
@@ -900,28 +717,6 @@ symptom_synonyms = {
 'sleepy', 'falling asleep', 'fallen asleep','feeling sleepy', 'sleep problems'
 ],
 
-'eye weakness': [
-'weakness in eyes', 'weak eyes', 'eyes are weak', 'eyes are becoming weak', 'eye is weak','eye strain', 
-'fatigued eyes', 'heavy eyes', 'eye muscle weakness', 'eye discomfort', 'droopy eyelids', 'lack of eye strength',
-'vision fatigue', 'eye exhaustion', 'eye tiredness', 'reduced eye stamina', 'difficulty keeping eyes open', 'eye sensitivity', 'failing eye strength',
-'eye fatigue after reading', 'poor eye endurance', 'eye weariness',  'eye fragility', 'weak eye muscles','weakness eyes'
-'unstable eye movement', 'eye soreness', 'eye heaviness','eye weakness','weakness in eyes','weakness in the eyes','weakness in eye','weakness in a eye',
-'eyes feeling overworked', 'weak visual acuity', 'eye tiredness at night', 'eye discomfort after long tasks', 'loss of eye strength', 'drooping eyes',
-'strained eye muscles', 'eye tension', 'sensitivity to light'
-],
-
-
-'leg weakness': [
-'legs are becoming weak', 'weakness in legs', 'leg is weak', 'legs are weak', 'tired legs', 'wobbly legs', 'unsteady legs', 'shaky legs',
-'fatigued legs', 'heavy legs', 'lack of leg strength', 'unstable legs', 'leg muscle weakness', 'difficulty standing', 'difficulty walking', 'leg fatigue',
-'legs giving out', 'trembling legs', 'poor leg endurance', 'reduced leg strength', 'weak leg muscles', 'unstable lower limbs', 'leg instability',
-'feeling of leg collapse', 'limb weakness', 'leg exhaustion', 'legs feel drained', 'weakness in thigh muscles', 'weakness in calf muscles',
-'legs feel powerless', 'numb legs', 'tingling in legs', 'cramping legs', 'difficulty supporting weight', 'legs feel rubbery', 'shaking lower limbs',
-'legs feel unstable after exertion', 'difficulty lifting legs', 'leg weakness while climbing stairs', 'leg weakness after standing long', 
-'legs feel like jelly', 'legs feel heavy and weak', 'poor leg control', 'unstable footing', 'weakness after prolonged standing', 'leg stiffness',
-'inability to bear weight on legs', 'sensation of leg failure', 'unresponsive legs', 'legs are numb'
-],
-
 'asthma': ['reactive airway disease', 'hyperresponsive airway disease', 'asthmatic condition', 'asthmas', 'asthama','whistling sound while breathing'],
 
 'pneumonia': ['lung infection','alveolar infection'],
@@ -940,18 +735,6 @@ symptom_synonyms = {
     'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
     'pain when walking from waist', 'pain from waist inflammation',
     'pain after running affecting waist',  'pain in back near waist', 'waist region pain', 'pain in the side of the waist'
-],
-
-'thigh pain': [
-    'thigh discomfort', 'thigh ache', 'burning pain in thigh', 'pain in thigh', 'pain in thighs', 'pain in the thigh', 'pain in the thighs',
-    'pain in my thigh', 'pain in my thighs', 'throbbing thigh pain', 'pain from thigh injury', 'pain in upper leg', 'pain in front of thigh',
-    'pain in back of thigh', 'inner thigh pain', 'outer thigh pain', 'pain in upper thigh muscles',
-    'pain from pulled thigh muscle', 'pain from thigh strain', 'pain from hamstring injury',
-    'pain from quadriceps strain', 'cramping in the thigh', 'pain from thigh overuse', 'sore thigh', 'tightness in thigh',
-    'pain radiating to thigh', 'thigh muscle contraction',
-    'muscle soreness in thigh', 'pain after stretching thigh', 'aching in thigh area',
-    'pain in thigh after injury', 'pain in thigh after standing long',
-    'pain from blood clot in thigh', 'pain in both thighs'
 ],
 
 'calf pain': [
@@ -1076,11 +859,7 @@ symptom_synonyms = {
     'pyelonephritis', 'urinary tract infection', 'kidney infection', 'hydronephrosis', 'protein in urine', 'kidney fail',
     'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
- 'hand dryness': [
-    'dry hands', 'chapped hands', 'rough hands', 'flaky hands', 'hands are dry' , 'hand is dry',
-    'dehydrated hands', 'cracked skin on hands', 'dry skin on hands',
-    'scaly hands', 'itchy dry hands'
-],
+
 'wound': [
     'laceration', 'abrasion', 'open wound',
     'skin break', 'gash', 'lesion', 'puncture wound', 'tear in skin'
@@ -1092,7 +871,7 @@ symptom_synonyms = {
 ],
 'bruises': [
     'contusions', 'black and blue marks', 'skin discoloration', 'hematoma', 'bruising',
-    'purple marks', 'banged up', 'bruised skin', 'minor bleeding under skin',
+    'purple marks', 'banged up', 'bruised skin', 'minor bleeding under skin','bruises',
     'bluish patches','blue marks on skin', 'black marks on skin', 'bruise', 'bruised'
 ],
 'cold intolerance': [
@@ -1120,40 +899,7 @@ symptom_synonyms = {
 # ------------------------------------------------------------------ #
 
 symptom_followup_questions = {
-  "stomach pain": [
-{
-      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
-     "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
-      "category": "digestive symptoms",
-      "symptom": None,
-      "risk_factor": False,    },
 
-{
-      "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
-      "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
-      "category": "stomach ache",
-      "symptom": "stomach ache",
-      "risk_factor": False,    },   
-{
-  "hi": "पेट दर्द वास्तव में कहाँ स्थित है? क्या यह ऊपरी हिस्से में है या निचले हिस्से में?",
-  "en": "Where exactly is the stomach pain located? Is it the upper part or lower part?",
-  "category": "stomach ache",
-  "symptom": "stomach ache",
-  "risk_factor": False,
-}  ,
-  {
-      "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
-      "en": "Have you eaten anything unusual or had any changes in your diet recently?",
-      "category": "dietary changes",
-      "symptom": "dietary changes",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको पाचन समस्याओं का इतिहास है (जैसे कि अम्लता, IBS, अल्सर आदि)?",
-      "en": "Do you have a history of digestive problems (e.g., acid reflux, IBS, ulcers)?",
-      "category": "digestive history",
-      "symptom": "indigestion",
-      "risk_factor": True,    },
-  ],
   "acidity": [
 
     {
@@ -1189,31 +935,19 @@ symptom_followup_questions = {
   ],
 
   "weakness": [
-    {
-      "hi": "क्या आपको मांसपेशियों में कमजोरी है?",
-      "en": "Do you have muscle weakness?",
-      "category": "weakness",
-      "symptom": "weakness",
-      "risk_factor": False,    },
-   
-    {
-      "hi": "क्या आप प्रतिदिन व्यायाम करते हैं?",
-       "en": "Do you exercise daily?",
-      "category": "weakness",
-      "symptom": None,
-      "risk_factor": False,    },
-        {
+      {
       "hi": "क्या आपको थकान महसूस होती है?",
       "en": "Do you feel fatigue? ", 
       "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
-{
-      "hi": "क्या आप शारीरिक रूप से विकलांग व्यक्ति हैं?",
-      "en": "Are you physically challenged person?",
-      "category": "weakness",
-      "symptom": None,
-      "risk_factor": False,    },
+    {
+        "hi": "क्या आप को नसों या मांसपेशियों से जुड़ी कोई पुरानी समस्या है?",
+        "en": "Do you have any chronic nerve or muscle-related condition?",
+        "category": "limb_weakness_neuro_muscular_history",
+        "symptom": None,
+        "risk_factor": True
+    }
   ],
 
   "headache": [
@@ -1576,101 +1310,6 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "knee pain": [
-  {
-      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
-     "en": "Was there any specific injury or event that triggered the knee pain?",
-      "category": "knee pain",
-      "symptom": "knee pain",
-      "risk_factor": False,    }, 
-    {
-      "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
-      "en": "Does the knee pain occur constantly, or does it come and go?",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या घुटने के आसपास सूजन, लाली या गर्मी महसूस हो रही है?",
-      "en": "Have you noticed any swelling, redness, or warmth around the knee?",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको घुटने को मोड़ने या सीधा करने में कोई समस्या हो रही है?",
-     "en": "Are you having trouble bending or straightening your knee?",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
-      "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "दर्द आपके घुटने के किस हिस्से में महसूस हो रहा है? (सामने, पीछे, किनारे)",
-      "en": "Where exactly in the knee do you feel the pain (front, back, sides)?",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या चलने या सीढ़ियाँ चढ़ने जैसी कुछ गतिविधियों से घुटने का दर्द बढ़ जाता है?",
-      "en": "Does the knee pain get worse with certain activities, like walking or climbing stairs?",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको घुटने में अस्थिरता या ऐसा लगता है जैसे घुटना 'गिर' रहा हो?",
-      "en": "Do you feel any instability or like your knee is 'giving way'?",
-      "category": "knee pain",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
-  "wrist pain": [
-    {
-      "hi": "क्या आपने हाल ही में कलाई को चोट पहुँचाई है? (गिरना, मुड़ना, सीधा असर)",
-     "en": "Have you injured the wrist recently? (e.g., fall, twist, direct blow)",
-      "category": "wrist pain",
-      "symptom": "injury",
-      "risk_factor": False,    },
-{
-      "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
-      "en": "Is there swelling or bruising around the wrist?",
-      "category": "wrist pain",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके हाथ या अंगुलियों में सुन्नता या झनझनाहट महसूस हो रही है?",
-      "en": "Do you have numbness or tingling in your hand or fingers?",
-      "category": "wrist pain",
-      "symptom": "tingling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
-      "en": "Is the wrist pain constant or intermittent?",
-      "category": "wrist pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप कलाई के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
-      "en": "Can you describe the wrist pain? (Sharp, dull, aching, etc.)",
-      "category": "wrist pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "कौन सी गतिविधियाँ कलाई के दर्द को बदतर बना देती हैं?",
-      "en": "What activities make the wrist pain worse?",
-      "category": "wrist pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आराम करने से कलाई का दर्द ठीक हो जाता है या बिगड़ जाता है?",
-      "en": "Does the wrist pain improve or worsen with rest?",
-      "category": "wrist pain",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
-
   "leg pain": [
     {
       "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
@@ -1724,39 +1363,6 @@ symptom_followup_questions = {
       "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
       "en": "Do you feel weakness, numbness, or tingling in the leg?",
       "category": "leg pain",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
-
-  "chest pain": [
-     {
-      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
-      "en": "Is your chest pain radiating to your arms, neck, or back?",
-      "category": "radiating_pain",
-      "symptom": None,
-      "risk_factor": True,    },
-    {
-      "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
-     "en": "Is your chest pain sharp or dull?",
-      "category": "pain_intensity",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?",
-      "en": "Did the chest pain start suddenly or gradually?",
-      "category": "onset",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you experiencing difficulty breathing along with chest pain?",
-      "category": "breathing_difficulty",
-      "symptom": "shortness of breath",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-     "en": "Does your chest pain increase during any specific activity?",
-      "category": "activity_related_pain",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1998,12 +1604,7 @@ symptom_followup_questions = {
   ],
 
   "swelling": [
-    {
-      "hi": "क्या सूजन किसी विशेष हिस्से में है?",
-      "en": "Is the swelling in any specific area?",
-      "category": "swelling_location",
-      "symptom": None,
-      "risk_factor": False,    },
+ 
     {
       "hi": "क्या सूजन के साथ दर्द भी है?",
       "en": "Is there any pain along with swelling?",
@@ -2027,12 +1628,6 @@ symptom_followup_questions = {
       "en": "Is there redness of the skin along with swelling?",
       "category": "redness_with_swelling",
       "symptom": "redness",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सूजन के कारण आपको बेचैनी हो रही है?",
-      "en": "Are you feeling restless due to swelling?",
-      "category": "restlessness_with_swelling",
-      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -2359,12 +1954,6 @@ symptom_followup_questions = {
 
   "inflammation": [
     {
-      "hi": "क्या सूजन किसी विशेष हिस्से में है?",
-      "en": "Is the inflammation localized to any specific area?",
-      "category": "localized_inflammation",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या सूजन के साथ दर्द भी है?",
       "en": "Is there any pain along with the inflammation?",
       "category": "pain_with_inflammation",
@@ -2375,12 +1964,6 @@ symptom_followup_questions = {
       "en": "Is the inflammation constant or does it come and go?",
       "category": "intermittent_inflammation",
       "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सूजन के कारण त्वचा में लालिमा या गर्मी महसूस हो रही है?",
-      "en": "Is there any redness or warmth in the skin due to inflammation?",
-      "category": "skin_changes_with_inflammation",
-      "symptom": "redness",
       "risk_factor": False,    },
     {
       "hi": "क्या सूजन किसी विशेष समय पर अधिक होती है?",
@@ -2504,12 +2087,6 @@ symptom_followup_questions = {
 
   "numbness": [
     {
-      "hi": "क्या आपको किसी विशेष हिस्से में सुन्नता महसूस हो रही है?",
-      "en": "Are you feeling numbness in any specific area?",
-      "category": "localized_numbness",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या सुन्नता लगातार है या आती-जाती है?",
       "en": "Is the numbness constant or does it come and go?",
       "category": "intermittent_numbness",
@@ -2520,12 +2097,6 @@ symptom_followup_questions = {
       "en": "Does your numbness increase during any specific activity?",
       "category": "activity_related_numbness",
       "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सुन्नता के साथ झुनझुनी भी हो रही है?",
-      "en": "Are you experiencing tingling sensations along with numbness?",
-      "category": "tingling_with_numbness",
-      "symptom": "tingling",
       "risk_factor": False,    },
     {
       "hi": "क्या सुन्नता किसी विशेष समय पर अधिक होती है?",
@@ -2640,44 +2211,6 @@ symptom_followup_questions = {
       "en": "Is indigestion affecting your sleep?",
       "category": "sleep_disturbance_with_indigestion",
       "symptom": "insomnia",
-      "risk_factor": False,    },
-  ],
-"mouth pain": [
-    {
-      "hi": "क्या आपके मुंह का दर्द तेजी से फैल रहा है",
-      "en": "Is your mouth pain spreading rapidly?",
-      "category": "rapid_spread_mouth_sores",
-      "symptom": "mouth pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके मुंह में दर्द के साथ सूजन भी है?",
-      "en": "Is there any swelling along with your mouth pain?",
-      "category": "swelling_with_mouth_sores",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या खाने या पीने के दौरान आपके मुंह में दर्द बढ़ जाता है?",
-      "en": "Does your mouth pain increase while eating or drinking?",
-      "category": "pain_with_mouth_sores",
-      "symptom": None,
-      "risk_factor": False,    },
-{
-      "hi": "क्या आपके मुंह से खून बह रहा है?",
-      "en": "Is your mouth bleeding?",
-      "category": "bleeding_mouth_sores",
-      "symptom": "bleeding",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको मुंह के दर्द के साथ दांत में भी दर्द हो रहा है?",
-      "en": "Are you experiencing tooth pain along with mouth pain?",
-      "category": "tooth_pain_with_mouth_sores",
-      "symptom": "tooth pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या मुंह में दर्द के कारण बोलने में कठिनाई हो रही है?",
-      "en": "Is the mouth pain causing difficulty in speaking?",
-      "category": "speech_difficulty_with_mouth_sores",
-      "symptom": "difficulty speaking",
       "risk_factor": False,    },
   ],
 
@@ -3288,44 +2821,6 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "neck pain": [
-    {
-      "hi": "क्या आपकी गर्दन में दर्द लगातार है या आता-जाता है?",
-      "en": "Is your neck pain constant or does it come and go?",
-      "category": "intermittent_neck_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गर्दन का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-      "en": "Does your neck pain increase during any specific activity?",
-      "category": "activity_related_neck_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?",
-      "en": "Is your mobility being affected due to neck pain?",
-      "category": "mobility_impact_with_neck_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गर्दन के दर्द के साथ सिरदर्द भी हो रहा है?",
-      "en": "Are you experiencing headaches along with neck pain?",
-      "category": "headache_with_neck_pain",
-      "symptom": "headache",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गर्दन में दर्द के साथ कोई सूजन भी है?",
-      "en": "Is there any swelling along with neck pain?",
-      "category": "swelling_with_neck_pain",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?",
-      "en": "Did your neck pain start suddenly or gradually?",
-      "category": "sudden_graduate_neck_pain",
-      "symptom": "neck pain",
-      "risk_factor": False,    },
-  ],
 
   "rash": [
     {
@@ -3577,50 +3072,6 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "ear pain": [
-    {
-      "hi": "क्या कान में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
-      "en": "Is the ear pain constant, or does it come and go?",
-      "category": "ear pain",
-      "symptom": "pain pattern",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?",
-      "en": "Do you have pain in one ear or both ears?",
-      "category": "ear pain",
-      "symptom": "ear affected",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या कान में दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ?",
-      "en": "Did the ear pain start after a cold, sinus infection, or upper respiratory infection?",
-      "category": "ear pain",
-      "symptom": "infection history",
-      "risk_factor": True,    },
-    {
-      "hi": "क्या आपको हाल ही में कान में कोई चोट या आघात हुआ है?",
-      "en": "Have you had any recent injuries or trauma to the ear?",
-      "category": "ear pain",
-      "symptom": "ear injury",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके कान से कोई रिसाव या डिस्चार्ज हो रहा है?",
-      "en": "Do you have drainage or discharge coming from your ear?",
-      "category": "ear pain",
-      "symptom": "ear discharge",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप हाल ही में जोरदार शोर या पानी (जैसे तैराकी या स्नान) के संपर्क में आए हैं?",
-      "en": "Have you recently been exposed to loud noises or water (e.g., swimming or bathing)?",
-      "category": "ear pain",
-      "symptom": "noise or water exposure",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको बाहरी कान या कान के आस-पास के क्षेत्र को छूने या खींचने पर दर्द हो रहा है?",
-      "en": "Are you experiencing any pain when touching or pulling on the outer ear or around the ear area?",
-      "category": "ear pain",
-      "symptom": "touch pain",
-      "risk_factor": False,    },
-  ],
 
   "tremor": [
     {
@@ -4064,20 +3515,6 @@ symptom_followup_questions = {
   ],
 
 "injury": [
-  {
-    "hi": "आपको चोट कैसे लगी (जैसे, खेल, दुर्घटना, गिरना, मुड़ने की गति)?",
-    "en": "How did the injury occur (through sports, accident, fall, twisting movement)?",
-    "category": "general injury",
-    "symptom": "mechanism of injury",
-    "risk_factor": False,
-  },
-  {
-    "hi": "कौन सा जोड़ा या क्षेत्र घायल हुआ है (जैसे, घुटना, टखना, कोहनी)?",
-    "en": "Which joint or area is injured (e.g., knee, ankle, elbow)?",
-    "category": "general injury",
-    "symptom": "injured joint or area",
-    "risk_factor": False,
-  },
   {
     "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
     "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
@@ -4729,117 +4166,6 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
 ],
-    "tooth pain": [
-    {
-      "hi": "क्या आप दांत के दर्द (तीव्र, धड़कते, लगातार या रुक-रुक कर) का वर्णन कर सकते हैं?",
-      "en": "Can you describe the tooth pain (sharp, throbbing, constant, or intermittent)?",
-      "category": "tooth pain",
-      "symptom": "tooth pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या यह दर्द गर्म, ठंडा, या मीठे खाद्य या पेय पदार्थों से उत्तेजित होता है?",
-      "en": "Is the pain triggered by hot, cold, or sweet foods or drinks?",
-      "category": "tooth pain",
-      "symptom": "tooth pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में दंत चिकित्सा कार्य या दांत में किसी प्रकार का आघात अनुभव किया है?",
-      "en": "Have you had any recent dental work or trauma to the tooth?",
-      "category": "tooth pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको चबाने या काटने में कोई कठिनाई हो रही है?",
-      "en": "Are you having difficulty chewing or biting down?",
-      "category": "tooth pain",
-      "symptom": "tooth pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको कीड़े, मसूड़ों की बीमारी, या अन्य दंत समस्याओं का इतिहास है?",
-      "en": "Have you had a history of cavities, gum disease, or other dental issues?",
-      "category": "tooth pain",
-      "symptom": None,
-      "risk_factor": True,
-    }
-],
- "broken tooth": [
-  {
-    "hi": "क्या आपके दांत में दरार, टूट-फूट, या चिप लगी हुई है?",
-    "en": "Do you have a crack, fracture, or chip in your tooth?",
-    "category": "broken tooth",
-    "symptom": "broken tooth",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आप चबाते समय दांत में दर्द या संवेदनशीलता महसूस कर रहे हैं?",
-    "en": "Do you feel pain or sensitivity in the tooth while chewing?",
-    "category": "broken tooth",
-    "symptom": "tooth pain",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपका टूटा हुआ दांत खाने, पीने या बोलने में परेशानी पैदा कर रहा है?",
-    "en": "Is the broken tooth causing difficulty while eating, drinking, or speaking?",
-    "category": "broken tooth",
-    "symptom": "broken tooth",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपने हाल ही में किसी दुर्घटना, गिरावट या कठोर चीज काटने के बाद दांत टूटने का अनुभव किया है?",
-    "en": "Did the tooth break after an accident, fall, or biting something hard?",
-    "category": "broken tooth",
-    "symptom": "broken tooth",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपके पास पहले से दांत क्षय (कीड़ा लगना) या कमजोर दांतों का इतिहास है?",
-    "en": "Do you have a history of tooth decay or weakened teeth?",
-    "category": "broken tooth",
-    "symptom": None,
-    "risk_factor": True,
-  },
-],
- "tooth decay": [
-  {
-    "hi": "क्या आपके किसी दांत में काले धब्बे, गड्ढे या छेद दिखाई दे रहे हैं?",
-    "en": "Do you see black spots, pits, or holes in any of your teeth?",
-    "category": "tooth decay",
-    "symptom": "tooth decay",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपको मीठे, गर्म या ठंडे खाद्य पदार्थों से दांत में संवेदनशीलता या दर्द होता है?",
-    "en": "Do you feel sensitivity or pain in your tooth when eating sweet, hot, or cold foods?",
-    "category": "tooth decay",
-    "symptom": "tooth decay",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपके मुंह से दुर्गंध आती है या कोई खराब स्वाद बना रहता है?",
-    "en": "Do you experience bad breath or a persistent unpleasant taste in your mouth?",
-    "category": "tooth decay",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपके मसूड़े सूजे हुए हैं या उनमें से खून आता है?",
-    "en": "Are your gums swollen or do they bleed?",
-    "category": "tooth decay",
-    "symptom": None,
-    "risk_factor": True,
-  },
-  {
-    "hi": "क्या आप नियमित रूप से मीठे खाद्य पदार्थ खाते हैं या दिन में कई बार स्नैक्स लेते हैं?",
-    "en": "Do you frequently eat sugary foods or snack multiple times a day?",
-    "category": "tooth decay",
-    "symptom": None,
-    "risk_factor": True,
-  },
-],
 
 
 "fainting": [
@@ -5192,43 +4518,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
 ],
- "throat pain": [
-    {
-      "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
-      "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
-      "category": "throat pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में किसी ऐसे व्यक्ति से संपर्क किया है जिसे गले में दर्द या सर्दी हो?",
-      "en": "Have you been exposed to anyone with a sore throat or cold recently?",
-      "category": "throat pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
-      "en": "Do you smoke or have you been exposed to smoke or other irritants?",
-      "category": "throat pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
-      "en": "Are you experiencing a fever along with your sore throat?",
-      "category": "throat pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपके गले में सूजन या लालिमा है?",
-      "en": "Do you have any swelling or redness in your throat?",
-      "category": "throat pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-],
+
 "nose pain": [
     {
       "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
@@ -5266,200 +4556,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
 ],
-   
- "eye pain": [
-    {
-      "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
-      "en": "Is the pain in one eye or both eyes?",
-      "category": "eye pain",
-      "symptom": "eye pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में आंखों में चोट या आघात लगा है?",
-      "en": "Have you had any recent eye injuries or trauma?",
-      "category": "eye pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
-      "en": "Have you been exposed to smoke, chemicals, or other irritants?",
-      "category": "eye pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपकी आंखें लाल हैं या उनमें सूजन है?",
-      "en": "Are your eyes red or swollen?",
-      "category": "eye pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपकी दृष्टि धुंधली हो गई है या आपको रोशनी से संवेदनशीलता महसूस होती है?",
-      "en": "Has your vision become blurry or are you experiencing sensitivity to light?",
-      "category": "eye pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-],
 
-  "hand pain": [
-    {
-      "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
-      "en": "Is the pain in one hand or both hands?",
-      "category": "hand pain",
-      "symptom": "hand pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या हाथ में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the hand pain constant, or does it come and go?",
-      "category": "hand pain",
-      "symptom": "hand pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में हाथों में चोट या आघात लगा है?",
-      "en": "Have you had any recent injuries or trauma to your hands?",
-      "category": "hand pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाथ में सूजन, लाली, या जकड़न का अनुभव हो रहा है?",
-      "en": "Are you experiencing any swelling, redness, or stiffness in the hand?",
-      "category": "hand pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको अपनी उंगलियों या हाथों में सुन्नता या झनझनाहट का अनुभव हो रहा है?",
-      "en": "Do you have any numbness or tingling in your fingers or hands?",
-      "category": "hand pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप उन गतिविधियों में शामिल हैं जो आपके हाथों पर दबाव डालती हैं, जैसे टाइपिंग या उठाना?",
-      "en": "Are you involved in activities that put strain on your hands, like typing or lifting?",
-      "category": "hand pain",
-      "symptom": "hand pain",
-      "risk_factor": False,
-    },
-],
-  "arm pain": [
-    {
-      "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
-      "en": "Is the pain in one arm or both arms?",
-      "category": "arm pain",
-      "symptom": "arm pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
-      "en": "Is the arm pain sharp, dull, or throbbing?",
-      "category": "arm pain",
-      "symptom": "arm pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में हाथ में कोई चोट, गिरने या आघात का सामना करना पड़ा है?",
-      "en": "Have you had any recent injuries, falls, or trauma to your arm?",
-      "category": "arm pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको अपने हाथ या कंधे को हिलाने में कठिनाई हो रही है?",
-      "en": "Do you have difficulty moving your arm or shoulder?",
-      "category": "arm pain",
-      "symptom": "arm pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाथ या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
-      "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
-      "category": "arm pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-],
-  "foot pain": [
-    {
-      "hi": "क्या दर्द एक पैर में है या दोनों पैरों में?",
-      "en": "Is the pain in one foot or both feet?",
-      "category": "foot pain",
-      "symptom": "foot pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या पैर में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the foot pain constant, or does it come and go?",
-      "category": "foot pain",
-      "symptom": "foot pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको पैरों में सूजन, लाली, या चोट का अनुभव हो रहा है?",
-      "en": "Are you experiencing any swelling, redness, or bruising in the foot?",
-      "category": "foot pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में पैर में कोई चोट या आघात हुआ है?",
-      "en": "Have you had any recent injuries or trauma to your foot?",
-      "category": "foot pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या दर्द कुछ गतिविधियों के साथ बढ़ जाता है, जैसे लंबी अवधि तक चलना या खड़ा होना?",
-      "en": "Does the pain get worse with certain activities, like walking or standing for long periods?",
-      "category": "foot pain",
-      "symptom": "foot pain",
-      "risk_factor": False,
-    },
-],
-  "shoulder pain": [
-    {
-      "hi": "क्या दर्द एक कंधे में है या दोनों कंधों में?",
-      "en": "Is the pain in one shoulder or both shoulders?",
-      "category": "shoulder pain",
-      "symptom": "shoulder pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कंधे का दर्द तेज़, सुस्त या दर्दभरा है?",
-      "en": "Is the shoulder pain sharp, dull, or achy?",
-      "category": "shoulder pain",
-      "symptom": "shoulder pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में कंधे में कोई चोट हुआ है?",
-      "en": "Have you had any recent injuries to your shoulder?",
-      "category": "shoulder pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कंधे का दर्द विशिष्ट गतिविधियों या गतिविधियों, जैसे उठाने या पहुंचने से बढ़ जाता है?",
-      "en": "Does the shoulder pain worsen with specific movements or activities, such as lifting or reaching?",
-      "category": "shoulder pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने कंधे में सूजन, चोट या गति सीमा में प्रतिबंध महसूस किया है?",
-      "en": "Have you noticed any swelling, bruising, or restricted range of motion in the shoulder?",
-      "category": "shoulder pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-],
   "hip pain": [
     {
       "hi": "क्या दर्द एक कूल्हे में है या दोनों कूल्हों में?",
@@ -6042,57 +5139,6 @@ symptom_followup_questions = {
       "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
       "en": "How does the pain affect your daily activities or sleep?",
       "category": "waist pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-  ],
-  "thigh pain": [
-    {
-      "hi": "आप थाई में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the pain in your thigh? Is it sharp, dull, burning, or throbbing?",
-      "category": "thigh pain",
-      "symptom": "thigh pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your thigh? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "thigh pain",
-      "symptom": "thigh pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "thigh pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "thigh pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी थाई में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar pain or any known medical conditions?",
-      "category": "thigh pain",
-      "symptom": "thigh pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "thigh pain",
-      "symptom": "thigh pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "thigh pain",
       "symptom": None,
       "risk_factor": False,
     },
@@ -7092,19 +6138,6 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
-      "hi": "क्या आपको गले में खराश है?",
-      "en": "Do you have a sore throat?",
-      "category": "sore_throat",
-      "symptom": "sore_throat",
-      "risk_factor": False,    },
-	  {
-    "hi": "क्या आपके गले में किसी प्रकार की गांठ या सूजन महसूस होती है?",
-    "en": "Do you feel any lump or swelling in your throat?",
-    "category": "broken voice",
-    "symptom": None,
-    "risk_factor": True,
-  },
-	 {
     "hi": "क्या बोलते समय आपकी आवाज़ टूटती है या रुक-रुक कर आती है?",
     "en": "Does your voice crack or break while speaking?",
     "category": "broken voice",
@@ -7139,7 +6172,13 @@ symptom_followup_questions = {
     "symptom": "broken voice",
     "risk_factor": False,
   },
- 
+  {
+    "hi": "क्या आपके गले में किसी प्रकार की गांठ या सूजन महसूस होती है?",
+    "en": "Do you feel any lump or swelling in your throat?",
+    "category": "broken voice",
+    "symptom": None,
+    "risk_factor": True,
+  },
 ],
  "pregnancy": [
   {
@@ -7334,58 +6373,6 @@ symptom_followup_questions = {
   },
 ],
 
- "hand dryness": [
-  {
-    "hi": "क्या आपकी हथेलियाँ रूखी या खुरदरी महसूस होती हैं?",
-    "en": "Do your palms feel dry or rough to the touch?",
-    "category": "hand dryness",
-    "symptom": "hand dryness",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपकी त्वचा पर सफेद पपड़ी या झुर्रियां दिखाई देती हैं?",
-    "en": "Do you notice flaking or white patches on the skin?",
-    "category": "hand dryness",
-    "symptom": "patches on skin",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या हाथों की त्वचा में खुजली या जलन होती है?",
-    "en": "Do you experience itching or irritation on the hands?",
-    "category": "hand dryness",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आप दिन में बार-बार साबुन या सैनिटाइज़र का उपयोग करते हैं?",
-    "en": "Do you frequently use soap or hand sanitizer during the day?",
-    "category": "hand dryness",
-    "symptom": None,
-    "risk_factor": True,
-  },
-  {
-    "hi": "क्या आप ठंडी या शुष्क जलवायु में रहते हैं?",
-    "en": "Do you live in a cold or dry climate?",
-    "category": "hand dryness",
-    "symptom": None,
-    "risk_factor": True,
-  },
-  {
-    "hi": "क्या आपके हाथों की त्वचा पर दरारें या खून आने जैसे लक्षण हैं?",
-    "en": "Do you have cracks or bleeding on the skin of your hands?",
-    "category": "hand dryness",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपको एग्ज़िमा या त्वचा से जुड़ी कोई पुरानी समस्या है?",
-    "en": "Do you have eczema or any chronic skin condition?",
-    "category": "hand dryness",
-    "symptom": None,
-    "risk_factor": True,
-  },
-],
-
 "wound": [
   {
     "hi": "क्या घाव से खून रुक-रुक कर या लगातार बह रहा है?",
@@ -7542,19 +6529,7 @@ symptom_followup_questions = {
   },
 ],
 
-"eye weakness": [
-    {
-        'hi': "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
-        'en': "Do your eyes feel tired after reading or using a screen for a long time?",
-        'category': 'eye_weakness_fatigue_screen'
-    },
-    {
-        'hi': "क्या आपको पहले चश्मा या लेंस का उपयोग करने की सलाह दी गई है?",
-        'en': "Have you ever been advised to use glasses or contact lenses?",
-        'category': 'eye_weakness_prescription'
-    }
-],
-	"cold intolerance": [
+	"cold_intolerance": [
   {
     "hi": "क्या आपको सामान्य से अधिक ठंड लगती है, जब दूसरों को सामान्य लगता है?",
     "en": "Do you feel colder than others around you in normal temperatures?",
@@ -7599,6 +6574,7 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
+
 "goiter": [
   {
     "hi": "क्या आपकी गर्दन के सामने किसी प्रकार की सूजन या उभार महसूस हो रहा है?",
@@ -7643,6 +6619,7 @@ symptom_followup_questions = {
     "risk_factor": True,
   },
 ],
+
 "slow reflexes": [
   {
     "hi": "क्या आपको लगता है कि आपकी प्रतिक्रिया गति (रिफ्लेक्स) धीमी हो गई है?",
@@ -7680,10 +6657,6 @@ symptom_followup_questions = {
     "risk_factor": True,
   },
 ]
-
-
-
-
 
 }
 
@@ -7758,7 +6731,7 @@ medications_list = [
     "acetazolamide (for glaucoma)",
     # Urology
     "finasteride", "tamsulosin", "sildenafil", "terazosin", "dutasteride", "vardenafil", "tadalafil", "alfuzosin",
-    "oxybutynin", "tolterodine", "mirabegron", "desmopressin", "bethanechol", "dapoxetine", "flomax", "proscar",
+    "oxybutynin", "tolterodine", "mirabegron", "desmopressin", "bethanechol", "dapoxetine", "flomax", "proscar"
     "silodosin", "bupropion", "indomethacin", "methyltestosterone", "tadalafil", "hydroxyurea", "gabapentin",
     "tramadol", "famotidine", "alpha blockers", "calcitonin", "hydrocodone", "morphine",
     # Anti-Viral and Anti-fungal
@@ -7770,28 +6743,35 @@ medications_list = [
 trigger_keywords = {
     'tooth': {
         'injury'      : ['injury', 'fell', 'fall', 'knock', 'blow', 'hit'],
-        'sensitivity' : ['hard', 'gum', 'gums', 'sensitive', 'bleeding']
+        'sensitivity' : ['hard', 'gum', 'gums', 'sensitive', 'bleeding'],
+        'pain' : ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
+        'broken' : ['broken','broke','breaks','fell','fall','injured','injury','break'],
+        'decay' : ['decay','cavity','decayed','decays','cavities','cavitated'],
     },
     'leg': {
         'injury'      : ['twist', 'sprain', 'fracture', 'broke', 'fall', 'hurt', 'accident','fractured'],
         'pain'        : ['ache', 'throbbing', 'sharp', 'dull', 'cramp', 'stiff','pain'],
-        'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge'],
-	'itching'     : ['itching','itch','itches','itchiness','itched']
+        'swelling'    : ['swollen', 'puffy', 'inflamed', 'bump', 'bulge','swelling','swells'],
+	      'itching'     : ['itching','itch','itches','itchiness','itched'],
+        'weakness' : ['weakness', 'weak', 'no strength', 'tired', 'fatigue'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
     },
 
     'eye': {
         'itching': ['itchy', 'itching', 'scratchy', 'itches','irritated','irritation'],
         'redness': ['red', 'bloodshot', 'pink', 'inflamed'],
         'burn'        : ['burn', 'burning', 'chemical', 'irritation'],
-	'weakness' : ['weakness', 'weak'],
+	      'weakness' : ['weakness', 'weak'],
+        'pain': ['pain','ache','pains','aches'],
         'blurry vision': ['blurry', 'blurry vision', 'not clear', 'foggy', 'unclear','blurred']
     },
     'hand': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
-        'numbness': ['numb', 'tingling', 'pins', 'needles'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
         'swelling': ['swollen', 'puffy', 'inflamed', 'bump'],
         'injury': ['fracture', 'broke', 'crack', 'broken', 'injury', 'hit'],
-	'itching'     : ['itching','itch','itches','itchiness','itched']
+        'dryness': ['dry', 'cracked', 'rough', 'peeling'],
+	      'itching'     : ['itching','itch','itches','itchiness','itched']
     },
 'arm': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing','pains','hurts'],
@@ -7808,7 +6788,7 @@ trigger_keywords = {
         'stiffness': ['stiff', 'tight', 'tense', 'rigid','stiffs'],
         'injury': ['injury', 'fall', 'lifted', 'twisted', 'accident', 'pulled','fell','twists'],
         'numbness': ['numb', 'tingling', 'pins', 'needles','numbed'],
-	'issue': ['issues', 'problem', 'problems','issue','situation']
+	      'issue': ['issues', 'problem', 'problems','issue','situation']
     },
 'chest': {
         'pain': ['pain', 'tightness', 'pressure', 'hurt', 'ache', 'burning','aches'],
@@ -7824,7 +6804,7 @@ trigger_keywords = {
         'injury': ['injury', 'fall', 'fracture', 'twist', 'sprain', 'broke']
 },
     'throat': {
-        'pain': ['sore', 'pain', 'scratchy', 'hurt', 'throat ache'],
+        'pain': ['sore', 'pain', 'scratchy', 'hurt', 'ache'],
         'swelling': ['swollen', 'lump', 'tightness', 'inflamed'],
         'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice'],
@@ -7848,7 +6828,8 @@ trigger_keywords = {
         'swelling': ['swollen', 'swelling', 'puffy', 'inflamed'],
         'stiffness': ['stiff', 'locked', 'tight', 'rigid'],
         'injury': ['injury', 'twist', 'fall', 'hit', 'sprain', 'fracture'],
-        'weakness': ['weak', 'unstable', 'giving way', "can’t stand"]
+        'weakness': ['weak', 'unstable', 'giving way', "can’t stand"],
+        'numbness': ['numb', 'tingling', 'pins', 'needles']
     },
   'foot': {
         'pain': ['pain', 'ache', 'hurt', 'sore', 'throbbing'],
@@ -7912,7 +6893,7 @@ trigger_keywords = {
             'pimples', 'acne', 'zits', 'whiteheads', 'blackheads', 
             'breakouts', 'spots', 'pustules', 'cysts', 'nodules'
         ],
-     'burn': ['burn', 'sunburn', 'scald', 'blister'],
+     'burn': ['burn', 'sunburn', 'scald', 'blister','burning'],
      'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
     },
 
@@ -7920,7 +6901,7 @@ trigger_keywords = {
     'muscle': {
         'pain': ['pain', 'ache', 'sore', 'cramping', 'stiff'],
         'weakness': ['weak', 'fatigued', 'loss of strength', 'unable to lift'],
-        'spasm': ['spasm', 'cramp', 'tightness', 'twitching'],
+        'spasm': ['spasm', 'cramp', 'tightness', 'twitching','tensed'],
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swollen', 'inflammation', 'bump', 'swelling']
     },
@@ -7972,17 +6953,18 @@ trigger_keywords = {
         'ulcers': ['tongue ulcer', 'tongue sore spot', 'mouth ulcer on tongue']
     },
  'mouth': {
-        'pain': ['pain', 'soreness', 'ache', 'burning', 'sharp pain'],
+        'pain': ['pain', 'soreness', 'ache', 'burning', 'sharp pain','paining'],
         'ulcer': ['ulcer', 'wound', 'canker', 'blister', 'lesion'],
         'dryness': ['dry', 'dryness', 'parched', 'no saliva'],
         'swelling': ['swollen', 'bump', 'inflammation', 'swelling'],
         'bleeding': ['bleed', 'bleeding', 'blood in mouth'],
-        'bad_breath': ['bad breath', 'halitosis', 'foul smell']
+        'bad_breath': ['bad breath', 'halitosis', 'foul smell'],
+        'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
     },
-  'period' : {
-  'pain':     ['paining','pains','hurts','hurting'],
-  'bleeding': ['bleeds','bleeding','bled','blood'],
-  'default':  ['issue']   # no “default” words here; we’ll ask to confirm
+      'period' : {
+      'pain':     ['paining','pains','hurts','hurting'],
+      'bleeding': ['bleeds','bleeding','bled','blood'],
+      'default':  ['issue']   # no “default” words here; we’ll ask to confirm
 }
  
     # add ear / skin / etc…
@@ -8025,6 +7007,103 @@ body_part_followup_questions = {
             'category': 'tooth_sensitivity_sweets'
         }
     ],
+    'pain':[
+        
+            {
+      "hi": "क्या आप दांत के दर्द (तीव्र, धड़कते, लगातार या रुक-रुक कर) का वर्णन कर सकते हैं?",
+      "en": "Can you describe the tooth pain (sharp, throbbing, constant, or intermittent)?",
+      "category": "tooth pain",
+      
+    },
+    {
+      "hi": "क्या यह दर्द गर्म, ठंडा, या मीठे खाद्य या पेय पदार्थों से उत्तेजित होता है?",
+      "en": "Is the pain triggered by hot, cold, or sweet foods or drinks?",
+      "category": "tooth pain",
+ 
+    },
+    {
+      "hi": "क्या आपने हाल ही में दंत चिकित्सा कार्य या दांत में किसी प्रकार का आघात अनुभव किया है?",
+      "en": "Have you had any recent dental work or trauma to the tooth?",
+      "category": "tooth pain",
+
+    },
+    {
+      "hi": "क्या आपको चबाने या काटने में कोई कठिनाई हो रही है?",
+      "en": "Are you having difficulty chewing or biting down?",
+      "category": "tooth pain",
+
+    },
+    {
+      "hi": "क्या आपको कीड़े, मसूड़ों की बीमारी, या अन्य दंत समस्याओं का इतिहास है?",
+      "en": "Have you had a history of cavities, gum disease, or other dental issues?",
+      "category": "tooth pain",
+
+    }
+    ],
+    'broken': [
+          {
+    "hi": "क्या आपके दांत में दरार, टूट-फूट, या चिप लगी हुई है?",
+    "en": "Do you have a crack, fracture, or chip in your tooth?",
+    "category": "broken tooth",
+
+  },
+  {
+    "hi": "क्या आप चबाते समय दांत में दर्द या संवेदनशीलता महसूस कर रहे हैं?",
+    "en": "Do you feel pain or sensitivity in the tooth while chewing?",
+    "category": "broken tooth",
+
+  },
+  {
+    "hi": "क्या आपका टूटा हुआ दांत खाने, पीने या बोलने में परेशानी पैदा कर रहा है?",
+    "en": "Is the broken tooth causing difficulty while eating, drinking, or speaking?",
+    "category": "broken tooth",
+
+  },
+  {
+    "hi": "क्या आपने हाल ही में किसी दुर्घटना, गिरावट या कठोर चीज काटने के बाद दांत टूटने का अनुभव किया है?",
+    "en": "Did the tooth break after an accident, fall, or biting something hard?",
+    "category": "broken tooth",
+  },
+  {
+    "hi": "क्या आपके पास पहले से दांत क्षय (कीड़ा लगना) या कमजोर दांतों का इतिहास है?",
+    "en": "Do you have a history of tooth decay or weakened teeth?",
+    "category": "broken tooth",
+
+  },
+    ],
+
+    'decay':[ 
+      {
+        "hi": "क्या आपके किसी दांत में काले धब्बे, गड्ढे या छेद दिखाई दे रहे हैं?",
+        "en": "Do you see black spots, pits, or holes in any of your teeth?",
+        "category": "tooth decay",
+
+      },
+      {
+        "hi": "क्या आपको मीठे, गर्म या ठंडे खाद्य पदार्थों से दांत में संवेदनशीलता या दर्द होता है?",
+        "en": "Do you feel sensitivity or pain in your tooth when eating sweet, hot, or cold foods?",
+        "category": "tooth decay",
+
+      },
+      {
+        "hi": "क्या आपके मुंह से दुर्गंध आती है या कोई खराब स्वाद बना रहता है?",
+        "en": "Do you experience bad breath or a persistent unpleasant taste in your mouth?",
+        "category": "tooth decay",
+
+      },
+      {
+        "hi": "क्या आपके मसूड़े सूजे हुए हैं या उनमें से खून आता है?",
+        "en": "Are your gums swollen or do they bleed?",
+        "category": "tooth decay",
+
+      },
+      {
+        "hi": "क्या आप नियमित रूप से मीठे खाद्य पदार्थ खाते हैं या दिन में कई बार स्नैक्स लेते हैं?",
+        "en": "Do you frequently eat sugary foods or snack multiple times a day?",
+        "category": "tooth decay",
+
+      },
+    ],
     'default': [
         {
             'hi': "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
@@ -8039,14 +7118,65 @@ body_part_followup_questions = {
     'hi': "कौन सी टांग या टांगे घायल हैं?",
     'en': "Which leg or legs are injured?",
     'category': 'leg_injury_location'
-      }
+      },
+        {
+    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+    "category": "general injury",
+  },
         ],
         'pain': [
             {
                 'hi': "क्या दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
                 'en': "Does the pain increase while walking or is it constant?",
                 'category': 'leg_pain_detail'
-            }
+            },
+            {
+                "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
+                "en": "Was there any specific injury or event that triggered the leg pain?",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, बछड़ा, पंजा)",
+                "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "क्या चलने, दौड़ने या खड़े होने से पैर का दर्द बढ़ जाता है?",
+              "en": "Does the leg pain get worse with walking, running, or standing?",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "क्या आपने पैरों में सूजन, लालिमा या गर्मी महसूस की है?",
+                "en": "Have you noticed any swelling, redness, or warmth in the leg?",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "क्या आपने पहले अपने पैरों में किसी चोट या समस्या का अनुभव किया है?",
+              "en": "Have you had any previous injuries or problems with your legs?",
+                "category": "leg pain",
+                   },
+              {
+                "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
+                "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
+                "en": "Does the leg pain occur constantly, or does it come and go?",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "क्या दर्द पैर के अन्य हिस्सों तक फैलता है (जैसे कि जांघ से पंजे तक)?",
+                "en": "Does the pain radiate to other parts of the leg (e.g., from the thigh to the foot)?",
+                "category": "leg pain",
+                    },
+              {
+                "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
+                "en": "Do you feel weakness, numbness, or tingling in the leg?",
+                "category": "leg pain",
+                    },
+
         ],
         'swelling': [
             {
@@ -8055,6 +7185,21 @@ body_part_followup_questions = {
                 'category': 'leg_swelling_symptoms'
             }
         ],
+        'weakness': [
+    {
+        'hi': "क्या आपको लंबे समय तक खड़े रहने पर पैरों में थकान या कमजोरी महसूस होती है?",
+        'en': "Do your legs feel tired or weak after standing for a long time?",
+        'category': 'leg_weakness_fatigue_standing'
+    },
+
+    {
+        'hi': "क्या सीढ़ियाँ चढ़ते समय पैरों में कमजोरी महसूस होती है?",
+        'en': "Do your legs feel weak when climbing stairs?",
+        'category': 'leg_weakness_stairs'
+    },
+
+],
+
         'default': [
             {
                 'hi': "कृपया अपनी टांग की समस्या के बारे में और जानकारी दें।",
@@ -8117,16 +7262,26 @@ body_part_followup_questions = {
     ],
 
     'weakness': [
-	{
-	'hi': "क्या कम रोशनी में देखने में परेशानी होती है?",
-	'en': "Do you have trouble seeing in low light conditions?",
-	'category': 'eye_weakness_low_light'
-	},
-	{
-	'hi': "क्या आपको धुंधला दिखता है जब आप दूर या पास की चीजें देखते हैं?",
-	'en': "Do things appear blurry when you look at objects far away or up close?",
-	'category': 'eye_weakness_blurry_vision'
-	},
+        {
+        'hi': "क्या कम रोशनी में देखने में परेशानी होती है?",
+        'en': "Do you have trouble seeing in low light conditions?",
+        'category': 'eye_weakness_low_light'
+        },
+        {
+        'hi': "क्या आपको धुंधला दिखता है जब आप दूर या पास की चीजें देखते हैं?",
+        'en': "Do things appear blurry when you look at objects far away or up close?",
+        'category': 'eye_weakness_blurry_vision'
+        },
+          {
+              'hi': "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
+              'en': "Do your eyes feel tired after reading or using a screen for a long time?",
+              'category': 'eye_weakness_fatigue_screen'
+          },
+          {
+              'hi': "क्या आपको पहले चश्मा या लेंस का उपयोग करने की सलाह दी गई है?",
+              'en': "Have you ever been advised to use glasses or contact lenses?",
+              'category': 'eye_weakness_prescription'
+          }
     ],
 	
     'blurry_vision': [
@@ -8146,6 +7301,42 @@ body_part_followup_questions = {
             'category': 'eye_blurry_eye_strain'
         }
     ],
+
+  'pain':[
+          {
+      "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
+      "en": "Is the pain in one eye or both eyes?",
+      "category": "eye pain",
+    },
+    {
+      "hi": "क्या आपको हाल ही में आंखों में चोट या आघात लगा है?",
+      "en": "Have you had any recent eye injuries or trauma?",
+      "category": "eye pain",
+
+    },
+    {
+      "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
+      "en": "Have you been exposed to smoke, chemicals, or other irritants?",
+      "category": "eye pain",
+
+    },
+    {
+      "hi": "क्या आपकी आंखें लाल हैं या उनमें सूजन है?",
+      "en": "Are your eyes red or swollen?",
+      "category": "eye pain",
+
+    },
+    {
+      "hi": "क्या आपकी दृष्टि धुंधली हो गई है या आपको रोशनी से संवेदनशीलता महसूस होती है?",
+      "en": "Has your vision become blurry or are you experiencing sensitivity to light?",
+      "category": "eye pain",
+
+    },
+
+
+  ],
+
+
     'default': [
         {
             'hi': "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
@@ -8171,7 +7362,43 @@ body_part_followup_questions = {
                 'hi': "क्या हाथ में दर्द लगातार है या किसी गतिविधि के साथ बढ़ता है?",
                 'en': "Is the pain in your hand constant or does it worsen with activity?",
                 'category': 'hand_pain_detail'
-            }
+            },
+                {
+      "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
+      "en": "Is the pain in one hand or both hands?",
+      "category": "hand pain",
+
+    },
+    {
+      "hi": "क्या हाथ में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+      "en": "Is the hand pain constant, or does it come and go?",
+      "category": "hand pain",
+
+    },
+    {
+      "hi": "क्या आपको हाल ही में हाथों में चोट या आघात लगा है?",
+      "en": "Have you had any recent injuries or trauma to your hands?",
+      "category": "hand pain",
+
+    },
+    {
+      "hi": "क्या आपको हाथ में सूजन, लाली, या जकड़न का अनुभव हो रहा है?",
+      "en": "Are you experiencing any swelling, redness, or stiffness in the hand?",
+      "category": "hand pain",
+
+    },
+    {
+      "hi": "क्या आपको अपनी उंगलियों या हाथों में सुन्नता या झनझनाहट का अनुभव हो रहा है?",
+      "en": "Do you have any numbness or tingling in your fingers or hands?",
+      "category": "hand pain",
+
+    },
+    {
+      "hi": "क्या आप उन गतिविधियों में शामिल हैं जो आपके हाथों पर दबाव डालती हैं, जैसे टाइपिंग या उठाना?",
+      "en": "Are you involved in activities that put strain on your hands, like typing or lifting?",
+      "category": "hand pain",
+
+    },
         ],
         'numbness': [
             {
@@ -8187,12 +7414,63 @@ body_part_followup_questions = {
                 'category': 'hand_swelling_symptoms'
             }
         ],
+        'dryness':[
+              {
+    "hi": "क्या आपकी हथेलियाँ रूखी या खुरदरी महसूस होती हैं?",
+    "en": "Do your palms feel dry or rough to the touch?",
+    "category": "hand dryness",
+
+  },
+  {
+    "hi": "क्या आपकी त्वचा पर सफेद पपड़ी या झुर्रियां दिखाई देती हैं?",
+    "en": "Do you notice flaking or white patches on the skin?",
+    "category": "hand dryness",
+
+  },
+  {
+    "hi": "क्या हाथों की त्वचा में खुजली या जलन होती है?",
+    "en": "Do you experience itching or irritation on the hands?",
+    "category": "hand dryness",
+
+  },
+  {
+    "hi": "क्या आप दिन में बार-बार साबुन या सैनिटाइज़र का उपयोग करते हैं?",
+    "en": "Do you frequently use soap or hand sanitizer during the day?",
+    "category": "hand dryness",
+
+
+  },
+  {
+    "hi": "क्या आप ठंडी या शुष्क जलवायु में रहते हैं?",
+    "en": "Do you live in a cold or dry climate?",
+    "category": "hand dryness",
+
+  },
+  {
+    "hi": "क्या आपके हाथों की त्वचा पर दरारें या खून आने जैसे लक्षण हैं?",
+    "en": "Do you have cracks or bleeding on the skin of your hands?",
+    "category": "hand dryness",
+
+  },
+  {
+    "hi": "क्या आपको एग्ज़िमा या त्वचा से जुड़ी कोई पुरानी समस्या है?",
+    "en": "Do you have eczema or any chronic skin condition?",
+    "category": "hand dryness",
+
+  },
+        ],
         'injury': [
             {
     'hi': "कौन सा हाथ या दोनों हाथ घायल हैं?",
     'en': "Which hand or hands are injured?",
     'category': 'hand_injury_location'
-           }
+           },
+             {
+    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+    "category": "general injury",
+  },
+
         ],
         'default': [
             {
@@ -8209,7 +7487,37 @@ body_part_followup_questions = {
                 'hi': "क्या आपके हाथ में दर्द लगातार बना रहता है?",
                 'en': "Is the pain in your arm persistent?",
                 'category': 'arm_pain_detail'
-            }
+            },
+            {
+      "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
+      "en": "Is the pain in one arm or both arms?",
+      "category": "arm pain",
+
+    },
+    {
+      "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
+      "en": "Is the arm pain sharp, dull, or throbbing?",
+      "category": "arm pain",
+
+    },
+    {
+      "hi": "क्या आपको हाल ही में हाथ में कोई चोट, गिरने या आघात का सामना करना पड़ा है?",
+      "en": "Have you had any recent injuries, falls, or trauma to your arm?",
+      "category": "arm pain",
+
+    },
+    {
+      "hi": "क्या आपको अपने हाथ या कंधे को हिलाने में कठिनाई हो रही है?",
+      "en": "Do you have difficulty moving your arm or shoulder?",
+      "category": "arm pain",
+
+    },
+    {
+      "hi": "क्या आपको हाथ या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
+      "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
+      "category": "arm pain",
+
+    },
         ],
         'numbness': [
             {
@@ -8223,8 +7531,12 @@ body_part_followup_questions = {
     'hi': "कौन सा बाजू या दोनों बाजू घायल हैं?",
     'en': "Which arm or arms are injured?",
     'category': 'arm_injury_location'
-}
-
+},
+  {
+    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+    "category": "general injury",
+  },
         ],
         'weakness': [
             {
@@ -8244,10 +7556,17 @@ body_part_followup_questions = {
   'head': {
         'injury': [
             {
-                'hi': "आपके सिर में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your head?",
-                'category': 'head_injury_time'
-            }
+        "hi": "क्या सिर में चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने से यह बढ़ता है?",
+        "en": "Is the head pain after the injury constant, or does it worsen with movement?",
+        "category": "head_injury_pain_variation",
+    },
+    {
+        "hi": "क्या आपने पहले भी सिर में चोट या बार-बार सिरदर्द की समस्या झेली है?",
+        "en": "Have you had previous head injuries or frequent headaches?",
+        "category": "head_injury_history",
+        "symptom": "previous head injuries",
+        "risk_factor": True
+    },
         ],
         'pressure': [
             {
@@ -8270,7 +7589,32 @@ body_part_followup_questions = {
                 'hi': "क्या पीठ का दर्द चलते समय बढ़ता है या आराम करते समय भी होता है?",
                 'en': "Does your back pain increase while moving or is it present even at rest?",
                 'category': 'back_pain_detail'
-            }
+            },
+    {
+      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
+      "en": "Is your chest pain radiating to your arms, neck, or back?",
+      "category": "radiating_pain",
+   },
+    {
+      "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
+     "en": "Is your chest pain sharp or dull?",
+      "category": "pain_intensity",
+   },
+    {
+      "hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?",
+      "en": "Did the chest pain start suddenly or gradually?",
+      "category": "onset",
+    },
+    {
+      "hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?",
+      "en": "Are you experiencing difficulty breathing along with chest pain?",
+      "category": "breathing_difficulty",
+   },
+    {
+      "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+     "en": "Does your chest pain increase during any specific activity?",
+      "category": "activity_related_pain",
+      }
         ],
         'stiffness': [
             {
@@ -8302,13 +7646,39 @@ body_part_followup_questions = {
         ]
     },
 'chest': {
-        'pain': [
-            {
+      'pain': [
+      {
                 'hi': "क्या छाती में दर्द चलने या सीढ़ियाँ चढ़ने पर बढ़ता है?",
                 'en': "Does the chest pain increase when walking or climbing stairs?",
                 'category': 'chest_pain_exertion'
-            }
+            },
+      {
+      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
+      "en": "Is your chest pain radiating to your arms, neck, or back?",
+      "category": "radiating_pain",
+          },
+    {
+      "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
+     "en": "Is your chest pain sharp or dull?",
+      "category": "pain_intensity",
+       },
+    {
+      "hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?",
+      "en": "Did the chest pain start suddenly or gradually?",
+      "category": "onset",
+       },
+    {
+      "hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?",
+      "en": "Are you experiencing difficulty breathing along with chest pain?",
+      "category": "breathing_difficulty",
+      },
+    {
+      "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+     "en": "Does your chest pain increase during any specific activity?",
+      "category": "activity_related_pain",
+    },
         ],
+
         'discomfort': [
             {
                 'hi': "क्या छाती में असहजता के साथ मतली या पसीना भी आता है?",
@@ -8344,7 +7714,42 @@ body_part_followup_questions = {
     'hi': "क्या दोनों कलाइयों में दर्द है?",
     'en': "Is the pain in both wrists?",
     'category': 'wrist_pain_location'
-            }
+            },
+                {
+      "hi": "क्या आपने हाल ही में कलाई को चोट पहुँचाई है? (गिरना, मुड़ना, सीधा असर)",
+     "en": "Have you injured the wrist recently? (e.g., fall, twist, direct blow)",
+      "category": "wrist pain",
+    },
+{
+      "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
+      "en": "Is there swelling or bruising around the wrist?",
+      "category": "wrist pain",
+    },
+    {
+      "hi": "क्या आपके हाथ या अंगुलियों में सुन्नता या झनझनाहट महसूस हो रही है?",
+      "en": "Do you have numbness or tingling in your hand or fingers?",
+      "category": "wrist pain",
+   },
+    {
+      "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
+      "en": "Is the wrist pain constant or intermittent?",
+      "category": "wrist pain",
+   },
+    {
+      "hi": "क्या आप कलाई के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
+      "en": "Can you describe the wrist pain? (Sharp, dull, aching, etc.)",
+      "category": "wrist pain",
+   },
+    {
+      "hi": "कौन सी गतिविधियाँ कलाई के दर्द को बदतर बना देती हैं?",
+      "en": "What activities make the wrist pain worse?",
+      "category": "wrist pain",
+    },
+    {
+      "hi": "क्या आराम करने से कलाई का दर्द ठीक हो जाता है या बिगड़ जाता है?",
+      "en": "Does the wrist pain improve or worsen with rest?",
+      "category": "wrist pain",
+   },
         ],
         'swelling': [
             {
@@ -8388,7 +7793,36 @@ body_part_followup_questions = {
                 'hi': "क्या गले में दर्द लगातार बना रहता है या किसी विशेष समय में बढ़ता है?",
                 'en': "Is the pain in your throat constant, or does it worsen at a particular time?",
                 'category': 'throat_pain_pattern'
-            }
+            },
+            {
+      "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
+      "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
+      "category": "throat pain",
+    },
+    {
+      "hi": "क्या आपने हाल ही में किसी ऐसे व्यक्ति से संपर्क किया है जिसे गले में दर्द या सर्दी हो?",
+      "en": "Have you been exposed to anyone with a sore throat or cold recently?",
+      "category": "throat pain",
+
+    },
+    {
+      "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
+      "en": "Do you smoke or have you been exposed to smoke or other irritants?",
+      "category": "throat pain",
+
+    },
+    {
+      "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
+      "en": "Are you experiencing a fever along with your sore throat?",
+      "category": "throat pain",
+
+    },
+    {
+      "hi": "क्या आपके गले में सूजन या लालिमा है?",
+      "en": "Do you have any swelling or redness in your throat?",
+      "category": "throat pain",
+
+    },
         ],
         'swelling': [
             {
@@ -8443,7 +7877,35 @@ body_part_followup_questions = {
             'hi': "क्या पेट दर्द के साथ ऐंठन या चुभन जैसा महसूस होता है?",
             'en': "Does the stomach pain feel like cramping or stabbing?",
             'category': 'stomach_pain_nature'
-        }
+        },
+
+        {
+      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
+     "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
+      "category": "digestive symptoms",
+   },
+
+{
+      "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
+      "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
+      "category": "stomach ache",
+    },   
+{
+  "hi": "पेट दर्द वास्तव में कहाँ स्थित है? क्या यह ऊपरी हिस्से में है या निचले हिस्से में?",
+  "en": "Where exactly is the stomach pain located? Is it the upper part or lower part?",
+  "category": "stomach ache",
+
+}  ,
+  {
+      "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
+      "en": "Have you eaten anything unusual or had any changes in your diet recently?",
+      "category": "dietary changes",
+    },
+    {
+      "hi": "क्या आपको पाचन समस्याओं का इतिहास है (जैसे कि अम्लता, IBS, अल्सर आदि)?",
+      "en": "Do you have a history of digestive problems (e.g., acid reflux, IBS, ulcers)?",
+      "category": "digestive history",
+      },
     ],
     'bloating': [
         {
@@ -8522,7 +7984,37 @@ body_part_followup_questions = {
                 'hi': "क्या गर्दन का दर्द सिर या कंधों तक भी फैलता है?",
                 'en': "Does the neck pain radiate to your head or shoulders?",
                 'category': 'neck_pain_radiation'
-            }
+            },
+            {
+      "hi": "क्या आपकी गर्दन में दर्द लगातार है या आता-जाता है?",
+      "en": "Is your neck pain constant or does it come and go?",
+      "category": "intermittent_neck_pain",
+  },
+    {
+      "hi": "क्या गर्दन का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+      "en": "Does your neck pain increase during any specific activity?",
+      "category": "activity_related_neck_pain",
+  },
+    {
+      "hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?",
+      "en": "Is your mobility being affected due to neck pain?",
+      "category": "mobility_impact_with_neck_pain",
+    },
+    {
+      "hi": "क्या गर्दन के दर्द के साथ सिरदर्द भी हो रहा है?",
+      "en": "Are you experiencing headaches along with neck pain?",
+      "category": "headache_with_neck_pain",
+   },
+    {
+      "hi": "क्या गर्दन में दर्द के साथ कोई सूजन भी है?",
+      "en": "Is there any swelling along with neck pain?",
+      "category": "swelling_with_neck_pain",
+   },
+    {
+      "hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?",
+      "en": "Did your neck pain start suddenly or gradually?",
+      "category": "sudden_graduate_neck_pain",
+   },
         ],
         'stiffness': [
             {
@@ -8540,10 +8032,15 @@ body_part_followup_questions = {
         ],
         'injury': [
             {
-    'hi': "चोट ठीक कहां पर है?",
-    'en': "Where exactly is the injury?",
-    'category': 'neck_injury_location'
-           }
+        'hi': "क्या गर्दन को हिलाने पर दर्द बढ़ता है?",
+        'en': "Does the pain worsen when you move your neck?",
+        'category': 'neck_injury_movement_pain'
+    },
+    {
+        'hi': "क्या चोट के बाद से गर्दन में अकड़न या जकड़न महसूस हो रही है?",
+        'en': "Do you feel stiffness or tightness in your neck since the injury?",
+        'category': 'neck_injury_stiffness'
+    },
         ],
         'numbness': [
             {
@@ -8566,7 +8063,47 @@ body_part_followup_questions = {
                 'hi': "क्या घुटने का दर्द चलने या बैठने पर बढ़ता है?",
                 'en': "Does the knee pain worsen while walking or sitting?",
                 'category': 'knee_pain_activity'
-            }
+            },
+              {
+      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
+     "en": "Was there any specific injury or event that triggered the knee pain?",
+      "category": "knee pain",
+    }, 
+    {
+      "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
+      "en": "Does the knee pain occur constantly, or does it come and go?",
+      "category": "knee pain",
+  },
+    {
+      "hi": "क्या घुटने के आसपास सूजन, लाली या गर्मी महसूस हो रही है?",
+      "en": "Have you noticed any swelling, redness, or warmth around the knee?",
+      "category": "knee pain",
+   },
+    {
+      "hi": "क्या आपको घुटने को मोड़ने या सीधा करने में कोई समस्या हो रही है?",
+     "en": "Are you having trouble bending or straightening your knee?",
+      "category": "knee pain",
+   },
+    {
+      "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
+      "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
+      "category": "knee pain",
+    },
+    {
+      "hi": "दर्द आपके घुटने के किस हिस्से में महसूस हो रहा है? (सामने, पीछे, किनारे)",
+      "en": "Where exactly in the knee do you feel the pain (front, back, sides)?",
+      "category": "knee pain",
+ },
+    {
+      "hi": "क्या चलने या सीढ़ियाँ चढ़ने जैसी कुछ गतिविधियों से घुटने का दर्द बढ़ जाता है?",
+      "en": "Does the knee pain get worse with certain activities, like walking or climbing stairs?",
+      "category": "knee pain",
+   },
+    {
+      "hi": "क्या आपको घुटने में अस्थिरता या ऐसा लगता है जैसे घुटना 'गिर' रहा हो?",
+      "en": "Do you feel any instability or like your knee is 'giving way'?",
+      "category": "knee pain",
+   },
         ],
         'swelling': [
             {
@@ -8583,11 +8120,16 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-           {
-    'hi': "क्या दोनों घुटनों में चोट लगी है?",
-    'en': "Are both knees injured?",
-    'category': 'knee_injury_location'
-           }
+              {
+        'hi': "क्या चोट के बाद चलने में दिक्कत हो रही है?",
+        'en': "Are you having difficulty walking after the injury?",
+        'category': 'knee_injury_walking_difficulty'
+    },
+    {
+        'hi': "क्या आपके घुटने में सूजन या सूजन के साथ दर्द है?",
+        'en': "Is there swelling or pain along with the knee injury?",
+        'category': 'knee_injury_swelling_pain'
+    },
         ],
         'weakness': [
             {
@@ -8610,7 +8152,37 @@ body_part_followup_questions = {
                 'hi': "क्या पैर में दर्द चलने या खड़े होने पर बढ़ता है?",
                 'en': "Does the foot pain increase while walking or standing?",
                 'category': 'foot_pain_activity'
-            }
+            },
+            {
+      "hi": "क्या दर्द एक पैर में है या दोनों पैरों में?",
+      "en": "Is the pain in one foot or both feet?",
+      "category": "foot pain",
+   
+    },
+    {
+      "hi": "क्या पैर में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+      "en": "Is the foot pain constant, or does it come and go?",
+      "category": "foot pain",
+
+    },
+    {
+      "hi": "क्या आपको पैरों में सूजन, लाली, या चोट का अनुभव हो रहा है?",
+      "en": "Are you experiencing any swelling, redness, or bruising in the foot?",
+      "category": "foot pain",
+
+    },
+    {
+      "hi": "क्या आपको हाल ही में पैर में कोई चोट या आघात हुआ है?",
+      "en": "Have you had any recent injuries or trauma to your foot?",
+      "category": "foot pain",
+
+    },
+    {
+      "hi": "क्या दर्द कुछ गतिविधियों के साथ बढ़ जाता है, जैसे लंबी अवधि तक चलना या खड़ा होना?",
+      "en": "Does the pain get worse with certain activities, like walking or standing for long periods?",
+      "category": "foot pain",
+  
+    },
         ],
         'swelling': [
             {
@@ -8654,7 +8226,31 @@ body_part_followup_questions = {
                 'hi': "क्या कंधे का दर्द हाथ उठाने पर बढ़ता है?",
                 'en': "Does the shoulder pain increase when you lift your arm?",
                 'category': 'shoulder_pain_movement'
-            }
+            },
+                {
+      "hi": "क्या कंधे का दर्द तेज़, सुस्त या दर्दभरा है?",
+      "en": "Is the shoulder pain sharp, dull, or achy?",
+      "category": "shoulder pain",
+
+    },
+    {
+      "hi": "क्या आपको हाल ही में कंधे में कोई चोट हुआ है?",
+      "en": "Have you had any recent injuries to your shoulder?",
+      "category": "shoulder pain",
+
+    },
+    {
+      "hi": "क्या कंधे का दर्द विशिष्ट गतिविधियों या गतिविधियों, जैसे उठाने या पहुंचने से बढ़ जाता है?",
+      "en": "Does the shoulder pain worsen with specific movements or activities, such as lifting or reaching?",
+      "category": "shoulder pain",
+
+    },
+    {
+      "hi": "क्या आपने कंधे में सूजन, चोट या गति सीमा में प्रतिबंध महसूस किया है?",
+      "en": "Have you noticed any swelling, bruising, or restricted range of motion in the shoulder?",
+      "category": "shoulder pain",
+
+    },
         ],
         'stiffness': [
             {
@@ -8708,7 +8304,43 @@ body_part_followup_questions = {
             'hi': "क्या कान को छूने पर दर्द और बढ़ जाता है?",
             'en': "Does touching the ear worsen the pain?",
             'category': 'ear_pain_touch'
-        }
+        },
+        {
+          "hi": "क्या कान में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
+          "en": "Is the ear pain constant, or does it come and go?",
+          "category": "ear pain",
+   },
+        {
+          "hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?",
+          "en": "Do you have pain in one ear or both ears?",
+          "category": "ear pain",
+   },
+        {
+          "hi": "क्या कान में दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ?",
+          "en": "Did the ear pain start after a cold, sinus infection, or upper respiratory infection?",
+          "category": "ear pain",
+  },
+        {
+          "hi": "क्या आपको हाल ही में कान में कोई चोट या आघात हुआ है?",
+          "en": "Have you had any recent injuries or trauma to the ear?",
+          "category": "ear pain",
+  },
+        {
+          "hi": "क्या आपके कान से कोई रिसाव या डिस्चार्ज हो रहा है?",
+          "en": "Do you have drainage or discharge coming from your ear?",
+          "category": "ear pain",
+   },
+        {
+          "hi": "क्या आप हाल ही में जोरदार शोर या पानी (जैसे तैराकी या स्नान) के संपर्क में आए हैं?",
+          "en": "Have you recently been exposed to loud noises or water (e.g., swimming or bathing)?",
+          "category": "ear pain",
+  },
+        {
+          "hi": "क्या आपको बाहरी कान या कान के आस-पास के क्षेत्र को छूने या खींचने पर दर्द हो रहा है?",
+          "en": "Are you experiencing any pain when touching or pulling on the outer ear or around the ear area?",
+          "category": "ear pain",
+  },
+
     ],
     'hearing_loss': [
         {
@@ -8915,11 +8547,11 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-            {
-    'hi': "कौन से जोड़ में चोट लगी है?",
-    'en': "Which joints are injured?",
-    'category': 'joint_injury_location'
-            }
+               {
+        'hi': "क्या चोट के बाद चलने में दिक्कत हो रही है?",
+        'en': "Are you having difficulty walking after the injury?",
+        'category': 'knee_injury_walking_difficulty'
+    },
         ],
         'default': [
             {
@@ -9000,7 +8632,33 @@ body_part_followup_questions = {
                 'hi': "क्या मांसपेशियों में दर्द गतिविधि करने पर बढ़ता है?",
                 'en': "Does the muscle pain increase with activity?",
                 'category': 'muscle_pain_activity'
-            }
+            },
+            {
+              "hi": "क्या आपके मांसपेशियों में दर्द लगातार है या आता-जाता है?",
+              "en": "Is your muscle pain constant or does it come and go?",
+              "category": "intermittent_pain",
+          },
+            {
+              "hi": "क्या आपके मांसपेशियों में दर्द के साथ सूजन भी है?",
+              "en": "Is there any swelling along with your muscle pain?",
+              "category": "swelling",
+          },
+
+            {
+              "hi": "क्या मांसपेशियों में दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+            "en": "Does your muscle pain increase during any specific activity?",
+              "category": "activity_related_pain",
+          },
+        {
+              "hi": "क्या मांसपेशियों में दर्द के साथ कमजोरी भी महसूस हो रही है?",
+            "en": "Are you experiencing any weakness along with muscle pain?",
+              "category": "weakness",
+          },
+            {
+              "hi": "क्या आपको मांसपेशियों में खिंचाव महसूस हो रहा है?",
+              "en": "Are you feeling any muscle cramps?",
+              "category": "cramps",
+            }, 
         ],
         'weakness': [
             {
@@ -9017,11 +8675,11 @@ body_part_followup_questions = {
             }
         ],
         'injury': [
-            {
-    'hi': "क्या दोनों मांसपेशियों में चोट लगी है?",
-    'en': "Are both muscles injured?",
-    'category': 'muscle_injury_location'
-           }
+               {
+        'hi': "क्या चोट के बाद चलने में दिक्कत हो रही है?",
+        'en': "Are you having difficulty walking after the injury?",
+        'category': 'knee_injury_walking_difficulty'
+    },
         ],
         'swelling': [
             {
@@ -9139,7 +8797,39 @@ body_part_followup_questions = {
                 'hi': "क्या नाक में दर्द दबाने पर बढ़ता है?",
                 'en': "Does the pain in your nose worsen when you press on it?",
                 'category': 'nose_pain_touch'
-            }
+            },
+            {
+              "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
+              "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
+              "category": "throat pain",
+            },
+            {
+              "hi": "क्या आपने हाल ही में किसी ऐसे व्यक्ति से संपर्क किया है जिसे गले में दर्द या सर्दी हो?",
+              "en": "Have you been exposed to anyone with a sore throat or cold recently?",
+              "category": "throat pain",
+            },
+            {
+              "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
+              "en": "Do you smoke or have you been exposed to smoke or other irritants?",
+              "category": "throat pain",
+            },
+            {
+              "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
+              "en": "Are you experiencing a fever along with your sore throat?",
+              "category": "throat pain",
+
+            },
+            {
+              "hi": "क्या आपके गले में सूजन या लालिमा है?",
+              "en": "Do you have any swelling or redness in your throat?",
+              "category": "throat pain",
+
+            },
+            {
+              "hi": "क्या आपको गले में सूजन या लालिमा है?",
+              "en": "Do you have any swelling or redness in your throat?",
+              "category": "throat pain",
+            },
         ],
         'infection': [
             {
@@ -9172,7 +8862,49 @@ body_part_followup_questions = {
                 'hi': "क्या जांघ में दर्द चलने या दौड़ने से बढ़ता है?",
                 'en': "Does the thigh pain worsen when walking or running?",
                 'category': 'thigh_pain_activity'
-            }
+            },
+                {
+      "hi": "आप थाई में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+      "en": "Can you describe the pain in your thigh? Is it sharp, dull, burning, or throbbing?",
+      "category": "thigh pain",
+ 
+    },
+    {
+      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+      "en": "Where exactly is the pain located in your thigh? Is it on one side, both sides, or spreading elsewhere?",
+      "category": "thigh pain",
+
+    },
+    {
+      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+      "category": "thigh pain",
+
+    },
+    {
+      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+      "category": "thigh pain",
+
+    },
+    {
+      "hi": "क्या आपको पहले भी ऐसी थाई में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+      "en": "Do you have a history of similar pain or any known medical conditions?",
+      "category": "thigh pain",
+
+    },
+    {
+      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+      "en": "Are you taking any medications or supplements currently?",
+      "category": "thigh pain",
+
+    },
+    {
+      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+      "en": "How does the pain affect your daily activities or sleep?",
+      "category": "thigh pain",
+
+    },
         ],
         'weakness': [
             {
@@ -9297,7 +9029,37 @@ body_part_followup_questions = {
                 'hi': "क्या मुँह में दर्द खाना खाते समय बढ़ता है?",
                 'en': "Does the mouth pain increase while eating?",
                 'category': 'mouth_pain_eating'
-            }
+            },
+                {
+      "hi": "क्या आपके मुंह का दर्द तेजी से फैल रहा है",
+      "en": "Is your mouth pain spreading rapidly?",
+      "category": "rapid_spread_mouth_sores",
+  },
+    {
+      "hi": "क्या आपके मुंह में दर्द के साथ सूजन भी है?",
+      "en": "Is there any swelling along with your mouth pain?",
+      "category": "swelling_with_mouth_sores",
+  },
+    {
+      "hi": "क्या खाने या पीने के दौरान आपके मुंह में दर्द बढ़ जाता है?",
+      "en": "Does your mouth pain increase while eating or drinking?",
+      "category": "pain_with_mouth_sores",
+   },
+{
+      "hi": "क्या आपके मुंह से खून बह रहा है?",
+      "en": "Is your mouth bleeding?",
+      "category": "bleeding_mouth_sores",
+   },
+    {
+      "hi": "क्या आपको मुंह के दर्द के साथ दांत में भी दर्द हो रहा है?",
+      "en": "Are you experiencing tooth pain along with mouth pain?",
+      "category": "tooth_pain_with_mouth_sores",
+   },
+    {
+      "hi": "क्या मुंह में दर्द के कारण बोलने में कठिनाई हो रही है?",
+      "en": "Is the mouth pain causing difficulty in speaking?",
+      "category": "speech_difficulty_with_mouth_sores",
+  },
         ],
         'ulcer': [
             {
@@ -9334,6 +9096,23 @@ body_part_followup_questions = {
                 'category': 'mouth_bad_breath_duration'
             }
         ],
+        'numbness':[
+            {
+        'hi': "क्या सुन्नता आपके होंठों, जीभ या मुंह के अंदर किसी विशेष हिस्से में है?",
+        'en': "Is the numbness in your lips, tongue, or a specific part inside the mouth?",
+        'category': 'mouth_numbness_location'
+    },
+    {
+        'hi': "क्या यह सुन्नता खाने या पीने के बाद महसूस होती है?",
+        'en': "Does the numbness occur after eating or drinking?",
+        'category': 'mouth_numbness_trigger_food'
+    },
+    {
+        'hi': "क्या मुंह में सुन्नता के साथ जलन, झुनझुनी या कोई अजीब स्वाद भी महसूस होता है?",
+        'en': "Do you feel burning, tingling, or an unusual taste along with the numbness in the mouth?",
+        'category': 'mouth_numbness_sensation'
+    },
+        ],
         'default': [
             {
                 'hi': "कृपया अपने मुँह की समस्या के बारे में और जानकारी दें।",
@@ -9356,7 +9135,6 @@ body_part_followup_questions = {
             'hi': "क्या आपकी मासिक धर्म में असामान्य रक्तस्राव होता है?",
             'en': "Do you have abnormal bleeding during your period?",
             'category': 'period_bleeding'
-	
         }
     ],
     'default': [
@@ -9472,20 +9250,6 @@ body_part_to_specialist = {
     'peripheral': 'Neurologist',
 }
 
-
-body_part_aliases = {
-    'teeth': 'tooth',
-    'tooth': 'tooth',
-    'molars': 'tooth',
-    'wisdom tooth': 'tooth',
-    'eye': 'eye',
-    'eyes': 'eye',
-    'ear': 'ear',
-    'ears': 'ear',
-    'periods' : 'period'
-    # Add more synonyms here
-}
-
 BP_CANON = {
     'teeth':      'tooth',
     'tooth':      'tooth',
@@ -9512,6 +9276,8 @@ BP_CANON = {
     'palms': 'palm',
     'thumbs': 'thumb',
      'bones': 'bone',
+     'belly': 'stomach',
+     'abdomen':'stomach',
     # …and so on for whatever you support
 }
 
@@ -9521,7 +9287,7 @@ body_parts = [
     'mouth', 'nose', 'tooth', 'tooths', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
-    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial','jaw','muscle',
+    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period' 
 ] 
@@ -9878,7 +9644,7 @@ HINDI_OFFLINE_DICT = {
         "knee swelling": "घुटने में सूजन",
         "shoulder weakness": "कंधे में कमजोरी",
         "ear ringing": "कान में घंटी बजना",
-	"eye weakness": "आँखों में कमजोरी",
+	      "eye weakness": "आँखों में कमजोरी",
         "nosebleed": "नाक से खून आना",
 
 	#newly added
