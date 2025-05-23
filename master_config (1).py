@@ -1087,8 +1087,8 @@ symptom_synonyms = {
 ],
 'body ache': [
     'body pain', 'aching body', 'muscle ache', 'general pain', 'bodyache', 'aching body',
-    'whole body ache', 'sore body', 'body discomfort', 'all-over ache', 'overall body pain',
-    'aching all over', 'body aches', 'bodyaches', 'body pains', 'pain in body', 'pain all over body'
+    'whole body ache', 'sore body', 'body discomfort', 'all-over ache', 'overall body pain','pain in the body','pain in our body','aches on body','body is aching',
+    'aching all over', 'body aches', 'bodyaches', 'body pains', 'pain in body', 'pain all over body','body is paining'
 ],
 'bruises': [
     'contusions', 'black and blue marks', 'skin discoloration', 'hematoma', 'bruising',
@@ -7780,13 +7780,6 @@ trigger_keywords = {
         'blood': ['blood', 'bloody', 'red urine', 'hematuria'],
         'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing']
     },
-
-'bone': {
-    'pain': ['pain', 'ache', 'hurts', 'sore', 'throbbing', 'tender'],
-    'fracture': ['fracture', 'crack', 'broken','bloated'],
-    'swelling': ['swelling', 'swollen', 'inflamed'],
-    'injury': ['injury', 'hit', 'fall', 'accident'],
-},
     'toes': {
         'pain': ['ache', 'throbbing', 'sharp', 'burn', 'tingling', 'numbness'],
         'swelling': ['swollen', 'puffy', 'inflamed', 'red', 'tender'],
