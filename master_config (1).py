@@ -115,7 +115,7 @@ symptom_synonyms = {
     'nausea': [
         'feeling nauseous', 'queasy', 'stomach turning', 'sick feeling', 'gagging sensation', 'discomfort in stomach', 'unsettled stomach',
         'vomit-like sensation', 'stomach churn', 'sick to stomach', 'nauseous feeling', 'spinning stomach', 'gagging feeling', 'feeling on the verge of throwing up',
-        'uneasy stomach', 'intense queasiness', 'morning sickness feeling',
+        'uneasy stomach', 'intense queasiness', 'morning sickness feeling', 'feel like vomiting',
         'stomach discomfort', 'stomach churn', 'puking feeling', 'feeling like you could throw up',
         'unsettled feeling in stomach', 'feeling lightheaded with nausea', 'stomach unease','nauseous',
         'sick feeling after meals', 'swirling stomach', 'nauseous waves', 'gag reflex activated'
