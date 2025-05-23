@@ -7526,7 +7526,7 @@ symptom_followup_questions = {
   },
 ],
 
-"eye_weakness": [
+"eye weakness": [
     {
         'hi': "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
         'en': "Do your eyes feel tired after reading or using a screen for a long time?",
@@ -7538,7 +7538,7 @@ symptom_followup_questions = {
         'category': 'eye_weakness_prescription'
     }
 ],
-	"cold_intolerance": [
+	"cold intolerance": [
   {
     "hi": "क्या आपको सामान्य से अधिक ठंड लगती है, जब दूसरों को सामान्य लगता है?",
     "en": "Do you feel colder than others around you in normal temperatures?",
@@ -7583,6 +7583,89 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
+"goiter": [
+  {
+    "hi": "क्या आपकी गर्दन के सामने किसी प्रकार की सूजन या उभार महसूस हो रहा है?",
+    "en": "Do you feel any swelling or lump in the front of your neck?",
+    "category": "goiter",
+    "symptom": "neck swelling or lump",
+    "risk_factor":False,
+  },
+  {
+    "hi": "क्या आपको निगलने या सांस लेने में कठिनाई हो रही है?",
+    "en": "Are you experiencing difficulty in swallowing or breathing?",
+    "category": "goiter",
+    "symptom": "difficulty swallowing or breathing",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी आवाज़ भारी या कर्कश हो गई है?",
+    "en": "Has your voice become hoarse or rough?",
+    "category": "goiter",
+    "symptom": "hoarseness of voice",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको थकान, ठंड सहन करने में कठिनाई, या वजन बढ़ने जैसी समस्याएं हैं?",
+    "en": "Do you experience fatigue, difficulty tolerating cold, or unexplained weight gain?",
+    "category": "goiter",
+    "symptom": "hypothyroid symptoms",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके खान-पान में आयोडीन की कमी है या आप ऐसे क्षेत्र में रहते हैं जहाँ आयोडीन की कमी आम है?",
+    "en": "Do you have an iodine-deficient diet or live in an area where iodine deficiency is common?",
+    "category": "goiter",
+    "symptom": "iodine deficiency",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपके परिवार में किसी को थायरॉइड या गले की सूजन से संबंधित समस्या रही है?",
+    "en": "Is there a family history of thyroid disorders or neck swelling?",
+    "category": "goiter",
+    "symptom": "family history",
+    "risk_factor": True,
+  },
+],
+"slow reflexes": [
+  {
+    "hi": "क्या आपको लगता है कि आपकी प्रतिक्रिया गति (रिफ्लेक्स) धीमी हो गई है?",
+    "en": "Do you feel that your reaction time or reflexes have become slower?",
+    "category": "slow reflexes",
+    "symptom": "subjective slowness of reflexes",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपने हाल ही में थकान, सुस्ती या कम ऊर्जा का अनुभव किया है?",
+    "en": "Have you recently experienced fatigue, sluggishness, or low energy?",
+    "category": "slow reflexes",
+    "symptom": "sluggishness or fatigue",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी मांसपेशियों की ताकत या गतिविधि में कोई कमी आई है?",
+    "en": "Have you noticed any decrease in muscle strength or activity?",
+    "category": "slow reflexes",
+    "symptom": "muscle weakness",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको थायरॉइड, न्यूरोलॉजिकल या मेटाबॉलिक बीमारी का कोई इतिहास है?",
+    "en": "Do you have a history of thyroid, neurological, or metabolic disorders?",
+    "category": "slow reflexes",
+    "symptom": "underlying medical history",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपने हाल ही में सिर पर चोट या कोई न्यूरोलॉजिकल समस्या का सामना किया है?",
+    "en": "Have you recently had a head injury or experienced any neurological issue?",
+    "category": "slow reflexes",
+    "symptom": "recent head injury or neuro issue",
+    "risk_factor": True,
+  },
+]
+
+
 
 
 
