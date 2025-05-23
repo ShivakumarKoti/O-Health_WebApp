@@ -830,7 +830,7 @@ symptom_synonyms = {
 'thyroid': [
     'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'goiter', 'thyroid dysfunction',
     'thyroid disease', 'thyroid cancer', 'thyroiditis', 'low thyroid function', 'high thyroid function', 'endocrine disorder', 'thyroid nodules', 'thyroid hormone imbalance',
-    'TSH imbalance', 'thyroid problems', 'autoimmune thyroid disease', 'pituitary-thyroid dysfunction', 'thyroid testing'
+    'TSH imbalance', 'thyroid problems', 'autoimmune thyroid disease', 'pituitary-thyroid dysfunction', 'thyroid testing', 'TSH'
 ],
 
 'piles': [
@@ -1094,6 +1094,22 @@ symptom_synonyms = {
     'contusions', 'black and blue marks', 'skin discoloration', 'hematoma', 'bruising',
     'purple marks', 'banged up', 'bruised skin', 'minor bleeding under skin',
     'bluish patches','blue marks on skin', 'black marks on skin', 'bruise', 'bruised'
+],
+'cold intolerance': [
+    'sensitivity to cold', 'discomfort in cold temperatures', 'feeling cold easily', 'low tolerance to cold',
+    'cold sensitivity', 'hypersensitivity to cold', "can't tolerate cold", 
+    'intolerance to cold weather', 'cold discomfort', 'cold hypersensitivity', 'decreased cold tolerance', 'thermoregulatory dysfunction',
+    'abnormal cold sensation', 'excessive response to cold', 'shivering easily', 'overly sensitive to temperature drops'
+],
+'goiter': [
+    'neck swelling', 'thyroid swelling', 'thyroid gland enlargement',
+    'bulging thyroid', 'neck lump', 'enlarged neck gland', 'neck enlargement',
+    'swollen neck gland', 'neck protuberance'
+],
+'slow reflexes': [
+    'delayed reflexes', 'sluggish reflexes', 'reduced reflex speed', 'impaired reflexes', 'slow reaction time', 'delayed response', 'reflex is slow'
+    'slow neurological responses', 'poor reflexes', 'delayed nerve response', 'slowed reflex action', 'decreased reflex speed', 'slow reflex',
+    'delayed motor response', 'slow sensorimotor reaction', 'reflex sluggishness', 'impaired reaction time', 'slow response time', 'reflexes are slow'
 ],
 
 
