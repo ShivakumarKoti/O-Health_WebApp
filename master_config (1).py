@@ -4046,47 +4046,51 @@ symptom_followup_questions = {
       "symptom": "previous injuries",
       "risk_factor": False,    },
   ],
-
-  "injury": [
-    {
-      "hi": "लिगामेंट की चोट कैसे हुई (जैसे, खेल, दुर्घटना, गिरना, मुड़ने की गति)?",
-      "en": "How did the injury occur (through sports, accident, fall, twisting movement)?",
-      "category": "ligament injury",
-      "symptom": "mechanism of injury",
-      "risk_factor": False,    },
-    {
-      "hi": "कौन सा जोड़ा या क्षेत्र घायल हुआ है (जैसे, घुटना, टखना, कोहनी)?",
-      "en": "Which joint or area is injured (e.g., knee, ankle, elbow)?",
-      "category": "ligament injury",
-      "symptom": "injured joint or area",
-      "risk_factor": False,    },
-    {
-  "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
-  "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-  "category": "ligament injury",
-  "symptom": "swelling, bleeding, or bruising",
-  "risk_factor": False,
-},
-
-    {
-      "hi": "क्या चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने या विशिष्ट गतिविधियों से यह बढ़ जाता है?",
-      "en": "Is the pain after injury constant, or does it worsen with movement or specific activities?",
-      "category": "ligament injury",
-      "symptom": "pain variation with movement",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप प्रभावित जोड़े को हिला सकते हैं, या यह हिलाने में बहुत दर्दनाक या अस्थिर है?",
-      "en": "Can you move the affected joint, or is it too painful or unstable to do so?",
-      "category": "ligament injury",
-      "symptom": "joint movement",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने पहले कभी लिगामेंट की चोट या उसी जोड़े में बार-बार समस्याएँ महसूस की हैं?",
-      "en": "Have you had any previous injuries or recurring problems in the same area?",
-      "category": "ligament injury",
-      "symptom": "previous injuries",
-      "risk_factor": False,    },
-  ],
+	
+"injury": [
+  {
+    "hi": "आपको चोट कैसे लगी (जैसे, खेल, दुर्घटना, गिरना, मुड़ने की गति)?",
+    "en": "How did the injury occur (through sports, accident, fall, twisting movement)?",
+    "category": "general injury",
+    "symptom": "mechanism of injury",
+    "risk_factor": False,
+  },
+  {
+    "hi": "कौन सा जोड़ा या क्षेत्र घायल हुआ है (जैसे, घुटना, टखना, कोहनी)?",
+    "en": "Which joint or area is injured (e.g., knee, ankle, elbow)?",
+    "category": "general injury",
+    "symptom": "injured joint or area",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+    "category": "general injury",
+    "symptom": "swelling, bleeding, or bruising",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने या विशिष्ट गतिविधियों से यह बढ़ जाता है?",
+    "en": "Is the pain after injury constant, or does it worsen with movement or specific activities?",
+    "category": "general injury",
+    "symptom": "pain variation with movement",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आप प्रभावित क्षेत्र को हिला सकते हैं, या यह हिलाने में बहुत दर्दनाक या अस्थिर है?",
+    "en": "Can you move the affected area, or is it too painful or unstable to do so?",
+    "category": "general injury",
+    "symptom": "movement limitation",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपने पहले कभी उसी क्षेत्र में चोट या बार-बार समस्याएँ महसूस की हैं?",
+    "en": "Have you had any previous injuries or recurring problems in the same area?",
+    "category": "general injury",
+    "symptom": "previous injuries",
+    "risk_factor": False,
+  },
+],
 
   "gout": [
 
