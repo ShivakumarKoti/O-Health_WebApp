@@ -16,7 +16,7 @@ symptom_list = [
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice','hand dryness', 'wound', 'body ache','bruises',
-
+'cold intolerance', 'infertility', 'goiter'
 
 # weakness symtom
 'eye weakness' #'leg weakness'
@@ -7076,6 +7076,19 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
+      "hi": "क्या आपको गले में खराश है?",
+      "en": "Do you have a sore throat?",
+      "category": "sore_throat",
+      "symptom": "sore_throat",
+      "risk_factor": False,    },
+	  {
+    "hi": "क्या आपके गले में किसी प्रकार की गांठ या सूजन महसूस होती है?",
+    "en": "Do you feel any lump or swelling in your throat?",
+    "category": "broken voice",
+    "symptom": None,
+    "risk_factor": True,
+  },
+	 {
     "hi": "क्या बोलते समय आपकी आवाज़ टूटती है या रुक-रुक कर आती है?",
     "en": "Does your voice crack or break while speaking?",
     "category": "broken voice",
@@ -7110,13 +7123,7 @@ symptom_followup_questions = {
     "symptom": "broken voice",
     "risk_factor": False,
   },
-  {
-    "hi": "क्या आपके गले में किसी प्रकार की गांठ या सूजन महसूस होती है?",
-    "en": "Do you feel any lump or swelling in your throat?",
-    "category": "broken voice",
-    "symptom": None,
-    "risk_factor": True,
-  },
+ 
 ],
  "pregnancy": [
   {
