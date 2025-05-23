@@ -16,7 +16,7 @@ symptom_list = [
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar','waist pain', 'thigh pain', 'pelvic pain', 'elbow pain', 'calf pain', 'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine', 'broken tooth', 'tooth decay','broken voice','hand dryness', 'wound', 'body ache','bruises',
-'cold intolerance', 'infertility', 'goiter'
+'cold intolerance', 'goiter',
 
 # weakness symtom
 'eye weakness' #'leg weakness'
@@ -816,7 +816,7 @@ symptom_synonyms = {
     'heavy periods', 'spotting between periods', 'missed periods','pelvic pain', 'uterine bleeding','menopause', 'vaginal itching', 'vaginal odor',
     'ovulation pain', 'breast tenderness', 'breast lumps', 'nipple discharge', 'breast pain', 'breast swelling','difficulty conceiving',
     'urinary tract infection', 'cervical issue', 'itchy vulva', 'burning vulva','menopausal', 'clotting during periods',
-    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods','no periods', 'absent periods', 'amenorrhea'
+    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods','no periods', 'absent periods', 'amenorrhea', 'masik dharm'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
@@ -7537,7 +7537,54 @@ symptom_followup_questions = {
         'en': "Have you ever been advised to use glasses or contact lenses?",
         'category': 'eye_weakness_prescription'
     }
-]
+],
+	"cold_intolerance": [
+  {
+    "hi": "क्या आपको सामान्य से अधिक ठंड लगती है, जब दूसरों को सामान्य लगता है?",
+    "en": "Do you feel colder than others around you in normal temperatures?",
+    "category": "cold intolerance",
+    "symptom": "increased sensitivity to cold",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या ठंडी जगह में रहने से आपके हाथ या पैर सुन्न हो जाते हैं या रंग बदलते हैं?",
+    "en": "Do your hands or feet become numb or change color when exposed to cold?",
+    "category": "cold intolerance",
+    "symptom": "extremity response to cold",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको ठंड में थकान, कमजोरी या मानसिक भ्रम जैसी समस्याएं होती हैं?",
+    "en": "Do you experience fatigue, weakness, or mental fog in cold environments?",
+    "category": "cold intolerance",
+    "symptom": "cold-related fatigue or confusion",
+    "risk_factor": False,
+  },
+{
+  "hi": "क्या आप ठंड से बचने के लिए सामान्य से अधिक गर्म कपड़े पहनते हैं?",
+  "en": "Do you find yourself needing to wear more layers or warmer clothing than others to stay comfortable in the cold?",
+  "category": "cold intolerance",
+  "symptom": "excessive need for warmth",
+  "risk_factor": False,
+},
+{
+  "hi": "क्या ठंड के कारण आपकी नींद में खलल पड़ता है या आप रात में जाग जाते हैं?",
+  "en": "Does cold interfere with your sleep or cause you to wake up during the night?",
+  "category": "cold intolerance",
+  "symptom": "sleep disruption due to cold",
+  "risk_factor": False,
+},
+  
+{
+    "hi": "क्या आपके शरीर का तापमान दूसरों की तुलना में जल्दी कम हो जाता है?",
+    "en": "Does your body temperature drop more quickly than others in cold conditions?",
+    "category": "cold intolerance",
+    "symptom": "rapid drop in body temperature",
+    "risk_factor": False,
+  },
+],
+
+
 
 }
 
