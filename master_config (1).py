@@ -1010,7 +1010,7 @@ symptom_synonyms = {
     'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
     'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
     'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
-    'hunger caused by blood sugar drops', 'hunger due to stress', 'hunger from emotional eating','eager to eat more',
+    'hunger caused by blood sugar drops', 'hunger due to stress', 'hunger from emotional eating','hungry','eager to eat more',
     'more hunger than normal', 'overeating due to being hungrier'
 ],
 
@@ -4046,7 +4046,7 @@ symptom_followup_questions = {
       "symptom": "previous injuries",
       "risk_factor": False,    },
   ],
-	
+
 "injury": [
   {
     "hi": "आपको चोट कैसे लगी (जैसे, खेल, दुर्घटना, गिरना, मुड़ने की गति)?",
@@ -7878,16 +7878,6 @@ body_part_followup_questions = {
             'en': "Can you describe more about your tooth issue?",
             'category': 'tooth_detail'
         },
-        {
-            'hi': "क्या यह समस्या अचानक शुरू हुई या धीरे-धीरे बढ़ी?",
-            'en': "Did this issue start suddenly or gradually?",
-            'category': 'tooth_onset'
-        },
-        {
-            'hi': "क्या आपको चबाने में कोई तकलीफ होती है?",
-            'en': "Do you have trouble chewing?",
-            'category': 'tooth_chewing_difficulty'
-        }
     ]
 },
 	 'leg': {
