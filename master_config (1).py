@@ -708,9 +708,9 @@ symptom_synonyms = {
 ],
 
 'irregular heartbeat': [
-    'arrhythmia', 'abnormal heartbeat', 'heart palpitations', 'irregular pulse', 'heart rhythm disorder', 'uneven heartbeat', 'skipped heartbeat', 'fast heartbeat',
+    'arrhythmia', 'abnormal heartbeat', 'heart palpitations', 'irregular pulse', 'heart rhythm disorder', 'uneven heartbeat', 'skipped heartbeat',
     'rapid heartbeat', 'slow heartbeat', 'tachycardia', 'bradycardia', 'atrial fibrillation', 'ventricular fibrillation', 'heart flutter', 'irregular heart rhythm',
-    'heart irregularities', 'palpitations', 'fluttering heart', 'cardiac arrhythmia', 'dysrhythmia', 'irregular pulse rate', 'heartbeat irregularity',
+    'heart irregularities', 'palpitations', 'fluttering heart', 'cardiac arrhythmia', 'dysrhythmia', 'irregular pulse rate', 'heartbeat irregularity','fast heartbeat',
     'irregular heart rate', 'heart pounding','heartbeat is late','heart beat is late','heartbeat is early','heart beat is early','late heart beat','late heartbeat','heartrate is fast','rapid heartrate',
     'pounding heart rate','pounding heartrate','rapid heart rate','rapid heartrate'
 ],
@@ -794,7 +794,7 @@ symptom_synonyms = {
 ],
 
 'bone fracture': [
-    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'fractures', 'crack in my bone','crack in a bone',
+    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'fracture', 'crack in my bone','crack in a bone',
     'stress fracture', 'hairline fracture', 'bone splinter','fracture in bone','crack in bone','bone has cracked','cracks in bone', 'bone cracked',
     'fractured limb', 'fractured bone segment', 'broken limb', 'broken bone segment', 'cracked bone injury', 'bone rupture', 'bone fracture symptoms',
     'fractured bone tissue', 'fracture of the bone', 'crack in bone', 'fractured'
@@ -904,8 +904,8 @@ symptom_synonyms = {
 'weakness in eyes', 'weak eyes', 'eyes are weak', 'eyes are becoming weak', 'eye is weak','eye strain', 
 'fatigued eyes', 'heavy eyes', 'eye muscle weakness', 'eye discomfort', 'droopy eyelids', 'lack of eye strength',
 'vision fatigue', 'eye exhaustion', 'eye tiredness', 'reduced eye stamina', 'difficulty keeping eyes open', 'eye sensitivity', 'failing eye strength',
-'eye fatigue after reading', 'poor eye endurance', 'eye weariness',  'eye fragility', 'weak eye muscles',
-'unstable eye movement', 'eye soreness', 'eye heaviness','eye weakness',
+'eye fatigue after reading', 'poor eye endurance', 'eye weariness',  'eye fragility', 'weak eye muscles','weakness eyes'
+'unstable eye movement', 'eye soreness', 'eye heaviness','eye weakness','weakness in eyes','weakness in the eyes','weakness in eye','weakness in a eye',
 'eyes feeling overworked', 'weak visual acuity', 'eye tiredness at night', 'eye discomfort after long tasks', 'loss of eye strength', 'drooping eyes',
 'strained eye muscles', 'eye tension', 'sensitivity to light'
 ],
@@ -1006,7 +1006,7 @@ symptom_synonyms = {
     'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite',
     'overeating due to hunger', 'persistent hunger', 'craving food all the time', 'hungry shortly after eating',
     'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat', 
-    'eating more than usual', 'feeling hungry', 'unable to satisfy hunger', 'eating more than I need to',
+    'feeling hungry', 'unable to satisfy hunger', 'eating more',
     'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
     'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
     'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
@@ -7513,6 +7513,20 @@ symptom_followup_questions = {
     "symptom": None,
     "risk_factor": False,
   },
+
+'eye_weakness': [
+    {
+        'hi': "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
+        'en': "Do your eyes feel tired after reading or using a screen for a long time?",
+        'category': 'eye_weakness_fatigue_screen'
+    },
+    {
+        'hi': "क्या आपको पहले चश्मा या लेंस का उपयोग करने की सलाह दी गई है?",
+        'en': "Have you ever been advised to use glasses or contact lenses?",
+        'category': 'eye_weakness_prescription'
+    }
+]
+
 ],
 
 
@@ -7615,6 +7629,7 @@ trigger_keywords = {
         'itching': ['itchy', 'itching', 'scratchy', 'itches','irritated','irritation'],
         'redness': ['red', 'bloodshot', 'pink', 'inflamed'],
         'burn'        : ['burn', 'burning', 'chemical', 'irritation'],
+	'weakness' : ['weakness', 'weak'],
         'blurry vision': ['blurry', 'blurry vision', 'not clear', 'foggy', 'unclear','blurred']
     },
     'hand': {
@@ -7956,6 +7971,20 @@ body_part_followup_questions = {
             'category': 'eye_burn_rubbing'
         }
     ],
+
+    'weakness': [
+	{
+	'hi': "क्या कम रोशनी में देखने में परेशानी होती है?",
+	'en': "Do you have trouble seeing in low light conditions?",
+	'category': 'eye_weakness_low_light'
+	},
+	{
+	'hi': "क्या आपको धुंधला दिखता है जब आप दूर या पास की चीजें देखते हैं?",
+	'en': "Do things appear blurry when you look at objects far away or up close?",
+	'category': 'eye_weakness_blurry_vision'
+	},
+    ],
+	
     'blurry_vision': [
         {
             'hi': "क्या धुंधली दृष्टि दूर की चीज़ें देखने में होती है या पास की?",
@@ -9332,7 +9361,12 @@ BP_CANON = {
  'hands':'hand',
  'wrists':'wrist',
   'thighs':'thigh',
-   'periods' : 'period'
+   'periods' : 'period',
+    'muscles':'muscle',
+    'arms':'arm',
+    'palms': 'palm',
+    'thumbs': 'thumb',
+     'bones': 'bone',
     # …and so on for whatever you support
 }
 
@@ -9366,7 +9400,7 @@ symptom_to_specialist = {
 
     # Neurologist: Neurological and brain-related symptoms
     'dizziness': 'Neurologist',
-    'weakness': 'Neurologist',
+    'weakness': 'General Practitioner',
     'numbness': 'Neurologist',
     'confusion': 'Neurologist',
     'memory loss': 'Neurologist',
@@ -9699,6 +9733,7 @@ HINDI_OFFLINE_DICT = {
         "knee swelling": "घुटने में सूजन",
         "shoulder weakness": "कंधे में कमजोरी",
         "ear ringing": "कान में घंटी बजना",
+	"eye weakness": "आँखों में कमजोरी",
         "nosebleed": "नाक से खून आना",
 
 	#newly added
