@@ -6446,6 +6446,7 @@ trigger_keywords = {
     },
    'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
+	'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'crack', 'cracked', 'hit', 'hurt'],
@@ -6464,6 +6465,7 @@ trigger_keywords = {
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
+	 'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
         'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
@@ -7133,6 +7135,18 @@ body_part_followup_questions = {
       "category": "hand pain",
     },
         ],
+	'weakness': [
+            {
+                'hi': "क्या आप हाथों से चीजें पकड़ने या पकड़ बनाए रखने में परेशानी महसूस करते हैं?",
+                'en': "Do you find it difficult to grip or hold objects with your hands?",
+                'category': 'hand_weakness_grip'
+            },
+            {
+                'hi': "क्या हाथों में कमजोरी के साथ कांपना या थकावट भी महसूस होती है?",
+                'en': "Do your hands feel shaky or tired along with weakness?",
+                'category': 'hand_weakness_tremor_fatigue'
+            },
+        ],
         'numbness': [
             {
                 'hi': "क्या झुनझुनी या सुन्नपन उंगलियों तक सीमित है?",
@@ -7345,7 +7359,18 @@ body_part_followup_questions = {
             "symptom": None,
             "risk_factor": False,
         },
-    
+        ],
+	'weakness': [
+            {
+                'hi': "क्या आपकी पीठ की कमजोरी के कारण लंबे समय तक खड़े रहना मुश्किल होता है?",
+                'en': "Does weakness in your back make it difficult to stand for long periods?",
+                'category': 'back_weakness_standing'
+            },
+            {
+                'hi': "क्या पीठ की कमजोरी के कारण आपको झुकने या उठने में परेशानी होती है?",
+                'en': "Does back weakness make it hard for you to bend or lift?",
+                'category': 'back_weakness_bend_lift'
+            },
         ],
         'stiffness': [
             {
