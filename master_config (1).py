@@ -6438,7 +6438,7 @@ trigger_keywords = {
 
     'eye': {
         'itching': ['itchy', 'itching', 'itch', 'itches', 'scratchy', 'scratching', 'irritated', 'irritation'],
-        'redness': ['red', 'reddish', 'bloodshot', 'pink', 'inflamed', 'discoloration'],
+        'redness': ['redness', 'red', 'reddish', 'bloodshot', 'pink', 'inflamed', 'discoloration'],
         'burn': ['burn', 'burning', 'burnt', 'irritation', 'sting', 'stinging'],
         'weakness': ['weak', 'weakness', 'tired eyes', 'eye strain', 'fatigued eyes', 'weakened'],
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
@@ -6551,7 +6551,7 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
-        'weakness': ['weak', 'unstable', 'giving way', "can’t move"],
+        'weakness': ['weak','weakness', 'unstable', 'giving way', "can’t move"],
         'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
     },
     'skin': {
