@@ -6473,6 +6473,7 @@ trigger_keywords = {
     },
     'chest': {
         'pain': ['pain', 'pains', 'tightness', 'pressure', 'hurt', 'hurts', 'ache', 'aches', 'burning', 'burn', 'soreness'],
+	 'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling', 'tight'],
         'breathing': ['shortness of breath', 'difficulty breathing', 'breathing problem', 'tight chest', 'can’t breathe', 'labored breathing', 'breathless'],
         'palpitations': ['palpitations', 'heart racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat']
@@ -6501,6 +6502,7 @@ trigger_keywords = {
     },
     'neck': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
+	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'tense', 'tension'],
         'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
@@ -6517,6 +6519,7 @@ trigger_keywords = {
     },
     'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
@@ -6600,7 +6603,8 @@ trigger_keywords = {
  
  'heart': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
-        'burn': ['burns', 'burning', 'burnt', 'burnt'],
+        'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted', 'shortness of breath with effort'],
+	 'burn': ['burns', 'burning', 'burnt', 'burnt'],
         'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat','pounding']
  },
 
@@ -7436,7 +7440,18 @@ body_part_followup_questions = {
       "category": "activity_related_pain",
     },
         ],
-
+	'weakness': [
+            {
+                'hi': "क्या छाती में कमजोरी या भारीपन के कारण आपको सांस लेने में कठिनाई होती है?",
+                'en': "Do you experience difficulty breathing due to weakness or heaviness in the chest?",
+                'category': 'chest_weakness_breathing_difficulty'
+            },
+            {
+                'hi': "क्या छाती की कमजोरी के कारण आपको सामान्य काम करने में भी थकावट महसूस होती है?",
+                'en': "Does chest weakness cause you to feel fatigued even during routine activities?",
+                'category': 'chest_weakness_fatigue'
+            },
+        ],
         'discomfort': [
             {
                 'hi': "क्या छाती में असहजता के साथ मतली या पसीना भी आता है?",
@@ -7687,7 +7702,7 @@ body_part_followup_questions = {
                 'hi': "क्या पेट के हिस्से में ताकत की कमी के कारण आपको कोई विशेष शारीरिक गतिविधियाँ करने में परेशानी होती है?",
                 'en': "Does the lack of strength in your abdominal area affect your ability to perform physical activities?",
                 'category': 'stomach_weakness_activity_limit'
-            }
+            },
         ],
     'bloating': [
         {
@@ -7797,6 +7812,18 @@ body_part_followup_questions = {
       "en": "Did your neck pain start suddenly or gradually?",
       "category": "sudden_graduate_neck_pain",
    },
+        ],
+	'weakness': [
+            {
+                'hi': "क्या गर्दन की कमजोरी के कारण सिर को संभालना मुश्किल होता है?",
+                'en': "Does neck weakness make it difficult to hold your head up?",
+                'category': 'neck_weakness_head_support'
+            },
+            {
+                'hi': "क्या गर्दन में कमजोरी के साथ थकान या झुकाव महसूस होता है?",
+                'en': "Do you feel fatigue or drooping in the neck along with weakness?",
+                'category': 'neck_weakness_fatigue_droop'
+            },
         ],
         'stiffness': [
             {
@@ -7965,6 +7992,18 @@ body_part_followup_questions = {
       "category": "foot pain",
   
     },
+        ],
+	'weakness': [
+            {
+                'hi': "क्या पैर की कमजोरी के कारण आपको चलने में अस्थिरता महसूस होती है?",
+                'en': "Does foot weakness make you feel unsteady while walking?",
+                'category': 'foot_weakness_unsteady_walking'
+            },
+            {
+                'hi': "क्या पैर की कमजोरी के कारण सीढ़ियाँ चढ़ना या दौड़ना मुश्किल हो जाता है?",
+                'en': "Does foot weakness make it difficult to climb stairs or run?",
+                'category': 'foot_weakness_stairs_running'
+            },
         ],
         'swelling': [
             {
@@ -8465,6 +8504,18 @@ body_part_followup_questions = {
             {'hi': "क्या दर्द सीने के बीच में है या बाईं तरफ?",
              'en': "Is the pain in the center of the chest or on the left side?",
              'category': 'heart_pain_location'}
+        ],
+	     'weakness': [
+            {
+                'hi': "क्या हल्की गतिविधियों से ही थकान या सांस फूलने लगती है?",
+                'en': "Do you feel tired or short of breath even with mild activity?",
+                'category': 'heart_weakness_exertion'
+            },
+            {
+                'hi': "क्या आपकी सहनशक्ति पहले की तुलना में कम हो गई है?",
+                'en': "Has your stamina decreased compared to before?",
+                'category': 'heart_weakness_stamina_loss'
+            },
         ],
         'palpitation': [
             {'hi': "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
