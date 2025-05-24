@@ -6479,6 +6479,7 @@ trigger_keywords = {
     },
     'wrist': {
         'pain': ['pain', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'burning', 'soreness'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'restricted', 'rigid', 'locked'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
@@ -6493,6 +6494,7 @@ trigger_keywords = {
     },
     'stomach': {
         'pain': ['pain', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool']
@@ -7507,6 +7509,18 @@ body_part_followup_questions = {
       "category": "wrist pain",
    },
         ],
+	'weakness': [
+            {
+                'hi': "क्या कलाई की कमजोरी के कारण आप चीजें ठीक से पकड़ नहीं पाते?",
+                'en': "Is it difficult to hold or grip things due to wrist weakness?",
+                'category': 'wrist_weakness_grip'
+            },
+            {
+                'hi': "क्या कलाई में कमजोरी के साथ कंपन या थकान भी महसूस होती है?",
+                'en': "Do you feel tremors or fatigue in the wrist along with weakness?",
+                'category': 'wrist_weakness_tremor_fatigue'
+            },
+        ],
         'swelling': [
             {
                 'hi': "क्या सूजन के साथ कलाई में गर्माहट या लालिमा भी है?",
@@ -7663,6 +7677,18 @@ body_part_followup_questions = {
       "category": "digestive history",
       },
     ],
+	'weakness': [
+            {
+                'hi': "क्या पेट की कमजोरी के कारण उठने या सीधे बैठने में कठिनाई होती है?",
+                'en': "Does stomach weakness make it difficult for you to sit up or get out of bed?",
+                'category': 'stomach_weakness_mobility'
+            },
+            {
+                'hi': "क्या पेट के हिस्से में ताकत की कमी के कारण आपको कोई विशेष शारीरिक गतिविधियाँ करने में परेशानी होती है?",
+                'en': "Does the lack of strength in your abdominal area affect your ability to perform physical activities?",
+                'category': 'stomach_weakness_activity_limit'
+            }
+        ],
     'bloating': [
         {
             'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
