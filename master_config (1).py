@@ -6588,7 +6588,7 @@ trigger_keywords = {
 
     'muscle': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','stiff','stiffness'],
-        'weakness': ['weak', 'fatigued', 'loss of strength', 'unable to lift'],
+        'weakness': ['weakness', 'weak',  'fatigued', 'loss of strength', 'unable to lift'],
         'spasm': ['spasm', 'cramp', 'tightness', 'twitching','tensed'],
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
