@@ -41,8 +41,8 @@ symptom_synonyms = {
         'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp', 'brain-squeezing feeling', 'top-heavy ache', 'all-encompassing head discomfort', 'band-like pressure around head',
         'persistent noggin ache', 'head tenderness', 'scalp-aching feeling', 'sensitive head region', 'brainache', 'mind-throbbing torment', 'front-lobe pressure', 'crown-of-head tension',
         'behind-the-eyes ache', 'skull-tight discomfort', 'never-ending head throb', 'grating ache inside skull', 'sinus-pressured ache', 'temple pounding', 'brain pulsation pain', 'cephalic torment',
-        'oppressive ache under cranium', 'subtle persistent ache', 'gnawing head discomfort', 'dull pounding drumbeat in head', 'hammering inside skull walls', 'unyielding head tension', 'rote ache cycling through head',
-        'cranium under siege', 'deep-set head pang', 'swirling headache sensation', 'anchor-like pressure in head','pain in head','head pounding like drums','issue with head'
+        'oppressive ache under cranium', 'subtle persistent ache', 'head discomfort', 'dull pounding drumbeat in head', 'hammering inside skull walls', 'unyielding head tension', 'rote ache cycling through head',
+        'cranium under siege', 'deep-set head pang', 'anchor-like pressure in head','pain in head','head pounding like drums','issue with head'
     ],
     'migraine': [
         'intense one-sided headache', 'migraine aura', 'pulsating pain in head', 'photophobia-associated headache', 'debilitating headache', 'migraine attack', 'searing half-skull ache', 'throbbing temple migraine',
@@ -6783,15 +6783,16 @@ trigger_keywords = {
     'muscle': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','stiff','stiffness'],
         'weakness': ['weakness', 'weak',  'fatigued', 'loss of strength', 'unable to lift'],
-        'spasm': ['spasm', 'cramp', 'tightness', 'twitching','tensed'],
+        'spasm': ['spasm', 'tightness', 'twitching','tensed'],
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+	'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch']
     },
  
  'heart': {
-        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
+        'pain': ['pain', 'pains', 'paining', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted', 'shortness of breath with effort'],
-	 'burn': ['burns', 'burning', 'burnt', 'burnt'],
+	'burn': ['burn', 'burning', 'burns', 'burnt'],
         'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat','pounding']
  },
 
@@ -6804,7 +6805,7 @@ trigger_keywords = {
     'toes': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swollen', 'puffy', 'inflamed', 'red', 'tender'],
-        'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush','injures','injured'],
+        'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush','injures','injured']
     },
  'nose': {
         'injury': ['injury', 'hit', 'fracture', 'bump', 'hurt','broken','broke'],
@@ -7441,9 +7442,9 @@ body_part_followup_questions = {
                 'category': 'arm_pain_detail'
             },
             {
-      "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
-      "en": "Is the pain in one arm or both arms?",
-      "category": "arm pain",
+               "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
+               "en": "Is the pain in one arm or both arms?",
+               "category": "arm pain",
 
     },
     {
@@ -7543,7 +7544,7 @@ body_part_followup_questions = {
                 'category': 'back_pain_detail'
             },
 
- {
+       {
             "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
             "en": "Are you having difficulty walking, standing, or sitting for long periods?",
             "category": "mobility_impairment",
@@ -7586,9 +7587,9 @@ body_part_followup_questions = {
         ],
         'injury': [
            {
-    'hi': "क्या आप आजकल अपनी पीठ मोड़ पा रहे हैं?",
-    'en': "Are you able to bend your back nowadays?",
-    'category': 'back_mobility_current'
+               'hi': "क्या आप आजकल अपनी पीठ मोड़ पा रहे हैं?",
+               'en': "Are you able to bend your back nowadays?",
+               'category': 'back_mobility_current'
            }
         ],
         'numbness': [
@@ -7687,12 +7688,12 @@ body_part_followup_questions = {
     'en': "Is the pain in both wrists?",
     'category': 'wrist_pain_location'
             },
-                {
+          {
       "hi": "क्या आपने हाल ही में कलाई को चोट पहुँचाई है? (गिरना, मुड़ना, सीधा असर)",
      "en": "Have you injured the wrist recently? (e.g., fall, twist, direct blow)",
       "category": "wrist pain",
     },
-{
+   {
       "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
       "en": "Is there swelling or bruising around the wrist?",
       "category": "wrist pain",
@@ -8689,6 +8690,18 @@ body_part_followup_questions = {
                 'category': 'muscle_swelling_signs'
             }
         ],
+	'cramps': [
+            {
+                'hi': "क्या आपको मांसपेशियों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
+                'en': "Do you experience muscle cramps while walking or exercising?",
+                'category': 'muscle_cramps_activity_triggered'
+            },
+            {
+                'hi': "क्या मांसपेशियों की ऐंठन रात में सोते समय होती है?",
+                'en': "Do your muscle cramps occur during the night while sleeping?",
+                'category': 'muscle_cramps_nighttime'
+            },
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी मांसपेशियों की समस्या के बारे में और जानकारी दें।",
@@ -8703,7 +8716,7 @@ body_part_followup_questions = {
             {'hi': "क्या दर्द सीने के बीच में है या बाईं तरफ?",
              'en': "Is the pain in the center of the chest or on the left side?",
              'category': 'heart_pain_location'}
-        ],
+            ],
 	     'weakness': [
             {
                 'hi': "क्या हल्की गतिविधियों से ही थकान या सांस फूलने लगती है?",
