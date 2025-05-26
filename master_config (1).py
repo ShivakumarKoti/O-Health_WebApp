@@ -17,7 +17,8 @@ symptom_list = [
 'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes'
+'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',
+'male reproductive issues', 'female reproductive issues'
 ]
 
 # ------------------------------------------------------------------ #
@@ -874,6 +875,22 @@ symptom_synonyms = {
     'slow neurological responses', 'poor reflexes', 'delayed nerve response', 'slowed reflex action', 'decreased reflex speed', 'slow reflex',
     'delayed motor response', 'slow sensorimotor reaction', 'reflex sluggishness', 'impaired reaction time', 'slow response time', 'reflexes are slow'
 ],
+'male reproductive issues': [
+    'erectile dysfunction', 'impotence', 'can’t get an erection', 'can’t maintain erection', 'loss of libido in men',
+    'problems getting hard', 'weak erection', 'loss of erection', 'low sperm count', 'male infertility', 'testicular pain', 'pain in testicles',
+    'swollen testicles', 'testicle swelling', 'lump in testicle', 'testicular discomfort', 'shrinkage of testicles', 'small testicles',
+    'testicles feel different', 'pain during ejaculation', 'painful ejaculation', 'blood in semen', 'reduced semen volume', 'ejaculation problems', 
+    'delayed ejaculation', 'premature ejaculation', "can’t ejaculate", 'retrograde ejaculation', 'no semen during orgasm', 'testicular tightness',
+    'genital numbness in men', 'scrotal pain', 'pain in scrotum', 'penis pain', 'penis swelling', 'male genital discomfort', 'prostate issues',
+    'enlarged prostate', 'prostatitis', 'sexual dysfunction in men', 'male reproductive health concerns'
+],
+'female reproductive issues': [
+    'ovarian pain', 'pain in ovaries', 'female infertility', 'difficulty getting pregnant', 'trouble conceiving',
+    'recurrent miscarriages', 'ectopic pregnancy', 'pain during sex for women', 'painful intercourse','low sex drive in women', 
+    'loss of libido in women', 'hormonal imbalance in women', 'bleeding after sex', 'vaginal bleeding after intercourse', 
+    'female reproductive health concerns', 'female infertility'
+],
+
 
 
    }
