@@ -18,7 +18,7 @@ symptom_list = [
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues'
+'male reproductive issues', 'female reproductive issues', 'dandruff'
 ]
 
 # ------------------------------------------------------------------ #
@@ -889,6 +889,12 @@ symptom_synonyms = {
     'recurrent miscarriages', 'ectopic pregnancy', 'pain during sex for women', 'painful intercourse','low sex drive in women', 
     'loss of libido in women', 'hormonal imbalance in women', 'bleeding after sex', 'vaginal bleeding after intercourse', 
     'female reproductive health concerns', 'female infertility'
+],
+'dandruff': [
+    'flaky scalp', 'scalp flakes', 'white flakes in hair', 'dry scalp flakes', 'itchy scalp flakes', 'scalp shedding',
+    'flaking skin on scalp', 'scalp dryness', 'dry scalp', 'peeling scalp skin', 'white flakes on head', 
+    'itchy flaky scalp', 'seborrheic flakes', 'scalp irritation with flakes', 'skin flakes on scalp',  'dead skin flakes on head',
+    'visible scalp flakes', 'dead skin flakes in hair', 'flaky dandruff', 'scalp scaling', 'mild seborrheic dermatitis'
 ],
 
 
@@ -6462,7 +6468,59 @@ symptom_followup_questions = {
     "symptom": "pregnancy or uterine history",
     "risk_factor": True,
   },
+],
+"dandruff": [
+  {
+    "hi": "क्या आपकी खोपड़ी से सफेद या पीले रंग की परतदार रूसी झड़ती है?",
+    "en": "Do you notice white or yellowish flaky dandruff falling from your scalp?",
+    "category": "dandruff",
+    "symptom": "flaky scalp",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी खोपड़ी में खुजली होती है?",
+    "en": "Do you experience itching on your scalp?",
+    "category": "dandruff",
+    "symptom": "itchy scalp",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी खोपड़ी पर लालपन या जलन महसूस होती है?",
+    "en": "Do you feel redness or irritation on your scalp?",
+    "category": "dandruff",
+    "symptom": "scalp redness or irritation",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या बाल धोने के बावजूद भी रूसी बार-बार लौट आती है?",
+    "en": "Does the dandruff keep returning even after washing your hair?",
+    "category": "dandruff",
+    "symptom": "persistent dandruff",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आप अत्यधिक तेल वाले उत्पाद या हेयर स्टाइलिंग प्रोडक्ट्स का उपयोग करते हैं?",
+    "en": "Do you frequently use oily or heavy hair styling products?",
+    "category": "dandruff",
+    "symptom": "use of oily hair products",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आप नियमित रूप से अपने बाल नहीं धोते या साफ नहीं रखते?",
+    "en": "Do you not wash or clean your hair regularly?",
+    "category": "dandruff",
+    "symptom": "poor scalp hygiene",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको एक्जिमा, सोरायसिस या अन्य त्वचा रोगों का इतिहास है?",
+    "en": "Do you have a history of eczema, psoriasis, or other skin conditions?",
+    "category": "dandruff",
+    "symptom": "skin condition history",
+    "risk_factor": True,
+  },
 ]
+
 
 
 }
