@@ -6837,12 +6837,12 @@ trigger_keywords = {
         'ulcers': ['ulcer', 'sore spot', 'ulcers']
     },
  'mouth': {
-        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
+        'pain': ['pain', 'pains', 'paining', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'ulcer': ['ulcer', 'wound', 'canker', 'blister', 'lesion','ulcers'],
         'dryness': ['dry', 'dryness', 'parched', 'no saliva'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'bleeding': ['bleed', 'bleeding', 'blood in mouth'],
-        'bad_breath': ['bad breath', 'halitosis', 'foul smell'],
+        'bad breath': ['bad breath', 'halitosis', 'foul smell'],
         'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
     },
   'jaw':{
@@ -6867,7 +6867,7 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'limited motion', 'can’t bend', 'hard to twist'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
         'weakness': ['weakness', 'weak', 'unstable', 'can’t support', 'giving way', 'tired', 'fatigued'],
-        'injury': ['injury', 'strain', 'sprain', 'pull', 'twist', 'trauma', 'fall']
+        'injury': ['injury', 'strain', 'sprain', 'pull', 'twist', 'trauma', 'broken', 'broke', 'fall']
     },
 
 'pelvic': {
@@ -6882,14 +6882,14 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'can’t bend', 'limited motion'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
         'weakness': ['weak', 'unstable', 'fatigued', 'can’t lift', 'loss of strength'],
-        'injury': ['injury', 'strain', 'sprain', 'bruise', 'fracture', 'fall', 'trauma']
+        'injury': ['injury', 'strain', 'sprain', 'bruise', 'fracture', 'fall', 'hit', 'trauma']
     },
  'calf': {
         'pain': ['pain', 'ache', 'aching', 'soreness', 'cramping', 'sharp', 'burning', 'throbbing'],
         'spasm': ['spasm', 'cramp', 'tightness', 'twitching'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
         'weakness': ['weakness', 'weak', 'fatigued', 'loss of strength', 'unable to stand', 'unstable'],
-        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'fall']
+        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'broke', 'broken', 'fall']
     },
  
     # add ear / skin / etc…
