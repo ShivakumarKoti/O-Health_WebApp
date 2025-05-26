@@ -1296,19 +1296,20 @@ symptom_followup_questions = {
       "category": "hydration",
       "symptom": None,
       "risk_factor": False,    },
-{
-      "hi": "क्या कब्ज की समस्या के साथ कोई अन्य लक्षण हैं?",
-      "en": "Are there any other symptoms associated with your constipation?",
-      "category": "other_symptoms",
-      "symptom": None,
-      "risk_factor": False,    },
-
-    {
-      "hi": "क्या आपकी डाइट में पर्याप्त फाइबर है?",
-      "en": "Does your diet include sufficient fiber?",
-      "category": "diet_fiber",
-      "symptom": None,
-      "risk_factor": False,    }, 
+   {
+  "hi": "क्या आप रोज़ाना फल और सब्ज़ियां खाते हैं?",
+  "en": "Do you eat vegetables and fruits daily?",
+  "category": "daily_diet_vegetables_fruits",
+  "symptom": None,
+  "risk_factor": True,
+    },
+  {
+  "hi": "क्या आपको थायरॉयड की समस्या या मधुमेह (डायबिटीज़) है?",
+  "en": "Do you have thyroid issues or diabetes?",
+  "category": "thyroid_or_diabetes",
+  "symptom": None,
+  "risk_factor": True,
+},
     {
       "hi": "क्या आप नियमित रूप से व्यायाम करते हैं?",
       "en": "Do you exercise regularly?",
