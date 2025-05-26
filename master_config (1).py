@@ -1914,14 +1914,13 @@ symptom_followup_questions = {
       "hi": "क्या बालों का झड़ना के साथ स्कैल्प में खुजली या जलन है?",
       "en": "Is there itching or burning in the scalp along with hair loss?",
       "category": "scalp_itching_burning",
-      "symptom": "itching",
+      "symptom": "scalp_itching_burning",
       "risk_factor": False,    },     
-   
    {
   "hi": "क्या आपके परिवार में बाल झड़ने या गंजेपन का इतिहास है?",
   "en": "Do you have a family history of hair loss or baldness?",
   "category": "family_history_hair_loss",
-  "symptom": "hair loss",
+  "symptom": "family_history_hair_loss",
   "risk_factor": True,
 },
  {
