@@ -876,7 +876,7 @@ symptom_synonyms = {
     'delayed motor response', 'slow sensorimotor reaction', 'reflex sluggishness', 'impaired reaction time', 'slow response time', 'reflexes are slow'
 ],
 'male reproductive issues': [
-    'erectile dysfunction', 'impotence', 'can’t get an erection', 'can’t maintain erection', 'loss of libido in men',
+    'erectile dysfunction', 'impotence', "can’t get an erection", 'can’t maintain erection', 'loss of libido in men',
     'problems getting hard', 'weak erection', 'loss of erection', 'low sperm count', 'male infertility', 'testicular pain', 'pain in testicles',
     'swollen testicles', 'testicle swelling', 'lump in testicle', 'testicular discomfort', 'shrinkage of testicles', 'small testicles',
     'testicles feel different', 'pain during ejaculation', 'painful ejaculation', 'blood in semen', 'reduced semen volume', 'ejaculation problems', 
