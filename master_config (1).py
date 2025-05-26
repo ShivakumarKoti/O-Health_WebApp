@@ -18,7 +18,7 @@ symptom_list = [
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'body ache','cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff'
+'male reproductive issues', 'female reproductive issues', 'dandruff',''
 ]
 
 # ------------------------------------------------------------------ #
