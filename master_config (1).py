@@ -1904,41 +1904,48 @@ symptom_followup_questions = {
 
   "hair loss": [
     {
-      "hi": "क्या आपको बालों का झड़ना तेजी से हो रहा है?",
-      "en": "Are you experiencing rapid hair loss?",
-      "category": "rapid_hair_loss",
-      "symptom": "hair loss",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या बालों का झड़ना किसी विशेष समय पर अधिक होता है?",
-      "en": "Does hair loss occur more frequently at any specific time?",
-      "category": "time_related_hair_loss",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या बालों का झड़ना किसी विशेष हिस्से में ज्यादा हो रहा है?",
       "en": "Is hair loss more prominent in any specific area?",
       "category": "localized_hair_loss",
       "symptom": None,
       "risk_factor": False,    },
-    {
+   {
       "hi": "क्या बालों का झड़ना के साथ स्कैल्प में खुजली या जलन है?",
       "en": "Is there itching or burning in the scalp along with hair loss?",
       "category": "scalp_itching_burning",
       "symptom": "itching",
-      "risk_factor": False,    },
-    {
+      "risk_factor": False,    },     
+   
+   {
+  "hi": "क्या आपके परिवार में बाल झड़ने या गंजेपन का इतिहास है?",
+  "en": "Do you have a family history of hair loss or baldness?",
+  "category": "family_history_hair_loss",
+  "symptom": "hair loss",
+  "risk_factor": True,
+},
+ {
       "hi": "क्या आपके बालों की ग्रोथ धीमी हो गई है?",
       "en": "Has your hair growth slowed down?",
       "category": "slowed_hair_growth",
       "symptom": None,
       "risk_factor": False,    },
-
     {
       "hi": "क्या आपके बालों का रंग बदल रहा है?",
       "en": "Are you noticing any changes in your hair color?",
       "category": "hair_color_changes",
       "symptom": "hair color changes",
+      "risk_factor": False,    },
+	 {
+      "hi": "क्या आपको बालों का झड़ना तेजी से हो रहा है?",
+      "en": "Are you experiencing rapid hair loss?",
+      "category": "rapid_hair_loss",
+      "symptom": "hair loss",
+      "risk_factor": False,    },
+     {
+      "hi": "क्या बालों का झड़ना किसी विशेष समय पर अधिक होता है?",
+      "en": "Does hair loss occur more frequently at any specific time?",
+      "category": "time_related_hair_loss",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
