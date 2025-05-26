@@ -6352,7 +6352,118 @@ symptom_followup_questions = {
     "symptom": "recent head injury or neuro issue",
     "risk_factor": True,
   },
+],
+"male reproductive issues": [
+  {
+    "hi": "क्या आपको यौन उत्तेजना या संभोग के दौरान लिंग में तनाव बनाए रखने में कठिनाई होती है?",
+    "en": "Do you have difficulty maintaining an erection during sexual activity?",
+    "category": "male_reproductive_issues",
+    "symptom": "erectile dysfunction",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी यौन इच्छा (लिबिडो) में कमी आई है?",
+    "en": "Have you noticed a decrease in your sexual desire (libido)?",
+    "category": "male_reproductive_issues",
+    "symptom": "low libido",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको वीर्य स्खलन में कोई समस्या हो रही है, जैसे जल्दी स्खलन या देरी से स्खलन?",
+    "en": "Are you experiencing problems with ejaculation, such as premature or delayed ejaculation?",
+    "category": "male_reproductive_issues",
+    "symptom": "ejaculation problems",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको अंडकोष या उसके आसपास दर्द, सूजन या गांठ महसूस हो रही है?",
+    "en": "Do you feel pain, swelling, or a lump in or around the testicles?",
+    "category": "male_reproductive_issues",
+    "symptom": "testicular pain or swelling",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको मूत्र मार्ग में जलन, दर्द या बार-बार पेशाब की समस्या है?",
+    "en": "Are you experiencing burning, pain, or frequent urination?",
+    "category": "male_reproductive_issues",
+    "symptom": "urinary symptoms",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको मधुमेह, उच्च रक्तचाप या मोटापे जैसी कोई पुरानी बीमारी है?",
+    "en": "Do you have chronic conditions such as diabetes, high blood pressure, or obesity?",
+    "category": "male_reproductive_issues",
+    "symptom": "chronic diseases",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपके परिवार में किसी को प्रजनन संबंधी समस्याएं रही हैं?",
+    "en": "Is there a family history of reproductive issues?",
+    "category": "male_reproductive_issues",
+    "symptom": "family history",
+    "risk_factor": True,
+  },
+],
+	
+"female reproductive issues": [
+  {
+    "hi": "क्या आपकी माहवारी अनियमित है या छूट रही है?",
+    "en": "Is your menstrual cycle irregular or missing?",
+    "category": "female_reproductive_issues",
+    "symptom": "irregular or missed periods",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको माहवारी के दौरान अत्यधिक रक्तस्राव या दर्द होता है?",
+    "en": "Do you experience heavy bleeding or severe pain during periods?",
+    "category": "female_reproductive_issues",
+    "symptom": "heavy or painful periods",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको योनि से असामान्य स्राव, जलन या खुजली होती है?",
+    "en": "Are you experiencing abnormal vaginal discharge, burning, or itching?",
+    "category": "female_reproductive_issues",
+    "symptom": "vaginal discharge or irritation",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको संभोग के दौरान दर्द होता है?",
+    "en": "Do you experience pain during sexual intercourse?",
+    "category": "female_reproductive_issues",
+    "symptom": "painful intercourse",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको अचानक वजन बढ़ने, मुंहासे, या चेहरे/शरीर पर अत्यधिक बालों की समस्या है?",
+    "en": "Have you noticed sudden weight gain, acne, or excessive hair growth on the face/body?",
+    "category": "female_reproductive_issues",
+    "symptom": "PCOS-like symptoms",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको बार-बार गर्भपात का अनुभव हुआ है?",
+    "en": "Have you experienced repeated miscarriages?",
+    "category": "female_reproductive_issues",
+    "symptom": "recurrent miscarriage",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके परिवार में किसी को प्रजनन संबंधी समस्याएं रही हैं?",
+    "en": "Is there a family history of reproductive health issues?",
+    "category": "female_reproductive_issues",
+    "symptom": "family history",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपने कोई प्रसवपूर्व संक्रमण, पेल्विक सर्जरी, या गर्भाशय से संबंधित कोई समस्या झेली है?",
+    "en": "Have you had any infections during pregnancy, pelvic surgeries, or uterine problems?",
+    "category": "female_reproductive_issues",
+    "symptom": "pregnancy or uterine history",
+    "risk_factor": True,
+  },
 ]
+
 
 }
 
