@@ -6607,11 +6607,12 @@ medications_list = [
 
 trigger_keywords = {
     'tooth': {
-        'injury': ['injury', 'injured', 'injure', 'fell', 'fall', 'knock', 'blow', 'hit'],
+        'injury': ['injury', 'injured', 'injure', 'knock', 'blow', 'hit'],
         'sensitivity': ['sensitive', 'sensitivity', 'hard', 'gum', 'gums', 'bleeding'],
         'pain': ['pain', 'painful', 'paining', 'ache', 'aching', 'hurt', 'hurting', 'sore', 'throbbing'],
-        'broken': ['broken', 'break', 'broke', 'breaks', 'cracked', 'chip', 'chipped'],
-        'decay': ['decay', 'decayed', 'decays', 'cavity', 'cavities', 'cavitated']
+        'broken': ['broken', 'break', 'broke', 'breaks', 'cracked', 'chip', 'chipped', 'fell, 'fall', 'fallen'],
+        'decay': ['decay', 'decayed', 'decays', 'cavity', 'cavities', 'cavitated'],
+	'tingling': ['tingling', 'pins and needles', 'prickling', 'buzzing','sensation']
     },
     'leg': {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
@@ -7027,6 +7028,18 @@ body_part_followup_questions = {
 
       },
     ],
+  'tingling': [
+            {
+                'hi': "क्या आपके दाँतों में झुनझुनाहट के साथ दर्द भी होता है?",
+                'en': "Do you experience pain along with tingling in your teeth?",
+                'category': 'teeth_tingling_pain'
+            },
+            {
+                'hi': "क्या दाँतों में झुनझुनाहट ठंडा या गर्म खाने पर बढ़ जाती है?",
+                'en': "Does the tingling in your teeth worsen with hot or cold foods?",
+                'category': 'teeth_tingling_sensitivity'
+            },
+        ],
     'default': [
         {
             'hi': "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
