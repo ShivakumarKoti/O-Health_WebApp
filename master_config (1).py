@@ -2763,30 +2763,39 @@ symptom_followup_questions = {
   ],
 
   "memory loss": [
-    {
-      "hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं?",
-      "en": "What type of memory problems are you experiencing?",
-      "category": "memory loss",
-      "symptom": "memory problem type",
-      "risk_factor": False,    },
-    {
+  {
+  "hi": "क्या आप हाल की घटनाओं को भूल जाते हैं?",
+  "en": "Do you forget recent events?",
+  "category": "short_term_memory_loss",
+  "symptom": "short-term memory loss",
+  "risk_factor": False,
+},
+{
+  "hi": "क्या आपकी याददाश्त में कमी समय के साथ और अधिक बढ़ गई है?",
+  "en": "Has your memory loss got worsened over time?",
+  "category": "progressive_memory_loss",
+  "symptom": "worsening memory loss",
+  "risk_factor": False,
+},  
+ {
       "hi": "क्या याददाश्त की कमी समय के साथ बढ़ रही है?",
       "en": "Is the memory loss getting worse over time?",
       "category": "memory loss",
       "symptom": "memory loss progression",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको हाल ही में कोई सिर की चोट या आघात हुआ है?",
-      "en": "Have you had any recent head injuries or trauma?",
-      "category": "head injury",
-      "symptom": "head injury",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको विशिष्ट विवरण याद करने में परेशानी हो रही है, या यह सामान्य याददाश्त की कमी है?",
-      "en": "Do you have trouble recalling specific details, or is it more about general memory loss?",
-      "category": "memory loss",
-      "symptom": "specific vs general memory loss",
-      "risk_factor": False,    },
+   {
+  "hi": "क्या आपको हाल ही में सिर में चोट, कोई आघात या स्ट्रोक हुआ है?",
+  "en": "Have you had any recent head injuries or trauma or stroke?",
+  "category": "head_injury_or_stroke",
+  "symptom": None,
+  "risk_factor": True,
+  },
+  {
+      "hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं, जैसे उच्च रक्तचाप, मधुमेह, या थायरॉयड की समस्याएँ?",
+      "en": "Do you have any other medical conditions, such as high blood pressure, diabetes, or thyroid problems?",
+      "category": "medical conditions",
+      "symptom": "medical conditions",
+      "risk_factor": True,    },
     {
       "hi": "क्या आप किसी अन्य संज्ञानात्मक समस्या का अनुभव कर रहे हैं, जैसे भ्रम या ध्यान केंद्रित करने में कठिनाई?",
       "en": "Are you experiencing any other cognitive problems, such as confusion or difficulty concentrating?",
@@ -2805,17 +2814,11 @@ symptom_followup_questions = {
       "category": "mood changes",
       "symptom": "mood changes",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements?",
-      "category": "medications",
-      "symptom": "medication use",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं, जैसे उच्च रक्तचाप, मधुमेह, या थायरॉयड की समस्याएँ?",
-      "en": "Do you have any other medical conditions, such as high blood pressure, diabetes, or thyroid problems?",
-      "category": "medical conditions",
-      "symptom": "medical conditions",
+     {
+      "hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं?",
+      "en": "What type of memory problems are you experiencing?",
+      "category": "memory loss",
+      "symptom": "memory problem type",
       "risk_factor": False,    },
   ],
 
