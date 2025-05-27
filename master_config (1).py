@@ -6908,7 +6908,13 @@ trigger_keywords = {
         'drooping': ['drooping', 'droop', 'sagging', 'paralysis', 'uneven smile'],
         'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma']
     },
-
+'ankle': {
+        'pain': ['pain', 'ache', 'hurting', 'paining', 'pains', 'throbbing'],
+        'swelling': ['swollen', 'swelling', 'puffy', 'enlarged'],
+        'stiffness': ['stiffness', 'stiff', 'immobile', 'hard to move'],
+        'injury': ['injury', 'sprain', 'twist', 'hurt', 'fracture', 'break'],
+        'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way']
+    }
  
     # add ear / skin / etc…
 }
@@ -9488,7 +9494,52 @@ body_part_followup_questions = {
                 'category': 'face_detail'
             }
         ]
-    }
+    },
+'ankle': {
+        'pain': [
+            {
+                'hi': "क्या टखने में दर्द चलते समय बढ़ता है?",
+                'en': "Does ankle pain get worse while walking?",
+                'category': 'ankle_pain_activity'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या टखने में सूजन के साथ लालिमा या गर्मी महसूस हो रही है?",
+                'en': "Is there redness or warmth with the ankle swelling?",
+                'category': 'ankle_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर टखना कड़ा महसूस होता है?",
+                'en': "Does your ankle feel stiff in the morning?",
+                'category': 'ankle_stiffness_morning'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या आपने हाल ही में टखना मोड़ लिया या गिर गए?",
+                'en': "Did you recently twist your ankle or fall?",
+                'category': 'ankle_injury_cause'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या आपका टखना चलते समय अचानक मुड़ जाता है या लड़खड़ाता है?",
+                'en': "Does your ankle give out or wobble while walking?",
+                'category': 'ankle_weakness_instability'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने टखने की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your ankle issue in more detail.",
+                'category': 'ankle_detail'
+            }
+        ]
+    },
+
 
 
 
