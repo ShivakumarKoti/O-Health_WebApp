@@ -6907,7 +6907,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflammation', 'bump'],
         'drooping': ['drooping', 'droop', 'sagging', 'paralysis', 'uneven smile'],
         'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma']
-    }
+    },
+
  
     # add ear / skin / etc…
 }
