@@ -6914,6 +6914,12 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'immobile', 'hard to move'],
         'injury': ['injury', 'sprain', 'twist', 'hurt', 'fracture', 'break'],
         'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way']
+    },
+'body': {
+        'pain': ['pain', 'pains', 'paining', 'body ache', 'whole body pain', 'all over pain', 'ache everywhere'],
+        'fatigue': ['tired', 'fatigue', 'exhausted', 'lethargic'],
+        'weakness': ['weakness', 'weak', 'low energy', 'sluggish', 'no strength'],
+        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move']
     }
  
     # add ear / skin / etc…
@@ -9539,7 +9545,43 @@ body_part_followup_questions = {
             }
         ]
     },
-
+'body': {
+        'pain': [
+            {
+                'hi': "क्या पूरे शरीर में दर्द लगातार बना रहता है?",
+                'en': "Is the body-wide pain constant?",
+                'category': 'body_pain_duration'
+            }
+        ],
+        'fatigue': [
+            {
+                'hi': "क्या थकान के साथ नींद भी पूरी नहीं हो रही है?",
+                'en': "Are you feeling fatigued even after a full night's sleep?",
+                'category': 'body_fatigue_sleep'
+            }
+        ],
+        'weakness': [
+            {
+                'hi': "क्या कमजोरी के कारण रोज़मर्रा के कामों में दिक्कत हो रही है?",
+                'en': "Is the weakness affecting your daily activities?",
+                'category': 'body_weakness_function'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह उठने पर पूरे शरीर में जकड़न महसूस होती है?",
+                'en': "Do you feel stiffness throughout your body in the morning?",
+                'category': 'body_stiffness_morning'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने शरीर की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your body issue in more detail.",
+                'category': 'body_detail'
+            }
+        ]
+    }
 
 
 
