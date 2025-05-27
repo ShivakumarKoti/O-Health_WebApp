@@ -6901,6 +6901,13 @@ trigger_keywords = {
         'weakness': ['weakness', 'weak', 'fatigued', 'loss of strength', 'unable to stand', 'unstable'],
         'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'broke', 'broken', 'fall']
     },
+'face': {
+        'pain': ['pain', 'ache', 'throbbing', 'pains', 'paining'],
+        'numbness': ['numbness', 'numb', 'tingling', 'loss of sensation', 'no feeling'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflammation', 'bump'],
+        'drooping': ['drooping', 'droop', 'sagging', 'paralysis', 'uneven smile'],
+        'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma']
+    }
  
     # add ear / skin / etc…
 }
@@ -9433,6 +9440,51 @@ body_part_followup_questions = {
                 'hi': "कृपया अपने बछड़े की समस्या के बारे में और जानकारी दें।",
                 'en': "Please describe your calf issue in more detail.",
                 'category': 'calf_detail'
+            }
+        ]
+    },
+'face': {
+        'pain': [
+            {
+                'hi': "क्या चेहरे का दर्द किसी विशेष स्थान पर केंद्रित है?",
+                'en': "Is the facial pain localized to a specific area?",
+                'category': 'face_pain_location'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या चेहरे का सुन्नपन अचानक शुरू हुआ?",
+                'en': "Did the facial numbness start suddenly?",
+                'category': 'face_numbness_onset'
+            }
+        ],
+        'swelling': [
+            {
+               'hi': "क्या चेहरे की सूजन के साथ दर्द भी है?",
+               'en': "Is there pain along with the facial swelling?",
+               'category': 'face_swelling_signs'
+           }
+
+        ],
+        'drooping': [
+            {
+                'hi': "क्या आपके चेहरे का एक हिस्सा झुक गया है या मुस्कान असमान है?",
+                'en': "Is one side of your face drooping or is your smile uneven?",
+                'category': 'face_drooping_sign'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या आपको हाल ही में चेहरे पर कोई चोट लगी है?",
+                'en': "Have you recently had any injury to your face?",
+                'category': 'face_injury_recent'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने चेहरे की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your facial issue in more detail.",
+                'category': 'face_detail'
             }
         ]
     }
