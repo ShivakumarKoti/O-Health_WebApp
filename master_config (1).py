@@ -6916,10 +6916,12 @@ trigger_keywords = {
         'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way']
     },
 'body': {
-        'pain': ['pain', 'pains', 'paining', 'body ache', 'whole body pain', 'all over pain', 'ache everywhere'],
+        'pain': ['pain', 'pains', 'paining', 'ache', 'whole body pain', 'all over pain', 'ache everywhere'],
         'fatigue': ['tired', 'fatigue', 'exhausted', 'lethargic'],
         'weakness': ['weakness', 'weak', 'low energy', 'sluggish', 'no strength'],
-        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move']
+        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move'],
+	'itching': ['itching', 'itchy', 'scratching', 'irritation', 'rash'],
+        'swelling': ['swelling', 'puffiness', 'inflammation']
     }
  
     # add ear / skin / etc…
@@ -9574,6 +9576,20 @@ body_part_followup_questions = {
                 'category': 'body_stiffness_morning'
             }
         ],
+	'itching': [
+        {
+            'hi': "क्या पूरे शरीर में खुजली लगातार हो रही है या रुक-रुक कर?",
+            'en': "Is the itching happening constantly or intermittently across the body?",
+            'category': 'body_itching_pattern'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या शरीर की सूजन किसी विशेष हिस्से में सीमित है या पूरे शरीर में फैली हुई है?",
+            'en': "Is the swelling limited to one area or spread across the whole body?",
+            'category': 'body_swelling_area'
+        }
+    ],
         'default': [
             {
                 'hi': "कृपया अपने शरीर की समस्या के बारे में और जानकारी दें।",
