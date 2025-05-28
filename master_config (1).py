@@ -233,15 +233,6 @@ symptom_synonyms = {
         'cold-induced shaking', 'numbing cold', 'shiver', 'shivers'
     ],
 
-    'ankle pain': [
-        'ankle discomfort', 'pain in the ankle', 'twisted ankle pain', 'pain from sprained ankle', 'swollen ankle', 'sharp ankle pain', 'throbbing pain in the ankle', 'pain when walking',
-        'pain after ankle injury',  'pain with ankle movement', 'pain in the outer ankle', 'pain in the inner ankle',
-        'pain in the ankle joint', 'pain from ligament strain', 'pain from ankle fracture', 'ankle tenderness', 'pain with ankle instability', 'pain when standing', 
-        'pain in ankle tendon', 'pain after running', 'pain from ankle arthritis', 'pain with twisting', 'pain in ankle after jumping', 'pain in the Achilles tendon', 'stabbing pain in ankle',
-        'pain with ankle sprain', 'ankle bruising', 'pain when walking on uneven surfaces', 'pain when bending the foot', 'pain in the heel of the ankle', 
-        'pain when stretching ankle','pain in ankle', 'pain in ankles', 'pain in the ankle', 'pain in the ankles', 'pain in my ankle', 'pain in my ankles'
-    ],
-
     'confusion': [
         'disorientation', 'muddled thinking', 'mental fog', 'trouble thinking clearly', 'brain fog', 'cognitive cloudiness', 'puzzled state', 'jumbled thoughts', 'incoherent reasoning', 'tangled mental process',
         'unclear comprehension', 'befuddled mind', 'scrambled logic', 'perplexed state', 'hazy understanding', 'blurred mental picture', 'fuzzy reasoning', 'perplexity', 'baffled intellect',
@@ -249,14 +240,6 @@ symptom_synonyms = {
         'minds in knots', 'head scrambled eggs feeling', 'no clear thread of thought', 'haphazard reasoning', 'bewildered stance', 'lost mental bearings', 'mental haze', 'unclear mental signals',
         'vague cognitive process', 'mental static', 'mentally adrift', 'diluted focus', 'no sharpness in mind', 'blinking confusion', 'unsure mental footing', 'perplexed awareness', 
         'reduced mental acuity', 'messy mental white noise'
-    ],
-    'hip pain': [
-        'pain in the hip', 'hip discomfort', 'hip joint pain', 'pain from hip arthritis', 'sharp hip pain', 'throbbing hip pain', 'pain in the hip joint', 'pain in the hip area', 'pain from hip injury',
-        'hip inflammation', 'pain from hip strain', 'pain from bursitis in the hip', 'pain when moving the hip', 'pain from overuse of the hip', 
-        'pain from hip fracture', 'pain after standing for a long time', 'pain from hip surgery', 'pain when lying on the hip', 'pain with hip rotation', 'pain in the side of the hip',
-        'pain in the front of the hip', 'hip joint pain', 'pain from hip flexor strain', 'deep hip pain', 'pain from hip dislocation',
-        'pain from muscle strain around the hip', 'pain in hip', 'pain in hips', 'pain in the hip', 'pain in the hips', 'pain in my hip', 'pain in my hips'
-
     ],
   
     'memory loss': [
@@ -651,17 +634,6 @@ symptom_synonyms = {
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma', 'ears not listening',
 'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
 'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss'
-],
-
-'bone pain': [
-'bone tenderness', 'bone swelling', 'aching bones', 'bone discomfort', 
-'throbbing bone sensation', 'bone sensitivity', 'bone ache during movement', 'bone bruising', 'bone soreness', 
-'fracture-related bone pain', 'joint and bone pain', 'dull bone ache', 'piercing bone pain', 'bone pain during rest', 'bone pain under pressure', 
-'bone stiffness', 'osteopathic pain', 'bone fragility pain', 'bone strain', 'bone inflammation', 'tender bone surface', 'aching joints and bones',
-'deep-seated bone ache', 'bone discomfort while standing', 'pain in bone', 'pain in bones', 'pain in the bone', 'pain in the bones', 'pain in my bone', 
-'pain in my bones', 'bone tenderness to touch', 'sensitive bone tissue', 'bone marrow pain', 'bone pain during activity',
-'osteoporosis-related bone pain', 'bone pain with movement', 'skeletal pain', 'acute bone discomfort', 'bone stress pain',
-'intense bone ache', 'stiff bone joints', 'localized skeletal pain'
 ],
 
 'weight gain': [
