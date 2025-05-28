@@ -212,11 +212,7 @@ symptom_synonyms = {
         'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
     ],
     'swelling': [
-        'swollen area', 'edema', 'swelling','swelling of body part', 'fluid retention', 'swollen body part', 'inflamed tissue', 'swollen limbs', 'puffiness','swollen',
-        'swollen joints', 'swollen ankle', 'swollen hands', 'swollen feet', 'localized swelling', 'swollen skin', 'swelling in legs', 'swollen belly','swells','swelling',
-        'swollen face', 'swollen knees', 'edematous swelling', 'painful swelling', 'swollen extremities', 'swelling from infection', 'swelling from trauma', 'swelling after surgery',
-        'swelling of the face', 'swelling under the skin', 'swelling with discomfort', 'puffy hands', 'swelling after a fall', 'generalized swelling', 'swelling in eyes','swelling',
-        'swelling from arthritis', 'swelling around wounds', 'enlarged tissue area', 'swelling from allergic reaction', 'swelling in body cavity', 'swelling around the joints'
+        'swollen', 'edema', 'swellings', 'fluid retention', 'swollen body part', 'inflamed tissue', 'puffiness', 'swells', 'enlarged tissue area'
     ],
     'tremor': [
         'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
@@ -293,9 +289,8 @@ symptom_synonyms = {
 ],
 
 'inflammation': [
-    'inflammatory response', 'immune response', 'inflammatory reaction', 'inflammation of tissues', 'inflammation in the body', 'inflamed',
-    'inflammation of the skin', 'joint inflammation', 'internal inflammation', 'inflammatory condition', 'inflammatory disorder', 
-    'inflammation from disease'
+    'inflammatory response', 'inflammatory reaction', 'inflammation of tissues', 'inflammation in the body', 'inflamed',
+    'internal inflammation', 'inflammatory condition', 'inflammatory disorder', 'inflammation from disease'
 ],
 
 'cramp': [
@@ -308,7 +303,7 @@ symptom_synonyms = {
 ],
 
 'irritation': [
-    'annoyance', 'allergic irritation', 'irritated feeling'
+    'allergic irritation', 'irritated feeling'
 ],
 
 'anxiety': [
@@ -398,9 +393,8 @@ symptom_synonyms = {
 
 'bloating': [
     'abdominal bloating', 'stomach bloating', 'gas buildup', 'swollen belly', 'feeling of fullness', 'abdominal distention',
-    'overfull stomach', 'stomach discomfort', 'stomach swelling', 'intestinal bloating', 'bloated stomach', 'feeling puffed up', 'bloating sensation',
-    'gassy stomach', 'stomach pressure', 'bloating after eating', 'digestive bloating', 'feeling bloated', 'bloating in the abdomen', 'gas pain',
-    'cramping and bloating'
+    'overfull stomach', 'stomach swelling', 'intestinal bloating', 'bloated stomach', 'bloating sensation',
+    'gassy stomach', 'bloating after eating', 'digestive bloating', 'feeling bloated', 'bloating in the abdomen', 'gas pain'
 ],
 
 'gas': [
@@ -619,7 +613,7 @@ symptom_synonyms = {
 ],
 
 'piles': [
-    'hemorrhoids', 'anal piles', 'rectal swelling', 'swollen veins', 'internal hemorrhoids', 'external hemorrhoids',
+    'hemorrhoids', 'anal piles', 'rectal swelling', 'internal hemorrhoids', 'external hemorrhoids',
     'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'chronic hemorrhoids',
     'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
@@ -642,8 +636,8 @@ symptom_synonyms = {
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
-'weight fluctuation': ['weight\'s been fluctuating', 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
- 'weight is different', 'weighing change', 'weight has changed','weight fluctuation'],
+'weight fluctuation': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
+ 'weight is different', 'weighing change', 'weight has changed','weight fluctuations'],
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
