@@ -849,11 +849,7 @@ symptom_synonyms = {
     'laceration', 'abrasion', 'open wound',
     'skin break', 'gash', 'lesion', 'puncture wound', 'tear in skin'
 ],
-'body ache': [
-    'body pain', 'aching body', 'muscle ache', 'general pain', 'bodyache', 'aching body',
-    'whole body ache', 'sore body', 'body discomfort', 'all-over ache', 'overall body pain','pain in the body','pain in our body','aches on body','body is aching',
-    'aching all over', 'body aches', 'bodyaches', 'body pains', 'pain in body', 'pain all over body','body is paining'
-],
+
 'bruises': [
     'contusions', 'black and blue marks', 'skin discoloration', 'hematoma', 'bruising',
     'purple marks', 'banged up', 'bruised skin', 'minor bleeding under skin','bruises',
@@ -6916,7 +6912,7 @@ trigger_keywords = {
         'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way']
     },
 'body': {
-        'pain': ['pain', 'pains', 'paining', 'ache', 'whole body pain', 'all over pain', 'ache everywhere'],
+        'pain': ['pain', 'pains', 'paining', 'ache', 'whole body pain', 'all over pain', 'ache everywhere','aching'],
         'fatigue': ['tired', 'fatigue', 'exhausted', 'lethargic'],
         'weakness': ['weakness', 'weak', 'low energy', 'sluggish', 'no strength'],
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move'],
@@ -9750,7 +9746,7 @@ body_parts = [
     'mouth', 'nose', 'tooth', 'tooths', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
-    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face','waist', 'pelvic', 
+    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','calf','body'
 ] 
