@@ -6918,7 +6918,14 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move'],
 	'itching': ['itching', 'itchy', 'scratching', 'irritation', 'rash'],
         'swelling': ['swelling', 'puffiness', 'inflammation']
-    }
+    },
+'hair': {
+        'hair loss': ['hair fall', 'hair loss', 'balding', 'shedding', 'thinning'],
+        'dandruff': ['dandruff', 'flaky scalp', 'scalp flakes', 'dry scalp'],
+        'itching': ['itchy scalp', 'itching', 'scalp irritation'],
+        'greying': ['greying', 'white hair', 'grey hair', 'premature greying'],
+        'dryness': ['dryness', 'dry', 'rough hair', 'brittle hair']
+    },
  
     # add ear / skin / etc…
 }
@@ -9591,6 +9598,50 @@ body_part_followup_questions = {
                 'hi': "कृपया अपने शरीर की समस्या के बारे में और जानकारी दें।",
                 'en': "Please describe your body issue in more detail.",
                 'category': 'body_detail'
+            }
+        ]
+    },
+'hair': {
+        'hair loss': [
+            {
+                'hi': "क्या आपके बाल झड़ने का कोई विशेष कारण है जैसे तनाव या हार्मोन?",
+                'en': "Is there a specific reason for your hair loss such as stress or hormones?",
+                'category': 'hair_loss_cause'
+            }
+        ],
+        'dandruff': [
+            {
+                'hi': "क्या सिर में खुजली के साथ-साथ रूसी भी हो रही है?",
+                'en': "Is dandruff accompanied by itching on the scalp?",
+                'category': 'hair_dandruff_itching'
+            }
+        ],
+        'itching': [
+            {
+                'hi': "क्या यह खुजली हर समय बनी रहती है या कुछ समय में होती है?",
+                'en': "Is the itching constant or does it occur occasionally?",
+                'category': 'hair_itching_frequency'
+            }
+        ],
+        'greying': [
+            {
+                'hi': "क्या बालों का सफेद होना उम्र से पहले शुरू हुआ?",
+                'en': "Has the greying of your hair started prematurely?",
+                'category': 'hair_greying_age'
+            }
+        ],
+        'dryness': [
+            {
+                'hi': "क्या आपके बालों में रूखापन मौसम या किसी उत्पाद के कारण है?",
+                'en': "Is the dryness in your hair due to weather or any hair products?",
+                'category': 'hair_dryness_cause'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने बालों की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your hair issue in more detail.",
+                'category': 'hair_detail'
             }
         ]
     }
