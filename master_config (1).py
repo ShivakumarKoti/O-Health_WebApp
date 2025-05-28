@@ -9748,7 +9748,7 @@ body_parts = [
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
-    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','calf','body'
+    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','calf','waist', 'pelvic','body'
 ] 
 
 symptom_to_specialist = {
