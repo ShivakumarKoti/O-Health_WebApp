@@ -6620,7 +6620,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'injure', 'knock', 'blow', 'hit'],
         'sensitivity': ['sensitive', 'sensitivity', 'hard', 'gum', 'gums', 'bleeding'],
         'pain': ['pain', 'painful', 'paining', 'ache', 'aching', 'hurt', 'hurting', 'sore', 'throbbing'],
-        'broken': ['broken', 'break', 'broke', 'breaks', 'cracked', 'chip', 'chipped', 'fell, 'fall', 'fallen'],
+        'broken': ['broken', 'break', 'broke', 'breaks', 'cracked', 'chip', 'chipped', 'fell', 'fall', 'fallen'],
         'decay': ['decay', 'decayed', 'decays', 'cavity', 'cavities', 'cavitated'],
 	'tingling': ['tingling', 'tingled', 'pins and needles', 'prickling', 'buzzing','sensation']
     },
@@ -9599,6 +9599,13 @@ body_part_followup_questions = {
         ]
     }
 
+	
+
+
+
+
+
+
 }
 
 # -----------------------------------------------------------------
@@ -9716,14 +9723,14 @@ BP_CANON = {
     'ear':        'ear',
     'toes': 'toes',
      'toe': 'toes',
-      'legs':'leg',
-     'leg':'leg',
- 'shoulders':'shoulder',
- 'knees':'knee',
- 'lips':'lip',
- 'hands':'hand',
- 'wrists':'wrist',
-  'thighs':'thigh',
+     'legs':'leg',
+    'leg':'leg',
+   'shoulders':'shoulder',
+   'knees':'knee',
+   'lips':'lip',
+   'hands':'hand',
+   'wrists':'wrist',
+   'thighs':'thigh',
    'periods' : 'period',
     'muscles':'muscle',
     'arms':'arm',
@@ -9732,6 +9739,8 @@ BP_CANON = {
      'bones': 'bone',
      'belly': 'stomach',
      'abdomen':'stomach',
+     'joints':'joint',
+     'ankles':'ankle'
     # …and so on for whatever you support
 }
 
@@ -9743,7 +9752,7 @@ body_parts = [
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
-    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','calf'
+    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','calf','body'
 ] 
 
 symptom_to_specialist = {
