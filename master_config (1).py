@@ -680,51 +680,8 @@ symptom_synonyms = {
 
 'sugar': ['sugars', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
 
-  'waist pain': [
-    'pain in the waist', 'waist discomfort', 'waist ache', 'pain in waist', 'pain in waists', 'pain in the waist', 
-    'pain in the waists', 'pain in my waist', 'pain in my waists',
-    'throbbing waist pain', 'pain from waist injury', 'pain in the lower torso', 'pain around the belt line',
-    'pain from tight waistband', 'pain from muscle strain in waist', 'pain from overuse of waist muscles',
-    'waist pain when bending', 'waist pain when twisting', 'pain with waist movement', 'aching waist',
-    'pain in the sides of the waist', 'difficulty in bending', 'difficult to bend','hard to bend',
-    'pain from herniated disc near waist', 'pain after prolonged sitting',
-    'waist stiffness and pain', 'burning sensation in waist', 'pinching pain in waist',
-    'waist cramping', 'pain from nerve compression in waist', 'sore waist', 'pain around waistline',
-    'pain when walking from waist', 'pain from waist inflammation',
-    'pain after running affecting waist',  'pain in back near waist', 'waist region pain', 'pain in the side of the waist'
-],
-
-'calf pain': [
-    'calf discomfort', 'calf ache', 'pain in calf', 'pain in calves', 'pain in the calf', 'pain in the calves', 'pain in my calf', 'pain in my calves',
-    'burning pain in calf', 'cramping in calf', 'tightness in calf', 'pain in back of lower leg',
-    'calf muscle pain', 'pain from calf strain', 'pain from pulled calf muscle', 'pain after calf workout',
-    'calf soreness after exercise', 'pain from overuse of calf muscles',
-    'pain from calf injury', 'pain from deep vein thrombosis (DVT)',
-    'calf pain from blood clot', 'aching calves',
-    'pain in both calves', 'pain in inner calf', 'pain in outer calf'
-],
-
-'elbow pain': [
-    'pain in the elbow', 'elbow discomfort', 'elbow ache', 'throbbing pain in elbow', 'pain in outer elbow', 'pain in inner elbow',
-    'elbow joint pain', 'elbow soreness', 'pain from tennis elbow', 'pain from golfer’s elbow', 'pain from elbow strain', 
-    'elbow pain during lifting', 'pain in elbow when twisting', 'pain from overuse of elbow',
-    'tingling in elbow with pain', 'elbow pain from repetitive motion', 'elbow pain from arthritis', 'pain around the elbow', 'elbow pain from tendinitis',
-    'pain from bursitis in elbow', 'pain in elbow', 'pain in elbows', 'pain in the elbow', 'pain in the elbows', 'pain in my elbow', 'pain in my elbows',
-    'elbow pain after throwing', 'radiating pain from elbow to forearm', 'pain behind the elbow', 'pain on top of the elbow', 'pain under the elbow',
-    'pain in elbow crease'
-],
-
-'pelvic pain': [
-    'pelvis discomfort', 'pelvic ache', 'lower abdominal pain', 'cramping in pelvis', 'pain in lower abdomen and pelvis',
-    'pelvic pressure and pain', 'aching pelvis', 'pelvic muscle pain', 'pelvic joint pain', 'pelvic bone pain', 'burning sensation in pelvis',
-    'pain in pelvic', 'pain in pelvis', 'pain in the pelvic', 'pain in the pelvis', 'pain in my pelvic', 'pain in my pelvis'
-
-],
-
-'tingling': [
-    'tingling sensation', 'pins and needles', 'prickling sensation', 'buzzing sensation',
-    'electrical sensation'
-],
+'tingling': ['tingling sensation', 'pins and needles', 'prickling sensation', 'buzzing sensation',
+              'electrical sensation'],
 
 'difficulty speaking': [
     'trouble speaking', 'speech difficulty', 'slurred speech', 'unclear speech', 'impaired speech',
