@@ -6762,7 +6762,6 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'burning': ['burning ', 'feels hot', 'scalded', 'burns','burn'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'ulcers': ['ulcer', 'sore spot', 'ulcers']
     },
  'mouth': {
