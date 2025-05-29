@@ -6636,7 +6636,7 @@ trigger_keywords = {
     },
     'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
-        'stiffness': ['stiff', 'tight', 'frozen', 'locked', 'restricted', 'stiffness'],
+        'stiffness': ['stiff', 'tight', 'frozen', 'freeze', 'locked', 'restricted', 'stiffness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'dislocate', 'dislocated', 'fracture', 'fractured'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'weakness': ['weak', 'weakness', 'unstable', 'weakened', "can’t lift", 'difficulty lifting']
@@ -6737,6 +6737,7 @@ trigger_keywords = {
         'congestion'  : ['congestion', 'blocked', 'clogged', 'stuffy', 'stopped up'],
         'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis'],
         'bleed' : ['bleed', 'bleeding', 'nosebleed', 'epistaxis', 'blood','bled','bleeds'],
+	'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen']
     },
  'thigh': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
@@ -8816,6 +8817,13 @@ body_part_followup_questions = {
             {'hi': "क्या नाक से खून बहना जारी है या रुक गया है?",
              'en': "Is the nosebleed still continuing or has it stopped?",
              'category': 'nose_bleed_status'}
+        ],
+	 'freeze': [
+            {
+                'hi': "क्या आपको ठंडे मौसम में नाक में सुन्नपन या ठंडक का अनुभव होता है?",
+                'en': "Do you feel numbness or a cold sensation in your nose during cold weather?",
+                'category': 'nasal_freezing_cold_sensitivity'
+            }
         ],
         'default': [
             {
