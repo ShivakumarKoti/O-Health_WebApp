@@ -9579,11 +9579,139 @@ body_part_followup_questions = {
                 'category': 'hair_detail'
             }
         ]
+    },
+'finger': {
+        'pain': [
+            {
+                'hi': "क्या उंगली का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+                'en': "Does the finger pain increase during any specific activity?",
+                'category': 'finger_pain_activity'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या उंगली में सुन्नपन लगातार बना रहता है या आता-जाता है?",
+                'en': "Is the numbness in the finger constant or does it come and go?",
+                'category': 'finger_numbness_pattern'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ दर्द, गर्माहट या लालिमा भी है?",
+                'en': "Is there pain, warmth, or redness along with the swelling?",
+                'category': 'finger_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह के समय उंगली में जकड़न ज्यादा होती है?",
+                'en': "Is the stiffness in your finger worse in the morning?",
+                'category': 'finger_stiffness_timing'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या उंगली में हाल ही में कोई चोट या झटका लगा है?",
+                'en': "Did you recently injure or bump your finger?",
+                'category': 'finger_injury_event'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your finger issue in more detail.",
+                'category': 'finger_detail'
+            }
+        ]
+    },
+'thumb': {
+        'pain': [
+            {
+                'hi': "क्या अंगूठे में दर्द पकड़ने या किसी चीज़ को पकड़ने पर बढ़ता है?",
+                'en': "Does thumb pain increase when gripping or holding something?",
+                'category': 'thumb_pain_grip'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या अंगूठे की सूजन के साथ गर्माहट या लालिमा भी है?",
+                'en': "Is there warmth or redness along with the swelling in your thumb?",
+                'category': 'thumb_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह के समय अंगूठे में जकड़न अधिक होती है?",
+                'en': "Is thumb stiffness worse in the morning?",
+                'category': 'thumb_stiffness_timing'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या अंगूठे में सुन्नपन कभी-कभी होता है या लगातार बना रहता है?",
+                'en': "Is the numbness in your thumb occasional or constant?",
+                'category': 'thumb_numbness_pattern'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या हाल ही में अंगूठे में कोई चोट या मोच आई है?",
+                'en': "Did you recently injure or sprain your thumb?",
+                'category': 'thumb_injury_event'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपने अंगूठे की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your thumb issue in more detail.",
+                'category': 'thumb_detail'
+            }
+        ]
+    },
+'palm': {
+        'pain': [
+            {
+                'hi': "क्या हथेली में दर्द किसी चीज़ को पकड़ते समय बढ़ता है?",
+                'en': "Does the palm pain increase when gripping something?",
+                'category': 'palm_pain_grip'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या हथेली में झुनझुनी या सुन्नपन रात के समय ज्यादा होता है?",
+                'en': "Is the numbness or tingling in your palm worse at night?",
+                'category': 'palm_numbness_timing'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या हथेली में सूजन के साथ लालिमा या गर्माहट भी है?",
+                'en': "Is there redness or warmth along with swelling in your palm?",
+                'category': 'palm_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या हथेली की जकड़न के कारण उंगलियां मोड़ने में दिक्कत होती है?",
+                'en': "Is the palm stiffness making it hard to bend your fingers?",
+                'category': 'palm_stiffness_flexibility'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या आपकी हथेली पर हाल ही में कोई चोट, जलन या कट हुआ है?",
+                'en': "Have you recently had a cut, burn, or injury on your palm?",
+                'category': 'palm_injury_event'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी हथेली की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your palm issue in more detail.",
+                'category': 'palm_detail'
+            }
+        ]
     }
-
-	
-
-
 
 
 
