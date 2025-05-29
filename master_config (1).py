@@ -6542,7 +6542,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'itching': ['itch', 'itching', 'itches', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
-        'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles']
+        'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles'],
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
 
     'eye': {
@@ -6560,7 +6561,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
         'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
-        'itching': ['itch', 'itches', 'itching', 'itched', 'itchiness', 'scratchy']
+        'itching': ['itch', 'itches', 'itching', 'itched', 'itchiness', 'scratchy'],
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
     'arm': {
         'pain': ['pain', 'pains', 'paining', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -6624,7 +6626,8 @@ trigger_keywords = {
         'stiffness': ['stiff', 'stiffness', 'locked', 'tight', 'rigid'],
         'injury': ['injury', 'injured', 'twist', 'twisted', 'fall', 'fell', 'hit', 'sprain', 'sprained', 'fracture', 'fractured'],
         'weakness': ['weak', 'weakness', 'unstable', 'giving way', "can’t stand", 'buckling'],
-        'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles']
+        'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
     'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
@@ -6632,7 +6635,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
-        'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted']
+        'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
     'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -6646,7 +6650,8 @@ trigger_keywords = {
         'hearing_loss': ['hearing loss', "can’t hear", 'muffled', 'low hearing'],
         'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear','rings','ring'],
         'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage','discharges','discharged'],
-        'infection': ['infection', 'fever', 'swelling', 'ear infection']
+        'infection': ['infection', 'fever', 'swelling', 'ear infection'],
+        'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
  'nails': {
         'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
@@ -6847,7 +6852,8 @@ trigger_keywords = {
         'numbness': ['numbness', 'numb', 'tingling', 'no sensation', 'loss of feeling'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflammation', 'bump'],
         'stiffness': ['stiffness', 'stiff', 'hard to move', 'limited motion'],
-        'injury': ['injury', 'injured', 'fracture', 'jammed', 'cut', 'bruise']
+        'injury': ['injury', 'injured', 'fracture', 'jammed', 'cut', 'bruise'],
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
 'thumb': {
         'pain': ['pain', 'paining', 'pains', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -7107,7 +7113,13 @@ body_part_followup_questions = {
     },
 
 ],
-
+       'freeze': [
+            {
+                'hi': "क्या ठंड में आपकी टाँगों में ठंडक या झुनझुनी होती है?",
+                'en': "Do you feel coldness or tingling in your legs during cold weather?",
+                'category': 'leg_freezing_cold_sensitivity'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी टांग की समस्या के बारे में और जानकारी दें।",
@@ -7395,6 +7407,13 @@ body_part_followup_questions = {
     "category": "general injury",
   },
 
+        ],
+	'freeze': [
+            {
+                'hi': "क्या ठंड में आपके हाथ सुन्न या ठंडे हो जाते हैं?",
+                'en': "Do your hands feel numb or cold in cold weather?",
+                'category': 'hand_freezing_cold_sensitivity'
+            }
         ],
         'default': [
             {
@@ -8118,6 +8137,13 @@ body_part_followup_questions = {
                 'category': 'knee_weakness_instability'
             }
         ],
+	'freeze': [
+            {
+                'hi': "क्या ठंड में आपके घुटनों में ठंडक या सुन्नपन होता है?",
+                'en': "Do your knees feel cold or numb in cold weather?",
+                'category': 'knee_freezing_cold_sensitivity'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
@@ -8202,6 +8228,13 @@ body_part_followup_questions = {
                 'hi': "क्या सुबह उठने पर पैर में जकड़न महसूस होती है?",
                 'en': "Do you feel stiffness in your foot when you wake up?",
                 'category': 'foot_stiffness_morning'
+            }
+        ],
+	'freeze': [
+            {
+                'hi': "क्या ठंड में आपके पैर सुन्न या ठंडे हो जाते हैं?",
+                'en': "Do your feet feel numb or cold in cold weather?",
+                'category': 'feet_freezing_cold_sensitivity'
             }
         ],
         'default': [
@@ -8370,6 +8403,13 @@ body_part_followup_questions = {
             'category': 'ear_infection_recurrence'
         }
     ],
+    'freeze': [
+            {
+                'hi': "क्या ठंड में आपके कान सुन्न या बहुत ठंडे महसूस होते हैं?",
+                'en': "Do your ears feel numb or extremely cold in cold weather?",
+                'category': 'ear_freezing_cold_sensitivity'
+            }
+        ],
     'default': [
         {
             'hi': "कृपया अपने कान की समस्या के बारे में और जानकारी दें।",
@@ -9622,6 +9662,13 @@ body_part_followup_questions = {
                 'hi': "क्या उंगली में हाल ही में कोई चोट या झटका लगा है?",
                 'en': "Did you recently injure or bump your finger?",
                 'category': 'finger_injury_event'
+            }
+        ],
+	'freeze': [
+            {
+                'hi': "क्या ठंड में आपकी उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
+                'en': "Do your fingers feel numb or very cold in cold weather?",
+                'category': 'finger_freezing_cold_sensitivity'
             }
         ],
         'default': [
