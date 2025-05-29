@@ -6869,6 +6869,14 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'hard to bend', 'tightness'],
         'injury': ['injury', 'injured', 'bruise', 'cut', 'burn', 'blister']
     },
+'toe': {
+        'pain': ['pain', 'pains', 'paining', 'hurts', 'ache', 'throbbing', 'sore'],
+        'numbness': ['numbness', 'numb', 'tingling', 'no sensation', 'loss of feeling'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflammation', 'bump'],
+        'stiffness': ['stiffness', 'stiff', 'hard to move', 'limited motion'],
+        'injury': ['injury', 'injured', 'fracture', 'stubbed', 'cut', 'bruise'],
+        'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+    },
     # add ear / skin / etc…
 }
 
@@ -9766,7 +9774,58 @@ body_part_followup_questions = {
                 'category': 'palm_detail'
             }
         ]
-    }
+    },
+'toe': {
+        'pain': [
+            {
+                'hi': "क्या पैर की उंगली का दर्द चलने या दौड़ने से बढ़ता है?",
+                'en': "Does the toe pain worsen when walking or running?",
+                'category': 'toe_pain_activity'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या पैर की उंगली में सुन्नपन लगातार रहता है या कभी-कभी होता है?",
+                'en': "Is the numbness in the toe constant or occasional?",
+                'category': 'toe_numbness_pattern'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या सूजन के साथ पैर की उंगली में दर्द या गर्माहट है?",
+                'en': "Is there pain or warmth along with the swelling in the toe?",
+                'category': 'toe_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या सुबह के समय पैर की उंगली में जकड़न ज्यादा महसूस होती है?",
+                'en': "Is the stiffness in your toe worse in the morning?",
+                'category': 'toe_stiffness_timing'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या हाल ही में पैर की उंगली में चोट लगी थी या टकराई थी?",
+                'en': "Did you recently injure or stub your toe?",
+                'category': 'toe_injury_event'
+            }
+        ],
+        'freeze': [
+            {
+                'hi': "क्या ठंड में आपकी पैर की उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
+                'en': "Do your toes feel numb or extremely cold in cold weather?",
+                'category': 'toe_freezing_cold_sensitivity'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी पैर की उंगली की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your toe issue in more detail.",
+                'category': 'toe_detail'
+            }
+        ]
+    },
 
 
 
