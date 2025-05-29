@@ -681,12 +681,12 @@ symptom_synonyms = {
     'trouble speaking', 'speech difficulty', 'slurred speech', 'unclear speech', 'impaired speech',
     'problems with speech', 'inability to speak clearly', 'difficulty forming words', 'trouble articulating words',
     'speech impairment', 'difficulty talking', 'trouble talking', 'loss of speech', 'sudden speech difficulty',
-    'speech problems after stroke', 'difficulty speaking due to anxiety', 'difficulty speaking after head injury',
+    'speech problems after stroke', 
     'difficulty finding words', 'difficulty with verbal communication', 'stuttering', 'stammering',
     'broken speech', 'halting speech', 'speech delay', 'difficulty producing speech sounds',
     'raspy voice and trouble speaking', 'difficulty speaking when tired', 'trouble talking after seizure',
     'difficulty pronouncing words', 'difficulty speaking under stress', 'slow speech', 'garbled speech',
-    'difficulty with fluent speech', 'disorganized speech', 'difficulty speaking due to emotional distress',
+    'difficulty with fluent speech', 'disorganized speech', 
     'speech changes', 'difficulty initiating speech', 'trouble expressing thoughts verbally',
     'speech loss', 'difficulty speaking with drooping face'
 ],
@@ -3183,13 +3183,6 @@ symptom_followup_questions = {
   ],
 
 "injury": [
-  {
-    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
-    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-    "category": "general injury",
-    "symptom": "swelling, bleeding, or bruising",
-    "risk_factor": False,
-  },
   {
     "hi": "क्या चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने या विशिष्ट गतिविधियों से यह बढ़ जाता है?",
     "en": "Is the pain after injury constant, or does it worsen with movement or specific activities?",
