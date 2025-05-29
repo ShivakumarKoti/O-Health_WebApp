@@ -6841,7 +6841,27 @@ trigger_keywords = {
         'greying': ['greying', 'white hair', 'grey hair', 'premature greying'],
         'dryness': ['dryness', 'dry', 'rough hair', 'brittle hair']
     },
- 
+ 'finger': {
+        'pain': ['pain', 'pains', 'paining', 'hurts', 'ache', 'throbbing', 'sore'],
+        'numbness': ['numbness', 'numb', 'tingling', 'no sensation', 'loss of feeling'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflammation', 'bump'],
+        'stiffness': ['stiffness', 'stiff', 'hard to move', 'limited motion'],
+        'injury': ['injury', 'injured', 'fracture', 'jammed', 'cut', 'bruise']
+    },
+'thumb': {
+        'pain': ['pain', 'paining', 'pains', 'hurts', 'ache', 'throbbing', 'sore'],
+        'swelling': ['swelling','swollen', 'puffy', 'bump'],
+        'stiffness': ['stiffness', 'stiff', 'hard to move', 'locked thumb'],
+        'numbness': ['numbness', 'numb', 'tingling', 'no sensation'],
+        'injury': ['injury', 'injured', 'sprain', 'dislocated', 'jammed', 'fracture']
+    },
+'palm': {
+        'pain': ['pain', 'paining', 'pains, 'hurts', 'sore', 'ache'],
+        'numbness': ['numbness', 'numb', 'tingling', 'burning', 'no sensation', 'pins and needles'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'bump', 'inflamed'],
+        'stiffness': ['stiffness', 'stiff', 'hard to bend', 'tightness'],
+        'injury': ['injury', 'injured', 'bruise', 'cut', 'burn', 'blister']
+    },
     # add ear / skin / etc…
 }
 
@@ -9709,12 +9729,12 @@ BP_CANON = {
 body_parts = [
     'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
     'neck', 'knee','knees', 'foot','foots', 'shoulder', 'shoulders', 'ear', 'ears','nail' , 'nails', 'bone','bones', 'joint','joints', 'skin','abdomen',
-    'mouth', 'nose', 'tooth', 'tooths', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
+    'mouth', 'nose', 'tooth', 'tooths', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
-    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','calf','waist', 'pelvic','body'
+    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body'
 ] 
 
 symptom_to_specialist = {
