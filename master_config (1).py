@@ -6572,7 +6572,8 @@ trigger_keywords = {
     },
     'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
-        'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed']
+        'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
+	'numbness': ['numb', 'numbness', 'no sensation']
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
