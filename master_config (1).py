@@ -9979,7 +9979,7 @@ BP_CANON = {
 body_parts = [
     'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
     'neck', 'knee','knees', 'foot','foots', 'shoulder', 'shoulders', 'ear', 'ears','nail' , 'nails', 'bone','bones', 'joint','joints', 'skin','abdomen',
-    'mouth', 'nose', 'tooth', 'tooths', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead',
+    'mouth', 'nose', 'tooth', 'tooths', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead','thigh', 'thighs',
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs',
