@@ -6683,7 +6683,7 @@ trigger_keywords = {
         ],
         'itching': [
             'itch', 'itching', 'scratching', 'irritation', 
-            'pruritus', 'tingling', 'crawling sensation','itches'
+            'pruritus', 'crawling sensation','itches'
         ],
         'dryness': [
             'dry', 'flaky', 'scaly', 'rough', 'peeling', 
@@ -6746,11 +6746,11 @@ trigger_keywords = {
 	'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen']
     },
  'thigh': {
-        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
+        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
         'weakness': ['weakness', "can’t lift", 'weak','fatigue', 'tired', 'no strength', 'drained'],
         'spasm': ['spasm', 'twitch', 'twitching', 'cramp', 'tightness', 'spasms'],
         'injury': ['injury', 'pulled', 'strain', 'torn','injured','injure'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge']
     },
  'forehead': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
