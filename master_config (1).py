@@ -7527,6 +7527,13 @@ body_part_followup_questions = {
                 'category': 'head_pressure_pattern'
             }
         ],
+	 'numbness': [
+    {
+        'hi': "क्या सिर में सुन्नपन के साथ बोलने या देखने में भी कोई समस्या हो रही है?",
+        'en': "Are you experiencing any trouble speaking or seeing along with the numbness in your head?",
+        'category': 'head_numbness_neurological_signs'
+    }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने सिर की समस्या के बारे में और जानकारी दें।",
