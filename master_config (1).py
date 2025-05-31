@@ -6445,7 +6445,7 @@ symptom_followup_questions = {
   },
 ],
 
-"blisters": [
+"blister": [
     {
         "hi": "क्या ये छाले जलने, रगड़ या एलर्जी के बाद आए हैं?",
         "en": "Did the blisters appear after a burn, friction, or an allergy?",
