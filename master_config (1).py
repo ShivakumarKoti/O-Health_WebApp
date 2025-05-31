@@ -18,7 +18,7 @@ symptom_list = [
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff', ''
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister',''
 ]
 
 # ------------------------------------------------------------------ #
@@ -42,7 +42,7 @@ symptom_synonyms = {
         'persistent noggin ache', 'head tenderness', 'scalp-aching feeling', 'sensitive head region', 'brainache', 'mind-throbbing torment', 'front-lobe pressure', 'crown-of-head tension',
         'behind-the-eyes ache', 'skull-tight discomfort', 'never-ending head throb', 'grating ache inside skull', 'sinus-pressured ache', 'temple pounding', 'brain pulsation pain', 'cephalic torment',
         'oppressive ache under cranium', 'subtle persistent ache', 'head discomfort', 'dull pounding drumbeat in head', 'hammering inside skull walls', 'unyielding head tension', 'rote ache cycling through head',
-        'cranium under siege', 'deep-set head pang', 'anchor-like pressure in head','pain in head','head pounding like drums','issue with head'
+        'cranium under siege', 'deep-set head pang', 'anchor-like pressure in head','pain in head','head pounding like drums','issue with head','head aches','head is aching','head is paining','head is hurting','head aches'
     ],
     'migraine': [
         'intense one-sided headache', 'migraine aura', 'pulsating pain in head', 'photophobia-associated headache', 'debilitating headache', 'migraine attack', 'searing half-skull ache', 'throbbing temple migraine',
@@ -815,6 +815,8 @@ symptom_synonyms = {
     'itchy flaky scalp', 'seborrheic flakes', 'scalp irritation with flakes', 'skin flakes on scalp',  'dead skin flakes on head',
     'visible scalp flakes', 'dead skin flakes in hair', 'flaky dandruff', 'scalp scaling', 'mild seborrheic dermatitis'
 ],
+
+'blister': ['blister','blisters','blistering']
 
 
 
@@ -6441,7 +6443,34 @@ symptom_followup_questions = {
     "symptom": "skin condition history",
     "risk_factor": True,
   },
+],
+
+"blisters": [
+    {
+        "hi": "क्या ये छाले जलने, रगड़ या एलर्जी के बाद आए हैं?",
+        "en": "Did the blisters appear after a burn, friction, or an allergy?",
+        "category": "blisters_cause",
+        "symptom": "Blisters due to irritation",
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या छाले दर्दनाक या खुजली वाले हैं?",
+        "en": "Are the blisters painful or itchy?",
+        "category": "blisters_pain_itch",
+        "symptom": "Painful or itchy blisters",
+        "risk_factor": False
+    },
+
+    {
+        "hi": "क्या छाले फट गए हैं और तरल पदार्थ निकल रहा है?",
+        "en": "Have the blisters burst and are releasing fluid?",
+        "category": "blisters_burst",
+        "symptom": "Burst blisters with discharge",
+        "risk_factor": False
+    },
+
 ]
+
 
 
 
@@ -6573,7 +6602,7 @@ trigger_keywords = {
     'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
-	'numbness': ['numb', 'numbness', 'no sensation']
+	    'numbness': ['numb', 'numbness', 'no sensation']
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
@@ -6864,7 +6893,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'sprain', 'dislocated', 'jammed', 'fracture']
     },
 'palm': {
-        'pain': ['pain', 'paining', 'pains, 'hurts', 'sore', 'ache'],
+        'pain': ['pain', 'paining', 'pains', 'hurts', 'sore', 'ache'],
         'numbness': ['numbness', 'numb', 'tingling', 'burning', 'no sensation', 'pins and needles'],
         'swelling': ['swelling', 'swollen', 'puffy', 'bump', 'inflamed'],
         'stiffness': ['stiffness', 'stiff', 'hard to bend', 'tightness'],
