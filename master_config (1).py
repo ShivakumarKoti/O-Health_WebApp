@@ -6928,14 +6928,14 @@ trigger_keywords = {
     'redness': ['red', 'redness', 'flushed', 'discoloration'],
     'injury': ['injury', 'hit', 'bruised', 'fracture', 'wound', 'cut']
 },
-'chin':{
+'chin' :{
     'pain': ['pain', 'ache', 'hurting', 'sore', 'tender'],
     'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
     'numbness': ['numb', 'numbness', 'tingling', 'no sensation', 'pins and needles'],
     'injury': ['injury', 'hit', 'bruise', 'fracture', 'wound', 'cut'],
     'lump': ['lump', 'bump', 'mass', 'growth', 'nodule']
 },
-'soles':{
+'soles' :{
     'pain': ['pain', 'ache', 'hurting', 'sore', 'burning', 'sharp pain'],
     'swelling': ['swelling', 'swollen', 'puffy', 'inflamed'],
     'numbness': ['numb', 'numbness', 'tingling', 'no sensation', 'pins and needles'],
