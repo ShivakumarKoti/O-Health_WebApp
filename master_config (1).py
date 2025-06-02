@@ -6907,6 +6907,36 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fracture', 'stubbed', 'cut', 'bruise'],
         'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
+'heel': {
+        'pain': ['pain', 'ache', 'hurting', 'sharp pain', 'burning', 'discomfort'],
+        'swelling': ['swelling', 'swollen', 'puffy', 'inflamed'],
+        'stiffness': ['stiff', 'stiffness', 'rigid', 'tight'],
+        'injury': ['injury', 'fracture', 'bruise', 'hurt', 'crack', 'damage'],
+        'numbness': ['numbness', 'numb', 'tingling', 'no sensation', 'pins and needles']
+    },
+'lip': {
+    'pain': ['pain', 'ache', 'hurting', 'sore', 'burning'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'inflamed'],
+    'dryness': ['dry', 'dryness', 'chapped', 'cracked', 'peeling'],
+    'numbness': ['numb', 'numbness', 'tingling', 'no sensation'],
+    'ulcers': ['ulcer', 'ulcers', 'blister', 'sores']
+},
+'cheek': {
+    'pain': ['pain', 'ache', 'hurting', 'sore', 'tender'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
+    'numbness': ['numb', 'numbness', 'tingling', 'no sensation', 'pins and needles'],
+    'redness': ['red', 'redness', 'flushed', 'discoloration'],
+    'injury': ['injury', 'hit', 'bruised', 'fracture', 'wound', 'cut']
+},
+'chin':{
+    'pain': ['pain', 'ache', 'hurting', 'sore', 'tender'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
+    'numbness': ['numb', 'numbness', 'tingling', 'no sensation', 'pins and needles'],
+    'injury': ['injury', 'hit', 'bruise', 'fracture', 'wound', 'cut'],
+    'lump': ['lump', 'bump', 'mass', 'growth', 'nodule']
+},
+
+
     # add ear / skin / etc…
 }
 
@@ -9864,6 +9894,182 @@ body_part_followup_questions = {
         ]
     },
 
+'heel': {
+        'pain': [
+            {
+                'hi': "क्या एड़ी में दर्द सुबह उठने पर अधिक होता है?",
+                'en': "Is your heel pain worse when you get up in the morning?",
+                'category': 'heel_pain_morning'
+            }
+        ],
+        'swelling': [
+            {
+                'hi': "क्या एड़ी पर सूजन के साथ लालिमा या गर्माहट है?",
+                'en': "Is there redness or warmth with the heel swelling?",
+                'category': 'heel_swelling_signs'
+            }
+        ],
+        'stiffness': [
+            {
+                'hi': "क्या एड़ी जकड़ी हुई या चलने में कठिनाई होती है?",
+                'en': "Does your heel feel stiff or make walking difficult?",
+                'category': 'heel_stiffness_difficulty'
+            }
+        ],
+        'injury': [
+            {
+                'hi': "क्या हाल ही में आपकी एड़ी में कोई चोट लगी है?",
+                'en': "Have you recently injured your heel?",
+                'category': 'heel_injury_recent'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या एड़ी में सुन्नपन या झनझनाहट महसूस होती है?",
+                'en': "Do you feel numbness or tingling in your heel?",
+                'category': 'heel_numbness_sensation'
+            }
+        ],
+        'default': [
+            {
+                'hi': "कृपया अपनी एड़ी की समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your heel issue in more detail.",
+                'category': 'heel_detail'
+            }
+        ]
+    },
+'lip': {
+    'pain': [
+        {
+            'hi': "क्या होंठों में जलन या तीव्र दर्द हो रहा है?",
+            'en': "Are you experiencing burning or sharp pain in the lips?",
+            'category': 'lip_pain_burning'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या होंठों की सूजन अचानक से हुई या किसी एलर्जी के कारण है?",
+            'en': "Did the lip swelling happen suddenly or due to an allergy?",
+            'category': 'lip_swelling_allergy'
+        }
+    ],
+    'dryness': [
+        {
+            'hi': "क्या होंठ लगातार फटते या सूखते रहते हैं?",
+            'en': "Are your lips constantly dry or cracking?",
+            'category': 'lip_dryness_chronic'
+        }
+    ],
+    'numbness': [
+        {
+            'hi': "क्या होंठों में सुन्नपन या झनझनाहट महसूस हो रही है?",
+            'en': "Do you feel numbness or tingling in your lips?",
+            'category': 'lip_numbness_sensation'
+        }
+    ],
+    'ulcers': [
+        {
+            'hi': "क्या होंठों पर छाले या घाव हैं?",
+            'en': "Do you have ulcers or sores on your lips?",
+            'category': 'lip_ulcers_visible'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपने होंठों की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your lip issue in more detail.",
+            'category': 'lip_detail'
+        }
+    ]
+},
+'cheek': {
+    'pain': [
+        {
+            'hi': "क्या गाल में दर्द लगातार बना रहता है या छूने से बढ़ता है?",
+            'en': "Is the cheek pain constant or does it increase when touched?",
+            'category': 'cheek_pain_touch_sensitive'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या गाल में सूजन के साथ बुखार या गर्माहट भी है?",
+            'en': "Is the swelling in the cheek accompanied by fever or warmth?",
+            'category': 'cheek_swelling_fever'
+        }
+    ],
+    'numbness': [
+        {
+            'hi': "क्या गाल में सुन्नपन या झनझनाहट महसूस होती है?",
+            'en': "Do you feel numbness or tingling in your cheek?",
+            'category': 'cheek_numbness_sensation'
+        }
+    ],
+    'redness': [
+        {
+            'hi': "क्या गाल में लालिमा अचानक से हुई है या जलन महसूस होती है?",
+            'en': "Is the redness in your cheek sudden or does it feel like burning?",
+            'category': 'cheek_redness_burning'
+        }
+    ],
+    'injury': [
+        {
+            'hi': "क्या आपके गाल पर हाल ही में कोई चोट लगी है?",
+            'en': "Did you recently suffer any injury to your cheek?",
+            'category': 'cheek_injury_recent'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपने गाल की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your cheek issue in more detail.",
+            'category': 'cheek_detail'
+        }
+    ]
+},
+'chin': {
+    'pain': [
+        {
+            'hi': "क्या ठोड़ी में दर्द चबाने या बोलने पर बढ़ता है?",
+            'en': "Does the chin pain increase while chewing or talking?",
+            'category': 'chin_pain_activity'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या ठोड़ी की सूजन के साथ बुखार या लालिमा है?",
+            'en': "Is the chin swelling accompanied by fever or redness?",
+            'category': 'chin_swelling_fever'
+        }
+    ],
+    'numbness': [
+        {
+            'hi': "क्या ठोड़ी में सुन्नपन या झनझनाहट महसूस हो रही है?",
+            'en': "Do you feel numbness or tingling in your chin?",
+            'category': 'chin_numbness_sensation'
+        }
+    ],
+    'injury': [
+        {
+            'hi': "क्या आपने हाल ही में ठोड़ी पर चोट लगाई है?",
+            'en': "Did you recently injure your chin?",
+            'category': 'chin_injury_recent'
+        }
+    ],
+    'lump': [
+        {
+            'hi': "क्या आपकी ठोड़ी पर कोई गांठ या उभार है?",
+            'en': "Is there a lump or bump on your chin?",
+            'category': 'chin_lump_present'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपनी ठोड़ी की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your chin issue in more detail.",
+            'category': 'chin_detail'
+        }
+    ]
+},
 
 
 
