@@ -6935,7 +6935,13 @@ trigger_keywords = {
     'injury': ['injury', 'hit', 'bruise', 'fracture', 'wound', 'cut'],
     'lump': ['lump', 'bump', 'mass', 'growth', 'nodule']
 },
-
+'soles':{
+    'pain': ['pain', 'ache', 'hurting', 'sore', 'burning', 'sharp pain'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'inflamed'],
+    'numbness': ['numb', 'numbness', 'tingling', 'no sensation', 'pins and needles'],
+    'cracks': ['crack', 'cracks', 'fissures', 'split skin', 'dry cracks'],
+    'itching': ['itching', 'itchy', 'irritation', 'scratchy']
+},
 
     # add ear / skin / etc…
 }
@@ -10070,8 +10076,94 @@ body_part_followup_questions = {
         }
     ]
 },
-
-
+'soles': {
+    'pain': [
+        {
+            'hi': "क्या तलवों में दर्द सुबह उठने पर या चलने पर बढ़ता है?",
+            'en': "Is the pain in your soles worse in the morning or while walking?",
+            'category': 'soles_pain_morning_walk'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या तलवों में सूजन के साथ गर्मी या लालिमा भी है?",
+            'en': "Is there warmth or redness along with swelling in the soles?",
+            'category': 'soles_swelling_inflammation'
+        }
+    ],
+    'numbness': [
+        {
+            'hi': "क्या आपके तलवे सुन्न हो जाते हैं या उनमें झनझनाहट होती है?",
+            'en': "Do your soles feel numb or have a tingling sensation?",
+            'category': 'soles_numbness_sensation'
+        }
+    ],
+    'cracks': [
+        {
+            'hi': "क्या आपके तलवे फट रहे हैं या सूखे हैं?",
+            'en': "Are the soles of your feet cracked or dry?",
+            'category': 'soles_cracks_dryness'
+        }
+    ],
+    'itching': [
+        {
+            'hi': "क्या तलवों में खुजली या जलन हो रही है?",
+            'en': "Do you have itching or burning in the soles?",
+            'category': 'soles_itching_irritation'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपने तलवों की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your sole-related issue in more detail.",
+            'category': 'soles_detail'
+        }
+    ]
+},
+'fingertip': {
+    'pain': [
+        {
+            'hi': "क्या उंगली के सिरे में तेज़ या जलन जैसा दर्द है?",
+            'en': "Is the pain in your fingertip sharp or burning?",
+            'category': 'fingertip_pain_burning'
+        }
+    ],
+    'numbness': [
+        {
+            'hi': "क्या उंगली के सिरे में सुन्नपन या झनझनाहट महसूस हो रही है?",
+            'en': "Do you feel numbness or tingling in your fingertip?",
+            'category': 'fingertip_numbness_sensation'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या उंगली के सिरे में सूजन के साथ लालिमा या गर्मी है?",
+            'en': "Is there swelling along with redness or warmth in the fingertip?",
+            'category': 'fingertip_swelling_inflammation'
+        }
+    ],
+    'injury': [
+        {
+            'hi': "क्या आपकी उंगली के सिरे पर हाल ही में चोट लगी है?",
+            'en': "Did you recently injure the tip of your finger?",
+            'category': 'fingertip_injury_recent'
+        }
+    ],
+    'discoloration': [
+        {
+            'hi': "क्या उंगली का सिरा नीला, काला या पीला हो गया है?",
+            'en': "Has the fingertip turned blue, black, or pale?",
+            'category': 'fingertip_discoloration_color_change'
+        }
+    ],
+    'default': [
+        {
+            'hi': "कृपया अपनी उंगली के सिरे की समस्या के बारे में और जानकारी दें।",
+            'en': "Please describe your fingertip issue in more detail.",
+            'category': 'fingertip_detail'
+        }
+    ]
+},
 
 }
 
@@ -10215,7 +10307,7 @@ body_parts = [
     'leg','legs', 'eye','eyes', 'hand','hands', 'arm','arms', 'head', 'back', 'chest', 'wrist','wrists', 'throat', 'stomach',
     'neck', 'knee','knees', 'foot','foots', 'shoulder', 'shoulders', 'ear', 'ears','nail' , 'nails', 'bone','bones', 'joint','joints', 'skin','abdomen',
     'mouth', 'nose', 'tooth', 'tooths', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead','thigh', 'thighs',
-    'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles',
+    'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles', 'sole',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
