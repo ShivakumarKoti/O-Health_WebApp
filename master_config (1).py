@@ -616,7 +616,7 @@ symptom_synonyms = {
 ],
 
 'sprain': [
-    'ligament injury', 'joint sprain', 'ligament strain', 'stretched ligament', 'ligament tear',
+    'ligament injury', 'joint sprain', 'stretched ligament', 'ligament tear',
     'sprained ligament', 'ligament damage'
 ],
 
