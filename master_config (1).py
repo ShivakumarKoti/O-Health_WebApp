@@ -616,7 +616,7 @@ symptom_synonyms = {
 ],
 
 'sprain': [
-    'ligament injury', 'joint sprain', 'stretched ligament', 'ligament tear',
+    'ligament injury', 'joint sprain', 'ligament strain', 'stretched ligament', 'ligament tear',
     'sprained ligament', 'ligament damage'
 ],
 
@@ -7010,6 +7010,12 @@ trigger_keywords = {
     'itching': ['itching', 'itchy', 'irritation', 'scratchy']
 },
 
+      'child' : {
+      'pain':     ['paining','pains','hurts','hurting'],
+      'bleeding': ['bleeds','bleeding','bled','blood'],
+      'default':  ['issue']   # no “default” words here; we’ll ask to confirm
+},
+
     # add ear / skin / etc…
 }
 
@@ -10243,6 +10249,31 @@ body_part_followup_questions = {
     ]
 },
 
+'child' : {
+    'pain': [
+        {
+            'hi': "क्या आपका बच्चा दर्द से रोता है? क्या यह बच्चे के लिए असहनीय है?",
+            'en': "Does your child cry with pain? Is it unbearable for the child",
+            'category': 'child_pain'
+        }
+    ],
+    'bleeding': [
+        {
+            'hi': "क्या बच्चे को भारी रक्तस्राव हो रहा है?",
+            'en': "Does the child have heavy bleeding?",
+            'category': 'child_bleeding'
+        }
+    ],
+    'default': [
+        {
+            'hi': "क्या आपका बच्चा इन समस्याओं का सामना कर रहा है?",
+            'en': "Is your child facing the issues?",
+            'category': 'confirm_child',
+            'symptom': None
+        }
+    ]
+  },
+
 }
 
 # -----------------------------------------------------------------
@@ -10374,6 +10405,7 @@ BP_CANON = {
     'palms': 'palm',
     'thumbs': 'thumb',
      'bones': 'bone',
+     'sole': 'soles',
      'belly': 'stomach',
      'abdomen':'stomach',
      'joints':'joint',
@@ -10383,10 +10415,24 @@ BP_CANON = {
      'hairs':'hair',
      'nails':'nail',
      'heels':'heel',
+     'waists':'waist',
      'fingers':'finger',
-     'fingertips':'fingertip'
+     'fingertips':'fingertip',
+     'children' : 'child',
+     'kid' : 'child',
+     'kids' : 'child',
+     'baby' : 'child',
+     'babies' : 'child',
+     'son' : 'child',
+     'daughter' : 'child',
+     'nephew' : 'child',
+     'niece' : 'child',
+     'cheeks': 'cheek',
+     'palms': 'palm',
+     'toes': 'toe',
+     'calves':'calf'
       
-    # …and so on for whatever you support
+    # …and so on for all body parts
 }
 
 body_parts = [
@@ -10397,7 +10443,7 @@ body_parts = [
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
-    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body'
+    'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body','child'
 ] 
 
 symptom_to_specialist = {
