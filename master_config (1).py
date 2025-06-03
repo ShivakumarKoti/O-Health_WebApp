@@ -6604,6 +6604,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
 	'numbness': ['numb', 'numbness', 'no sensation'],
+	'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation']
 	
     },
 'back': {
@@ -7604,6 +7605,13 @@ body_part_followup_questions = {
         'en': "Are you experiencing any trouble speaking or seeing along with the numbness in your head?",
         'category': 'head_numbness_neurological_signs'
     }
+        ],
+ 'itching': [
+            {
+                'hi': "क्या सिर में खुजली के साथ पपड़ी, लालिमा या बाल झड़ना भी हो रहा है?",
+                'en': "Is the itching on your head accompanied by flaking, redness, or hair loss?",
+                'category': 'head_itching_signs'
+            }
         ],
         'default': [
             {
