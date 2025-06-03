@@ -482,20 +482,49 @@ symptom_synonyms = {
     'blood-tinged stool', 'bloody feces', 'blood in feces', 'stool with reddish tint', 'blood in the stool sample', 'melena', 'dark tarry stool',
     'fecal blood', 'visible blood in stool', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
 ],
-
+	
 'high blood pressure': [
-    'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'high systolic pressure',
-    'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
-    'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis',  'BP is getting high',  'BP is going high', 'BP gone high',
-    'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP',  'BP is coming high',
-    'BP showing up high',  'BP showing high', 'highest BP', 'BP is showing high'
+    'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure',
+    'high systolic pressure', 'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high',
+    'BP is trending higher', 'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 'BP is getting high',
+    'BP is going high', 'BP gone high', 'elevated BP', 'hypertensive state', 'BP is high', 'BP goes high', 'BP is getting high',
+    'blood pressure is high', 'high BP', 'BP is coming high', 'BP showing up high', 'BP showing high', 'highest BP', 'BP is showing high',
+    'my blood pressure is high', 'feeling pressure is high', 'BP feels high', 'my BP went up suddenly', 'blood pressure went up',
+    'blood pressure rising', 'pressure in my arteries is high', 'high heart pressure', 'pressure reading is high', 'BP is above normal',
+    'blood pressure is above average', 'feeling headache from high BP', 'feeling dizzy due to high blood pressure', 'feeling flushed from high BP',
+    'BP getting higher', 'blood pressure is rising fast', 'pressure in veins is high', 'pressure in arteries rose', 'systolic pressure is high',
+    'diastolic pressure is high', 'my blood pressure reads high', 'pressure numbers are high', 'heart pressure high', 'feeling symptoms of high blood pressure',
+    'pressure has gone up', 'pressure level is high', 'pressure is dangerously high', 'high blood pressure episode', 'high BP symptoms',
+    'rise in blood pressure', 'blood pressure high and causing headache', 'blood pressure high and causing dizziness',
+    'pressure is too much', 'BP is too high', 'blood pressure higher than usual', 'pressure above healthy level',
+    'blood pressure higher than normal', 'blood pressure is dangerously high', 'high BP making me feel unwell', 'high BP making me feel dizzy',
+    'my blood pressure keeps rising', 'my blood pressure is too high', 'BP dangerously rising', 'BP dangerously high',
+    'pressure high and causing symptoms', 'BP above baseline', 'blood pressure higher than expected', 'feeling symptoms from high BP',
+    'high systolic and diastolic pressure', 'blood pressure rising suddenly', 'pressure spiking', 'pressure going dangerously high',
+    'high pressure causing headache', 'feeling flushed because of high blood pressure', 'high BP causing dizziness',
+    'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high'
 ],
 
 'low blood pressure': [
-    'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
-    'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low',  'BP is going low', 'BP gone low',  'BP is coming low',
-    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP','low blood pressure', 'BP is dropping','BP dropped',
-    'BP is low', 'BP showing low', 'BP is showing low'
+    'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition',
+    'low systolic pressure', 'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low', 'BP is going low',
+    'BP gone low', 'BP is coming low', 'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure',
+    'lowest BP', 'low blood pressure', 'BP is dropping', 'BP dropped', 'BP is low', 'BP showing low', 'BP is showing low',
+    'my blood pressure is low', 'feeling dizzy because of low BP', 'BP feels low', 'BP dropped suddenly',
+    'blood pressure went down', 'blood pressure falling', 'pressure in my arteries is low', 'low heart pressure',
+    'pressure reading is low', 'BP is below normal', 'blood pressure is below average', 'feeling faint due to low BP',
+    'lightheaded from low blood pressure', 'feeling weak from low BP', 'BP getting lower', 'blood pressure is dropping fast',
+    'pressure in veins is low', 'pressure in arteries dropped', 'systolic pressure is low', 'diastolic pressure is low',
+    'my blood pressure reads low', 'pressure numbers are low', 'heart pressure low', 'feeling symptoms of low blood pressure',
+    'pressure has gone down', 'pressure level is low', 'pressure is dangerously low', 'low blood pressure episode',
+    'low BP symptoms', 'drop in blood pressure', 'blood pressure low and causing dizziness', 'blood pressure low and causing faintness',
+    'pressure is not enough', 'my BP is too low', 'blood pressure lower than usual', 'pressure below healthy level',
+    'blood pressure lower than normal', 'blood pressure is dangerously low', 'low BP making me feel weak', 'low BP making me feel dizzy',
+    'my blood pressure keeps dropping', 'my blood pressure is too low', 'BP dangerously dropping', 'BP dangerously low',
+    'pressure low and causing symptoms', 'BP below baseline', 'blood pressure lower than expected', 'feeling symptoms from low BP',
+    'low systolic and diastolic pressure', 'blood pressure falling suddenly', 'pressure bottoming out', 'pressure going dangerously low',
+    'low pressure causing fainting', 'feeling faint because of low blood pressure', 'low BP causing lightheadedness',
+    'BP lower than it should be', 'BP lower than normal range', 'heart pressure below normal', 'arterial pressure low'
 ],
 
 'excessive thirst': [
