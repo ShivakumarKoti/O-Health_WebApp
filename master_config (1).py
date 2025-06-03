@@ -453,14 +453,14 @@ symptom_synonyms = {
     'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high', 'BP is trending higher',
     'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis',  'BP is getting high',  'BP is going high', 'BP gone high',
     'elevated BP', 'hypertensive state', 'BP is high','BP goes high','BP is getting high','blood pressure is high','high BP',  'BP is coming high',
-    'BP showing up high', 'BP showing low', 'BP showing high', 'highest BP'
+    'BP showing up high',  'BP showing high', 'highest BP', 'BP is showing high'
 ],
 
 'low blood pressure': [
     'hypotension', 'low BP', 'decreased blood pressure', 'low arterial pressure', 'reduced blood pressure', 'hypotensive condition', 'low systolic pressure',
     'low diastolic pressure', 'lower BP', 'lower blood pressure', 'BP is getting low',  'BP is going low', 'BP gone low',  'BP is coming low',
-    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP','low blood pressure',
-    'BP is low'
+    'blood pressure drop', 'low cardiovascular pressure', 'inadequate blood pressure', 'lowest BP','low blood pressure', 'BP is dropping','BP dropped',
+    'BP is low', 'BP showing low', 'BP is showing low'
 ],
 
 'excessive thirst': [
