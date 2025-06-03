@@ -10299,7 +10299,15 @@ BP_CANON = {
      'belly': 'stomach',
      'abdomen':'stomach',
      'joints':'joint',
-     'ankles':'ankle'
+     'ankles':'ankle',
+     'hips':'hip',
+     'jaws':'jaw',
+     'hairs':'hair',
+     'nails':'nail',
+     'heels':'heel',
+     'fingers':'finger',
+     'fingertips':'fingertip'
+      
     # …and so on for whatever you support
 }
 
