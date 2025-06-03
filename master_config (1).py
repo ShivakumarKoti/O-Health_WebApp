@@ -6887,12 +6887,13 @@ trigger_keywords = {
     'injury': ['injury', 'fracture', 'dislocation', 'sprain', 'strain', 'bruise', 'fall', 'trauma']
 },
  'waist': {
-        'pain': ['pain', 'pains', 'paining', 'ache', 'throbbing', 'discomfort', 'soreness'],
-        'stiffness': ['stiffness', 'stiff', 'tight', 'limited movement', 'rigid'],
+        'pain': ['pain', 'pains', 'paining', 'ache', 'aching', 'throbbing', 'sore', 'discomfort', 'soreness'],
+        'stiffness': ['stiffness', 'stiff', 'tight', 'limited movement', 'rigid', 'hard to twist', 'cannot bend'],
         'numbness': ['numbness', 'numb', 'tingling', 'loss of sensation'],
-        'swelling': ['swollen', 'bump', 'swelling', 'inflammation'],
-        'injury': ['injury', 'pulled', 'strained', 'hurt', 'twisted'],
-        'itching': ['itch', 'itching', 'irritation', 'scratchy']
+        'swelling': ['swollen', 'bump', 'swelling', 'puffy', 'enlarged', 'inflamed', 'inflammation'],
+        'injury': ['injury', 'pulled', 'strained', 'hurt', 'broken', 'strain', 'sprain', 'trauma', 'broke', 'fall', 'twisted'],
+        'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
+	'itching': ['itch', 'itching', 'irritation', 'scratchy']
     },
 
 'pelvic': {
@@ -9465,6 +9466,13 @@ body_part_followup_questions = {
                 'hi': "क्या आपने किसी अचानक गतिविधि के दौरान कमर में चोट महसूस की?",
                 'en': "Did the waist injury happen during a sudden movement or activity?",
                 'category': 'waist_injury_cause'
+            }
+        ],
+	'weakness': [
+            {
+        'hi': "क्या कमर की कमजोरी के कारण आपको खड़े होने या चलने में कठिनाई होती है?",
+        'en': "Does weakness in your waist make it difficult to stand or walk?",
+        'category': 'waist_weakness_function'
             }
         ],
         'itching': [
