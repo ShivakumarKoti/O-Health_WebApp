@@ -6653,7 +6653,7 @@ trigger_keywords = {
 	'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
-        'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
+        'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'wound', 'wounded', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
         'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
         'itching': ['itch', 'itches', 'itching', 'itched', 'itchiness', 'scratchy'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
