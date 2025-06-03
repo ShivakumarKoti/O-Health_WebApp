@@ -6886,12 +6886,13 @@ trigger_keywords = {
     'weakness': ['weakness', 'weak', 'unstable', 'giving way', 'can’t bear weight', 'wobbly', 'tired'],
     'injury': ['injury', 'fracture', 'dislocation', 'sprain', 'strain', 'bruise', 'fall', 'trauma']
 },
-'waist': {
-        'pain': ['pain', 'ache', 'aching', 'soreness', 'throbbing', 'burning', 'sharp', 'dull', 'stabbing'],
-        'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'limited motion', 'can’t bend', 'hard to twist'],
-        'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
-        'weakness': ['weakness', 'weak', 'unstable', 'can’t support', 'giving way', 'tired', 'fatigued'],
-        'injury': ['injury', 'strain', 'sprain', 'pull', 'twist', 'trauma', 'broken', 'broke', 'fall']
+ 'waist': {
+        'pain': ['pain', 'pains', 'paining', 'ache', 'throbbing', 'discomfort', 'soreness'],
+        'stiffness': ['stiffness', 'stiff', 'tight', 'limited movement', 'rigid'],
+        'numbness': ['numbness', 'numb', 'tingling', 'loss of sensation'],
+        'swelling': ['swollen', 'bump', 'swelling', 'inflammation'],
+        'injury': ['injury', 'pulled', 'strained', 'hurt', 'twisted'],
+        'itching': ['itch', 'itching', 'irritation', 'scratchy']
     },
 
 'pelvic': {
@@ -9433,37 +9434,44 @@ body_part_followup_questions = {
     'waist': {
         'pain': [
             {
-                'hi': "क्या कमर में दर्द बैठने या झुकने पर बढ़ता है?",
-                'en': "Does the waist pain get worse when sitting or bending?",
-                'category': 'waist_pain_position'
+                'hi': "क्या कमर का दर्द खड़े होने या चलने से बढ़ता है?",
+                'en': "Does the waist pain increase when standing or walking?",
+                'category': 'waist_pain_trigger'
             }
         ],
         'stiffness': [
             {
-                'hi': "क्या सुबह के समय कमर में ज्यादा जकड़न महसूस होती है?",
-                'en': "Is the waist stiffness more noticeable in the morning?",
-                'category': 'waist_stiffness_morning'
+                'hi': "क्या कमर में जकड़न सुबह उठने पर ज़्यादा महसूस होती है?",
+                'en': "Is the waist stiffness worse in the morning when you wake up?",
+                'category': 'waist_stiffness_time'
+            }
+        ],
+        'numbness': [
+            {
+                'hi': "क्या कमर का सुन्नपन पैर या जांघों तक फैलता है?",
+                'en': "Does the numbness in your waist extend to your legs or thighs?",
+                'category': 'waist_numbness_radiation'
             }
         ],
         'swelling': [
             {
-                'hi': "क्या कमर में सूजन के साथ दर्द या गर्माहट भी है?",
-                'en': "Is there pain or warmth along with the swelling in your waist?",
+                'hi': "क्या कमर की सूजन के साथ लालिमा या गर्मी भी है?",
+                'en': "Is there redness or warmth with the swelling in your waist?",
                 'category': 'waist_swelling_signs'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या कमर की कमजोरी के कारण चलने या उठने में कठिनाई होती है?",
-                'en': "Does waist weakness make it difficult for you to walk or get up?",
-                'category': 'waist_weakness_mobility'
             }
         ],
         'injury': [
             {
-                'hi': "क्या हाल ही में कमर में कोई चोट या मोच आई थी?",
-                'en': "Did you recently experience any injury or strain in the waist?",
-                'category': 'waist_injury_recent'
+                'hi': "क्या आपने किसी अचानक गतिविधि के दौरान कमर में चोट महसूस की?",
+                'en': "Did the waist injury happen during a sudden movement or activity?",
+                'category': 'waist_injury_cause'
+            }
+        ],
+        'itching': [
+            {
+                'hi': "क्या कमर में खुजली के साथ रैश या जलन भी हो रही है?",
+                'en': "Is the itching on your waist accompanied by rash or burning?",
+                'category': 'waist_itching_symptoms'
             }
         ],
         'default': [
