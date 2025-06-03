@@ -10515,7 +10515,7 @@ symptom_to_specialist = {
     'tooth decay': 'Dentist',
     'broken voice': 'E N T Specialist',
     'hand dryness': 'Dermatologist',
-    'wound': 'General Surgeon',
+    'wound': 'General Practitioner',
     'body ache': 'General Practitioner',
     'bruises': 'General Practitioner',
     'eye weakness': 'Ophthalmologist',
