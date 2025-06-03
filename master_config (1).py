@@ -6581,7 +6581,8 @@ trigger_keywords = {
         'burn': ['burn', 'burning', 'burnt', 'irritation', 'sting', 'stinging'],
         'weakness': ['weak', 'weakness', 'tired eyes', 'eye strain', 'fatigued eyes', 'weakened'],
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
-        'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision']
+        'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
+	'swelling': ['swollen', 'puffy', 'swelling', 'bulging', 'bump']
     },
    'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -6602,7 +6603,8 @@ trigger_keywords = {
     'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
-	    'numbness': ['numb', 'numbness', 'no sensation']
+	'numbness': ['numb', 'numbness', 'no sensation'],
+	
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
@@ -7338,10 +7340,14 @@ body_part_followup_questions = {
 
     },
 
-
   ],
-
-
+'swelling': [
+            {
+                'hi': "क्या सूजी हुई आंख में दर्द या गर्माहट महसूस हो रही है?",
+                'en': "Is the swollen eye accompanied by pain or warmth?",
+                'category': 'eye_swelling_signs'
+            }
+        ],
     'default': [
         {
             'hi': "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
