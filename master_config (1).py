@@ -6750,7 +6750,7 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'paining', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted', 'shortness of breath with effort'],
 	'burn': ['burn', 'burning', 'burns', 'burnt'],
-        'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat','pounding']
+        'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat', 'pounding','faster', 'fast']
  },
 
  'urinary': {
