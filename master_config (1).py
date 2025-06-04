@@ -4439,8 +4439,66 @@ symptom_followup_questions = {
       "en": "Do you feel any lump or swelling in your lower abdomen or pelvis?",
       "category": "pelvic_mass",
       "symptom": "pelvic mass",
-      "risk_factor": True
+      "risk_factor": True,
     },
+],
+"menstruation": [
+  {
+    "hi": "क्या आपकी माहवारी नियमित रूप से आती है?",
+    "en": "Is your menstrual cycle regular?",
+    "category": "menstruation",
+    "symptom": "irregular periods",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी माहवारी सामान्य से अधिक भारी होती है?",
+    "en": "Is your menstrual flow heavier than usual?",
+    "category": "menstruation",
+    "symptom": "heavy menstrual bleeding",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी माहवारी छूट गई है या देर से आई है?",
+    "en": "Have you missed or had a delayed period?",
+    "category": "menstruation",
+    "symptom": "missed/delayed period",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपकी माहवारी के दौरान अत्यधिक दर्द या ऐंठन होती है?",
+    "en": "Do you experience severe pain or cramping during your period?",
+    "category": "menstruation",
+    "symptom": "dysmenorrhea",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपकी माहवारी बहुत कम या हल्की होती है?",
+    "en": "Is your menstrual flow very light or scanty?",
+    "category": "menstruation",
+    "symptom": "light periods",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या माहवारी के बीच में आपको रक्तस्राव होता है?",
+    "en": "Do you experience bleeding between periods?",
+    "category": "menstruation",
+    "symptom": "intermenstrual bleeding",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपकी माहवारी के समय असामान्य रंग या गंध होती है?",
+    "en": "Is there any unusual color or odor during your period?",
+    "category": "menstruation",
+    "symptom": "abnormal discharge",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपकी माहवारी के समय थकान या कमजोरी महसूस होती है?",
+    "en": "Do you feel fatigued or weak during your period?",
+    "category": "menstruation",
+    "symptom": "fatigue during menstruation",
+    "risk_factor": False,
+  },
 ],
 
 "thyroid": [
