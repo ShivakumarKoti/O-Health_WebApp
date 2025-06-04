@@ -6827,6 +6827,7 @@ trigger_keywords = {
     },
 'period' : {
       'pain':     ['paining','pains','hurts','hurting'],
+      'delayed':   ['delayed','delay','delays','delaying'],
       'bleeding': ['bleeds','bleeding','bled','blood'],
       'default':  ['issue','issues']   # no “default” words here; we’ll ask to confirm
 },
@@ -9408,6 +9409,13 @@ body_part_followup_questions = {
             'category': 'period_pain'
         }
     ],
+    'delayed': [
+            {
+                'hi': "क्या आपकी माहवारी अनियमित रही है या पहले भी देर से आती रही है?",
+                'en': "Have your periods been irregular or delayed in the past as well?",
+                'category': 'period_delay_history'
+            }
+        ],
     'bleeding': [
         {
             'hi': "क्या आपकी मासिक धर्म में असामान्य रक्तस्राव होता है?",
