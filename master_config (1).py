@@ -6716,7 +6716,7 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles'],
-	'itching': ['itch', 'itching', 'scratchy', 'irritation'],
+	'itching': ['itch', 'itching', 'scratchy', 'itchiness'],
         'bleeding': ['bleeding', 'blood', 'bleed', 'cut'],
 	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
 
@@ -6738,7 +6738,8 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
+	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
+	'itching': ['itch', 'itching', 'scratchy', 'itchiness']
     },
 'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -6823,7 +6824,7 @@ trigger_keywords = {
 'heart': {
         'pain': ['pain', 'pains', 'paining', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted', 'shortness of breath with effort'],
-	    'burn': ['burn', 'burning', 'burns', 'burnt'],
+	 'burn': ['burn', 'burning', 'burns', 'burnt'],
         'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat', 'pounding','faster', 'fast']
  },
 
@@ -6854,7 +6855,8 @@ trigger_keywords = {
         'spasm': ['spasm', 'twitch', 'twitching', 'cramp', 'tightness', 'spasms'],
         'injury': ['injury', 'pulled', 'strain', 'torn','injured','injure'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
-	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation']
+	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation'],
+	'itching': ['itch', 'itching', 'itchy', 'scratchy', 'itchiness']
     },
 'forehead': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
@@ -6911,7 +6913,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'bloating'],
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
         'injury': ['injury', 'fall', 'fracture', 'trauma', 'strain', 'sprain'],
-	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation']
+	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation'],
+	'itching': ['itchy', 'itching', 'itchiness', 'scratchy']
     },
 'elbow': {
         'pain': ['pain', 'ache', 'aching', 'sharp', 'burning', 'stabbing', 'soreness', 'discomfort', 'throbbing'],
@@ -7257,6 +7260,13 @@ body_part_followup_questions = {
                 'hi': "क्या सूजन के साथ लालिमा या गर्माहट भी महसूस हो रही है?",
                 'en': "Is there any redness or warmth along with the swelling?",
                 'category': 'leg_swelling_symptoms'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
+                'en': "Does the itching in your legs get worse at certain times like at night?",
+                'category': 'leg_itching_timing'
             }
         ],
         'weakness': [
@@ -8536,6 +8546,13 @@ body_part_followup_questions = {
                 'category': 'foot_spasm_context'
             }
         ],
+	'itching': [
+            {
+                'hi': "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
+                'en': "Does the itching in your legs get worse at certain times like at night?",
+                'category': 'leg_itching_timing'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने पैर की समस्या के बारे में और जानकारी दें।",
@@ -9278,6 +9295,13 @@ body_part_followup_questions = {
                 'category': 'thigh_numbness_distribution'
             }
         ],
+	 'itching': [
+            {
+                'hi': "क्या जांघ में खुजली के साथ रैश या फफोले भी हैं?",
+                'en': "Is the thigh itching accompanied by a rash or blisters?",
+                'category': 'thigh_itching_signs'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी जांघ की समस्या के बारे में अधिक जानकारी दें।",
@@ -9699,6 +9723,13 @@ body_part_followup_questions = {
                 'hi': "क्या पेल्विक क्षेत्र का सुन्नपन पैरों तक फैलता है?",
                 'en': "Does the numbness in your pelvic area extend to the legs?",
                 'category': 'pelvic_numbness_distribution'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या पेल्विक क्षेत्र की खुजली के साथ जलन या रिसाव भी है?",
+                'en': "Is the itching in the pelvic area accompanied by burning or discharge?",
+                'category': 'pelvic_itching_accompanied'
             }
         ],
         'default': [
