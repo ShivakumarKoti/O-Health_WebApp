@@ -4,7 +4,7 @@
 # ------------------------------------------------------------------ #
 # Original symptom list with potential duplicates
 symptom_list = [
-'fever', 'cold', 'runny nose', 'sneezing', 'rash', 'back spasm', 'dizziness', 'weakness', 'loss of appetite', 'cough',
+'fever', 'cold', 'runny nose', 'sneezing', 'rash', 'dizziness', 'weakness', 'loss of appetite', 'cough',
 'constipation', 'diarrhea', 'flu', 'shortness of breath', 'rapid breathing','migraine',
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
@@ -25,15 +25,6 @@ symptom_list = [
 # ------------------------- Mapping symptom ------------------------ #
 # ------------------------------------------------------------------ #
 symptom_synonyms = {
-  'back spasm': [
-        'back is spasming', 'back spasms', 'back spasm', 'spinal contraction', 'muscle cramp in back', 'tight back muscles', 'back tightening', 'muscle spasm in lower back', 'spine spasming',
-        'back muscle jerk', 'severe back cramp', 'spine knot', 'muscle twitch in back', 'spinal spasm', 'back stiffening', 'lower back stiffness', 'muscle contraction in back', 'back cramping',
-        'muscle twitching in spine', 'sharp spasms in back', 'spine twinge', 'muscle jerking in back', 'back spasms', 'backspasm',
-        'painful back convulsion', 'tense back', 'tightness in back', 'cramping back muscles', 'pulled back muscle', 'cramped spine', 'jerking back muscles', 'painful back tightening',
-        'spinal muscle strain', 'back tension', 'muscle knots in back', 'spine tightening pain', 'painful back stiffness', 'spinal muscles seizing', 'back spasm attack', 'muscle discomfort in back',
-        'intense back strain', 'stiffened spine', 'spinal muscles hardening', 'back contorting', 'back stiffness attack', 'back muscle tension', 'back pain with spasms', 'spasm in the back',
-        'back locked up','back clenched up'
-    ],
     'headache': [
         'head pain', 'throbbing headache', 'pounding head', 'migraine-like ache', 'cranial ache', 'head pressure', 'pressure on the head', 'pressure in the head','head pains','head is paining','pain in the head','head is hurting',
         'hammering pain in skull', 'aching brain', 'full-head ache', 'temple-throbbing pain', 'dull ache behind eyes', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
@@ -3357,52 +3348,6 @@ symptom_followup_questions = {
       "symptom": "medications and treatments",
       "risk_factor": False,    },
   ],
-
-  "back spasm": [
-    {
-      "hi": "पीठ की ऐंठन कहाँ स्थित है (उदाहरण के लिए, निचली पीठ, ऊपरी पीठ, या गर्दन)?",
-      "en": "Where is the back spasm located (e.g., lower back, upper back, or neck)?",
-      "category": "back_spasms",
-      "symptom": "location of spasm",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या पीठ की ऐंठन लगातार बनी रहती है, या वे आती-जाती रहती हैं?",
-      "en": "Are the back spasms constant, or do they come and go?",
-      "category": "back_spasms",
-      "symptom": "spasm pattern",
-      "risk_factor": False,    },
-    {
-      "hi": "पीठ की ऐंठन के दौरान दर्द कितना गंभीर होता है? क्या यह तेज़, सुस्त या ऐंठन वाला होता है?",
-      "en": "How severe is the pain during the back spasms? Is it sharp, dull, or cramping?",
-      "category": "back_spasms",
-      "symptom": "pain severity and type",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या पीठ में ऐंठन कुछ गतिविधियों जैसे उठाने, झुकने या शारीरिक परिश्रम के बाद होती है?",
-      "en": "Do the back spasms occur after certain activities, such as lifting, bending, or physical exertion?",
-      "category": "back_spasms",
-      "symptom": "activity-related spasms",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको हाल ही में कोई चोट लगी है, गिर गया है, या खिंचाव आया है जिसके कारण पीठ में ऐंठन हुई हो?",
-      "en": "Have you had any recent injuries, falls, or strains that might have triggered the back spasms?",
-      "category": "back_spasms",
-      "symptom": "recent injury or strain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको पीठ से संबंधित कोई पिछला इतिहास है, जैसे हर्नियेटेड डिस्क, गठिया, या डीजनरेटिव डिस्क रोग?",
-      "en": "Do you have a history of back problems, such as herniated discs, arthritis, or degenerative disc disease?",
-      "category": "back_spasms",
-      "symptom": "history of back problems",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप वर्तमान में पीठ की ऐंठन के लिए कोई दवा ले रहे हैं या उपचार (जैसे, गर्मी, बर्फ, भौतिक चिकित्सा) का उपयोग कर रहे हैं?",
-      "en": "Are you currently taking any medications or using treatments (e.g., heat, ice, physical therapy) for the back spasms?",
-      "category": "back_spasms",
-      "symptom": "medications and treatments",
-      "risk_factor": False,    },
-  ],
-
   
   "arthritis": [
     {
@@ -6674,9 +6619,10 @@ trigger_keywords = {
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
 	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
-        'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked'],
+        'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked','tightness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
+	'spasm' : ['spasm','spasms','spasmed'],
         'issue': ['issue', 'issues', 'problem', 'problems', 'condition', 'discomfort']
     },
     'chest': {
@@ -7735,6 +7681,50 @@ body_part_followup_questions = {
                 'category': 'back_weakness_bend_lift'
             },
         ],
+	'spasm': [
+	    {
+	      "hi": "पीठ की ऐंठन कहाँ स्थित है (उदाहरण के लिए, निचली पीठ, ऊपरी पीठ, या गर्दन)?",
+	      "en": "Where is the back spasm located (e.g., lower back, upper back, or neck)?",
+	      "category": "back_spasms",
+	      "symptom": "location of spasm",
+	      "risk_factor": False,    },
+	    {
+	      "hi": "क्या पीठ की ऐंठन लगातार बनी रहती है, या वे आती-जाती रहती हैं?",
+	      "en": "Are the back spasms constant, or do they come and go?",
+	      "category": "back_spasms",
+	      "symptom": "spasm pattern",
+	      "risk_factor": False,    },
+	    {
+	      "hi": "पीठ की ऐंठन के दौरान दर्द कितना गंभीर होता है? क्या यह तेज़, सुस्त या ऐंठन वाला होता है?",
+	      "en": "How severe is the pain during the back spasms? Is it sharp, dull, or cramping?",
+	      "category": "back_spasms",
+	      "symptom": "pain severity and type",
+	      "risk_factor": False,    },
+	    {
+	      "hi": "क्या पीठ में ऐंठन कुछ गतिविधियों जैसे उठाने, झुकने या शारीरिक परिश्रम के बाद होती है?",
+	      "en": "Do the back spasms occur after certain activities, such as lifting, bending, or physical exertion?",
+	      "category": "back_spasms",
+	      "symptom": "activity-related spasms",
+	      "risk_factor": False,    },
+	    {
+	      "hi": "क्या आपको हाल ही में कोई चोट लगी है, गिर गया है, या खिंचाव आया है जिसके कारण पीठ में ऐंठन हुई हो?",
+	      "en": "Have you had any recent injuries, falls, or strains that might have triggered the back spasms?",
+	      "category": "back_spasms",
+	      "symptom": "recent injury or strain",
+	      "risk_factor": False,    },
+	    {
+	      "hi": "क्या आपको पीठ से संबंधित कोई पिछला इतिहास है, जैसे हर्नियेटेड डिस्क, गठिया, या डीजनरेटिव डिस्क रोग?",
+	      "en": "Do you have a history of back problems, such as herniated discs, arthritis, or degenerative disc disease?",
+	      "category": "back_spasms",
+	      "symptom": "history of back problems",
+	      "risk_factor": False,    },
+	    {
+	      "hi": "क्या आप वर्तमान में पीठ की ऐंठन के लिए कोई दवा ले रहे हैं या उपचार (जैसे, गर्मी, बर्फ, भौतिक चिकित्सा) का उपयोग कर रहे हैं?",
+	      "en": "Are you currently taking any medications or using treatments (e.g., heat, ice, physical therapy) for the back spasms?",
+	      "category": "back_spasms",
+	      "symptom": "medications and treatments",
+	      "risk_factor": False,    },
+	  ],
         'stiffness': [
             {
                 'hi': "क्या सुबह उठने पर पीठ में ज्यादा जकड़न महसूस होती है?",
