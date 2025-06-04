@@ -6748,7 +6748,8 @@ trigger_keywords = {
             'pimples', 'acne', 'zits', 'whiteheads', 'blackheads', 
             'breakouts', 'spots', 'pustules', 'cysts', 'nodules'],
         'burn': ['burn', 'sunburn', 'scald', 'blister','burns','burning'],
-        'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
+        'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores'],
+	'bleeding': ['bleeding', 'blood', 'bleed', 'bleeds']
     },
 
 
@@ -8809,6 +8810,13 @@ body_part_followup_questions = {
                 'hi': "क्या त्वचा में किसी प्रकार के घाव, मवाद या लालिमा है?",
                 'en': "Is there any wound, pus, or redness on the skin?",
                 'category': 'skin_infection_signs'
+            }
+        ],
+	 'bleeding': [
+            {
+                'hi': "क्या त्वचा से खून किसी चोट, फोड़े या दाने की वजह से निकल रहा है?",
+                'en': "Is the bleeding from your skin due to an injury, boil, or rash?",
+                'category': 'skin_bleeding_cause'
             }
         ],
         'default': [
