@@ -640,17 +640,21 @@ symptom_synonyms = {
     'spinal health issue', 'postural problems', 'spondylosis', 'degenerative disc disease', 'spine misalignment', 'spinal deformity', 'spinal arthritis', 'spinal stenosis',
     'backbone issue'
 ],
-
 'female issue': [
-    'women’s health', 'gynecological issue', 'female reproductive health', 'menstrual problems', 'menstrual irregularities', 'PCOS', 'PCOD', 'endometriosis', 'fibroids', 'ovarian cysts',
-    'vaginal infection', 'vaginal discharge', 'menopause', 'pre menopause', 'post menopause', 'vaginal dryness', 'prolapsed uterus','period pains',
-    'birth control issues', 'female urinary issues', 'pregnancy complications','white discharge', 'female issues', 'irregular periods', 'woman issue', 'women issue', 'periods pain',
-    'woman issues', 'women issues','periods are irregular', 'pain during periods', 'periods pain', 'period pain', 'period is irregular', 'pain during period', 'abnormal periods',
-
-    'heavy periods', 'spotting between periods', 'missed periods', 'uterine bleeding','menopause', 'vaginal itching', 'vaginal odor',
-    'ovulation pain', 'breast tenderness', 'breast lumps', 'nipple discharge', 'breast pain', 'breast swelling','difficulty conceiving',
-    'itchy vulva', 'burning vulva','menopausal', 'clotting during periods',
-    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods','no periods', 'absent periods', 'amenorrhea','masik dharm'
+    'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis',
+    'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 
+    'vaginal dryness', 'prolapsed uterus', 'birth control issues', 'female urinary issues',
+    'pregnancy complications', 'white discharge', 'female issues', 'woman issue', 'women issue', 'woman issues',
+    'women issues', 'vaginal itching', 'vaginal odor', 'ovulation pain', 'breast tenderness', 'breast lumps',
+    'nipple discharge', 'breast pain', 'breast swelling', 'difficulty conceiving', 'itchy vulva', 'burning vulva'
+   
+],
+'menstruation': [
+    'menstrual problems', 'menstrual irregularities', 'period pains', 'irregular periods', 'periods pain','post menopause',
+    'period pain', 'period is irregular', 'pain during periods', 'pain during period', 'abnormal periods','menopause', 'pre menopause',
+    'heavy periods', 'spotting between periods', 'missed periods', 'uterine bleeding', 'clotting during periods',
+    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods', 'no periods', 'menopausal',
+    'absent periods', 'amenorrhea', 'masik dharm'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
