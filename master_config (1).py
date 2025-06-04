@@ -6670,7 +6670,8 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'paining', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'tingles','pins', 'needles', 'numbing'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
-        'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained']
+        'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained'],
+	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
@@ -6682,11 +6683,11 @@ trigger_keywords = {
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
-	    'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
+	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
         'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked','tightness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
-	    'spasm' : ['spasm','spasms','spasmed'],
+	'spasm' : ['spasm','spasms','spasmed'],
         'issue': ['issue', 'issues', 'problem', 'problems', 'condition', 'discomfort']
     },
 'chest': {
@@ -6726,7 +6727,8 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles'],
 	'itching': ['itch', 'itching', 'scratchy', 'irritation'],
-        'bleeding': ['bleeding', 'blood', 'bleed', 'cut']
+        'bleeding': ['bleeding', 'blood', 'bleed', 'cut'],
+	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
 
     },
 'knee': {
@@ -6745,7 +6747,8 @@ trigger_keywords = {
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
-	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
+	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
     },
 'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -6820,10 +6823,10 @@ trigger_keywords = {
 'muscle': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','stiff','stiffness'],
         'weakness': ['weakness', 'weak',  'fatigued', 'loss of strength', 'unable to lift'],
-        'spasm': ['spasm', 'tightness', 'twitching','tensed'],
+        'spasm': ['spasm', 'spasms', 'tightness', 'twitching','tensed'],
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
-	    'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch']
+	'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch']
     },
  
 'heart': {
@@ -6852,7 +6855,7 @@ trigger_keywords = {
         'congestion'  : ['congestion', 'blocked', 'clogged', 'stuffy', 'stopped up'],
         'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis'],
         'bleed' : ['bleed', 'bleeding', 'nosebleed', 'epistaxis', 'blood','bled','bleeds'],
-	    'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen']
+	'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen']
     },
 'thigh': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -7664,6 +7667,13 @@ body_part_followup_questions = {
                 'category': 'arm_weakness_context'
             }
         ],
+	'spasm': [
+            {
+                'hi': "क्या आपके हाथ में ऐंठन किसी काम के दौरान होती है?",
+                'en': "Do you experience arm spasms during any specific activities?",
+                'category': 'arm_spasm_activity'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने हाथ की समस्या के बारे में अधिक जानकारी दें।",
@@ -8303,6 +8313,13 @@ body_part_followup_questions = {
                 'category': 'neck_bleeding_cause'
             }
         ],
+	'spasm': [
+            {
+                'hi': "क्या गर्दन की ऐंठन अचानक होती है और गर्दन हिलाना मुश्किल हो जाता है?",
+                'en': "Do neck spasms happen suddenly and make it hard to move your neck?",
+                'category': 'neck_spasm_effect'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी गर्दन की समस्या के बारे में और जानकारी दें।",
@@ -8490,6 +8507,13 @@ body_part_followup_questions = {
                 'hi': "क्या ठंड में आपके पैर सुन्न या ठंडे हो जाते हैं?",
                 'en': "Do your feet feel numb or cold in cold weather?",
                 'category': 'feet_freezing_cold_sensitivity'
+            }
+        ],
+	'spasm': [
+            {
+                'hi': "क्या पैरों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
+                'en': "Do you get foot spasms while walking or during exercise?",
+                'category': 'foot_spasm_context'
             }
         ],
         'default': [
@@ -10775,7 +10799,7 @@ symptom_to_specialist = {
     'leg weakness': 'Neurologist',
     'yellow eyes': 'Hepatologist',
     'red eyes': 'Ophthalmologist',
-
+	
     # Gynecologist
     'female issue': 'Gynecologist',
     'menstruation': 'Gynecologist',
