@@ -6676,6 +6676,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
 	'spasm' : ['spasm','spasms','spasmed'],
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
         'issue': ['issue', 'issues', 'problem', 'problems', 'condition', 'discomfort']
     },
 'chest': {
@@ -7843,6 +7844,13 @@ body_part_followup_questions = {
                 'hi': "क्या सुन्नपन पीठ से टांगों तक फैलता है?",
                 'en': "Does the numbness in your back extend down to your legs?",
                 'category': 'back_numbness_radiation'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या पीठ की खुजली के साथ लाल चकत्ते या सूखापन भी है?",
+                'en': "Is the itching on your back accompanied by rash or dryness?",
+                'category': 'back_itching_rash'
             }
         ],
 	'issue': [
