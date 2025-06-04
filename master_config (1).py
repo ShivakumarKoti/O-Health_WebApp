@@ -10771,7 +10771,7 @@ symptom_to_specialist = {
     'eye weakness': 'Ophthalmologist',
     'leg weakness': 'Neurologist',
     'yellow eyes': 'Hepatologist',
-    'red eyes': 'Ophthalmologist'
+    'red eyes': 'Ophthalmologist',
 
     # Gynecologist
     'period pain':'Gynecologist',
