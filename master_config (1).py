@@ -10575,6 +10575,7 @@ BP_CANON = {
      'sole': 'soles',
      'belly': 'stomach',
      'abdomen':'stomach',
+     'abdominal':'stomach',
      'joints':'joint',
      'ankles':'ankle',
      'hips':'hip',
