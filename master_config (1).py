@@ -10772,6 +10772,12 @@ symptom_to_specialist = {
     'leg weakness': 'Neurologist',
     'yellow eyes': 'Hepatologist',
     'red eyes': 'Ophthalmologist'
+
+    # Gynecologist
+    'period pain':'Gynecologist',
+    'period bleeding':'Gynecologist',
+    'period issue': 'Gynecologist',
+    'female issue': 'Gynecologist'
 }
 
 HINDI_OFFLINE_DICT = {
