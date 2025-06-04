@@ -6902,7 +6902,7 @@ trigger_keywords = {
         'swelling': ['swollen', 'bump', 'swelling', 'puffy', 'enlarged', 'inflamed', 'inflammation'],
         'injury': ['injury', 'pulled', 'strained', 'hurt', 'broken', 'strain', 'sprain', 'trauma', 'broke', 'fall', 'twisted'],
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
-	'itching': ['itch', 'itching', 'irritation', 'scratchy']
+	'itching': ['itchy', 'itching', 'itchiness', 'scratchy']
     },
 
 'pelvic': {
