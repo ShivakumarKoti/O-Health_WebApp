@@ -6694,7 +6694,8 @@ trigger_keywords = {
         'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear','rings','ring'],
         'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage','discharges','discharged'],
         'infection': ['infection', 'fever', 'swelling', 'ear infection'],
-        'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+        'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
+	'bleeding': ['bleeding', 'blood', 'bleed']
     },
 'nails': {
         'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
@@ -8564,6 +8565,13 @@ body_part_followup_questions = {
                 'hi': "क्या ठंड में आपके कान सुन्न या बहुत ठंडे महसूस होते हैं?",
                 'en': "Do your ears feel numb or extremely cold in cold weather?",
                 'category': 'ear_freezing_cold_sensitivity'
+            }
+        ],
+    'bleeding': [
+            {
+                'hi': "क्या कान से खून निकलने से पहले चोट लगी थी या किसी चीज़ से कान साफ़ किया था?",
+                'en': "Was there any injury or use of an object in the ear before the bleeding started?",
+                'category': 'ear_bleeding_cause'
             }
         ],
     'default': [
