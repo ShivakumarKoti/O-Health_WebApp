@@ -8116,6 +8116,13 @@ body_part_followup_questions = {
                 'category': 'throat_infection_symptoms'
             }
         ],
+	'itching': [
+            {
+                'hi': "क्या गले में खुजली के साथ खांसी या खराश भी है?",
+                'en': "Is the throat itching accompanied by cough or soreness?",
+                'category': 'throat_itching_symptoms'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने गले की समस्या के बारे में और जानकारी दें।",
@@ -8454,6 +8461,13 @@ body_part_followup_questions = {
                 'category': 'knee_freezing_cold_sensitivity'
             }
         ],
+	'itching': [
+            {
+                'hi': "क्या घुटने में खुजली के साथ सूजन या लालपन है?",
+                'en': "Is the itching in your knee accompanied by swelling or redness?",
+                'category': 'knee_itching_signs'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
@@ -8627,6 +8641,13 @@ body_part_followup_questions = {
                 'hi': "क्या कंधे में कमजोरी के कारण भारी चीजें उठाना मुश्किल है?",
                 'en': "Is it hard to lift heavy objects due to shoulder weakness?",
                 'category': 'shoulder_weakness_function'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या कंधे में खुजली के साथ रैश या दर्द है?",
+                'en': "Is the itching in your shoulder accompanied by rash or pain?",
+                'category': 'shoulder_itching_associated'
             }
         ],
         'default': [
@@ -9058,6 +9079,13 @@ body_part_followup_questions = {
                 'category': 'muscle_cramps_nighttime'
             },
         ],
+	'itching': [
+            {
+                'hi': "क्या मांसपेशियों में खुजली व्यायाम या खिंचाव के बाद होती है?",
+                'en': "Does the muscle itching happen after exercise or strain?",
+                'category': 'muscle_itching_trigger'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी मांसपेशियों की समस्या के बारे में और जानकारी दें।",
@@ -9208,6 +9236,13 @@ body_part_followup_questions = {
                 'hi': "क्या आपको ठंडे मौसम में नाक में सुन्नपन या ठंडक का अनुभव होता है?",
                 'en': "Do you feel numbness or a cold sensation in your nose during cold weather?",
                 'category': 'nasal_freezing_cold_sensitivity'
+            }
+        ],
+	 'itching': [
+            {
+                'hi': "क्या नाक में खुजली के साथ छींकें या बहाव भी हो रहा है?",
+                'en': "Is the nose itching accompanied by sneezing or discharge?",
+                'category': 'nose_itching_allergy'
             }
         ],
         'default': [
@@ -9465,7 +9500,7 @@ body_part_followup_questions = {
                 'category': 'mouth_bleeding_trigger'
             }
         ],
-        'bad_breath': [
+        'bad breath': [
             {
                 'hi': "क्या आपको लंबे समय से मुँह से दुर्गंध आ रही है?",
                 'en': "Have you been experiencing bad breath for a long time?",
@@ -9488,6 +9523,13 @@ body_part_followup_questions = {
         'en': "Do you feel burning, tingling, or an unusual taste along with the numbness in the mouth?",
         'category': 'mouth_numbness_sensation'
     },
+        ],
+	 'itching': [
+            {
+                'hi': "क्या मुंह में खुजली के साथ सूजन या जलन भी है?",
+                'en': "Is the itching in your mouth accompanied by swelling or burning?",
+                'category': 'mouth_itching_reaction'
+            }
         ],
         'default': [
             {
@@ -9620,6 +9662,13 @@ body_part_followup_questions = {
                 'hi': "क्या हाल ही में कूल्हे में गिरावट या चोट लगी थी?",
                 'en': "Did you recently have a fall or injury to the hip?",
                 'category': 'hip_injury_recent'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या कूल्हे में खुजली किसी खास कपड़े या रैश के कारण है?",
+                'en': "Is the hip itching due to clothing or a rash?",
+                'category': 'hip_itching_cause'
             }
         ],
         'default': [
@@ -10070,6 +10119,13 @@ body_part_followup_questions = {
                 'hi': "क्या ठंड में आपकी उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
                 'en': "Do your fingers feel numb or very cold in cold weather?",
                 'category': 'finger_freezing_cold_sensitivity'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या उंगलियों में खुजली के साथ त्वचा फट रही है या सूजन है?",
+                'en': "Is the finger itching accompanied by cracked skin or swelling?",
+                'category': 'finger_itching_condition'
             }
         ],
         'default': [
