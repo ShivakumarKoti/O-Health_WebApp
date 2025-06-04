@@ -6892,7 +6892,7 @@ trigger_keywords = {
         'injury': ['injury', 'hit', 'bruise'],
     },
 'period' : {
-      'pain':     ['paining','pains','hurts','hurting'],
+      'pain':     ['paining','pains','hurts','hurting','pain'],
       'delayed':   ['delayed','delay','delays','delaying'],
       'bleeding': ['bleeds','bleeding','bled','blood'],
       'default':  ['issue','issues']   # no “default” words here; we’ll ask to confirm
