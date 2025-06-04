@@ -6566,36 +6566,36 @@ medications_list = [
 ]
 
 trigger_keywords = {
-    'tooth': {
+'tooth': {
         'injury': ['injury', 'injured', 'injure', 'knock', 'blow', 'hit'],
         'sensitivity': ['sensitive', 'sensitivity', 'hard', 'gum', 'gums', 'bleeding'],
         'pain': ['pain', 'painful', 'paining', 'ache', 'aching', 'hurt', 'hurting', 'sore', 'throbbing'],
         'broken': ['broken', 'break', 'broke', 'breaks', 'cracked', 'chip', 'chipped', 'fell', 'fall', 'fallen'],
         'decay': ['decay', 'decayed', 'decays', 'cavity', 'cavities', 'cavitated'],
-	'tingling': ['tingling', 'tingled', 'pins and needles', 'prickling', 'buzzing','sensation']
+	    'tingling': ['tingling', 'tingled', 'pins and needles', 'prickling', 'buzzing','sensation']
     },
-    'leg': {
+'leg': {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
         'pain': ['pain', 'paining', 'ache', 'aching', 'throbbing', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'itching': ['itch', 'itching', 'itches', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles'],
-	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
 
-    'eye': {
+'eye': {
         'itching': ['itchy', 'itching', 'itch', 'itches', 'scratchy', 'scratching', 'irritated', 'irritation'],
         'redness': ['redness', 'red', 'reddish', 'bloodshot', 'pink', 'inflamed', 'discoloration'],
         'burn': ['burn', 'burning', 'burnt', 'irritation', 'sting', 'stinging'],
         'weakness': ['weak', 'weakness', 'tired eyes', 'eye strain', 'fatigued eyes', 'weakened'],
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
-	'swelling': ['swollen', 'puffy', 'swelling', 'bulging', 'bump']
+	    'swelling': ['swollen', 'puffy', 'swelling', 'bulging', 'bump']
     },
-   'hand': {
+'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
+	    'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'wound', 'wounded', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
@@ -6603,60 +6603,60 @@ trigger_keywords = {
         'itching': ['itch', 'itches', 'itching', 'itched', 'itchiness', 'scratchy'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
-    'arm': {
+'arm': {
         'pain': ['pain', 'pains', 'paining', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'tingles','pins', 'needles', 'numbing'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
         'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained']
     },
-    'head': {
+'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
-	'numbness': ['numb', 'numbness', 'no sensation'],
-	'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation']
+	    'numbness': ['numb', 'numbness', 'no sensation'],
+	    'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation']
 	
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
+	    'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
         'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked','tightness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
-	'spasm' : ['spasm','spasms','spasmed'],
+	    'spasm' : ['spasm','spasms','spasmed'],
         'issue': ['issue', 'issues', 'problem', 'problems', 'condition', 'discomfort']
     },
-    'chest': {
+'chest': {
         'pain': ['pain', 'pains', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'aches', 'burning', 'burn', 'soreness'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
+	    'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling', 'tight'],
         'breathing': ['shortness of breath', 'difficulty breathing', 'breathing problem', 'tight chest', 'can’t breathe', 'labored breathing', 'breathless'],
         'palpitations': ['palpitations', 'heart racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat']
     },
-    'wrist': {
+'wrist': {
         'pain': ['pain', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'burning', 'soreness'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
+	    'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'restricted', 'rigid', 'locked'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'fracture', 'fractured', 'twist', 'twisted', 'sprain', 'sprained', 'broke', 'broken']
     },
-    'throat': {
+'throat': {
         'pain': ['sore', 'pain', 'scratchy', 'hurt', 'ache','pains', 'throbbing', 'burning','hurts','hurting','paining'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing','swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'fever', 'cold', 'flu', 'strep','infected','infections','infected']
     },
-    'stomach': {
+'stomach': {
         'pain': ['pain', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
+	    'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool']
     },
-    'neck': {
+'neck': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
-	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
+	    'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'tense', 'tension'],
         'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
@@ -6670,18 +6670,18 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'twist', 'twisted', 'fall', 'fell', 'hit', 'sprain', 'sprained', 'fracture', 'fractured'],
         'weakness': ['weak', 'weakness', 'unstable', 'giving way', "can’t stand", 'buckling'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
-	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
-    'foot': {
+'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
+	    'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
-	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
-    'shoulder': {
+'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'stiffness': ['stiff', 'tight', 'frozen', 'freeze', 'locked', 'restricted', 'stiffness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'dislocate', 'dislocated', 'fracture', 'fractured'],
@@ -6696,7 +6696,7 @@ trigger_keywords = {
         'infection': ['infection', 'fever', 'swelling', 'ear infection'],
         'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
- 'nails': {
+'nails': {
         'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'infection': ['infection', 'pus', 'swelling', 'redness', 'fungus'],
@@ -6711,14 +6711,14 @@ trigger_keywords = {
     'injury': ['injury', 'trauma', 'impact', 'blow', 'contusion', 'bruise', 'damage']
 },
 
-   'joint': {
+'joint': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
         'weakness': ['weak','weakness', 'unstable', 'giving way', "can’t move"],
         'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
     },
-    'skin': {
+'skin': {
         'rash': [
             'rash', 'red spots', 'bumps', 'patches', 'eruption', 
             'blotchy', 'hives', 'welts', 'raised spots'
@@ -6743,41 +6743,40 @@ trigger_keywords = {
         ],
         'acne': [
             'pimples', 'acne', 'zits', 'whiteheads', 'blackheads', 
-            'breakouts', 'spots', 'pustules', 'cysts', 'nodules'
-        ],
-     'burn': ['burn', 'sunburn', 'scald', 'blister','burns','burning'],
-     'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
+            'breakouts', 'spots', 'pustules', 'cysts', 'nodules'],
+        'burn': ['burn', 'sunburn', 'scald', 'blister','burns','burning'],
+        'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores']
     },
 
 
-    'muscle': {
+'muscle': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','stiff','stiffness'],
         'weakness': ['weakness', 'weak',  'fatigued', 'loss of strength', 'unable to lift'],
         'spasm': ['spasm', 'tightness', 'twitching','tensed'],
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
-	'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch']
+	    'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch']
     },
  
- 'heart': {
+'heart': {
         'pain': ['pain', 'pains', 'paining', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted', 'shortness of breath with effort'],
-	'burn': ['burn', 'burning', 'burns', 'burnt'],
+	    'burn': ['burn', 'burning', 'burns', 'burnt'],
         'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat', 'pounding','faster', 'fast']
  },
 
- 'urinary': {
+'urinary': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure','cramping', 'stiff', 'tightness',],
         'frequency': ['frequent', 'often', 'urge', 'need to go', 'multiple times'],
         'blood': ['blood', 'bloody', 'red urine', 'hematuria'],
         'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing']
     },
-    'toes': {
+'toes': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swollen', 'puffy', 'inflamed', 'red', 'tender'],
         'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush','injures','injured']
     },
- 'nose': {
+'nose': {
         'injury': ['injury', 'hit', 'fracture', 'bump', 'hurt','broken','broke'],
         'burning': ['burning', 'stinging', 'irritation', 'hot sensation','burns'],
         'sniffing': ['sniffing', 'sniff', 'smelling', 'inhale', 'breathing in'],
@@ -6785,28 +6784,28 @@ trigger_keywords = {
         'congestion'  : ['congestion', 'blocked', 'clogged', 'stuffy', 'stopped up'],
         'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis'],
         'bleed' : ['bleed', 'bleeding', 'nosebleed', 'epistaxis', 'blood','bled','bleeds'],
-	'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen']
+	    'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen']
     },
- 'thigh': {
+'thigh': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
         'weakness': ['weakness', "can’t lift", 'weak','fatigue', 'tired', 'no strength', 'drained'],
         'spasm': ['spasm', 'twitch', 'twitching', 'cramp', 'tightness', 'spasms'],
         'injury': ['injury', 'pulled', 'strain', 'torn','injured','injure'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge']
     },
- 'forehead': {
+'forehead': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['forehead injury', 'hit forehead', 'forehead bruise'],
         'tingling': ['forehead tingling', 'numb forehead', 'tingly sensation forehead']
     },
- 'tongue': {
+'tongue': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'burning': ['burning ', 'feels hot', 'scalded', 'burns','burn'],
         'ulcers': ['ulcer', 'sore spot', 'ulcers']
     },
- 'mouth': {
+'mouth': {
         'pain': ['pain', 'pains', 'paining', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'ulcer': ['ulcer', 'wound', 'canker', 'blister', 'lesion','ulcers'],
         'dryness': ['dry', 'dryness', 'parched', 'no saliva'],
@@ -6815,15 +6814,15 @@ trigger_keywords = {
         'bad breath': ['bad breath', 'halitosis', 'foul smell'],
         'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
     },
-  'jaw':{
+'jaw':{
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'hit', 'bruise'],
     },
-      'period' : {
+'period' : {
       'pain':     ['paining','pains','hurts','hurting'],
       'bleeding': ['bleeds','bleeding','bled','blood'],
-      'default':  ['issue']   # no “default” words here; we’ll ask to confirm
+      'default':  ['issue','issues']   # no “default” words here; we’ll ask to confirm
 },
 'hip': {
     'pain': ['pain', 'ache', 'aches', 'aching', 'soreness', 'throbbing', 'sharp', 'burning', 'dull', 'stabbing'],
@@ -8767,14 +8766,14 @@ body_part_followup_questions = {
                 'category': 'skin_swelling_symptoms'
             }
         ],
-  'acne': [
-    {
-        'hi': "क्या मुहांसों के साथ दर्द या पस भी होता है?",
-        'en': "Do the pimples come with pain or pus?",
-        'category': 'skin_acne_severity'
-    }
+        'acne': [
+        {
+            'hi': "क्या मुहांसों के साथ दर्द या पस भी होता है?",
+            'en': "Do the pimples come with pain or pus?",
+            'category': 'skin_acne_severity'
+        }
 ],
-  'burn': [
+        'burn': [
             {
                 'hi': "क्या जलने के कारण त्वचा में छाले या पपड़ी बन रही है?",
                 'en': "Are blisters or scabs forming due to the burn?",
@@ -8796,7 +8795,7 @@ body_part_followup_questions = {
             }
         ]
     },
-    'muscle': {
+'muscle': {
         'pain': [
             {
                 'hi': "क्या मांसपेशियों में दर्द गतिविधि करने पर बढ़ता है?",
@@ -8851,14 +8850,14 @@ body_part_followup_questions = {
         'category': 'knee_injury_walking_difficulty'
     },
         ],
-        'swelling': [
+'swelling': [
             {
                 'hi': "क्या सूजन के साथ दर्द या गर्माहट महसूस हो रही है?",
                 'en': "Is there pain or warmth along with the swelling in the muscle?",
                 'category': 'muscle_swelling_signs'
             }
         ],
-	'cramps': [
+	    'cramps': [
             {
                 'hi': "क्या आपको मांसपेशियों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
                 'en': "Do you experience muscle cramps while walking or exercising?",
@@ -8879,7 +8878,7 @@ body_part_followup_questions = {
         ]
     },
 
-     'heart': {
+'heart': {
         'pain': [
             {'hi': "क्या दर्द सीने के बीच में है या बाईं तरफ?",
              'en': "Is the pain in the center of the chest or on the left side?",
@@ -8903,7 +8902,7 @@ body_part_followup_questions = {
              'category': 'heart_palpitations'}
         ],
       
-    'burn': [
+        'burn': [
             {'hi': "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
              'en': "Do you feel your heartbeat is fast or irregular?",
              'category': 'heart_palpitations'}
@@ -8915,7 +8914,7 @@ body_part_followup_questions = {
         ]
     },
 
-    'urinary': {
+'urinary': {
         'pain': [
             {'hi': "क्या पेशाब करते समय जलन या दर्द होता है?",
              'en': "Do you experience burning or pain while urinating?",
@@ -8942,7 +8941,7 @@ body_part_followup_questions = {
              'category': 'urinary_detail'}
         ]
     },
-    'toes': {
+'toes': {
         'injury': [
             {'hi': "कौन सी उंगली या उंगलियाँ घायल हैं?",
              'en': "Which toe or toes are injured?",
