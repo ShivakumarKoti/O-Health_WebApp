@@ -14,7 +14,7 @@ symptom_list = [
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
 'sleepy', 'bone fracture','back bone issue',
-'female issue', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
+'female issue', 'menstruation', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
