@@ -3549,13 +3549,7 @@ symptom_followup_questions = {
   }
     ],
 "bleeding": [
-    {
-      "hi": "खून कहां से बह रहा है?",
-      "en": "Where is the bleeding coming from?",
-      "category": "bleeding",
-      "symptom": "bleeding",
-      "risk_factor": False,
-    },
+
     {
       "hi": "आप कितनी मात्रा में खून खो रहे हैं?",
       "en": "How much blood are you losing?",
@@ -3566,13 +3560,6 @@ symptom_followup_questions = {
     {
       "hi": "क्या खून बहना लगातार है या यह कभी-कभी होता है?",
       "en": "Is the bleeding continuous or intermittent?",
-      "category": "bleeding",
-      "symptom": "bleeding",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप कोई दवाइयां ले रहे हैं, विशेष रूप से रक्त पतला करने वाली दवाइयां?",
-      "en": "Are you taking any medications, particularly blood thinners?",
       "category": "bleeding",
       "symptom": "bleeding",
       "risk_factor": False,
