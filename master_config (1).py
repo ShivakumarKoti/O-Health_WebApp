@@ -6649,18 +6649,20 @@ trigger_keywords = {
     },
 'stomach': {
         'pain': ['pain', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
-	    'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool']
     },
 'neck': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
-	    'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'tense', 'tension'],
         'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
-        'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles']
+        'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles'],
+	'itching': ['itch', 'itching', 'scratchy', 'irritation'],
+        'bleeding': ['bleeding', 'blood', 'bleed', 'cut']
 
     },
 'knee': {
@@ -6670,7 +6672,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'twist', 'twisted', 'fall', 'fell', 'hit', 'sprain', 'sprained', 'fracture', 'fractured'],
         'weakness': ['weak', 'weakness', 'unstable', 'giving way', "can’t stand", 'buckling'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
-	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
 'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
@@ -8203,6 +8205,20 @@ body_part_followup_questions = {
                 'hi': "क्या सुन्नपन गर्दन से कंधों या हाथों तक फैलता है?",
                 'en': "Does the numbness spread from your neck to your shoulders or arms?",
                 'category': 'neck_numbness_radiation'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या गर्दन में खुजली के साथ लाल चकत्ते या रैश भी हैं?",
+                'en': "Is the itching on your neck accompanied by redness or rash?",
+                'category': 'neck_itching_signs'
+            }
+        ],
+        'bleeding': [
+            {
+                'hi': "क्या गर्दन से खून निकलने से पहले कोई चोट या कट लगा था?",
+                'en': "Was there any injury or cut before the bleeding from your neck started?",
+                'category': 'neck_bleeding_cause'
             }
         ],
         'default': [
