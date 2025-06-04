@@ -6759,7 +6759,7 @@ trigger_keywords = {
     },
 'ear': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
-        'hearing_loss': ['hearing loss', "can’t hear", 'muffled', 'low hearing'],
+        'hearing loss': ['hearing loss', "can’t hear", 'muffled', 'low hearing'],
         'ringing': ['ringing', 'buzzing', 'tinnitus', 'noise in ear','rings','ring'],
         'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage','discharges','discharged'],
         'infection': ['infection', 'fever', 'swelling', 'ear infection'],
