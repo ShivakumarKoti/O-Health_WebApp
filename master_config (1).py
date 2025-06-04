@@ -6658,7 +6658,8 @@ trigger_keywords = {
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'tingles','pins', 'needles', 'numbing'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
         'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained'],
-	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
+	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
@@ -6751,7 +6752,8 @@ trigger_keywords = {
         'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage','discharges','discharged'],
         'infection': ['infection', 'fever', 'swelling', 'ear infection'],
         'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-	'bleeding': ['bleeding', 'blood', 'bleed']
+	'bleeding': ['bleeding', 'blood', 'bleed'],
+	'itching': ['itch', 'itching', 'itchy', 'scratchy', 'itchiness']
     },
 'nails': {
         'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
@@ -6928,7 +6930,8 @@ trigger_keywords = {
         'numbness': ['numbness', 'numb', 'tingling', 'loss of sensation', 'no feeling'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflammation', 'bump'],
         'drooping': ['drooping', 'droop', 'sagging', 'paralysis', 'uneven smile'],
-        'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma']
+        'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma'],
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'ankle': {
         'pain': ['pain', 'ache', 'hurting', 'paining', 'pains', 'throbbing'],
@@ -7581,6 +7584,13 @@ body_part_followup_questions = {
                 'category': 'hand_freezing_cold_sensitivity'
             }
         ],
+'itching': [
+            {
+                'hi': "क्या हाथों में खुजली के साथ फोड़े या छाले भी हैं?",
+                'en': "Is the itching in your hands accompanied by boils or blisters?",
+                'category': 'hand_itching_signs'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने हाथ की समस्या के बारे में और जानकारी दें।",
@@ -7659,6 +7669,13 @@ body_part_followup_questions = {
                 'hi': "क्या आपके हाथ में ऐंठन किसी काम के दौरान होती है?",
                 'en': "Do you experience arm spasms during any specific activities?",
                 'category': 'arm_spasm_activity'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या हाथ में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
+                'en': "Is the itching in your arm localized or spread across the whole arm?",
+                'category': 'arm_itching_extent'
             }
         ],
         'default': [
@@ -8681,6 +8698,13 @@ body_part_followup_questions = {
                 'hi': "क्या कान से खून निकलने से पहले चोट लगी थी या किसी चीज़ से कान साफ़ किया था?",
                 'en': "Was there any injury or use of an object in the ear before the bleeding started?",
                 'category': 'ear_bleeding_cause'
+            }
+        ],
+     'itching': [
+            {
+                'hi': "क्या कान में खुजली के साथ द्रव या रिसाव हो रहा है?",
+                'en': "Is there any fluid or discharge along with the itching in your ear?",
+                'category': 'ear_itching_discharge'
             }
         ],
     'default': [
@@ -9794,6 +9818,13 @@ body_part_followup_questions = {
                 'hi': "क्या आपको हाल ही में चेहरे पर कोई चोट लगी है?",
                 'en': "Have you recently had any injury to your face?",
                 'category': 'face_injury_recent'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या चेहरे में खुजली किसी क्रीम या साबुन के इस्तेमाल के बाद हुई?",
+                'en': "Did the facial itching start after using any cream or soap?",
+                'category': 'face_itching_trigger'
             }
         ],
         'default': [
