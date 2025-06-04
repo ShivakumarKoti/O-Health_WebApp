@@ -10543,6 +10543,7 @@ body_part_to_specialist = {
     'period pain':'Gynecologist',
     'period bleeding':'Gynecologist',
     'period issue': 'Gynecologist',
+    'period':'Gynecologist',
 }
 
 BP_CANON = {
