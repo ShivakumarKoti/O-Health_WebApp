@@ -6680,14 +6680,15 @@ trigger_keywords = {
     },
 'chest': {
         'pain': ['pain', 'pains', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'aches', 'burning', 'burn', 'soreness'],
-	    'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
+	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling', 'tight'],
         'breathing': ['shortness of breath', 'difficulty breathing', 'breathing problem', 'tight chest', 'can’t breathe', 'labored breathing', 'breathless'],
-        'palpitations': ['palpitations', 'heart racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat']
+        'palpitations': ['palpitations', 'heart racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat'],
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'wrist': {
         'pain': ['pain', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'burning', 'soreness'],
-	    'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'restricted', 'rigid', 'locked'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
@@ -7916,6 +7917,13 @@ body_part_followup_questions = {
                 'hi': "क्या दिल की धड़कन तेज होने के साथ चक्कर या बेहोशी महसूस हुई?",
                 'en': "Have you felt dizzy or faint along with the rapid heartbeat?",
                 'category': 'chest_palpitations_symptoms'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या छाती में खुजली पसीने के कारण होती है?",
+                'en': "Is the itching on your chest related to sweating?",
+                'category': 'chest_itching_cause'
             }
         ],
         'default': [
