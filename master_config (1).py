@@ -650,10 +650,10 @@ symptom_synonyms = {
    
 ],
 'menstruation': [
-    'menstrual problems', 'menstrual irregularities', 'period pains', 'irregular periods', 'periods pain','post menopause',
-    'period pain', 'period is irregular', 'pain during periods', 'pain during period', 'abnormal periods','menopause', 'pre menopause',
-    'heavy periods', 'spotting between periods', 'missed periods', 'uterine bleeding', 'clotting during periods',
-    'prolonged periods', 'short menstrual cycles', 'early periods', 'delayed periods', 'no periods', 'menopausal',
+    'menstrual problems', 'menstrual irregularities', 'post menopause',
+    'menopause', 'pre menopause',
+    'uterine bleeding',
+    'short menstrual cycles', 'menopausal',
     'absent periods', 'amenorrhea', 'masik dharm'
 ],
 
@@ -10516,6 +10516,9 @@ body_part_to_specialist = {
     'visceral': 'General Surgeon',
     'peripheral': 'Neurologist',
     'jaw': 'Dentist',
+    'period pain':'Gynecologist',
+    'period bleeding':'Gynecologist',
+    'period issue': 'Gynecologist',
 }
 
 BP_CANON = {
@@ -10774,10 +10777,8 @@ symptom_to_specialist = {
     'red eyes': 'Ophthalmologist',
 
     # Gynecologist
-    'period pain':'Gynecologist',
-    'period bleeding':'Gynecologist',
-    'period issue': 'Gynecologist',
-    'female issue': 'Gynecologist'
+    'female issue': 'Gynecologist',
+    'menstruation': 'Gynecologist',
 }
 
 HINDI_OFFLINE_DICT = {
@@ -10980,4 +10981,9 @@ HINDI_OFFLINE_DICT = {
     "jaw injury": "जबड़े में चोट",
     "jaw swelling": "जबड़े में सूजन",
     "jaw stiffness": "जबड़े में जकड़न",
+    "menstruation": "मासिक धर्म",
+    "period pain": "पीरियड का दर्द",
+    "period bleeding": "पीरियड में रक्तस्राव",
+    "period issues": "पीरियड से जुड़ी समस्याएं",
+    "abdominal issues": "पेट से जुड़ी समस्याएं"
         }
