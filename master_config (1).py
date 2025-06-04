@@ -6658,7 +6658,7 @@ trigger_keywords = {
     },
 'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
-	    'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
+	'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'wound', 'wounded', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
@@ -6740,12 +6740,12 @@ trigger_keywords = {
     },
 'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
-	    'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
+	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
-	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
     },
 'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -6859,7 +6859,8 @@ trigger_keywords = {
         'weakness': ['weakness', "can’t lift", 'weak','fatigue', 'tired', 'no strength', 'drained'],
         'spasm': ['spasm', 'twitch', 'twitching', 'cramp', 'tightness', 'spasms'],
         'injury': ['injury', 'pulled', 'strain', 'torn','injured','injure'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge']
+        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation']
     },
 'forehead': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
@@ -6915,7 +6916,8 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'restricted', 'hard to move'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'bloating'],
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
-        'injury': ['injury', 'fall', 'fracture', 'trauma', 'strain', 'sprain']
+        'injury': ['injury', 'fall', 'fracture', 'trauma', 'strain', 'sprain'],
+	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation']
     },
 'elbow': {
         'pain': ['pain', 'ache', 'aching', 'sharp', 'burning', 'stabbing', 'soreness', 'discomfort', 'throbbing'],
@@ -9218,6 +9220,13 @@ body_part_followup_questions = {
                 'category': 'thigh_swelling_signs'
             }
         ],
+	 'numbness': [
+            {
+                'hi': "क्या जांघ का सुन्नपन पूरे पैर तक फैलता है?",
+                'en': "Does the numbness in your thigh spread down the leg?",
+                'category': 'thigh_numbness_distribution'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी जांघ की समस्या के बारे में अधिक जानकारी दें।",
@@ -9632,6 +9641,13 @@ body_part_followup_questions = {
                 'hi': "क्या हाल ही में आपके श्रोणि क्षेत्र में कोई चोट या गिरावट हुई है?",
                 'en': "Did you recently have a fall or injury to your pelvic area?",
                 'category': 'pelvic_injury_recent'
+            }
+        ],
+	'numbness': [
+            {
+                'hi': "क्या पेल्विक क्षेत्र का सुन्नपन पैरों तक फैलता है?",
+                'en': "Does the numbness in your pelvic area extend to the legs?",
+                'category': 'pelvic_numbness_distribution'
             }
         ],
         'default': [
