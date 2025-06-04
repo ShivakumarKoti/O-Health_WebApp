@@ -6572,7 +6572,7 @@ trigger_keywords = {
         'pain': ['pain', 'painful', 'paining', 'ache', 'aching', 'hurt', 'hurting', 'sore', 'throbbing'],
         'broken': ['broken', 'break', 'broke', 'breaks', 'cracked', 'chip', 'chipped', 'fell', 'fall', 'fallen'],
         'decay': ['decay', 'decayed', 'decays', 'cavity', 'cavities', 'cavitated'],
-	    'tingling': ['tingling', 'tingled', 'pins and needles', 'prickling', 'buzzing','sensation']
+	'tingling': ['tingling', 'tingled', 'pins and needles', 'prickling', 'buzzing','sensation']
     },
 'leg': {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
@@ -6581,7 +6581,8 @@ trigger_keywords = {
         'itching': ['itch', 'itching', 'itches', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles'],
-	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
+        'spasm': ['spasm', 'spasms', 'tightness', 'twitch', 'twitching']
     },
 
 'eye': {
@@ -7217,6 +7218,13 @@ body_part_followup_questions = {
                 'hi': "क्या ठंड में आपकी टाँगों में ठंडक या झुनझुनी होती है?",
                 'en': "Do you feel coldness or tingling in your legs during cold weather?",
                 'category': 'leg_freezing_cold_sensitivity'
+            }
+        ],
+	'spasm': [
+            {
+                'hi': "क्या आपके पैरों में ऐंठन या मरोड़ रात में सोते समय होती है?",
+                'en': "Do you experience leg spasms or cramps at night while sleeping?",
+                'category': 'leg_spasm_timing'
             }
         ],
         'default': [
