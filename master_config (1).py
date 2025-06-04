@@ -10461,6 +10461,7 @@ BP_CANON = {
    'wrists':'wrist',
    'thighs':'thigh',
    'periods' : 'period',
+    'menstrual' : 'period',
     'muscles':'muscle',
     'arms':'arm',
     'palms': 'palm',
