@@ -6612,8 +6612,9 @@ trigger_keywords = {
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
-	    'numbness': ['numb', 'numbness', 'no sensation'],
-	    'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation']
+	'numbness': ['numb', 'numbness', 'no sensation'],
+	'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation'],
+	'pain' : ['pain', 'paining', 'pains', 'hurts','hurting', 'hurt']
 	
     },
 'back': {
@@ -7632,6 +7633,13 @@ body_part_followup_questions = {
                 'hi': "क्या सिर में खुजली के साथ पपड़ी, लालिमा या बाल झड़ना भी हो रहा है?",
                 'en': "Is the itching on your head accompanied by flaking, redness, or hair loss?",
                 'category': 'head_itching_signs'
+            }
+        ],
+	'pain': [
+            {
+                'hi': "क्या सिरदर्द अचानक शुरू हुआ या धीरे-धीरे बढ़ा?",
+                'en': "Did the head pain start suddenly or develop gradually?",
+                'category': 'head_pain_onset'
             }
         ],
         'default': [
