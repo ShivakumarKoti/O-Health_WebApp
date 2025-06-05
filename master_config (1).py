@@ -1,4 +1,5 @@
 
+
 # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
@@ -13,7 +14,7 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
-'sleepy', 'bone fracture','back bone issue',
+'sleepy', 'bone fracture','back bone issue','fatigue',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
@@ -401,8 +402,8 @@ symptom_synonyms = {
 ],
 
 'acne': [
-    'pimples', 'pimple', 'blemishes', 'zits', 'whiteheads', 'blackheads', 'cystic acne', 'teenage acne', 'adult acne', 'pimple outbreaks', 'clogged pores', 'acne vulgaris', 'skin spots', 
-    'face pimples', 'hormonal acne', 'acne lesions', 'acne scars', 'clogged follicles', 'sebaceous gland activity', 'oil acne', 'acne on the back', 'acne on the chest'
+    'pimples', 'pimple', 'blemishes', 'zits', 'whiteheads', 'blackheads', 'clogged pores','skin spots', 
+    'clogged follicles', 'sebaceous gland activity'
 ],
 
 'difficulty swallowing': [
@@ -597,13 +598,17 @@ symptom_synonyms = {
 ],
 
 'exhaustion': [
-    'fatigue', 'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'extreme fatigue', 'lack of energy',
-    'overwhelming tiredness', 'complete fatigue', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 
-    'fatigued state', 'drowsiness', 'wearing out', 'energy depletion', 'fatigue syndrome', 'feeling drained', 'exhaustive tiredness', 'loss of energy',
+    'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'lack of energy',
+    'overwhelming tiredness', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 
+    'drowsiness', 'wearing out', 'energy depletion','feeling drained', 'exhaustive tiredness', 'loss of energy',
     'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
     'hard to stay awake', 'sleep craving', 'languid', 'wearied', 'brain fog',
     'bed ready', 'lazy eyed', 'unfocused from tiredness', 'nodding head', 'drifting off', 'slumberous', 'soporific', 'somnolent',
     'rest-seeking', 'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
+],
+
+'fatigue': [
+    'fatigue',
 ],
 
 'sprain': [
@@ -4235,13 +4240,6 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
-    "hi": "क्या आपको पूरी रात की नींद या आराम के बाद भी थकान महसूस होती है?",
-    "en": "Do you feel fatigued even after a full night’s sleep or rest?",
-    "category": "exhaustion",
-    "symptom": "exhaustion",
-    "risk_factor": False,
-  },
-  {
     "hi": "क्या आपको कोई तनाव, चिंता या भावनात्मक बदलाव महसूस हो रहे हैं?",
     "en": "Do you have any stress, anxiety, or emotional changes?",
     "category": "exhaustion",
@@ -4263,6 +4261,17 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
 ],
+
+"fatigue": [
+  {
+    "hi": "क्या थकान लगातार बनी रहती है या आती-जाती रहती है?",
+    "en": "Is the fatigue constant, or does it come and go?",
+    "category": "fatigue",
+    "symptom": "fatigue",
+    "risk_factor": False,
+  },
+],
+
 "sleepy": [
   {
     "hi": "क्या आपको सोने में कठिनाई होती है, नींद में रुकावट आती है, या आप बहुत जल्दी उठ जाते हैं?",
@@ -6561,7 +6570,7 @@ trigger_keywords = {
         'weakness': ['weak', 'weakness', 'tired eyes', 'eye strain', 'fatigued eyes', 'weakened'],
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
-	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
+	    'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
     },
 'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -6578,9 +6587,9 @@ trigger_keywords = {
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'tingles','pins', 'needles', 'numbing'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
         'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained'],
-	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
-	'swelling': ['swollen', 'swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
+	    'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
+	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+        'swelling': ['swollen', 'swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
@@ -7525,7 +7534,7 @@ body_part_followup_questions = {
                 'category': 'hand_freezing_cold_sensitivity'
             }
         ],
-'itching': [
+    'itching': [
             {
                 'hi': "क्या हाथों में खुजली के साथ फोड़े या छाले भी हैं?",
                 'en': "Is the itching in your hands accompanied by boils or blisters?",
@@ -7541,8 +7550,8 @@ body_part_followup_questions = {
         ]
     },
 
-   'arm': {
-        'pain': [
+ 'arm': {
+     'pain': [
             {
                 'hi': "क्या आपके हाथ में दर्द लगातार बना रहता है?",
                 'en': "Is the pain in your arm persistent?",
@@ -7553,79 +7562,81 @@ body_part_followup_questions = {
                "en": "Is the pain in one arm or both arms?",
                "category": "arm pain",
 
-    },
-    {
-      "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
-      "en": "Is the arm pain sharp, dull, or throbbing?",
-      "category": "arm pain",
+            },
+            {
+            "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
+            "en": "Is the arm pain sharp, dull, or throbbing?",
+            "category": "arm pain",
 
-    },
-    {
-      "hi": "क्या आपको हाल ही में हाथ में कोई चोट, गिरने या आघात का सामना करना पड़ा है?",
-      "en": "Have you had any recent injuries, falls, or trauma to your arm?",
-      "category": "arm pain",
+            },
+            {
+            "hi": "क्या आपको हाल ही में हाथ में कोई चोट, गिरने या आघात का सामना करना पड़ा है?",
+            "en": "Have you had any recent injuries, falls, or trauma to your arm?",
+            "category": "arm pain",
 
-    },
-    {
-      "hi": "क्या आपको अपने हाथ या कंधे को हिलाने में कठिनाई हो रही है?",
-      "en": "Do you have difficulty moving your arm or shoulder?",
-      "category": "arm pain",
+            },
+            {
+            "hi": "क्या आपको अपने हाथ या कंधे को हिलाने में कठिनाई हो रही है?",
+            "en": "Do you have difficulty moving your arm or shoulder?",
+            "category": "arm pain",
 
-    },
-    {
-      "hi": "क्या आपको हाथ या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
-      "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
-      "category": "arm pain",
+            },
+            {
+            "hi": "क्या आपको हाथ या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
+            "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
+            "category": "arm pain",
 
-    },
-        ],
-        'numbness': [
+            },
+            ],
+    'numbness': [
             {
                 'hi': "क्या सुन्नपन पूरे हाथ में है या किसी खास हिस्से में?",
                 'en': "Is the numbness in your entire arm or a specific part?",
                 'category': 'arm_numbness_location'
             }
         ],
-        'injury': [
-           {
-    'hi': "कौन सा बाजू या दोनों बाजू घायल हैं?",
-    'en': "Which arm or arms are injured?",
-    'category': 'arm_injury_location'
-},
-  {
-    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
-    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-    "category": "general injury",
-  },
-        ],
-        'weakness': [
+    'injury': [
+            {
+            'hi': "कौन सा बाजू या दोनों बाजू घायल हैं?",
+            'en': "Which arm or arms are injured?",
+            'category': 'arm_injury_location'
+        },
+        {
+            "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+            "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+            "category": "general injury",
+        },
+            ],
+     'weakness': [
             {
                 'hi': "क्या हाथ में कमजोरी किसी विशेष क्रिया के बाद महसूस होती है?",
                 'en': "Do you feel weakness in your arm after any specific activity?",
                 'category': 'arm_weakness_context'
             }
         ],
-	'spasm': [
+	 'spasm': [
             {
                 'hi': "क्या आपके हाथ में ऐंठन किसी काम के दौरान होती है?",
                 'en': "Do you experience arm spasms during any specific activities?",
                 'category': 'arm_spasm_activity'
             }
         ],
-	'itching': [
+	 'itching': [
             {
                 'hi': "क्या हाथ में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
                 'en': "Is the itching in your arm localized or spread across the whole arm?",
                 'category': 'arm_itching_extent'
             }
         ],
-	'swelling': [
+
+        'swelling': [
             {
                 'hi': "क्या हाथ की सूजन के साथ दर्द या लालपन भी है?",
                 'en': "Is the swelling in your arm accompanied by pain or redness?",
                 'category': 'arm_swelling_signs'
             }
         ],
+
         'default': [
             {
                 'hi': "कृपया अपने हाथ की समस्या के बारे में अधिक जानकारी दें।",
@@ -10853,6 +10864,7 @@ symptom_to_specialist = {
     'loss of appetite': 'General Practitioner',
     'nausea': 'General Practitioner',
     'exhaustion': 'General Practitioner',
+    'fatigue': 'General Practitioner',
     'chills': 'General Practitioner',
     'sweat': 'General Practitioner',
     'sleepy': 'General Practitioner',
@@ -10964,6 +10976,7 @@ HINDI_OFFLINE_DICT = {
             "mood swing": "मिज़ाज़ में उतार-चढ़ाव",
             "difficulty concentrating": "ध्यान केंद्रित करने में कठिनाई",
             "hallucination": "मतिभ्रम",
+            "fatigue": "थकान",
             "lack of motivation": "प्रेरणा की कमी",
             "exhaustion": "अत्यधिक थकान",
             "bone pain": "हड्डियों में दर्द",
