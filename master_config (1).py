@@ -459,7 +459,7 @@ symptom_synonyms = {
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
-    'urinary issues'
+    'urinary issues', 'urination'
 ],
 
 'blood in urine': [
