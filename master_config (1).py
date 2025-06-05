@@ -14,7 +14,7 @@ symptom_list = [
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
 'sleepy', 'bone fracture','back bone issue',
-'female issue', 'menstruation', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
+'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
@@ -649,11 +649,8 @@ symptom_synonyms = {
     'nipple discharge', 'breast pain', 'breast swelling', 'difficulty conceiving', 'itchy vulva', 'burning vulva'
    
 ],
-'menstruation': [
-    'menstrual problems', 'menstrual irregularities', 'post menopause',
-    'menopause', 'pre menopause',
-    'short menstrual cycles', 'menopausal',
-    'amenorrhea', 'masik dharm'
+'menopause': [
+    'menopause','short menstrual cycles', 'menopausal','amenorrhea', 'masik dharm'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
@@ -4398,7 +4395,7 @@ symptom_followup_questions = {
       "risk_factor": True,
     },
 ],
-"menstruation": [
+"menopause": [
   {
     "hi": "क्या आपकी माहवारी नियमित रूप से आती है?",
     "en": "Is your menstrual cycle regular?",
@@ -4407,53 +4404,11 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
-    "hi": "क्या आपकी माहवारी सामान्य से अधिक भारी होती है?",
-    "en": "Is your menstrual flow heavier than usual?",
-    "category": "menstruation",
-    "symptom": "heavy menstrual bleeding",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपकी माहवारी छूट गई है या देर से आई है?",
-    "en": "Have you missed or had a delayed period?",
-    "category": "menstruation",
-    "symptom": "missed/delayed period",
-    "risk_factor": True,
-  },
-  {
-    "hi": "क्या आपकी माहवारी के दौरान अत्यधिक दर्द या ऐंठन होती है?",
-    "en": "Do you experience severe pain or cramping during your period?",
-    "category": "menstruation",
-    "symptom": "dysmenorrhea",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपकी माहवारी बहुत कम या हल्की होती है?",
-    "en": "Is your menstrual flow very light or scanty?",
-    "category": "menstruation",
-    "symptom": "light periods",
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या माहवारी के बीच में आपको रक्तस्राव होता है?",
-    "en": "Do you experience bleeding between periods?",
-    "category": "menstruation",
-    "symptom": "intermenstrual bleeding",
-    "risk_factor": True,
-  },
-  {
     "hi": "क्या आपकी माहवारी के समय असामान्य रंग या गंध होती है?",
     "en": "Is there any unusual color or odor during your period?",
     "category": "menstruation",
     "symptom": "abnormal discharge",
     "risk_factor": True,
-  },
-  {
-    "hi": "क्या आपकी माहवारी के समय थकान या कमजोरी महसूस होती है?",
-    "en": "Do you feel fatigued or weak during your period?",
-    "category": "menstruation",
-    "symptom": "fatigue during menstruation",
-    "risk_factor": False,
   },
 ],
 
@@ -9562,21 +9517,42 @@ body_part_followup_questions = {
             'hi': "क्या आपकी मासिक धर्म के दौरान दर्द होता है?",
             'en': "Do you experience pain during your menstrual period?",
             'category': 'period_pain'
-        }
+        },
+          {
+            "hi": "क्या आपकी माहवारी बहुत कम या हल्की होती है?",
+            "en": "Is your menstrual flow very light or scanty?",
+            "category": "menstruation",
+            "symptom": "light periods",
+            "risk_factor": False,
+        },
     ],
     'delayed': [
             {
                 'hi': "क्या आपकी माहवारी अनियमित रही है या पहले भी देर से आती रही है?",
                 'en': "Have your periods been irregular or delayed in the past as well?",
                 'category': 'period_delay_history'
-            }
+            },
         ],
     'bleeding': [
         {
             'hi': "क्या आपकी मासिक धर्म में असामान्य रक्तस्राव होता है?",
             'en': "Do you have abnormal bleeding during your period?",
             'category': 'period_bleeding'
-        }
+        },
+          {
+            "hi": "क्या आपकी माहवारी के समय थकान या कमजोरी महसूस होती है?",
+            "en": "Do you feel fatigued or weak during your period?",
+            "category": "menstruation",
+            "symptom": "fatigue during menstruation",
+            "risk_factor": False,
+        },
+        {
+            "hi": "क्या आपकी माहवारी सामान्य से अधिक भारी होती है?",
+            "en": "Is your menstrual flow heavier than usual?",
+            "category": "menstruation",
+            "symptom": "heavy menstrual bleeding",
+            "risk_factor": False,
+        },
     ],
     'default': [
         {
@@ -10894,7 +10870,7 @@ symptom_to_specialist = {
 	
     # Gynecologist
     'female issue': 'Gynecologist',
-    'menstruation': 'Gynecologist',
+    'menopause': 'Gynecologist',
 }
 
 HINDI_OFFLINE_DICT = {
@@ -11097,9 +11073,9 @@ HINDI_OFFLINE_DICT = {
     "jaw injury": "जबड़े में चोट",
     "jaw swelling": "जबड़े में सूजन",
     "jaw stiffness": "जबड़े में जकड़न",
-    "menstruation": "मासिक धर्म",
+    "menopause": "रजोनिवृत्ति",
     "period pain": "पीरियड का दर्द",
     "period bleeding": "पीरियड में रक्तस्राव",
     "period issues": "पीरियड से जुड़ी समस्याएं",
-    "abdominal issues": "पेट से जुड़ी समस्याएं"
+    "abdominal issues": "पेट से जुड़ी समस्याएं",
         }
