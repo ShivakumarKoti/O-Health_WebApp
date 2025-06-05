@@ -652,9 +652,8 @@ symptom_synonyms = {
 'menstruation': [
     'menstrual problems', 'menstrual irregularities', 'post menopause',
     'menopause', 'pre menopause',
-    'uterine bleeding',
     'short menstrual cycles', 'menopausal',
-    'absent periods', 'amenorrhea', 'masik dharm'
+    'amenorrhea', 'masik dharm'
 ],
 
 'caesarean section' : [ 'C section', 'cissarin','sea section','scissoring','caesaring', 'caesarean'],
@@ -6857,9 +6856,9 @@ trigger_keywords = {
         'injury': ['injury', 'hit', 'bruise'],
     },
 'period' : {
-      'pain':     ['paining','pains','hurts','hurting','pain'],
-      'delayed':   ['delayed','delay','delays','delaying'],
-      'bleeding': ['bleeds','bleeding','bled','blood'],
+      'pain':     ['paining','pains','hurts','hurting','pain','hurt','sore','sores','ache','aches','cramping','cramps','throbbing'],
+      'delayed':   ['delayed','delay','delays','delaying','absent','missed','misses','miss'],
+      'bleeding': ['bleeds','bleeding','bled','blood','bleed'],
       'default':  ['issue','issues']   # no “default” words here; we’ll ask to confirm
 },
 'hip': {
