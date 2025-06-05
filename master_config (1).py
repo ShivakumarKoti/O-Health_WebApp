@@ -1229,40 +1229,6 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "muscle pain": [
-    {
-      "hi": "क्या आपके मांसपेशियों में दर्द लगातार है या आता-जाता है?",
-      "en": "Is your muscle pain constant or does it come and go?",
-      "category": "intermittent_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके मांसपेशियों में दर्द के साथ सूजन भी है?",
-      "en": "Is there any swelling along with your muscle pain?",
-      "category": "swelling",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-
-    {
-      "hi": "क्या मांसपेशियों में दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-     "en": "Does your muscle pain increase during any specific activity?",
-      "category": "activity_related_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-{
-      "hi": "क्या मांसपेशियों में दर्द के साथ कमजोरी भी महसूस हो रही है?",
-    "en": "Are you experiencing any weakness along with muscle pain?",
-      "category": "weakness",
-      "symptom": "weakness",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको मांसपेशियों में खिंचाव महसूस हो रहा है?",
-      "en": "Are you feeling any muscle cramps?",
-      "category": "cramps",
-      "symptom": "cramps",
-      "risk_factor": False,    },   
-  ],
-
   "constipation": [
     {
       "hi": "क्या कब्ज के साथ पेट में दर्द है?",
@@ -9021,12 +8987,6 @@ body_part_followup_questions = {
               "hi": "क्या आपके मांसपेशियों में दर्द के साथ सूजन भी है?",
               "en": "Is there any swelling along with your muscle pain?",
               "category": "swelling",
-          },
-
-            {
-              "hi": "क्या मांसपेशियों में दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-            "en": "Does your muscle pain increase during any specific activity?",
-              "category": "activity_related_pain",
           },
         {
               "hi": "क्या मांसपेशियों में दर्द के साथ कमजोरी भी महसूस हो रही है?",
