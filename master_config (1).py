@@ -6561,7 +6561,7 @@ trigger_keywords = {
         'weakness': ['weak', 'weakness', 'tired eyes', 'eye strain', 'fatigued eyes', 'weakened'],
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
-	    'swelling': ['swollen', 'puffy', 'swelling', 'bulging', 'bump']
+	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
     },
 'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -6579,7 +6579,8 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
         'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained'],
 	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+	'swelling': ['swollen', 'swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
@@ -7616,6 +7617,13 @@ body_part_followup_questions = {
                 'hi': "क्या हाथ में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
                 'en': "Is the itching in your arm localized or spread across the whole arm?",
                 'category': 'arm_itching_extent'
+            }
+        ],
+	'swelling': [
+            {
+                'hi': "क्या हाथ की सूजन के साथ दर्द या लालपन भी है?",
+                'en': "Is the swelling in your arm accompanied by pain or redness?",
+                'category': 'arm_swelling_signs'
             }
         ],
         'default': [
