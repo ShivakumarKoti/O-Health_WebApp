@@ -458,8 +458,8 @@ symptom_synonyms = {
 'urine issues': [
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
-    'urine with abnormal color', 'dark urine caused by medication', 'urine with blood', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
-    'pink urine', 'urinary issues'
+    'urine with abnormal color', 'dark urine caused by medication', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
+    'urinary issues'
 ],
 
 'blood in urine': [
@@ -6763,7 +6763,7 @@ trigger_keywords = {
  },
 
 'urinary': {
-        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure','cramping', 'stiff', 'tightness',],
+        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure','cramping', 'stiff', 'tightness'],
         'frequency': ['frequent', 'often', 'urge', 'need to go', 'multiple times'],
         'blood': ['blood', 'bloody', 'red urine', 'hematuria'],
         'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing']
