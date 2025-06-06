@@ -6906,7 +6906,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'puffy', 'bump', 'inflamed'],
         'stiffness': ['stiffness', 'stiff', 'hard to bend', 'tightness'],
         'injury': ['injury', 'injured', 'bruise', 'cut', 'burn', 'blister'],
-	'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped']
+	'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'toe': {
         'pain': ['pain', 'pains', 'paining', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -10163,6 +10164,13 @@ body_part_followup_questions = {
                 'hi': "क्या हथेली का सूखापन फटने या खुजली के साथ है?",
                 'en': "Is the dryness in your palm accompanied by cracking or itching?",
                 'category': 'palm_dryness_signs'
+            }
+        ],
+	'itching': [
+            {
+                'hi': "क्या हथेली में खुजली के साथ लालपन या सूजन है?",
+                'en': "Is the itching in your palm accompanied by redness or swelling?",
+                'category': 'palm_itching_signs'
             }
         ],
         'default': [
