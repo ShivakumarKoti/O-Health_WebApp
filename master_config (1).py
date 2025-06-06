@@ -6567,7 +6567,8 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'wound', 'wounded', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
         'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
         'itching': ['itch', 'itches', 'itching', 'itched', 'itchiness', 'scratchy'],
-	'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'arm': {
         'pain': ['pain', 'pains', 'paining', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -6898,7 +6899,8 @@ trigger_keywords = {
         'swelling': ['swelling','swollen', 'puffy', 'bump'],
         'stiffness': ['stiffness', 'stiff', 'hard to move', 'locked thumb'],
         'numbness': ['numbness', 'numb', 'tingling', 'no sensation'],
-        'injury': ['injury', 'injured', 'sprain', 'dislocated', 'jammed', 'fracture']
+        'injury': ['injury', 'injured', 'sprain', 'dislocated', 'jammed', 'fracture'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'palm': {
         'pain': ['pain', 'paining', 'pains', 'hurts', 'sore', 'ache'],
