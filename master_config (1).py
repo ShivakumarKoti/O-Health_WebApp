@@ -700,6 +700,7 @@ symptom_synonyms = {
 'burning itch', 'itching with redness', 'itching from dryness', 'irritated skin itch', 'tickling skin sensation',
 'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters', 'itchiness'
 ],
+'fracture': ['fracture', 'fractured','fractures'],
 
 'injury': [
 'injured', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury', 'fallen from stairs',
