@@ -17,7 +17,6 @@ symptom_list = [
 'sleepy','fatigue',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-#'','bone pain','pelvic pain', 'elbow pain', ' pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister',''
 ]
@@ -4099,43 +4098,6 @@ symptom_followup_questions = {
     },
 ],
 
-"nose pain": [
-    {
-      "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
-      "en": "Are you experiencing persistent pain or burning sensation in your nose?",
-      "category": "nose pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
-      "en": "Do you feel pain when touching or pressing on your nose?",
-      "category": "nose pain",
-      "symptom": "nose pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
-      "en": "Is there any swelling or redness in your nose?",
-      "category": "nose pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
-      "en": "Have you recently had a cold, allergies, or sinus issues?",
-      "category": "nose pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपकी नाक से किसी प्रकार का डिस्चार्ज या खून आ रहा है?",
-      "en": "Is there any discharge or bleeding from your nose?",
-      "category": "nose pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-],
 "jaundice": [
   {
     "hi": "क्या आपने अपनी त्वचा या आंखों के पीले होने को महसूस किया है?",
@@ -8924,7 +8886,22 @@ body_part_followup_questions = {
               "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
               "en": "Have you recently had a cold, allergies, or sinus issues?",
               "category": "nose pain",
-            },     
+            }, 
+    {
+      "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
+      "en": "Do you feel pain when touching or pressing on your nose?",
+      "category": "nose pain",
+    },
+    {
+      "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
+      "en": "Is there any swelling or redness in your nose?",
+      "category": "nose pain",
+    },
+    {
+      "hi": "क्या आपकी नाक से किसी प्रकार का डिस्चार्ज या खून आ रहा है?",
+      "en": "Is there any discharge or bleeding from your nose?",
+      "category": "nose pain",
+    },
     ],
         'infection': [
             {
