@@ -4136,37 +4136,6 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
 ],
-
-  "hip pain": [
-    {
-      "hi": "क्या दर्द एक कूल्हे में है या दोनों कूल्हों में?",
-      "en": "Is the pain in one hip or both hips?",
-      "category": "hip pain",
-      "symptom": "hip pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कूल्हे का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the hip pain constant, or does it come and go?",
-      "category": "hip pain",
-      "symptom": "hip pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको हाल ही में कूल्हे में कोई चोट या आघात हुआ है?",
-      "en": "Have you had any recent injuries or trauma to your hip?",
-      "category": "hip pain",
-      "symptom": "hip pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कूल्हे का दर्द कुछ गतिविधियों, जैसे चलने, झुकने या खड़े होने से बढ़ जाता है?",
-      "en": "Does the hip pain worsen with certain movements, such as walking, bending, or standing up?",
-      "category": "hip pain",
-      "symptom": "hip pain",
-      "risk_factor": False,
-    },
-],
 "jaundice": [
   {
     "hi": "क्या आपने अपनी त्वचा या आंखों के पीले होने को महसूस किया है?",
@@ -9398,7 +9367,27 @@ body_part_followup_questions = {
                 'hi': "क्या कूल्हे में दर्द चलने या खड़े होने पर बढ़ता है?",
                 'en': "Does the hip pain increase when walking or standing?",
                 'category': 'hip_pain_activity'
-            }
+            },
+	 {
+      "hi": "क्या दर्द एक कूल्हे में है या दोनों कूल्हों में?",
+      "en": "Is the pain in one hip or both hips?",
+      "category": "hip pain",
+    },
+    {
+      "hi": "क्या कूल्हे का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+      "en": "Is the hip pain constant, or does it come and go?",
+      "category": "hip pain",
+    },
+    {
+      "hi": "क्या आपको हाल ही में कूल्हे में कोई चोट या आघात हुआ है?",
+      "en": "Have you had any recent injuries or trauma to your hip?",
+      "category": "hip pain",
+    },
+    {
+      "hi": "क्या कूल्हे का दर्द कुछ गतिविधियों, जैसे चलने, झुकने या खड़े होने से बढ़ जाता है?",
+      "en": "Does the hip pain worsen with certain movements, such as walking, bending, or standing up?",
+      "category": "hip pain",
+    },
         ],
         'stiffness': [
             {
