@@ -17,7 +17,7 @@ symptom_list = [
 'sleepy','fatigue',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-#'','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
+#'','bone pain','pelvic pain', 'elbow pain', ' pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister',''
 ]
@@ -4691,58 +4691,6 @@ symptom_followup_questions = {
             "risk_factor": False,
         },
     ],
-
-    "calf pain": [
-    {
-      "hi": "आप बछड़े में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the calf pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "calf pain",
-      "symptom": "calf pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your calf? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "calf pain",
-      "symptom": "calf pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "calf pain",
-      "symptom": "calf pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "calf pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी बछड़े में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar calf pain or any known medical conditions?",
-      "category": "calf pain",
-      "symptom": "calf pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "calf pain",
-      "symptom": "calf pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "calf pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-  ],
 
   "tingling": [
     {
@@ -9760,7 +9708,42 @@ body_part_followup_questions = {
                 'hi': "क्या बछड़े में दर्द चलने या खड़े होने पर बढ़ता है?",
                 'en': "Does the calf pain increase when walking or standing?",
                 'category': 'calf_pain_activity'
-            }
+            },
+		 {
+      "hi": "आप बछड़े में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+      "en": "Can you describe the calf pain? Is it sharp, dull, burning, or throbbing?",
+      "category": "calf pain",
+    },
+    {
+      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+      "en": "Where exactly is the pain located in your calf? Is it on one side, both sides, or spreading elsewhere?",
+      "category": "calf pain",
+    },
+    {
+      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+      "category": "calf pain",
+    },
+    {
+      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+      "category": "calf pain",
+    },
+    {
+      "hi": "क्या आपको पहले भी ऐसी बछड़े में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+      "en": "Do you have a history of similar calf pain or any known medical conditions?",
+      "category": "calf pain",
+    },
+    {
+      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+      "en": "Are you taking any medications or supplements currently?",
+      "category": "calf pain",
+    },
+    {
+      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+      "en": "How does the pain affect your daily activities or sleep?",
+      "category": "calf pain",
+    },
         ],
         'spasm': [
             {
