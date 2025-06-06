@@ -14,7 +14,7 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
-'sleepy','fatigue',
+'sleepy','fatigue', 'fracture',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
@@ -3064,7 +3064,7 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "bone fracture": [
+  "fracture": [
     {
       "hi": "फ्रैक्चर कैसे हुआ (जैसे गिरना, दुर्घटना, खेलों की चोट)?",
       "en": "How did the fracture occur (e.g., fall, accident, sports injury)?",
@@ -3085,12 +3085,6 @@ symptom_followup_questions = {
   "symptom": "pain, swelling, or warmth",
   "risk_factor": False,
 },
-    {
-      "hi": "क्या आपको प्रभावित अंग या जोड़ों को हिलाने में कठिनाई हो रही है?",
-      "en": "Do you have difficulty moving the affected limb or joint?",
-      "category": "bone_fracture",
-      "symptom": "difficulty moving affected limb",
-      "risk_factor": False,    },
     {
       "hi": "क्या आपके पास पहले कोई फ्रैक्चर या हड्डी की चोटें रही हैं?",
       "en": "Have you had any previous fractures or bone injuries?",
