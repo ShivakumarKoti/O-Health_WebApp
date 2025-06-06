@@ -3105,51 +3105,6 @@ symptom_followup_questions = {
       "risk_factor": True,    },
   ],
 
-  "bone pain": [
-    {
-      "hi": "हड्डी का दर्द कहाँ स्थित है?",
-      "en": "Where exactly is the bone pain located?",
-      "category": "bone_pain",
-      "symptom": "location of bone pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या हड्डी में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
-      "en": "Is the bone pain constant, or does it come and go?",
-      "category": "bone_pain",
-      "symptom": "nature of bone pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या हड्डी का दर्द तेज़, सुस्त, धड़क रहा है या दर्द कर रहा है?",
-      "en": "Is the bone pain sharp, dull, throbbing, or aching?",
-      "category": "bone_pain",
-      "symptom": "type of bone pain",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या हिलने-डुलने, दबाव पड़ने या कुछ गतिविधियों से हड्डी का दर्द बढ़ जाता है?",
-      "en": "Does the bone pain get worse with movement, pressure, or certain activities?",
-      "category": "bone_pain",
-      "symptom": "pain exacerbation",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको हाल ही में कोई चोटें, गिरना या दुर्घटनाएं हुई हैं?",
-      "en": "Have you had any recent injuries, falls, or accidents?",
-      "category": "bone_pain",
-      "symptom": "recent injuries or accidents",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको प्रभावित क्षेत्र के आसपास सूजन, चोट, या लाली महसूस हो रही है?",
-      "en": "Are you experiencing any swelling, bruising, or redness around the affected area?",
-      "category": "bone_pain",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने प्रभावित अंग या जोड़ों में कमजोरी, सुन्नता, या आंदोलन में कठिनाई महसूस की है?",
-      "en": "Have you noticed any weakness, numbness, or difficulty moving the affected limb or joint?",
-      "category": "bone_pain",
-      "symptom": "weakness or difficulty moving",
-      "risk_factor": False,    },
-  ],
-
   "sprain": [
     {
       "hi": "स्ट्रेन कैसे हुआ (जैसे, गिरना, खेल की चोट, दुर्घटना)?",
@@ -8518,7 +8473,42 @@ body_part_followup_questions = {
                 'hi': "क्या यह हड्डी का दर्द किसी विशेष गतिविधि से जुड़ा है?",
                 'en': "Is the bone pain related to any specific activity?",
                 'category': 'bone_pain_activity'
-            }
+            },
+	{
+      "hi": "हड्डी का दर्द कहाँ स्थित है?",
+      "en": "Where exactly is the bone pain located?",
+      "category": "bone_pain",
+        },
+    {
+      "hi": "क्या हड्डी में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
+      "en": "Is the bone pain constant, or does it come and go?",
+      "category": "bone_pain",
+       },
+    {
+      "hi": "क्या हड्डी का दर्द तेज़, सुस्त, धड़क रहा है या दर्द कर रहा है?",
+      "en": "Is the bone pain sharp, dull, throbbing, or aching?",
+      "category": "bone_pain",
+    },
+    {
+      "hi": "क्या हिलने-डुलने, दबाव पड़ने या कुछ गतिविधियों से हड्डी का दर्द बढ़ जाता है?",
+      "en": "Does the bone pain get worse with movement, pressure, or certain activities?",
+      "category": "bone_pain",
+       },
+    {
+      "hi": "क्या आपको हाल ही में कोई चोटें, गिरना या दुर्घटनाएं हुई हैं?",
+      "en": "Have you had any recent injuries, falls, or accidents?",
+      "category": "bone_pain",
+       },
+    {
+      "hi": "क्या आपको प्रभावित क्षेत्र के आसपास सूजन, चोट, या लाली महसूस हो रही है?",
+      "en": "Are you experiencing any swelling, bruising, or redness around the affected area?",
+      "category": "bone_pain",
+       },
+    {
+      "hi": "क्या आपने प्रभावित अंग या जोड़ों में कमजोरी, सुन्नता, या आंदोलन में कठिनाई महसूस की है?",
+      "en": "Have you noticed any weakness, numbness, or difficulty moving the affected limb or joint?",
+      "category": "bone_pain",
+      },
         ],
         'fracture': [
             {
