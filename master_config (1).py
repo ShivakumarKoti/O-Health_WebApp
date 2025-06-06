@@ -14,7 +14,7 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
-'sleepy', 'bone fracture','back bone issue','fatigue',
+'sleepy','fatigue',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 #'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
@@ -632,19 +632,6 @@ symptom_synonyms = {
     'painful gout episode', 'gouty swelling', 'gout in the foot', 'gout in the big toe', 'gouty condition', 'uric acid crystals', 'gouty joint disease'
 ],
 
-'bone fracture': [
-    'broken bone', 'bone break', 'fractured bone', 'cracked bone', 'bone crack', 'fracture', 'crack in my bone','crack in a bone','bone fracture',
-    'stress fracture', 'hairline fracture', 'bone splinter','fracture in bone','crack in bone','bone has cracked','cracks in bone', 'bone cracked',
-    'fractured limb', 'fractured bone segment', 'broken limb', 'broken bone segment', 'cracked bone injury', 'bone rupture', 'bone fracture symptoms',
-    'fractured bone tissue', 'fracture of the bone', 'crack in bone', 'fractured'
-],
-
-'back bone issue': [
-    'spinal problem', 'back bone pain', 'spinal condition', 'vertebral issue', 'spinal disorder', 'back injury', 'spinal misalignment', 'back bone is paining',
-    'disc herniation', 'spinal injury', 'neck and back issues', 'spinal discomfort', 'lumbar pain', 'spinal cord issue', 'slipped disc', 'musculoskeletal disorder',
-    'spinal health issue', 'postural problems', 'spondylosis', 'degenerative disc disease', 'spine misalignment', 'spinal deformity', 'spinal arthritis', 'spinal stenosis',
-    'backbone issue'
-],
 'female issue': [
     'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis',
     'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 
@@ -6594,32 +6581,32 @@ trigger_keywords = {
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
-	'numbness': ['numb', 'numbness', 'no sensation'],
-	'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation'],
-	'pain' : ['pain', 'paining', 'pains', 'hurts','hurting', 'hurt']
+	    'numbness': ['numb', 'numbness', 'no sensation'],
+	    'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation'],
+	    'pain' : ['pain', 'paining', 'pains', 'hurts','hurting', 'hurt']
 	
     },
 'back': {
         'pain': ['backache', 'pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
+	    'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
         'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked','tightness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
-	'spasm' : ['spasm','spasms','spasmed'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
-        'issue': ['issue', 'issues', 'problem', 'problems', 'condition', 'discomfort']
+	    'spasm' : ['spasm','spasms','spasmed'],
+	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+        'issue': ['issue', 'bone issue','issues', 'problem', 'problems', 'condition', 'discomfort']
     },
 'chest': {
         'pain': ['pain', 'pains', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'aches', 'burning', 'burn', 'soreness'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
+	    'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling', 'tight'],
         'breathing': ['shortness of breath', 'difficulty breathing', 'breathing problem', 'tight chest', 'can’t breathe', 'labored breathing', 'breathless'],
         'palpitations': ['palpitations', 'heart racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'wrist': {
         'pain': ['pain', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'burning', 'soreness'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
+	    'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'restricted', 'rigid', 'locked'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
@@ -6631,7 +6618,7 @@ trigger_keywords = {
         'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing','swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'fever', 'cold', 'flu', 'strep','infected','infections','infected'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'stomach': {
         'pain': ['pain', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
@@ -6700,8 +6687,8 @@ trigger_keywords = {
     },
 'bone': {
     'pain': ['pain', 'pains', 'ache', 'aches', 'aching', 'soreness', 'tender', 'tenderness', 'throbbing', 'sharp', 'dull'],
-    'fracture': ['fracture', 'broken', 'break', 'crack', 'snap', 'shattered', 'hairline'],
-    'swelling': ['swelling', 'swollen', 'puffy', 'enlarged', 'inflamed'],
+    'fracture': ['fracture', 'broken', 'break', 'crack', 'cracked','cracks','fractured','fractures','breaks','snap', 'shattered', 'hairline'],
+    'swelling': ['swelling', 'swollen', 'puffy', 'enlarged', 'swells','inflamed'],
     'weakness': ['weakness', 'weak', 'brittle', 'fragile', 'soft', 'thin', 'osteopenia', 'osteoporosis'],
     'injury': ['injury', 'trauma', 'impact', 'blow', 'contusion', 'bruise', 'damage']
 },
@@ -10663,6 +10650,10 @@ BP_CANON = {
      'tummy': 'stomach',
      'gut': 'stomach',
      'joints':'joint',
+    'back bone' : 'back',
+    'backbone' : 'back',
+    'spine' : 'back',
+     'spinal' : 'back',
      'ankles':'ankle',
      'hips':'hip',
      'jaws':'jaw',
