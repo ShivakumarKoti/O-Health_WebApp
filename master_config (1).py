@@ -17,7 +17,7 @@ symptom_list = [
 'sleepy','fatigue',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-#'waist pain','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
+#'','bone pain','pelvic pain', 'elbow pain', 'calf pain','hip pain',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister',''
 ]
@@ -4691,162 +4691,6 @@ symptom_followup_questions = {
             "risk_factor": False,
         },
     ],
-
-  "waist pain": [
-    {
-      "hi": "आप दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "waist pain",
-      "symptom": "waist pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "waist pain",
-      "symptom": "waist pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "waist pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "waist pain",
-      "symptom": "injury",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी कमर में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar pain or any known medical conditions?",
-      "category": "waist pain",
-      "symptom": "waist pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "waist pain",
-      "symptom": "waist pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "waist pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-  ],
-
-    "pelvic pain": [
-    {
-      "hi": "आप pelvic में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the pelvic pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "pelvic pain",
-      "symptom": "pelvic pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your pelvic area? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "pelvic pain",
-      "symptom": "pelvic pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "pelvic pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "pelvic pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी pelvic में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar pelvic pain or any known medical conditions?",
-      "category": "pelvic pain",
-      "symptom": "pelvic pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "pelvic pain",
-      "symptom": "pelvic pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "pelvic pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-  ],
-
-    "elbow pain": [
-    {
-      "hi": "आप कोहनी में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the elbow pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "elbow pain",
-      "symptom": "elbow pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your elbow? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "elbow pain",
-      "symptom": "elbow pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "elbow pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "elbow pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी कोहनी में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar elbow pain or any known medical conditions?",
-      "category": "elbow pain",
-      "symptom": "elbow pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "elbow pain",
-      "symptom": "elbow pain",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "elbow pain",
-      "symptom": None,
-      "risk_factor": False,
-    },
-  ],
 
     "calf pain": [
     {
@@ -9658,7 +9502,32 @@ body_part_followup_questions = {
                 'hi': "क्या कमर का दर्द खड़े होने या चलने से बढ़ता है?",
                 'en': "Does the waist pain increase when standing or walking?",
                 'category': 'waist_pain_trigger'
-            }
+            },
+		 {
+      "hi": "आप दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+      "en": "Can you describe the pain? Is it sharp, dull, burning, or throbbing?",
+      "category": "waist pain",
+    },
+    {
+      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+      "en": "Where exactly is the pain located? Is it on one side, both sides, or spreading elsewhere?",
+      "category": "waist pain",
+    },
+    {
+      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+      "category": "waist pain",
+    },
+    {
+      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+      "category": "waist pain",
+    },
+    {
+      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+      "en": "How does the pain affect your daily activities or sleep?",
+      "category": "waist pain",
+    },
         ],
         'stiffness': [
             {
@@ -9717,7 +9586,42 @@ body_part_followup_questions = {
                 'hi': "क्या श्रोणि क्षेत्र में दर्द बैठने या पेशाब करते समय बढ़ता है?",
                 'en': "Does the pelvic pain increase when sitting or during urination?",
                 'category': 'pelvic_pain_triggers'
-            }
+            },
+		{
+      "hi": "आप pelvic में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+      "en": "Can you describe the pelvic pain? Is it sharp, dull, burning, or throbbing?",
+      "category": "pelvic pain",
+    },
+    {
+      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+      "en": "Where exactly is the pain located in your pelvic area? Is it on one side, both sides, or spreading elsewhere?",
+      "category": "pelvic pain",
+    },
+    {
+      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+      "category": "pelvic pain",
+    },
+    {
+      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+      "category": "pelvic pain",
+    },
+    {
+      "hi": "क्या आपको पहले भी ऐसी pelvic में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+      "en": "Do you have a history of similar pelvic pain or any known medical conditions?",
+      "category": "pelvic pain",
+    },
+    {
+      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+      "en": "Are you taking any medications or supplements currently?",
+      "category": "pelvic pain",
+    },
+    {
+      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+      "en": "How does the pain affect your daily activities or sleep?",
+      "category": "pelvic pain",
+    },
         ],
         'stiffness': [
             {
@@ -9776,7 +9680,42 @@ body_part_followup_questions = {
                 'hi': "क्या कोहनी में दर्द कुछ उठाने या मोड़ने पर बढ़ता है?",
                 'en': "Does the elbow pain increase when lifting or bending?",
                 'category': 'elbow_pain_movement'
-            }
+            },
+		 {
+      "hi": "आप कोहनी में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+      "en": "Can you describe the elbow pain? Is it sharp, dull, burning, or throbbing?",
+      "category": "elbow pain",
+    },
+    {
+      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+      "en": "Where exactly is the pain located in your elbow? Is it on one side, both sides, or spreading elsewhere?",
+      "category": "elbow pain",
+    },
+    {
+      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+      "category": "elbow pain",
+    },
+    {
+      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+      "category": "elbow pain",
+    },
+    {
+      "hi": "क्या आपको पहले भी ऐसी कोहनी में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+      "en": "Do you have a history of similar elbow pain or any known medical conditions?",
+      "category": "elbow pain",
+    },
+    {
+      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+      "en": "Are you taking any medications or supplements currently?",
+      "category": "elbow pain",
+    },
+    {
+      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+      "en": "How does the pain affect your daily activities or sleep?",
+      "category": "elbow pain",
+    },
         ],
         'stiffness': [
             {
