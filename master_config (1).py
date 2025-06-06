@@ -6547,7 +6547,8 @@ trigger_keywords = {
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-        'spasm': ['spasm', 'spasms', 'tightness', 'twitch', 'twitching']
+        'spasm': ['spasm', 'spasms', 'tightness', 'twitch', 'twitching'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 
 'eye': {
@@ -6659,7 +6660,8 @@ trigger_keywords = {
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
-	'itching': ['itch', 'itching', 'scratchy', 'itchiness']
+	'itching': ['itch', 'itching', 'scratchy', 'itchiness'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -6868,7 +6870,8 @@ trigger_keywords = {
         'swelling': ['swollen', 'swelling', 'puffy', 'enlarged'],
         'stiffness': ['stiffness', 'stiff', 'immobile', 'hard to move'],
         'injury': ['injury', 'sprain', 'twist', 'hurt', 'fracture', 'break'],
-        'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way']
+        'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'body': {
         'pain': ['pain', 'pains', 'paining', 'ache', 'whole body pain', 'all over pain', 'ache everywhere','aching'],
@@ -6892,7 +6895,8 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'hard to move', 'limited motion'],
         'injury': ['injury', 'injured', 'fracture', 'jammed', 'cut', 'bruise'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'thumb': {
         'pain': ['pain', 'paining', 'pains', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -6917,14 +6921,16 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'puffy', 'inflammation', 'bump'],
         'stiffness': ['stiffness', 'stiff', 'hard to move', 'limited motion'],
         'injury': ['injury', 'injured', 'fracture', 'stubbed', 'cut', 'bruise'],
-        'freeze': ['freeze', 'freezing', 'frozen', 'chilled']
+        'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'heel': {
         'pain': ['pain', 'ache', 'hurting', 'sharp pain', 'burning', 'discomfort'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed'],
         'stiffness': ['stiff', 'stiffness', 'rigid', 'tight'],
         'injury': ['injury', 'fracture', 'bruise', 'hurt', 'crack', 'damage'],
-        'numbness': ['numbness', 'numb', 'tingling', 'no sensation', 'pins and needles']
+        'numbness': ['numbness', 'numb', 'tingling', 'no sensation', 'pins and needles'],
+	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'lip': {
     'pain': ['pain', 'ache', 'hurting', 'sore', 'burning'],
@@ -7224,6 +7230,13 @@ body_part_followup_questions = {
                 'hi': "क्या आपके पैरों में ऐंठन या मरोड़ रात में सोते समय होती है?",
                 'en': "Do you experience leg spasms or cramps at night while sleeping?",
                 'category': 'leg_spasm_timing'
+            }
+        ],
+	'bleeding': [
+            {
+                'hi': "क्या पैर में कोई गहरी चोट लगी है जिससे खून बह रहा है?",
+                'en': "Is there a deep wound in your leg that is causing bleeding?",
+                'category': 'leg_bleeding_wound'
             }
         ],
         'default': [
@@ -7530,6 +7543,13 @@ body_part_followup_questions = {
                 'hi': "क्या हाथों में खुजली के साथ फोड़े या छाले भी हैं?",
                 'en': "Is the itching in your hands accompanied by boils or blisters?",
                 'category': 'hand_itching_signs'
+            }
+        ],
+	'bleeding': [
+            {
+                'hi': "क्या हाथ में गहरा कट है या खून रुकने का नाम नहीं ले रहा?",
+                'en': "Is there a deep cut on your hand or is the bleeding not stopping?",
+                'category': 'hand_bleeding_severity'
             }
         ],
         'default': [
@@ -8503,6 +8523,13 @@ body_part_followup_questions = {
                 'hi': "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
                 'en': "Does the itching in your legs get worse at certain times like at night?",
                 'category': 'leg_itching_timing'
+            }
+        ],
+	'bleeding': [
+            {
+                'hi': "क्या पैर में खून बहने के साथ चलने में दिक्कत हो रही है?",
+                'en': "Is the foot bleeding making it difficult to walk?",
+                'category': 'foot_bleeding_function'
             }
         ],
         'default': [
@@ -9920,6 +9947,13 @@ body_part_followup_questions = {
                 'category': 'ankle_weakness_instability'
             }
         ],
+	'bleeding': [
+            {
+                'hi': "क्या टखने में चोट के कारण खून बह रहा है?",
+                'en': "Is the bleeding from your ankle due to an injury?",
+                'category': 'ankle_bleeding_cause'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने टखने की समस्या के बारे में और जानकारी दें।",
@@ -10073,6 +10107,13 @@ body_part_followup_questions = {
                 'category': 'finger_itching_condition'
             }
         ],
+	'bleeding': [
+            {
+                'hi': "क्या उंगली से खून बहने के साथ सूजन या दर्द भी है?",
+                'en': "Is the finger bleeding accompanied by swelling or pain?",
+                'category': 'finger_bleeding_signs'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
@@ -10115,6 +10156,13 @@ body_part_followup_questions = {
                 'hi': "क्या हाल ही में अंगूठे में कोई चोट या मोच आई है?",
                 'en': "Did you recently injure or sprain your thumb?",
                 'category': 'thumb_injury_event'
+            }
+        ],
+	 'bleeding': [
+            {
+                'hi': "क्या अंगूठे से लगातार खून बह रहा है या रुक गया है?",
+                'en': "Is the bleeding from your thumb continuous or has it stopped?",
+                'category': 'thumb_bleeding_status'
             }
         ],
         'default': [
@@ -10226,6 +10274,13 @@ body_part_followup_questions = {
                 'category': 'toe_freezing_cold_sensitivity'
             }
         ],
+	'bleeding': [
+            {
+                'hi': "क्या पैर की उंगली से खून कट या नाखून टूटने के कारण बह रहा है?",
+                'en': "Is the bleeding from your toe due to a cut or broken nail?",
+                'category': 'toe_bleeding_reason'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी पैर की उंगली की समस्या के बारे में और जानकारी दें।",
@@ -10269,6 +10324,13 @@ body_part_followup_questions = {
                 'hi': "क्या एड़ी में सुन्नपन या झनझनाहट महसूस होती है?",
                 'en': "Do you feel numbness or tingling in your heel?",
                 'category': 'heel_numbness_sensation'
+            }
+        ],
+	'bleeding': [
+            {
+                'hi': "क्या एड़ी से खून चलने या दबाव डालने पर निकल रहा है?",
+                'en': "Is the heel bleeding when you walk or put pressure on it?",
+                'category': 'heel_bleeding_trigger'
             }
         ],
         'default': [
