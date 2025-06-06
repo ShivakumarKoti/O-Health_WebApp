@@ -6905,7 +6905,8 @@ trigger_keywords = {
         'numbness': ['numbness', 'numb', 'tingling', 'burning', 'no sensation', 'pins and needles'],
         'swelling': ['swelling', 'swollen', 'puffy', 'bump', 'inflamed'],
         'stiffness': ['stiffness', 'stiff', 'hard to bend', 'tightness'],
-        'injury': ['injury', 'injured', 'bruise', 'cut', 'burn', 'blister']
+        'injury': ['injury', 'injured', 'bruise', 'cut', 'burn', 'blister'],
+	'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped']
     },
 'toe': {
         'pain': ['pain', 'pains', 'paining', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -10155,6 +10156,13 @@ body_part_followup_questions = {
                 'hi': "क्या आपकी हथेली पर हाल ही में कोई चोट, जलन या कट हुआ है?",
                 'en': "Have you recently had a cut, burn, or injury on your palm?",
                 'category': 'palm_injury_event'
+            }
+        ],
+	'dryness': [
+            {
+                'hi': "क्या हथेली का सूखापन फटने या खुजली के साथ है?",
+                'en': "Is the dryness in your palm accompanied by cracking or itching?",
+                'category': 'palm_dryness_signs'
             }
         ],
         'default': [
