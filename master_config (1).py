@@ -10831,7 +10831,8 @@ symptom_to_specialist = {
     'leg weakness': 'Neurologist',
     'yellow eyes': 'Hepatologist',
     'red eyes': 'Ophthalmologist',
-	
+    'palm dryness': 'Dermatologist',
+    'hand itching': 'Dermatologist',
     # Gynecologist
     'female issue': 'Gynecologist',
     'menopause': 'Gynecologist',
