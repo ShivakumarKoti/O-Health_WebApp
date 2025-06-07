@@ -10832,7 +10832,7 @@ symptom_to_specialist = {
     'yellow eyes': 'Hepatologist',
     'red eyes': 'Ophthalmologist',
     'palm dryness': 'Dermatologist',
-    'hand itching': 'Dermatologist',
+    'head itching': 'Dermatologist',
     # Gynecologist
     'female issue': 'Gynecologist',
     'menopause': 'Gynecologist',
