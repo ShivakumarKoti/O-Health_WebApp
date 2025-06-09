@@ -11093,7 +11093,7 @@ symptom_to_specialist = {
   'elbow pain': 'Orthopedic Specialist',
   'elbow stiffness': 'Orthopedic Specialist',
   'elbow swelling': 'Orthopedic Specialist',
-  'elbow weakness': 'Neurologist'
+  'elbow weakness': 'Neurologist',
 
   'calf pain': 'Orthopedic Specialist',
   'calf ache': 'Orthopedic Specialist',
