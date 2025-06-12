@@ -704,7 +704,7 @@ symptom_synonyms = {
 
 'injury': [
 'injured', 'physical injury', 'bodily harm', 'tissue damage', 'sports injury', 'accidental injury', 'fallen from stairs',
-'cut', 'abrasion', 'laceration', 'contusion', 'injuries','injure', 'fell down from stairs','fell down'
+'abrasion', 'laceration', 'contusion', 'injuries','injure', 'fell down from stairs','fell down'
 ],
 
 'jaundice': [
