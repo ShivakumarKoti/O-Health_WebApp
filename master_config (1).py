@@ -13,12 +13,13 @@ symptom_list = [
 'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
-'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'arthritis', 'gout', 'headache', 'injury', 'chills',
+'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
 'sleepy','fatigue', 'fracture',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises',
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises',''
+#  'arthritis'
 ]
 
 # ------------------------------------------------------------------ #
@@ -620,11 +621,10 @@ symptom_synonyms = {
     'soft tissue strain', 'overexertion', 'overworked muscle'
 ],
 
-'arthritis': [
-    'inflammatory arthritis', 'rheumatoid arthritis', 'osteoarthritis', 'degenerative joint disease',  'rheumatism',  'pain from arthritis',
-    'arthralgia', 'chronic arthritis', 'autoimmune arthritis', 'psoriatic arthritis'
-
-],
+#'arthritis': [
+#    'inflammatory arthritis', 'rheumatoid arthritis', 'osteoarthritis', 'degenerative joint disease',  'rheumatism',  'pain from arthritis',
+#    'arthralgia', 'chronic arthritis', 'autoimmune arthritis', 'psoriatic arthritis'
+#],
 
 'gout': [
     'uric acid buildup', 'acute gout', 'chronic gout', 'gout attack', 'gouty inflammation', 'gouty attack',
@@ -811,7 +811,7 @@ symptom_synonyms = {
 ],
 'kidney issue': [
     'kidney disease', 'acute kidney injury', 'kidney stones', 'renal failure', 'nephritis', 'glomerulonephritis',
-    'pyelonephritis', 'kidney infection', 'hydronephrosis', 'kidney fail',
+    'pyelonephritis', 'kidney infection', 'hydronephrosis', 'kidney fail','kidney stone',
     'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
 
