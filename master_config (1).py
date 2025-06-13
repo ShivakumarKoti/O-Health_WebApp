@@ -27,7 +27,7 @@ symptom_list = [
 # ------------------------------------------------------------------ #
 symptom_synonyms = {
     'headache': [
-        'throbbing headache', 'pounding head', 'cranial ache', 'head pressure', 'pressure on the head', 'pressure in the head', 'head pounding',
+        'throbbing headache', 'pounding head', 'cranial ache', 'head pounding',
         'hammering pain in skull', 'aching brain', 'full-head ache', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
         'relentless cranial pounding', 'forehead-tightening discomfort', 'vice-like grip on head', 'pulsating headache', 'dull throb', 'piercing head agony', 'continuous headache hum', 'low-level head strain',
         'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp', 'brain-squeezing feeling', 'top-heavy ache', 'all-encompassing head discomfort', 'band-like pressure around head',
