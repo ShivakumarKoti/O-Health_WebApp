@@ -18,7 +18,7 @@ symptom_list = [
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises',''
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','Not losing weight',
 #  'arthritis'
 ]
 
