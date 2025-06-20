@@ -6315,14 +6315,15 @@ trigger_keywords = {
 
     },
 'knee': {
-        'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
+        'pain': ['pain', 'pains', 'hurt', 'hurts', 'ache', 'aches', 'aching'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'locked', 'tight', 'rigid'],
         'injury': ['injury', 'injured', 'twist', 'twisted', 'fall', 'fell', 'hit', 'sprain', 'sprained', 'fracture', 'fractured'],
         'weakness': ['weak', 'weakness', 'unstable', 'giving way', "can’t stand", 'buckling'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
+	'soreness': ['sore', 'soreness', 'tender', 'sores', 'discomfort']
     },
 'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
@@ -6335,7 +6336,7 @@ trigger_keywords = {
 	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
 	'itching': ['itch', 'itching', 'itches', 'itchy', 'scratchy', 'itchiness'],
 	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
-	#'burn': ['burn','burning','burns']
+	'burning': ['burning', 'hot sensation', 'burnt', 'heat', 'fire-like', 'burns']
     },
 'shoulder': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -8094,6 +8095,13 @@ body_part_followup_questions = {
                 'category': 'knee_itching_signs'
             }
         ],
+	  'soreness': [
+            {
+                'hi': "क्या घुटनों में यह अकड़न या दर्द चलने या बैठने पर बढ़ता है?",
+                'en': "Does the knee soreness or discomfort increase when walking or sitting?",
+                'category': 'knee_soreness_activity'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
@@ -8206,6 +8214,13 @@ body_part_followup_questions = {
                 'hi': "क्या पैर में खून बहने के साथ चलने में दिक्कत हो रही है?",
                 'en': "Is the foot bleeding making it difficult to walk?",
                 'category': 'foot_bleeding_function'
+            }
+        ],
+	  'burning': [
+            {
+                'hi': "क्या आपके पैरों में जलन रात में अधिक होती है?",
+                'en': "Is the burning sensation in your feet worse at night?",
+                'category': 'foot_burning_timing'
             }
         ],
         'default': [
