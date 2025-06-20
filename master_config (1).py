@@ -673,7 +673,7 @@ symptom_synonyms = {
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma', 'ears not listening',
 'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
-'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss'
+'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss','not hearing', 'not able to hear'
 ],
 
 'weight gain': [
@@ -682,7 +682,7 @@ symptom_synonyms = {
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
-'weight fluctuation': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight',
+'weight fluctuation': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight','not losing weight',
  'weight is different', 'weighing change', 'weight has changed','weight fluctuations'],
 
 'skin burning': [
