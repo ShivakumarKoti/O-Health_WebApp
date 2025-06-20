@@ -10707,7 +10707,7 @@ symptom_to_specialist = {
     'calf pain': 'Orthopedic Specialist',
     'bone fracture': 'Orthopedic Specialist',
     'back bone issue': 'Orthopedic Specialist',
-    'jaw pain': 'Orthopedic Specialist',
+    'jaw pain': 'Dentist',
 
     # Cardiologist: Heart-related symptoms
     'chest pain': 'Cardiologist',
