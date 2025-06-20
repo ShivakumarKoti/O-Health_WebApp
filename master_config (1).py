@@ -6216,7 +6216,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
         'pain': ['pain', 'paining', 'ache', 'aching', 'throbbing', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
-        'itching': ['itch', 'itching', 'itches', 'itched', 'itchiness'],
+        'itching': ['itch', 'itching', 'itches', 'itchy', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
@@ -6240,7 +6240,7 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'wound', 'wounded', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
         'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
-        'itching': ['itch', 'itches', 'itching', 'itched', 'itchiness', 'scratchy'],
+        'itching': ['itch', 'itches', 'itchy', 'itching', 'itched', 'itchiness', 'scratchy'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
@@ -6250,14 +6250,14 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
         'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained'],
 	    'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
-	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+	    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
         'swelling': ['swollen', 'swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
 	    'numbness': ['numb', 'numbness', 'no sensation'],
-	    'itching': ['itch', 'itching', 'scratchy', 'tingle', 'irritation'],
+	    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
 	    'pain' : ['pain', 'paining', 'pains', 'hurts','hurting', 'hurt']
 	
     },
@@ -6268,7 +6268,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
 	    'spasm' : ['spasm','spasms','spasmed'],
-	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+	    'itching': ['itch', 'itching', 'itchy','itches', 'itchiness', 'scratchy'],
         'issue': ['issue', 'bone issue','issues', 'problem', 'problems', 'condition', 'discomfort']
     },
 'chest': {
@@ -6293,7 +6293,7 @@ trigger_keywords = {
         'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing','swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'fever', 'cold', 'flu', 'strep','infected','infections','infected'],
-	    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	    'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy']
     },
 'stomach': {
         'pain': ['pain', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
@@ -6309,7 +6309,7 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles'],
-	'itching': ['itch', 'itching', 'scratchy', 'itchiness'],
+	'itching': ['itch', 'itching', 'itches', 'itchy','scratchy', 'itchiness'],
         'bleeding': ['bleeding', 'blood', 'bleed', 'cut'],
 	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
 
@@ -6322,7 +6322,7 @@ trigger_keywords = {
         'weakness': ['weak', 'weakness', 'unstable', 'giving way', "can’t stand", 'buckling'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
     },
 'foot': {
         'pain': ['pain', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
@@ -6333,7 +6333,7 @@ trigger_keywords = {
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
-	'itching': ['itch', 'itching', 'scratchy', 'itchiness'],
+	'itching': ['itch', 'itching', 'itches', 'itchy', 'scratchy', 'itchiness'],
 	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	#'burn': ['burn','burning','burns']
     },
@@ -6343,7 +6343,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'dislocate', 'dislocated', 'fracture', 'fractured'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'weakness': ['weak', 'weakness', 'unstable', 'weakened', "can’t lift", 'difficulty lifting'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching', 'itches', 'itchy', 'itchiness', 'scratchy']
     },
 'ear': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing',],
@@ -6353,7 +6353,7 @@ trigger_keywords = {
         'infection': ['infection', 'fever', 'swelling', 'ear infection'],
         'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	'bleeding': ['bleeding', 'blood', 'bleed'],
-	'itching': ['itch', 'itching', 'itchy', 'scratchy', 'itchiness']
+	'itching': ['itch', 'itching', 'itches', 'itchy', 'scratchy', 'itchiness']
     },
 'nails': {
         'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
@@ -6383,7 +6383,7 @@ trigger_keywords = {
             'blotchy', 'hives', 'welts', 'raised spots'
         ],
         'itching': [
-            'itch', 'itching', 'scratching', 'irritation', 
+            'itch', 'itching', 'itchiness', 'scratching', 'irritation', 
             'pruritus', 'crawling sensation','itches'
         ],
         'dryness': [
@@ -6416,7 +6416,7 @@ trigger_keywords = {
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
 	'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
     },
  
 'heart': {
@@ -6446,7 +6446,7 @@ trigger_keywords = {
         'infection': ['infection', 'sinus', 'cold', 'flu', 'sinusitis'],
         'bleed' : ['bleed', 'bleeding', 'nosebleed', 'epistaxis', 'blood','bled','bleeds'],
 	'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
     },
 'thigh': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -6455,7 +6455,7 @@ trigger_keywords = {
         'injury': ['injury', 'pulled', 'strain', 'torn','injured','injure'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
 	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation'],
-	'itching': ['itch', 'itching', 'itchy', 'scratchy', 'itchiness']
+	'itching': ['itch', 'itching', 'itchy','itches', 'scratchy', 'itchiness']
     },
 'forehead': {
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
@@ -6477,7 +6477,7 @@ trigger_keywords = {
         'bleeding': ['bleed', 'bleeding', 'blood in mouth'],
         'bad breath': ['bad breath', 'halitosis', 'foul smell'],
         'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching', 'itches', 'itchy', 'itchiness', 'scratchy']
     },
 'jaw':{
         'pain': ['pain', 'pains', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
@@ -6496,7 +6496,7 @@ trigger_keywords = {
     'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
     'weakness': ['weakness', 'weak', 'unstable', 'giving way', 'can’t bear weight', 'wobbly', 'tired'],
     'injury': ['injury', 'fracture', 'dislocation', 'sprain', 'strain', 'bruise', 'fall', 'trauma'],
-    'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
 },
  'waist': {
         'pain': ['pain', 'pains', 'paining', 'ache', 'aching', 'throbbing', 'sore', 'discomfort', 'soreness'],
@@ -6505,7 +6505,7 @@ trigger_keywords = {
         'swelling': ['swollen', 'bump', 'swelling', 'puffy', 'enlarged', 'inflamed', 'inflammation'],
         'injury': ['injury', 'pulled', 'strained', 'hurt', 'broken', 'strain', 'sprain', 'trauma', 'broke', 'fall', 'twisted'],
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
-	'itching': ['itchy', 'itching', 'itchiness', 'scratchy']
+	'itching': ['itchy', 'itching', 'itches', 'itch', 'itchiness', 'scratchy']
     },
 
 'pelvic': {
@@ -6515,7 +6515,7 @@ trigger_keywords = {
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
         'injury': ['injury', 'fall', 'fracture', 'trauma', 'strain', 'sprain'],
 	'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation'],
-	'itching': ['itchy', 'itching', 'itchiness', 'scratchy']
+	'itching': ['itchy', 'itching', 'itches', 'itch', 'itchiness', 'scratchy']
     },
 'elbow': {
         'pain': ['pain', 'ache', 'aching', 'sharp', 'burning', 'stabbing', 'soreness', 'discomfort', 'throbbing'],
@@ -6537,7 +6537,7 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflammation', 'bump'],
         'drooping': ['drooping', 'droop', 'sagging', 'paralysis', 'uneven smile'],
         'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
     },
 'ankle': {
         'pain': ['pain', 'ache', 'hurting', 'paining', 'pains', 'throbbing'],
@@ -6552,13 +6552,13 @@ trigger_keywords = {
         'fatigue': ['tired', 'fatigue', 'exhausted', 'lethargic'],
         'weakness': ['weakness', 'weak', 'low energy', 'sluggish', 'no strength'],
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move'],
-	'itching': ['itching', 'itchy', 'scratching', 'irritation', 'rash'],
+	'itching': ['itching', 'itchy', 'itches', 'itch','scratching', 'irritation', 'rash'],
         'swelling': ['swelling', 'puffiness', 'inflammation']
     },
 'hair': {
         'hair loss': ['hair fall', 'hair loss', 'balding', 'shedding', 'thinning'],
         'dandruff': ['dandruff', 'flaky scalp', 'scalp flakes', 'dry scalp'],
-        'itching': ['itchy scalp', 'itching', 'scalp irritation'],
+        'itching': ['itchy scalp', 'itching', 'itches', 'itchy', 'itch', 'itchiness', 'scalp irritation'],
         'greying': ['greying', 'white hair', 'grey hair', 'premature greying'],
         'dryness': ['dryness', 'dry', 'rough hair', 'brittle hair']
     },
@@ -6569,7 +6569,7 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'hard to move', 'limited motion'],
         'injury': ['injury', 'injured', 'fracture', 'jammed', 'cut', 'bruise'],
 	'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy'],
+	'itching': ['itch', 'itching', 'itchy', 'itches', 'itch', 'itchiness', 'scratchy'],
 	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'thumb': {
@@ -6587,7 +6587,7 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'hard to bend', 'tightness'],
         'injury': ['injury', 'injured', 'bruise', 'cut', 'burn', 'blister'],
 	'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
-	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching', 'itchy', 'itches', 'itch', 'itchiness', 'scratchy']
     },
 'toe': {
         'pain': ['pain', 'pains', 'paining', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -6632,7 +6632,7 @@ trigger_keywords = {
     'swelling': ['swelling', 'swollen', 'puffy', 'inflamed'],
     'numbness': ['numb', 'numbness', 'tingling', 'no sensation', 'pins and needles'],
     'cracks': ['crack', 'cracks', 'fissures', 'split skin', 'dry cracks'],
-    'itching': ['itching', 'itchy', 'irritation', 'scratchy']
+    'itching': ['itching', 'itchy','itches', 'itch', 'irritation', 'scratchy']
 },
 
       'child' : {
@@ -6643,6 +6643,8 @@ trigger_keywords = {
 
     # add ear / skin / etc…
 }
+
+
 
 body_part_followup_questions = {
    
