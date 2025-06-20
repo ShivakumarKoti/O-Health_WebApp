@@ -10943,6 +10943,7 @@ symptom_to_specialist = {
   'knee numbness': 'Neurologist',
   'knee freeze': 'Neurologist',
   'knee itching': 'Dermatologist',
+  'knee soreness': 'Orthopedic Specialist', 
 
   'foot pain': 'Orthopedic Specialist',
   'foot weakness': 'Neurologist',
@@ -10954,6 +10955,7 @@ symptom_to_specialist = {
   'foot spasm': 'Neurologist',
   'foot itching': 'Dermatologist',
   'foot bleeding': 'General Physician',
+  'foot burning': 'Orthopedic Specialist',
 
   'shoulder pain': 'Orthopedic Specialist',
   'shoulder stiffness': 'Orthopedic Specialist',
