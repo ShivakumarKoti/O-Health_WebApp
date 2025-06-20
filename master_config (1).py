@@ -11477,6 +11477,7 @@ HINDI_OFFLINE_DICT = {
   "knee numbness": "घुटने में सुन्नपन",
   "knee freeze": "घुटना जाम होना",
   "knee itching": "घुटने में खुजली",
+  "knee soreness": "घुटने में अकड़न",
 
   "foot pain": "पैर में दर्द",
   "foot weakness": "पैर में कमजोरी",
@@ -11488,6 +11489,7 @@ HINDI_OFFLINE_DICT = {
   "foot spasm": "पैर में ऐंठन",
   "foot itching": "पैर में खुजली",
   "foot bleeding": "पैर से रक्तस्राव",
+  "foot burning": "पैर में जलन",
 
   "shoulder pain": "कंधे में दर्द",
   "shoulder stiffness": "कंधे का जकड़ना",
