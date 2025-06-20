@@ -2210,12 +2210,6 @@ symptom_followup_questions = {
 
   "dehydration": [
     {
-      "hi": "क्या आपको प्यास लगी हुई है?",
-      "en": "Are you feeling thirsty?",
-      "category": "thirst",
-      "symptom": "thirst",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपका पेशाब कम आ रहा है और रंग गहरा हो गया है?",
       "en": "Is your urine output reduced and dark-colored?",
       "category": "reduced_dark_urine",
@@ -2226,18 +2220,6 @@ symptom_followup_questions = {
       "en": "Are you experiencing headaches or dizziness?",
       "category": "headache_dizziness_with_dehydration",
       "symptom": "headache",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको शरीर में सूजन महसूस हो रही है?",
-      "en": "Are you feeling swelling in your body?",
-      "category": "swelling_with_dehydration",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको पसीना आ रहा है या त्वचा सूखी हो गई है?",
-      "en": "Are you sweating or is your skin dry?",
-      "category": "sweating_dry_skin_with_dehydration",
-      "symptom": "sweating",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको थकान महसूस हो रही है?",
