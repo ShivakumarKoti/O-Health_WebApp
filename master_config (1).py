@@ -10,7 +10,7 @@ symptom_list = [
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
 'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
-'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight fluctuation',
+'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight issue',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
@@ -682,7 +682,7 @@ symptom_synonyms = {
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
-'weight fluctuation': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight','not losing weight',
+'weight issue': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight','not losing weight','not gaining weight',
  'weight is different', 'weighing change', 'weight has changed','weight fluctuations'],
 
 'skin burning': [
