@@ -11551,7 +11551,8 @@ HINDI_OFFLINE_DICT = {
   "joint stiffness": "जोड़ का जकड़ना",
   "joint weakness": "जोड़ में कमजोरी",
   "joint injury": "जोड़ की चोट",
-
+  "joint numbness": "जोड़ों में सुन्नपन",
+	
   "skin rash": "त्वचा पर चकत्ते",
   "skin itching": "त्वचा में खुजली",
   "skin dryness": "त्वचा का सूखना",
@@ -11569,6 +11570,7 @@ HINDI_OFFLINE_DICT = {
   "muscle swelling": "मांसपेशी सूजना",
   "muscle cramps": "मांसपेशियों में अकड़न",
   "muscle itching": "मांसपेशी में खुजली",
+  "muscle numbness": "मांसपेशियों में सुन्नपन",
 
   "heart pain": "हृदय में दर्द",
   "heart weakness": "हृदय में कमजोरी",
