@@ -11013,7 +11013,8 @@ symptom_to_specialist = {
   'joint stiffness': 'Orthopedic Specialist',
   'joint weakness': 'Neurologist',
   'joint injury': 'Orthopedic Specialist',
-
+  'joint numbness': 'Neurologist',
+	
   'skin rash': 'Dermatologist',
   'skin itching': 'Dermatologist',
   'skin dryness': 'Dermatologist',
@@ -11031,6 +11032,7 @@ symptom_to_specialist = {
   'muscle swelling': 'Orthopedic Specialist',
   'muscle cramps': 'Neurologist',
   'muscle itching': 'Dermatologist',
+  'muscle numbness': 'Neurologist',
 
   'heart pain': 'Cardiologist',
   'heart weakness': 'Cardiologist',
