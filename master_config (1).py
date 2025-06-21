@@ -11436,6 +11436,7 @@ HINDI_OFFLINE_DICT = {
   "eye pain": "आंख में दर्द",
   "eye blurry vision": "आंखों का धुंधलापन",
   "eye swelling": "आंख सूजना",
+  "eye discharge": "आंख का स्राव",
 
   "hand pain": "हाथ में दर्द",
   "hand weakness": "हाथ में कमजोरी",
