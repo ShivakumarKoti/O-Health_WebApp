@@ -6358,7 +6358,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
         'weakness': ['weak','weakness', 'unstable', 'giving way', "can’t move"],
-        'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain']
+        'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain'],
+	'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles']
     },
 'skin': {
         'rash': [
@@ -6399,7 +6400,8 @@ trigger_keywords = {
         'injury': ['injury', 'strain', 'pull', 'tear'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
 	'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch'],
-	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
+	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
+	'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles']
     },
  
 'heart': {
@@ -6531,7 +6533,7 @@ trigger_keywords = {
 	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'body': {
-        'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'ache', 'whole body pain', 'all over pain', 'ache everywhere','aching'],
+        'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'ache', 'whole pain', 'all over pain', 'ache everywhere','aching'],
         'fatigue': ['tired', 'fatigue', 'exhausted', 'lethargic'],
         'weakness': ['weakness', 'weak', 'low energy', 'sluggish', 'no strength'],
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move'],
@@ -8063,6 +8065,13 @@ body_part_followup_questions = {
                 'category': 'knee_weakness_instability'
             }
         ],
+	'numbness': [
+            {
+                'hi': "क्या घुटने में सुन्नपन हाल ही में शुरू हुआ है या यह धीरे-धीरे बढ़ा है?",
+                'en': "Did the numbness in your knee start suddenly or has it developed gradually over time?",
+                'category': 'knee_numbness_onset'
+            }
+        ],
 	'freeze': [
             {
                 'hi': "क्या ठंड में आपके घुटनों में ठंडक या सुन्नपन होता है?",
@@ -8590,6 +8599,13 @@ body_part_followup_questions = {
         'category': 'knee_injury_walking_difficulty'
     },
         ],
+	'numbness': [
+            {
+                'hi': "क्या जोड़ में सुन्नपन के साथ झुनझुनाहट या जलन भी महसूस होती है?",
+                'en': "Along with numbness in the joint, do you also feel tingling or burning?",
+                'category': 'joint_numbness_sensation'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपने जोड़ों की समस्या के बारे में और जानकारी दें।",
@@ -8743,6 +8759,13 @@ body_part_followup_questions = {
                 'hi': "क्या मांसपेशियों में खुजली व्यायाम या खिंचाव के बाद होती है?",
                 'en': "Does the muscle itching happen after exercise or strain?",
                 'category': 'muscle_itching_trigger'
+            }
+        ],
+	'numbness': [
+            {
+                'hi': "क्या मांसपेशियों में सुन्नपन किसी विशेष स्थिति या गतिविधि से जुड़ा है?",
+                'en': "Is the numbness in your muscles related to a specific position or activity?",
+                'category': 'muscle_numbness_trigger'
             }
         ],
         'default': [
