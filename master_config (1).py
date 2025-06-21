@@ -6401,7 +6401,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
 	'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch'],
 	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
-	'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles']
+	'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
+	'pulling': ['pull', 'pulling', 'pulled', 'tugging', 'tight pull', 'pulls', 'strained']
     },
  
 'heart': {
@@ -8768,6 +8769,13 @@ body_part_followup_questions = {
                 'category': 'muscle_numbness_trigger'
             }
         ],
+	 'pulling': [
+            {
+                'hi': "क्या मांसपेशी खिंचने के बाद सूजन या चलने-फिरने में दिक्कत हो रही है?",
+                'en': "After the muscle pull, are you experiencing swelling or difficulty moving?",
+                'category': 'muscle_pulling_symptoms'
+            }
+        ],
         'default': [
             {
                 'hi': "कृपया अपनी मांसपेशियों की समस्या के बारे में और जानकारी दें।",
@@ -11033,6 +11041,7 @@ symptom_to_specialist = {
   'muscle cramps': 'Neurologist',
   'muscle itching': 'Dermatologist',
   'muscle numbness': 'Neurologist',
+  'muscle pulling': 'Orthopedic Specialist',
 
   'heart pain': 'Cardiologist',
   'heart weakness': 'Cardiologist',
@@ -11571,6 +11580,7 @@ HINDI_OFFLINE_DICT = {
   "muscle cramps": "मांसपेशियों में अकड़न",
   "muscle itching": "मांसपेशी में खुजली",
   "muscle numbness": "मांसपेशियों में सुन्नपन",
+  "muscle pulling": "मांसपेशियों में खिंचाव",
 
   "heart pain": "हृदय में दर्द",
   "heart weakness": "हृदय में कमजोरी",
