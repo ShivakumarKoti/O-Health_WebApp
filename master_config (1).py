@@ -542,7 +542,7 @@ symptom_synonyms = {
     'yellow ear discharge', 'green ear discharge', 'watery ear discharge', 'bloody ear discharge', 'ear mucus', 'crust in the ear', 'excessive ear fluid',
     'ear leakage', 'ear wax buildup', 'discharge from the ear canal', 'discharge from the middle ear', 'infection-related ear discharge', 'ear discharge after swimming',
     'ear drainage after injury', 'something coming out of ears','pus comes out from inside the ear','pus is coming out of the ear' 'pus from ear','ear pus''pus comes from ear',
-    'pus comes from the ear','pus is coming from an ear','pus is coming from left ear','pus in ear','pus in the ear', 'something coming out of ears', 'something coming out of my ears'
+    'pus comes from the ear','pus is coming from an ear','pus is coming from left ear','pus in ear','pus in the ear', 'something coming out of ear', 'something coming out of my ears'
 ],
 
 'balance problem': [
