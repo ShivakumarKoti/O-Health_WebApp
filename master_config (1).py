@@ -6196,7 +6196,7 @@ trigger_keywords = {
     },
 'leg': {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
-        'pain': ['pain', 'paining', 'ache', 'aching', 'throbbing', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
+        'pain': ['pain', 'paining', 'ache', 'aching', 'sore', 'sores', 'painful', 'throbbing', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'itching': ['itch', 'itching', 'itches', 'itchy', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
