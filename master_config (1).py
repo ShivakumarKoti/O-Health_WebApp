@@ -6210,10 +6210,11 @@ trigger_keywords = {
         'itching': ['itchy', 'itching', 'itch', 'itches', 'scratchy', 'scratching', 'irritated', 'irritation','itchiness'],
         'redness': ['redness', 'red', 'reddish', 'bloodshot', 'pink', 'inflamed', 'discoloration'],
         'burn': ['burn', 'burning', 'burnt', 'irritation', 'sting', 'stinging'],
-        'weakness': ['weak', 'weakness', 'tired eyes', 'eye strain', 'fatigued eyes', 'weakened'],
+        'weakness': ['weak', 'weakness', 'tired eyes', 'strain', 'fatigued', 'weakened'],
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
-	    'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump']
+	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
+	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water']
     },
 'hand': {
         'pain': ['pain', 'pains', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -10895,6 +10896,7 @@ symptom_to_specialist = {
   'eye pain': 'Ophthalmologist',
   'eye blurry vision': 'Ophthalmologist',
   'eye swelling': 'Ophthalmologist',
+  'eye discharge': 'Ophthalmologist',
 
   'hand pain': 'Orthopedic Specialist',
   'hand weakness': 'Neurologist',
