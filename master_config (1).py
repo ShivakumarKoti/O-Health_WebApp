@@ -6544,7 +6544,7 @@ trigger_keywords = {
         'swelling': ['swelling', 'puffiness', 'inflammation']
     },
 'hair': {
-        'hair loss': ['hair fall', 'hair loss', 'balding', 'shedding', 'thinning'],
+        'hair loss': ['fall', 'falling', 'fallen', 'balding', 'shedding', 'thinning'],
         'dandruff': ['dandruff', 'flaky scalp', 'scalp flakes', 'dry scalp'],
         'itching': ['itchy scalp', 'itching', 'itches', 'itchy', 'itch', 'itchiness', 'scalp irritation'],
         'greying': ['greying', 'white hair', 'grey hair', 'premature greying'],
