@@ -770,7 +770,7 @@ symptom_synonyms = {
 
 'obesity': [
     'obese', 'high body mass index (BMI)','fatty tissue buildup', 'high levels of body fat', 'weight-related health issues',
-    'BMI is higher', 'high BMI', 'BMI excess'
+    'BMI is higher', 'high BMI', 'BMI excess', 'overweight', 'over weight'
 ],
 
 'ulcers': [
