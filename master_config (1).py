@@ -654,7 +654,7 @@ symptom_synonyms = {
                        ],
 
 'thyroid': [
-    'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'goiter', 'thyroid dysfunction',
+    'hypothyroidism', 'hyperthyroidism', 'thyroid disorder', 'thyroid imbalance', 'underactive thyroid', 'overactive thyroid', 'thyroid dysfunction',
     'thyroid disease', 'thyroid cancer', 'thyroiditis', 'low thyroid function', 'high thyroid function', 'endocrine disorder', 'thyroid nodules', 'thyroid hormone imbalance',
     'TSH imbalance', 'thyroid problems', 'autoimmune thyroid disease', 'pituitary-thyroid dysfunction', 'thyroid testing'
 ],
@@ -833,7 +833,7 @@ symptom_synonyms = {
     'abnormal cold sensation', 'excessive response to cold', 'shivering easily', 'overly sensitive to temperature drops'
 ],
 'goiter': [
-    'neck swelling', 'thyroid swelling', 'thyroid gland enlargement',
+    'neck swelling', 'thyroid swelling', 'thyroid gland enlargement', 'goitre',
     'bulging thyroid', 'neck lump', 'enlarged neck gland', 'neck enlargement',
     'swollen neck gland', 'neck protuberance'
 ],
