@@ -10791,7 +10791,7 @@ symptom_to_specialist = {
     'covid': 'Pulmonologist',
 
     # Psychiatrist: Mental health symptoms
-    'anxiety': 'General',
+    'anxiety': 'General Practitioner',
     'depression': 'Psychologist',
     'insomnia': 'General Practitioner',
     'restlessness': 'General Practitioner',
