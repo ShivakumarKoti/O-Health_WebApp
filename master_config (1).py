@@ -15,11 +15,11 @@ symptom_list = [
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
 'sleepy','fatigue', 'fracture',
-'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','sugar',  'tingling', 'difficulty speaking',
+'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises', '',
-#  'arthritis'
+#  'arthritis', 'sugar'
 ]
 
 # ------------------------------------------------------------------ #
@@ -291,7 +291,7 @@ symptom_synonyms = {
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
     'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'absence of hunger', 'less hungry', 'not feeling hungry',' don\'t feel hungry',
     'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less','do not feel hungry',
-    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less'
+    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed'
 ],
 
 'constipation': [
@@ -360,7 +360,7 @@ symptom_synonyms = {
 
 'weight loss': [
     'fat loss', 'loss of body weight', 'slimming down', 'losing pounds', 'weight reduction', 'weight management', 'fat burning', 'weight cut', 'weight is decreasing',
-    'weight got decreased', 'weight decrease', 'weight is decreased', 'weight went down','lost my weight',
+    'weight got decreased', 'weight decrease', 'weight is decreased', 'weight went down','lost my weight','look thinner',
     'body slimming', 'reduction in weight', 'fat shedding', 'calorie burning', 'trimming down', 'losing inches', 'dropping weight', 'healthy weight loss',
     'body fat reduction','dieting', 'fitness weight loss', 'weight loss goals', 'weight going down', 'losing weight', 'loss of weight', 'lost weight',
     'lost a lot of weight','lost weight','lost some weight','weighing less','loosing too much weight','weightloss', 'loosing weight', 'loss of weight',
@@ -392,7 +392,7 @@ symptom_synonyms = {
     'xerostomia', 'cottonmouth', 'parched mouth', 'thirsty mouth', 'dryness in the mouth', 'lack of saliva', 'reduced saliva production', 'mouth dryness',
     'sticky mouth', 'dryness of the oral cavity', 'uncomfortable dry mouth', 'dry tongue', 'thirsty feeling in the mouth', 'saliva deficiency', 'oral dryness',
     'mouth discomfort', 'dryness in the mouth and throat', 'sore dry mouth', 'dehydrated mouth', 'dryness due to medication', 'mouth feels dry', 'no saliva',
-    'mouth is dry'
+    'mouth is dry','mouth stays dry'
 ],
 
 'frequent urination': [
@@ -522,7 +522,8 @@ symptom_synonyms = {
 'excessive thirst': [
     'polydipsia', 'intense thirst', 'uncontrollable thirst', 'extreme thirst', 'constant thirst', 'increased thirst', 'abnormal thirst', 'drinking more water', 'consuming more water','getting thirsty',
     'compulsive thirst', 'thirsty all the time', 'unquenchable thirst', 'chronic thirst', 'intense desire to drink', 'frequent thirst', 'dehydration thirst','thirsty feeling','more thirst',
-    'abnormal fluid intake desire', 'thirst without relief', 'excessive fluid consumption', 'thirst due to dehydration', 'thirsty feeling', 'abnormal hydration needs','BP is getting low','BP is low'
+    'abnormal fluid intake desire', 'thirst without relief', 'excessive fluid consumption', 'thirst due to dehydration', 'thirsty feeling', 'abnormal hydration needs','BP is getting low','BP is low',
+    'thirsty all day'
 ],
 
 'dehydration': [
@@ -608,7 +609,7 @@ symptom_synonyms = {
 ],
 
 'fatigue': [
-    'fatigue','not energetic', 'energy less'
+    'fatigue','not energetic', 'energy less','low energy'
 ],
 
 'sprain': [
@@ -677,7 +678,7 @@ symptom_synonyms = {
 ],
 
 'weight gain': [
-'increase in weight', 'gain in body mass', 'weight gain', 'excess body weight', 'body mass increase', 'weight is increasing','weight increased','weight is more', 
+'increase in weight', 'gain in body mass', 'weight gain', 'excess body weight', 'body mass increase', 'weight is increasing','weight increased','weight is more', 'waistline is growing',
  'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 'gaining weight', 'gained weight',
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
@@ -719,7 +720,7 @@ symptom_synonyms = {
 
 'pneumonia': ['lung infection','alveolar infection'],
 
-'sugar': ['sugars', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
+#'sugar': ['sugars', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
 
 'tingling': ['tingling sensation', 'pins and needles', 'prickling sensation', 'buzzing sensation',
               'electrical sensation'],
@@ -744,7 +745,7 @@ symptom_synonyms = {
     'ravenous appetite', 'uncontrollable hunger', 'increased appetite', 'heightened appetite',
     'overeating due to hunger', 'persistent hunger', 'craving food all the time', 'hungry shortly after eating',
     'hunger that doesn’t go away', 'sudden increase in appetite', 'strong desire to eat', 
-    'feeling hungry', 'unable to satisfy hunger', 'eating more',
+    'feeling hungry', 'unable to satisfy hunger', 'eating more','stomach growls',
     'urge to eat constantly', 'insatiable hunger', 'always needing to snack', 'hungry despite eating enough',
     'eating frequently due to hunger', 'waking up hungry', 'nighttime hunger', 'excessive food cravings',
     'hunger pangs more often', 'increased hunger after exercise', 'increased hunger from medication',
@@ -4490,20 +4491,6 @@ symptom_followup_questions = {
 
   "sugar": [
         {
-            "hi": "क्या आप नियमित रूप से अपने ब्लड शुगर लेवल की जांच करते हैं?",
-            "en": "Do you regularly monitor your blood sugar levels?",
-            "category": "blood_sugar_monitoring",
-            "symptom": "sugar monitoring",
-            "risk_factor": True,
-        },
-        {
-            "hi": "क्या आपने हाल ही में अपने ब्लड शुगर में किसी भी असामान्य बदलाव का अनुभव किया है?",
-            "en": "Have you experienced any unusual changes in your blood sugar levels recently?",
-            "category": "blood_sugar_changes",
-            "symptom": "sugar changes",
-            "risk_factor": False,
-        },
-        {
             "hi": "क्या आपको अपने ब्लड शुगर के स्तर को नियंत्रित करने के लिए दवाओं का उपयोग करना पड़ता है?",
             "en": "Do you need to take medications to control your blood sugar levels?",
             "category": "blood_sugar_medications",
@@ -4545,16 +4532,8 @@ symptom_followup_questions = {
             "symptom": "sugar",
             "risk_factor": True,
         },
-
-        {
-            "hi": "क्या आप अपने ब्लड शुगर के स्तर पर किसी प्रकार के स्ट्रेस या मानसिक दबाव का अनुभव करते हैं?",
-            "en": "Do you experience any stress or mental pressure that affects your blood sugar levels?",
-            "category": "blood_sugar_stress",
-            "symptom": None,
-            "risk_factor": False,
-        },
     ],
-
+	
   "tingling": [
     {
       "hi": "आपको झुनझुनी का अनुभव कहाँ हो रहा है? क्या यह हाथों, पैरों, या शरीर के किसी अन्य हिस्से में है?",
