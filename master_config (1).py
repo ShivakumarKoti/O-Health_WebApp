@@ -6214,7 +6214,8 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
 	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
-	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water']
+	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water'],
+	'crushing': ['crushing', 'crushed', 'crush', 'crushes']
     },
 'hand': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -7052,6 +7053,13 @@ body_part_followup_questions = {
                 'hi': "क्या सूजी हुई आंख में दर्द या गर्माहट महसूस हो रही है?",
                 'en': "Is the swollen eye accompanied by pain or warmth?",
                 'category': 'eye_swelling_signs'
+            }
+        ],
+	'crushing': [
+            {
+                'hi': "क्या आंखों को घुमाने पर दबाव या भारीपन और बढ़ जाता है?",
+                'en': "Does the crushing pressure in your eye worsen when you move your eyes?",
+                'category': 'eye_crushing_movement_relation'
             }
         ],
     'default': [
@@ -10897,7 +10905,8 @@ symptom_to_specialist = {
   'eye blurry vision': 'Ophthalmologist',
   'eye swelling': 'Ophthalmologist',
   'eye discharge': 'Ophthalmologist',
-
+  'eye crushing': 'Ophthalmologist',
+	
   'hand pain': 'Orthopedic Specialist',
   'hand weakness': 'Neurologist',
   'hand numbness': 'Neurologist',
@@ -11437,6 +11446,7 @@ HINDI_OFFLINE_DICT = {
   "eye blurry vision": "आंखों का धुंधलापन",
   "eye swelling": "आंख सूजना",
   "eye discharge": "आंख का स्राव",
+  "eye crushing": "आंख कुचलना",
 
   "hand pain": "हाथ में दर्द",
   "hand weakness": "हाथ में कमजोरी",
