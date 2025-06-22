@@ -289,8 +289,8 @@ symptom_synonyms = {
   'loss of appetite': [
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
-    'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'absence of hunger', 'less hungry', 'not feeling hungry',
-    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less',
+    'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'absence of hunger', 'less hungry', 'not feeling hungry',' don\'t feel hungry',
+    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less','do not feel hungry',
     'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less'
 ],
 
@@ -520,7 +520,7 @@ symptom_synonyms = {
 ],
 
 'excessive thirst': [
-    'polydipsia', 'intense thirst', 'uncontrollable thirst', 'extreme thirst', 'constant thirst', 'increased thirst', 'abnormal thirst', 'drinking more water', 'consuming more water',
+    'polydipsia', 'intense thirst', 'uncontrollable thirst', 'extreme thirst', 'constant thirst', 'increased thirst', 'abnormal thirst', 'drinking more water', 'consuming more water','getting thirsty',
     'compulsive thirst', 'thirsty all the time', 'unquenchable thirst', 'chronic thirst', 'intense desire to drink', 'frequent thirst', 'dehydration thirst','thirsty feeling','more thirst',
     'abnormal fluid intake desire', 'thirst without relief', 'excessive fluid consumption', 'thirst due to dehydration', 'thirsty feeling', 'abnormal hydration needs','BP is getting low','BP is low'
 ],
@@ -677,13 +677,13 @@ symptom_synonyms = {
 ],
 
 'weight gain': [
-'increase in weight', 'gain in body mass', 'weight gain', 'excess body weight', 'body mass increase', 'weight is increasing','weight increased','weight is more',
+'increase in weight', 'gain in body mass', 'weight gain', 'excess body weight', 'body mass increase', 'weight is increasing','weight increased','weight is more', 
  'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 'gaining weight', 'gained weight',
 'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
 'weight issue': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight','not losing weight','not gaining weight',
- 'weight is different', 'weighing change', 'weight has changed','weight fluctuations'],
+ 'weight is different', 'weighing change', 'weight has changed','don\'t lose weight','don\'t gain weight','weight fluctuations'],
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
