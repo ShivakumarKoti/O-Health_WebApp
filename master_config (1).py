@@ -1,5 +1,3 @@
-
-
 # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
@@ -6257,7 +6255,7 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
 	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
-	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water'],
+	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water','allergy'],
 	'crushing': ['crushing', 'crushed', 'crush', 'crushes'],
 	'sight issues': ['sight', 'sight issues','short sight', 'short sightness', 'far sight', 'far sightness', 'long sight', 'long sightness', 'near sight', 'near sightness']
     },
