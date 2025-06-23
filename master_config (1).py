@@ -6200,7 +6200,8 @@ trigger_keywords = {
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
 	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
 	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water'],
-	'crushing': ['crushing', 'crushed', 'crush', 'crushes']
+	'crushing': ['crushing', 'crushed', 'crush', 'crushes'],
+	'sight issues': ['sight', 'sight issues','short sight', 'short sightness', 'far sight', 'far sightness', 'long sight', 'long sightness', 'near sight', 'near sightness']
     },
 'hand': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
@@ -7045,6 +7046,18 @@ body_part_followup_questions = {
                 'hi': "क्या आंखों को घुमाने पर दबाव या भारीपन और बढ़ जाता है?",
                 'en': "Does the crushing pressure in your eye worsen when you move your eyes?",
                 'category': 'eye_crushing_movement_relation'
+            }
+        ],
+     'sight issues': [
+            {
+                'hi': "क्या आपको पास की चीज़ें देखने में परेशानी होती है या दूर की?",
+                'en': "Do you have trouble seeing things up close or far away?",
+                'category': 'eye_sight_near_far'
+            },
+	     {
+                'hi': "कृपया अपनी आंखों की दृष्टि से जुड़ी समस्या के बारे में और जानकारी दें।",
+                'en': "Please describe your vision problem in more detail.",
+                'category': 'eye_detail'
             }
         ],
     'default': [
