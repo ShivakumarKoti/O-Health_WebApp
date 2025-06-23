@@ -1539,37 +1539,43 @@ symptom_followup_questions = {
   ], 
 
   "allergy": [
-    {
-      "hi": "क्या आपकी त्वचा में खुजली या लालिमा है?",
-      "en": "Do you have itching or redness on your skin?",
-      "category": "skin_allergy_symptoms",
-      "symptom": "itching",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके आंखों में सूजन या जलन है?",
-      "en": "Do you have swelling or irritation in your eyes?",
-      "category": "eye_allergy_symptoms",
-      "symptom": "itchy eyes",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके लक्षण किसी खास मौसम या वातावरण में अधिक होते हैं?",
-      "en": "Do your symptoms worsen in certain seasons or environments?",
-      "category": "environmental_allergy_triggers",
-      "symptom": None,
-      "risk_factor": False,    },
-{
-      "hi": "क्या आपको किसी विशेष चीज़ से एलर्जी है?",
-      "en": "Do you have allergies to any specific substance?",
-      "category": "specific_allergy",
-      "symptom": None,
-      "risk_factor": False,    },
-     {
-      "hi": "क्या आपको गले में खुजली या सूजन महसूस हो रही है?",
-      "en": "Are you feeling itchiness or swelling in your throat?",
-      "category": "throat_allergy_symptoms",
-      "symptom": None,
-      "risk_factor": False,    },   
-  ],
+ 
+  {
+    "hi": "क्या आपकी एलर्जी धूल, पराग या जानवरों के संपर्क में आने पर बढ़ जाती है?",
+    "en": "Do your allergies worsen when exposed to dust, pollen, or animals?",
+    "category": "common_allergy_triggers",
+    "symptom": None,
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके लक्षण पूरे साल रहते हैं या सिर्फ कुछ समय के लिए होते हैं?",
+    "en": "Do your symptoms occur year-round or only during certain times?",
+    "category": "allergy_timing",
+    "symptom": None,
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपके परिवार में किसी को एलर्जी की समस्या रही है?",
+    "en": "Does anyone in your family have a history of allergies?",
+    "category": "family_history",
+    "symptom": None,
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपने किसी खाद्य पदार्थ के सेवन के बाद एलर्जी की प्रतिक्रिया महसूस की है?",
+    "en": "Have you ever experienced an allergic reaction after consuming certain foods?",
+    "category": "food_allergy",
+    "symptom": None,
+    "risk_factor": False,
+  },
+ {
+    "hi": "क्या आप सामान्य रूप से खुद को एलर्जी से ग्रसित महसूस करते हैं?",
+    "en": "Do you generally feel that you suffer from allergies?",
+    "category": "general_allergy_presence",
+    "symptom": None,
+    "risk_factor": False,
+  },
+],
 
  "high blood pressure": [
   {
