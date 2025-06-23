@@ -10904,6 +10904,7 @@ symptom_to_specialist = {
   'eye swelling': 'Ophthalmologist',
   'eye discharge': 'Ophthalmologist',
   'eye crushing': 'Ophthalmologist',
+  'eye sight issues': 'Ophthalmologist',
 	
   'hand pain': 'Orthopedic Specialist',
   'hand weakness': 'Neurologist',
