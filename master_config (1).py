@@ -11554,6 +11554,7 @@ HINDI_OFFLINE_DICT = {
   "ear freeze": "कान का जमना",
   "ear bleeding": "कान से रक्तस्राव",
   "ear itching": "कान में खुजली",
+  "eye sight issue": "दृष्टि समस्या",
 
   "nails discoloration": "नाखून का रंग बदलना",
   "nails pain": "नाखून में दर्द",
