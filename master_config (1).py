@@ -4620,11 +4620,11 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको पहले भी ऐसी समस्या रही है, या यह हाल ही में शुरू हुई है?",
-      "en": "Have you had this issue before, or did it start recently?",
-      "category": "difficulty speaking",
-      "symptom": "difficulty speaking",
-      "risk_factor": False,
+    "hi": "क्या आपको पहले भी बोलने में कठिनाई हुई है, या यह समस्या हाल ही में शुरू हुई है?",
+    "en": "Have you experienced difficulty speaking before, or did it start recently?",
+    "category": "difficulty_speaking",
+    "symptom": "None",
+    "risk_factor": False,
     },
     {
       "hi": "क्या आपको कोई neurological या मस्तिष्क से संबंधित समस्या है, जैसे स्ट्रोक या मस्तिष्क की चोट?",
