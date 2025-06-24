@@ -633,7 +633,7 @@ symptom_synonyms = {
 
 'female issue': [
     'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis',
-    'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 
+    'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 'menstruation', 
     'vaginal dryness', 'prolapsed uterus', 'birth control issues', 'female urinary issues',
     'pregnancy complications', 'white discharge', 'female issues', 'woman issue', 'women issue', 'woman issues',
     'women issues', 'vaginal itching', 'vaginal odor', 'ovulation pain', 'breast tenderness', 'breast lumps',
