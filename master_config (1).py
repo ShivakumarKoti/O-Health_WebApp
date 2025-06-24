@@ -1810,7 +1810,7 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-   "weight fluctuation": [
+   "weight issue": [
 {
    "hi": "क्या आपको वजन तेजी से बढ़ रहा है?",
       "en": "Are you gaining weight rapidly?",
