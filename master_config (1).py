@@ -2516,12 +2516,6 @@ symptom_followup_questions = {
       "symptom": "skin itching",
       "risk_factor": False,    },
     {
-      "hi": "क्या खुजली के साथ लालिमा भी है?",
-      "en": "Is there any redness along with itching?",
-      "category": "redness_with_skin_itching",
-      "symptom": "redness",
-      "risk_factor": False,    },
-    {
       "hi": "क्या खुजली के कारण सूजन हो रही है?",
       "en": "Is itching causing any swelling?",
       "category": "swelling_with_skin_itching",
