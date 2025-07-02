@@ -957,12 +957,6 @@ symptom_followup_questions = {
       "category": "intensity_increase",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या सिरदर्द की शुरुआत अचानक हुई थी या धीरे-धीरे?",
-      "en": "Did the headache start suddenly or gradually?",
-      "category": "onset",
-      "symptom": None,
-      "risk_factor": False,    },
   ],
   "nausea": [
        {
