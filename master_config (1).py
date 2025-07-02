@@ -1418,24 +1418,14 @@ symptom_followup_questions = {
   ],
 
   "infection": [
-    {
-      "hi": "क्या संक्रमण के कारण आपको त्वचा में लालिमा आ रही है?",
-      "en": "Is there any redness in your skin due to the infection?",
-      "category": "skin_redness",
-      "symptom": "redness",
-      "risk_factor": False,    },   
+    
  {
       "hi": "क्या संक्रमण के कारण आपको किसी विशेष हिस्से में दर्द हो रहा है?",
       "en": "Are you experiencing pain in any specific area due to the infection?",
       "category": "localized_pain",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या संक्रमण के साथ सूजन भी है?",
-      "en": "Is there any swelling along with the infection?",
-      "category": "swelling",
-      "symptom": "swelling",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या संक्रमण के कारण आपको कमजोरी महसूस हो रही है?",
       "en": "Are you feeling weak due to the infection?",
