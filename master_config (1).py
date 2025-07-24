@@ -14,9 +14,9 @@ symptom_list = [
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
 'sleepy','fatigue', 'fracture',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
-'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
+'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises', '',
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', '',
 #  'arthritis', 'sugar'
 ]
 
@@ -556,7 +556,7 @@ symptom_synonyms = {
     'rapid heartbeat', 'slow heartbeat', 'tachycardia', 'bradycardia', 'atrial fibrillation', 'ventricular fibrillation', 'heart flutter', 'irregular heart rhythm',
     'heart irregularities', 'palpitations', 'fluttering heart', 'cardiac arrhythmia', 'dysrhythmia', 'irregular pulse rate', 'heartbeat irregularity','fast heartbeat',
     'irregular heart rate', 'heart pounding','heartbeat is late','heart beat is late','heartbeat is early','heart beat is early','late heart beat','late heartbeat','heartrate is fast','rapid heartrate',
-    'pounding heart rate','pounding heartrate','rapid heart rate','rapid heartrate'
+    'pounding heart rate','pounding heartrate','rapid heart rate','rapid heartrate', 'heart rate is increasing', 'heartrate is increasing', 'heartrate increases', 'heart rate increases', 'heartrate changes'
 ],
 
 'fainting': [
@@ -592,7 +592,7 @@ symptom_synonyms = {
 ],
 
 'lack of motivation': [
-    'demotivated', 'low motivation', 'disinterest', 'lack of drive', 'lack of ambition', 'lack of initiative', 'apathy', 'unmotivated', 'no desire to work',
+    'demotivated', 'low motivation', 'lack of drive', 'lack of ambition', 'lack of initiative', 'apathy', 'unmotivated', 'no desire to work',
     'loss of drive', 'lack of enthusiasm', 'indifference', 'lack of determination', 'lack of purpose', 'loss of interest', 'lack of energy',
     'procrastination', 'lack of willpower', 'lack of focus', 'lack of passion', 'feeling uninspired', 'demotivation', 'lack of commitment', 'indifferent attitude'
 ],
@@ -764,7 +764,7 @@ symptom_synonyms = {
     'dysentery', 'diarrhea with blood', 'diarrhea with mucus', 'severe intestinal distress'
 ],
 'hiccups': [
-    'hiccoughs', 'jerking', 'involuntary hiccups', 'diaphragm spasms', 'gasping', 'hiccuping',
+    'hiccoughs', 'involuntary hiccups', 'diaphragm spasms', 'hiccuping',
     'jerky breathing', 'hiccup reflex', 'repetitive hiccups'
 ],
 
@@ -776,7 +776,6 @@ symptom_synonyms = {
 'ulcers': [
     'ulcerations', 'raw spots', 'skin ulcers', 'mucosal ulcers', 'internal ulcers',
     'gastric ulcers', 'peptic ulcers', 'duodenal ulcers', 'stomach ulcers', 'mouth ulcers',
-    'oral ulcers', 'canker sores', 'pressure ulcers', 'bedsores', 'decubitus ulcers'
 ],
 
 'brittle nails': [
@@ -863,7 +862,56 @@ symptom_synonyms = {
     'visible scalp flakes', 'dead skin flakes in hair', 'flaky dandruff', 'scalp scaling', 'mild seborrheic dermatitis'
 ],
 
-'blister': ['blister','blisters','blistering']
+'blister': ['blister','blisters','blistering'],
+
+'cardiac surgery': [
+
+    # Direct procedure mentions
+    "cardiac surgery", "surgery of heart", "bypass", "stent", "heart surgery", "bypass surgery", "coronary artery bypass graft", "CABG",
+    "angioplasty done", "had valve replacement", "mitral valve surgery", "aortic valve repair",
+    "post cardiac surgery", "heart procedure", "balloon angioplasty", "stent placement in coronary artery",
+    "pacemaker inserted", "had ICD implantation", "pacemaker surgery", "ICD placed in chest", "had cardiac catheterization", "angioplasty procedure",
+    "thrombolysis done", "blood clot dissolving for heart", "went through cardiac cath",
+
+    # Symptom + event mentions
+    "chest surgery",  "tightness in chest post-operation", "pain near sternum", "sharp sternal pain"
+  
+    # Colloquial and patient-style phrases
+    "heart operated", "they opened my chest", "heart fixed", "chest was cut open", "doctor repaired my valve", "my heart had a blockage", "they put a stent",
+    "got my arteries cleaned", "my chest hurts since heart operation", "pain where heart surgery was done", "had open chest surgery",
+    "battery inserted in chest", "they put wires in my chest", "got my heart reset", "heart restarted in hospital", "shocked my heart back", "doctor placed device in chest",
+
+    # Post-operative issues
+    "fatigue after heart operation", "limited mobility post bypass", "internal chest pulling sensation",
+    "healing heart wound", "surgical site pain in chest", "heart rhythm issues post surgery", "fainting spells after heart procedure", "slow heartbeat recovery",
+
+    # Risk & lifestyle factor–linked phrases
+    "heart surgery due to high BP", "diabetes patient with bypass", "valve problem after rheumatic fever", "had thyroid issue and heart surgery",
+    "my cholesterol caused heart block", "smoked before heart surgery", "drank alcohol and then had heart event",
+     "on heart diet since procedure", "stopped salt after bypass",
+
+],
+
+
+'neurosurgery': [
+    # Procedure and technical terms
+    "brain surgery", "head surgery", "head operation", "surgery of brain", "surgery of head", "neurosurgery", "neurosurgical procedure", "craniotomy", "removal of brain tumor", "spinal cord surgery", "cervical spine decompression", "laminectomy",
+    "discectomy", "microdiscectomy", "spinal fusion", "brain aneurysm clipping", "neurosurgical intervention", "pituitary tumor resection","brain had surgery", "surgery in the brain",
+
+    # Post-surgical symptoms
+    "head hurts after brain surgery", "dizziness after neurosurgery", "memory issues post brain operation", "head pressure after surgery", "scar on scalp",
+    "spine surgery", "brain operation", "post-craniotomy fatigue", "head feels heavy after surgery",
+    "numbness after brain surgery", "loss of coordination after brain operation", "speech issues after head surgery",
+
+    # Colloquial/patient expressions
+    "they cut my head open", "brain was operated", "they removed something from my brain", "had something taken out of my spine", "neck bone surgery done",
+    "brain cleaned", "operated on the nerve", "doctor removed my brain tumor", "nerve surgery",
+    "stitches on head", "brain got operated", "back of my neck hurts from surgery", "pins in my spine", "doctor fixed my spine",
+
+    # Related complications
+    "post neurosurgical infection", "CSF leak", "spinal fluid drainage", "craniotomy healing pain", "intracranial pressure sensation",
+    "persistent nausea after brain surgery", "post-op seizure",
+],
 
 
 
@@ -1341,7 +1389,7 @@ symptom_followup_questions = {
       "symptom": "abdominal pain",
       "risk_factor": False,    },    
 {
-  "hi": "पिछले 24 घंटों में आपको कितनी बार उल्टी हुई?",
+  "hi": "पिछले चौबीस घंटों में आपको कितनी बार उल्टी हुई?",
   "en": "How many episodes of vomiting did you have in the last 24 hours?",
   "category": "vomiting",
   "symptom": "vomiting",
@@ -6035,10 +6083,136 @@ symptom_followup_questions = {
         "symptom": "Burst blisters with discharge",
         "risk_factor": False
     },
+],
 
-]
 
+  "cardiac_surgery" : [
 
+    # Diagnosis history
+    {
+        "hi": "आपको पहली बार हृदय रोग का निदान कब किया गया था?",
+        "en": "When were you first diagnosed with a heart condition?",
+        "category": "diagnosis_timing",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+    {
+        "hi": "आपको किस प्रकार का हृदय रोग बताया गया है?",
+        "en": "What type of heart disease have you been diagnosed with?",
+        "category": "diagnosis_type",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+
+    {
+        "hi": "क्या ये लक्षण चलने, सीढ़ी चढ़ने या मेहनत के बाद बढ़ जाते हैं?",
+        "en": "Do these symptoms get worse with walking, climbing stairs or exertion?",
+        "category": "symptom_worsening",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या लक्षणों की तीव्रता समय के साथ बदली है?",
+        "en": "Have the severity of your symptoms changed over time?",
+        "category": "progression",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+
+    # Past procedures
+    {
+        "hi": "क्या आपने कोई हृदय सर्जरी करवाई है जैसे बायपास, स्टेंटिंग या वाल्व रिप्लेसमेंट?",
+        "en": "Have you undergone any heart procedures like bypass, stenting, or valve replacement?",
+        "category": "procedure_history",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+    {
+        "hi": "सर्जरी कब हुई थी?",
+        "en": "When was the surgery done?",
+        "category": "procedure_details",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+
+    # Risk factors
+    {
+        "hi": "क्या आपको उच्च रक्तचाप, मधुमेह, या कोलेस्ट्रॉल की समस्या है?",
+        "en": "Do you have hypertension, diabetes, or high cholesterol (dyslipidemia)?",
+        "category": "risk_factors",
+        "symptom": "cardiac_surgery",
+        "risk_factor": True
+    },
+    {
+        "hi": "क्या आपके परिवार में किसी को दिल की बीमारी रही है?",
+        "en": "Does anyone in your family have a history of heart disease?",
+        "category": "family_history",
+        "symptom": "cardiac_surgery",
+        "risk_factor": True
+    }
+],
+
+"neurosurgery" : [
+
+    # Previous Neurological Events
+    {
+        "hi": "क्या आपको कभी स्ट्रोक हुआ है?",
+        "en": "Any history of stroke or TIA (transient ischemic attack)?",
+        "category": "stroke_history",
+        "symptom": "neurosurgery",
+        "risk_factor": True
+    },
+    {
+        "hi": "क्या आपके मस्तिष्क या रीढ़ की कभी सर्जरी हुई है?",
+        "en": "Have you ever had brain or spinal surgery?",
+        "category": "past_neurosurgery",
+        "symptom": "neurosurgery",
+        "risk_factor": False
+    },
+
+    # Medication and Drug Use
+    {
+        "hi": "क्या आप नशे की दवाओं, शराब, या मानसिक रोगों की दवाओं का सेवन करते हैं?",
+        "en": "Any history of sedatives, alcohol, or psychiatric drug use?",
+        "category": "drug_use_history",
+        "symptom": "neurosurgery",
+        "risk_factor": True
+    },
+
+    # Vaccination History
+    {
+        "hi": "क्या आपको हाल ही में कोई टीका लगाया गया है?",
+        "en": "Have you had any recent vaccination?",
+        "category": "recent_vaccination",
+        "symptom": "neurosurgery",
+        "risk_factor": True
+    },
+
+    # Treatment and Procedures
+    {
+        "hi": "क्या आपके सिर या मस्तिष्क की कोई सर्जरी हुई है?",
+        "en": "Have you undergone any procedures on the head or brain?",
+        "category": "surgical_history",
+        "symptom": "neurosurgery",
+        "risk_factor": False
+    },
+
+    # Psychiatric History
+    {
+        "hi": "क्या आपको डिप्रेशन, एंग्जायटी या मानसिक रोग रहा है?",
+        "en": "Any history of depression, anxiety, or psychiatric illness?",
+        "category": "psychiatric_history",
+        "symptom": "neurosurgery",
+        "risk_factor": True
+    },
+    {
+        "hi": "क्या आपने कभी मानसिक रोग की दवा ली है?",
+        "en": "Have you ever taken psychiatric medications?",
+        "category": "psychiatric_medication",
+        "symptom": "neurosurgery",
+        "risk_factor": True
+    }
+],
 
 
 }
@@ -6238,8 +6412,8 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
         'numbness': ['numb', 'numbness', 'no sensation'],
-	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
-	'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt']
+	      'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
+	      'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt'],
 	
     },
 'back': {
@@ -6256,7 +6430,7 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'sore', 'painful', 'paining', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'aches', 'burning', 'burn', 'soreness'],
 	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling', 'tight'],
-        'breathing': ['shortness of breath', 'difficulty breathing', 'breathing problem', 'tight chest', 'can’t breathe', 'labored breathing', 'breathless'],
+        'breathing': [ 'difficulty breathing', 'breathing', 'tightness', 'can’t breathe', 'breathless'],
         'palpitations': ['palpitations', 'heart racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat'],
 	'itching': ['itch', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
@@ -6406,9 +6580,11 @@ trigger_keywords = {
  
 'heart': {
         'pain': ['pain', 'pains', 'paining','painful', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
-        'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted', 'shortness of breath with effort'],
+        'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted'],
          'burn': ['burn', 'burning', 'burns', 'burnt'],
-        'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat', 'pounding','faster', 'fast']
+        'palpitation': ['flutter', 'palpitations', 'racing', 'fast heartbeat', 'skipped beat', 'pounding','faster', 'fast'],
+        'surgery' : ['surgery', 'bypass', 'stent', 'angioplasty', 'valve replacement','operation'],
+        'attack': ['attack', 'infarction', 'angina', 'arrest'],
  },
 
 'urinary': {
@@ -6444,9 +6620,9 @@ trigger_keywords = {
     },
 'forehead': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
-        'injury': ['forehead injury', 'hit forehead', 'forehead bruise'],
-        'tingling': ['forehead tingling', 'numb forehead', 'tingly sensation forehead']
+        'swelling': ['swelling', 'swollen', 'swellbs', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'injury': ['njury', 'hit', 'bruise'],
+        'tingling': ['tingling', 'numb', 'tingly']
     },
 'tongue': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
@@ -8832,6 +9008,54 @@ body_part_followup_questions = {
              'en': "Do you feel your heartbeat is fast or irregular?",
              'category': 'heart_palpitations'}
         ],
+        'surgery' :[
+            
+    # Diagnosis history
+    {
+        "hi": "आपको पहली बार हृदय रोग का निदान कब किया गया था?",
+        "en": "When were you first diagnosed with a heart condition?",
+        "category": "diagnosis_timing",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+    {
+        "hi": "आपको किस प्रकार का हृदय रोग बताया गया है?",
+        "en": "What type of heart disease have you been diagnosed with?",
+        "category": "diagnosis_type",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+
+    # Past procedures
+    {
+        "hi": "क्या आपने कोई हृदय सर्जरी करवाई है जैसे बायपास, स्टेंटिंग या वाल्व रिप्लेसमेंट?",
+        "en": "Have you undergone any heart procedures like bypass, stenting, or valve replacement?",
+        "category": "procedure_history",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+    {
+        "hi": "सर्जरी कब हुई थी?",
+        "en": "When was the surgery done?",
+        "category": "procedure_details",
+        "symptom": "cardiac_surgery",
+        "risk_factor": False
+    },
+],
+'attack':[
+     {
+        'hi': "आपको दिल का दौरा आए हुए कितना समय हो गया है?",
+        'en': "How long ago did you have your heart attack?",
+        'category': 'heart_attack_timeline'
+    },
+    {
+        'hi': "दिल का दौरा पड़ने से पहले क्या हुआ था? क्या आप किसी गतिविधि में थे या कोई लक्षण महसूस हो रहे थे?",
+        'en': "What happened before the heart attack? Were you doing any activity or feeling any symptoms?",
+        'category': 'pre_attack_events'
+    }
+
+],
+
         'default': [
             {'hi': "कृपया अपने दिल से जुड़ी समस्या के बारे में और बताएं।",
              'en': "Please tell me more about your heart-related issue.",
@@ -10634,6 +10858,8 @@ BP_CANON = {
     'leg':'leg',
    'shoulders':'shoulder',
    'knees':'knee',
+   'brain' : 'head',
+   'cardiac': 'heart',
    'lips':'lip',
    'hands':'hand',
    'wrists':'wrist',
@@ -11068,6 +11294,7 @@ symptom_to_specialist = {
   'heart weakness': 'Cardiologist',
   'heart burn': 'Cardiologist',
   'heart palpitation': 'Cardiologist',
+  'heart surgery': 'Cardiologist',
 
   'urinary pain': 'Urologist',
   'urinary frequency': 'Urologist',
@@ -11610,6 +11837,7 @@ HINDI_OFFLINE_DICT = {
   "heart weakness": "हृदय में कमजोरी",
   "heart burn": "सीने में जलन",
   "heart palpitation": "हृदय की धड़कन तेज होना",
+  "heart surgery": "ह्रदय शल्य चिकित्सा",
 
   "urinary pain": "मूत्र मार्ग में दर्द",
   "urinary frequency": "बार-बार पेशाब आना",
