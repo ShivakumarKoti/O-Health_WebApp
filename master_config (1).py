@@ -2512,7 +2512,20 @@ symptom_followup_questions = {
 
 
   "rash": [
+   
     {
+      "hi": "क्या चकत्ते के साथ खुजली या जलन भी हो रही है?",
+      "en": "Are you experiencing itching or burning sensations along with the rash?",
+      "category": "itching_burning_with_skin_rash",
+      "symptom": "itching",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या चकत्ते समय के साथ फैल रहे हैं या स्थिर हैं?",
+      "en": "Are the rashes spreading over time or are they static?",
+      "category": "spreading_vs_static_skin_rash",
+      "symptom": None,
+      "risk_factor": False,    },
+     {
       "hi": "क्या आपके शरीर पर कोई दाने या चकत्ते हैं?",
       "en": "Do you have any bumps or spots on your skin?",
       "category": "bumps_spots_with_skin_rash",
@@ -2525,31 +2538,19 @@ symptom_followup_questions = {
       "symptom": "redness",
       "risk_factor": False,    },
     {
-      "hi": "क्या रैश किसी विशेष स्थान पर ज्यादा हैं?",
+      "hi": "क्या चकत्ते किसी विशेष स्थान पर ज्यादा हैं?",
       "en": "Are the rashes more concentrated in any specific area?",
       "category": "localized_skin_rash",
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या रैश के साथ खुजली या जलन भी हो रही है?",
-      "en": "Are you experiencing itching or burning sensations along with the rash?",
-      "category": "itching_burning_with_skin_rash",
-      "symptom": "itching",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या रैश समय के साथ फैल रहे हैं या स्थिर हैं?",
-      "en": "Are the rashes spreading over time or are they static?",
-      "category": "spreading_vs_static_skin_rash",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके रैश के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?",
+      "hi": "क्या आपके चकत्ते के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?",
       "en": "Are there any changes in your skin due to the rash?",
       "category": "skin_changes_with_skin_rash",
       "symptom": "skin discoloration",
       "risk_factor": False,    },
     {
-      "hi": "क्या रैश अचानक शुरू हुए हैं या धीरे-धीरे?",
+      "hi": "क्या चकत्ते अचानक शुरू हुए हैं या धीरे-धीरे?",
       "en": "Did your rashes start suddenly or gradually?",
       "category": "sudden_graduate_skin_rash",
       "symptom": None,
