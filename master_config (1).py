@@ -1952,25 +1952,26 @@ symptom_followup_questions = {
 
   "bloating": [
     {
-      "hi": "क्या सूजन के साथ पेट में दर्द भी हो रहा है?",
+      "hi": "क्या फुलाव के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with bloating?",
       "category": "abdominal_pain_with_bloating",
       "symptom": "abdominal pain",
       "risk_factor": False,    },
     {
-      "hi": "क्या सूजन के कारण आपको सांस लेने में कठिनाई हो रही है?",
-      "en": "Is bloating causing difficulty in breathing?",
-      "category": "breathing_difficulty_with_bloating",
-      "symptom": "shortness of breath",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको सूजन के साथ मतली या उल्टी हो रही है?",
+      "hi": "क्या आपको फुलाव के साथ मतली या उल्टी हो रही है?",
       "en": "Are you experiencing nausea or vomiting along with bloating?",
       "category": "nausea_vomiting_with_bloating",
       "symptom": "nausea",
       "risk_factor": False,    },
     {
-      "hi": "क्या सूजन के कारण आपको थकान महसूस हो रही है?",
+      "hi": "क्या फुलाव के कारण आपको सांस लेने में कठिनाई हो रही है?",
+      "en": "Is bloating causing difficulty in breathing?",
+      "category": "breathing_difficulty_with_bloating",
+      "symptom": "shortness of breath",
+      "risk_factor": False,    },
+    
+    {
+      "hi": "क्या फुलाव के कारण आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued due to bloating?",
       "category": "fatigue_with_bloating",
       "symptom": "fatigue",
@@ -2013,31 +2014,31 @@ symptom_followup_questions = {
 
   "indigestion": [
     {
-      "hi": "क्या आपको गैस या सूजन महसूस हो रही है?",
+      "hi": "क्या आपको गैस या फुलाव महसूस हो रही है?",
       "en": "Are you feeling gas or bloating?",
       "category": "gas_bloating_with_indigestion",
       "symptom": "gas",
       "risk_factor": False,    },
     {
-      "hi": "क्या indigestion के साथ आपको उल्टी या दस्त भी हो रहे हैं?",
+      "hi": "क्या अपच के साथ आपको उल्टी या दस्त भी हो रहे हैं?",
       "en": "Are you also experiencing vomiting or diarrhea along with indigestion?",
       "category": "vomiting_diarrhea_with_indigestion",
       "symptom": "vomiting",
       "risk_factor": False,    },
     {
-      "hi": "क्या indigestion के कारण आपको भोजन निगलने में कठिनाई हो रही है?",
+      "hi": "क्या अपच के कारण आपको भोजन निगलने में कठिनाई हो रही है?",
       "en": "Is indigestion causing difficulty in swallowing your food?",
       "category": "swallowing_difficulty_with_indigestion",
       "symptom": "difficulty swallowing",
       "risk_factor": False,    },
     {
-      "hi": "क्या indigestion के साथ आपको पेट में भारीपन महसूस हो रहा है?",
+      "hi": "क्या अपच के साथ आपको पेट में भारीपन महसूस हो रहा है?",
       "en": "Are you feeling a heaviness in your abdomen along with indigestion?",
       "category": "heaviness_with_indigestion",
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या indigestion के कारण आपकी नींद प्रभावित हो रही है?",
+      "hi": "क्या अपच के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is indigestion affecting your sleep?",
       "category": "sleep_disturbance_with_indigestion",
       "symptom": "insomnia",
@@ -4927,7 +4928,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको पेट में किसी प्रकार की सूजन या भरा हुआ महसूस हो रहा है?",
+      "hi": "क्या आपको पेट में किसी प्रकार की फुलाव या भरा हुआ महसूस हो रहा है?",
       "en": "Do you feel any bloating or fullness in your stomach?",
       "category": "ulcers",
       "symptom": "bloating",
@@ -7998,17 +7999,17 @@ body_part_followup_questions = {
         ],
     'bloating': [
         {
-            'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
+            'hi': "क्या पेट में फुलाव के साथ गैस या डकार भी होती है?",
             'en': "Do you experience gas or belching along with the bloating?",
             'category': 'stomach_bloating_gas'
         },
         {
-            'hi': "क्या सूजन भोजन करने के तुरंत बाद होती है?",
+            'hi': "क्या फुलाव भोजन करने के तुरंत बाद होती है?",
             'en': "Does the bloating occur immediately after eating?",
             'category': 'stomach_bloating_trigger_food'
         },
         {
-            'hi': "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
+            'hi': "क्या फुलाव के कारण पेट भारी या कड़ा लगता है?",
             'en': "Does your stomach feel heavy or tight due to bloating?",
             'category': 'stomach_bloating_heaviness'
         }
