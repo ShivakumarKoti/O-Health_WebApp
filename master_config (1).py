@@ -567,7 +567,7 @@ symptom_synonyms = {
 ],
 
 'nervousness': [
-    'nervous tension', 'nervous energy', 'uneasiness', 'nervous feeling', 'worry', 'uneasy feeling', 'jitters', 'nervous anticipation', 'fearfulness', 'shakiness', 'edginess',
+    'nervous tension', 'nervous energy', 'uneasiness', 'nervous feeling', 'uneasy feeling', 'jitters', 'nervous anticipation', 'fearfulness', 'shakiness', 'edginess',
     'fidgeting', 'mental unease', 'trepidation', 'feeling on edge', 'worrying', 'nervous butterflies', 'nervous'
 ],
 
@@ -3754,28 +3754,28 @@ symptom_followup_questions = {
 ],
   "nervousness": [
     {
-      "hi": "आप सामान्यतः कब नर्वस या चिंतित महसूस करते हैं?",
+      "hi": "आप सामान्यतः कब घबराहट या चिंतित महसूस करते हैं?",
       "en": "When do you typically feel nervous or anxious?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको नर्वस महसूस कराती है?",
+      "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको घबराहट महसूस कराती है?",
       "en": "Are there specific situations or triggers that make you feel nervous?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "यह नर्वसनेस की भावना आमतौर पर कितनी देर तक रहती है?",
+      "hi": "यह घबराहट की भावना आमतौर पर कितनी देर तक रहती है?",
       "en": "How long do these feelings of nervousness usually last?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको अपनी नर्वसनेस को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
+      "hi": "क्या आपको अपनी घबराहट को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
       "en": "Do you find it difficult to control or manage your nervousness?",
       "category": "nervousness",
       "symptom": None,
