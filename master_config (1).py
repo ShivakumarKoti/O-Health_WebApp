@@ -1,3 +1,5 @@
+#-- coding: utf-8 --
+
 # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
 # ------------------------------------------------------------------ #
@@ -12,12 +14,12 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
-'sleepy','fatigue', 'fracture',
+'sleepy','fatigue', 'fracture','stress',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy', 'pediatric symptoms', 'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
+'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', '',
-#  'arthritis', 'sugar'
+#  'arthritis', 'sugar', 'pediatric symptoms',
 ]
 
 # ------------------------------------------------------------------ #
@@ -169,7 +171,7 @@ symptom_synonyms = {
         'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', "can’t sleep", 'sleep not coming',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
-        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep'
+        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept'
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
@@ -198,14 +200,6 @@ symptom_synonyms = {
         'sneezes', 'repetitive sneezes', 'unstoppable nasal explosions', 'sneeze', 'chain-sneezing', 'nasal expulsions', 'unable to control sneeze',
         'nasal reflex outbursts', 'convulsive sneezing', 'rapid-fire sneezes', 'machine-gun sneezing', 'surprise sneezes', 'sneezy',
         'tickling in nose triggering sneezes', 'uncontrollable nasal reflex', 'sneeze bursts', 'nasal reflex reactions'
-    ],
-    'swollen lymph nodes': [
-        'swollen glands', 'lymph node swelling', 'enlarged lymph nodes', 'swelling in neck', 'lumps in neck', 'tender lymph nodes', 'painful lymph nodes', 'swelling near jaw',
-        'lymphatic swelling', 'lymph node enlargement', 'swollen glands under arms', 'underarm lymph node swelling', 'swollen neck glands', 'increased lymph node size',
-        'lymphatic system swelling', 'lumps under the skin', 'swollen lymphatic glands', 'painful lumps in neck', 'inflamed lymph nodes', 'lymph node tenderness', 'neck swelling',
-        'uncomfortable lumps in neck', 'tender neck lumps', 'swollen lymph glands in groin', 'swollen lymph nodes in armpit', 'painful swelling in neck', 'inflamed glands',
-        'lymph node tenderness under jaw', 'enlarged glands in the throat', 'neck lumps', 'tender swollen glands', 'neck lymphatic swelling',
-        'inflamed and tender lymph nodes', 'lymphatic swelling with pain'
     ],
   
    'diarrhea': [
@@ -254,6 +248,8 @@ symptom_synonyms = {
         'cold-induced shaking', 'numbing cold', 'shiver', 'shivers'
     ],
 
+    'stress' : ['stressed','stress','stressing on','stressing over','stressful','stressful situation','stressful time','stressful period',],
+
     'confusion': [
         'disorientation', 'muddled thinking', 'mental fog', 'trouble thinking clearly', 'brain fog', 'cognitive cloudiness', 'puzzled state', 'jumbled thoughts', 'incoherent reasoning', 'tangled mental process',
         'unclear comprehension', 'befuddled mind', 'scrambled logic', 'perplexed state', 'hazy understanding', 'blurred mental picture', 'fuzzy reasoning', 'perplexity', 'baffled intellect',
@@ -276,10 +272,10 @@ symptom_synonyms = {
         'memory wires disconnected', 'stuttering recollection attempts', 'defragmented mental records', 'shaky mental camera', 'fading mental impressions', 'mind like a sieve', 'losing info instantly',
         'rattled mental library', 'concept slip-through', 'flickering data in mind', 'barren mental shelves', 'no retrieval of recent facts', 'thinking it’s on the tip of my tongue but never surfacing',
         'losing track of recent conversations', 'difficulty holding new info', 'memory short-circuits frequently', 'mental vacancy', 'ephemeral recollections', 'passing mental clouds with no retention',
-        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything'
+        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot'
     ],
   'hallucination': [
-    'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions',
+    'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions','hallucinate','hallucination','hearing voices',
     'perceptual distortion', 'false sensory experience', 'phantom perception', 'psychotic episode', 'imagined sight', 'imagined sound', 'mind illusion',
     'sensory misperception', 'hallucinatory experience', 'out-of-body experience', 'visual illusion', 'auditory illusion', 'mental delusion', 'altered reality'
 ],
@@ -333,7 +329,7 @@ symptom_synonyms = {
 ],
 
 'anxiety': [
-    'unease', 'stress', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry',
+    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry',
     'anticipatory anxiety', 'anxiety attack', 'apprehensive feeling', 'distress', 'emotional unease', 'worrying', 'overthinking', 'mental tension'
 ],
 
@@ -493,7 +489,23 @@ symptom_synonyms = {
     'pressure high and causing symptoms', 'BP above baseline', 'blood pressure higher than expected', 'feeling symptoms from high BP',
     'high systolic and diastolic pressure', 'blood pressure rising suddenly', 'pressure spiking', 'pressure going dangerously high',
     'feeling flushed because of high blood pressure', 'high BP causing dizziness',
-    'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high'
+    'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high', 'BP', 'IBP', 'I.B.P', 'B. S P',
+    "high bp", "hi bp", "high b p", "hi b p", "high b.p", "hi b.p", "high b. p.", "hi b. p.", "ibp", "i.b.p", "i b p", "i b.p", "ib.p", "i. b. p", "i. b p", 
+     "eye bp", "eye b p", "eye bee pee", "b.p", "b p", "bp.", "b. p", "b. p.", "b.p.", "b s p", "b sp", "bs p", "bs.p", "high p", "hi p", "high pee", "hi pee", 
+     "hai bp", "hai b p", "hbp", "hb.p", "my bp is high", "bp is high", "high blood p", "high blood pressure", "bp high", "i have high bp",
+     "ibp", "i.b.p", "i b p", "i b.p", "ib.p", "i. b. p", "i. b p", "i b. p", "i.b p", "i bp", "i-b-p", "i. b.p", "i.b. p", "ib p", "i bp.", "i. bp", "ib. p", 
+     "i.b.p.", "i-bp", "i-b. p", "i. b-p", "eye bp", "eye b p", "eye bee pee", "eye bee pee.", "eye.b.p", "eye.b.p.", "i bee pee", "i bee p", "i be pee", "i. bee. pee", 
+     "i.beepee", "i bee-pee", "i.bee pee", "ibeepee", "i beepee", "bp", "b.p", "b p", "bp.", "b. p", "b. p.", "b.p.", "b-p", "b . p", "b. p.", "b .p", "b.p .", "b.p .", 
+      "b . p.", "bsp", "b sp", "bs p", "bs.p", "b s p", "b.s.p", "b-s-p", "b s.p", "b.s p", "b s. p", "bee pee", "bee. pee", "b e p", "bee p", "b e pee", "b-pee", "b pee", 
+      "bpee", "beepee", "high vp", "hi vp", "high v.p", "hi v.p", "high v p", "hi v p", "high vip", "hi vip", "high v.i.p", "hi v.i.p", "high dp", "hi dp", "high d.p", "hi d.p", 
+      "high pp", "hi pp", "high p.p", "hi p.p", "high beep", "hi beep", "high be p", "hi be p", "high bpe", "hi bpe", "high bpe.", "hi bpe.", "high b ep", "hi b ep", "high bpe", 
+      "hi bpe", "high bp e", "hi bp e", "high bpee", "hi bpee", "high bpeee", "hi bpeee", "high bp high", "hi bp high", "high bp hi", "hi bp hi", "high b p high", "hi b p high", 
+      "high bp is high", "hi bp is high", "high b.p is high", "hi b.p is high", "high bp is hi", "hi bp is hi", "high bp is h", "hi bp is h", "high bp h", "hi bp h", "high b h", 
+	"hi b h", "high p high", "hi p high", "high p hi", "hi p hi", "high p h", "hi p h", "high pee high", "hi pee high", "high pee hi", "hi pee hi", "high pee h", "hi pee h", 
+	"high b h p", "hi b h p", "high b h.p", "hi b h.p", "high b h p", "hi b h p", "high b h. p", "hi b h. p", "high b h. p.", "hi b h. p.", "high b h p.", "hi b h p.", 
+	"high b p h", "hi b p h", "high b p. h", "hi b p. h", "high b p. h.", "hi b p. h.", "high b p h.", "hi b p h.", "high b p hi", "hi b p hi", "high b p. hi", "hi b p. hi", 
+	"high b p. hi.", "hi b p. hi.", "high b p hi.", "hi b p hi.", "high b p high", "hi b p high", "high b p. high", "hi b p. high", "high b p. high.", "hi b p. high.", 
+	"high b p high", "hi b p high"
 ],
 
 'low blood pressure': [
@@ -515,7 +527,22 @@ symptom_synonyms = {
     'pressure low and causing symptoms', 'BP below baseline', 'blood pressure lower than expected', 'feeling symptoms from low BP',
     'low systolic and diastolic pressure', 'blood pressure falling suddenly', 'pressure bottoming out', 'pressure going dangerously low',
     'low pressure causing fainting', 'feeling faint because of low blood pressure', 'low BP causing lightheadedness',
-    'BP lower than it should be', 'BP lower than normal range', 'heart pressure below normal', 'arterial pressure low'
+    'BP lower than it should be', 'BP lower than normal range', 'heart pressure below normal', 'arterial pressure low',
+    "low bp", "lo bp", "low b p", "lo b p", "low b.p", "lo b.p", "low b. p.", "lo b. p.", 
+    "lbp", "l.b.p", "l b p", "l b.p", "lb.p", "l. b. p", "l. b p", "l b. p", "l.b p", "l bp", "l-b-p", 
+    "l. b.p", "l.b. p", "lb p", "l bp.", "l. bp", "lb. p", "l.b.p.", "l-bp", "l-b. p", "l. b-p",
+    "low b p.", "low. bp", "lo bp.", "low. b. p.", "lo. b. p.",
+    "low b p", "lo b p", "low b.p", "lo b.p", "low b. p", "low b.p.", "low b. p.", "lo b.p.",
+    "eye bp low", "eye b p low", "eye bee pee low", "low eye bp", "low eye b p", 
+    "low bee pee", "low bee. pee", "low bee p", "low beepee", "low bee-pee", "low. bee. pee",
+    "low b s p", "low b sp", "low bs p", "low bs.p", "low b.s.p", "low b-s-p", 
+    "low b s.p", "low b.s p", "low b s. p", "lo b s p", "lo b sp", "lo bs p", "lo bs.p",
+    "b.p low", "bp low", "bp. low", "b p low", "b.p. low", "b. p low", "b s p low", "bs p low", 
+    "low b", "lo b", "lo bp", "l b", "l.p", "l. p", "l. p.", "l.p.",
+    "low blood pressure", "bp is low", "my bp is low", "i have low bp", "low blood p", 
+    "low pressure", "blood pressure low", "bp gone low", "bp dropped", "bp fell", 
+    "bp falling", "bp fallen"
+
 ],
 
 'excessive thirst': [
@@ -567,7 +594,7 @@ symptom_synonyms = {
 ],
 
 'nervousness': [
-    'nervous tension', 'nervous energy', 'uneasiness', 'nervous feeling', 'uneasy feeling', 'jitters', 'nervous anticipation', 'fearfulness', 'shakiness', 'edginess',
+    'nervous tension', 'nervous energy', 'uneasiness', 'nervous feeling', 'worry', 'uneasy feeling', 'jitters', 'nervous anticipation', 'fearfulness', 'shakiness', 'edginess',
     'fidgeting', 'mental unease', 'trepidation', 'feeling on edge', 'worrying', 'nervous butterflies', 'nervous'
 ],
 
@@ -696,7 +723,7 @@ symptom_synonyms = {
 ],
 
 'itching': [
-'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itching', 'itchy', 'itch', 'itches',
+'skin itching', 'pruritus', 'itchy sensation', 'skin irritation','itchy rash','itching', 'itchy',
 'burning itch', 'itching with redness', 'itching from dryness', 'irritated skin itch', 'tickling skin sensation',
 'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters', 'itchiness'
 ],
@@ -1045,6 +1072,45 @@ symptom_followup_questions = {
       "risk_factor": False,    },
 
   ],
+
+
+"stress": [
+  {
+    "hi": "आपके लिए सबसे बड़ा तनाव का कारण क्या है?",
+    "en": "What is the biggest cause of stress for you?",
+    "category": "primary_stressor",
+    "symptom": "stress_trigger",
+    "risk_factor": True
+  },
+  {
+    "hi": "तनाव बढ़ने पर शरीर में कौन से लक्षण आते हैं?",
+    "en": "What physical symptoms do you experience when stress increases?",
+    "category": "physical_symptoms_stress",
+    "symptom": "stress_symptoms",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या तनाव ने आपकी नींद या भूख पर असर डाला है?",
+    "en": "Has stress affected your sleep or appetite?",
+    "category": "sleep_appetite_impact",
+    "symptom": "insomnia_or_loss_appetite",
+    "risk_factor": False
+  },
+  {
+    "hi": "तनाव कम करने के लिए आप कौन से तरीके इस्तेमाल करते हैं?",
+    "en": "What methods do you use to reduce stress?",
+    "category": "stress_management_methods",
+    "symptom": "coping_mechanism",
+    "risk_factor": False
+  },
+  {
+    "hi": "परिवार या दोस्तों से कितनी सहायता मिलती है?",
+    "en": "How much support do you get from family or friends?",
+    "category": "social_support",
+    "symptom": "support_system",
+    "risk_factor": False
+  }
+],
 
  "congestion": [
   {
@@ -1488,13 +1554,15 @@ symptom_followup_questions = {
       "en": "Have you lost interest in your usual activities?",
       "category": "loss_of_interest",
       "symptom": None,
-      "risk_factor": False,    },    
-    {
-      "hi": "क्या आपको खुद को नीचा महसूस होता है?",
-      "en": "Do you feel worthless?",
-      "category": "worthlessness",
-      "symptom": None,
-      "risk_factor": False,    },
+      "risk_factor": False,    },   
+
+{
+    "hi": "क्या आपको खाने की इच्छा या वजन में कोई बदलाव महसूस हुआ है?",
+    "en": "Have you experienced any changes in appetite or weight?",
+    "category": "appetite_weight_change",
+    "symptom": None,
+    "risk_factor": False,
+},
 
 {
       "hi": "क्या आपको उदासी या निराशा महसूस हो रही है?",
@@ -1509,18 +1577,6 @@ symptom_followup_questions = {
       "symptom": "insomnia",
       "risk_factor": False,    },
 
-    {
-      "hi": "क्या आपको निर्णय लेने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty making decisions?",
-      "category": "decision_difficulty",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको खुद को चोट पहुँचाने का विचार आता है?",
-      "en": "Are you having thoughts of harming yourself?",
-      "category": "self_harm_thoughts",
-      "symptom": None,
-      "risk_factor": False,    },
     {
       "hi": "क्या आपको ऊर्जा की कमी महसूस हो रही है?",
       "en": "Are you feeling a lack of energy?",
@@ -1950,7 +2006,7 @@ symptom_followup_questions = {
 
   
 
-  "bloating": [
+   "bloating": [
     {
       "hi": "क्या फुलाव के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with bloating?",
@@ -2012,7 +2068,7 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "indigestion": [
+ "indigestion": [
     {
       "hi": "क्या आपको गैस या फुलाव महसूस हो रही है?",
       "en": "Are you feeling gas or bloating?",
@@ -2044,6 +2100,7 @@ symptom_followup_questions = {
       "symptom": "insomnia",
       "risk_factor": False,    },
   ],
+
 
   "mouth sore": [
     {
@@ -2513,20 +2570,7 @@ symptom_followup_questions = {
 
 
   "rash": [
-   
     {
-      "hi": "क्या चकत्ते के साथ खुजली या जलन भी हो रही है?",
-      "en": "Are you experiencing itching or burning sensations along with the rash?",
-      "category": "itching_burning_with_skin_rash",
-      "symptom": "itching",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या चकत्ते समय के साथ फैल रहे हैं या स्थिर हैं?",
-      "en": "Are the rashes spreading over time or are they static?",
-      "category": "spreading_vs_static_skin_rash",
-      "symptom": None,
-      "risk_factor": False,    },
-     {
       "hi": "क्या आपके शरीर पर कोई दाने या चकत्ते हैं?",
       "en": "Do you have any bumps or spots on your skin?",
       "category": "bumps_spots_with_skin_rash",
@@ -2539,19 +2583,31 @@ symptom_followup_questions = {
       "symptom": "redness",
       "risk_factor": False,    },
     {
-      "hi": "क्या चकत्ते किसी विशेष स्थान पर ज्यादा हैं?",
+      "hi": "क्या रैश किसी विशेष स्थान पर ज्यादा हैं?",
       "en": "Are the rashes more concentrated in any specific area?",
       "category": "localized_skin_rash",
       "symptom": None,
       "risk_factor": False,    },
     {
-      "hi": "क्या आपके चकत्ते के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?",
+      "hi": "क्या रैश के साथ खुजली या जलन भी हो रही है?",
+      "en": "Are you experiencing itching or burning sensations along with the rash?",
+      "category": "itching_burning_with_skin_rash",
+      "symptom": "itching",
+      "risk_factor": False,    },
+    {
+      "hi": "क्या रैश समय के साथ फैल रहे हैं या स्थिर हैं?",
+      "en": "Are the rashes spreading over time or are they static?",
+      "category": "spreading_vs_static_skin_rash",
+      "symptom": None,
+      "risk_factor": False,    },
+    {
+      "hi": "क्या आपके रैश के कारण आपकी त्वचा में कोई परिवर्तन हो रहा है?",
       "en": "Are there any changes in your skin due to the rash?",
       "category": "skin_changes_with_skin_rash",
       "symptom": "skin discoloration",
       "risk_factor": False,    },
     {
-      "hi": "क्या चकत्ते अचानक शुरू हुए हैं या धीरे-धीरे?",
+      "hi": "क्या रैश अचानक शुरू हुए हैं या धीरे-धीरे?",
       "en": "Did your rashes start suddenly or gradually?",
       "category": "sudden_graduate_skin_rash",
       "symptom": None,
@@ -3482,12 +3538,13 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आप अपनी चिंता का कारण कुछ विशेष परिस्थितियों से बचते हैं?",
-      "en": "Do you avoid certain situations because of your anxiety?",
-      "category": "anxiety",
-      "symptom": "anxiety",
+      "hi": "घबराहट के समय शरीर में कौन से लक्षण सबसे पहले दिखते हैं?",
+      "en": "What physical symptoms do you notice first when you feel anxious?",
+      "category": "anxiety_symptoms",
+      "symptom": None,
       "risk_factor": False,
-    },
+},
+
     {
       "hi": "आप अपनी चिंता से निपटने या उसे प्रबंधित करने के लिए क्या उपाय करते हैं?",
       "en": "How do you cope with or manage your anxiety?",
@@ -3755,28 +3812,28 @@ symptom_followup_questions = {
 ],
   "nervousness": [
     {
-      "hi": "आप सामान्यतः कब घबराहट या चिंतित महसूस करते हैं?",
+      "hi": "आप सामान्यतः कब नर्वस या चिंतित महसूस करते हैं?",
       "en": "When do you typically feel nervous or anxious?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको घबराहट महसूस कराती है?",
+      "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको नर्वस महसूस कराती है?",
       "en": "Are there specific situations or triggers that make you feel nervous?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "यह घबराहट की भावना आमतौर पर कितनी देर तक रहती है?",
+      "hi": "यह नर्वसनेस की भावना आमतौर पर कितनी देर तक रहती है?",
       "en": "How long do these feelings of nervousness usually last?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको अपनी घबराहट को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
+      "hi": "क्या आपको अपनी नर्वसनेस को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
       "en": "Do you find it difficult to control or manage your nervousness?",
       "category": "nervousness",
       "symptom": None,
@@ -6691,7 +6748,7 @@ trigger_keywords = {
         'spasm': ['spasm', 'cramp', 'tightness', 'twitching'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
         'weakness': ['weakness', 'weak', 'fatigued', 'loss of strength', 'unable to stand', 'unstable'],
-        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'broke', 'broken', 'fall', injured']
+        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'broke', 'broken', 'fall', 'injured']
     },
 'face': {
         'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'throbbing', 'pains', 'paining'],
@@ -7999,16 +8056,19 @@ body_part_followup_questions = {
         ],
     'bloating': [
         {
+            'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
             'hi': "क्या पेट में फुलाव के साथ गैस या डकार भी होती है?",
             'en': "Do you experience gas or belching along with the bloating?",
             'category': 'stomach_bloating_gas'
         },
         {
+            'hi': "क्या सूजन भोजन करने के तुरंत बाद होती है?",
             'hi': "क्या फुलाव भोजन करने के तुरंत बाद होती है?",
             'en': "Does the bloating occur immediately after eating?",
             'category': 'stomach_bloating_trigger_food'
         },
         {
+            'hi': "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
             'hi': "क्या फुलाव के कारण पेट भारी या कड़ा लगता है?",
             'en': "Does your stomach feel heavy or tight due to bloating?",
             'category': 'stomach_bloating_heaviness'
@@ -11166,7 +11226,7 @@ symptom_to_specialist = {
   'head pressure': 'Neurologist',
   'head numbness': 'Neurologist',
   'head itching': 'Dermatologist',
-  'head pain': 'Neurologist',
+  'head pain': 'General Practitioner',
 
   'back pain': 'Orthopedic Specialist',
   'back weakness': 'Neurologist',
@@ -11324,9 +11384,9 @@ symptom_to_specialist = {
   'thigh numbness': 'Orthopedic Specialist',
   'thigh itching': 'Dermatologist',
 
-  'forehead pain': 'Neurologist',
+  'forehead pain': 'General Practitioner',
   'forehead swelling': 'General Physician',
-  'forehead injury': 'Neurologist',
+  'forehead injury': 'General Practitioner',
   'forehead tingling': 'Neurologist',
 
   'tongue pain': 'Dentist',
@@ -11491,6 +11551,7 @@ HINDI_OFFLINE_DICT = {
             "cold": "जुकाम",
             "runny nose": "बहती नाक",
             "sneezing": "छींकना",
+            "stress": "तनाव",
             "rash": "दाने",
             "back spasm": "पीठ में ऐंठन",
             "dizziness": "चक्कर आना",
