@@ -28,7 +28,7 @@ symptom_list = [
 symptom_synonyms = {
     'headache': [
         'throbbing headache', 'pounding head', 'cranial ache', 'head pounding',
-        'hammering pain in skull', 'aching brain', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
+        'hammering pain in skull', 'aching brain', 'full-head ache', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
         'relentless cranial pounding', 'forehead-tightening discomfort', 'vice-like grip on head', 'pulsating headache', 'dull throb', 'piercing head agony', 'continuous headache hum', 'low-level head strain',
         'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp', 'brain-squeezing feeling', 'top-heavy ache', 'all-encompassing head discomfort', 'band-like pressure around head',
         'persistent noggin ache', 'head tenderness', 'scalp-aching feeling', 'sensitive head region', 'brainache', 'mind-throbbing torment', 'front-lobe pressure', 'crown-of-head tension',
@@ -231,7 +231,7 @@ symptom_synonyms = {
         'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
     ],
     'swelling': [
-        'swollen', 'edema', 'swellings', 'fluid retention', 'swollen body part', 'inflamed tissue', 'puffiness', 'swells', 'enlarged tissue area'
+        'swollen', 'edema', 'swellings', 'fluid retention', 'swollen body part', 'inflamed tissue', 'puffiness', 'swells', 'enlarged tissue area','swelling'
     ],
     'tremor': [
         'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
@@ -6514,7 +6514,8 @@ trigger_keywords = {
 	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
-        'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool']
+        'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge']
     },
 'neck': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing'],
