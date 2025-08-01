@@ -471,7 +471,7 @@ symptom_synonyms = {
 ],
 	
 'high blood pressure': [
-    'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure',
+    'hypertension', 'elevated blood pressure', 'high BP', 'high arterial pressure', 'raised blood pressure', 'increased blood pressure', 'b. p.', 'b.p.',
     'high systolic pressure', 'high diastolic pressure', 'hypertensive condition', 'higher BP', 'higher blood pressure', 'BP is trending high',
     'BP is trending higher', 'high blood pressure disorder', 'abnormal blood pressure', 'hypertensive crisis', 'BP is getting high',
     'BP is going high', 'BP gone high', 'elevated BP', 'hypertensive state', 'BP is high', 'BP goes high', 'BP is getting high',
