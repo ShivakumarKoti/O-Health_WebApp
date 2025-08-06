@@ -27,14 +27,14 @@ symptom_list = [
 # ------------------------------------------------------------------ #
 symptom_synonyms = {
     'headache': [
-        'throbbing headache', 'pounding head', 'cranial ache', 'head pounding',
+        'throbbing headache', 'pounding head', 'cranial ache', 'head pounding','head is aching', 'head starts to ache','head aches','head is aching', 'head has been aching','ache in the head','head ache',
         'hammering pain in skull', 'aching brain', 'full-head ache', 'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
-        'relentless cranial pounding', 'forehead-tightening discomfort', 'vice-like grip on head', 'pulsating headache', 'dull throb', 'piercing head agony', 'continuous headache hum', 'low-level head strain',
-        'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp', 'brain-squeezing feeling', 'top-heavy ache', 'all-encompassing head discomfort', 'band-like pressure around head',
-        'persistent noggin ache', 'head tenderness', 'scalp-aching feeling', 'sensitive head region', 'brainache', 'mind-throbbing torment', 'front-lobe pressure', 'crown-of-head tension',
-        'behind-the-eyes ache', 'skull-tight discomfort', 'never-ending head throb', 'grating ache inside skull', 'sinus-pressured ache', 'temple pounding', 'brain pulsation pain', 'cephalic torment',
+        'relentless cranial pounding', 'forehead-tightening discomfort', 'vice-like grip on head', 'pulsating headache', 'dull throb', 'piercing head agony', 'continuous headache hum',
+        'top-of-head soreness', 'subcranial ache', 'stabbing darts of pain in scalp',
+        'persistent noggin ache', 'head tenderness', 'brainache', 
+        'grating ache inside skull', 'sinus-pressured ache', 'temple pounding', 'brain pulsation pain', 'cephalic torment',
         'oppressive ache under cranium', 'subtle persistent ache', 'head discomfort', 'dull pounding drumbeat in head', 'hammering inside skull walls', 'unyielding head tension', 'rote ache cycling through head',
-        'cranium under siege', 'deep-set head pang', 'anchor-like pressure in head','head pounding like drums','issue with head','head aches','head is aching','head aches'
+        'cranium under siege','head pounding like drums','issue with head'
     ],
     'migraine': [
         'intense one-sided headache', 'migraine aura', 'pulsating pain in head', 'photophobia-associated headache', 'debilitating headache', 'migraine attack', 'searing half-skull ache', 'throbbing temple migraine',
