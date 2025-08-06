@@ -16,7 +16,7 @@ symptom_list = [
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
 'sleepy','fatigue', 'fracture','stress',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
-'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
+'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', '',
 #  'arthritis', 'sugar', 'pediatric symptoms',
@@ -9649,14 +9649,6 @@ body_part_followup_questions = {
             "risk_factor": False,
         },
     ],
-    'default': [
-        {
-            'hi': "क्या यह आपकी मासिक धर्म से संबंधित समस्या है?",
-            'en': "Is this related to your menstrual periods?",
-            'category': 'confirm_period',
-            'symptom': None
-        }
-    ]
   },
 'hip': {
         'pain': [
