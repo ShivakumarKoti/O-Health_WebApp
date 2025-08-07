@@ -7637,13 +7637,13 @@ body_part_followup_questions = {
             "symptom": None,
             "risk_factor": False,
         },
-        {
-            "hi": "क्या आपके पिछवाड़े या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
-            "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
-            "category": "history_of_injury",
-            "symptom": "injury",
-            "risk_factor": False,
-        },
+       {
+    "hi": "क्या आपकी रीढ़ या पीठ में पहले कभी कोई चोट, गिरावट या दुर्घटना हुई है?",
+    "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
+    "category": "history_of_injury",
+    "symptom": None,
+    "risk_factor": False,
+       },
         {
             "hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?",
             "en": "Is your back pain in the lower or upper back?",
