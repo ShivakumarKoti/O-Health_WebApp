@@ -11559,8 +11559,9 @@ symptom_to_specialist = {
   'soles itching': 'Dermatologist',
 
   'child pain': 'Pediatrician',
-  'child bleeding': 'Pediatrician'
+  'child bleeding': 'Pediatrician',
 
+  'latrine issue': 'General Practitioner'
 
 }
 
