@@ -18,7 +18,7 @@ symptom_list = [
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', '',
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue', '',
 #  'arthritis', 'sugar', 'pediatric symptoms',
 ]
 
@@ -890,6 +890,7 @@ symptom_synonyms = {
 ],
 
 'blister': ['blister','blisters','blistering'],
+'latrine issue': ['latrine', 'latrine issues'],
 
 'cardiac surgery': [
 
