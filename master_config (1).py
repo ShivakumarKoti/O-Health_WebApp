@@ -272,7 +272,7 @@ symptom_synonyms = {
         'memory wires disconnected', 'stuttering recollection attempts', 'defragmented mental records', 'shaky mental camera', 'fading mental impressions', 'mind like a sieve', 'losing info instantly',
         'rattled mental library', 'concept slip-through', 'flickering data in mind', 'barren mental shelves', 'no retrieval of recent facts', 'thinking it’s on the tip of my tongue but never surfacing',
         'losing track of recent conversations', 'difficulty holding new info', 'memory short-circuits frequently', 'mental vacancy', 'ephemeral recollections', 'passing mental clouds with no retention',
-        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot'
+        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot', 'forgetting'
     ],
   'hallucination': [
     'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions','hallucinate','hallucination','hearing voices',
