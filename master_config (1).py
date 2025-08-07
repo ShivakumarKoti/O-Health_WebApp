@@ -6145,6 +6145,30 @@ symptom_followup_questions = {
     },
 ],
 
+"latrine issue": [
+  {
+    "hi": "आप एक दिन में कितनी बार लात्रीन जाते हैं?",
+    "en": "How many times are you going to the latrine in a day?",
+    "category": "frequency_of_latrine_visits",
+    "symptom": "Frequency of visits",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या आपको लात्रीन जाने में दर्द या जलन महसूस हो रही है?",
+    "en": "Are you experiencing pain or burning while using the latrine?",
+    "category": "pain_burning",
+    "symptom": "Pain or burning",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या आपको लात्रीन के बाद उल्टी या मतली का अनुभव हो रहा है?",
+    "en": "Are you experiencing nausea or vomiting after using the latrine?",
+    "category": "latrine_nausea_vomiting",
+    "symptom": "Nausea or vomiting",
+    "risk_factor": False
+  },
+  
+],
 
   "cardiac_surgery" : [
 
