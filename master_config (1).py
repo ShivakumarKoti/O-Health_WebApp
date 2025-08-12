@@ -285,7 +285,7 @@ symptom_synonyms = {
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
     'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'absence of hunger', 'less hungry', 'not feeling hungry',' don\'t feel hungry',
     'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'no hunger', 'eating less','do not feel hungry', 'not getting hungry',
-    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed', 'less hungry',
+    'anorexia', 'anorexia nervosa','feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed', 'less hungry',
     'eat less food','hunger not there','hunger is not there', 'not feeling like eating', 'not feeling like having food','not hungry', 'not feeling like eating food',
 ],
 
@@ -329,7 +329,7 @@ symptom_synonyms = {
 ],
 
 'anxiety': [
-    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry',
+    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry','anxiety','anxious',
     'anticipatory anxiety', 'anxiety attack', 'apprehensive feeling', 'distress', 'emotional unease', 'worrying', 'overthinking', 'mental tension'
 ],
 
@@ -6535,7 +6535,7 @@ trigger_keywords = {
 	'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy']
     },
 'stomach': {
-        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
+        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains','problem','problems'],
 	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
@@ -6733,7 +6733,6 @@ trigger_keywords = {
       'pain':     ['paining','pains','painful', 'paining', 'soreness','hurts','hurting','pain','hurt','sore','sores','ache','aches','cramping','cramps','throbbing'],
       'delayed':   ['delayed','delay','delays','delaying','absent','missed','misses','miss'],
       'bleeding': ['bleeds','bleeding','bled','blood','bleed'],
-      'default':  ['issue','issues']   # no “default” words here; we’ll ask to confirm
 },
 'hip': {
     'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aches', 'aching', 'soreness', 'throbbing', 'sharp', 'burning', 'dull', 'stabbing'],
@@ -10917,7 +10916,7 @@ body_part_to_specialist = {
     'jaw': 'Dentist',
     'period pain':'Gynecologist',
     'period bleeding':'Gynecologist',
-    'period issue': 'Gynecologist',
+    #'period issue': 'Gynecologist',
     'period':'Gynecologist',
 }
 
@@ -11428,7 +11427,7 @@ symptom_to_specialist = {
   'period pain': 'Gynecologist',
   'period delayed': 'Gynecologist',
   'period bleeding': 'Gynecologist',
-  'period issue': 'Gynecologist',
+  #'period issue': 'Gynecologist',
 
   'hip pain': 'Orthopedic Specialist',
   'hip stiffness': 'Orthopedic Specialist',
@@ -11730,7 +11729,7 @@ HINDI_OFFLINE_DICT = {
   "face issue": "चेहरे की समस्या",
   "hair issue": "बालों की समस्या",
   "heart issue": "हृदय की समस्या",
-  "period issue": "मासिक धर्म की समस्या",
+  #"period issue": "मासिक धर्म की समस्या",
   "jaw issue": "जबड़े की समस्या",
   "hip issue": "कूल्हे की समस्या",
   "waist issue": "कमर की समस्या",
@@ -11973,7 +11972,7 @@ HINDI_OFFLINE_DICT = {
   "period pain": "मासिक धर्म का दर्द",
   "period delayed": "मासिक धर्म में देरी",
   "period bleeding": "मासिक धर्म में रक्तस्राव",
-  "period issue": "मासिक धर्म की समस्या",
+  #"period issue": "मासिक धर्म की समस्या",
 
   "hip pain": "कूल्हे में दर्द",
   "hip stiffness": "कूल्हे का जकड़ना",
@@ -12169,6 +12168,6 @@ HINDI_OFFLINE_DICT = {
     "menopause": "रजोनिवृत्ति",
     "period pain": "पीरियड का दर्द",
     "period bleeding": "पीरियड में रक्तस्राव",
-    "period issues": "पीरियड से जुड़ी समस्याएं",
+    #"period issues": "पीरियड से जुड़ी समस्याएं",
     "abdominal issues": "पेट से जुड़ी समस्याएं",
         }
