@@ -488,24 +488,26 @@ symptom_synonyms = {
     'my blood pressure keeps rising', 'my blood pressure is too high', 'BP dangerously rising', 'BP dangerously high',
     'pressure high and causing symptoms', 'BP above baseline', 'blood pressure higher than expected', 'feeling symptoms from high BP',
     'high systolic and diastolic pressure', 'blood pressure rising suddenly', 'pressure spiking', 'pressure going dangerously high',
-    'feeling flushed because of high blood pressure', 'high BP causing dizziness',
+    'high blood pressure', 'high BP causing dizziness','more bp','bp is high','bp is higher', 'bp is above normal', 'bp is above average',
     'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high', 'BP', 'IBP', 'I.B.P', 'B. S P',
-    "high bp", "hi bp", "high b p", "hi b p", "high b.p", "hi b.p", "high b. p.", "hi b. p.", "ibp", "i.b.p", "i b p", "i b.p", "ib.p", "i. b. p", "i. b p", 
-     "eye bp", "eye b p", "eye bee pee", "b.p", "b p", "bp.", "b. p", "b. p.", "b.p.", "b s p", "b sp", "bs p", "bs.p", "high p", "hi p", "high pee", "hi pee", 
-     "hai bp", "hai b p", "hbp", "hb.p", "my bp is high", "bp is high", "high blood p", "high blood pressure", "bp high", "i have high bp",
-     "ibp", "i.b.p", "i b p", "i b.p", "ib.p", "i. b. p", "i. b p", "i b. p", "i.b p", "i bp", "i-b-p", "i. b.p", "i.b. p", "ib p", "i bp.", "i. bp", "ib. p", 
-     "i.b.p.", "i-bp", "i-b. p", "i. b-p", "eye bp", "eye b p", "eye bee pee", "eye bee pee.", "eye.b.p", "eye.b.p.", "i bee pee", "i bee p", "i be pee", "i. bee. pee", 
-     "i.beepee", "i bee-pee", "i.bee pee", "ibeepee", "i beepee", "bp", "b.p", "b p", "bp.", "b. p", "b. p.", "b.p.", "b-p", "b . p", "b. p.", "b .p", "b.p .", "b.p .", 
-      "b . p.", "bsp", "b sp", "bs p", "bs.p", "b s p", "b.s.p", "b-s-p", "b s.p", "b.s p", "b s. p", "bee pee", "bee. pee", "b e p", "bee p", "b e pee", "b-pee", "b pee", 
-      "bpee", "beepee", "high vp", "hi vp", "high v.p", "hi v.p", "high v p", "hi v p", "high vip", "hi vip", "high v.i.p", "hi v.i.p", "high dp", "hi dp", "high d.p", "hi d.p", 
-      "high pp", "hi pp", "high p.p", "hi p.p", "high beep", "hi beep", "high be p", "hi be p", "high bpe", "hi bpe", "high bpe.", "hi bpe.", "high b ep", "hi b ep", "high bpe", 
-      "hi bpe", "high bp e", "hi bp e", "high bpee", "hi bpee", "high bpeee", "hi bpeee", "high bp high", "hi bp high", "high bp hi", "hi bp hi", "high b p high", "hi b p high", 
-      "high bp is high", "hi bp is high", "high b.p is high", "hi b.p is high", "high bp is hi", "hi bp is hi", "high bp is h", "hi bp is h", "high bp h", "hi bp h", "high b h", 
-	"hi b h", "high p high", "hi p high", "high p hi", "hi p hi", "high p h", "hi p h", "high pee high", "hi pee high", "high pee hi", "hi pee hi", "high pee h", "hi pee h", 
-	"high b h p", "hi b h p", "high b h.p", "hi b h.p", "high b h p", "hi b h p", "high b h. p", "hi b h. p", "high b h. p.", "hi b h. p.", "high b h p.", "hi b h p.", 
-	"high b p h", "hi b p h", "high b p. h", "hi b p. h", "high b p. h.", "hi b p. h.", "high b p h.", "hi b p h.", "high b p hi", "hi b p hi", "high b p. hi", "hi b p. hi", 
-	"high b p. hi.", "hi b p. hi.", "high b p hi.", "hi b p hi.", "high b p high", "hi b p high", "high b p. high", "hi b p. high", "high b p. high.", "hi b p. high.", 
-	"high b p high", "hi b p high"
+    'high bp', 'hi bp', 'high b p', 'hi b p', 'high b.p', 'hi b.p', 'high b. p.', 'hi b. p.', 'ibp', 'i.b.p', 'i b p', 'i b.p', 'ib.p', 'i. b. p', 'i. b p', 
+    'eye bp', 'eye b p', 'eye bee pee', 'b.p', 'b p', 'bp.', 'b. p', 'b. p.', 'b.p.', 'b s p', 'b sp', 'bs p', 'bs.p', 'high p', 'hi p', 'high pee', 'hi pee', 
+    'hai bp', 'hai b p', 'hbp', 'hb.p', 'my bp is high', 'bp is high', 'high blood p', 'high blood pressure', 'bp high', 'i have high bp',
+    'ibp', 'i.b.p', 'i b p', 'i b.p', 'ib.p', 'i. b. p', 'i. b p', 'i b. p', 'i.b p', 'i bp', 'i-b-p', 'i. b.p', 'i.b. p', 'ib p', 'i bp.', 'i. bp', 'ib. p', 
+    'i.b.p.', 'i-bp', 'i-b. p', 'i. b-p', 'eye bp', 'eye b p', 'eye bee pee', 'eye bee pee.', 'eye.b.p', 'eye.b.p.', 'i bee pee', 'i bee p', 'i be pee', 'i. bee. pee', 
+    'i.beepee', 'i bee-pee', 'i.bee pee', 'ibeepee', 'i beepee', 'bp', 'b.p', 'b p', 'bp.', 'b. p', 'b. p.', 'b.p.', 'b-p', 'b . p', 'b. p.', 'b .p', 'b.p .', 'b.p .', 
+    'b . p.', 'bsp', 'b sp', 'bs p', 'bs.p', 'b s p', 'b.s.p', 'b-s-p', 'b s.p', 'b.s p', 'b s. p', 'bee pee', 'bee. pee', 'b e p', 'bee p', 'b e pee', 'b-pee', 'b pee', 
+    'bpee', 'beepee', 'high vp', 'hi vp', 'high v.p', 'hi v.p', 'high v p', 'hi v p', 'high vip', 'hi vip', 'high v.i.p', 'hi v.i.p', 'high dp', 'hi dp', 'high d.p', 'hi d.p', 
+    'high pp', 'hi pp', 'high p.p', 'hi p.p', 'high beep', 'hi beep', 'high be p', 'hi be p', 'high bpe', 'hi bpe', 'high bpe.', 'hi bpe.', 'high b ep', 'hi b ep', 'high bpe', 
+    'hi bpe', 'high bp e', 'hi bp e', 'high bpee', 'hi bpee', 'high bpeee', 'hi bpeee', 'high bp high', 'hi bp high', 'high bp hi', 'hi bp hi', 'high b p high', 'hi b p high', 
+    'high bp is high', 'hi bp is high', 'high b.p is high', 'hi b.p is high', 'high bp is hi', 'hi bp is hi', 'high bp is h', 'hi bp is h', 'high bp h', 'hi bp h', 'high b h', 
+    'hi b h', 'high p high', 'hi p high', 'high p hi', 'hi p hi', 'high p h', 'hi p h', 'high pee high', 'hi pee high', 'high pee hi', 'hi pee hi', 'high pee h', 'hi pee h', 
+    'high b h p', 'hi b h p', 'high b h.p', 'hi b h.p', 'high b h p', 'hi b h p', 'high b h. p', 'hi b h. p', 'high b h. p.', 'hi b h. p.', 'high b h p.', 'hi b h p.', 
+    'high b p h', 'hi b p h', 'high b p. h', 'hi b p. h', 'high b p. h.', 'hi b p. h.', 'high b p h.', 'hi b p h.', 'high b p hi', 'hi b p hi', 'high b p. hi', 'hi b p. hi', 
+    'high b p. hi.', 'hi b p. hi.', 'high b p hi.', 'hi b p hi.', 'high b p high', 'hi b p high', 'high b p. high', 'hi b p. high', 'high b p. high.', 'hi b p. high.', 
+    'high b p high', 'hi b p high', 'more bp'
+
+
 ],
 
 'low blood pressure': [
@@ -528,20 +530,22 @@ symptom_synonyms = {
     'low systolic and diastolic pressure', 'blood pressure falling suddenly', 'pressure bottoming out', 'pressure going dangerously low',
     'low pressure causing fainting', 'feeling faint because of low blood pressure', 'low BP causing lightheadedness',
     'BP lower than it should be', 'BP lower than normal range', 'heart pressure below normal', 'arterial pressure low',
-    "low bp", "lo bp", "low b p", "lo b p", "low b.p", "lo b.p", "low b. p.", "lo b. p.", 
-    "lbp", "l.b.p", "l b p", "l b.p", "lb.p", "l. b. p", "l. b p", "l b. p", "l.b p", "l bp", "l-b-p", 
-    "l. b.p", "l.b. p", "lb p", "l bp.", "l. bp", "lb. p", "l.b.p.", "l-bp", "l-b. p", "l. b-p",
-    "low b p.", "low. bp", "lo bp.", "low. b. p.", "lo. b. p.",
-    "low b p", "lo b p", "low b.p", "lo b.p", "low b. p", "low b.p.", "low b. p.", "lo b.p.",
-    "eye bp low", "eye b p low", "eye bee pee low", "low eye bp", "low eye b p", 
-    "low bee pee", "low bee. pee", "low bee p", "low beepee", "low bee-pee", "low. bee. pee",
-    "low b s p", "low b sp", "low bs p", "low bs.p", "low b.s.p", "low b-s-p", 
-    "low b s.p", "low b.s p", "low b s. p", "lo b s p", "lo b sp", "lo bs p", "lo bs.p",
-    "b.p low", "bp low", "bp. low", "b p low", "b.p. low", "b. p low", "b s p low", "bs p low", 
-    "low b", "lo b", "lo bp", "l b", "l.p", "l. p", "l. p.", "l.p.",
-    "low blood pressure", "bp is low", "my bp is low", "i have low bp", "low blood p", 
-    "low pressure", "blood pressure low", "bp gone low", "bp dropped", "bp fell", 
-    "bp falling", "bp fallen"
+    'low bp', 'lo bp', 'low b p', 'lo b p', 'low b.p', 'lo b.p', 'low b. p.', 'lo b. p.', 
+    'lbp', 'l.b.p', 'l b p', 'l b.p', 'lb.p', 'l. b. p', 'l. b p', 'l b. p', 'l.b p', 'l bp', 'l-b-p', 
+    'l. b.p', 'l.b. p', 'lb p', 'l bp.', 'l. bp', 'lb. p', 'l.b.p.', 'l-bp', 'l-b. p', 'l. b-p',
+    'low b p.', 'low. bp', 'lo bp.', 'low. b. p.', 'lo. b. p.',
+    'low b p', 'lo b p', 'low b.p', 'lo b.p', 'low b. p', 'low b.p.', 'low b. p.', 'lo b.p.',
+    'eye bp low', 'eye b p low', 'eye bee pee low', 'low eye bp', 'low eye b p', 
+    'low bee pee', 'low bee. pee', 'low bee p', 'low beepee', 'low bee-pee', 'low. bee. pee',
+    'low b s p', 'low b sp', 'low bs p', 'low bs.p', 'low b.s.p', 'low b-s-p', 
+    'low b s.p', 'low b.s p', 'low b s. p', 'lo b s p', 'lo b sp', 'lo bs p', 'lo bs.p',
+    'b.p low', 'bp low', 'bp. low', 'b p low', 'b.p. low', 'b. p low', 'b s p low', 'bs p low', 
+    'low b', 'lo b', 'lo bp', 'l b', 'l.p', 'l. p', 'l. p.', 'l.p.',
+    'low blood pressure', 'bp is low', 'my bp is low', 'i have low bp', 'low blood p', 
+    'low pressure', 'blood pressure low', 'bp gone low', 'bp dropped', 'bp fell', 
+    'bp falling', 'bp fallen','less bp'
+
+
 
 ],
 
@@ -890,7 +894,8 @@ symptom_synonyms = {
 ],
 
 'blister': ['blister','blisters','blistering'],
-'latrine issue': ['latrine', 'latrine issues'],
+'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 
+                  'toilet problems','stool does not come'],
 
 'cardiac surgery': [
 
@@ -7970,19 +7975,15 @@ body_part_followup_questions = {
       "category": "throat pain",
 
     },
-    {
-      "hi": "क्या आपके गले में सूजन या लालिमा है?",
-      "en": "Do you have any swelling or redness in your throat?",
-      "category": "throat pain",
-
-    },
         ],
+
         'swelling': [
-            {
-                'hi': "क्या गले में सूजन के साथ निगलने में भी कठिनाई हो रही है?",
-                'en': "Is the swelling in your throat making it difficult to swallow?",
-                'category': 'throat_swelling_swallowing'
-            }
+      {
+        "hi": "क्या आपके गले में सूजन गंभीर है?",
+        "en": "Is the swelling in your throat severe?",
+        "category": "throat pain",
+
+      },
         ],
         'difficulty_swallowing': [
             {
