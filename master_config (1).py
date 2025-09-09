@@ -1,3 +1,4 @@
+
 #-- coding: utf-8 --
 
 # ------------------------------------------------------------------ #
@@ -18,7 +19,7 @@ symptom_list = [
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue', '',
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','',
 #  'arthritis', 'sugar', 'pediatric symptoms',
 ]
 
@@ -171,7 +172,7 @@ symptom_synonyms = {
         'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', "can’t sleep", 'sleep not coming',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
-        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept', 'no sleep', 'less sleep', 'sleeping less'
+        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept'
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
@@ -272,7 +273,7 @@ symptom_synonyms = {
         'memory wires disconnected', 'stuttering recollection attempts', 'defragmented mental records', 'shaky mental camera', 'fading mental impressions', 'mind like a sieve', 'losing info instantly',
         'rattled mental library', 'concept slip-through', 'flickering data in mind', 'barren mental shelves', 'no retrieval of recent facts', 'thinking it’s on the tip of my tongue but never surfacing',
         'losing track of recent conversations', 'difficulty holding new info', 'memory short-circuits frequently', 'mental vacancy', 'ephemeral recollections', 'passing mental clouds with no retention',
-        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot', 'forgetting'
+        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot'
     ],
   'hallucination': [
     'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions','hallucinate','hallucination','hearing voices',
@@ -284,9 +285,9 @@ symptom_synonyms = {
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
     'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'absence of hunger', 'less hungry', 'not feeling hungry',' don\'t feel hungry',
-    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'no hunger', 'eating less','do not feel hungry', 'not getting hungry',
-    'anorexia', 'anorexia nervosa','feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed', 'less hungry',
-    'eat less food','hunger not there','hunger is not there', 'not feeling like eating', 'not feeling like having food','not hungry', 'not feeling like eating food',
+    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less','do not feel hungry',
+    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed',
+    'eat less food','more hunger not there','more hunger is not there', 'not feeling like eating', 'not feeling like having food','not hungry', 'not feeling like eating food',
 ],
 
 'constipation': [
@@ -329,7 +330,7 @@ symptom_synonyms = {
 ],
 
 'anxiety': [
-    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry','anxiety','anxious',
+    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry',
     'anticipatory anxiety', 'anxiety attack', 'apprehensive feeling', 'distress', 'emotional unease', 'worrying', 'overthinking', 'mental tension'
 ],
 
@@ -373,9 +374,9 @@ symptom_synonyms = {
 
 'blurred vision': [
     'vision impairment', 'unclear vision', 'fuzzy vision', 'distorted vision', 'foggy vision', 'hazy vision', 'blurry eyesight', 'impaired vision', 'cannot see properly',
-    'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance',
+    'vision distortion', 'clouded vision', 'poor vision', 'vision fuzziness', 'difficulty seeing clearly', 'blurred eyesight', 'visual disturbance', 'see so little',
     'unclear eyesight', 'visual impairment', 'blurry sight', 'sight distortion', 'vision problems', 'temporary blurred vision', 'chronic blurred vision',
-    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible'
+    'blurry perception', 'not well visible','difficulty in seeing','difficult to see','hard to see', 'not clearly visible', 'trouble seeing'
 ],
 
 'numbness': [
@@ -435,7 +436,7 @@ symptom_synonyms = {
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance',
      'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening', 'not being digested',
-      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset'
+      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset','less digestion', 'cannot digest', 'not digesting'
 ],
 
 'nosebleed': [
@@ -488,26 +489,14 @@ symptom_synonyms = {
     'my blood pressure keeps rising', 'my blood pressure is too high', 'BP dangerously rising', 'BP dangerously high',
     'pressure high and causing symptoms', 'BP above baseline', 'blood pressure higher than expected', 'feeling symptoms from high BP',
     'high systolic and diastolic pressure', 'blood pressure rising suddenly', 'pressure spiking', 'pressure going dangerously high',
-    'high blood pressure', 'high BP causing dizziness','more bp','bp is high','bp is higher', 'bp is above normal', 'bp is above average',
-    'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high', 'BP', 'IBP', 'I.B.P', 'B. S P',
-    'high bp', 'hi bp', 'high b p', 'hi b p', 'high b.p', 'hi b.p', 'high b. p.', 'hi b. p.', 'ibp', 'i.b.p', 'i b p', 'i b.p', 'ib.p', 'i. b. p', 'i. b p', 
-    'eye bp', 'eye b p', 'eye bee pee', 'b.p', 'b p', 'bp.', 'b. p', 'b. p.', 'b.p.', 'b s p', 'b sp', 'bs p', 'bs.p', 'high p', 'hi p', 'high pee', 'hi pee', 
-    'hai bp', 'hai b p', 'hbp', 'hb.p', 'my bp is high', 'bp is high', 'high blood p', 'high blood pressure', 'bp high', 'i have high bp',
-    'ibp', 'i.b.p', 'i b p', 'i b.p', 'ib.p', 'i. b. p', 'i. b p', 'i b. p', 'i.b p', 'i bp', 'i-b-p', 'i. b.p', 'i.b. p', 'ib p', 'i bp.', 'i. bp', 'ib. p', 
-    'i.b.p.', 'i-bp', 'i-b. p', 'i. b-p', 'eye bp', 'eye b p', 'eye bee pee', 'eye bee pee.', 'eye.b.p', 'eye.b.p.', 'i bee pee', 'i bee p', 'i be pee', 'i. bee. pee', 
-    'i.beepee', 'i bee-pee', 'i.bee pee', 'ibeepee', 'i beepee', 'bp', 'b.p', 'b p', 'bp.', 'b. p', 'b. p.', 'b.p.', 'b-p', 'b . p', 'b. p.', 'b .p', 'b.p .', 'b.p .', 
-    'b . p.', 'bsp', 'b sp', 'bs p', 'bs.p', 'b s p', 'b.s.p', 'b-s-p', 'b s.p', 'b.s p', 'b s. p', 'bee pee', 'bee. pee', 'b e p', 'bee p', 'b e pee', 'b-pee', 'b pee', 
-    'bpee', 'beepee', 'high vp', 'hi vp', 'high v.p', 'hi v.p', 'high v p', 'hi v p', 'high vip', 'hi vip', 'high v.i.p', 'hi v.i.p', 'high dp', 'hi dp', 'high d.p', 'hi d.p', 
-    'high pp', 'hi pp', 'high p.p', 'hi p.p', 'high beep', 'hi beep', 'high be p', 'hi be p', 'high bpe', 'hi bpe', 'high bpe.', 'hi bpe.', 'high b ep', 'hi b ep', 'high bpe', 
-    'hi bpe', 'high bp e', 'hi bp e', 'high bpee', 'hi bpee', 'high bpeee', 'hi bpeee', 'high bp high', 'hi bp high', 'high bp hi', 'hi bp hi', 'high b p high', 'hi b p high', 
-    'high bp is high', 'hi bp is high', 'high b.p is high', 'hi b.p is high', 'high bp is hi', 'hi bp is hi', 'high bp is h', 'hi bp is h', 'high bp h', 'hi bp h', 'high b h', 
-    'hi b h', 'high p high', 'hi p high', 'high p hi', 'hi p hi', 'high p h', 'hi p h', 'high pee high', 'hi pee high', 'high pee hi', 'hi pee hi', 'high pee h', 'hi pee h', 
-    'high b h p', 'hi b h p', 'high b h.p', 'hi b h.p', 'high b h p', 'hi b h p', 'high b h. p', 'hi b h. p', 'high b h. p.', 'hi b h. p.', 'high b h p.', 'hi b h p.', 
-    'high b p h', 'hi b p h', 'high b p. h', 'hi b p. h', 'high b p. h.', 'hi b p. h.', 'high b p h.', 'hi b p h.', 'high b p hi', 'hi b p hi', 'high b p. hi', 'hi b p. hi', 
-    'high b p. hi.', 'hi b p. hi.', 'high b p hi.', 'hi b p hi.', 'high b p high', 'hi b p high', 'high b p. high', 'hi b p. high', 'high b p. high.', 'hi b p. high.', 
-    'high b p high', 'hi b p high', 'more bp'
-
-
+    'feeling flushed because of high blood pressure', 'high BP causing dizziness',
+    'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high', 'BP', 'IBP', 'high p', 'hi p', 'high pee', 'hi pee', 
+     'hai bp', 'hai b p', 'hbp', 'my bp is high', 'bp is high', 'high blood p', 'high blood pressure', 'bp high', 'i have high bp',
+     'ibp', 'hi bp high', 'high bp hi', 'hi bp hi', 'high b p high', 'hi b p high', 'bpg increases',
+      'high bp is high', 'hi bp is high', 'high bp is hi', 'hi bp is hi', 'high bp is h', 'hi bp is h', 'high bp h', 'hi bp h', 'high b h', 
+	'hi b h', 'high p high', 'hi p high', 'high p hi', 'hi p hi', 'high p h', 'hi p h', 'high pee high', 'hi pee high', 'high pee hi', 'hi pee hi', 'high pee h', 'hi pee h', 
+	'high b h p', 'hi b h p', 'high b p high', 'hi b p high',
+	'high b p high', 'hi b p high','bpg hi','hi bpg','bpg high','high bp g',
 ],
 
 'low blood pressure': [
@@ -530,22 +519,10 @@ symptom_synonyms = {
     'low systolic and diastolic pressure', 'blood pressure falling suddenly', 'pressure bottoming out', 'pressure going dangerously low',
     'low pressure causing fainting', 'feeling faint because of low blood pressure', 'low BP causing lightheadedness',
     'BP lower than it should be', 'BP lower than normal range', 'heart pressure below normal', 'arterial pressure low',
-    'low bp', 'lo bp', 'low b p', 'lo b p', 'low b.p', 'lo b.p', 'low b. p.', 'lo b. p.', 
-    'lbp', 'l.b.p', 'l b p', 'l b.p', 'lb.p', 'l. b. p', 'l. b p', 'l b. p', 'l.b p', 'l bp', 'l-b-p', 
-    'l. b.p', 'l.b. p', 'lb p', 'l bp.', 'l. bp', 'lb. p', 'l.b.p.', 'l-bp', 'l-b. p', 'l. b-p',
-    'low b p.', 'low. bp', 'lo bp.', 'low. b. p.', 'lo. b. p.',
-    'low b p', 'lo b p', 'low b.p', 'lo b.p', 'low b. p', 'low b.p.', 'low b. p.', 'lo b.p.',
-    'eye bp low', 'eye b p low', 'eye bee pee low', 'low eye bp', 'low eye b p', 
-    'low bee pee', 'low bee. pee', 'low bee p', 'low beepee', 'low bee-pee', 'low. bee. pee',
-    'low b s p', 'low b sp', 'low bs p', 'low bs.p', 'low b.s.p', 'low b-s-p', 
-    'low b s.p', 'low b.s p', 'low b s. p', 'lo b s p', 'lo b sp', 'lo bs p', 'lo bs.p',
-    'b.p low', 'bp low', 'bp. low', 'b p low', 'b.p. low', 'b. p low', 'b s p low', 'bs p low', 
-    'low b', 'lo b', 'lo bp', 'l b', 'l.p', 'l. p', 'l. p.', 'l.p.',
+    'low bp', 'lo bp', 'low b p', 'lo b p', 'bpg lo','lo bpg','bpg goes down',
     'low blood pressure', 'bp is low', 'my bp is low', 'i have low bp', 'low blood p', 
     'low pressure', 'blood pressure low', 'bp gone low', 'bp dropped', 'bp fell', 
-    'bp falling', 'bp fallen','less bp'
-
-
+    'bp falling', 'bp fallen'
 
 ],
 
@@ -663,7 +640,7 @@ symptom_synonyms = {
 ],
 
 'female issue': [
-    'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis',
+    'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis','ladies problem',
     'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 'menstruation', 
     'vaginal dryness', 'prolapsed uterus', 'birth control issues', 'female urinary issues',
     'pregnancy complications', 'white discharge', 'female issues', 'woman issue', 'women issue', 'woman issues',
@@ -703,7 +680,7 @@ symptom_synonyms = {
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma', 'ears not listening',
-'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma',
+'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma', 'trouble hearing'
 'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss','not hearing', 'not able to hear'
 ],
 
@@ -872,11 +849,11 @@ symptom_synonyms = {
     'delayed motor response', 'slow sensorimotor reaction', 'reflex sluggishness', 'impaired reaction time', 'slow response time', 'reflexes are slow'
 ],
 'male reproductive issues': [
-    'erectile dysfunction', 'impotence', "can’t get an erection", 'can’t maintain erection', 'loss of libido in men',
+    'erectile dysfunction', 'impotence', 'can’t get an erection', 'can’t maintain erection', 'loss of libido in men',
     'problems getting hard', 'weak erection', 'loss of erection', 'low sperm count', 'male infertility', 'testicular pain', 'pain in testicles',
     'swollen testicles', 'testicle swelling', 'lump in testicle', 'testicular discomfort', 'shrinkage of testicles', 'small testicles',
     'testicles feel different', 'pain during ejaculation', 'painful ejaculation', 'blood in semen', 'reduced semen volume', 'ejaculation problems', 
-    'delayed ejaculation', 'premature ejaculation', "can’t ejaculate", 'retrograde ejaculation', 'no semen during orgasm', 'testicular tightness',
+    'delayed ejaculation', 'premature ejaculation', 'can’t ejaculate', 'retrograde ejaculation', 'no semen during orgasm', 'testicular tightness',
     'genital numbness in men', 'scrotal pain', 'pain in scrotum', 'penis pain', 'penis swelling', 'male genital discomfort', 'prostate issues',
     'enlarged prostate', 'prostatitis', 'sexual dysfunction in men', 'male reproductive health concerns'
 ],
@@ -894,34 +871,32 @@ symptom_synonyms = {
 ],
 
 'blister': ['blister','blisters','blistering'],
-'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 
-                  'toilet problems','stool does not come'],
 
 'cardiac surgery': [
 
     # Direct procedure mentions
-    "cardiac surgery", "surgery of heart", "bypass", "stent", "heart surgery", "bypass surgery", "coronary artery bypass graft", "CABG",
-    "angioplasty done", "had valve replacement", "mitral valve surgery", "aortic valve repair",
-    "post cardiac surgery", "heart procedure", "balloon angioplasty", "stent placement in coronary artery",
-    "pacemaker inserted", "had ICD implantation", "pacemaker surgery", "ICD placed in chest", "had cardiac catheterization", "angioplasty procedure",
-    "thrombolysis done", "blood clot dissolving for heart", "went through cardiac cath",
+    'cardiac surgery', 'surgery of heart', 'bypass', 'stent', 'heart surgery', 'bypass surgery', 'coronary artery bypass graft', 'CABG',
+    'angioplasty done', 'had valve replacement', 'mitral valve surgery', 'aortic valve repair',
+    'post cardiac surgery', 'heart procedure', 'balloon angioplasty', 'stent placement in coronary artery',
+    'pacemaker inserted', 'had ICD implantation', 'pacemaker surgery', 'ICD placed in chest', 'had cardiac catheterization', 'angioplasty procedure',
+    'thrombolysis done', 'blood clot dissolving for heart', 'went through cardiac cath',
 
     # Symptom + event mentions
-    "chest surgery",  "tightness in chest post-operation", "pain near sternum", "sharp sternal pain"
+    'chest surgery',  'tightness in chest post-operation', 'pain near sternum', 'sharp sternal pain'
   
     # Colloquial and patient-style phrases
-    "heart operated", "they opened my chest", "heart fixed", "chest was cut open", "doctor repaired my valve", "my heart had a blockage", "they put a stent",
-    "got my arteries cleaned", "my chest hurts since heart operation", "pain where heart surgery was done", "had open chest surgery",
-    "battery inserted in chest", "they put wires in my chest", "got my heart reset", "heart restarted in hospital", "shocked my heart back", "doctor placed device in chest",
+    'heart operated', 'they opened my chest', 'heart fixed', 'chest was cut open', 'doctor repaired my valve', 'my heart had a blockage', 'they put a stent',
+    'got my arteries cleaned', 'my chest hurts since heart operation', 'pain where heart surgery was done', 'had open chest surgery',
+    'battery inserted in chest', 'they put wires in my chest', 'got my heart reset', 'heart restarted in hospital', 'shocked my heart back', 'doctor placed device in chest',
 
     # Post-operative issues
-    "fatigue after heart operation", "limited mobility post bypass", "internal chest pulling sensation",
-    "healing heart wound", "surgical site pain in chest", "heart rhythm issues post surgery", "fainting spells after heart procedure", "slow heartbeat recovery",
+    'fatigue after heart operation', 'limited mobility post bypass', 'internal chest pulling sensation',
+    'healing heart wound', 'surgical site pain in chest', 'heart rhythm issues post surgery', 'fainting spells after heart procedure', 'slow heartbeat recovery',
 
     # Risk & lifestyle factor–linked phrases
-    "heart surgery due to high BP", "diabetes patient with bypass", "valve problem after rheumatic fever", "had thyroid issue and heart surgery",
-    "my cholesterol caused heart block", "smoked before heart surgery", "drank alcohol and then had heart event",
-     "on heart diet since procedure", "stopped salt after bypass",
+    'heart surgery due to high BP', 'diabetes patient with bypass', 'valve problem after rheumatic fever', 'had thyroid issue and heart surgery',
+    'my cholesterol caused heart block', 'smoked before heart surgery', 'drank alcohol and then had heart event',
+     'on heart diet since procedure', 'stopped salt after bypass',
 
 ],
 
@@ -946,9 +921,140 @@ symptom_synonyms = {
     "persistent nausea after brain surgery", "post-op seizure",
 ],
 
+'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 
+                  'toilet problems','stool does not come'],
 
 
    }
+
+
+# ------------------------------------------------------------------ #
+# ------------------ Symptom Trees for Dynamic Qna ----------------- #
+# ------------------------------------------------------------------ #
+class SymptomNode:
+    def __init__(self, name, clarifying_questions=None, followup_branches=None):
+        self.name = name
+        self.clarifying_questions = clarifying_questions or []
+        self.followup_branches = followup_branches or []
+        self.visited = False
+        self.children = []
+
+    def add_child(self, child):
+        self.children.append(child)
+
+class DiseaseNode:
+    def __init__(self, name, required_symptoms, diagnostic_questions=None):
+        self.name = name
+        self.required_symptoms = set(required_symptoms)
+        self.diagnostic_questions = diagnostic_questions or []
+	    
+symptom_trees = {
+    # Fever branch
+    "Fever": SymptomNode(
+        name="Fever",
+        clarifying_questions=[
+            {"category": "fever_duration", "question": "How long have you had fever?"},
+            {"category": "fever_pattern", "question": "Does the fever follow any particular pattern?"}
+        ],
+        followup_branches=[
+            SymptomNode(name="Chills", clarifying_questions=[{"category": "chills", "question": "Are you experiencing chills?"}]),
+            SymptomNode(name="Night Sweats", clarifying_questions=[{"category": "night_sweats", "question": "Do you have drenching night sweats?"}]),
+            SymptomNode(name="Headache", clarifying_questions=[{"category": "headache", "question": "Do you have a headache?"}])
+        ]
+    ),
+    
+    # Cough branch
+    "Cough": SymptomNode(
+        name="Cough",
+        clarifying_questions=[
+            {"category": "cough_duration", "question": "How long have you had the cough?"},
+            {"category": "cough_type", "question": "Is your cough dry or productive?"}
+        ],
+        followup_branches=[
+            SymptomNode(name="Cough > 2 wks", clarifying_questions=[{"category": "chronic_cough", "question": "Has your cough lasted more than 2 weeks?"}]),
+            SymptomNode(name="Productive Cough", clarifying_questions=[{"category": "sputum", "question": "Are you coughing up sputum? If so, what color?"}]),
+            SymptomNode(name="Hemoptysis", clarifying_questions=[{"category": "blood_in_sputum", "question": "Are you coughing up blood?"}]),
+            SymptomNode(name="Dry Cough", clarifying_questions=[{"category": "dry_cough", "question": "Is your cough dry without phlegm?"}])
+        ]
+    ),
+    
+    # Respiratory branch
+    "Dyspnea": SymptomNode(
+        name="Dyspnea",
+        clarifying_questions=[{"category": "breathlessness", "question": "How severe is your shortness of breath?"}],
+        followup_branches=[]
+    ),
+    
+    "Chest Pain": SymptomNode(
+        name="Chest Pain",
+        clarifying_questions=[
+            {"category": "chest_pain_type", "question": "Is the pain sharp or dull?"},
+            {"category": "pleuritic", "question": "Does the pain worsen with breathing?"}
+        ],
+        followup_branches=[]
+    ),
+    
+    # Gastrointestinal branch
+    "Abdominal Pain": SymptomNode(
+        name="Abdominal Pain",
+        clarifying_questions=[
+            {"category": "abdominal_location", "question": "Where exactly is the pain located?"},
+            {"category": "abdominal_severity", "question": "How severe is the pain?"}
+        ],
+        followup_branches=[
+            SymptomNode(name="Diarrhea", clarifying_questions=[{"category": "diarrhea", "question": "How many episodes of diarrhea per day?"}]),
+            SymptomNode(name="Constipation", clarifying_questions=[{"category": "constipation", "question": "How many days since last bowel movement?"}])
+        ]
+    ),
+    
+    "Nausea/Vomiting": SymptomNode(
+        name="Nausea/Vomiting",
+        clarifying_questions=[{"category": "vomiting_frequency", "question": "How many times have you vomited?"}],
+        followup_branches=[]
+    ),
+    
+    # Genitourinary branch
+    "Dysuria": SymptomNode(
+        name="Dysuria",
+        clarifying_questions=[{"category": "painful_urination", "question": "Is urination painful or just uncomfortable?"}],
+        followup_branches=[
+            SymptomNode(name="Urgency", clarifying_questions=[{"category": "urgency", "question": "Do you feel sudden strong urges to urinate?"}]),
+            SymptomNode(name="Frequency", clarifying_questions=[{"category": "frequency", "question": "How many times do you urinate per day?"}])
+        ]
+    ),
+    
+    # Systemic branch
+    "Fatigue": SymptomNode(
+        name="Fatigue",
+        clarifying_questions=[{"category": "fatigue_severity", "question": "How debilitating is your fatigue?"}],
+        followup_branches=[]
+    ),
+    
+    "Weight Loss": SymptomNode(
+        name="Weight Loss",
+        clarifying_questions=[
+            {"category": "weight_loss_amount", "question": "How much weight have you lost?"},
+            {"category": "weight_loss_duration", "question": "Over what time period did this weight loss occur?"}
+        ],
+        followup_branches=[]
+    ),
+    
+    # Dermatological branch
+    "Rash": SymptomNode(
+        name="Rash",
+        clarifying_questions=[
+            {"category": "rash_location", "question": "Where is the rash located?"},
+            {"category": "rash_appearance", "question": "How would you describe the rash?"}
+        ],
+        followup_branches=[]
+    ),
+    
+    "Jaundice": SymptomNode(
+        name="Jaundice",
+        clarifying_questions=[{"category": "jaundice_severity", "question": "How yellow is your skin/eyes?"}],
+        followup_branches=[]
+    )
+}
 
 # ------------------------------------------------------------------ #
 # ----------------------- Followup Question ------------------------ #
@@ -6125,6 +6231,32 @@ symptom_followup_questions = {
   },
 ],
 
+"latrine issue": [
+  {
+    "hi": "आप एक दिन में कितनी बार लात्रीन जाते हैं?",
+    "en": "How many times are you going to the latrine in a day?",
+    "category": "frequency_of_latrine_visits",
+    "symptom": "Frequency of visits",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या आपको लात्रीन जाने में दर्द या जलन महसूस हो रही है?",
+    "en": "Are you experiencing pain or burning while using the latrine?",
+    "category": "pain_burning",
+    "symptom": "Pain or burning",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या आपको लात्रीन के बाद उल्टी या मतली का अनुभव हो रहा है?",
+    "en": "Are you experiencing nausea or vomiting after using the latrine?",
+    "category": "latrine_nausea_vomiting",
+    "symptom": "Nausea or vomiting",
+    "risk_factor": False
+  },
+  
+],
+
+
 "blister": [
     {
         "hi": "क्या ये छाले जलने, रगड़ या एलर्जी के बाद आए हैं?",
@@ -6150,30 +6282,6 @@ symptom_followup_questions = {
     },
 ],
 
-"latrine issue": [
-  {
-    "hi": "आप एक दिन में कितनी बार लात्रीन जाते हैं?",
-    "en": "How many times are you going to the latrine in a day?",
-    "category": "frequency_of_latrine_visits",
-    "symptom": "Frequency of visits",
-    "risk_factor": False
-  },
-  {
-    "hi": "क्या आपको लात्रीन जाने में दर्द या जलन महसूस हो रही है?",
-    "en": "Are you experiencing pain or burning while using the latrine?",
-    "category": "pain_burning",
-    "symptom": "Pain or burning",
-    "risk_factor": False
-  },
-  {
-    "hi": "क्या आपको लात्रीन के बाद उल्टी या मतली का अनुभव हो रहा है?",
-    "en": "Are you experiencing nausea or vomiting after using the latrine?",
-    "category": "latrine_nausea_vomiting",
-    "symptom": "Nausea or vomiting",
-    "risk_factor": False
-  },
-  
-],
 
   "cardiac_surgery" : [
 
@@ -6311,7 +6419,7 @@ symptom_followup_questions = {
 # ------------------------------------------------------------------ #
 medications_list = [
     "ibuprofen", "acetaminophen", "paracetamol", "aspirin", "naproxen", "acetylsalicylic acid","crocin", "calpol",
-    "tylenol", "pain relief", "painkiller", "analgesic", 
+    "tylenol", "pain relief", "painkiller", "analgesic",
     "diclofenac", "meloxicam", "celecoxib", "indomethacin", "ketorolac", "butalbital", "dolo" ,"dolo 650",
     "algal oil",  "cod liver oil",  "flaxseed oil", "fish oil", "omega 3", "ORS sachets", "ointment",
     "Electral", "Glucon-D", "Prolyte", "Winlyte", "ORS", "eye drops", "ear drops", "eye drop", "ear drop",
@@ -6455,7 +6563,7 @@ trigger_keywords = {
     },
 'leg': {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
-        'pain': ['pain', 'paining', 'ache', 'aching', 'sore', 'sores', 'soreness', 'painful', 'throbbing', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
+        'pain': ['pain', 'paining', 'ache', 'aching', 'sore', 'sores', 'soreness', 'painful', 'throbbing', 'hurting', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'itching': ['itch', 'itching', 'itches', 'itchy', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
@@ -6470,7 +6578,7 @@ trigger_keywords = {
         'redness': ['redness', 'red', 'reddish', 'bloodshot', 'pink', 'inflamed', 'discoloration'],
         'burn': ['burn', 'burning', 'burnt', 'irritation', 'sting', 'stinging'],
         'weakness': ['weak', 'weakness', 'tired eyes', 'strain', 'fatigued', 'weakened'],
-        'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'discomfort'],
+        'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aches', 'hurt', 'hurts', 'sore',  'hurting','throbbing', 'discomfort'],
         'blurry vision': ['blurry', 'blurred', 'blur', 'blurry vision', 'not clear', 'foggy', 'unclear', 'hazy', 'double vision'],
 	'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
 	'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water','allergy'],
@@ -6478,7 +6586,7 @@ trigger_keywords = {
 	'sight issues': ['sight', 'sight issues','short sight', 'short sightness', 'far sight', 'far sightness', 'long sight', 'long sightness', 'near sight', 'near sightness']
     },
 'hand': {
-        'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
+        'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'hurting', 'throbbing', 'aching'],
 	'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
@@ -6489,7 +6597,7 @@ trigger_keywords = {
 	'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'arm': {
-        'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'throbbing', 'aching'],
+        'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore',  'hurting','throbbing', 'aching'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'tingles','pins', 'needles', 'numbing'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hit', 'knocked', 'bruise', 'bruised', 'sprain'],
         'weakness': ['weak', 'weakened', 'weakness', 'tired', 'fatigue', 'no strength', 'drained'],
@@ -6501,66 +6609,67 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
         'numbness': ['numb', 'numbness', 'no sensation'],
-	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
-	'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt']
+	      'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
+	      'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt', 'hurts']
 	
     },
 'back': {
-        'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
+        'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'hurting', 'sores', 'ache', 'aches', 'aching'],
+	      'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'can’t support', 'loss of strength', 'giving way'],
         'stiffness': ['stiff', 'stiffs', 'stiffness', 'tight', 'tense', 'tension', 'rigid', 'locked','tightness'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'lifted', 'twist', 'twists', 'twisted', 'accident', 'pulled', 'strain', 'strained', 'broken'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
-	'spasm' : ['spasm','spasms','spasmed'],
-	'itching': ['itch', 'itching', 'itchy','itches', 'itchiness', 'scratchy'],
+	      'spasm' : ['spasm','spasms','spasmed'],
+	      'itching': ['itch', 'itching', 'itchy','itches', 'itchiness', 'scratchy'],
         'issue': ['issue', 'bone issue','issues', 'problem', 'problems', 'condition', 'discomfort']
     },
 'chest': {
-        'pain': ['pain', 'pains', 'sore', 'painful', 'paining', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'aches', 'burning', 'burn', 'soreness'],
-	'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
+        'pain': ['pain', 'pains', 'sore', 'painful', 'paining', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'hurting', 'aches', 'burning', 'burn', 'soreness'],
+	      'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'heaviness', 'pressure', 'loss of strength'],
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling'],
         'breathing': [ 'difficulty breathing', 'breathing', 'can’t breathe', 'breathless'],
         'palpitations': ['palpitations', 'racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat'],
-	'itching': ['itch', 'itches', 'itching', 'itchy', 'itchiness', 'scratchy']
+	      'itching': ['itch', 'itches', 'itching', 'itchy', 'itchiness', 'scratchy']
     },
 'wrist': {
-        'pain': ['pain','painful', 'paining', 'sore', 'pains', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'burning', 'soreness'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
+        'pain': ['pain','painful', 'paining', 'sore', 'pains', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'hurting', 'burning', 'soreness'],
+	      'weakness': ['weakness', 'weak', 'fatigued', 'can’t grip', 'loss of strength', 'shaky', 'tremble', 'can’t hold'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'restricted', 'rigid', 'locked'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'fracture', 'fractured', 'twist', 'twisted', 'sprain', 'sprained', 'broke', 'broken']
     },
 'throat': {
-        'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
+        'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'hurting', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing','swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'infectious', 'infected','infections','infected'],
-	'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy']
+	      'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy']
     },
 'stomach': {
-        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains','problem','problems'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
+        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
+	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge']
+        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'burning' : ['burn','burning','burns','burnt','fire']
     },
 'neck': {
-        'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
+        'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'hurting', 'ache', 'aches', 'aching','throbbing'],
+	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'tense', 'tension'],
         'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles'],
-	'itching': ['itch', 'itching', 'itches', 'itchy','scratchy', 'itchiness'],
+	      'itching': ['itch', 'itching', 'itches', 'itchy','scratchy', 'itchiness'],
         'bleeding': ['bleeding', 'blood', 'bleed', 'cut'],
-	'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
+	      'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching']
 
     },
 'knee': {
-        'pain': ['pain', 'pains','painful', 'paining', 'hurt', 'hurts', 'ache', 'aches', 'aching'],
+        'pain': ['pain', 'pains','painful', 'paining', 'hurt', 'hurts', 'ache', 'aches', 'hurting', 'aching'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'locked', 'tight', 'rigid'],
         'injury': ['injury', 'injured', 'twist', 'twisted', 'fall', 'fell', 'hit', 'sprain', 'sprained', 'fracture', 'fractured'],
@@ -6571,8 +6680,8 @@ trigger_keywords = {
 	'soreness': ['sore', 'soreness', 'tender', 'sores', 'discomfort']
     },
 'foot': {
-        'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'ache', 'hurts', 'hurt', 'sore', 'throbbing', 'burning'],
-	'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
+        'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'ache', 'hurts', 'hurt', 'hurting','sore', 'throbbing', 'burning'],
+	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
@@ -6592,7 +6701,7 @@ trigger_keywords = {
 	'itching': ['itch', 'itching', 'itches', 'itchy', 'itchiness', 'scratchy']
     },
 'ear': {
-        'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing'],
+        'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching', 'hurting','throbbing'],
         'hearing loss': ['hearing loss', "can’t hear", 'muffled', 'low hearing'],
         'ringing': ['ringing', 'buzzing', 'tinnitus', 'rings','ring'],
         'discharge': ['discharge', 'fluid', 'pus', 'leaking', 'drainage','discharges','discharged'],
@@ -6738,6 +6847,7 @@ trigger_keywords = {
       'pain':     ['paining','pains','painful', 'paining', 'soreness','hurts','hurting','pain','hurt','sore','sores','ache','aches','cramping','cramps','throbbing'],
       'delayed':   ['delayed','delay','delays','delaying','absent','missed','misses','miss'],
       'bleeding': ['bleeds','bleeding','bled','blood','bleed'],
+      'default':  ['issue','issues']   # no “default” words here; we’ll ask to confirm
 },
 'hip': {
     'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aches', 'aching', 'soreness', 'throbbing', 'sharp', 'burning', 'dull', 'stabbing'],
@@ -7074,7 +7184,7 @@ body_part_followup_questions = {
                 "category": "leg pain",
                     },
               {
-                "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, बछड़ा, पंजा)",
+                "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, पिंडली, पंजा)",
                 "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
                 "category": "leg pain",
                     },
@@ -7666,13 +7776,13 @@ body_part_followup_questions = {
             "symptom": None,
             "risk_factor": False,
         },
-       {
-    "hi": "क्या आपकी रीढ़ या पीठ में पहले कभी कोई चोट, गिरावट या दुर्घटना हुई है?",
-    "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
-    "category": "history_of_injury",
-    "symptom": None,
-    "risk_factor": False,
-       },
+        {
+            "hi": "क्या आपके पिछवाड़े या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
+            "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
+            "category": "history_of_injury",
+            "symptom": "injury",
+            "risk_factor": False,
+        },
         {
             "hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?",
             "en": "Is your back pain in the lower or upper back?",
@@ -7975,15 +8085,19 @@ body_part_followup_questions = {
       "category": "throat pain",
 
     },
+    {
+      "hi": "क्या आपके गले में सूजन या लालिमा है?",
+      "en": "Do you have any swelling or redness in your throat?",
+      "category": "throat pain",
+
+    },
         ],
-
         'swelling': [
-      {
-        "hi": "क्या आपके गले में सूजन गंभीर है?",
-        "en": "Is the swelling in your throat severe?",
-        "category": "throat pain",
-
-      },
+            {
+                'hi': "क्या गले में सूजन के साथ निगलने में भी कठिनाई हो रही है?",
+                'en': "Is the swelling in your throat making it difficult to swallow?",
+                'category': 'throat_swelling_swallowing'
+            }
         ],
         'difficulty_swallowing': [
             {
@@ -8068,6 +8182,13 @@ body_part_followup_questions = {
       "category": "digestive history",
       },
     ],
+
+      'burning': [
+        {
+            'hi': "क्या खाने के बाद पेट में जलन बढ़ जाती है?",
+            'en': "Does the stomach burn increase after eating?",
+            'category': 'stomach_pain_after_eating'
+        },],
 	'weakness': [
             {
                 'hi': "क्या पेट की कमजोरी के कारण उठने या सीधे बैठने में कठिनाई होती है?",
@@ -10917,7 +11038,7 @@ body_part_to_specialist = {
     'jaw': 'Dentist',
     'period pain':'Gynecologist',
     'period bleeding':'Gynecologist',
-    #'period issue': 'Gynecologist',
+    'period issue': 'Gynecologist',
     'period':'Gynecologist',
 }
 
@@ -11428,7 +11549,7 @@ symptom_to_specialist = {
   'period pain': 'Gynecologist',
   'period delayed': 'Gynecologist',
   'period bleeding': 'Gynecologist',
-  #'period issue': 'Gynecologist',
+  'period issue': 'Gynecologist',
 
   'hip pain': 'Orthopedic Specialist',
   'hip stiffness': 'Orthopedic Specialist',
@@ -11560,8 +11681,8 @@ symptom_to_specialist = {
 
   'child pain': 'Pediatrician',
   'child bleeding': 'Pediatrician',
-
   'latrine issue': 'General Practitioner'
+
 
 }
 
@@ -11730,7 +11851,7 @@ HINDI_OFFLINE_DICT = {
   "face issue": "चेहरे की समस्या",
   "hair issue": "बालों की समस्या",
   "heart issue": "हृदय की समस्या",
-  #"period issue": "मासिक धर्म की समस्या",
+  "period issue": "मासिक धर्म की समस्या",
   "jaw issue": "जबड़े की समस्या",
   "hip issue": "कूल्हे की समस्या",
   "waist issue": "कमर की समस्या",
@@ -11822,6 +11943,7 @@ HINDI_OFFLINE_DICT = {
 
   "stomach pain": "पेट में दर्द",
   "stomach weakness": "पेट में कमजोरी",
+  "stomach burning": "पेट में जलन",
   "stomach bloating": "पेट फूलना",
   "stomach nausea": "पेट में मिचली",
   "stomach diarrhea": "पेट में दस्त",
@@ -11973,7 +12095,7 @@ HINDI_OFFLINE_DICT = {
   "period pain": "मासिक धर्म का दर्द",
   "period delayed": "मासिक धर्म में देरी",
   "period bleeding": "मासिक धर्म में रक्तस्राव",
-  #"period issue": "मासिक धर्म की समस्या",
+  "period issue": "मासिक धर्म की समस्या",
 
   "hip pain": "कूल्हे में दर्द",
   "hip stiffness": "कूल्हे का जकड़ना",
@@ -12169,6 +12291,7 @@ HINDI_OFFLINE_DICT = {
     "menopause": "रजोनिवृत्ति",
     "period pain": "पीरियड का दर्द",
     "period bleeding": "पीरियड में रक्तस्राव",
-    #"period issues": "पीरियड से जुड़ी समस्याएं",
+    "period issues": "पीरियड से जुड़ी समस्याएं",
     "abdominal issues": "पेट से जुड़ी समस्याएं",
+    "latrine issue": "लैट्रिन का मुद्दा"
         }
