@@ -19,7 +19,7 @@ symptom_list = [
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
-'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','',
+'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
 #  'arthritis', 'sugar', 'pediatric symptoms',
 ]
 
@@ -212,7 +212,7 @@ symptom_synonyms = {
         'liquid stools'
     ],
     'vomiting': [
-        'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'heaving', 'sick stomach', 'food coming out', 'food came out',
+        'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'sick stomach', 'food coming out', 'food came out',
         'gagging', 'expelling stomach contents', 'stomach expulsion', 'upchucking', 'spitting up', 'retching reflex', 'vomit',
         'forceful expulsion of food', 'involuntary stomach release', 'emetic response', 'feeling of needing to vomit', 'gag reflex triggering', 
         'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
@@ -435,8 +435,8 @@ symptom_synonyms = {
 
 'indigestion': [
     'dyspepsia', 'digestive discomfort', 'fullness after eating', 'nausea after eating', 'acidic stomach','feeling of heaviness', 'difficulty digesting', 'food intolerance',
-     'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening', 'not being digested',
-      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset','less digestion', 'cannot digest', 'not digesting'
+     'nothing is digested','not digesting', 'food not getting digested', 'indigested food', 'lack of digestion', 'digestion not happening', 'not being digested', 'not digested',
+      'digestion problems', 'digestion problem', 'digestive problem', 'digestive problems', 'stomach upset', 'upset stomach', 'stomach is upset','less digestion', 'cannot digest', 'not digesting', 'not digest','not digests'
 ],
 
 'nosebleed': [
@@ -667,7 +667,7 @@ symptom_synonyms = {
 ],
 
 'piles': [
-    'hemorrhoids', 'anal piles', 'rectal swelling', 'internal hemorrhoids', 'external hemorrhoids',
+    'hemorrhoids', 'anal piles', 'rectal swelling', 'internal hemorrhoids', 'external hemorrhoids','piles',
     'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'chronic hemorrhoids',
     'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
@@ -927,205 +927,75 @@ symptom_synonyms = {
 
    }
 
-
-# ------------------------------------------------------------------ #
-# ------------------ Symptom Trees for Dynamic Qna ----------------- #
-# ------------------------------------------------------------------ #
-class SymptomNode:
-    def __init__(self, name, clarifying_questions=None, followup_branches=None):
-        self.name = name
-        self.clarifying_questions = clarifying_questions or []
-        self.followup_branches = followup_branches or []
-        self.visited = False
-        self.children = []
-
-    def add_child(self, child):
-        self.children.append(child)
-
-class DiseaseNode:
-    def __init__(self, name, required_symptoms, diagnostic_questions=None):
-        self.name = name
-        self.required_symptoms = set(required_symptoms)
-        self.diagnostic_questions = diagnostic_questions or []
-	    
-symptom_trees = {
-    # Fever branch
-    "Fever": SymptomNode(
-        name="Fever",
-        clarifying_questions=[
-            {"category": "fever_duration", "question": "How long have you had fever?"},
-            {"category": "fever_pattern", "question": "Does the fever follow any particular pattern?"}
-        ],
-        followup_branches=[
-            SymptomNode(name="Chills", clarifying_questions=[{"category": "chills", "question": "Are you experiencing chills?"}]),
-            SymptomNode(name="Night Sweats", clarifying_questions=[{"category": "night_sweats", "question": "Do you have drenching night sweats?"}]),
-            SymptomNode(name="Headache", clarifying_questions=[{"category": "headache", "question": "Do you have a headache?"}])
-        ]
-    ),
-    
-    # Cough branch
-    "Cough": SymptomNode(
-        name="Cough",
-        clarifying_questions=[
-            {"category": "cough_duration", "question": "How long have you had the cough?"},
-            {"category": "cough_type", "question": "Is your cough dry or productive?"}
-        ],
-        followup_branches=[
-            SymptomNode(name="Cough > 2 wks", clarifying_questions=[{"category": "chronic_cough", "question": "Has your cough lasted more than 2 weeks?"}]),
-            SymptomNode(name="Productive Cough", clarifying_questions=[{"category": "sputum", "question": "Are you coughing up sputum? If so, what color?"}]),
-            SymptomNode(name="Hemoptysis", clarifying_questions=[{"category": "blood_in_sputum", "question": "Are you coughing up blood?"}]),
-            SymptomNode(name="Dry Cough", clarifying_questions=[{"category": "dry_cough", "question": "Is your cough dry without phlegm?"}])
-        ]
-    ),
-    
-    # Respiratory branch
-    "Dyspnea": SymptomNode(
-        name="Dyspnea",
-        clarifying_questions=[{"category": "breathlessness", "question": "How severe is your shortness of breath?"}],
-        followup_branches=[]
-    ),
-    
-    "Chest Pain": SymptomNode(
-        name="Chest Pain",
-        clarifying_questions=[
-            {"category": "chest_pain_type", "question": "Is the pain sharp or dull?"},
-            {"category": "pleuritic", "question": "Does the pain worsen with breathing?"}
-        ],
-        followup_branches=[]
-    ),
-    
-    # Gastrointestinal branch
-    "Abdominal Pain": SymptomNode(
-        name="Abdominal Pain",
-        clarifying_questions=[
-            {"category": "abdominal_location", "question": "Where exactly is the pain located?"},
-            {"category": "abdominal_severity", "question": "How severe is the pain?"}
-        ],
-        followup_branches=[
-            SymptomNode(name="Diarrhea", clarifying_questions=[{"category": "diarrhea", "question": "How many episodes of diarrhea per day?"}]),
-            SymptomNode(name="Constipation", clarifying_questions=[{"category": "constipation", "question": "How many days since last bowel movement?"}])
-        ]
-    ),
-    
-    "Nausea/Vomiting": SymptomNode(
-        name="Nausea/Vomiting",
-        clarifying_questions=[{"category": "vomiting_frequency", "question": "How many times have you vomited?"}],
-        followup_branches=[]
-    ),
-    
-    # Genitourinary branch
-    "Dysuria": SymptomNode(
-        name="Dysuria",
-        clarifying_questions=[{"category": "painful_urination", "question": "Is urination painful or just uncomfortable?"}],
-        followup_branches=[
-            SymptomNode(name="Urgency", clarifying_questions=[{"category": "urgency", "question": "Do you feel sudden strong urges to urinate?"}]),
-            SymptomNode(name="Frequency", clarifying_questions=[{"category": "frequency", "question": "How many times do you urinate per day?"}])
-        ]
-    ),
-    
-    # Systemic branch
-    "Fatigue": SymptomNode(
-        name="Fatigue",
-        clarifying_questions=[{"category": "fatigue_severity", "question": "How debilitating is your fatigue?"}],
-        followup_branches=[]
-    ),
-    
-    "Weight Loss": SymptomNode(
-        name="Weight Loss",
-        clarifying_questions=[
-            {"category": "weight_loss_amount", "question": "How much weight have you lost?"},
-            {"category": "weight_loss_duration", "question": "Over what time period did this weight loss occur?"}
-        ],
-        followup_branches=[]
-    ),
-    
-    # Dermatological branch
-    "Rash": SymptomNode(
-        name="Rash",
-        clarifying_questions=[
-            {"category": "rash_location", "question": "Where is the rash located?"},
-            {"category": "rash_appearance", "question": "How would you describe the rash?"}
-        ],
-        followup_branches=[]
-    ),
-    
-    "Jaundice": SymptomNode(
-        name="Jaundice",
-        clarifying_questions=[{"category": "jaundice_severity", "question": "How yellow is your skin/eyes?"}],
-        followup_branches=[]
-    )
-}
-
 # ------------------------------------------------------------------ #
 # ----------------------- Followup Question ------------------------ #
 # ------------------------------------------------------------------ #
 
 symptom_followup_questions = {
-
   "acidity": [
-
     {
       "hi": "आपको हार्टबर्न या अम्लीय पुन: प्रवाह (acid reflux) कितनी बार होता है?",
       "en": "How often do you experience heartburn or acid reflux?",
       "category": "heartburn",
-      "symptom": "acidity",
+      "symptom": "None",
       "risk_factor": False,    },
      {
       "hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?",
     "en": "Are you experiencing burning sensations in your stomach?",
       "category": "burning_sensation_with_heartburn",
-      "symptom": "acidity",
+      "symptom": None,
       "risk_factor": False,    },
         {
       "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, पाचन में असुविधा या निगलने में कठिनाई महसूस हो रही है?",
     "en": "Do you experience any other symptoms, such as nausea, regurgitation, or difficulty swallowing?",
       "category": "heartburn",
-      "symptom": "acidity",
+      "symptom": "nausea",
       "risk_factor": False,    },
 {
       "hi": "लक्षणों को क्या ट्रिगर करता है या बिगाड़ता है (जैसे कि कुछ खाद्य पदार्थ, लेट जाना, तनाव)?",
       "en": "What triggers or worsens the symptoms (e.g., certain foods, lying down, stress)?",
       "category": "heartburn",
-      "symptom": "acidity",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके आहार, वजन, या जीवनशैली में हाल ही में कोई बदलाव हुआ है?",
       "en": "Have you had any changes in your diet, weight, or lifestyle recently?",
       "category": "dietary changes",
-      "symptom": "acidity",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
   "weakness": [
-      {
-      "hi": "क्या आपको थकान महसूस होती है?",
-      "en": "Do you feel fatigue? ", 
-      "category": "weakness",
-      "symptom": "weakness",
-      "risk_factor": False,    },
     {
         "hi": "क्या आप को नसों या मांसपेशियों से जुड़ी कोई पुरानी समस्या है?",
         "en": "Do you have any chronic nerve or muscle-related condition?",
         "category": "limb_weakness_neuro_muscular_history",
         "symptom": None,
         "risk_factor": True
-    }
+    },
+    {
+      "hi": "क्या आपको थकान महसूस होती है?",
+      "en": "Do you feel fatigue? ", 
+      "category": "weakness",
+      "symptom": "weakness",
+      "risk_factor": False,    },
   ],
 
   "headache": [
     {
+      "hi": "क्या सिरदर्द का कोई विशिष्ट स्थान है?",
+      "en": "Is there a specific location where you feel the headache?",
+      "category": "location_specific",
+      "symptom": "location",
+      "risk_factor": False,    },
+
+          {
       "hi": "क्या आपका सिरदर्द लगातार है या बीच-बीच में आता है?",
       "en": "Is your headache constant or intermittent?",
       "category": "headache_type",
       "symptom": None,
       "risk_factor": False,    },
-    
-    {
-      "hi": "क्या सिरदर्द का कोई विशिष्ट स्थान है?",
-      "en": "Is there a specific location where you feel the headache?",
-      "category": "location_specific",
-      "symptom": "Location-specific headache",
-      "risk_factor": False,    },
+
     {
       "hi": "क्या आपको ध्वनि या रोशनी से संवेदनशीलता है साथ ही सिरदर्द?",
        "en": "Do you have sensitivity to sound or light along with headache?",
@@ -1141,28 +1011,16 @@ symptom_followup_questions = {
 {
       "hi": "क्या सिरदर्द की तीव्रता बढ़ रही है?",
       "en": "Is the intensity of your headache increasing?",
-      "category": "intensity_increase",
+      "category": "intensity",
       "symptom": None,
       "risk_factor": False,    },
   ],
   "nausea": [
-       {
-      "hi": "क्या आपको पेट में दर्द हो रहा है साथ ही मतली?",
-      "en": "Are you experiencing abdominal pain along with nausea?",
-      "category": "abdominal_pain_nausea",
-      "symptom": "abdominal_pain_nausea",
-      "risk_factor": False,    },
  {
       "hi": "क्या आपको उल्टी हो रही है?",
      "en": "Are you vomiting?",
       "category": "vomiting",
       "symptom": "vomiting",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको लगातार मतली महसूस हो रही है?",
-      "en": "Are you experiencing constant nausea?",
-      "category": "constant_nausea",
-      "symptom": None,
       "risk_factor": False,    },
 	{
       "hi": "क्या आपको खाने के बाद मतली होती है?",
@@ -1170,17 +1028,23 @@ symptom_followup_questions = {
       "category": "postprandial_nausea",
       "symptom": "Postprandial nausea",
       "risk_factor": False,    },
+      {
+      "hi": "क्या आपको पेट में दर्द हो रहा है साथ ही मतली?",
+      "en": "Are you experiencing abdominal pain along with nausea?",
+      "category": "abdominal_pain_nausea",
+      "symptom": "abdominal_pain_nausea",
+      "risk_factor": False,    },
     {
       "hi": "क्या आपको सिरदर्द है साथ ही मतली?",
       "en": "Do you have headaches along with nausea?",
       "category": "headache_nausea",
-      "symptom": "Headache",
+      "symptom": "headache",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको कोई चक्कर आ रहे हैं साथ ही मतली?",
       "en": "Are you feeling dizzy along with nausea?",
       "category": "dizziness_nausea",
-      "symptom": "Dizziness",
+      "symptom": "dizziness",
       "risk_factor": False,    },
 
   ],
@@ -1276,13 +1140,13 @@ symptom_followup_questions = {
       "hi": "क्या चक्कर आना अचानक शुरू हुआ था या धीरे-धीरे?",
     "en": "Did the dizziness start suddenly or gradually?",
       "category": "dizziness_onset",
-      "symptom": None,
+      "symptom": "dizziness",
       "risk_factor": False,    },
     {
   "hi": "क्या आप चलते वक्त संतुलन खो रहे हैं?",
   "en": "Are you losing your balance while moving?",
   "category": "balance_issues",
-  "symptom": "Balance issues",
+  "symptom": "balance problem",
   "risk_factor": False,    },
 
 {
@@ -1303,17 +1167,11 @@ symptom_followup_questions = {
       "hi": "क्या चक्कर आने के साथ मतली या उल्टी हो रही है?",
       "en": "Are you experiencing nausea or vomiting along with dizziness?",
       "category": "dizziness_nausea_vomiting",
-      "symptom": None,
+      "symptom": "nausea",
       "risk_factor": False,    },
     
   ],
   "yellow eyes": [
-    {
-      "hi": "क्या आपके आंखों का रंग पीला हो गया है?",
-      "en": "Have your eyes turned yellow?",
-      "category": "jaundice_eye",
-      "symptom": "Jaundice in eyes",
-      "risk_factor": False,    },
     {
       "hi": "क्या आपकी त्वचा भी पीली हो गई है?",
      "en": "Has your skin also turned yellow?",
@@ -1648,8 +1506,8 @@ symptom_followup_questions = {
  {
       "hi": "क्या संक्रमण के कारण आपको किसी विशेष हिस्से में दर्द हो रहा है?",
       "en": "Are you experiencing pain in any specific area due to the infection?",
-      "category": "localized_pain",
-      "symptom": None,
+      "category": "infection",
+      "symptom": "location",
       "risk_factor": False,    },
     
     {
@@ -1664,7 +1522,7 @@ symptom_followup_questions = {
 {
       "hi": "क्या आपकी रुचियों में कमी आई है?",
       "en": "Have you lost interest in your usual activities?",
-      "category": "loss_of_interest",
+      "category": "depression",
       "symptom": None,
       "risk_factor": False,    },   
 
@@ -2982,19 +2840,19 @@ symptom_followup_questions = {
 
   "panic attack": [
     {
-      "hi": "आपको कितनी बार पैनिक अटैक होते हैं?",
+      "hi": "आपको कितनी बार आतंकी हमल होते हैं?",
       "en": "How often do you have panic attacks?",
       "category": "panic_attack",
       "symptom": "frequency of panic attacks",
       "risk_factor": False,    },
     {
-      "hi": "क्या पैनिक अटैक अचानक होते हैं, या आपको कुछ विशेष उत्तेजक (जैसे, तनावपूर्ण स्थिति, भीड़) का पता चलता है?",
+      "hi": "क्या आतंकी हमल अचानक होते हैं, या आपको कुछ विशेष उत्तेजक (जैसे, तनावपूर्ण स्थिति, भीड़) का पता चलता है?",
       "en": "Do the panic attacks occur unexpectedly, or do you notice specific triggers (e.g., stressful situations, crowds)?",
       "category": "panic_attack",
       "symptom": "triggers of panic attacks",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको पैनिक अटैक के अलावा भी चिंता या घबराहट महसूस होती है?",
+      "hi": "क्या आपको आतंकी हमल के अलावा भी चिंता या घबराहट महसूस होती है?",
       "en": "Do you feel anxious or nervous even when you're not having a panic attack?",
       "category": "panic_attack",
       "symptom": "general anxiety",
@@ -3006,7 +2864,7 @@ symptom_followup_questions = {
       "symptom": "recent stressors or trauma",
       "risk_factor": False,    },
     {
-      "hi": "क्या आप पैनिक अटैक के डर से कुछ स्थानों या स्थितियों से बचते हैं?",
+      "hi": "क्या आप आतंकी हमल के डर से कुछ स्थानों या स्थितियों से बचते हैं?",
       "en": "Do you avoid certain situations or places because of the fear of having a panic attack?",
       "category": "panic_attack",
       "symptom": "avoidance behaviors",
@@ -3924,28 +3782,28 @@ symptom_followup_questions = {
 ],
   "nervousness": [
     {
-      "hi": "आप सामान्यतः कब नर्वस या चिंतित महसूस करते हैं?",
+      "hi": "आप सामान्यतः कब घबराहट या चिंतित महसूस करते हैं?",
       "en": "When do you typically feel nervous or anxious?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको नर्वस महसूस कराती है?",
+      "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको घबराहट महसूस कराती है?",
       "en": "Are there specific situations or triggers that make you feel nervous?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "यह नर्वसनेस की भावना आमतौर पर कितनी देर तक रहती है?",
+      "hi": "यह घबराहट की भावना आमतौर पर कितनी देर तक रहती है?",
       "en": "How long do these feelings of nervousness usually last?",
       "category": "nervousness",
       "symptom": None,
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको अपनी नर्वसनेस को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
+      "hi": "क्या आपको अपनी घबराहट को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
       "en": "Do you find it difficult to control or manage your nervousness?",
       "category": "nervousness",
       "symptom": None,
@@ -5884,7 +5742,7 @@ symptom_followup_questions = {
     "hi": "क्या दर्द लगातार कई दिनों से बना हुआ है?",
     "en": "Has the pain been persistent for several days?",
     "category": "body ache",
-    "symptom": None,
+    "symptom": "duration",
     "risk_factor": False,
   },
 ],
@@ -6652,7 +6510,6 @@ trigger_keywords = {
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
-        'diarrhea': ['diarrhea', 'loose stool', 'watery stool', 'frequent stool', 'runny stool'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'burning' : ['burn','burning','burns','burnt','fire']
     },
@@ -8238,23 +8095,7 @@ body_part_followup_questions = {
             'category': 'stomach_nausea_dizziness'
         }
     ],
-    'diarrhea': [
-        {
-            'hi': "क्या दस्त के साथ बुखार या कमजोरी भी महसूस हो रही है?",
-            'en': "Do you experience fever or weakness along with the diarrhea?",
-            'category': 'stomach_diarrhea_additional_symptoms'
-        },
-        {
-            'hi': "क्या मल पानी जैसा है या उसमें कोई बदलाव दिखाई दे रहा है?",
-            'en': "Is your stool watery or has it changed in appearance?",
-            'category': 'stomach_diarrhea_stool_character'
-        },
-        {
-            'hi': "क्या दस्त के साथ पेट में मरोड़ या ऐंठन भी हो रही है?",
-            'en': "Do you have abdominal cramps along with the diarrhea?",
-            'category': 'stomach_diarrhea_cramps'
-        }
-    ],
+
     'default': [
         {
             'hi': "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
@@ -12257,7 +12098,9 @@ HINDI_OFFLINE_DICT = {
 
 	#newly added
     "nose pain": "नाक में दर्द",
+    "tingling": "झुनझुनी",
     "mouth pain": "मुंह में दर्द",
+    "stomach swelling": "पेट में सूजन",
     "weight fluctuation": "वजन में उतार-चढ़ाव",
     "obesity": "मोटापा",
     "more hungry": "अत्यधिक भूख लगना",
