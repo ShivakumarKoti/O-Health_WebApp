@@ -9,18 +9,18 @@ symptom_list = [
 'fever', 'cold', 'runny nose', 'sneezing', 'rash', 'dizziness', 'weakness', 'loss of appetite', 'cough',
 'constipation', 'diarrhea', 'flu', 'shortness of breath', 'rapid breathing','migraine',
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
-'nausea', 'swollen lymph nodes', 'insomnia', 'cancer', 'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
+'nausea', 'swollen lymph nodes', 'insomnia',  'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
 'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight issue',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
-'sleepy','fatigue', 'fracture','stress',
+'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
-#  'arthritis', 'sugar', 'pediatric symptoms',
+#  'arthritis', 'sugar', 'cancer','pediatric symptoms',
 ]
 
 # ------------------------------------------------------------------ #
@@ -260,6 +260,10 @@ symptom_synonyms = {
         'reduced mental acuity', 'messy mental white noise'
     ],
   
+  'cholestrol': ['cholestrol', 'high cholestrol', 'good cholestrol', 'bad cholestrol', 'HDL', 'LDL'],
+
+  'heart problem': ['heart issues', 'heart issue', 'heart related issues', 'heart related issue', 'heart related problem', 'heart related problems', 'heart problem', 'heart problems', 'problems with my heart', 'problem with my heart', 'issues with my heart', 'issues with my heart'],
+
     'memory loss': [
         'forgetfulness', 'difficulty recalling', 'poor memory', 'memory lapses', 'amnestic episodes', 'short-term memory issues', 'difficulty remembering recent events', 'blanking out on details',
         'slip of the mind', 'fuzzy recollections', 'failing memory', 'losing track of thoughts', 'vacant mental storage', 'holes in memory', 'patchy recollection',
@@ -340,12 +344,10 @@ symptom_synonyms = {
     'depressed', 'depressive episode', 'anhedonia', 'negative mood', 'downheartedness', 'so sad'
 ],
 
-'cancer': [
-    'malignant tumor', 'carcinoma', 'neoplasm', 'oncological disease', 'cancerous growth', 'tumor', 'metastatic cancer', 'cancer cells', 'tumor growth',
-    'breast cancer', 'lung cancer', 'skin cancer', 'prostate cancer', 'colon cancer', 'leukemia', 'lymphoma', 'sarcoma', 'head and neck cancer',
-    'pancreatic cancer', 'bladder cancer', 'stomach cancer', 'cancer diagnosis', 'cancerous tumor', 'fatal cancer', 'chronic cancer', 'advanced cancer',
-    'stage 3 cancer', 'cancer treatment', 'chemotherapy', 'radiation therapy', 'cancer stage', 'oncology'
-],
+#'cancer': [
+#    'malignant tumor', 'carcinoma', 'neoplasm', 'oncological disease', 'cancerous growth', 'tumor', 'metastatic cancer', 'cancer cells', 'tumor growth',
+#    'breast cancer', 'lung cancer', 'skin cancer', 'prostate cancer', 'colon cancer', 'leukemia', 'lymphoma', 'sarcoma', 'head and neck cancer', 'pancreatic cancer', 'bladder cancer', 'stomach cancer', 'cancer diagnosis', 'cancerous tumor', 'fatal cancer', 'chronic cancer', 'advanced cancer',
+#    'stage 3 cancer', 'cancer treatment', 'chemotherapy', 'radiation therapy', 'cancer stage', 'oncology'],
 
 'diabetes': [
     'diabetes mellitus', 'high blood sugar', 'high sugar', 'insulin resistance', 'type 0 diabetes', 'type 2 diabetes', 'gestational diabetes', 'sugar diabetes',
@@ -623,6 +625,8 @@ symptom_synonyms = {
     'ligament injury', 'joint sprain', 'ligament strain', 'stretched ligament', 'ligament tear',
     'sprained ligament', 'ligament damage'
 ],
+
+'operation': ['surgery', 'surgeries','operation','operations','operate'],
 
 'strain': [
 
@@ -6087,6 +6091,16 @@ symptom_followup_questions = {
     "symptom": "skin condition history",
     "risk_factor": True,
   },
+],
+
+"operation": [
+    {
+        "hi": "आपरेशन कब हुई थी?",
+        "en": "When was the operation done?",
+        "category": "procedure_details",
+        "symptom": "duration",
+        "risk_factor": False
+    },
 ],
 
 "latrine issue": [
