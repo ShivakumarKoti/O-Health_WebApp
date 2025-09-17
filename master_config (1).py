@@ -15,10 +15,10 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
-'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem',
+'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes',
+'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
 #  'arthritis', 'sugar', 'cancer','pediatric symptoms',
 ]
@@ -353,7 +353,7 @@ symptom_synonyms = {
     'diabetes mellitus', 'high blood sugar', 'high sugar', 'insulin resistance', 'type 0 diabetes', 'type 2 diabetes', 'gestational diabetes', 'sugar diabetes',
     'chronic high blood sugar', 'endocrine disorder', 'metabolic disorder', 'insulin deficiency', 'insulin imbalance', 'glucose intolerance', 'sugar level is high',
     'blood sugar imbalance', 'hyperglycemia', 'diabetic condition', 'diabetic disease', 'diabetic disorder', 'pancreatic disorder', 'non-insulin dependent diabetes',
-    'insulin-dependent diabetes', 'pre-diabetes', 'diabetic'
+    'insulin-dependent diabetes', 'pre-diabetes', 'diabetic', 'I have sugar', 'I am suffering from sugar', 'have sugar', 'has sugar', 'is suffering from sugar', 'suffers from sugar', 'suffering from sugar', 'suffer from sugar'
 ],
 
 'weight loss': [
@@ -808,6 +808,8 @@ symptom_synonyms = {
 'covid': [
     'covid-19', 'coronavirus', 'corona', 'corona virus', 'sars-cov-2 infection', 'pandemic virus', 'covid outbreak'
 ],
+
+'animal bite': ['dog bite', 'cat bite', 'bitten by', 'bit by', 'bite', 'bit', 'monkey bite','snake bite', 'bit by snake', 'bitten by snake'],
 
 'hiv': [
     'human immunodeficiency virus', 'HIV-positive', 'HIV', 'HIV/AIDS', 'acquired immunodeficiency virus'
@@ -1490,18 +1492,6 @@ symptom_followup_questions = {
       "en": "Is the swelling constant or does it come and go?",
       "category": "intermittent_swelling",
       "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सूजन के कारण त्वचा में कोई परिवर्तन हो रहा है?",
-      "en": "Is there any change in the skin due to swelling?",
-      "category": "skin_changes_with_swelling",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सूजन के साथ त्वचा की लालिमा भी है?",
-      "en": "Is there redness of the skin along with swelling?",
-      "category": "redness_with_swelling",
-      "symptom": "redness",
       "risk_factor": False,    },
   ],
 
@@ -7648,7 +7638,7 @@ body_part_followup_questions = {
             "risk_factor": False,
         },
         {
-            "hi": "क्या आपके पिछवाड़े या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
+            "hi": "क्या आपके पीछे या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
             "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
             "category": "history_of_injury",
             "symptom": "injury",
@@ -12103,6 +12093,7 @@ HINDI_OFFLINE_DICT = {
         "throat swelling": "गले में सूजन",
         "stomach bloating": "पेट में फुलाव",
         "stomach nausea": "पेट में मतली",
+        "blister" : "फफोले",
         "neck stiffness": "गरदन में जकड़न",
         "knee swelling": "घुटने में सूजन",
         "shoulder weakness": "कंधे में कमजोरी",
