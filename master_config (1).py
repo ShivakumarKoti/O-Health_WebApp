@@ -1633,7 +1633,7 @@ symptom_followup_questions = {
   },
   
 {
-    "hi": "आपने आखिरी बार कब अपना रक्तचाप जांचवाया था, और उसके परिणाम क्या थे?",
+    "hi": "आपने आखिरी बार कब अपना बीपी जांचवाया था, और उसके परिणाम क्या थे?",
     "en": "When was the last time you had your blood pressure checked, and what were the results?",
     "category": "high blood pressure",
     "symptom": "high blood pressure",
@@ -1699,13 +1699,6 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपने हाल ही में अपने आहार, तरल पदार्थों का सेवन, या शारीरिक गतिविधि स्तर में कोई महत्वपूर्ण बदलाव महसूस किया है?",
     "en": "Have you experienced any significant changes in your diet, fluid intake, or activity level recently?",
-    "category": "low blood pressure",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपको ऐसी कोई स्वास्थ्य समस्याएं हैं, जैसे हृदय संबंधी समस्याएं, अंतःस्रावी विकार, या निर्जलीकरण, जो निम्न रक्तचाप में योगदान कर सकती हैं?",
-    "en": "Do you have any medical conditions, such as heart problems, endocrine disorders, or dehydration, that could contribute to low blood pressure?",
     "category": "low blood pressure",
     "symptom": None,
     "risk_factor": False,
@@ -1967,26 +1960,26 @@ symptom_followup_questions = {
 
    "bloating": [
     {
-      "hi": "क्या फुलाव के साथ पेट में दर्द भी हो रहा है?",
+      "hi": "क्या पेट फूलने के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with bloating?",
       "category": "abdominal_pain_with_bloating",
       "symptom": "stomach pain",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको फुलाव के साथ मतली या उल्टी हो रही है?",
-      "en": "Are you experiencing nausea or vomiting along with bloating?",
+      "hi": "क्या आपको पेट फूलने के साथ उल्टी हो रही है?",
+      "en": "Are you experiencing vomiting along with bloating?",
       "category": "nausea_vomiting_with_bloating",
       "symptom": "nausea",
       "risk_factor": False,    },
     {
-      "hi": "क्या फुलाव के कारण आपको सांस लेने में कठिनाई हो रही है?",
+      "hi": "क्या पेट फूलने के कारण आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Is bloating causing difficulty in breathing?",
       "category": "breathing_difficulty_with_bloating",
       "symptom": "shortness of breath",
       "risk_factor": False,    },
     
     {
-      "hi": "क्या फुलाव के कारण आपको थकान महसूस हो रही है?",
+      "hi": "क्या पेट फूलने के कारण आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued due to bloating?",
       "category": "fatigue_with_bloating",
       "symptom": "fatigue",
@@ -2018,7 +2011,7 @@ symptom_followup_questions = {
 
  "indigestion": [
     {
-      "hi": "क्या आपको गैस या फुलाव महसूस हो रही है?",
+      "hi": "क्या आपको गैस या पेट फूलने का महसूस हो रही है?",
       "en": "Are you feeling gas or bloating?",
       "category": "gas_bloating_with_indigestion",
       "symptom": "gas",
@@ -2168,12 +2161,6 @@ symptom_followup_questions = {
   ],
 
   "blood in stool": [
-    {
-      "hi": "क्या खून का रंग गहरा है या हल्का?",
-      "en": "Is the blood in your stool dark or light-colored?",
-      "category": "blood_color_in_stool",
-      "symptom": None,
-      "risk_factor": False,    },
  
     {
       "hi": "क्या खून आने के कारण आपको कमजोरी महसूस हो रही है?",
@@ -2411,12 +2398,7 @@ symptom_followup_questions = {
   ],
 
   "balance problem": [
-    {
-      "hi": "क्या संतुलन बिगड़ने के साथ चक्कर आना भी हो रहा है?",
-      "en": "Are you experiencing dizziness along with balance problems?",
-      "category": "dizziness_with_balance_problems",
-      "symptom": "dizziness",
-      "risk_factor": False,    },
+    
     {
       "hi": "क्या संतुलन बिगड़ने की समस्या किसी विशेष समय या स्थिति में होती है?",
       "en": "Do balance problems occur more during any specific time or situation?",
@@ -2430,18 +2412,19 @@ symptom_followup_questions = {
       "category": "daily_activity_impact_with_balance_problems",
       "symptom": None,
       "risk_factor": False,    },
+	  {
+      "hi": "क्या संतुलन बिगड़ने के साथ चक्कर आना भी हो रहा है?",
+      "en": "Are you experiencing dizziness along with balance problems?",
+      "category": "dizziness_with_balance_problems",
+      "symptom": "dizziness",
+      "risk_factor": False,    },
     {
       "hi": "क्या संतुलन बिगड़ने के कारण आपको चलने-फिरने में कठिनाई हो रही है?",
       "en": "Are you having difficulty walking due to balance problems?",
       "category": "walking_difficulty_with_balance_problems",
       "symptom": None,
       "risk_factor": False,    },
-      {
-      "hi": "क्या संतुलन बिगड़ने के साथ आपको कोई अन्य लक्षण भी महसूस हो रहे हैं?",
-      "en": "Are you experiencing any other symptoms along with balance problems?",
-      "category": "other_symptoms_with_balance_problems",
-      "symptom": None,
-      "risk_factor": False,    },
+      
   ],
 
   "rapid breathing": [
@@ -3222,7 +3205,7 @@ symptom_followup_questions = {
 
   "sciatica": [
     {
-      "hi": "कटिस्नायुशूल का दर्द कहाँ स्थित है (उदाहरण के लिए, पीठ के निचले हिस्से, नितंब, पैर, पैर)?",
+      "hi": "साइटिका का दर्द कहाँ स्थित है (उदाहरण के लिए, पीठ के निचले हिस्से, नितंब, पैर, पैर)?",
       "en": "Where is the sciatica pain located (e.g., lower back, buttocks, legs, feet)?",
       "category": "sciatica",
       "symptom": "location of pain",
@@ -3356,13 +3339,7 @@ symptom_followup_questions = {
   ],
 
     "migraine": [
-  {
-    "hi": "क्या आप दर्द का प्रकार वर्णित कर सकते हैं? (जैसे की धड़कता, पल्सिंग, चुभने वाला)",
-    "en": "Can you describe the type of pain (e.g., throbbing, pulsating, stabbing)?",
-    "category": "migraine",
-    "symptom": "migraine",
-    "risk_factor": False,
-  },
+
   {
     "hi": "क्या माइग्रेन से पहले कोई चेतावनी संकेत या लक्षण होते हैं? (जैसे की आरा, दृश्य समस्याएं)",
     "en": "Do you experience any warning signs or symptoms before the migraine (e.g., aura, visual disturbances)?",
@@ -3798,8 +3775,8 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या धुंधलापन आता-जाता है, या यह निरंतर है?",
-      "en": "Does the blurriness come and go, or is it constant?",
+      "hi": "क्या आँखों का धुंधलापन आता-जाता रहता है, या यह स्थिर रहता है?",
+      "en": "Does the eye blurriness come and go, or is it constant?",
       "category": "blurred vision",
       "symptom": None,
       "risk_factor": False,
@@ -4217,13 +4194,7 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     },
-    {
-      "hi": "क्या आपको अन्य चिकित्सा स्थितियों का कोई इतिहास है?",
-      "en": "Do you have any history of other medical conditions?",
-      "category": "back bone issue",
-      "symptom": None,
-      "risk_factor": True,
-    },
+    
 ],
 "female issue": [
     {
