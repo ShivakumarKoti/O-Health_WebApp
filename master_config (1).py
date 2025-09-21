@@ -7460,12 +7460,12 @@ body_part_followup_questions = {
  'arm': {
      'pain': [
             {
-                'hi': "क्या आपके हाथ में दर्द लगातार बना रहता है?",
+                'hi': "क्या आपके बांह का दर्द लगातार बना रहता है?",
                 'en': "Is the pain in your arm persistent?",
                 'category': 'arm_pain_detail'
             },
             {
-               "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
+               "hi": "क्या दर्द एक बांह में है या दोनों में?",
                "en": "Is the pain in one arm or both arms?",
                "category": "arm pain",
 
@@ -7477,19 +7477,13 @@ body_part_followup_questions = {
 
             },
             {
-            "hi": "क्या आपको हाल ही में हाथ में कोई चोट, गिरने या आघात का सामना करना पड़ा है?",
-            "en": "Have you had any recent injuries, falls, or trauma to your arm?",
-            "category": "arm pain",
-
-            },
-            {
-            "hi": "क्या आपको अपने हाथ या कंधे को हिलाने में कठिनाई हो रही है?",
+            "hi": "क्या आपको अपने बांह या कंधे को हिलाने में कठिनाई हो रही है?",
             "en": "Do you have difficulty moving your arm or shoulder?",
             "category": "arm pain",
 
             },
             {
-            "hi": "क्या आपको हाथ या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
+            "hi": "क्या आपको बांह या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
             "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
             "category": "arm pain",
 
@@ -7497,7 +7491,7 @@ body_part_followup_questions = {
             ],
     'numbness': [
             {
-                'hi': "क्या सुन्नपन पूरे हाथ में है या किसी खास हिस्से में?",
+                'hi': "क्या सुन्नपन पूरे बांह में है या किसी खास हिस्से में?",
                 'en': "Is the numbness in your entire arm or a specific part?",
                 'category': 'arm_numbness_location'
             }
@@ -7516,21 +7510,21 @@ body_part_followup_questions = {
             ],
      'weakness': [
             {
-                'hi': "क्या हाथ में कमजोरी किसी विशेष क्रिया के बाद महसूस होती है?",
+                'hi': "क्या बांह में कमजोरी किसी विशेष क्रिया के बाद महसूस होती है?",
                 'en': "Do you feel weakness in your arm after any specific activity?",
                 'category': 'arm_weakness_context'
             }
         ],
 	 'spasm': [
             {
-                'hi': "क्या आपके हाथ में ऐंठन किसी काम के दौरान होती है?",
+                'hi': "क्या आपके बांह में ऐंठन किसी काम के दौरान होती है?",
                 'en': "Do you experience arm spasms during any specific activities?",
                 'category': 'arm_spasm_activity'
             }
         ],
 	 'itching': [
             {
-                'hi': "क्या हाथ में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
+                'hi': "क्या बांह में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
                 'en': "Is the itching in your arm localized or spread across the whole arm?",
                 'category': 'arm_itching_extent'
             }
@@ -7538,7 +7532,7 @@ body_part_followup_questions = {
 
         'swelling': [
             {
-                'hi': "क्या हाथ की सूजन के साथ दर्द या लालपन भी है?",
+                'hi': "क्या बांह की सूजन के साथ दर्द या लालपन भी है?",
                 'en': "Is the swelling in your arm accompanied by pain or redness?",
                 'category': 'arm_swelling_signs'
             }
@@ -7546,7 +7540,7 @@ body_part_followup_questions = {
 
         'default': [
             {
-                'hi': "कृपया अपने हाथ की समस्या के बारे में अधिक जानकारी दें।",
+                'hi': "कृपया अपने बांह की समस्या के बारे में अधिक जानकारी दें।",
                 'en': "Please describe your arm issue in more detail.",
                 'category': 'arm_detail'
             }
@@ -7719,7 +7713,7 @@ body_part_followup_questions = {
         ],
 	'issue': [
             {
-                'hi': "कृपया अपनी कलाई की समस्या के बारे में और जानकारी दें।",
+                'hi': "कृपया अपनी पीठ की समस्या के बारे में और जानकारी दें।",
                 'en': "Please describe your back issue in more detail.",
                 'category': 'back_detail'
             }
@@ -8045,37 +8039,29 @@ body_part_followup_questions = {
         ],
     'bloating': [
         {
-            'hi': "क्या पेट में सूजन के साथ गैस या बेलचिंग भी होती है?",
-            'hi': "क्या पेट में फुलाव के साथ गैस या डकार भी होती है?",
-            'en': "Do you experience gas or belching along with the bloating?",
+            'hi': "क्या पेट में सूजन के साथ गैस या डकार भी होती है?",
+            'en': "Do you experience gas or burps along with the bloating?",
             'category': 'stomach_bloating_gas'
         },
         {
-            'hi': "क्या सूजन भोजन करने के तुरंत बाद होती है?",
-            'hi': "क्या फुलाव भोजन करने के तुरंत बाद होती है?",
-            'en': "Does the bloating occur immediately after eating?",
-            'category': 'stomach_bloating_trigger_food'
-        },
-        {
             'hi': "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
-            'hi': "क्या फुलाव के कारण पेट भारी या कड़ा लगता है?",
             'en': "Does your stomach feel heavy or tight due to bloating?",
             'category': 'stomach_bloating_heaviness'
         }
     ],
     'nausea': [
         {
-            'hi': "क्या आपको उल्टी के अलावा मिचली भी महसूस हो रही है?",
+            'hi': "क्या आपको उल्टी के अलावा जी मिचलाना भी महसूस हो रही है?",
             'en': "Are you feeling nauseous, in addition to vomiting?",
             'category': 'stomach_nausea_additional_symptoms'
         },
         {
-            'hi': "क्या मिचली खास तौर पर किसी गंध या खाने से बढ़ जाती है?",
+            'hi': "क्या जी मिचलाना खास तौर पर किसी गंध या खाने से बढ़ जाती है?",
             'en': "Does the nausea get worse with certain smells or foods?",
             'category': 'stomach_nausea_trigger'
         },
         {
-            'hi': "क्या मिचली के साथ चक्कर या थकान भी होती है?",
+            'hi': "क्या जी मिचलाना के साथ चक्कर या थकान भी होती है?",
             'en': "Do you feel dizzy or tired along with the nausea?",
             'category': 'stomach_nausea_dizziness'
         }
@@ -8092,11 +8078,6 @@ body_part_followup_questions = {
             'en': "Does this issue seem related to your eating habits?",
             'category': 'stomach_eating_habit_relation'
         },
-        {
-            'hi': "क्या आप कोई दवा ले रहे हैं जिससे पेट पर असर पड़ रहा हो?",
-            'en': "Are you taking any medications that might be affecting your stomach?",
-            'category': 'stomach_medication_link'
-        }
     ]
 },
 
@@ -8881,7 +8862,7 @@ body_part_followup_questions = {
         ],
         'acne': [
         {
-            'hi': "क्या मुहांसों के साथ दर्द या पस भी होता है?",
+            'hi': "क्या मुहांसों (pimples) के साथ दर्द या पस भी होता है?",
             'en': "Do the pimples come with pain or pus?",
             'category': 'skin_acne_severity'
         }
