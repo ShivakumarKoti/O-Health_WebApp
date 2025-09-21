@@ -1008,13 +1008,7 @@ symptom_followup_questions = {
       "risk_factor": False,    },
 
     {
-      "hi": "क्या आपको ध्वनि या रोशनी से समस्या है साथ ही सिरदर्द ??",
-       "en": "Do you have sensitivity to sound or light along with headache?",
-      "category": "sensory_sensitivity",
-      "symptom": "Sensitivity to sound or light",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको तनाव है साथ ही सिरदर्द?",
+      "hi": "क्या आप सिरदर्द के साथ-साथ तनाव में भी हैं?",
      "en": "Are you under stress along with headache?",
       "category": "stress_headache",
       "symptom": "Stress-related headache",
@@ -1034,19 +1028,19 @@ symptom_followup_questions = {
       "symptom": "vomiting",
       "risk_factor": False,    },
 	{
-      "hi": "क्या आपको खाने के बाद जी मचलता है",
+      "hi": "क्या आपको खाने के बाद जी मचलता है?",
       "en": "Do you feel nauseous after eating?",
       "category": "postprandial_nausea",
       "symptom": "Postprandial nausea",
       "risk_factor": False,    },
       {
-      "hi": "क्या आपको पेट दर्द के साथ जी मचलता है",
+      "hi": "क्या आपको जी मिचलाना के साथ पेट दर्द है?",
       "en": "Are you experiencing abdominal pain along with nausea?",
       "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको सिर दर्द के साथ जी मचलता ह",
+      "hi": "क्या आपको सिर दर्द के साथ जी मचलता है",
       "en": "Do you have headaches along with nausea?",
       "category": "headache_nausea",
       "symptom": "headache",
@@ -1169,14 +1163,14 @@ symptom_followup_questions = {
     
 
     {
-      "hi": "क्या आपको सिरदर्द हो रहा है साथ में चक्कर आना?",
+      "hi": "क्या आपको चक्कर आने के साथ सिरदर्द भी हो रहा है?",
       "en": "Are you having headaches along with dizziness?",
       "category": "headache_dizziness",
       "symptom": "headache",
       "risk_factor": False,    },
 {
-      "hi": "क्या चक्कर आने के साथ मतली या उल्टी हो रही है?",
-      "en": "Are you experiencing nausea or vomiting along with dizziness?",
+      "hi": "क्या चक्कर आने के साथ उल्टी हो रही है?",
+      "en": "Are you experiencing vomiting along with dizziness?",
       "category": "dizziness_nausea_vomiting",
       "symptom": "nausea",
       "risk_factor": False,    },
