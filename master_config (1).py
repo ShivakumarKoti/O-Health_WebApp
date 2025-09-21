@@ -7016,7 +7016,7 @@ body_part_followup_questions = {
         ],
         'pain': [
             {
-                'hi': "क्या दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
+                'hi': "क्या  पैर में दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
                 'en': "Does the pain increase while walking or is it constant?",
                 'category': 'leg_pain_detail'
             },
