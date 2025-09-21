@@ -1389,31 +1389,27 @@ symptom_followup_questions = {
       "en": "Do you have abdominal pain along with diarrhea?",
       "category": "abdominal_pain",
       "symptom": "abdominal pain",
-      "risk_factor": False,    },   
+      "risk_factor": False,    },  
+   {
+      "hi": "क्या आपको दस्त के साथ उल्टी भी हो रही है?",
+      "en": "Are you also experiencing vomiting along with diarrhea?",
+      "category": "vomiting",
+      "symptom": "vomiting",
+      "risk_factor": False,    },
  {
       "hi": "क्या आपको दस्त लगातार हो रहे हैं या कभी-कभी?",
       "en": "Are you experiencing diarrhea continuously or intermittently?",
       "category": "intermittent_diarrea",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको दस्त के साथ उल्टी भी हो रही है?",
-      "en": "Are you also experiencing vomiting along with diarrhea?",
-      "category": "vomiting",
-      "symptom": "vomiting",
-      "risk_factor": False,    },
+   
     {
       "hi": "क्या दस्त के साथ बुखार भी है?",
       "en": "Is there a fever along with diarrhea?",
       "category": "fever",
       "symptom": "fever",
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको दस्त के साथ कोई अन्य लक्षण महसूस हो रहे हैं?",
-      "en": "Are you experiencing any other symptoms along with diarrhea?",
-      "category": "other_symptoms",
-      "symptom": None,
-      "risk_factor": False,    },
+    
 {
       "hi": "क्या आप अपने शरीर से अधिक पानी खो रहे हैं?",
       "en": "Are you losing more water from your body?",
@@ -1513,8 +1509,8 @@ symptom_followup_questions = {
 
   "depression": [
 {
-      "hi": "क्या आपकी रुचियों में कमी आई है?",
-      "en": "Have you lost interest in your usual activities?",
+      "hi": "क्या आपने अपनी सामान्य दिनचर्या में रुचि खो दी है?",
+      "en": "Have you lost interest in your daily routine?",
       "category": "depression",
       "symptom": None,
       "risk_factor": False,    },   
