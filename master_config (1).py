@@ -678,7 +678,7 @@ symptom_synonyms = {
     'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'chronic hemorrhoids',
     'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
-    'itchy anus', 'hemorrhoid treatment', 'hemorrhoid relief'
+    'itchy anus', 'hemorrhoid treatment', 'hemorrhoid relief',
 ],
 
 'hearing loss': [
@@ -932,7 +932,7 @@ symptom_synonyms = {
     "persistent nausea after brain surgery", "post-op seizure",
 ],
 
-'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 
+'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 'toilet problem',
                   'toilet problems','stool does not come'],
 
 
@@ -1008,7 +1008,7 @@ symptom_followup_questions = {
       "risk_factor": False,    },
 
     {
-      "hi": "क्या आपको ध्वनि या रोशनी से संवेदनशीलता है साथ ही सिरदर्द?",
+      "hi": "क्या आपको ध्वनि या रोशनी से समस्या है साथ ही सिरदर्द ??",
        "en": "Do you have sensitivity to sound or light along with headache?",
       "category": "sensory_sensitivity",
       "symptom": "Sensitivity to sound or light",
@@ -1034,25 +1034,25 @@ symptom_followup_questions = {
       "symptom": "vomiting",
       "risk_factor": False,    },
 	{
-      "hi": "क्या आपको खाने के बाद मतली होती है?",
+      "hi": "क्या आपको खाने के बाद जी मचलता है",
       "en": "Do you feel nauseous after eating?",
       "category": "postprandial_nausea",
       "symptom": "Postprandial nausea",
       "risk_factor": False,    },
       {
-      "hi": "क्या आपको पेट में दर्द हो रहा है साथ ही मतली?",
+      "hi": "क्या आपको पेट दर्द के साथ जी मचलता है",
       "en": "Are you experiencing abdominal pain along with nausea?",
-      "category": "abdominal_pain_nausea",
-      "symptom": "abdominal_pain_nausea",
+      "category": "stomach pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको सिरदर्द है साथ ही मतली?",
+      "hi": "क्या आपको सिर दर्द के साथ जी मचलता ह",
       "en": "Do you have headaches along with nausea?",
       "category": "headache_nausea",
       "symptom": "headache",
       "risk_factor": False,    },
     {
-      "hi": "क्या आपको कोई चक्कर आ रहे हैं साथ ही मतली?",
+      "hi": "क्या आपको चक्कर के साथ जी मचलता है",
       "en": "Are you feeling dizzy along with nausea?",
       "category": "dizziness_nausea",
       "symptom": "dizziness",
@@ -1311,7 +1311,7 @@ symptom_followup_questions = {
       "hi": "क्या कब्ज के साथ पेट में दर्द है?",
       "en": "Are you experiencing abdominal pain along with constipation?",
       "category": "abdominal_pain",
-      "symptom": "abdominal pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आप नियमित रूप से पानी पीते हैं?",
@@ -1327,7 +1327,7 @@ symptom_followup_questions = {
   "risk_factor": True,
     },
   {
-  "hi": "क्या आपको थायरॉयड की समस्या या मधुमेह (डायबिटीज़) है?",
+  "hi": "क्या आपको थायरॉयड की समस्या या सुगर ( डायबिटीज़) है?",
   "en": "Do you have thyroid issues or diabetes?",
   "category": "thyroid_or_diabetes",
   "symptom": None,
@@ -1657,7 +1657,7 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
-    "hi": "क्या आपको ऐसी कोई अन्य स्वास्थ्य समस्याएं हैं, जैसे मधुमेह, गुर्दे की बीमारी, या स्लीप एपनिया, जो उच्च रक्तचाप में योगदान कर सकती हैं?",
+    "hi": "क्या आपको ऐसी कोई अन्य स्वास्थ्य समस्याएं है जैसे कि सुगर , गुर्दे की बीमारी,सोते समय सास का रुकना जो उच्च रक्तचाप में योगदान कर सकती हैं?",
     "en": "Do you have any other health conditions, such as diabetes, kidney disease, or sleep apnea, that might contribute to high blood pressure?",
     "category": "high blood pressure",
     "symptom": None,
@@ -1980,7 +1980,7 @@ symptom_followup_questions = {
       "hi": "क्या फुलाव के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with bloating?",
       "category": "abdominal_pain_with_bloating",
-      "symptom": "abdominal pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको फुलाव के साथ मतली या उल्टी हो रही है?",
@@ -2005,23 +2005,12 @@ symptom_followup_questions = {
 
   "gas": [
     {
-      "hi": "क्या आपको पेट में गैस की अधिकता महसूस हो रही है?",
-      "en": "Are you feeling excessive gas in your abdomen?",
-      "category": "excessive_gas",
-      "symptom": "gas",
-      "risk_factor": False,    },
-    {
       "hi": "क्या गैस के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with gas?",
       "category": "abdominal_pain_with_gas",
-      "symptom": "abdominal pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },
-     {
-      "hi": "क्या गैस के साथ आपका मूड भी प्रभावित हो रहा है?",
-      "en": "Is your mood being affected along with gas?",
-      "category": "mood_changes_with_gas",
-      "symptom": "mood changes",
-      "risk_factor": False,    },
+     
     {
       "hi": "क्या गैस के कारण आपको पेट फूलने का अनुभव हो रहा है?",
       "en": "Are you experiencing bloating due to gas?",
@@ -3339,12 +3328,6 @@ symptom_followup_questions = {
 
   "loss of appetite": [
     {
-      "hi": "क्या भूख न लगने की समस्या निरंतर है, या यह आती-जाती रहती है?",
-      "en": "Is the loss of appetite constant, or does it come and go?",
-      "category": "loss_of_appetite",
-      "symptom": "pattern",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपने अपनी खाने की आदतों में कोई और बदलाव महसूस किया है, जैसे थोड़ी मात्रा में खाने के बाद भी पेट भर जाना या कुछ खास प्रकार के खाद्य पदार्थों से बचना?",
       "en": "Have you noticed any other changes in your eating habits, such as feeling full after eating small amounts or avoiding certain types of food?",
       "category": "loss_of_appetite",
@@ -3366,13 +3349,13 @@ symptom_followup_questions = {
       "hi": "क्या आपने हाल ही में कोई संक्रमण, बुखार, या अन्य बीमारियां अनुभव की हैं जो भूख कम होने का कारण बन सकती हैं?",
       "en": "Have you had any recent infections, fevers, or other illnesses that could be contributing to the loss of appetite?",
       "category": "loss_of_appetite",
-      "symptom": "recent illnesses",
+      "symptom": "fever",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको अपनी स्वाद या गंध की भावना में कोई बदलाव महसूस हुआ है, या खाने में कठिनाई हो रही है?",
       "en": "Have you noticed any changes in your sense of taste or smell, or difficulty swallowing food?",
       "category": "loss_of_appetite",
-      "symptom": "taste/smell or swallowing",
+      "symptom": "smell or swallowing changes",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको खाने से संबंधित कोई एलर्जी, पाचन समस्याएं, या पुरानी बीमारियां हैं जो भूख को प्रभावित कर सकती हैं?",
@@ -3487,7 +3470,7 @@ symptom_followup_questions = {
       "hi": "आप कितनी मात्रा में खून खो रहे हैं?",
       "en": "How much blood are you losing?",
       "category": "bleeding",
-      "symptom": "bleeding",
+      "symptom": None,
       "risk_factor": False,
     },
     {
@@ -6416,7 +6399,9 @@ medications_list = [
     "Atorvastatin", "Rosuvastatin", "Clopidogrel", "Aspirin (Low Dose)", "Nitroglycerin", "Isosorbide Dinitrate", "Digoxin", "Diltiazem", "Verapamil", "Warfarin", "Rivaroxaban", "Amlodipine", "Losartan", "Telmisartan", "Enalapril", "Ramipril", "Metoprolol", "Atenolol", "Propranolol", "Hydrochlorothiazide", "Furosemide", 
     "Spironolactone", "Salbutamol Inhaler", "Formoterol", "Budesonide Inhaler", "Montelukast", "Aminophylline", "Theophylline", "Ipratropium Inhaler", "Tiotropium", "Beclomethasone Inhaler", "Ofloxacin Ear Drops", "Neomycin-Polymyxin Ear Drops", "Clotrimazole Ear Drops", "Glycerin Ear Drops", "Betamethasone Ear Drops", 
     "Ciprofloxacin Ear Drops", "Eye Drop", "Ear Drop", "Tobramycin Eye Drops", "Ciprofloxacin Eye Drops", "Azithromycin Eye Drops", "Artificial Tears (Carboxymethylcellulose)", "Hyaluronic Acid Eye Drops", "Olopatadine Eye Drops", "Ketorolac Eye Drops", "Dexamethasone Eye Drops", "Diclofenac Gel", "Volini Gel", "Iodex", 
-    "Methyl Salicylate Cream", "Ketoprofen Patch", "Tolperisone", "Thiocolchicoside", "Cyclobenzaprine", "Arnica Gel", "Capsaicin Cream", "Hormonal Contraceptives (Levonorgestrel)", "Clotrimazole Vaginal Cream", "Fluconazole", "Cranberry Extract (for UTI)", "Nitrofurantoin", "Ciprofloxacin"
+    "Methyl Salicylate Cream", "Ketoprofen Patch", "Tolperisone", "Thiocolchicoside", "Cyclobenzaprine", "Arnica Gel", "Capsaicin Cream", "Hormonal Contraceptives (Levonorgestrel)", "Clotrimazole Vaginal Cream", "Fluconazole", "Cranberry Extract (for UTI)", "Nitrofurantoin", "Ciprofloxacin",
+
+    "ultrasound","MRI","CT scan","lab test"
 ]
 
 trigger_keywords = {
@@ -6515,7 +6500,7 @@ trigger_keywords = {
 	      'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy']
     },
 'stomach': {
-        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches''hurts','hurting','sore','sores','pains'],
+        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurting','sore','sores','pains','problem','problems'],
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
@@ -6777,6 +6762,12 @@ trigger_keywords = {
         'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma'],
 	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
 	'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+    },
+    'testicle': {
+        'problem': ['problem', 'issue','issues','problems','pain','paining','hurt','hurts','hurting','allergy'],
+        'swelling': ['swells','swollen','swells','swelled','swelling'],
+        'itching': ['itches','itch','itching'],
+        'bleeding': ['blood','bleed', 'bleeding','blooded']
     },
 'ankle': {
         'pain': ['pain','painful', 'sore', 'soreness', 'ache', 'hurting', 'paining', 'pains', 'throbbing'],
@@ -10782,6 +10773,39 @@ body_part_followup_questions = {
     ]
 },
 
+'testicle': {
+    'problem': [
+        {
+            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+            'en':"did you previously show any doctor about the issue?",
+            'category': 'testicle problem'
+        }
+    ],
+    'swelling': [
+        {
+            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+            'en':"did you previously show any doctor about the issue?",
+            'category': 'testicle problem'
+        }
+    ],
+    'bleeding': [
+        {
+            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+            'en':"did you previously show any doctor about the issue?",
+            'category': 'testicle problem'
+        }
+    ],
+    'itching': [
+        {
+            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+            'en':"did you previously show any doctor about the issue?",
+            'category': 'testicle problem'
+        }
+    ],
+
+    
+},
+
 'child' : {
     'pain': [
         {
@@ -10989,7 +11013,7 @@ body_parts = [
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles', 'sole',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs',
-    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart',
+    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart','testicle',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body','child'
 ] 
 
@@ -11552,6 +11576,7 @@ symptom_to_specialist = {
   'soles numbness': 'Neurologist',
   'soles cracks': 'Dermatologist',
   'soles itching': 'Dermatologist',
+  'testicle problem': 'General Practitioneer',
 
   'child pain': 'Pediatrician',
   'child bleeding': 'Pediatrician',
@@ -12149,6 +12174,7 @@ HINDI_OFFLINE_DICT = {
     "covid": "कोविड",
     "typhoid": "टाइफाइड",
     "chickenpox": "चेचक",
+    "operation" : "ऑपरेशन" ,
     "kidney issue": "गुर्दे की समस्या",
     "broken tooth": "टूटा हुआ दांत",
     "tooth decay": "दांत सड़ना",
@@ -12168,6 +12194,7 @@ HINDI_OFFLINE_DICT = {
     "menopause": "रजोनिवृत्ति",
     "period pain": "पीरियड का दर्द",
     "period bleeding": "पीरियड में रक्तस्राव",
+    "testicle problem": "अंडकोष समस्या",
     "period issues": "पीरियड से जुड़ी समस्याएं",
     "abdominal issues": "पेट से जुड़ी समस्याएं",
     "latrine issue": "लैट्रिन का मुद्दा"
