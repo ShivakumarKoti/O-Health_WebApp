@@ -3687,7 +3687,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या बेहोश होने से पहले कोई विशिष्ट उत्तेजक या चेतावनी संकेत थे (जैसे चक्कर आना, मितली)?",
+      "hi": "क्या बेहोश होने से पहले कोई विशिष्ट उत्तेजक या चेतावनी संकेत थे (जैसे चक्कर आना, जी मिचलाना)?",
       "en": "Were there any specific triggers or warning signs before you fainted (e.g., dizziness, nausea)?",
       "category": "fainting",
       "symptom": None,
@@ -5016,7 +5016,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको सिरदर्द, मिचली या उल्टी महसूस हो रही है?",
+      "hi": "क्या आपको सिरदर्द, जी मिचलाना या उल्टी महसूस हो रही है?",
       "en": "Are you experiencing headache, nausea, or vomiting?",
       "category": "malaria",
       "symptom": None,
@@ -5075,7 +5075,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको उल्टी, मिचली या पेट में दर्द महसूस हो रहा है?",
+      "hi": "क्या आपको उल्टी, जी मिचलाना या पेट में दर्द महसूस हो रहा है?",
       "en": "Are you experiencing vomiting, nausea, or abdominal pain?",
       "category": "dengue",
       "symptom": None,
@@ -5263,7 +5263,7 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको सिरदर्द, मिचली या थकान महसूस हो रही है?",
+      "hi": "क्या आपको सिरदर्द, जी मिचलाना या थकान महसूस हो रही है?",
       "en": "Are you experiencing headache, nausea, or fatigue?",
       "category": "chickenpox",
       "symptom": "headache",
@@ -6058,7 +6058,7 @@ symptom_followup_questions = {
     "risk_factor": False
   },
   {
-    "hi": "क्या आपको लात्रीन के बाद उल्टी या मतली का अनुभव हो रहा है?",
+    "hi": "क्या आपको लात्रीन के बाद उल्टी या जी मिचलाना का अनुभव हो रहा है?",
     "en": "Are you experiencing nausea or vomiting after using the latrine?",
     "category": "latrine_nausea_vomiting",
     "symptom": "Nausea or vomiting",
@@ -6461,7 +6461,7 @@ trigger_keywords = {
 	      'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy']
     },
 'stomach': {
-        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurting','sore','sores','pains','problem','problems'],
+        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurted','sore','sores','pains','problem','problems'],
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
@@ -7766,7 +7766,7 @@ body_part_followup_questions = {
         ],
         'discomfort': [
             {
-                'hi': "क्या छाती में असहजता के साथ मतली या पसीना भी आता है?",
+                'hi': "क्या छाती में असहजता के साथ जी मिचलाना या पसीना भी आता है?",
                 'en': "Do you experience nausea or sweating along with the discomfort?",
                 'category': 'chest_discomfort_symptoms'
             }
@@ -7991,7 +7991,7 @@ body_part_followup_questions = {
         },
 
         {
-      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
+      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
      "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
       "category": "digestive symptoms",
    },
@@ -11563,7 +11563,7 @@ HINDI_OFFLINE_DICT = {
             "anxiety": "चिंता",
             "depression": "अवसाद",
             "congestion": "जमाव",
-            "nausea": "मतली",
+            "nausea": "जी मिचलाना",
             "swollen lymph nodes": "सूजे हुए लसीका ग्रंथि",
             "insomnia": "अनिद्रा",
             "cancer": "कैंसर",
@@ -11786,7 +11786,7 @@ HINDI_OFFLINE_DICT = {
   "stomach weakness": "पेट में कमजोरी",
   "stomach burning": "पेट में जलन",
   "stomach bloating": "पेट फूलना",
-  "stomach nausea": "पेट में मिचली",
+  "stomach nausea": "पेट में जी मिचलाना",
   "stomach diarrhea": "पेट में दस्त",
 
   "neck pain": "गरदन में दर्द",
@@ -12088,7 +12088,7 @@ HINDI_OFFLINE_DICT = {
         "chest discomfort": "छाती में असुविधा",
         "throat swelling": "गले में सूजन",
         "stomach bloating": "पेट में फुलाव",
-        "stomach nausea": "पेट में मतली",
+        "stomach nausea": "पेट में जी मिचलाना",
         "blister" : "फफोले",
         "neck stiffness": "गरदन में जकड़न",
         "knee swelling": "घुटने में सूजन",
