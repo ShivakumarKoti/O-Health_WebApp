@@ -945,7 +945,7 @@ symptom_synonyms = {
 symptom_followup_questions = {
   "acidity": [
     {
-      "hi": "आपको हार्टबर्न या अम्लीय पुन: प्रवाह (acid reflux) कितनी बार होता है?",
+      "hi": "आपको सीने में जलन या अम्लीय पुन: प्रवाह (acid reflux) कितनी बार होता है?",
       "en": "How often do you experience heartburn or acid reflux?",
       "category": "heartburn",
       "symptom": "None",
