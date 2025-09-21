@@ -5402,7 +5402,7 @@ symptom_followup_questions = {
     "risk_factor": False,
   },
   {
-    "hi": "क्या आपको सुबह के समय मतली या उल्टी होती है?",
+    "hi": "क्या आपको सुबह के समय जी मिचलाना या उल्टी होती है?",
     "en": "Do you experience nausea or vomiting in the morning?",
     "category": "pregnancy",
     "symptom": None,
@@ -5924,7 +5924,7 @@ symptom_followup_questions = {
 	
 "female reproductive issues": [
   {
-    "hi": "क्या आपकी माहवारी अनियमित है या छूट रही है?",
+    "hi": "क्या आपकी माहवारी (periods) अनियमित है या छूट रही है?",
     "en": "Is your menstrual cycle irregular or missing?",
     "category": "female_reproductive_issues",
     "symptom": "female issues",
