@@ -15,8 +15,8 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
-'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol',
-'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking',
+'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol','hydrocele',
+'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking','appendix',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhsoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite', 'arthiritis',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
@@ -204,6 +204,8 @@ symptom_synonyms = {
         'nasal reflex outbursts', 'convulsive sneezing', 'rapid-fire sneezes', 'machine-gun sneezing', 'surprise sneezes', 'sneezy',
         'tickling in nose triggering sneezes', 'uncontrollable nasal reflex', 'sneeze bursts', 'nasal reflex reactions'
     ],
+
+    'hydrocele': ['hydrocele','hydrocil'],
   
    'diarrhea': [
         'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
@@ -306,8 +308,7 @@ symptom_synonyms = {
 ],
 
 'flu': [
-    'influenza', 'seasonal flu', 'viral flu', 'flu virus', 'common flu', 'flu infection', 'respiratory flu', 
-    'viral infection', 'influenza virus', 'contagious flu', 'pandemic flu', 'influenza fever', 'flu epidemic'
+    'influenza', 'flu'
 ],
 
 'infection': [
@@ -6442,7 +6443,8 @@ trigger_keywords = {
         'discomfort': ['discomfort', 'uneasy', 'weird', 'heaviness', 'unusual feeling'],
         'breathing': [ 'difficulty breathing', 'breathing', 'can’t breathe', 'breathless'],
         'palpitations': ['palpitations', 'racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat'],
-	      'itching': ['itch', 'itches', 'itching', 'itchy', 'itchiness', 'scratchy']
+	      'itching': ['itch', 'itches', 'itching', 'itchy', 'itchiness', 'scratchy'],
+        'lump':['lump','lumps']
     },
 'wrist': {
         'pain': ['pain','painful', 'paining', 'sore', 'pains', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'hurting', 'burning', 'soreness'],
@@ -12092,6 +12094,7 @@ HINDI_OFFLINE_DICT = {
         "blister" : "फफोले",
         "neck stiffness": "गरदन में जकड़न",
         "knee swelling": "घुटने में सूजन",
+        "acidity": "अम्लता",
         "shoulder weakness": "कंधे में कमजोरी",
         "ear ringing": "कान में घंटी बजना",
 	"eye weakness": "आँखों में कमजोरी",
@@ -12139,5 +12142,18 @@ HINDI_OFFLINE_DICT = {
     "testicle problem": "अंडकोष समस्या",
     "period issues": "पीरियड से जुड़ी समस्याएं",
     "abdominal issues": "पेट से जुड़ी समस्याएं",
-    "latrine issue": "लैट्रिन का मुद्दा"
+    "latrine issue": "लैट्रिन का मुद्दा",
+    "pains" : "दर्द",
+    "painful" : "दर्दनाक",
+    "paining" : "दर्द",
+    "hurt" : "चोट",
+    "hurts" : "दर्द",
+    "hurting" : "दर्द",
+    "ache" : "दर्द",
+    "aches" : "दर्द",
+    "aching" : "दर्द",
+    "sore" : "दर्द",
+    "soreness" : "दर्द",
+    "discomfort" : "असुविधा",
+    "trouble" : "परेशानी",
         }
