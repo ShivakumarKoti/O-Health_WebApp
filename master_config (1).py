@@ -9661,29 +9661,19 @@ body_part_followup_questions = {
                 'category': 'waist_pain_trigger'
             },
 		 {
-      "hi": "आप दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+      "hi": "आप कमर दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
       "en": "Can you describe the pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "waist pain",
+      "category": "waist pain"
     },
     {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+      "hi": "कमर का दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
       "en": "Where exactly is the pain located? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "waist pain",
+      "category": "waist pain"
     },
     {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+      "hi": "क्या कोई गतिविधि , स्थिति या आराम से कमर का दर्द बढ़ता या कम होता है?",
       "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "waist pain",
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "waist pain",
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "waist pain",
+      "category": "waist pain"
     },
         ],
         'stiffness': [
