@@ -7974,7 +7974,6 @@ body_part_followup_questions = {
             'en': "Does the stomach pain feel like cramping or stabbing?",
             'category': 'stomach_pain_nature'
         },
-
         {
       "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
      "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
@@ -7986,12 +7985,6 @@ body_part_followup_questions = {
       "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
       "category": "stomach ache",
     },   
-{
-  "hi": "पेट दर्द वास्तव में कहाँ स्थित है? क्या यह ऊपरी हिस्से में है या निचले हिस्से में?",
-  "en": "Where exactly is the stomach pain located? Is it the upper part or lower part?",
-  "category": "stomach ache",
-
-}  ,
   {
       "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
       "en": "Have you eaten anything unusual or had any changes in your diet recently?",
