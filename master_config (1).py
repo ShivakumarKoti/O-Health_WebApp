@@ -946,8 +946,8 @@ symptom_synonyms = {
 symptom_followup_questions = {
   "acidity": [
     {
-      "hi": "आपको सीने में जलन या acidity कितनी बार होता है?",
-      "en": "How often do you experience heartburn or acid reflux?",
+      "hi": "आपको कब से एसिडिटी या सीने में जलन हो रही है?",
+      "en": "Since when are you having acidity or burning sensations in chest?",
       "category": "heartburn",
       "symptom": "None",
       "risk_factor": False,    },
