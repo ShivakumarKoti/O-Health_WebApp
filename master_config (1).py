@@ -945,18 +945,19 @@ symptom_synonyms = {
 
 symptom_followup_questions = {
   "acidity": [
-    {
+   {
+      "hi": "क्या आपको पेट में या सीने में जलन हो रही है?",
+      "en": "Are you experiencing burning sensations in your stomach or chest?",
+      "category": "burning_sensation_with_heartburn",
+      "symptom": None,
+      "risk_factor": False,    },
+	  {
       "hi": "आपको कब से एसिडिटी या सीने में जलन हो रही है?",
       "en": "Since when are you having acidity or burning sensations in chest?",
       "category": "heartburn",
       "symptom": "None",
       "risk_factor": False,    },
-     {
-      "hi": "क्या आपको पेट में जलन हो रही है?",
-      "en": "Are you experiencing burning sensations in your stomach?",
-      "category": "burning_sensation_with_heartburn",
-      "symptom": None,
-      "risk_factor": False,    },
+     
         {
       "hi": "क्या आपको उल्टी हो रही है?",
       "en": "Do you experience vomitting?",
