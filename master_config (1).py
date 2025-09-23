@@ -953,13 +953,13 @@ symptom_followup_questions = {
       "risk_factor": False,    },
      {
       "hi": "क्या आपको पेट में जलन हो रही है?",
-    "en": "Are you experiencing burning sensations in your stomach?",
+      "en": "Are you experiencing burning sensations in your stomach?",
       "category": "burning_sensation_with_heartburn",
       "symptom": None,
       "risk_factor": False,    },
         {
-      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, पाचन में असुविधा या निगलने में कठिनाई महसूस हो रही है?",
-    "en": "Do you experience any other symptoms, such as nausea, regurgitation, or difficulty swallowing?",
+      "hi": "क्या आपको उल्टी हो रही है?",
+      "en": "Do you experience vomitting?",
       "category": "heartburn",
       "symptom": None,
       "risk_factor": False,    },
