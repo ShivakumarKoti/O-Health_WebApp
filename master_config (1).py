@@ -946,13 +946,13 @@ symptom_synonyms = {
 symptom_followup_questions = {
   "acidity": [
     {
-      "hi": "आपको सीने में जलन या अम्लीय पुन: प्रवाह (acid reflux) कितनी बार होता है?",
+      "hi": "आपको सीने में जलन या acidity कितनी बार होता है?",
       "en": "How often do you experience heartburn or acid reflux?",
       "category": "heartburn",
       "symptom": "None",
       "risk_factor": False,    },
      {
-      "hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?",
+      "hi": "क्या आपको पेट में जलन हो रही है?",
     "en": "Are you experiencing burning sensations in your stomach?",
       "category": "burning_sensation_with_heartburn",
       "symptom": None,
@@ -961,7 +961,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको अन्य कोई लक्षण जैसे कि उल्टी, पाचन में असुविधा या निगलने में कठिनाई महसूस हो रही है?",
     "en": "Do you experience any other symptoms, such as nausea, regurgitation, or difficulty swallowing?",
       "category": "heartburn",
-      "symptom": "nausea",
+      "symptom": None,
       "risk_factor": False,    },
 {
       "hi": "लक्षणों को क्या ट्रिगर करता है या बिगाड़ता है (जैसे कि कुछ खाद्य पदार्थ, लेट जाना, तनाव)?",
