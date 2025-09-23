@@ -2592,23 +2592,12 @@ symptom_followup_questions = {
       "category": "acne",
       "symptom": "acne location",
       "risk_factor": False,    },
-	  {
-      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
-      "en": "Have you tried any treatments for your acne?",
-      "category": "acne treatments",
-      "symptom": "acne treatment",
-      "risk_factor": False,    },
+	 
     {
       "hi": "क्या आप वर्तमान में कोई स्किनकेयर या मेकअप उत्पाद उपयोग कर रहे हैं?",
       "en": "Are you currently using any skincare or makeup products?",
       "category": "skincare",
       "symptom": "skincare use",
-      "risk_factor": False,    },
-	  {
-      "hi": "आपके एक्ने कितने गंभीर हैं?",
-      "en": "How severe is your acne?",
-      "category": "acne",
-      "symptom": "acne severity",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में किसी को एक्ने है?",
@@ -2621,6 +2610,12 @@ symptom_followup_questions = {
       "en": "Have you noticed any specific triggers for your acne?",
       "category": "acne triggers",
       "symptom": "acne triggers",
+      "risk_factor": False,    },
+	   {
+      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
+      "en": "Have you tried any treatments for your acne?",
+      "category": "acne treatments",
+      "symptom": "acne treatment",
       "risk_factor": False,    },
   ],
 
