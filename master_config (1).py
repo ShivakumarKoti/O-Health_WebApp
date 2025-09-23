@@ -2599,29 +2599,16 @@ symptom_followup_questions = {
       "symptom": "acne treatment",
       "risk_factor": False,    },
     {
-      "hi": "आपके पास किस प्रकार का एक्ने है?",
-      "en": "What type of acne do you have?",
-      "category": "acne",
-      "symptom": "acne type",
-      "risk_factor": False,    },
-    {
-      "hi": "आपके एक्ने कितने गंभीर हैं?",
-      "en": "How severe is your acne?",
-      "category": "acne",
-      "symptom": "acne severity",
-      "risk_factor": False,    },
-    
-    {
       "hi": "क्या आप वर्तमान में कोई स्किनकेयर या मेकअप उत्पाद उपयोग कर रहे हैं?",
       "en": "Are you currently using any skincare or makeup products?",
       "category": "skincare",
       "symptom": "skincare use",
       "risk_factor": False,    },
-    {
-      "hi": "आप कौन सी दवाइयाँ ले रहे हैं?",
-      "en": "What medications are you currently taking?",
-      "category": "medication",
-      "symptom": "medication",
+	  {
+      "hi": "आपके एक्ने कितने गंभीर हैं?",
+      "en": "How severe is your acne?",
+      "category": "acne",
+      "symptom": "acne severity",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में किसी को एक्ने है?",
