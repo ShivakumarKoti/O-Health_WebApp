@@ -434,7 +434,7 @@ symptom_synonyms = {
 'acidity': [
     'acid reflux', 'heartburn', 'sour stomach', 'acidic feeling', 'burning in chest', 'burning sensation in throat','heartburning',
     'stomach acid', 'acid burps', 'sour taste in mouth', 'regurgitation', 'upper abdominal burning',
-    'acid in throat', 'stomach burning', 'gastric acid', 'acid buildup', 'acidic burping', 'throat burn',
+    'acid in throat', 'gastric acid', 'acid buildup', 'acidic burping', 'throat burn',
     'reflux sensation', 'chest discomfort after eating', 'acid sensation', 'acidic regurgitation', 'acidic discomfort',
     'burning after meals', 'acid coming up', 'bitter taste in throat'
 ],
@@ -945,24 +945,23 @@ symptom_synonyms = {
 
 symptom_followup_questions = {
   "acidity": [
-   {
-      "hi": "क्या आपको पेट में या सीने में जलन हो रही है?",
-      "en": "Are you experiencing burning sensations in your stomach or chest?",
-      "category": "burning_sensation_with_heartburn",
-      "symptom": None,
-      "risk_factor": False,    },
-	  {
+    {
       "hi": "आपको कब से एसिडिटी या सीने में जलन हो रही है?",
       "en": "Since when are you having acidity or burning sensations in chest?",
       "category": "heartburn",
-      "symptom": "None",
+      "symptom": "duration",
       "risk_factor": False,    },
-     
+      
+     {
+      "hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?",
+    "en": "Are you experiencing burning sensations in your stomach?",
+      "category": "burning_sensation_with_heartburn",
+      "symptom": None,
+      "risk_factor": False,    },
         {
       "hi": "क्या आपको उल्टी हो रही है?",
       "en": "Do you experience vomitting?",
-      "category": "heartburn",
-      "symptom": None,
+      "symptom": "vomiting",
       "risk_factor": False,    },
 {
       "hi": "लक्षणों को क्या ट्रिगर करता है या बिगाड़ता है (जैसे कि कुछ खाद्य पदार्थ, लेट जाना, तनाव)?",
@@ -994,34 +993,38 @@ symptom_followup_questions = {
       "risk_factor": False,    },
   ],
 
-  "headache": [
-    {
-      "hi": "क्या सिरदर्द का कोई विशिष्ट स्थान है?",
-      "en": "Is there a specific location where you feel the headache?",
-      "category": "location_specific",
-      "symptom": "location",
-      "risk_factor": False,    },
+"headache": [
+  {
+    "hi": "क्या सिरदर्द का कोई विशिष्ट स्थान है?",
+    "en": "Is there a specific location where you feel the headache?",
+    "category": "location_specific",
+    "symptom": "location",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या आपका सिरदर्द लगातार है या बीच-बीच में आता है?",
+    "en": "Is your headache constant or intermittent?",
+    "category": "headache_type",
+    "symptom": None,
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या आप सिरदर्द के साथ-साथ तनाव में भी हैं?",
+    "en": "Are you under stress along with headache?",
+    "category": "stress_headache",
+    "symptom": "Stress-related headache",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या सिरदर्द की तीव्रता बढ़ रही है?",
+    "en": "Is the intensity of your headache increasing?",
+    "category": "intensity",
+    "symptom": None,
+    "risk_factor": False
+  }
+],
 
-          {
-      "hi": "क्या आपका सिरदर्द लगातार है या बीच-बीच में आता है?",
-      "en": "Is your headache constant or intermittent?",
-      "category": "headache_type",
-      "symptom": None,
-      "risk_factor": False,    },
 
-    {
-      "hi": "क्या आप सिरदर्द के साथ-साथ तनाव में भी हैं?",
-     "en": "Are you under stress along with headache?",
-      "category": "stress_headache",
-      "symptom": "Stress-related headache",
-      "risk_factor": False,    },
-{
-      "hi": "क्या सिरदर्द की तीव्रता बढ़ रही है?",
-      "en": "Is the intensity of your headache increasing?",
-      "category": "intensity",
-      "symptom": None,
-      "risk_factor": False,    },
-  ],
   "nausea": [
  {
       "hi": "क्या आपको उल्टी हो रही है?",
@@ -1195,7 +1198,7 @@ symptom_followup_questions = {
 "hi": "क्या आपको पेट में दर्द के साथ पीली आँखें हैं?",
   "en": "Do you have abdominal pain along with yellow eyes?",
       "category": "abdominal_pain",
-      "symptom": "abdominal pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी आँखों में जलन हो रही है?",
@@ -1390,7 +1393,7 @@ symptom_followup_questions = {
       "hi": "क्या दस्त के साथ पेट में दर्द है?",
       "en": "Do you have abdominal pain along with diarrhea?",
       "category": "abdominal_pain",
-      "symptom": "abdominal pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },  
    {
       "hi": "क्या आपको दस्त के साथ उल्टी भी हो रही है?",
@@ -1425,7 +1428,7 @@ symptom_followup_questions = {
       "hi": "क्या उल्टी के साथ पेट में दर्द है?",
       "en": "Do you have abdominal pain along with vomiting?",
       "category": "abdominal_pain",
-      "symptom": "abdominal pain",
+      "symptom": "stomach pain",
       "risk_factor": False,    },    
 {
   "hi": "पिछले चौबीस घंटों में आपको कितनी बार उल्टी हुई?",
@@ -2587,13 +2590,13 @@ symptom_followup_questions = {
   ],
 
   "acne": [
-    {
-      "hi": "आपके पास आमतौर पर एक्ने कहाँ होते हैं?",
-      "en": "Where do you typically get acne?",
-      "category": "acne",
-      "symptom": "acne location",
+	  {
+      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
+      "en": "Have you tried any treatments for your acne?",
+      "category": "acne treatments",
+      "symptom": "acne treatment",
       "risk_factor": False,    },
-	 
+    
     {
       "hi": "क्या आप वर्तमान में कोई स्किनकेयर या मेकअप उत्पाद उपयोग कर रहे हैं?",
       "en": "Are you currently using any skincare or makeup products?",
@@ -2611,12 +2614,6 @@ symptom_followup_questions = {
       "en": "Have you noticed any specific triggers for your acne?",
       "category": "acne triggers",
       "symptom": "acne triggers",
-      "risk_factor": False,    },
-	   {
-      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
-      "en": "Have you tried any treatments for your acne?",
-      "category": "acne treatments",
-      "symptom": "acne treatment",
       "risk_factor": False,    },
   ],
 
@@ -6449,7 +6446,7 @@ trigger_keywords = {
         'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurted','sore','sores','pains','problem','problems'],
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
-        'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
+        #'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'burning' : ['burn','burning','burns','burnt','fire']
     },
@@ -7969,16 +7966,18 @@ body_part_followup_questions = {
             'en': "Is the pain in the upper part of your abdomen or the lower part?",
             'category': 'stomach_pain_location'
         },
+
         {
+      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
+     "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
+      "category": "nausea",
+   },
+
+   {
             'hi': "क्या पेट दर्द के साथ ऐंठन या चुभन जैसा महसूस होता है?",
             'en': "Does the stomach pain feel like cramping or stabbing?",
             'category': 'stomach_pain_nature'
         },
-        {
-      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
-     "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
-      "category": "digestive symptoms",
-   },
 
 {
       "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
@@ -7997,12 +7996,6 @@ body_part_followup_questions = {
       },
     ],
 
-      'burning': [
-        {
-            'hi': "क्या खाने के बाद पेट में जलन बढ़ जाती है?",
-            'en': "Does the stomach burn increase after eating?",
-            'category': 'stomach_pain_after_eating'
-        },],
 	'weakness': [
             {
                 'hi': "क्या पेट की कमजोरी के कारण उठने या सीधे बैठने में कठिनाई होती है?",
@@ -8025,25 +8018,16 @@ body_part_followup_questions = {
             'hi': "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
             'en': "Does your stomach feel heavy or tight due to bloating?",
             'category': 'stomach_bloating_heaviness'
-        }
-    ],
-    'nausea': [
-        {
-            'hi': "क्या आपको उल्टी के अलावा जी मिचलाना भी महसूस हो रही है?",
-            'en': "Are you feeling nauseous, in addition to vomiting?",
-            'category': 'stomach_nausea_additional_symptoms'
         },
-        {
-            'hi': "क्या जी मिचलाना खास तौर पर किसी गंध या खाने से बढ़ जाती है?",
-            'en': "Does the nausea get worse with certain smells or foods?",
-            'category': 'stomach_nausea_trigger'
-        },
-        {
-            'hi': "क्या जी मिचलाना के साथ चक्कर या थकान भी होती है?",
-            'en': "Do you feel dizzy or tired along with the nausea?",
-            'category': 'stomach_nausea_dizziness'
-        }
     ],
+
+    'burning': [
+        {
+            'hi': "क्या खाने के बाद पेट में जलन बढ़ जाती है?",
+            'en': "Does the stomach burn increase after eating?",
+            'category': 'stomach burning',
+        },
+        ],
 
     'default': [
         {
@@ -9663,18 +9647,19 @@ body_part_followup_questions = {
 		 {
       "hi": "आप कमर दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
       "en": "Can you describe the pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "waist pain"
+      "category": "waist pain",
     },
     {
       "hi": "कमर का दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
       "en": "Where exactly is the pain located? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "waist pain"
+      "category": "waist pain",
     },
     {
-      "hi": "क्या कोई गतिविधि , स्थिति या आराम से कमर का दर्द बढ़ता या कम होता है?",
+      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
       "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "waist pain"
+      "category": "waist pain",
     },
+   
         ],
         'stiffness': [
             {
@@ -10881,6 +10866,7 @@ BP_CANON = {
      'bones': 'bone',
      'sole': 'soles',
      'belly': 'stomach',
+     'tree':'stomach',
      'abdomen':'stomach',
      'abdominal':'stomach',
      'tummy': 'stomach',
