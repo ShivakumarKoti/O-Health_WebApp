@@ -961,6 +961,7 @@ symptom_followup_questions = {
         {
       "hi": "क्या आपको उल्टी हो रही है?",
       "en": "Do you experience vomitting?",
+      "category": "burning_sensation_with_heartburn",
       "symptom": "vomiting",
       "risk_factor": False,    },
 {
