@@ -1,9 +1,10 @@
 
+
 #-- coding: utf-8 --
 
 # ------------------------------------------------------------------ #
 # ------------------------- Original symptom ----------------------- #
-# ------------------------------------------------------------------ #
+# ----------------------------------------------------------------- #
 # Original symptom list with potential duplicates
 symptom_list = [
 'fever', 'cold', 'runny nose', 'sneezing', 'rash', 'dizziness', 'weakness', 'loss of appetite', 'cough',
@@ -230,11 +231,8 @@ symptom_synonyms = {
 		'block nose', 'blocked nose', 'close nose', 'closed nose'
     ],
     'sweat': [
-        'sweating','perspiring heavily', 'sweating buckets', 'dripping perspiration', 'bead-like sweat on skin', 'moisture streaming down face', 
-        'constant perspiration','salty perspiration', 'glistening with sweat', 'sweat trickling down spine', 'drenching perspiration',
-        'sweat-laden body', 'humid feeling', 'slick skin', 'warm moisture on skin', 'sweat beads forming everywhere', 'bodily moisture overload', 'persistent dampness', 'sweaty palms and forehead',
-        'sweat dripping off hairline', 'sweat-soaked sheets', 'nocturnal sweating', 'smelly perspiration', 'standing in a pool of sweat', 'sweat forming under arms', 'shiny perspiring face',
-        'sweat-induced chafing', 'slick and slippery feeling', 'permanent dampness'
+        'sweating','perspiring heavily', 'sweating buckets', 'dripping perspiration', 'bead-like sweat on skin', 'moisture streaming down face',
+        'humid feeling', 'warm moisture on skin', 'sweat beads forming everywhere', 'bodily moisture overload', 'persistent dampness', 'sweaty palms and forehead',
     ],
     'swelling': [
         'swollen', 'edema', 'swellings', 'fluid retention', 'swollen body part', 'inflamed tissue', 'puffiness', 'swells', 'enlarged tissue area','swelling'
