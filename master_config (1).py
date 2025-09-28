@@ -6051,6 +6051,7 @@ symptom_followup_questions = {
   },
   
 ],
+	
 
 
 "blister": [
@@ -6077,6 +6078,52 @@ symptom_followup_questions = {
         "risk_factor": False
     },
 ],
+
+
+  "fatty liver": [
+    {
+      "hi": "क्या आपको पेट के ऊपरी दाएं हिस्से में दर्द या भारीपन महसूस होता है?",
+      "en": "Do you feel pain or heaviness in the upper right side of your abdomen?",
+      "category": "upper_abdominal_discomfort",
+      "symptom": "Upper abdominal discomfort",
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपको लगातार थकान महसूस होती है?",
+      "en": "Do you feel persistent fatigue?",
+      "category": "persistent_fatigue",
+      "symptom": "Fatigue",
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आप नियमित रूप से शराब का सेवन करते हैं?",
+      "en": "Do you consume alcohol regularly?",
+      "category": "alcohol_consumption",
+      "symptom": "Alcohol use",
+      "risk_factor": True
+    },
+    {
+      "hi": "क्या आपको मधुमेह (डायबिटीज़) है?",
+      "en": "Do you have diabetes?",
+      "category": "diabetes",
+      "symptom": "Diabetes",
+      "risk_factor": True
+    },
+    {
+      "hi": "क्या आपका वज़न अधिक है या आप मोटापे से ग्रस्त हैं?",
+      "en": "Are you overweight or obese?",
+      "category": "obesity",
+      "symptom": "Obesity",
+      "risk_factor": True
+    },
+    {
+      "hi": "क्या आपके परिवार में किसी को लिवर की बीमारी रही है?",
+      "en": "Is there a history of liver disease in your family?",
+      "category": "family_history_liver_disease",
+      "symptom": "Family history of liver disease",
+      "risk_factor": True
+    },
+  ],
 
 
   "cardiac_surgery" : [
