@@ -3283,45 +3283,53 @@ symptom_followup_questions = {
       "symptom": "medication and treatment history",
       "risk_factor": True,    },
     ],
-
+	
   "loss of appetite": [
     {
-      "hi": "क्या आपने अपनी खाने की आदतों में कोई और बदलाव महसूस किया है, जैसे थोड़ी मात्रा में खाने के बाद भी पेट भर जाना या कुछ खास प्रकार के खाद्य पदार्थों से बचना?",
-      "en": "Have you noticed any other changes in your eating habits, such as feeling full after eating small amounts or avoiding certain types of food?",
-      "category": "loss_of_appetite",
-      "symptom": "eating habits",
-      "risk_factor": False,    },
+      "hi": "क्या आपको वजन कम होता महसूस हो रहा है?",
+      "en": "Have you noticed weight loss?",
+      "category": "weight_loss",
+      "symptom": "Weight loss",
+      "risk_factor": False,
+    },
+   {
+      "hi": "क्या खाना देखकर या सूंघकर भी भूख नहीं लगती?",
+      "en": "Do you not feel hungry even when you see or smell food?",
+      "category": "no_hunger_response",
+      "symptom": "No hunger response to food",
+      "risk_factor": False,
+    },
+	  {
+    "hi": "क्या आपकी जीवनशैली हाल ही में अचानक बदल गई है (जैसे डाइटिंग, शारीरिक गतिविधि)?",
+    "en": "Has your lifestyle changed recently (e.g., dieting, physical activity)?",
+    "category": "lifestyle_change",
+    "symptom": "Lifestyle changes",
+    "risk_factor": True,
+  },
     {
-      "hi": "क्या आप कोई दवाइयां ले रहे हैं, और क्या वे आपकी भूख पर प्रभाव डाल सकती हैं (जैसे दर्द निवारक, एंटीडिप्रेसेंट्स, या कीमोथेरेपी)?",
-      "en": "Are you currently taking any medications, and could they be affecting your appetite (e.g., painkillers, antidepressants, or chemotherapy)?",
-      "category": "loss_of_appetite",
-      "symptom": "medications",
-      "risk_factor": False,    },
+      "hi": "क्या आप तनाव, चिंता या अवसाद का अनुभव कर रहे हैं?",
+      "en": "Are you experiencing stress, anxiety, or depression?",
+      "category": "mental_health",
+      "symptom": "Mental health conditions",
+      "risk_factor": False,
+    },
     {
-      "hi": "क्या आपको कोई शारीरिक स्वास्थ्य समस्याएं हैं, जैसे गैस्ट्रोइंटेस्टाइनल विकार, संक्रमण, थायरॉयड समस्या, या मानसिक स्वास्थ्य समस्याएं (जैसे अवसाद या खाने से संबंधित विकार)?",
-      "en": "Do you have any underlying health conditions, such as gastrointestinal disorders, infections, thyroid problems, or mental health conditions (e.g., depression or eating disorders)?",
-      "category": "loss_of_appetite",
-      "symptom": "underlying health conditions",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने हाल ही में कोई संक्रमण, बुखार, या अन्य बीमारियां अनुभव की हैं जो भूख कम होने का कारण बन सकती हैं?",
-      "en": "Have you had any recent infections, fevers, or other illnesses that could be contributing to the loss of appetite?",
-      "category": "loss_of_appetite",
-      "symptom": "fever",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको अपनी स्वाद या गंध की भावना में कोई बदलाव महसूस हुआ है, या खाने में कठिनाई हो रही है?",
-      "en": "Have you noticed any changes in your sense of taste or smell, or difficulty swallowing food?",
-      "category": "loss_of_appetite",
-      "symptom": "smell or swallowing changes",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको खाने से संबंधित कोई एलर्जी, पाचन समस्याएं, या पुरानी बीमारियां हैं जो भूख को प्रभावित कर सकती हैं?",
-      "en": "Do you have a history of food allergies, digestive issues, or chronic conditions that might affect your appetite?",
-      "category": "loss_of_appetite",
-      "symptom": "history of digestive or food-related issues",
-      "risk_factor": True,    },
+      "hi": "क्या आपको पेट से जुड़ी कोई समस्या है, जैसे गैस, बदहजमी, या कब्ज?",
+      "en": "Do you have any digestive issues such as gas, indigestion, or constipation?",
+      "category": "digestive_issues",
+      "symptom": "Digestive problems",
+      "risk_factor": False,
+    },
+  {
+    "hi": "क्या आपको हार्मोनल समस्या जैसे थायरॉइड की बीमारी है?",
+    "en": "Do you have a hormonal issue such as thyroid disorder?",
+    "category": "thyroid_or_hormonal",
+    "symptom": "Thyroid or hormonal imbalance",
+    "risk_factor": True,
+  },
+
   ],
+
 
     "migraine": [
 
