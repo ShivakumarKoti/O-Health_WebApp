@@ -933,6 +933,11 @@ symptom_synonyms = {
 
 'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 'toilet problem',
                   'toilet problems','stool does not come'],
+	
+'fatty liver': ['fatty liver', 'liver fat', 'liver swelling', 'liver heaviness', 'fat buildup in liver', 'fat liver', 'liver is fat', 'liver is fatty',
+            'hepatic steatosis', 'liver steatosis', 'fatty infiltration of liver','fat deposits in liver', 'fat accumulation in liver',
+            'nafld', 'enlarged liver'],
+
 
 
    }
