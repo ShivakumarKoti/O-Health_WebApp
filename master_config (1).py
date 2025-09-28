@@ -10912,7 +10912,7 @@ body_parts = [
     'mouth', 'nose', 'tooth', 'tooths', 'teeth', 'tongue','lip', 'lips', 'cheek','cheeks', 'chin', 'forehead','thigh', 'thighs',
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles', 'sole',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
-    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs',
+    'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs', 'liver',
     'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart','testicle',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body','child'
 ] 
@@ -11071,6 +11071,7 @@ symptom_to_specialist = {
 
     # Hepatologist: Liver-related symptoms
     'jaundice': 'Hepatologist',
+	'fatty liver': 'Hepatologist',
 
     # Pediatrician: Pediatric symptoms
     'pediatric symptoms': 'Pediatrician',
@@ -12112,4 +12113,5 @@ HINDI_OFFLINE_DICT = {
     "soreness" : "दर्द",
     "discomfort" : "असुविधा",
     "trouble" : "परेशानी",
+	"fatty liver": "फैटी लिवर",
         }
