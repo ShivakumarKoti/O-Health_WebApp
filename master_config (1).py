@@ -6159,6 +6159,141 @@ symptom_followup_questions = {
     },
   ],
 
+	"hernia": [
+  {
+    "hi": "क्या आपको पेट या कमर में कोई उभार या सूजन दिख रही है?",
+    "en": "Do you notice any bulge or swelling in your abdomen or groin area?",
+    "category": "visible_bulge",
+    "symptom": "Visible bulge/swelling",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या वह उभार खाँसने, झुकने या भारी चीज़ उठाने पर अधिक उभरता है?",
+    "en": "Does the bulge become more prominent when you cough, bend, or lift something heavy?",
+    "category": "bulge_triggered_by_strain",
+    "symptom": "Bulge triggered by strain",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको उस स्थान पर दर्द या असहजता महसूस होती है जहाँ उभार है?",
+    "en": "Do you feel pain or discomfort at the site of the bulge?",
+    "category": "pain_at_bulge",
+    "symptom": "Pain or discomfort at bulge site",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको कब्ज़, गैस या मल त्याग में कोई समस्या हो रही है?",
+    "en": "Are you experiencing constipation, gas, or difficulty passing stool?",
+    "category": "digestive_issues",
+    "symptom": "Digestive problems",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको पहले किसी प्रकार का हर्निया हुआ है या उसका ऑपरेशन हुआ है?",
+    "en": "Have you had a hernia before or undergone hernia surgery?",
+    "category": "history_of_hernia",
+    "symptom": "Past hernia or surgery",
+    "risk_factor": true
+  },
+  {
+    "hi": "क्या आपका काम भारी सामान उठाने से जुड़ा हुआ है?",
+    "en": "Does your work involve lifting heavy objects?",
+    "category": "heavy_lifting_occupation",
+    "symptom": "Occupation-related risk",
+    "risk_factor": true
+  }
+],
+"appendicitis": [
+  {
+    "hi": "क्या आपको पेट के नाभि के पास तीव्र दर्द हो रहा है जो बाद में दाहिने निचले हिस्से में चला जाता है?",
+    "en": "Are you experiencing sharp pain near your navel that later shifts to the lower right side of your abdomen?",
+    "category": "pain_location",
+    "symptom": "Pain location and migration",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको मतली या उल्टी हो रही है?",
+    "en": "Are you feeling nauseous or vomiting?",
+    "category": "nausea_vomiting",
+    "symptom": "Nausea or vomiting",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको भूख कम लग रही है?",
+    "en": "Are you experiencing loss of appetite?",
+    "category": "loss_of_appetite",
+    "symptom": "Loss of appetite",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको तेज बुखार आ रहा है?",
+    "en": "Do you have a high fever?",
+    "category": "fever",
+    "symptom": "Fever",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको पेट के निचले हिस्से में दबाव या सूजन महसूस हो रही है?",
+    "en": "Are you experiencing tenderness or swelling in the lower abdomen?",
+    "category": "tenderness_swelling",
+    "symptom": "Tenderness or swelling",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या दर्द गहरे साँस लेने, खांसने या हँसने पर बढ़ जाता है?",
+    "en": "Does the pain worsen with deep breathing, coughing, or laughing?",
+    "category": "pain_worsening_factors",
+    "symptom": "Pain worsens with movement",
+    "risk_factor": false
+  }
+],
+	"gallstones": [
+  {
+    "hi": "क्या आपको पेट के ऊपरी दाहिने हिस्से में तेज या तीव्र दर्द होता है?",
+    "en": "Do you experience sharp or intense pain in the upper right part of your abdomen?",
+    "category": "upper_right_abdominal_pain",
+    "symptom": "Upper right abdominal pain",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या दर्द भोजन करने के बाद या रात के समय अधिक होता है?",
+    "en": "Does the pain get worse after eating or at night?",
+    "category": "pain_timing",
+    "symptom": "Pain after eating or at night",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको मतली या उल्टी हो रही है?",
+    "en": "Are you experiencing nausea or vomiting?",
+    "category": "nausea_vomiting",
+    "symptom": "Nausea or vomiting",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपका पीलिया (पीली त्वचा या आंखें) हो रहा है?",
+    "en": "Do you have jaundice (yellowing of the skin or eyes)?",
+    "category": "jaundice",
+    "symptom": "Jaundice",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको बुखार या ठंड लग रही है?",
+    "en": "Do you have fever or chills?",
+    "category": "fever_chills",
+    "symptom": "Fever or chills",
+    "risk_factor": false
+  },
+  {
+    "hi": "क्या आपको पेट में सूजन या सूजन महसूस हो रही है?",
+    "en": "Are you experiencing bloating or abdominal swelling?",
+    "category": "bloating_swelling",
+    "symptom": "Bloating or swelling",
+    "risk_factor": false
+  }
+],
+
+
+
 
   "cardiac_surgery" : [
 
