@@ -12195,4 +12195,8 @@ HINDI_OFFLINE_DICT = {
     "discomfort" : "असुविधा",
     "trouble" : "परेशानी",
 	"fatty liver": "फैटी लिवर",
+	"hernia": "हर्निया",
+    "appendicitis": "अपेंडिसाइटिस",
+    "gallstones": "पित्त की पथरी",
+    "hydrocele": "हाइड्रोसील",
         }
