@@ -938,6 +938,32 @@ symptom_synonyms = {
             'hepatic steatosis', 'liver steatosis', 'fatty infiltration of liver','fat deposits in liver', 'fat accumulation in liver',
             'nafld', 'enlarged liver'],
 
+'hernia': [
+    'hernia', 'hernial', 'abdominal bulge', 'inguinal hernia', 'hiatal hernia', 'umbilical hernia', 'femoral hernia', 
+	'incisional hernia', 'epigastric hernia', 'ventral hernia', 'intestinal bulge', 
+    'hernial sac', 'abdominal wall defect'],
+	
+'hydrocele': [
+    'hydrocele', 'scrotal swelling', 'fluid in scrotum', 'scrotal fluid collection',
+    'scrotal sac swelling', 'testicular swelling', 'painless scrotal swelling',
+    'fluid-filled sac', 'scrotal enlargement', 'swollen scrotum', 'enlarged scrotum',
+    'hydroceles', 'non-tender scrotal mass', 'scrotal mass', 'scrotal bulge',
+    'fluid accumulation in scrotum', 'scrotal distention', 'tunica vaginalis fluid'],
+	
+'appendicitis': [
+    'appendicitis', 'inflamed appendix', 'appendix inflammation', 'appendix',
+    'acute appendicitis', 'chronic appendicitis', 'appendix pain', 'appendix problem', 'appendix issue',
+    'pain in appendix', 'appendiceal inflammation', 'appendix infection', 'appendiceal pain'],
+	
+'gallstones': [
+    'gallstones', 'cholelithiasis', 'gallstone disease', 'biliary stones', 'gallbladder stone',
+    'stones in gallbladder', 'gallbladder stones', 'gall stone', 'stone in gallbladder', 'gall bladder stone',
+    'gallbladder calculi', 'bile stones', 'gall stones', 'gallstones', 'gallbladder colic',
+    'stone in bile duct', 'gall bladder stones'
+],
+
+
+
 
 
    }
