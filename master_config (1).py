@@ -829,6 +829,11 @@ symptom_synonyms = {
     'pyelonephritis', 'kidney infection', 'hydronephrosis', 'kidney fail','kidney stone',
     'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
+'liver issue': [
+    'liver disease', 'hepatitis', 'liver failure', 'hepatomegaly','elevated liver enzymes', 'liver inflammation', 
+    'liver cancer', 'liver fibrosis', 'liver abscess', 'liver problem', 'liver problems', 'liver issue', 'liver issues',
+	'issue in liver', 'issues in liver', 'problem in liver', 'problems in liver'
+],
 
 'wound': [
     'laceration', 'abrasion', 'open wound',
