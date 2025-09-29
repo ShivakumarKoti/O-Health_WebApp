@@ -11305,6 +11305,7 @@ symptom_to_specialist = {
     # Hepatologist: Liver-related symptoms
     'jaundice': 'Hepatologist',
 	'fatty liver': 'Hepatologist',
+	'liver issue': 'Hepatologist',
 
     # Pediatrician: Pediatric symptoms
     'pediatric symptoms': 'Pediatrician',
@@ -12350,6 +12351,7 @@ HINDI_OFFLINE_DICT = {
     "discomfort" : "असुविधा",
     "trouble" : "परेशानी",
 	"fatty liver": "फैटी लिवर",
+	"liver issue": "लिवर की समस्या",
 	"hernia": "हर्निया",
     "appendicitis": "अपेंडिसाइटिस",
     "gallstones": "पित्त की पथरी",
