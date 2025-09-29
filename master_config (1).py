@@ -12,7 +12,7 @@ symptom_list = [
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
 'nausea', 'swollen lymph nodes', 'insomnia',  'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
-'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight issue',
+'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight issue', 'liver issue',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice', 'hernia', 'appendicitis', 'gallstones',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
