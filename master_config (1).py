@@ -5366,6 +5366,59 @@ symptom_followup_questions = {
     "risk_factor": True,
   },
 ],
+
+"liver issue": [
+  {
+    "hi": "क्या आपको पेट के ऊपरी दाएं हिस्से में दर्द या असहजता होती है?",
+    "en": "Do you experience pain or discomfort in the upper right side of your abdomen?",
+    "category": "liver issue",
+    "symptom": "upper right abdominal pain",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपका पेट फूला हुआ या सूजा हुआ महसूस होता है?",
+    "en": "Do you feel bloating or swelling in your abdomen?",
+    "category": "liver issue",
+    "symptom": "abdominal bloating",
+    "risk_factor": False,
+  },
+	{
+    "hi": "क्या आपको शराब पीने की आदत है या पहले थी?",
+    "en": "Do you currently or previously consume alcohol regularly?",
+    "category": "liver issue",
+    "symptom": "alcohol use",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपको अत्यधिक थकान या कमजोरी महसूस होती है?",
+    "en": "Do you feel excessive fatigue or weakness?",
+    "category": "liver issue",
+    "symptom": "fatigue",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको भूख में कमी महसूस होती है?",
+    "en": "Have you experienced a loss of appetite?",
+    "category": "liver issue",
+    "symptom": "loss of appetite",
+    "risk_factor": False,
+  },
+  {
+    "hi": "क्या आपको हेपेटाइटिस (A, B, या C) का संक्रमण हुआ है?",
+    "en": "Have you ever had a hepatitis infection (A, B, or C)?",
+    "category": "liver issue",
+    "symptom": "hepatitis infection",
+    "risk_factor": True,
+  },
+  {
+    "hi": "क्या आपके परिवार में किसी को लिवर की बीमारी रही है?",
+    "en": "Is there a family history of liver disease?",
+    "category": "liver issue",
+    "symptom": None,
+    "risk_factor": True,
+  },
+],
+	
  "broken voice": [
   {
     "hi": "क्या आपकी आवाज़ भारी, कर्कश या सामान्य से अलग लग रही है?",
