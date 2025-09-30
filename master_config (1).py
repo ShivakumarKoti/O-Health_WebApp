@@ -11715,7 +11715,7 @@ symptom_to_specialist = {
 
   'child pain': 'Pediatrician',
   'child bleeding': 'Pediatrician',
-  'latrine issue': 'General Practitioner'
+  'latrine issue': 'General Practitioner',
   'hernia': 'General Surgeon',
   'appendicitis': 'General Surgeon',
   'gallstones': 'Gastroenterologist',
