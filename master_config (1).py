@@ -178,7 +178,7 @@ symptom_synonyms = {
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
-        'red bumps on skin', 'inflamed skin', 'patchy rash', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
+        'red bumps on skin', 'inflamed skin', 'discolored skin', 'eczema', 'psoriasis patches', 'contact dermatitis', 'hives breakout', 'heat rashes'
         'welts on skin', 'itchy patches on skin', 'skin redness', 'rash with pus', 'pimple-like rash', 'rash caused by allergic reaction', 'rashes', 'skinrash', 'hives',
         'rashes from medication', 'painful itching on skin'
     ],
@@ -210,7 +210,7 @@ symptom_synonyms = {
   
    'diarrhea': [
         'loose stools', 'loose motion', 'frequent bowel movements', 'watery stools', 'runny stools', 'loose bowels', 'urgent need to defecate', 'watery bowel movements', 
-        'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement',
+        'frequent trips to the bathroom', 'diarrhea with cramping', 'abnormal stool consistency', 'watery feces', 'fecal urgency', 'loose bowel movement', 'loose motion',
         'digestive distress', 'frequent liquid stools', 'runny bowel movements', 'intense bowel movements', 'diarrhoea',
         'diarrheal episode', 'loose stool rush', 'pale watery stools', 'frequent bowel clearing', 'fluid-filled stools', 'uncontrolled liquid stools', 'loose stool frequency',
         'constantly running to the bathroom', 'liquid-filled intestines', 'abnormally frequent bowel movements', 'severe bowel looseness', 'bowel irregularity',
