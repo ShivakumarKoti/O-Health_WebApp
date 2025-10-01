@@ -5316,13 +5316,7 @@ symptom_followup_questions = {
     },
   ],
 "kidney issue": [
-  {
-    "hi": "क्या आपके पेशाब में किसी प्रकार का बदलाव (जैसे रंग, गंध, झाग या मात्रा) हुआ है?",
-    "en": "Have you noticed any changes in your urine, such as color, odor, foaminess, or volume?",
-    "category": "kidney issue",
-    "symptom": None,
-    "risk_factor": False,
-  },
+ 
   {
     "hi": "क्या आपको पीठ के निचले हिस्से या पसलियों के नीचे दर्द होता है?",
     "en": "Do you experience pain in your lower back or under your ribs?",
@@ -5364,6 +5358,13 @@ symptom_followup_questions = {
     "category": "kidney issue",
     "symptom": "diabetes",
     "risk_factor": True,
+  },
+	 {
+    "hi": "क्या आपके पेशाब में किसी प्रकार का बदलाव (जैसे रंग, गंध, झाग या मात्रा) हुआ है?",
+    "en": "Have you noticed any changes in your urine, such as color, odor, foaminess, or volume?",
+    "category": "kidney issue",
+    "symptom": None,
+    "risk_factor": False,
   },
 ],
 
