@@ -1,5 +1,6 @@
 
 
+
 #-- coding: utf-8 --
 
 # ------------------------------------------------------------------ #
@@ -12,7 +13,7 @@ symptom_list = [
 'itching', 'swelling', 'vomiting', 'infection', 'inflammation', 'cramp', 'bleeding', 'irritation', 'anxiety', 'depression','congestion',
 'nausea', 'swollen lymph nodes', 'insomnia',  'diabetes', 'allergy', 'weight loss', 'weight gain', 'hair loss', 'blurred vision',
 'numbness', 'dry mouth', 'frequent urination', 'acne', 'confusion', 'memory loss', 'difficulty swallowing', 'restlessness', 'bloating',
-'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issues', 'blood in stool', 'high blood pressure', 'weight issue', 'liver issue',
+'gas', 'indigestion', 'acidity', 'nosebleed', 'urine issue', 'blood in stool', 'high blood pressure', 'weight issue', 'liver issue',
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice', 'hernia', 'appendicitis', 'gallstones',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
@@ -283,8 +284,8 @@ symptom_synonyms = {
         'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot'
     ],
   'hallucination': [
-    'delusion', 'illusion', 'false perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions','hallucinate','hallucination','hearing voices',
-    'perceptual distortion', 'false sensory experience', 'phantom perception', 'psychotic episode', 'imagined sight', 'imagined sound', 'mind illusion',
+    'delusion', 'illusion', 'False perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions','hallucinate','hallucination','hearing voices',
+    'perceptual distortion', 'False sensory experience', 'phantom perception', 'psychotic episode', 'imagined sight', 'imagined sound', 'mind illusion',
     'sensory misperception', 'hallucinatory experience', 'out-of-body experience', 'visual illusion', 'auditory illusion', 'mental delusion', 'altered reality'
 ],
 
@@ -455,7 +456,7 @@ symptom_synonyms = {
     'whistling in the ear', 'high-pitched sound', 'low-pitched ear sound', 'phantom sounds', 'ear sensation', 'auditory disturbance', 'ear rings'
 ],
 
-'urine issues': [
+'urine issue': [
     'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
@@ -982,8 +983,8 @@ symptom_followup_questions = {
     {
       "hi": "आपको कब से एसिडिटी या सीने में जलन हो रही है?",
       "en": "Since when are you having acidity or burning sensations in chest?",
-      "category": "heartburn",
-      "symptom": "duration",
+      "category": "duration",
+      "symptom": None,
       "risk_factor": False,    },
       
      {
@@ -1047,7 +1048,7 @@ symptom_followup_questions = {
     "hi": "क्या आप सिरदर्द के साथ-साथ तनाव में भी हैं?",
     "en": "Are you under stress along with headache?",
     "category": "stress_headache",
-    "symptom": "Stress-related headache",
+    "symptom": "Stress",
     "risk_factor": False
   },
   {
@@ -1100,28 +1101,28 @@ symptom_followup_questions = {
     "hi": "आपके लिए सबसे बड़ा तनाव का कारण क्या है?",
     "en": "What is the biggest cause of stress for you?",
     "category": "primary_stressor",
-    "symptom": "stress_trigger",
+    "symptom": "cause",
     "risk_factor": True
   },
   {
     "hi": "तनाव बढ़ने पर शरीर में कौन से लक्षण आते हैं?",
     "en": "What physical symptoms do you experience when stress increases?",
     "category": "physical_symptoms_stress",
-    "symptom": "stress_symptoms",
+    "symptom": "others",
     "risk_factor": False
   },
   {
     "hi": "क्या तनाव ने आपकी नींद या भूख पर असर डाला है?",
     "en": "Has stress affected your sleep or appetite?",
     "category": "sleep_appetite_impact",
-    "symptom": "insomnia_or_loss_appetite",
+    "symptom": "insomnia",
     "risk_factor": False
   },
   {
     "hi": "तनाव कम करने के लिए आप कौन से तरीके इस्तेमाल करते हैं?",
     "en": "What methods do you use to reduce stress?",
     "category": "stress_management_methods",
-    "symptom": "coping_mechanism",
+    "symptom": "history",
     "risk_factor": False
   },
   {
@@ -1138,14 +1139,14 @@ symptom_followup_questions = {
     "hi": "क्या आपकी नाक बह रही है?",
   "en": "Do you have a runny nose?",
     "category": "runny_nose",
-    "symptom": "Runny nose",
+    "symptom": "runny nose",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको गले में खराश है साथ ही नाक बंद है?",
    "en": "Do you have a sore throat along with nasal congestion?",
     "category": "sore_throat_congestion",
-    "symptom": "Sore throat with congestion",
+    "symptom": "sore throat",
     "risk_factor": False,
   },
 
@@ -1153,7 +1154,7 @@ symptom_followup_questions = {
     "hi": "क्या आपकी आवाज़ भारी लग रही है?",
   "en": "Does your voice sound congested or muffled?",
     "category": "voice_congestion",
-    "symptom": "Voice congestion",
+    "symptom": "voice congestion",
     "risk_factor": False,
   },
   {
@@ -1198,7 +1199,7 @@ symptom_followup_questions = {
       "hi": "क्या चक्कर आना चलने या खड़े होने पर बढ़ता है?",
      "en": "Does the dizziness increase when walking or standing?",
       "category": "position_related_dizziness",
-      "symptom": "Position-related dizziness",
+      "symptom": "exercise",
       "risk_factor": False,    },
     
 
@@ -2234,7 +2235,7 @@ symptom_followup_questions = {
       "hi": "क्या अत्यधिक प्यास के कारण आप पर्याप्त पानी पी रहे हैं?",
       "en": "Are you drinking enough water due to excessive thirst?",
       "category": "hydration_with_thirst",
-      "symptom": "dehydration",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या अत्यधिक प्यास के साथ आपको कमजोरी भी महसूस हो रही है?",
@@ -2316,13 +2317,13 @@ symptom_followup_questions = {
       "hi": "क्या आपको ठंड लगना सामान्य से अधिक हो रहा है?",
       "en": "Are you feeling cold more than usual?",
       "category": "excessive_cold",
-      "symptom": "feeling cold",
+      "symptom": "cold",
       "risk_factor": False,    },
     {
       "hi": "क्या ठंड महसूस होने के साथ आपको दर्द भी हो रहा है?",
       "en": "Are you experiencing pain along with feeling cold?",
       "category": "pain_with_feeling_cold",
-      "symptom": "pain",
+      "symptom": "other",
       "risk_factor": False,    },
     {
       "hi": "क्या ठंड महसूस होने के कारण आपके शरीर में कोई कमजोरी आ रही है?",
@@ -2832,25 +2833,25 @@ symptom_followup_questions = {
       "hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन या आघातक घटना अनुभव की है?",
       "en": "Have you experienced any major life stressors or traumatic events recently?",
       "category": "panic_attack",
-      "symptom": "recent stressors or trauma",
+      "symptom": "mental health changes",
       "risk_factor": False,    },
     {
       "hi": "क्या आप आतंकी हमल के डर से कुछ स्थानों या स्थितियों से बचते हैं?",
       "en": "Do you avoid certain situations or places because of the fear of having a panic attack?",
       "category": "panic_attack",
-      "symptom": "avoidance behaviors",
+      "symptom": "other",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको किसी अन्य मानसिक स्वास्थ्य समस्याओं का निदान हुआ है, जैसे चिंता, अवसाद, या PTSD?",
       "en": "Have you been diagnosed with any other mental health conditions, such as anxiety, depression, or PTSD?",
       "category": "panic_attack",
-      "symptom": "co-occurring mental health conditions",
+      "symptom": "mental health disorder",
       "risk_factor": False,    },
     {
       "hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर या हर्बल सप्लीमेंट्स भी शामिल हैं?",
       "en": "Are you taking any medications, including over-the-counter or herbal supplements?",
       "category": "panic_attack",
-      "symptom": "medication use",
+      "symptom": "medication",
       "risk_factor": False,    },
 
   ],
@@ -2861,7 +2862,7 @@ symptom_followup_questions = {
       "hi": "आपके मूड स्विंग्स कितनी बार होते हैं?",
       "en": "How often do your mood swings occur?",
       "category": "mood_swings",
-      "symptom": "mood swings",
+      "symptom": "frequency",
       "risk_factor": False,    },
     {
       "hi": "आप किस प्रकार के मूड परिवर्तनों का अनुभव करते हैं (जैसे, बहुत खुश या बहुत उदास महसूस करना)?",
@@ -2873,37 +2874,37 @@ symptom_followup_questions = {
       "hi": "क्या आपके मूड स्विंग्स कुछ विशेष घटनाओं या परिस्थितियों द्वारा प्रेरित होते हैं?",
       "en": "Do your mood swings seem to be triggered by specific events or situations?",
       "category": None,
-      "symptom": "triggers of mood swings",
+      "symptom": "cause",
       "risk_factor": False,    },
     {
       "hi": "क्या आप मूड स्विंग्स के बीच चिड़चिड़े, चिंतित, या अवसादित महसूस करते हैं?",
       "en": "Do you feel irritable, anxious, or depressed between mood swings?",
       "category": "mood_swings",
-      "symptom": "mood between swings",
+      "symptom": "mental health changes",
       "risk_factor": False,    },
     {
       "hi": "क्या आपने अपने मूड परिवर्तनों में कोई पैटर्न देखा है, जैसे दिन के कुछ विशेष समयों या सप्ताह के दिनों में?",
       "en": "Have you noticed any patterns in your mood changes, such as certain times of the day or during the week?",
       "category": "mood_swings",
-      "symptom": "patterns of mood changes",
+      "symptom": "cause",
       "risk_factor": False,    },
     {
       "hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन, तनावपूर्ण घटना या आघातक अनुभव किया है?",
       "en": "Have you experienced any major life stressors, changes, or traumatic events recently?",
       "category": "mood_swings",
-      "symptom": "recent life stressors or trauma",
+      "symptom": "mental health changes",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में मूड विकारों, जैसे बाइपोलर डिसऑर्डर या अवसाद का इतिहास है?",
       "en": "Do you have a family history of mood disorders, such as bipolar disorder or depression?",
       "category": "mood_swings",
-      "symptom": "family history of mood disorders",
+      "symptom": "family history of mental health",
       "risk_factor": False,    },
     {
       "hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर दवाइयाँ या हर्बल सप्लीमेंट्स शामिल हैं, जो आपके मूड को प्रभावित कर सकते हैं?",
       "en": "Are you taking any medications, including over-the-counter or herbal supplements, that could affect your mood?",
       "category": "mood_swings",
-      "symptom": "medication use affecting mood",
+      "symptom": "medication",
       "risk_factor": False,    },
   ],
 
@@ -2980,7 +2981,7 @@ symptom_followup_questions = {
       "risk_factor": False,    },
     {
       "hi": "क्या भ्रांतियाँ आपको वास्तविक लगती हैं, या आप उन्हें झूठी पहचानते हैं?",
-      "en": "Do the hallucinations seem real to you, or do you recognize them as being false?",
+      "en": "Do the hallucinations seem real to you, or do you recognize them as being False?",
       "category": "hallucinations",
       "symptom": None,
       "risk_factor": False,    },
@@ -5605,7 +5606,7 @@ symptom_followup_questions = {
   },
 ],
 
-   "urine issues": [
+   "urine issue": [
   {
     "hi": "क्या आपको पेशाब करते समय जलन या दर्द होता है?",
     "en": "Do you feel a burning sensation or pain while urinating?",
@@ -5616,7 +5617,7 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपकी पेशाब का रंग सामान्य से अलग है (जैसे गहरा पीला, लाल या बदरंग)?",
     "en": "Is the color of your urine different from normal (e.g., dark yellow, red, or cloudy)?",
-    "category": "urine issues",
+    "category": "urine issue",
     "symptom": None,
     "risk_factor": False,
   },
@@ -5630,28 +5631,28 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपको पेशाब में खून दिखा है?",
     "en": "Have you noticed blood in your urine?",
-    "category": "urine issues",
+    "category": "urine issue",
     "symptom": "blood in urine",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको मधुमेह (डायबिटीज़) है?",
     "en": "Do you have diabetes?",
-    "category": "urine issues",
+    "category": "urine issue",
     "symptom": "diabetes",
     "risk_factor": True,
   },
   {
     "hi": "क्या आपने हाल ही में पानी या तरल पदार्थ कम पिया है?",
     "en": "Have you recently been drinking less water or fluids?",
-    "category": "urine issues",
+    "category": "urine issue",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको बार-बार पेशाब आने के साथ-साथ अधूरी पेशाब महसूस होती है?",
     "en": "Do you feel the urge to urinate frequently but pass only a small amount each time?",
-    "category": "urine issues",
+    "category": "urine issue",
     "symptom": None,
     "risk_factor": False,
   },
@@ -6118,14 +6119,14 @@ symptom_followup_questions = {
     "hi": "आप एक दिन में कितनी बार लात्रीन जाते हैं?",
     "en": "How many times are you going to the latrine in a day?",
     "category": "frequency_of_latrine_visits",
-    "symptom": "Frequency of visits",
+    "symptom": "frequency",
     "risk_factor": False
   },
   {
     "hi": "क्या आपको लात्रीन जाने में दर्द या जलन महसूस हो रही है?",
     "en": "Are you experiencing pain or burning while using the latrine?",
     "category": "pain_burning",
-    "symptom": "Pain or burning",
+    "symptom": "pain during latrine",
     "risk_factor": False
   },
   {
@@ -7062,3904 +7063,4969 @@ trigger_keywords = {
 
 
 body_part_followup_questions = {
-   
-    'tooth': {
-    'injury': [
-        {
-            'hi': "क्या चोट लगने के बाद दाँत में दर्द है?",
-            'en': "Is there pain in the tooth after the injury?",
-            'category': 'tooth_injury_pain'
-        },
-        {
-            'hi': "चोट कैसे लगी थी?",
-            'en': "How did the injury happen?",
-            'category': 'tooth_injury_cause'
-        },
-        {
-            'hi': "क्या चोट लगने के बाद दाँत हिलने लगा है?",
-            'en': "Is the tooth loose after the injury?",
-            'category': 'tooth_injury_looseness'
-        }
+  "tooth": {
+    "injury": [
+      {
+        "hi": "क्या चोट लगने के बाद दाँत में दर्द है?",
+        "en": "Is there pain in the tooth after the injury?",
+        "category": "tooth_injury_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "चोट कैसे लगी थी?",
+        "en": "How did the injury happen?",
+        "category": "tooth_injury_cause",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या चोट लगने के बाद दाँत हिलने लगा है?",
+        "en": "Is the tooth loose after the injury?",
+        "category": "tooth_injury_looseness",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-    'sensitivity': [
-        {
-            'hi': "क्या दाँत या मसूड़े छूने पर संवेदनशील लग रहे हैं?",
-            'en': "Are your teeth or gums feeling sensitive to touch?",
-            'category': 'tooth_sensitivity'
-        },
-        {
-            'hi': "क्या गर्म या ठंडा खाने पर दर्द होता है?",
-            'en': "Do you feel pain when eating or drinking something hot or cold?",
-            'category': 'tooth_sensitivity_temp'
-        },
-        {
-            'hi': "क्या मीठा खाने पर भी संवेदनशीलता होती है?",
-            'en': "Do you feel sensitivity when eating sweets?",
-            'category': 'tooth_sensitivity_sweets'
-        }
+    "sensitivity": [
+      {
+        "hi": "क्या दाँत या मसूड़े छूने पर संवेदनशील लग रहे हैं?",
+        "en": "Are your teeth or gums feeling sensitive to touch?",
+        "category": "tooth_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्म या ठंडा खाने पर दर्द होता है?",
+        "en": "Do you feel pain when eating or drinking something hot or cold?",
+        "category": "tooth_sensitivity_temp",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या मीठा खाने पर भी संवेदनशीलता होती है?",
+        "en": "Do you feel sensitivity when eating sweets?",
+        "category": "tooth_sensitivity_sweets",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-    'pain':[
-        
-            {
-      "hi": "क्या आप दांत के दर्द (तीव्र, धड़कते, लगातार या रुक-रुक कर) का वर्णन कर सकते हैं?",
-      "en": "Can you describe the tooth pain (sharp, throbbing, constant, or intermittent)?",
-      "category": "tooth pain",
-      
-    },
-    {
-      "hi": "क्या यह दर्द गर्म, ठंडा, या मीठे खाद्य या पेय पदार्थों से उत्तेजित होता है?",
-      "en": "Is the pain triggered by hot, cold, or sweet foods or drinks?",
-      "category": "tooth pain",
- 
-    },
-    {
-      "hi": "क्या आपने हाल ही में दंत चिकित्सा कार्य या दांत में किसी प्रकार का आघात अनुभव किया है?",
-      "en": "Have you had any recent dental work or trauma to the tooth?",
-      "category": "tooth pain",
-
-    },
-    {
-      "hi": "क्या आपको चबाने या काटने में कोई कठिनाई हो रही है?",
-      "en": "Are you having difficulty chewing or biting down?",
-      "category": "tooth pain",
-
-    },
-    {
-      "hi": "क्या आपको कीड़े, मसूड़ों की बीमारी, या अन्य दंत समस्याओं का इतिहास है?",
-      "en": "Have you had a history of cavities, gum disease, or other dental issues?",
-      "category": "tooth pain",
-
-    }
+    "pain": [
+      {
+        "hi": "क्या आप दांत के दर्द (तीव्र, धड़कते, लगातार या रुक-रुक कर) का वर्णन कर सकते हैं?",
+        "en": "Can you describe the tooth pain (sharp, throbbing, constant, or intermittent)?",
+        "category": "tooth pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या यह दर्द गर्म, ठंडा, या मीठे खाद्य या पेय पदार्थों से उत्तेजित होता है?",
+        "en": "Is the pain triggered by hot, cold, or sweet foods or drinks?",
+        "category": "tooth pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में दंत चिकित्सा कार्य या दांत में किसी प्रकार का आघात अनुभव किया है?",
+        "en": "Have you had any recent dental work or trauma to the tooth?",
+        "category": "tooth pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको चबाने या काटने में कोई कठिनाई हो रही है?",
+        "en": "Are you having difficulty chewing or biting down?",
+        "category": "tooth pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको कीड़े, मसूड़ों की बीमारी, या अन्य दंत समस्याओं का इतिहास है?",
+        "en": "Have you had a history of cavities, gum disease, or other dental issues?",
+        "category": "tooth pain",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-    'broken': [
-          {
-    "hi": "क्या आपके दांत में दरार, टूट-फूट, या चिप लगी हुई है?",
-    "en": "Do you have a crack, fracture, or chip in your tooth?",
-    "category": "broken tooth",
-
-  },
-  {
-    "hi": "क्या आप चबाते समय दांत में दर्द या संवेदनशीलता महसूस कर रहे हैं?",
-    "en": "Do you feel pain or sensitivity in the tooth while chewing?",
-    "category": "broken tooth",
-
-  },
-  {
-    "hi": "क्या आपका टूटा हुआ दांत खाने, पीने या बोलने में परेशानी पैदा कर रहा है?",
-    "en": "Is the broken tooth causing difficulty while eating, drinking, or speaking?",
-    "category": "broken tooth",
-
-  },
-  {
-    "hi": "क्या आपने हाल ही में किसी दुर्घटना, गिरावट या कठोर चीज काटने के बाद दांत टूटने का अनुभव किया है?",
-    "en": "Did the tooth break after an accident, fall, or biting something hard?",
-    "category": "broken tooth",
-  },
-  {
-    "hi": "क्या आपके पास पहले से दांत क्षय (कीड़ा लगना) या कमजोर दांतों का इतिहास है?",
-    "en": "Do you have a history of tooth decay or weakened teeth?",
-    "category": "broken tooth",
-
-  },
+    "broken": [
+      {
+        "hi": "क्या आपके दांत में दरार, टूट-फूट, या चिप लगी हुई है?",
+        "en": "Do you have a crack, fracture, or chip in your tooth?",
+        "category": "broken tooth",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप चबाते समय दांत में दर्द या संवेदनशीलता महसूस कर रहे हैं?",
+        "en": "Do you feel pain or sensitivity in the tooth while chewing?",
+        "category": "broken tooth",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपका टूटा हुआ दांत खाने, पीने या बोलने में परेशानी पैदा कर रहा है?",
+        "en": "Is the broken tooth causing difficulty while eating, drinking, or speaking?",
+        "category": "broken tooth",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में किसी दुर्घटना, गिरावट या कठोर चीज काटने के बाद दांत टूटने का अनुभव किया है?",
+        "en": "Did the tooth break after an accident, fall, or biting something hard?",
+        "category": "broken tooth",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके पास पहले से दांत क्षय (कीड़ा लगना) या कमजोर दांतों का इतिहास है?",
+        "en": "Do you have a history of tooth decay or weakened teeth?",
+        "category": "broken tooth",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-    'decay':[ 
+    "decay": [
       {
         "hi": "क्या आपके किसी दांत में काले धब्बे, गड्ढे या छेद दिखाई दे रहे हैं?",
         "en": "Do you see black spots, pits, or holes in any of your teeth?",
         "category": "tooth decay",
-
+        "symptom": None,
+        "risk_factor": False
       },
       {
         "hi": "क्या आपको मीठे, गर्म या ठंडे खाद्य पदार्थों से दांत में संवेदनशीलता या दर्द होता है?",
         "en": "Do you feel sensitivity or pain in your tooth when eating sweet, hot, or cold foods?",
         "category": "tooth decay",
-
+        "symptom": None,
+        "risk_factor": False
       },
       {
         "hi": "क्या आपके मुंह से दुर्गंध आती है या कोई खराब स्वाद बना रहता है?",
         "en": "Do you experience bad breath or a persistent unpleasant taste in your mouth?",
         "category": "tooth decay",
-
+        "symptom": None,
+        "risk_factor": False
       },
       {
         "hi": "क्या आपके मसूड़े सूजे हुए हैं या उनमें से खून आता है?",
         "en": "Are your gums swollen or do they bleed?",
         "category": "tooth decay",
-
+        "symptom": None,
+        "risk_factor": False
       },
       {
         "hi": "क्या आप नियमित रूप से मीठे खाद्य पदार्थ खाते हैं या दिन में कई बार स्नैक्स लेते हैं?",
         "en": "Do you frequently eat sugary foods or snack multiple times a day?",
         "category": "tooth decay",
-
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "tingling": [
+      {
+        "hi": "क्या आपके दाँतों में झुनझुनाहट के साथ दर्द भी होता है?",
+        "en": "Do you experience pain along with tingling in your teeth?",
+        "category": "teeth_tingling_pain",
+        "symptom": None,
+        "risk_factor": False
       },
+      {
+        "hi": "क्या दाँतों में झुनझुनाहट ठंडा या गर्म खाने पर बढ़ जाती है?",
+        "en": "Does the tingling in your teeth worsen with hot or cold foods?",
+        "category": "teeth_tingling_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-  'tingling': [
-            {
-                'hi': "क्या आपके दाँतों में झुनझुनाहट के साथ दर्द भी होता है?",
-                'en': "Do you experience pain along with tingling in your teeth?",
-                'category': 'teeth_tingling_pain'
-            },
-            {
-                'hi': "क्या दाँतों में झुनझुनाहट ठंडा या गर्म खाने पर बढ़ जाती है?",
-                'en': "Does the tingling in your teeth worsen with hot or cold foods?",
-                'category': 'teeth_tingling_sensitivity'
-            },
-        ],
-    'default': [
-        {
-            'hi': "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
-            'en': "Can you describe more about your tooth issue?",
-            'category': 'tooth_detail'
-        },
+    "default": [
+      {
+        "hi": "क्या आप अपने दाँत की समस्या के बारे में अधिक बता सकते हैं?",
+        "en": "Can you describe more about your tooth issue?",
+        "category": "tooth_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
     ]
-},
-	 'leg': {
-        'injury': [
-            {
-    'hi': "कौन सी टांग या टांगे घायल हैं?",
-    'en': "Which leg or legs are injured?",
-    'category': 'leg_injury_location'
+  },
+  "leg": {
+    "injury": [
+      {
+        "hi": "कौन सी टांग या टांगे घायल हैं?",
+        "en": "Which leg or legs are injured?",
+        "category": "leg_injury_location",
+        "symptom": None,
+        "risk_factor": False
       },
-        {
-    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
-    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-    "category": "general injury",
-  },
-        ],
-        'pain': [
-            {
-                'hi': "क्या  पैर में दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
-                'en': "Does the pain increase while walking or is it constant?",
-                'category': 'leg_pain_detail'
-            },
-            {
-                "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
-                "en": "Was there any specific injury or event that triggered the leg pain?",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, पिंडली, पंजा)",
-                "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "क्या चलने, दौड़ने या खड़े होने से पैर का दर्द बढ़ जाता है?",
-              "en": "Does the leg pain get worse with walking, running, or standing?",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "क्या आपने पैरों में सूजन, लालिमा या गर्मी महसूस की है?",
-                "en": "Have you noticed any swelling, redness, or warmth in the leg?",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "क्या आपने पहले अपने पैरों में किसी चोट या समस्या का अनुभव किया है?",
-              "en": "Have you had any previous injuries or problems with your legs?",
-                "category": "leg pain",
-                   },
-              {
-                "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
-                "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
-                "en": "Does the leg pain occur constantly, or does it come and go?",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "क्या दर्द पैर के अन्य हिस्सों तक फैलता है (जैसे कि जांघ से पंजे तक)?",
-                "en": "Does the pain radiate to other parts of the leg (e.g., from the thigh to the foot)?",
-                "category": "leg pain",
-                    },
-              {
-                "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
-                "en": "Do you feel weakness, numbness, or tingling in the leg?",
-                "category": "leg pain",
-                    },
-
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ लालिमा या गर्माहट भी महसूस हो रही है?",
-                'en': "Is there any redness or warmth along with the swelling?",
-                'category': 'leg_swelling_symptoms'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
-                'en': "Does the itching in your legs get worse at certain times like at night?",
-                'category': 'leg_itching_timing'
-            }
-        ],
-        'weakness': [
-    {
-        'hi': "क्या आपको लंबे समय तक खड़े रहने पर पैरों में थकान या कमजोरी महसूस होती है?",
-        'en': "Do your legs feel tired or weak after standing for a long time?",
-        'category': 'leg_weakness_fatigue_standing'
-    },
-
-    {
-        'hi': "क्या सीढ़ियाँ चढ़ते समय पैरों में कमजोरी महसूस होती है?",
-        'en': "Do your legs feel weak when climbing stairs?",
-        'category': 'leg_weakness_stairs'
-    },
-
-],
-       'freeze': [
-            {
-                'hi': "क्या ठंड में आपकी टाँगों में ठंडक या झुनझुनी होती है?",
-                'en': "Do you feel coldness or tingling in your legs during cold weather?",
-                'category': 'leg_freezing_cold_sensitivity'
-            }
-        ],
-	'spasm': [
-            {
-                'hi': "क्या आपके पैरों में ऐंठन या मरोड़ रात में सोते समय होती है?",
-                'en': "Do you experience leg spasms or cramps at night while sleeping?",
-                'category': 'leg_spasm_timing'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या पैर में कोई गहरी चोट लगी है जिससे खून बह रहा है?",
-                'en': "Is there a deep wound in your leg that is causing bleeding?",
-                'category': 'leg_bleeding_wound'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी टांग की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your leg issue in more detail.",
-                'category': 'leg_detail'
-            }
-        ]
-},
-'eye': {
-    'itching': [
-        {
-            'hi': "क्या आपकी आँखों में खुजली लगातार हो रही है या कभी-कभी?",
-            'en': "Is the itching in your eyes constant or occasional?",
-            'category': 'eye_itching_frequency'
-        },
-        {
-            'hi': "क्या खुजली दोनों आँखों में हो रही है या सिर्फ एक में?",
-            'en': "Is the itching in both eyes or just one?",
-            'category': 'eye_itching_side'
-        },
-        {
-            'hi': "क्या खुजली के साथ आँखों से पानी भी निकल रहा है?",
-            'en': "Is there any watering from the eyes along with the itching?",
-            'category': 'eye_itching_tearing'
-        }
+      {
+        "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+        "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+        "category": "general injury",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-    'redness': [
-        {
-            'hi': "क्या आपकी आँखें लाल होने के साथ दर्द भी कर रही हैं?",
-            'en': "Are your eyes also painful along with the redness?",
-            'category': 'eye_redness_pain'
-        },
-        {
-            'hi': "क्या लालपन पूरी आँख में है या किसी खास हिस्से में?",
-            'en': "Is the redness in the entire eye or a specific part?",
-            'category': 'eye_redness_area'
-        },
-        {
-            'hi': "क्या आँखों में सूजन या जलन भी है?",
-            'en': "Is there any swelling or burning sensation in your eyes?",
-            'category': 'eye_redness_swelling'
-        }
+    "pain": [
+      {
+        "hi": "क्या  पैर में दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
+        "en": "Does the pain increase while walking or is it constant?",
+        "category": "leg_pain_detail",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
+        "en": "Was there any specific injury or event that triggered the leg pain?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, पिंडली, पंजा)",
+        "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या चलने, दौड़ने या खड़े होने से पैर का दर्द बढ़ जाता है?",
+        "en": "Does the leg pain get worse with walking, running, or standing?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने पैरों में सूजन, लालिमा या गर्मी महसूस की है?",
+        "en": "Have you noticed any swelling, redness, or warmth in the leg?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने पहले अपने पैरों में किसी चोट या समस्या का अनुभव किया है?",
+        "en": "Have you had any previous injuries or problems with your legs?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
+        "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
+        "en": "Does the leg pain occur constantly, or does it come and go?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द पैर के अन्य हिस्सों तक फैलता है (जैसे कि जांघ से पंजे तक)?",
+        "en": "Does the pain radiate to other parts of the leg (e.g., from the thigh to the foot)?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
+        "en": "Do you feel weakness, numbness, or tingling in the leg?",
+        "category": "leg pain",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-    'burn': [
-        {
-            'hi': "क्या आँखों में जलन के साथ रोशनी सहन नहीं होती?",
-            'en': "Do your eyes feel sensitive to light along with the burning?",
-            'category': 'eye_burn_light_sensitivity'
-        },
-        {
-            'hi': "क्या आँखों में जलन किसी केमिकल या धूल के संपर्क के बाद शुरू हुई?",
-            'en': "Did the burning start after contact with dust or chemicals?",
-            'category': 'eye_burn_trigger'
-        },
-        {
-            'hi': "क्या आप जलन के कारण आँखें बार-बार मसलते हैं?",
-            'en': "Are you rubbing your eyes frequently because of the burning?",
-            'category': 'eye_burn_rubbing'
-        }
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ लालिमा या गर्माहट भी महसूस हो रही है?",
+        "en": "Is there any redness or warmth along with the swelling?",
+        "category": "leg_swelling_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-    'weakness': [
-        {
-        'hi': "क्या कम रोशनी में देखने में परेशानी होती है?",
-        'en': "Do you have trouble seeing in low light conditions?",
-        'category': 'eye_weakness_low_light'
-        },
-        {
-        'hi': "क्या आपको धुंधला दिखता है जब आप दूर या पास की चीजें देखते हैं?",
-        'en': "Do things appear blurry when you look at objects far away or up close?",
-        'category': 'eye_weakness_blurry_vision'
-        },
-          {
-              'hi': "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
-              'en': "Do your eyes feel tired after reading or using a screen for a long time?",
-              'category': 'eye_weakness_fatigue_screen'
-          },
-          {
-              'hi': "क्या आपको पहले चश्मा या लेंस का उपयोग करने की सलाह दी गई है?",
-              'en': "Have you ever been advised to use glasses or contact lenses?",
-              'category': 'eye_weakness_prescription'
-          }
+    "itching": [
+      {
+        "hi": "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
+        "en": "Does the itching in your legs get worse at certain times like at night?",
+        "category": "leg_itching_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-	
-    'blurry_vision': [
-        {
-            'hi': "क्या धुंधली दृष्टि दूर की चीज़ें देखने में होती है या पास की?",
-            'en': "Is your blurry vision affecting distance or near vision?",
-            'category': 'eye_blurry_distance_near'
-        },
-        {
-            'hi': "क्या धुंधली दृष्टि पूरे दिन रहती है या किसी विशेष समय पर होती है?",
-            'en': "Is your blurry vision constant or does it occur at certain times?",
-            'category': 'eye_blurry_timing'
-        },
-        {
-            'hi': "क्या आँखों पर ज़ोर डालने पर धुंधली दृष्टि और बढ़ जाती है?",
-            'en': "Does your blurry vision get worse when you strain your eyes?",
-            'category': 'eye_blurry_eye_strain'
-        }
+    "weakness": [
+      {
+        "hi": "क्या आपको लंबे समय तक खड़े रहने पर पैरों में थकान या कमजोरी महसूस होती है?",
+        "en": "Do your legs feel tired or weak after standing for a long time?",
+        "category": "leg_weakness_fatigue_standing",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या सीढ़ियाँ चढ़ते समय पैरों में कमजोरी महसूस होती है?",
+        "en": "Do your legs feel weak when climbing stairs?",
+        "category": "leg_weakness_stairs",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-    'discharge':[
-    {
-      "hi": "क्या आँखों में स्राव के कारण आपकी दृष्टि प्रभावित हो रही है?",
-      "en": "Is the discharge in your eyes affecting your vision?",
-      "category": "vision_impact_with_eye_discharge",   },
-    {
-      "hi": "क्या स्राव में रंग में कोई परिवर्तन आया है?",
-      "en": "Has there been any change in the color of the discharge?",
-      "category": "discharge_color_change", },
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपकी टाँगों में ठंडक या झुनझुनी होती है?",
+        "en": "Do you feel coldness or tingling in your legs during cold weather?",
+        "category": "leg_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-  'pain':[
-          {
-      "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
-      "en": "Is the pain in one eye or both eyes?",
-      "category": "eye pain",
-    },
-    {
-      "hi": "क्या आपको हाल ही में आंखों में चोट या आघात लगा है?",
-      "en": "Have you had any recent eye injuries or trauma?",
-      "category": "eye pain",
-
-    },
-    {
-      "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
-      "en": "Have you been exposed to smoke, chemicals, or other irritants?",
-      "category": "eye pain",
-
-    },
-    {
-      "hi": "क्या आपकी आंखें लाल हैं या उनमें सूजन है?",
-      "en": "Are your eyes red or swollen?",
-      "category": "eye pain",
-
-    },
-    {
-      "hi": "क्या आपकी दृष्टि धुंधली हो गई है या आपको रोशनी से संवेदनशीलता महसूस होती है?",
-      "en": "Has your vision become blurry or are you experiencing sensitivity to light?",
-      "category": "eye pain",
-
-    },
-
-  ],
-'swelling': [
-            {
-                'hi': "क्या सूजी हुई आंख में दर्द या गर्माहट महसूस हो रही है?",
-                'en': "Is the swollen eye accompanied by pain or warmth?",
-                'category': 'eye_swelling_signs'
-            }
-        ],
-	'crushing': [
-            {
-                'hi': "क्या आंखों को घुमाने पर दबाव या भारीपन और बढ़ जाता है?",
-                'en': "Does the crushing pressure in your eye worsen when you move your eyes?",
-                'category': 'eye_crushing_movement_relation'
-            }
-        ],
-     'sight issues': [
-            {
-                'hi': "क्या आपको पास की चीज़ें देखने में परेशानी होती है या दूर की?",
-                'en': "Do you have trouble seeing things up close or far away?",
-                'category': 'eye_sight_near_far'
-            },
-	     {
-                'hi': "कृपया अपनी आंखों की दृष्टि से जुड़ी समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your vision problem in more detail.",
-                'category': 'eye_detail'
-            }
-        ],
-    'default': [
-        {
-            'hi': "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your eye issue in more detail.",
-            'category': 'eye_detail'
-        },
-        {
-            'hi': "क्या आपकी समस्या दोनों आँखों को प्रभावित कर रही है?",
-            'en': "Is the issue affecting both eyes?",
-            'category': 'eye_side'
-        },
-        {
-            'hi': "क्या आपको आँखें खोलने या बंद करने में परेशानी हो रही है?",
-            'en': "Are you having trouble opening or closing your eyes?",
-            'category': 'eye_open_close_difficulty'
-        }
+    "spasm": [
+      {
+        "hi": "क्या आपके पैरों में ऐंठन या मरोड़ रात में सोते समय होती है?",
+        "en": "Do you experience leg spasms or cramps at night while sleeping?",
+        "category": "leg_spasm_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या पैर में कोई गहरी चोट लगी है जिससे खून बह रहा है?",
+        "en": "Is there a deep wound in your leg that is causing bleeding?",
+        "category": "leg_bleeding_wound",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी टांग की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your leg issue in more detail.",
+        "category": "leg_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
     ]
-},
-
-'hand': {
-        'pain': [
-            {
-                'hi': "क्या हाथ में दर्द लगातार है या किसी गतिविधि के साथ बढ़ता है?",
-                'en': "Is the pain in your hand constant or does it worsen with activity?",
-                'category': 'hand_pain_detail'
-            },
-                {
-      "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
-      "en": "Is the pain in one hand or both hands?",
-      "category": "hand pain",
-
-    },
-    {
-      "hi": "क्या आपको हाल ही में हाथों में चोट या आघात लगा है?",
-      "en": "Have you had any recent injuries or trauma to your hands?",
-      "category": "hand pain",
-
-    },
-    {
-      "hi": "क्या आपको हाथ में सूजन, लाली, या जकड़न का अनुभव हो रहा है?",
-      "en": "Are you experiencing any swelling, redness, or stiffness in the hand?",
-      "category": "hand pain",
-
-    },
-    {
-      "hi": "क्या आपको अपनी उंगलियों या हाथों में सुन्नता या झनझनाहट का अनुभव हो रहा है?",
-      "en": "Do you have any numbness or tingling in your fingers or hands?",
-      "category": "hand pain",
-
-    },
-    {
-      "hi": "क्या आप उन गतिविधियों में शामिल हैं जो आपके हाथों पर दबाव डालती हैं, जैसे टाइपिंग या उठाना?",
-      "en": "Are you involved in activities that put strain on your hands, like typing or lifting?",
-      "category": "hand pain",
-    },
-        ],
-	'weakness': [
-            {
-                'hi': "क्या आप हाथों से चीजें पकड़ने या पकड़ बनाए रखने में परेशानी महसूस करते हैं?",
-                'en': "Do you find it difficult to grip or hold objects with your hands?",
-                'category': 'hand_weakness_grip'
-            },
-            {
-                'hi': "क्या हाथों में कमजोरी के साथ कांपना या थकावट भी महसूस होती है?",
-                'en': "Do your hands feel shaky or tired along with weakness?",
-                'category': 'hand_weakness_tremor_fatigue'
-            },
-        ],
-        'numbness': [
-            {
-                'hi': "क्या झुनझुनी या सुन्नपन उंगलियों तक सीमित है?",
-                'en': "Is the numbness or tingling limited to the fingers?",
-                'category': 'hand_numbness_area'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ हाथ गर्म या लाल दिख रहा है?",
-                'en': "Is the hand warm or red along with the swelling?",
-                'category': 'hand_swelling_symptoms'
-            }
-        ],
-        'dryness':[
-              {
-    "hi": "क्या आपकी हथेलियाँ रूखी या खुरदरी महसूस होती हैं?",
-    "en": "Do your palms feel dry or rough to the touch?",
-    "category": "hand dryness",
-
   },
-  {
-    "hi": "क्या आपकी त्वचा पर सफेद पपड़ी या झुर्रियां दिखाई देती हैं?",
-    "en": "Do you notice flaking or white patches on the skin?",
-    "category": "hand dryness",
-
+  "eye": {
+    "itching": [
+      {
+        "hi": "क्या आपकी आँखों में खुजली लगातार हो रही है या कभी-कभी?",
+        "en": "Is the itching in your eyes constant or occasional?",
+        "category": "eye_itching_frequency",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या खुजली दोनों आँखों में हो रही है या सिर्फ एक में?",
+        "en": "Is the itching in both eyes or just one?",
+        "category": "eye_itching_side",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या खुजली के साथ आँखों से पानी भी निकल रहा है?",
+        "en": "Is there any watering from the eyes along with the itching?",
+        "category": "eye_itching_tearing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "redness": [
+      {
+        "hi": "क्या आपकी आँखें लाल होने के साथ दर्द भी कर रही हैं?",
+        "en": "Are your eyes also painful along with the redness?",
+        "category": "eye_redness_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या लालपन पूरी आँख में है या किसी खास हिस्से में?",
+        "en": "Is the redness in the entire eye or a specific part?",
+        "category": "eye_redness_area",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आँखों में सूजन या जलन भी है?",
+        "en": "Is there any swelling or burning sensation in your eyes?",
+        "category": "eye_redness_swelling",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burn": [
+      {
+        "hi": "क्या आँखों में जलन के साथ रोशनी सहन नहीं होती?",
+        "en": "Do your eyes feel sensitive to light along with the burning?",
+        "category": "eye_burn_light_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आँखों में जलन किसी केमिकल या धूल के संपर्क के बाद शुरू हुई?",
+        "en": "Did the burning start after contact with dust or chemicals?",
+        "category": "eye_burn_trigger",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप जलन के कारण आँखें बार-बार मसलते हैं?",
+        "en": "Are you rubbing your eyes frequently because of the burning?",
+        "category": "eye_burn_rubbing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कम रोशनी में देखने में परेशानी होती है?",
+        "en": "Do you have trouble seeing in low light conditions?",
+        "category": "eye_weakness_low_light",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको धुंधला दिखता है जब आप दूर या पास की चीजें देखते हैं?",
+        "en": "Do things appear blurry when you look at objects far away or up close?",
+        "category": "eye_weakness_blurry_vision",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको लंबे समय तक पढ़ने या स्क्रीन देखने पर आँखों में थकान महसूस होती है?",
+        "en": "Do your eyes feel tired after reading or using a screen for a long time?",
+        "category": "eye_weakness_fatigue_screen",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पहले चश्मा या लेंस का उपयोग करने की सलाह दी गई है?",
+        "en": "Have you ever been advised to use glasses or contact lenses?",
+        "category": "eye_weakness_prescription",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "blurry_vision": [
+      {
+        "hi": "क्या धुंधली दृष्टि दूर की चीज़ें देखने में होती है या पास की?",
+        "en": "Is your blurry vision affecting distance or near vision?",
+        "category": "eye_blurry_distance_near",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या धुंधली दृष्टि पूरे दिन रहती है या किसी विशेष समय पर होती है?",
+        "en": "Is your blurry vision constant or does it occur at certain times?",
+        "category": "eye_blurry_timing",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आँखों पर ज़ोर डालने पर धुंधली दृष्टि और बढ़ जाती है?",
+        "en": "Does your blurry vision get worse when you strain your eyes?",
+        "category": "eye_blurry_eye_strain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "discharge": [
+      {
+        "hi": "क्या आँखों में स्राव के कारण आपकी दृष्टि प्रभावित हो रही है?",
+        "en": "Is the discharge in your eyes affecting your vision?",
+        "category": "vision_impact_with_eye_discharge",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या स्राव में रंग में कोई परिवर्तन आया है?",
+        "en": "Has there been any change in the color of the discharge?",
+        "category": "discharge_color_change",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "pain": [
+      {
+        "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
+        "en": "Is the pain in one eye or both eyes?",
+        "category": "eye pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में आंखों में चोट या आघात लगा है?",
+        "en": "Have you had any recent eye injuries or trauma?",
+        "category": "eye pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
+        "en": "Have you been exposed to smoke, chemicals, or other irritants?",
+        "category": "eye pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी आंखें लाल हैं या उनमें सूजन है?",
+        "en": "Are your eyes red or swollen?",
+        "category": "eye pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी दृष्टि धुंधली हो गई है या आपको रोशनी से संवेदनशीलता महसूस होती है?",
+        "en": "Has your vision become blurry or are you experiencing sensitivity to light?",
+        "category": "eye pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजी हुई आंख में दर्द या गर्माहट महसूस हो रही है?",
+        "en": "Is the swollen eye accompanied by pain or warmth?",
+        "category": "eye_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "crushing": [
+      {
+        "hi": "क्या आंखों को घुमाने पर दबाव या भारीपन और बढ़ जाता है?",
+        "en": "Does the crushing pressure in your eye worsen when you move your eyes?",
+        "category": "eye_crushing_movement_relation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "sight issues": [
+      {
+        "hi": "क्या आपको पास की चीज़ें देखने में परेशानी होती है या दूर की?",
+        "en": "Do you have trouble seeing things up close or far away?",
+        "category": "eye_sight_near_far",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "कृपया अपनी आंखों की दृष्टि से जुड़ी समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your vision problem in more detail.",
+        "category": "eye_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी आँखों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your eye issue in more detail.",
+        "category": "eye_detail",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी समस्या दोनों आँखों को प्रभावित कर रही है?",
+        "en": "Is the issue affecting both eyes?",
+        "category": "eye_side",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको आँखें खोलने या बंद करने में परेशानी हो रही है?",
+        "en": "Are you having trouble opening or closing your eyes?",
+        "category": "eye_open_close_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
   },
-  {
-    "hi": "क्या हाथों की त्वचा में खुजली या जलन होती है?",
-    "en": "Do you experience itching or irritation on the hands?",
-    "category": "hand dryness",
-
+  "hand": {
+    "pain": [
+      {
+        "hi": "क्या हाथ में दर्द लगातार है या किसी गतिविधि के साथ बढ़ता है?",
+        "en": "Is the pain in your hand constant or does it worsen with activity?",
+        "category": "hand_pain_detail",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
+        "en": "Is the pain in one hand or both hands?",
+        "category": "hand pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में हाथों में चोट या आघात लगा है?",
+        "en": "Have you had any recent injuries or trauma to your hands?",
+        "category": "hand pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाथ में सूजन, लाली, या जकड़न का अनुभव हो रहा है?",
+        "en": "Are you experiencing any swelling, redness, or stiffness in the hand?",
+        "category": "hand pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको अपनी उंगलियों या हाथों में सुन्नता या झनझनाहट का अनुभव हो रहा है?",
+        "en": "Do you have any numbness or tingling in your fingers or hands?",
+        "category": "hand pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप उन गतिविधियों में शामिल हैं जो आपके हाथों पर दबाव डालती हैं, जैसे टाइपिंग या उठाना?",
+        "en": "Are you involved in activities that put strain on your hands, like typing or lifting?",
+        "category": "hand pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या आप हाथों से चीजें पकड़ने या पकड़ बनाए रखने में परेशानी महसूस करते हैं?",
+        "en": "Do you find it difficult to grip or hold objects with your hands?",
+        "category": "hand_weakness_grip",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या हाथों में कमजोरी के साथ कांपना या थकावट भी महसूस होती है?",
+        "en": "Do your hands feel shaky or tired along with weakness?",
+        "category": "hand_weakness_tremor_fatigue",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या झुनझुनी या सुन्नपन उंगलियों तक सीमित है?",
+        "en": "Is the numbness or tingling limited to the fingers?",
+        "category": "hand_numbness_area",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ हाथ गर्म या लाल दिख रहा है?",
+        "en": "Is the hand warm or red along with the swelling?",
+        "category": "hand_swelling_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dryness": [
+      {
+        "hi": "क्या आपकी हथेलियाँ रूखी या खुरदरी महसूस होती हैं?",
+        "en": "Do your palms feel dry or rough to the touch?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी त्वचा पर सफेद पपड़ी या झुर्रियां दिखाई देती हैं?",
+        "en": "Do you notice flaking or white patches on the skin?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या हाथों की त्वचा में खुजली या जलन होती है?",
+        "en": "Do you experience itching or irritation on the hands?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप दिन में बार-बार साबुन या सैनिटाइज़र का उपयोग करते हैं?",
+        "en": "Do you frequently use soap or hand sanitizer during the day?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप ठंडी या शुष्क जलवायु में रहते हैं?",
+        "en": "Do you live in a cold or dry climate?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके हाथों की त्वचा पर दरारें या खून आने जैसे लक्षण हैं?",
+        "en": "Do you have cracks or bleeding on the skin of your hands?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको एग्ज़िमा या त्वचा से जुड़ी कोई पुरानी समस्या है?",
+        "en": "Do you have eczema or any chronic skin condition?",
+        "category": "hand dryness",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "कौन सा हाथ या दोनों हाथ घायल हैं?",
+        "en": "Which hand or hands are injured?",
+        "category": "hand_injury_location",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+        "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+        "category": "general injury",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपके हाथ सुन्न या ठंडे हो जाते हैं?",
+        "en": "Do your hands feel numb or cold in cold weather?",
+        "category": "hand_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या हाथों में खुजली के साथ फोड़े या छाले भी हैं?",
+        "en": "Is the itching in your hands accompanied by boils or blisters?",
+        "category": "hand_itching_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या हाथ में गहरा कट है या खून रुकने का नाम नहीं ले रहा?",
+        "en": "Is there a deep cut on your hand or is the bleeding not stopping?",
+        "category": "hand_bleeding_severity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने हाथ की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your hand issue in more detail.",
+        "category": "hand_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
   },
-  {
-    "hi": "क्या आप दिन में बार-बार साबुन या सैनिटाइज़र का उपयोग करते हैं?",
-    "en": "Do you frequently use soap or hand sanitizer during the day?",
-    "category": "hand dryness",
-
-
+  "arm": {
+    "pain": [
+      {
+        "hi": "क्या आपके बांह का दर्द लगातार बना रहता है?",
+        "en": "Is the pain in your arm persistent?",
+        "category": "arm_pain_detail",
+        "symptom": "frequency",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द एक बांह में है या दोनों में?",
+        "en": "Is the pain in one arm or both arms?",
+        "category": "arm pain",
+        "symptom": "location",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
+        "en": "Is the arm pain sharp, dull, or throbbing?",
+        "category": "arm pain",
+        "symptom": "sharp arm ache",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको अपने बांह या कंधे को हिलाने में कठिनाई हो रही है?",
+        "en": "Do you have difficulty moving your arm or shoulder?",
+        "category": "arm pain",
+        "symptom": "mobility discomfort",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको बांह या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
+        "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
+        "category": "arm pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या सुन्नपन पूरे बांह में है या किसी खास हिस्से में?",
+        "en": "Is the numbness in your entire arm or a specific part?",
+        "category": "arm_numbness_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "कौन सा बाजू या दोनों बाजू घायल हैं?",
+        "en": "Which arm or arms are injured?",
+        "category": "arm_injury_location",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
+        "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
+        "category": "general injury",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या बांह में कमजोरी किसी विशेष क्रिया के बाद महसूस होती है?",
+        "en": "Do you feel weakness in your arm after any specific activity?",
+        "category": "arm_weakness_context",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "क्या आपके बांह में ऐंठन किसी काम के दौरान होती है?",
+        "en": "Do you experience arm spasms during any specific activities?",
+        "category": "arm_spasm_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या बांह में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
+        "en": "Is the itching in your arm localized or spread across the whole arm?",
+        "category": "arm_itching_extent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या बांह की सूजन के साथ दर्द या लालपन भी है?",
+        "en": "Is the swelling in your arm accompanied by pain or redness?",
+        "category": "arm_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने बांह की समस्या के बारे में अधिक जानकारी दें।",
+        "en": "Please describe your arm issue in more detail.",
+        "category": "arm_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
   },
-  {
-    "hi": "क्या आप ठंडी या शुष्क जलवायु में रहते हैं?",
-    "en": "Do you live in a cold or dry climate?",
-    "category": "hand dryness",
-
-  },
-  {
-    "hi": "क्या आपके हाथों की त्वचा पर दरारें या खून आने जैसे लक्षण हैं?",
-    "en": "Do you have cracks or bleeding on the skin of your hands?",
-    "category": "hand dryness",
-
-  },
-  {
-    "hi": "क्या आपको एग्ज़िमा या त्वचा से जुड़ी कोई पुरानी समस्या है?",
-    "en": "Do you have eczema or any chronic skin condition?",
-    "category": "hand dryness",
-
-  },
-        ],
-        'injury': [
-            {
-    'hi': "कौन सा हाथ या दोनों हाथ घायल हैं?",
-    'en': "Which hand or hands are injured?",
-    'category': 'hand_injury_location'
-           },
-             {
-    "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
-    "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-    "category": "general injury",
-  },
-
-        ],
-	'freeze': [
-            {
-                'hi': "क्या ठंड में आपके हाथ सुन्न या ठंडे हो जाते हैं?",
-                'en': "Do your hands feel numb or cold in cold weather?",
-                'category': 'hand_freezing_cold_sensitivity'
-            }
-        ],
-    'itching': [
-            {
-                'hi': "क्या हाथों में खुजली के साथ फोड़े या छाले भी हैं?",
-                'en': "Is the itching in your hands accompanied by boils or blisters?",
-                'category': 'hand_itching_signs'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या हाथ में गहरा कट है या खून रुकने का नाम नहीं ले रहा?",
-                'en': "Is there a deep cut on your hand or is the bleeding not stopping?",
-                'category': 'hand_bleeding_severity'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने हाथ की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your hand issue in more detail.",
-                'category': 'hand_detail'
-            }
-        ]
-    },
-
- 'arm': {
-     'pain': [
-            {
-                'hi': "क्या आपके बांह का दर्द लगातार बना रहता है?",
-                'en': "Is the pain in your arm persistent?",
-                'category': 'arm_pain_detail'
-            },
-            {
-               "hi": "क्या दर्द एक बांह में है या दोनों में?",
-               "en": "Is the pain in one arm or both arms?",
-               "category": "arm pain",
-
-            },
-            {
-            "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
-            "en": "Is the arm pain sharp, dull, or throbbing?",
-            "category": "arm pain",
-
-            },
-            {
-            "hi": "क्या आपको अपने बांह या कंधे को हिलाने में कठिनाई हो रही है?",
-            "en": "Do you have difficulty moving your arm or shoulder?",
-            "category": "arm pain",
-
-            },
-            {
-            "hi": "क्या आपको बांह या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
-            "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
-            "category": "arm pain",
-
-            },
-            ],
-    'numbness': [
-            {
-                'hi': "क्या सुन्नपन पूरे बांह में है या किसी खास हिस्से में?",
-                'en': "Is the numbness in your entire arm or a specific part?",
-                'category': 'arm_numbness_location'
-            }
-        ],
-    'injury': [
-            {
-            'hi': "कौन सा बाजू या दोनों बाजू घायल हैं?",
-            'en': "Which arm or arms are injured?",
-            'category': 'arm_injury_location'
-        },
-        {
-            "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
-            "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-            "category": "general injury",
-        },
-            ],
-     'weakness': [
-            {
-                'hi': "क्या बांह में कमजोरी किसी विशेष क्रिया के बाद महसूस होती है?",
-                'en': "Do you feel weakness in your arm after any specific activity?",
-                'category': 'arm_weakness_context'
-            }
-        ],
-	 'spasm': [
-            {
-                'hi': "क्या आपके बांह में ऐंठन किसी काम के दौरान होती है?",
-                'en': "Do you experience arm spasms during any specific activities?",
-                'category': 'arm_spasm_activity'
-            }
-        ],
-	 'itching': [
-            {
-                'hi': "क्या बांह में खुजली किसी विशेष जगह पर सीमित है या पूरे हाथ में है?",
-                'en': "Is the itching in your arm localized or spread across the whole arm?",
-                'category': 'arm_itching_extent'
-            }
-        ],
-
-        'swelling': [
-            {
-                'hi': "क्या बांह की सूजन के साथ दर्द या लालपन भी है?",
-                'en': "Is the swelling in your arm accompanied by pain or redness?",
-                'category': 'arm_swelling_signs'
-            }
-        ],
-
-        'default': [
-            {
-                'hi': "कृपया अपने बांह की समस्या के बारे में अधिक जानकारी दें।",
-                'en': "Please describe your arm issue in more detail.",
-                'category': 'arm_detail'
-            }
-        ]
-    },
-  'head': {
-        'injury': [
-            {
+  "head": {
+    "injury": [
+      {
         "hi": "क्या सिर में चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने से यह बढ़ता है?",
         "en": "Is the head pain after the injury constant, or does it worsen with movement?",
         "category": "head_injury_pain_variation",
-    },
-    {
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
         "hi": "क्या आपने पहले भी सिर में चोट या बार-बार सिरदर्द की समस्या झेली है?",
         "en": "Have you had previous head injuries or frequent headaches?",
         "category": "head_injury_history",
         "symptom": "previous head injuries",
-        "risk_factor": True
-    },
-        ],
-        'pressure': [
-            {
-                'hi': "क्या सिर में भारीपन लगातार रहता है या कभी-कभी होता है?",
-                'en': "Is the pressure in your head constant or does it come and go?",
-                'category': 'head_pressure_pattern'
-            }
-        ],
-	 'numbness': [
-    {
-        'hi': "क्या सिर में सुन्नपन के साथ बोलने या देखने में भी कोई समस्या हो रही है?",
-        'en': "Are you experiencing any trouble speaking or seeing along with the numbness in your head?",
-        'category': 'head_numbness_neurological_signs'
-    }
-        ],
- 'itching': [
-            {
-                'hi': "क्या सिर में खुजली के साथ पपड़ी, लालिमा या बाल झड़ना भी हो रहा है?",
-                'en': "Is the itching on your head accompanied by flaking, redness, or hair loss?",
-                'category': 'head_itching_signs'
-            }
-        ],
-	'pain': [
-            {
-                'hi': "क्या सिरदर्द अचानक शुरू हुआ या धीरे-धीरे बढ़ा?",
-                'en': "Did the head pain start suddenly or develop gradually?",
-                'category': 'head_pain_onset'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने सिर की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your head issue in more detail.",
-                'category': 'head_detail'
-            }
-        ]
-    },  
-'back': {
-        'pain': [
-            {
-                'hi': "क्या पीठ का दर्द चलते समय बढ़ता है या आराम करते समय भी होता है?",
-                'en': "Does your back pain increase while moving or is it present even at rest?",
-                'category': 'back_pain_detail'
-            },
-
-       {
-            "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
-            "en": "Are you having difficulty walking, standing, or sitting for long periods?",
-            "category": "mobility_impairment",
-            "symptom": None,
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या आपके पीछे या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
-            "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
-            "category": "history_of_injury",
-            "symptom": "injury",
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?",
-            "en": "Is your back pain in the lower or upper back?",
-            "category": "pain_location",
-            "symptom": None,
-            "risk_factor": False,
-        },
-        ],
-	'weakness': [
-            {
-                'hi': "क्या आपकी पीठ की कमजोरी के कारण लंबे समय तक खड़े रहना मुश्किल होता है?",
-                'en': "Does weakness in your back make it difficult to stand for long periods?",
-                'category': 'back_weakness_standing'
-            },
-            {
-                'hi': "क्या पीठ की कमजोरी के कारण आपको झुकने या उठने में परेशानी होती है?",
-                'en': "Does back weakness make it hard for you to bend or lift?",
-                'category': 'back_weakness_bend_lift'
-            },
-        ],
-	'spasm': [
-	    {
-	      "hi": "पीठ की ऐंठन कहाँ स्थित है (उदाहरण के लिए, निचली पीठ, ऊपरी पीठ, या गर्दन)?",
-	      "en": "Where is the back spasm located (e.g., lower back, upper back, or neck)?",
-	      "category": "back_spasms",
-	      "symptom": "location of spasm",
-	      "risk_factor": False,    },
-	    {
-	      "hi": "क्या पीठ की ऐंठन लगातार बनी रहती है, या वे आती-जाती रहती हैं?",
-	      "en": "Are the back spasms constant, or do they come and go?",
-	      "category": "back_spasms",
-	      "symptom": "spasm pattern",
-	      "risk_factor": False,    },
-	    {
-	      "hi": "पीठ की ऐंठन के दौरान दर्द कितना गंभीर होता है? क्या यह तेज़, सुस्त या ऐंठन वाला होता है?",
-	      "en": "How severe is the pain during the back spasms? Is it sharp, dull, or cramping?",
-	      "category": "back_spasms",
-	      "symptom": "pain severity and type",
-	      "risk_factor": False,    },
-	    {
-	      "hi": "क्या पीठ में ऐंठन कुछ गतिविधियों जैसे उठाने, झुकने या शारीरिक परिश्रम के बाद होती है?",
-	      "en": "Do the back spasms occur after certain activities, such as lifting, bending, or physical exertion?",
-	      "category": "back_spasms",
-	      "symptom": "activity-related spasms",
-	      "risk_factor": False,    },
-	    {
-	      "hi": "क्या आपको हाल ही में कोई चोट लगी है, गिर गया है, या खिंचाव आया है जिसके कारण पीठ में ऐंठन हुई हो?",
-	      "en": "Have you had any recent injuries, falls, or strains that might have triggered the back spasms?",
-	      "category": "back_spasms",
-	      "symptom": "recent injury or strain",
-	      "risk_factor": False,    },
-	    {
-	      "hi": "क्या आपको पीठ से संबंधित कोई पिछला इतिहास है, जैसे हर्नियेटेड डिस्क, गठिया, या डीजनरेटिव डिस्क रोग?",
-	      "en": "Do you have a history of back problems, such as herniated discs, arthritis, or degenerative disc disease?",
-	      "category": "back_spasms",
-	      "symptom": "history of back problems",
-	      "risk_factor": False,    },
-	    {
-	      "hi": "क्या आप वर्तमान में पीठ की ऐंठन के लिए कोई दवा ले रहे हैं या उपचार (जैसे, गर्मी, बर्फ, भौतिक चिकित्सा) का उपयोग कर रहे हैं?",
-	      "en": "Are you currently taking any medications or using treatments (e.g., heat, ice, physical therapy) for the back spasms?",
-	      "category": "back_spasms",
-	      "symptom": "medications and treatments",
-	      "risk_factor": False,    },
-	  ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर पीठ में ज्यादा जकड़न महसूस होती है?",
-                'en': "Do you feel more stiffness in your back after waking up?",
-                'category': 'back_stiffness_morning'
-            }
-        ],
-        'injury': [
-           {
-               'hi': "क्या आप आजकल अपनी पीठ मोड़ पा रहे हैं?",
-               'en': "Are you able to bend your back nowadays?",
-               'category': 'back_mobility_current'
-           }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या सुन्नपन पीठ से टांगों तक फैलता है?",
-                'en': "Does the numbness in your back extend down to your legs?",
-                'category': 'back_numbness_radiation'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या पीठ की खुजली के साथ लाल चकत्ते या सूखापन भी है?",
-                'en': "Is the itching on your back accompanied by rash or dryness?",
-                'category': 'back_itching_rash'
-            }
-        ],
-	'issue': [
-            {
-                'hi': "कृपया अपनी पीठ की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your back issue in more detail.",
-                'category': 'back_detail'
-            }
-        ]
-    },
-'chest': {
-      'pain': [
+        "risk_factor": False
+      }
+    ],
+    "pressure": [
       {
-                'hi': "क्या छाती में दर्द चलने या सीढ़ियाँ चढ़ने पर बढ़ता है?",
-                'en': "Does the chest pain increase when walking or climbing stairs?",
-                'category': 'chest_pain_exertion'
-            },
+        "hi": "क्या सिर में भारीपन लगातार रहता है या कभी-कभी होता है?",
+        "en": "Is the pressure in your head constant or does it come and go?",
+        "category": "head_pressure_pattern",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
       {
-      "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
-      "en": "Is your chest pain radiating to your arms, neck, or back?",
-      "category": "radiating_pain",
-          },
-    {
-      "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
-     "en": "Is your chest pain sharp or dull?",
-      "category": "pain_intensity",
-       },
-    {
-      "hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?",
-      "en": "Did the chest pain start suddenly or gradually?",
-      "category": "onset",
-       },
-    {
-      "hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you experiencing difficulty breathing along with chest pain?",
-      "category": "breathing_difficulty",
-      },
-    {
-      "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-     "en": "Does your chest pain increase during any specific activity?",
-      "category": "activity_related_pain",
-    },
-        ],
-	'weakness': [
-            {
-                'hi': "क्या छाती में कमजोरी या भारीपन के कारण आपको सांस लेने में कठिनाई होती है?",
-                'en': "Do you experience difficulty breathing due to weakness or heaviness in the chest?",
-                'category': 'chest_weakness_breathing_difficulty'
-            },
-            {
-                'hi': "क्या छाती की कमजोरी के कारण आपको सामान्य काम करने में भी थकावट महसूस होती है?",
-                'en': "Does chest weakness cause you to feel fatigued even during routine activities?",
-                'category': 'chest_weakness_fatigue'
-            },
-        ],
-        'discomfort': [
-            {
-                'hi': "क्या छाती में असहजता के साथ जी मिचलाना या पसीना भी आता है?",
-                'en': "Do you experience nausea or sweating along with the discomfort?",
-                'category': 'chest_discomfort_symptoms'
-            }
-        ],
-        'breathing': [
-            {
-                'hi': "क्या आपको सांस लेने में कठिनाई हाल ही में शुरू हुई है?",
-                'en': "Did the difficulty in breathing start recently?",
-                'category': 'chest_breathing_onset'
-            }
-        ],
-        'palpitations': [
-            {
-                'hi': "क्या दिल की धड़कन तेज होने के साथ चक्कर या बेहोशी महसूस हुई?",
-                'en': "Have you felt dizzy or faint along with the rapid heartbeat?",
-                'category': 'chest_palpitations_symptoms'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या छाती में खुजली पसीने के कारण होती है?",
-                'en': "Is the itching on your chest related to sweating?",
-                'category': 'chest_itching_cause'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी छाती की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your chest issue in more detail.",
-                'category': 'chest_detail'
-            }
-        ]
-    },
-'wrist': {
-        'pain': [
-            {
-    'hi': "क्या दोनों कलाइयों में दर्द है?",
-    'en': "Is the pain in both wrists?",
-    'category': 'wrist_pain_location'
-            },
-          {
-      "hi": "क्या आपने हाल ही में कलाई को चोट पहुँचाई है? (गिरना, मुड़ना, सीधा असर)",
-     "en": "Have you injured the wrist recently? (e.g., fall, twist, direct blow)",
-      "category": "wrist pain",
-    },
-   {
-      "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
-      "en": "Is there swelling or bruising around the wrist?",
-      "category": "wrist pain",
-    },
-    {
-      "hi": "क्या आपके हाथ या अंगुलियों में सुन्नता या झनझनाहट महसूस हो रही है?",
-      "en": "Do you have numbness or tingling in your hand or fingers?",
-      "category": "wrist pain",
-   },
-    {
-      "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
-      "en": "Is the wrist pain constant or intermittent?",
-      "category": "wrist pain",
-   },
-    {
-      "hi": "क्या आप कलाई के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
-      "en": "Can you describe the wrist pain? (Sharp, dull, aching, etc.)",
-      "category": "wrist pain",
-   },
-    {
-      "hi": "कौन सी गतिविधियाँ कलाई के दर्द को बदतर बना देती हैं?",
-      "en": "What activities make the wrist pain worse?",
-      "category": "wrist pain",
-    },
-    {
-      "hi": "क्या आराम करने से कलाई का दर्द ठीक हो जाता है या बिगड़ जाता है?",
-      "en": "Does the wrist pain improve or worsen with rest?",
-      "category": "wrist pain",
-   },
-        ],
-	'weakness': [
-            {
-                'hi': "क्या कलाई की कमजोरी के कारण आप चीजें ठीक से पकड़ नहीं पाते?",
-                'en': "Is it difficult to hold or grip things due to wrist weakness?",
-                'category': 'wrist_weakness_grip'
-            },
-            {
-                'hi': "क्या कलाई में कमजोरी के साथ कंपन या थकान भी महसूस होती है?",
-                'en': "Do you feel tremors or fatigue in the wrist along with weakness?",
-                'category': 'wrist_weakness_tremor_fatigue'
-            },
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ कलाई में गर्माहट या लालिमा भी है?",
-                'en': "Is there warmth or redness along with the wrist swelling?",
-                'category': 'wrist_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठते समय कलाई में जकड़न होती है?",
-                'en': "Do you feel wrist stiffness in the morning?",
-                'category': 'wrist_stiffness_time'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या झुनझुनी या सुन्नपन उंगलियों तक भी पहुंचता है?",
-                'en': "Does the numbness or tingling extend to your fingers?",
-                'category': 'wrist_numbness_extent'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "कलाई में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your wrist?",
-                'category': 'wrist_injury_time'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी कलाई की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your wrist issue in more detail.",
-                'category': 'wrist_detail'
-            }
-        ]
-    },
-   'throat': {
-        'pain': [
-            {
-                'hi': "क्या गले में दर्द लगातार बना रहता है या किसी विशेष समय में बढ़ता है?",
-                'en': "Is the pain in your throat constant, or does it worsen at a particular time?",
-                'category': 'throat_pain_pattern'
-            },
-            {
-      "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
-      "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
-      "category": "throat pain",
-    },
-    {
-      "hi": "क्या आपने हाल ही में किसी ऐसे व्यक्ति से संपर्क किया है जिसे गले में दर्द या सर्दी हो?",
-      "en": "Have you been exposed to anyone with a sore throat or cold recently?",
-      "category": "throat pain",
-
-    },
-    {
-      "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
-      "en": "Do you smoke or have you been exposed to smoke or other irritants?",
-      "category": "throat pain",
-
-    },
-    {
-      "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
-      "en": "Are you experiencing a fever along with your sore throat?",
-      "category": "throat pain",
-
-    },
-    {
-      "hi": "क्या आपके गले में सूजन या लालिमा है?",
-      "en": "Do you have any swelling or redness in your throat?",
-      "category": "throat pain",
-
-    },
-        ],
-        'swelling': [
-            {
-                'hi': "क्या गले में सूजन के साथ निगलने में भी कठिनाई हो रही है?",
-                'en': "Is the swelling in your throat making it difficult to swallow?",
-                'category': 'throat_swelling_swallowing'
-            }
-        ],
-        'difficulty_swallowing': [
-            {
-                'hi': "क्या आपको खाने-पीने में कठिनाई महसूस हो रही है?",
-                'en': "Are you having difficulty with eating or drinking?",
-                'category': 'throat_swallowing_difficulty'
-            }
-        ],
-        'hoarseness': [
-            {
-                'hi': "क्या आपकी आवाज में खराश हाल ही में आई है?",
-                'en': "Did the hoarseness in your voice start recently?",
-                'category': 'throat_hoarseness_onset'
-            }
-        ],
-        'infection': [
-            {
-                'hi': "क्या आपको बुखार, सर्दी या फ्लू के अन्य लक्षण भी हैं?",
-                'en': "Do you also have symptoms like fever, cold, or flu?",
-                'category': 'throat_infection_symptoms'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या गले में खुजली के साथ खांसी या खराश भी है?",
-                'en': "Is the throat itching accompanied by cough or soreness?",
-                'category': 'throat_itching_symptoms'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने गले की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your throat issue in more detail.",
-                'category': 'throat_detail'
-            }
-        ]
-    },
-   
-'stomach': {
-    'pain': [
-        {
-            'hi': "क्या पेट में दर्द खाने के बाद बढ़ता है?",
-            'en': "Does the stomach pain increase after eating?",
-            'category': 'stomach_pain_after_eating'
-        },
-        {
-            'hi': "क्या दर्द पेट के ऊपरी हिस्से में है या निचले हिस्से में?",
-            'en': "Is the pain in the upper part of your abdomen or the lower part?",
-            'category': 'stomach_pain_location'
-        },
-
-        {
-      "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
-     "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?", 
-      "category": "nausea",
-   },
-
-   {
-            'hi': "क्या पेट दर्द के साथ ऐंठन या चुभन जैसा महसूस होता है?",
-            'en': "Does the stomach pain feel like cramping or stabbing?",
-            'category': 'stomach_pain_nature'
-        },
-
-{
-      "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
-      "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
-      "category": "stomach ache",
-    },   
-  {
-      "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
-      "en": "Have you eaten anything unusual or had any changes in your diet recently?",
-      "category": "dietary changes",
-    },
-    {
-      "hi": "क्या आपको पाचन समस्याओं का इतिहास है (जैसे कि अम्लता, IBS, अल्सर आदि)?",
-      "en": "Do you have a history of digestive problems (e.g., acid reflux, IBS, ulcers)?",
-      "category": "digestive history",
-      },
+        "hi": "क्या सिर में सुन्नपन के साथ बोलने या देखने में भी कोई समस्या हो रही है?",
+        "en": "Are you experiencing any trouble speaking or seeing along with the numbness in your head?",
+        "category": "head_numbness_neurological_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-	'weakness': [
-            {
-                'hi': "क्या पेट की कमजोरी के कारण उठने या सीधे बैठने में कठिनाई होती है?",
-                'en': "Does stomach weakness make it difficult for you to sit up or get out of bed?",
-                'category': 'stomach_weakness_mobility'
-            },
-            {
-                'hi': "क्या पेट के हिस्से में ताकत की कमी के कारण आपको कोई विशेष शारीरिक गतिविधियाँ करने में परेशानी होती है?",
-                'en': "Does the lack of strength in your abdominal area affect your ability to perform physical activities?",
-                'category': 'stomach_weakness_activity_limit'
-            },
-        ],
-    'bloating': [
-        {
-            'hi': "क्या पेट में सूजन के साथ गैस या डकार भी होती है?",
-            'en': "Do you experience gas or burps along with the bloating?",
-            'category': 'stomach_bloating_gas'
-        },
-        {
-            'hi': "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
-            'en': "Does your stomach feel heavy or tight due to bloating?",
-            'category': 'stomach_bloating_heaviness'
-        },
+    "itching": [
+      {
+        "hi": "क्या सिर में खुजली के साथ पपड़ी, लालिमा या बाल झड़ना भी हो रहा है?",
+        "en": "Is the itching on your head accompanied by flaking, redness, or hair loss?",
+        "category": "head_itching_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-    'burning': [
-        {
-            'hi': "क्या खाने के बाद पेट में जलन बढ़ जाती है?",
-            'en': "Does the stomach burn increase after eating?",
-            'category': 'stomach burning',
-        },
-        ],
-
-    'default': [
-        {
-            'hi': "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your stomach issue in more detail.",
-            'category': 'stomach_detail'
-        },
-        {
-            'hi': "क्या यह समस्या खाने-पीने की आदतों से जुड़ी लगती है?",
-            'en': "Does this issue seem related to your eating habits?",
-            'category': 'stomach_eating_habit_relation'
-        },
+    "pain": [
+      {
+        "hi": "क्या सिरदर्द अचानक शुरू हुआ या धीरे-धीरे बढ़ा?",
+        "en": "Did the head pain start suddenly or develop gradually?",
+        "category": "head_pain_onset",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने सिर की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your head issue in more detail.",
+        "category": "head_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
     ]
-},
-
-	
-'neck': {
-        'pain': [
-            {
-                'hi': "क्या गर्दन का दर्द सिर या कंधों तक भी फैलता है?",
-                'en': "Does the neck pain radiate to your head or shoulders?",
-                'category': 'neck_pain_radiation'
-            },
-            {
-      "hi": "क्या आपकी गर्दन में दर्द लगातार है या आता-जाता है?",
-      "en": "Is your neck pain constant or does it come and go?",
-      "category": "intermittent_neck_pain",
   },
-    {
-      "hi": "क्या गर्दन का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-      "en": "Does your neck pain increase during any specific activity?",
-      "category": "activity_related_neck_pain",
-  },
-    {
-      "hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?",
-      "en": "Is your mobility being affected due to neck pain?",
-      "category": "mobility_impact_with_neck_pain",
-    },
-    {
-      "hi": "क्या गर्दन के दर्द के साथ सिरदर्द भी हो रहा है?",
-      "en": "Are you experiencing headaches along with neck pain?",
-      "category": "headache_with_neck_pain",
-   },
-    {
-      "hi": "क्या गर्दन में दर्द के साथ कोई सूजन भी है?",
-      "en": "Is there any swelling along with neck pain?",
-      "category": "swelling_with_neck_pain",
-   },
-    {
-      "hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?",
-      "en": "Did your neck pain start suddenly or gradually?",
-      "category": "sudden_graduate_neck_pain",
-   },
-        ],
-	'weakness': [
-            {
-                'hi': "क्या गर्दन की कमजोरी के कारण सिर को संभालना मुश्किल होता है?",
-                'en': "Does neck weakness make it difficult to hold your head up?",
-                'category': 'neck_weakness_head_support'
-            },
-            {
-                'hi': "क्या गर्दन में कमजोरी के साथ थकान या झुकाव महसूस होता है?",
-                'en': "Do you feel fatigue or drooping in the neck along with weakness?",
-                'category': 'neck_weakness_fatigue_droop'
-            },
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठते समय गर्दन में जकड़न महसूस होती है?",
-                'en': "Do you feel neck stiffness when you wake up in the morning?",
-                'category': 'neck_stiffness_morning'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या गर्दन की सूजन के साथ बुखार या गिल्टी महसूस हो रही है?",
-                'en': "Is there fever or a lump felt along with the neck swelling?",
-                'category': 'neck_swelling_lump'
-            }
-        ],
-        'injury': [
-            {
-        'hi': "क्या गर्दन को हिलाने पर दर्द बढ़ता है?",
-        'en': "Does the pain worsen when you move your neck?",
-        'category': 'neck_injury_movement_pain'
-    },
-    {
-        'hi': "क्या चोट के बाद से गर्दन में अकड़न या जकड़न महसूस हो रही है?",
-        'en': "Do you feel stiffness or tightness in your neck since the injury?",
-        'category': 'neck_injury_stiffness'
-    },
-        ],
-        'numbness': [
-            {
-                'hi': "क्या सुन्नपन गर्दन से कंधों या हाथों तक फैलता है?",
-                'en': "Does the numbness spread from your neck to your shoulders or arms?",
-                'category': 'neck_numbness_radiation'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या गर्दन में खुजली के साथ लाल चकत्ते या रैश भी हैं?",
-                'en': "Is the itching on your neck accompanied by redness or rash?",
-                'category': 'neck_itching_signs'
-            }
-        ],
-        'bleeding': [
-            {
-                'hi': "क्या गर्दन से खून निकलने से पहले कोई चोट या कट लगा था?",
-                'en': "Was there any injury or cut before the bleeding from your neck started?",
-                'category': 'neck_bleeding_cause'
-            }
-        ],
-	'spasm': [
-            {
-                'hi': "क्या गर्दन की ऐंठन अचानक होती है और गर्दन हिलाना मुश्किल हो जाता है?",
-                'en': "Do neck spasms happen suddenly and make it hard to move your neck?",
-                'category': 'neck_spasm_effect'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी गर्दन की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your neck issue in more detail.",
-                'category': 'neck_detail'
-            }
-        ]
-    },
-  'knee': {
-        'pain': [
-            {
-                'hi': "क्या घुटने का दर्द चलने या बैठने पर बढ़ता है?",
-                'en': "Does the knee pain worsen while walking or sitting?",
-                'category': 'knee_pain_activity'
-            },
-              {
-      "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
-     "en": "Was there any specific injury or event that triggered the knee pain?",
-      "category": "knee pain",
-    }, 
-    {
-      "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
-      "en": "Does the knee pain occur constantly, or does it come and go?",
-      "category": "knee pain",
-  },
-    {
-      "hi": "क्या घुटने के आसपास सूजन, लाली या गर्मी महसूस हो रही है?",
-      "en": "Have you noticed any swelling, redness, or warmth around the knee?",
-      "category": "knee pain",
-   },
-    {
-      "hi": "क्या आपको घुटने को मोड़ने या सीधा करने में कोई समस्या हो रही है?",
-     "en": "Are you having trouble bending or straightening your knee?",
-      "category": "knee pain",
-   },
-    {
-      "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
-      "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
-      "category": "knee pain",
-    },
-    {
-      "hi": "दर्द आपके घुटने के किस हिस्से में महसूस हो रहा है? (सामने, पीछे, किनारे)",
-      "en": "Where exactly in the knee do you feel the pain (front, back, sides)?",
-      "category": "knee pain",
- },
-    {
-      "hi": "क्या चलने या सीढ़ियाँ चढ़ने जैसी कुछ गतिविधियों से घुटने का दर्द बढ़ जाता है?",
-      "en": "Does the knee pain get worse with certain activities, like walking or climbing stairs?",
-      "category": "knee pain",
-   },
-    {
-      "hi": "क्या आपको घुटने में अस्थिरता या ऐसा लगता है जैसे घुटना 'गिर' रहा हो?",
-      "en": "Do you feel any instability or like your knee is 'giving way'?",
-      "category": "knee pain",
-   },
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ गर्माहट या लालिमा भी महसूस हो रही है?",
-                'en': "Is there warmth or redness along with the swelling?",
-                'category': 'knee_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर घुटने जकड़े हुए महसूस होते हैं?",
-                'en': "Do your knees feel stiff when you wake up in the morning?",
-                'category': 'knee_stiffness_morning'
-            }
-        ],
-        'injury': [
-              {
-        'hi': "क्या चोट के बाद चलने में दिक्कत हो रही है?",
-        'en': "Are you having difficulty walking after the injury?",
-        'category': 'knee_injury_walking_difficulty'
-    },
-    {
-        'hi': "क्या आपके घुटने में सूजन या सूजन के साथ दर्द है?",
-        'en': "Is there swelling or pain along with the knee injury?",
-        'category': 'knee_injury_swelling_pain'
-    },
-        ],
-        'weakness': [
-            {
-                'hi': "क्या घुटना कमजोर महसूस होता है या चलते समय लड़खड़ाता है?",
-                'en': "Does the knee feel weak or give way while walking?",
-                'category': 'knee_weakness_instability'
-            }
-        ],
-	'numbness': [
-            {
-                'hi': "क्या घुटने में सुन्नपन हाल ही में शुरू हुआ है या यह धीरे-धीरे बढ़ा है?",
-                'en': "Did the numbness in your knee start suddenly or has it developed gradually over time?",
-                'category': 'knee_numbness_onset'
-            }
-        ],
-	'freeze': [
-            {
-                'hi': "क्या ठंड में आपके घुटनों में ठंडक या सुन्नपन होता है?",
-                'en': "Do your knees feel cold or numb in cold weather?",
-                'category': 'knee_freezing_cold_sensitivity'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या घुटने में खुजली के साथ सूजन या लालपन है?",
-                'en': "Is the itching in your knee accompanied by swelling or redness?",
-                'category': 'knee_itching_signs'
-            }
-        ],
-	  'soreness': [
-            {
-                'hi': "क्या घुटनों में यह अकड़न या दर्द चलने या बैठने पर बढ़ता है?",
-                'en': "Does the knee soreness or discomfort increase when walking or sitting?",
-                'category': 'knee_soreness_activity'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your knee issue in more detail.",
-                'category': 'knee_detail'
-            }
-        ]
-    },
-  'foot': {
-        'pain': [
-            {
-                'hi': "क्या पैर में दर्द चलने या खड़े होने पर बढ़ता है?",
-                'en': "Does the foot pain increase while walking or standing?",
-                'category': 'foot_pain_activity'
-            },
-            {
-      "hi": "क्या दर्द एक पैर में है या दोनों पैरों में?",
-      "en": "Is the pain in one foot or both feet?",
-      "category": "foot pain",
-   
-    },
-    {
-      "hi": "क्या पैर में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the foot pain constant, or does it come and go?",
-      "category": "foot pain",
-
-    },
-    {
-      "hi": "क्या आपको पैरों में सूजन, लाली, या चोट का अनुभव हो रहा है?",
-      "en": "Are you experiencing any swelling, redness, or bruising in the foot?",
-      "category": "foot pain",
-
-    },
-    {
-      "hi": "क्या आपको हाल ही में पैर में कोई चोट या आघात हुआ है?",
-      "en": "Have you had any recent injuries or trauma to your foot?",
-      "category": "foot pain",
-
-    },
-    {
-      "hi": "क्या दर्द कुछ गतिविधियों के साथ बढ़ जाता है, जैसे लंबी अवधि तक चलना या खड़ा होना?",
-      "en": "Does the pain get worse with certain activities, like walking or standing for long periods?",
-      "category": "foot pain",
-  
-    },
-        ],
-	'weakness': [
-            {
-                'hi': "क्या पैर की कमजोरी के कारण आपको चलने में अस्थिरता महसूस होती है?",
-                'en': "Does foot weakness make you feel unsteady while walking?",
-                'category': 'foot_weakness_unsteady_walking'
-            },
-            {
-                'hi': "क्या पैर की कमजोरी के कारण सीढ़ियाँ चढ़ना या दौड़ना मुश्किल हो जाता है?",
-                'en': "Does foot weakness make it difficult to climb stairs or run?",
-                'category': 'foot_weakness_stairs_running'
-            },
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ पैर में गर्माहट या लालिमा है?",
-                'en': "Is there warmth or redness along with the swelling in your foot?",
-                'category': 'foot_swelling_signs'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या सुन्नपन पूरे पैर में है या सिर्फ उंगलियों तक सीमित है?",
-                'en': "Is the numbness throughout your foot or just in the toes?",
-                'category': 'foot_numbness_location'
-            }
-        ],
-        'injury': [
-            {
-    'hi': "क्या दोनों पैरों में चोट लगी है?",
-    'en': "Are both feet injured?",
-    'category': 'foot_injury_location'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर पैर में जकड़न महसूस होती है?",
-                'en': "Do you feel stiffness in your foot when you wake up?",
-                'category': 'foot_stiffness_morning'
-            }
-        ],
-	'freeze': [
-            {
-                'hi': "क्या ठंड में आपके पैर सुन्न या ठंडे हो जाते हैं?",
-                'en': "Do your feet feel numb or cold in cold weather?",
-                'category': 'feet_freezing_cold_sensitivity'
-            }
-        ],
-	'spasm': [
-            {
-                'hi': "क्या पैरों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
-                'en': "Do you get foot spasms while walking or during exercise?",
-                'category': 'foot_spasm_context'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
-                'en': "Does the itching in your legs get worse at certain times like at night?",
-                'category': 'leg_itching_timing'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या पैर में खून बहने के साथ चलने में दिक्कत हो रही है?",
-                'en': "Is the foot bleeding making it difficult to walk?",
-                'category': 'foot_bleeding_function'
-            }
-        ],
-	  'burning': [
-            {
-                'hi': "क्या आपके पैरों में जलन रात में अधिक होती है?",
-                'en': "Is the burning sensation in your feet worse at night?",
-                'category': 'foot_burning_timing'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने पैर की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your foot issue in more detail.",
-                'category': 'foot_detail'
-            }
-        ]
-    },
-    'shoulder': {
-        'pain': [
-            {
-                'hi': "क्या कंधे का दर्द हाथ उठाने पर बढ़ता है?",
-                'en': "Does the shoulder pain increase when you lift your arm?",
-                'category': 'shoulder_pain_movement'
-            },
-                {
-      "hi": "क्या कंधे का दर्द तेज़, सुस्त या दर्दभरा है?",
-      "en": "Is the shoulder pain sharp, dull, or achy?",
-      "category": "shoulder pain",
-
-    },
-    {
-      "hi": "क्या आपको हाल ही में कंधे में कोई चोट हुआ है?",
-      "en": "Have you had any recent injuries to your shoulder?",
-      "category": "shoulder pain",
-
-    },
-    {
-      "hi": "क्या कंधे का दर्द विशिष्ट गतिविधियों या गतिविधियों, जैसे उठाने या पहुंचने से बढ़ जाता है?",
-      "en": "Does the shoulder pain worsen with specific movements or activities, such as lifting or reaching?",
-      "category": "shoulder pain",
-
-    },
-    {
-      "hi": "क्या आपने कंधे में सूजन, चोट या गति सीमा में प्रतिबंध महसूस किया है?",
-      "en": "Have you noticed any swelling, bruising, or restricted range of motion in the shoulder?",
-      "category": "shoulder pain",
-
-    },
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या कंधा पूरी तरह घुमाने में परेशानी होती है?",
-                'en': "Is it difficult to fully rotate your shoulder?",
-                'category': 'shoulder_stiffness_range'
-            }
-        ],
-        'injury': [
-           {
-    'hi': "क्या दोनों कंधों में चोट लगी है?",
-    'en': "Are both shoulders injured?",
-    'category': 'shoulder_injury_location'
-           }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या झुनझुनी या सुन्नपन कंधे से हाथ तक फैलता है?",
-                'en': "Does the numbness or tingling extend from your shoulder to your arm?",
-                'category': 'shoulder_numbness_extent'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या कंधे में कमजोरी के कारण भारी चीजें उठाना मुश्किल है?",
-                'en': "Is it hard to lift heavy objects due to shoulder weakness?",
-                'category': 'shoulder_weakness_function'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या कंधे में खुजली के साथ रैश या दर्द है?",
-                'en': "Is the itching in your shoulder accompanied by rash or pain?",
-                'category': 'shoulder_itching_associated'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने कंधे की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your shoulder issue in more detail.",
-                'category': 'shoulder_detail'
-            }
-        ]
-    },
-'ear': {
-    'pain': [
-        {
-            'hi': "क्या कान में दर्द के साथ बुखार या सुनाई देने में दिक्कत है?",
-            'en': "Do you have fever or difficulty hearing along with the ear pain?",
-            'category': 'ear_pain_additional_symptoms'
-        },
-        {
-            'hi': "क्या दर्द अचानक शुरू हुआ था या धीरे-धीरे बढ़ा?",
-            'en': "Did the pain start suddenly or build up gradually?",
-            'category': 'ear_pain_onset'
-        },
-
-        {
-          "hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?",
-          "en": "Do you have pain in one ear or both ears?",
-          "category": "ear pain",
-   },
-        {
-          "hi": "क्या कान में दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ?",
-          "en": "Did the ear pain start after a cold, sinus infection, or upper respiratory infection?",
-          "category": "ear pain",
-  },
-
-    ],
-    'hearing_loss': [
-        {
-            'hi': "क्या सुनाई देने में समस्या एक कान में है या दोनों में?",
-            'en': "Is the hearing loss in one ear or both?",
-            'category': 'ear_hearing_loss_side'
-        },
-        {
-            'hi': "क्या सुनाई कम होना अचानक हुआ या धीरे-धीरे?",
-            'en': "Did the hearing loss happen suddenly or gradually?",
-            'category': 'ear_hearing_loss_onset'
-        },
-        {
-            'hi': "क्या सुनाई देने में बदलाव दिन के समय के अनुसार बदलता है?",
-            'en': "Does your hearing change depending on the time of day?",
-            'category': 'ear_hearing_loss_variation'
-        }
-    ],
-    'ringing': [
-        {
-            'hi': "क्या कान में घंटी या गूंजने जैसी आवाज़ लगातार रहती है?",
-            'en': "Is the ringing or buzzing in your ear constant?",
-            'category': 'ear_ringing_frequency'
-        },
-        {
-            'hi': "क्या यह आवाज़ किसी खास स्थिति में तेज़ हो जाती है, जैसे रात में?",
-            'en': "Does the sound get louder in specific situations, like at night?",
-            'category': 'ear_ringing_conditions'
-        },
-        {
-            'hi': "क्या इस आवाज़ के साथ चक्कर या संतुलन की समस्या भी होती है?",
-            'en': "Do you also experience dizziness or balance issues with the ringing?",
-            'category': 'ear_ringing_dizziness'
-        }
-    ],
-    'discharge': [
-    {
-      "hi": "क्या स्राव के कारण कान में सूजन हो रही है?",
-      "en": "Is there any swelling in your ears due to discharge?",
-      "category": "swelling_with_ear_discharge",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या स्राव के साथ आपको सुनने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty hearing along with ear discharge?",
-      "category": "hearing_difficulty_with_ear_discharge",
-      "symptom": "hearing loss",
-      "risk_factor": False,    },
-    ],
-    'infection': [
-        {
-            'hi': "क्या डॉक्टर ने कभी कान के संक्रमण की पुष्टि की है?",
-            'en': "Have you ever been diagnosed with an ear infection before?",
-            'category': 'ear_infection_history'
-        },
-        {
-            'hi': "क्या संक्रमण के समय दर्द, बुखार या बहाव जैसे लक्षण थे?",
-            'en': "Did you have symptoms like pain, fever, or discharge during the infection?",
-            'category': 'ear_infection_symptoms'
-        },
-        {
-            'hi': "क्या आपने पहले भी इसी तरह के संक्रमण का अनुभव किया है?",
-            'en': "Have you experienced similar infections before?",
-            'category': 'ear_infection_recurrence'
-        }
-    ],
-    'freeze': [
-            {
-                'hi': "क्या ठंड में आपके कान सुन्न या बहुत ठंडे महसूस होते हैं?",
-                'en': "Do your ears feel numb or extremely cold in cold weather?",
-                'category': 'ear_freezing_cold_sensitivity'
-            }
-        ],
-    'bleeding': [
-            {
-                'hi': "क्या कान से खून निकलने से पहले चोट लगी थी या किसी चीज़ से कान साफ़ किया था?",
-                'en': "Was there any injury or use of an object in the ear before the bleeding started?",
-                'category': 'ear_bleeding_cause'
-            }
-        ],
-     'itching': [
-            {
-                'hi': "क्या कान में खुजली के साथ द्रव या रिसाव हो रहा है?",
-                'en': "Is there any fluid or discharge along with the itching in your ear?",
-                'category': 'ear_itching_discharge'
-            }
-        ],
-    'default': [
-        {
-            'hi': "कृपया अपने कान की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your ear issue in more detail.",
-            'category': 'ear_detail'
-        },
-        {
-            'hi': "क्या समस्या कान के अंदर महसूस होती है या बाहरी हिस्से में?",
-            'en': "Is the problem felt inside the ear or on the outer part?",
-            'category': 'ear_location'
-        },
-        {
-            'hi': "क्या आपकी नींद या रोज़मर्रा के काम इस समस्या से प्रभावित हो रहे हैं?",
-            'en': "Is this issue affecting your sleep or daily activities?",
-            'category': 'ear_impact'
-        }
-    ]
-},
-	
-   'nails': {
-        'discoloration': [
-            {
-                'hi': "क्या नाखूनों का रंग हाल ही में बदला है?",
-                'en': "Has the color of your nails changed recently?",
-                'category': 'nail_discoloration_change'
-            }
-        ],
-        'pain': [
-            {
-                'hi': "क्या नाखून में दर्द किसी चोट के बाद शुरू हुआ?",
-                'en': "Did the nail pain start after any injury?",
-                'category': 'nail_pain_injury'
-            }
-        ],
-        'infection': [
-            {
-                'hi': "क्या नाखून के पास सूजन, मवाद या लालिमा है?",
-                'en': "Is there swelling, pus, or redness near the nail?",
-                'category': 'nail_infection_signs'
-            }
-        ],
-        'brittle': [
-            {
-                'hi': "क्या आपके नाखून आसानी से टूट या चटक जाते हैं?",
-                'en': "Do your nails crack or break easily?",
-                'category': 'nail_brittle_frequency'
-            }
-        ],
-        'growth': [
-            {
-                'hi': "क्या आपने नाखूनों की वृद्धि में कमी या बदलाव देखा है?",
-                'en': "Have you noticed any changes or slowdown in nail growth?",
-                'category': 'nail_growth_change'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने नाखूनों की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your nail issue in more detail.",
-                'category': 'nail_detail'
-            }
-        ]
-    }, 
-    'bone': {
-        'pain': [
-            {
-                'hi': "क्या यह हड्डी का दर्द किसी विशेष गतिविधि से जुड़ा है?",
-                'en': "Is the bone pain related to any specific activity?",
-                'category': 'bone_pain_activity'
-            },
-	{
-      "hi": "हड्डी का दर्द कहाँ स्थित है?",
-      "en": "Where exactly is the bone pain located?",
-      "category": "bone_pain",
-        },
-    {
-      "hi": "क्या हड्डी में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
-      "en": "Is the bone pain constant, or does it come and go?",
-      "category": "bone_pain",
-       },
-    {
-      "hi": "क्या हड्डी का दर्द तेज़, सुस्त, धड़क रहा है या दर्द कर रहा है?",
-      "en": "Is the bone pain sharp, dull, throbbing, or aching?",
-      "category": "bone_pain",
-    },
-    {
-      "hi": "क्या हिलने-डुलने, दबाव पड़ने या कुछ गतिविधियों से हड्डी का दर्द बढ़ जाता है?",
-      "en": "Does the bone pain get worse with movement, pressure, or certain activities?",
-      "category": "bone_pain",
-       },
-    {
-      "hi": "क्या आपको हाल ही में कोई चोटें, गिरना या दुर्घटनाएं हुई हैं?",
-      "en": "Have you had any recent injuries, falls, or accidents?",
-      "category": "bone_pain",
-       },
-    {
-      "hi": "क्या आपको प्रभावित क्षेत्र के आसपास सूजन, चोट, या लाली महसूस हो रही है?",
-      "en": "Are you experiencing any swelling, bruising, or redness around the affected area?",
-      "category": "bone_pain",
-       },
-    {
-      "hi": "क्या आपने प्रभावित अंग या जोड़ों में कमजोरी, सुन्नता, या आंदोलन में कठिनाई महसूस की है?",
-      "en": "Have you noticed any weakness, numbness, or difficulty moving the affected limb or joint?",
-      "category": "bone_pain",
+  "back": {
+    "pain": [
+      {
+        "hi": "क्या पीठ का दर्द चलते समय बढ़ता है या आराम करते समय भी होता है?",
+        "en": "Does your back pain increase while moving or is it present even at rest?",
+        "category": "back_pain_detail",
+        "symptom": None,
+        "risk_factor": False
       },
-        ],
-        'fracture': [
-            {
-                'hi': "क्या आपको एक्स-रे या स्कैन में फ्रैक्चर की पुष्टि हुई है?",
-                'en': "Has a fracture been confirmed through an X-ray or scan?",
-                'category': 'bone_fracture_diagnosed'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ दर्द या हड्डी पर दबाव से तकलीफ़ होती है?",
-                'en': "Is the swelling painful or tender to touch over the bone?",
-                'category': 'bone_swelling_pain'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या आपकी हड्डियाँ आसानी से टूट जाती हैं या कमजोर महसूस होती हैं?",
-                'en': "Do your bones break easily or feel weak?",
-                'category': 'bone_weakness_frequency'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "हड्डी को चोट कब और कैसे लगी थी?",
-                'en': "When and how did you injure the bone?",
-                'category': 'bone_injury_time'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी हड्डियों की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your bone issue in more detail.",
-                'category': 'bone_detail'
-            }
-        ]
-},
-'joint': {
-        'pain': [
-            {
-                'hi': "क्या जोड़ों में दर्द गतिविधि करते समय या मौसम बदलने पर बढ़ता है?",
-                'en': "Does the joint pain increase with activity or during weather changes?",
-                'category': 'joint_pain_activity_weather'
-            },
-            
-          {
-                "hi": "क्या आपके जोड़ों में दर्द लगातार है या आता-जाता है?",
-              "en": "Is your joint pain constant or does it come and go?",
-                "category": "intermittent_pain",
-                "symptom": None,
-                "risk_factor": False,    },
-              {
-                "hi": "क्या किसी विशेष गतिविधि के दौरान जोड़ों में दर्द बढ़ता है?",
-                "en": "Does your joint pain increase during any specific activity?",
-                "category": "activity_related_pain",
-                "symptom": None,
-                "risk_factor": False,    },
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ जोड़ में गर्माहट या लालिमा महसूस होती है?",
-                'en': "Is there warmth or redness along with the swelling in the joint?",
-                'category': 'joint_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या जोड़ों में जकड़न या कठोरता सुबह उठने पर ज्यादा महसूस होती है?",
-                'en': "Does the stiffness or rigidity in your joints feel worse in the morning?",
-                'category': 'joint_stiffness_morning'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या जोड़ों में कमजोरी के कारण चलते वक्त अस्थिरता महसूस होती है?",
-                'en': "Does the weakness in the joint cause instability while walking?",
-                'category': 'joint_weakness_instability'
-            }
-        ],
-        'injury': [
-               {
-        'hi': "क्या चोट के बाद चलने में दिक्कत हो रही है?",
-        'en': "Are you having difficulty walking after the injury?",
-        'category': 'knee_injury_walking_difficulty'
-    },
-        ],
-	'numbness': [
-            {
-                'hi': "क्या जोड़ में सुन्नपन के साथ झुनझुनाहट या जलन भी महसूस होती है?",
-                'en': "Along with numbness in the joint, do you also feel tingling or burning?",
-                'category': 'joint_numbness_sensation'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने जोड़ों की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your joint issue in more detail.",
-                'category': 'joint_detail'
-            }
-        ]
-    },
- 'skin': {
-        'rash': [
-            {
-                'hi': "क्या यह चकत्ते शरीर के किसी खास हिस्से पर हैं?",
-                'en': "Is the rash located on a specific part of your body?",
-                'category': 'skin_rash_location'
-            }
-        ],
-        'itching': [
-            {
-                'hi': "क्या खुजली लगातार होती है या समय-समय पर?",
-                'en': "Is the itching constant or does it come and go?",
-                'category': 'skin_itching_duration'
-            }
-        ],
-        'dryness': [
-            {
-                'hi': "क्या सूखी त्वचा पर दरारें या खून आना भी होता है?",
-                'en': "Is the dry skin cracking or bleeding?",
-                'category': 'skin_dryness_severity'
-            }
-        ],
-        'discoloration': [
-            {
-                'hi': "क्या त्वचा का रंग धीरे-धीरे बदल रहा है या अचानक?",
-                'en': "Did the skin discoloration happen gradually or suddenly?",
-                'category': 'skin_discoloration_timeline'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन वाली जगह पर दर्द या गर्मी महसूस हो रही है?",
-                'en': "Is there pain or warmth at the swollen area on the skin?",
-                'category': 'skin_swelling_symptoms'
-            }
-        ],
-        'acne': [
-        {
-            'hi': "क्या मुहांसों (pimples) के साथ दर्द या पस भी होता है?",
-            'en': "Do the pimples come with pain or pus?",
-            'category': 'skin_acne_severity'
-        }
-],
-        'burn': [
-            {
-                'hi': "क्या जलने के कारण त्वचा में छाले या पपड़ी बन रही है?",
-                'en': "Are blisters or scabs forming due to the burn?",
-                'category': 'skin_burn_blisters'
-            }
-        ],
-        'infection': [
-            {
-                'hi': "क्या त्वचा में किसी प्रकार के घाव, मवाद या लालिमा है?",
-                'en': "Is there any wound, pus, or redness on the skin?",
-                'category': 'skin_infection_signs'
-            }
-        ],
-	 'bleeding': [
-            {
-                'hi': "क्या त्वचा से खून किसी चोट, फोड़े या दाने की वजह से निकल रहा है?",
-                'en': "Is the bleeding from your skin due to an injury, boil, or rash?",
-                'category': 'skin_bleeding_cause'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी त्वचा की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your skin issue in more detail.",
-                'category': 'skin_detail'
-            }
-        ]
-    },
-'muscle': {
-        'pain': [
-            {
-                'hi': "क्या मांसपेशियों में दर्द गतिविधि करने पर बढ़ता है?",
-                'en': "Does the muscle pain increase with activity?",
-                'category': 'muscle_pain_activity'
-            },
-            {
-              "hi": "क्या आपके मांसपेशियों में दर्द लगातार है या आता-जाता है?",
-              "en": "Is your muscle pain constant or does it come and go?",
-              "category": "intermittent_pain",
-          },
-            {
-              "hi": "क्या आपके मांसपेशियों में दर्द के साथ सूजन भी है?",
-              "en": "Is there any swelling along with your muscle pain?",
-              "category": "swelling",
-          },
-        {
-              "hi": "क्या मांसपेशियों में दर्द के साथ कमजोरी भी महसूस हो रही है?",
-            "en": "Are you experiencing any weakness along with muscle pain?",
-              "category": "weakness",
-          },
-            {
-              "hi": "क्या आपको मांसपेशियों में खिंचाव महसूस हो रहा है?",
-              "en": "Are you feeling any muscle cramps?",
-              "category": "cramps",
-            }, 
-        ],
-        'weakness': [
-            {
-                'hi': "क्या मांसपेशियों में कमजोरी के कारण आपको भारी चीज़ें उठाने में परेशानी होती है?",
-                'en': "Does muscle weakness make it hard for you to lift heavy objects?",
-                'category': 'muscle_weakness_function'
-            }
-        ],
-        'spasm': [
-            {
-                'hi': "क्या मांसपेशियों में ऐंठन या मरोड़ लगातार हो रही है?",
-                'en': "Are the muscle spasms or cramps happening frequently?",
-                'category': 'muscle_spasm_frequency'
-            }
-        ],
-        'injury': [
-               {
-        'hi': "क्या चोट के बाद चलने में दिक्कत हो रही है?",
-        'en': "Are you having difficulty walking after the injury?",
-        'category': 'knee_injury_walking_difficulty'
-    },
-        ],
-'swelling': [
-            {
-                'hi': "क्या सूजन के साथ दर्द या गर्माहट महसूस हो रही है?",
-                'en': "Is there pain or warmth along with the swelling in the muscle?",
-                'category': 'muscle_swelling_signs'
-            }
-        ],
-	    'cramps': [
-            {
-                'hi': "क्या आपको मांसपेशियों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
-                'en': "Do you experience muscle cramps while walking or exercising?",
-                'category': 'muscle_cramps_activity_triggered'
-            },
-            {
-                'hi': "क्या मांसपेशियों की ऐंठन रात में सोते समय होती है?",
-                'en': "Do your muscle cramps occur during the night while sleeping?",
-                'category': 'muscle_cramps_nighttime'
-            },
-        ],
-	'itching': [
-            {
-                'hi': "क्या मांसपेशियों में खुजली व्यायाम या खिंचाव के बाद होती है?",
-                'en': "Does the muscle itching happen after exercise or strain?",
-                'category': 'muscle_itching_trigger'
-            }
-        ],
-	'numbness': [
-            {
-                'hi': "क्या मांसपेशियों में सुन्नपन किसी विशेष स्थिति या गतिविधि से जुड़ा है?",
-                'en': "Is the numbness in your muscles related to a specific position or activity?",
-                'category': 'muscle_numbness_trigger'
-            }
-        ],
-	 'pulling': [
-            {
-                'hi': "क्या मांसपेशी खिंचने के बाद सूजन या चलने-फिरने में दिक्कत हो रही है?",
-                'en': "After the muscle pull, are you experiencing swelling or difficulty moving?",
-                'category': 'muscle_pulling_symptoms'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी मांसपेशियों की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your muscle issue in more detail.",
-                'category': 'muscle_detail'
-            }
-        ]
-    },
-
-'heart': {
-        'pain': [
-            {'hi': "क्या दर्द सीने के बीच में है या बाईं तरफ?",
-             'en': "Is the pain in the center of the chest or on the left side?",
-             'category': 'heart_pain_location'}
-            ],
-	     'weakness': [
-            {
-                'hi': "क्या हल्की गतिविधियों से ही थकान या सांस फूलने लगती है?",
-                'en': "Do you feel tired or short of breath even with mild activity?",
-                'category': 'heart_weakness_exertion'
-            },
-            {
-                'hi': "क्या आपकी सहनशक्ति पहले की तुलना में कम हो गई है?",
-                'en': "Has your stamina decreased compared to before?",
-                'category': 'heart_weakness_stamina_loss'
-            },
-        ],
-        'palpitation': [
-            {'hi': "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
-             'en': "Do you feel your heartbeat is fast or irregular?",
-             'category': 'heart_palpitations'}
-        ],
-      
-        'burn': [
-            {'hi': "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
-             'en': "Do you feel your heartbeat is fast or irregular?",
-             'category': 'heart_palpitations'}
-        ],
-        'surgery' :[
-            
-    # Diagnosis history
-    {
+      {
+        "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
+        "en": "Are you having difficulty walking, standing, or sitting for long periods?",
+        "category": "mobility_impairment",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके पीछे या रीढ़ में पहले कोई चोट, गिरना, या दुर्घटना हुई है?",
+        "en": "Have you had previous injuries, falls, or accidents involving your back or spine?",
+        "category": "history_of_injury",
+        "symptom": "injury",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपका पीठ दर्द निचले हिस्से में है या ऊपर?",
+        "en": "Is your back pain in the lower or upper back?",
+        "category": "pain_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या आपकी पीठ की कमजोरी के कारण लंबे समय तक खड़े रहना मुश्किल होता है?",
+        "en": "Does weakness in your back make it difficult to stand for long periods?",
+        "category": "back_weakness_standing",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पीठ की कमजोरी के कारण आपको झुकने या उठने में परेशानी होती है?",
+        "en": "Does back weakness make it hard for you to bend or lift?",
+        "category": "back_weakness_bend_lift",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "पीठ की ऐंठन कहाँ स्थित है (उदाहरण के लिए, निचली पीठ, ऊपरी पीठ, या गर्दन)?",
+        "en": "Where is the back spasm located (e.g., lower back, upper back, or neck)?",
+        "category": "back_spasms",
+        "symptom": "location of spasm",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पीठ की ऐंठन लगातार बनी रहती है, या वे आती-जाती रहती हैं?",
+        "en": "Are the back spasms constant, or do they come and go?",
+        "category": "back_spasms",
+        "symptom": "spasm pattern",
+        "risk_factor": False
+      },
+      {
+        "hi": "पीठ की ऐंठन के दौरान दर्द कितना गंभीर होता है? क्या यह तेज़, सुस्त या ऐंठन वाला होता है?",
+        "en": "How severe is the pain during the back spasms? Is it sharp, dull, or cramping?",
+        "category": "back_spasms",
+        "symptom": "pain severity and type",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पीठ में ऐंठन कुछ गतिविधियों जैसे उठाने, झुकने या शारीरिक परिश्रम के बाद होती है?",
+        "en": "Do the back spasms occur after certain activities, such as lifting, bending, or physical exertion?",
+        "category": "back_spasms",
+        "symptom": "activity-related spasms",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में कोई चोट लगी है, गिर गया है, या खिंचाव आया है जिसके कारण पीठ में ऐंठन हुई हो?",
+        "en": "Have you had any recent injuries, falls, or strains that might have triggered the back spasms?",
+        "category": "back_spasms",
+        "symptom": "recent injury or strain",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पीठ से संबंधित कोई पिछला इतिहास है, जैसे हर्नियेटेड डिस्क, गठिया, या डीजनरेटिव डिस्क रोग?",
+        "en": "Do you have a history of back problems, such as herniated discs, arthritis, or degenerative disc disease?",
+        "category": "back_spasms",
+        "symptom": "history of back problems",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप वर्तमान में पीठ की ऐंठन के लिए कोई दवा ले रहे हैं या उपचार (जैसे, गर्मी, बर्फ, भौतिक चिकित्सा) का उपयोग कर रहे हैं?",
+        "en": "Are you currently taking any medications or using treatments (e.g., heat, ice, physical therapy) for the back spasms?",
+        "category": "back_spasms",
+        "symptom": "medications and treatments",
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर पीठ में ज्यादा जकड़न महसूस होती है?",
+        "en": "Do you feel more stiffness in your back after waking up?",
+        "category": "back_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आप आजकल अपनी पीठ मोड़ पा रहे हैं?",
+        "en": "Are you able to bend your back nowadays?",
+        "category": "back_mobility_current",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या सुन्नपन पीठ से टांगों तक फैलता है?",
+        "en": "Does the numbness in your back extend down to your legs?",
+        "category": "back_numbness_radiation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या पीठ की खुजली के साथ लाल चकत्ते या सूखापन भी है?",
+        "en": "Is the itching on your back accompanied by rash or dryness?",
+        "category": "back_itching_rash",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "issue": [
+      {
+        "hi": "कृपया अपनी पीठ की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your back issue in more detail.",
+        "category": "back_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "chest": {
+    "pain": [
+      {
+        "hi": "क्या छाती में दर्द चलने या सीढ़ियाँ चढ़ने पर बढ़ता है?",
+        "en": "Does the chest pain increase when walking or climbing stairs?",
+        "category": "chest_pain_exertion",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या छाती का दर्द आपके हाथ, गर्दन या कमर में फैल रहा है?",
+        "en": "Is your chest pain radiating to your arms, neck, or back?",
+        "category": "radiating_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपका छाती में दर्द तेज है या स्थिर है?",
+        "en": "Is your chest pain sharp or dull?",
+        "category": "pain_intensity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या छाती का दर्द अचानक शुरू हुआ था या धीरे-धीरे?",
+        "en": "Did the chest pain start suddenly or gradually?",
+        "category": "onset",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या छाती में दर्द के साथ सांस लेने में कठिनाई हो रही है?",
+        "en": "Are you experiencing difficulty breathing along with chest pain?",
+        "category": "breathing_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+        "en": "Does your chest pain increase during any specific activity?",
+        "category": "activity_related_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या छाती में कमजोरी या भारीपन के कारण आपको सांस लेने में कठिनाई होती है?",
+        "en": "Do you experience difficulty breathing due to weakness or heaviness in the chest?",
+        "category": "chest_weakness_breathing_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या छाती की कमजोरी के कारण आपको सामान्य काम करने में भी थकावट महसूस होती है?",
+        "en": "Does chest weakness cause you to feel fatigued even during routine activities?",
+        "category": "chest_weakness_fatigue",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "discomfort": [
+      {
+        "hi": "क्या छाती में असहजता के साथ जी मिचलाना या पसीना भी आता है?",
+        "en": "Do you experience nausea or sweating along with the discomfort?",
+        "category": "chest_discomfort_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "breathing": [
+      {
+        "hi": "क्या आपको सांस लेने में कठिनाई हाल ही में शुरू हुई है?",
+        "en": "Did the difficulty in breathing start recently?",
+        "category": "chest_breathing_onset",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "palpitations": [
+      {
+        "hi": "क्या दिल की धड़कन तेज होने के साथ चक्कर या बेहोशी महसूस हुई?",
+        "en": "Have you felt dizzy or faint along with the rapid heartbeat?",
+        "category": "chest_palpitations_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या छाती में खुजली पसीने के कारण होती है?",
+        "en": "Is the itching on your chest related to sweating?",
+        "category": "chest_itching_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी छाती की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your chest issue in more detail.",
+        "category": "chest_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "wrist": {
+    "pain": [
+      {
+        "hi": "क्या दोनों कलाइयों में दर्द है?",
+        "en": "Is the pain in both wrists?",
+        "category": "wrist_pain_location",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में कलाई को चोट पहुँचाई है? (गिरना, मुड़ना, सीधा असर)",
+        "en": "Have you injured the wrist recently? (e.g., fall, twist, direct blow)",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
+        "en": "Is there swelling or bruising around the wrist?",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके हाथ या अंगुलियों में सुन्नता या झनझनाहट महसूस हो रही है?",
+        "en": "Do you have numbness or tingling in your hand or fingers?",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
+        "en": "Is the wrist pain constant or intermittent?",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप कलाई के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
+        "en": "Can you describe the wrist pain? (Sharp, dull, aching, etc.)",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "कौन सी गतिविधियाँ कलाई के दर्द को बदतर बना देती हैं?",
+        "en": "What activities make the wrist pain worse?",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आराम करने से कलाई का दर्द ठीक हो जाता है या बिगड़ जाता है?",
+        "en": "Does the wrist pain improve or worsen with rest?",
+        "category": "wrist pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कलाई की कमजोरी के कारण आप चीजें ठीक से पकड़ नहीं पाते?",
+        "en": "Is it difficult to hold or grip things due to wrist weakness?",
+        "category": "wrist_weakness_grip",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कलाई में कमजोरी के साथ कंपन या थकान भी महसूस होती है?",
+        "en": "Do you feel tremors or fatigue in the wrist along with weakness?",
+        "category": "wrist_weakness_tremor_fatigue",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ कलाई में गर्माहट या लालिमा भी है?",
+        "en": "Is there warmth or redness along with the wrist swelling?",
+        "category": "wrist_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठते समय कलाई में जकड़न होती है?",
+        "en": "Do you feel wrist stiffness in the morning?",
+        "category": "wrist_stiffness_time",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या झुनझुनी या सुन्नपन उंगलियों तक भी पहुंचता है?",
+        "en": "Does the numbness or tingling extend to your fingers?",
+        "category": "wrist_numbness_extent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "कलाई में चोट कब और कैसे लगी थी?",
+        "en": "How and when did you injure your wrist?",
+        "category": "wrist_injury_time",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी कलाई की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your wrist issue in more detail.",
+        "category": "wrist_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "throat": {
+    "pain": [
+      {
+        "hi": "क्या गले में दर्द लगातार बना रहता है या किसी विशेष समय में बढ़ता है?",
+        "en": "Is the pain in your throat constant, or does it worsen at a particular time?",
+        "category": "throat_pain_pattern",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको निगलने में कठिनाई या निगलते समय दर्द हो रहा है?",
+        "en": "Are you experiencing any difficulty swallowing or pain when swallowing?",
+        "category": "throat pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में किसी ऐसे व्यक्ति से संपर्क किया है जिसे गले में दर्द या सर्दी हो?",
+        "en": "Have you been exposed to anyone with a sore throat or cold recently?",
+        "category": "throat pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
+        "en": "Do you smoke or have you been exposed to smoke or other irritants?",
+        "category": "throat pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको बुखार, गले में खराश के साथ जुड़ा हुआ है?",
+        "en": "Are you experiencing a fever along with your sore throat?",
+        "category": "throat pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके गले में सूजन या लालिमा है?",
+        "en": "Do you have any swelling or redness in your throat?",
+        "category": "throat pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या गले में सूजन के साथ निगलने में भी कठिनाई हो रही है?",
+        "en": "Is the swelling in your throat making it difficult to swallow?",
+        "category": "throat_swelling_swallowing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "difficulty_swallowing": [
+      {
+        "hi": "क्या आपको खाने-पीने में कठिनाई महसूस हो रही है?",
+        "en": "Are you having difficulty with eating or drinking?",
+        "category": "throat_swallowing_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "hoarseness": [
+      {
+        "hi": "क्या आपकी आवाज में खराश हाल ही में आई है?",
+        "en": "Did the hoarseness in your voice start recently?",
+        "category": "throat_hoarseness_onset",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "infection": [
+      {
+        "hi": "क्या आपको बुखार, सर्दी या फ्लू के अन्य लक्षण भी हैं?",
+        "en": "Do you also have symptoms like fever, cold, or flu?",
+        "category": "throat_infection_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या गले में खुजली के साथ खांसी या खराश भी है?",
+        "en": "Is the throat itching accompanied by cough or soreness?",
+        "category": "throat_itching_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने गले की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your throat issue in more detail.",
+        "category": "throat_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "stomach": {
+    "pain": [
+      {
+        "hi": "क्या पेट में दर्द खाने के बाद बढ़ता है?",
+        "en": "Does the stomach pain increase after eating?",
+        "category": "stomach_pain_after_eating",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द पेट के ऊपरी हिस्से में है या निचले हिस्से में?",
+        "en": "Is the pain in the upper part of your abdomen or the lower part?",
+        "category": "stomach_pain_location",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
+        "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?",
+        "category": "nausea",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पेट दर्द के साथ ऐंठन या चुभन जैसा महसूस होता है?",
+        "en": "Does the stomach pain feel like cramping or stabbing?",
+        "category": "stomach_pain_nature",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
+        "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
+        "category": "stomach ache",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
+        "en": "Have you eaten anything unusual or had any changes in your diet recently?",
+        "category": "dietary changes",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पाचन समस्याओं का इतिहास है (जैसे कि अम्लता, IBS, अल्सर आदि)?",
+        "en": "Do you have a history of digestive problems (e.g., acid reflux, IBS, ulcers)?",
+        "category": "digestive history",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या पेट की कमजोरी के कारण उठने या सीधे बैठने में कठिनाई होती है?",
+        "en": "Does stomach weakness make it difficult for you to sit up or get out of bed?",
+        "category": "stomach_weakness_mobility",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पेट के हिस्से में ताकत की कमी के कारण आपको कोई विशेष शारीरिक गतिविधियाँ करने में परेशानी होती है?",
+        "en": "Does the lack of strength in your abdominal area affect your ability to perform physical activities?",
+        "category": "stomach_weakness_activity_limit",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bloating": [
+      {
+        "hi": "क्या पेट में सूजन के साथ गैस या डकार भी होती है?",
+        "en": "Do you experience gas or burps along with the bloating?",
+        "category": "stomach_bloating_gas",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या सूजन के कारण पेट भारी या कड़ा लगता है?",
+        "en": "Does your stomach feel heavy or tight due to bloating?",
+        "category": "stomach_bloating_heaviness",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burning": [
+      {
+        "hi": "क्या खाने के बाद पेट में जलन बढ़ जाती है?",
+        "en": "Does the stomach burn increase after eating?",
+        "category": "stomach burning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your stomach issue in more detail.",
+        "category": "stomach_detail",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या यह समस्या खाने-पीने की आदतों से जुड़ी लगती है?",
+        "en": "Does this issue seem related to your eating habits?",
+        "category": "stomach_eating_habit_relation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "neck": {
+    "pain": [
+      {
+        "hi": "क्या गर्दन का दर्द सिर या कंधों तक भी फैलता है?",
+        "en": "Does the neck pain radiate to your head or shoulders?",
+        "category": "neck_pain_radiation",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी गर्दन में दर्द लगातार है या आता-जाता है?",
+        "en": "Is your neck pain constant or does it come and go?",
+        "category": "intermittent_neck_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्दन का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+        "en": "Does your neck pain increase during any specific activity?",
+        "category": "activity_related_neck_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्दन के दर्द के कारण आपकी गतिशीलता प्रभावित हो रही है?",
+        "en": "Is your mobility being affected due to neck pain?",
+        "category": "mobility_impact_with_neck_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्दन के दर्द के साथ सिरदर्द भी हो रहा है?",
+        "en": "Are you experiencing headaches along with neck pain?",
+        "category": "headache_with_neck_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्दन में दर्द के साथ कोई सूजन भी है?",
+        "en": "Is there any swelling along with neck pain?",
+        "category": "swelling_with_neck_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्दन का दर्द अचानक शुरू हुआ है या धीरे-धीरे?",
+        "en": "Did your neck pain start suddenly or gradually?",
+        "category": "sudden_graduate_neck_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या गर्दन की कमजोरी के कारण सिर को संभालना मुश्किल होता है?",
+        "en": "Does neck weakness make it difficult to hold your head up?",
+        "category": "neck_weakness_head_support",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या गर्दन में कमजोरी के साथ थकान या झुकाव महसूस होता है?",
+        "en": "Do you feel fatigue or drooping in the neck along with weakness?",
+        "category": "neck_weakness_fatigue_droop",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठते समय गर्दन में जकड़न महसूस होती है?",
+        "en": "Do you feel neck stiffness when you wake up in the morning?",
+        "category": "neck_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या गर्दन की सूजन के साथ बुखार या गिल्टी महसूस हो रही है?",
+        "en": "Is there fever or a lump felt along with the neck swelling?",
+        "category": "neck_swelling_lump",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या गर्दन को हिलाने पर दर्द बढ़ता है?",
+        "en": "Does the pain worsen when you move your neck?",
+        "category": "neck_injury_movement_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या चोट के बाद से गर्दन में अकड़न या जकड़न महसूस हो रही है?",
+        "en": "Do you feel stiffness or tightness in your neck since the injury?",
+        "category": "neck_injury_stiffness",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या सुन्नपन गर्दन से कंधों या हाथों तक फैलता है?",
+        "en": "Does the numbness spread from your neck to your shoulders or arms?",
+        "category": "neck_numbness_radiation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या गर्दन में खुजली के साथ लाल चकत्ते या रैश भी हैं?",
+        "en": "Is the itching on your neck accompanied by redness or rash?",
+        "category": "neck_itching_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या गर्दन से खून निकलने से पहले कोई चोट या कट लगा था?",
+        "en": "Was there any injury or cut before the bleeding from your neck started?",
+        "category": "neck_bleeding_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "क्या गर्दन की ऐंठन अचानक होती है और गर्दन हिलाना मुश्किल हो जाता है?",
+        "en": "Do neck spasms happen suddenly and make it hard to move your neck?",
+        "category": "neck_spasm_effect",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी गर्दन की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your neck issue in more detail.",
+        "category": "neck_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "knee": {
+    "pain": [
+      {
+        "hi": "क्या घुटने का दर्द चलने या बैठने पर बढ़ता है?",
+        "en": "Does the knee pain worsen while walking or sitting?",
+        "category": "knee_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
+        "en": "Was there any specific injury or event that triggered the knee pain?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
+        "en": "Does the knee pain occur constantly, or does it come and go?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या घुटने के आसपास सूजन, लाली या गर्मी महसूस हो रही है?",
+        "en": "Have you noticed any swelling, redness, or warmth around the knee?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको घुटने को मोड़ने या सीधा करने में कोई समस्या हो रही है?",
+        "en": "Are you having trouble bending or straightening your knee?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
+        "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दर्द आपके घुटने के किस हिस्से में महसूस हो रहा है? (सामने, पीछे, किनारे)",
+        "en": "Where exactly in the knee do you feel the pain (front, back, sides)?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या चलने या सीढ़ियाँ चढ़ने जैसी कुछ गतिविधियों से घुटने का दर्द बढ़ जाता है?",
+        "en": "Does the knee pain get worse with certain activities, like walking or climbing stairs?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको घुटने में अस्थिरता या ऐसा लगता है जैसे घुटना 'गिर' रहा हो?",
+        "en": "Do you feel any instability or like your knee is 'giving way'?",
+        "category": "knee pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ गर्माहट या लालिमा भी महसूस हो रही है?",
+        "en": "Is there warmth or redness along with the swelling?",
+        "category": "knee_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर घुटने जकड़े हुए महसूस होते हैं?",
+        "en": "Do your knees feel stiff when you wake up in the morning?",
+        "category": "knee_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या चोट के बाद चलने में दिक्कत हो रही है?",
+        "en": "Are you having difficulty walking after the injury?",
+        "category": "knee_injury_walking_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके घुटने में सूजन या सूजन के साथ दर्द है?",
+        "en": "Is there swelling or pain along with the knee injury?",
+        "category": "knee_injury_swelling_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या घुटना कमजोर महसूस होता है या चलते समय लड़खड़ाता है?",
+        "en": "Does the knee feel weak or give way while walking?",
+        "category": "knee_weakness_instability",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या घुटने में सुन्नपन हाल ही में शुरू हुआ है या यह धीरे-धीरे बढ़ा है?",
+        "en": "Did the numbness in your knee start suddenly or has it developed gradually over time?",
+        "category": "knee_numbness_onset",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपके घुटनों में ठंडक या सुन्नपन होता है?",
+        "en": "Do your knees feel cold or numb in cold weather?",
+        "category": "knee_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या घुटने में खुजली के साथ सूजन या लालपन है?",
+        "en": "Is the itching in your knee accompanied by swelling or redness?",
+        "category": "knee_itching_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "soreness": [
+      {
+        "hi": "क्या घुटनों में यह अकड़न या दर्द चलने या बैठने पर बढ़ता है?",
+        "en": "Does the knee soreness or discomfort increase when walking or sitting?",
+        "category": "knee_soreness_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your knee issue in more detail.",
+        "category": "knee_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "foot": {
+    "pain": [
+      {
+        "hi": "क्या पैर में दर्द चलने या खड़े होने पर बढ़ता है?",
+        "en": "Does the foot pain increase while walking or standing?",
+        "category": "foot_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द एक पैर में है या दोनों पैरों में?",
+        "en": "Is the pain in one foot or both feet?",
+        "category": "foot pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पैर में दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+        "en": "Is the foot pain constant, or does it come and go?",
+        "category": "foot pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पैरों में सूजन, लाली, या चोट का अनुभव हो रहा है?",
+        "en": "Are you experiencing any swelling, redness, or bruising in the foot?",
+        "category": "foot pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में पैर में कोई चोट या आघात हुआ है?",
+        "en": "Have you had any recent injuries or trauma to your foot?",
+        "category": "foot pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द कुछ गतिविधियों के साथ बढ़ जाता है, जैसे लंबी अवधि तक चलना या खड़ा होना?",
+        "en": "Does the pain get worse with certain activities, like walking or standing for long periods?",
+        "category": "foot pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या पैर की कमजोरी के कारण आपको चलने में अस्थिरता महसूस होती है?",
+        "en": "Does foot weakness make you feel unsteady while walking?",
+        "category": "foot_weakness_unsteady_walking",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या पैर की कमजोरी के कारण सीढ़ियाँ चढ़ना या दौड़ना मुश्किल हो जाता है?",
+        "en": "Does foot weakness make it difficult to climb stairs or run?",
+        "category": "foot_weakness_stairs_running",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ पैर में गर्माहट या लालिमा है?",
+        "en": "Is there warmth or redness along with the swelling in your foot?",
+        "category": "foot_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या सुन्नपन पूरे पैर में है या सिर्फ उंगलियों तक सीमित है?",
+        "en": "Is the numbness throughout your foot or just in the toes?",
+        "category": "foot_numbness_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या दोनों पैरों में चोट लगी है?",
+        "en": "Are both feet injured?",
+        "category": "foot_injury_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर पैर में जकड़न महसूस होती है?",
+        "en": "Do you feel stiffness in your foot when you wake up?",
+        "category": "foot_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपके पैर सुन्न या ठंडे हो जाते हैं?",
+        "en": "Do your feet feel numb or cold in cold weather?",
+        "category": "feet_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "क्या पैरों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
+        "en": "Do you get foot spasms while walking or during exercise?",
+        "category": "foot_spasm_context",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या पैरों में खुजली किसी खास समय जैसे रात में ज्यादा होती है?",
+        "en": "Does the itching in your legs get worse at certain times like at night?",
+        "category": "leg_itching_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या पैर में खून बहने के साथ चलने में दिक्कत हो रही है?",
+        "en": "Is the foot bleeding making it difficult to walk?",
+        "category": "foot_bleeding_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burning": [
+      {
+        "hi": "क्या आपके पैरों में जलन रात में अधिक होती है?",
+        "en": "Is the burning sensation in your feet worse at night?",
+        "category": "foot_burning_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने पैर की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your foot issue in more detail.",
+        "category": "foot_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "shoulder": {
+    "pain": [
+      {
+        "hi": "क्या कंधे का दर्द हाथ उठाने पर बढ़ता है?",
+        "en": "Does the shoulder pain increase when you lift your arm?",
+        "category": "shoulder_pain_movement",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कंधे का दर्द तेज़, सुस्त या दर्दभरा है?",
+        "en": "Is the shoulder pain sharp, dull, or achy?",
+        "category": "shoulder pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में कंधे में कोई चोट हुआ है?",
+        "en": "Have you had any recent injuries to your shoulder?",
+        "category": "shoulder pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कंधे का दर्द विशिष्ट गतिविधियों या गतिविधियों, जैसे उठाने या पहुंचने से बढ़ जाता है?",
+        "en": "Does the shoulder pain worsen with specific movements or activities, such as lifting or reaching?",
+        "category": "shoulder pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने कंधे में सूजन, चोट या गति सीमा में प्रतिबंध महसूस किया है?",
+        "en": "Have you noticed any swelling, bruising, or restricted range of motion in the shoulder?",
+        "category": "shoulder pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या कंधा पूरी तरह घुमाने में परेशानी होती है?",
+        "en": "Is it difficult to fully rotate your shoulder?",
+        "category": "shoulder_stiffness_range",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या दोनों कंधों में चोट लगी है?",
+        "en": "Are both shoulders injured?",
+        "category": "shoulder_injury_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या झुनझुनी या सुन्नपन कंधे से हाथ तक फैलता है?",
+        "en": "Does the numbness or tingling extend from your shoulder to your arm?",
+        "category": "shoulder_numbness_extent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कंधे में कमजोरी के कारण भारी चीजें उठाना मुश्किल है?",
+        "en": "Is it hard to lift heavy objects due to shoulder weakness?",
+        "category": "shoulder_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या कंधे में खुजली के साथ रैश या दर्द है?",
+        "en": "Is the itching in your shoulder accompanied by rash or pain?",
+        "category": "shoulder_itching_associated",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने कंधे की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your shoulder issue in more detail.",
+        "category": "shoulder_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "ear": {
+    "pain": [
+      {
+        "hi": "क्या कान में दर्द के साथ बुखार या सुनाई देने में दिक्कत है?",
+        "en": "Do you have fever or difficulty hearing along with the ear pain?",
+        "category": "ear_pain_additional_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द अचानक शुरू हुआ था या धीरे-धीरे बढ़ा?",
+        "en": "Did the pain start suddenly or build up gradually?",
+        "category": "ear_pain_onset",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको एक कान में दर्द हो रहा है या दोनों कानों में?",
+        "en": "Do you have pain in one ear or both ears?",
+        "category": "ear pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कान में दर्द सर्दी, साइनस संक्रमण, या ऊपरी श्वसन संक्रमण के बाद शुरू हुआ?",
+        "en": "Did the ear pain start after a cold, sinus infection, or upper respiratory infection?",
+        "category": "ear pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "hearing_loss": [
+      {
+        "hi": "क्या सुनाई देने में समस्या एक कान में है या दोनों में?",
+        "en": "Is the hearing loss in one ear or both?",
+        "category": "ear_hearing_loss_side",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या सुनाई कम होना अचानक हुआ या धीरे-धीरे?",
+        "en": "Did the hearing loss happen suddenly or gradually?",
+        "category": "ear_hearing_loss_onset",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या सुनाई देने में बदलाव दिन के समय के अनुसार बदलता है?",
+        "en": "Does your hearing change depending on the time of day?",
+        "category": "ear_hearing_loss_variation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "ringing": [
+      {
+        "hi": "क्या कान में घंटी या गूंजने जैसी आवाज़ लगातार रहती है?",
+        "en": "Is the ringing or buzzing in your ear constant?",
+        "category": "ear_ringing_frequency",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या यह आवाज़ किसी खास स्थिति में तेज़ हो जाती है, जैसे रात में?",
+        "en": "Does the sound get louder in specific situations, like at night?",
+        "category": "ear_ringing_conditions",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या इस आवाज़ के साथ चक्कर या संतुलन की समस्या भी होती है?",
+        "en": "Do you also experience dizziness or balance issues with the ringing?",
+        "category": "ear_ringing_dizziness",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "discharge": [
+      {
+        "hi": "क्या स्राव के कारण कान में सूजन हो रही है?",
+        "en": "Is there any swelling in your ears due to discharge?",
+        "category": "swelling_with_ear_discharge",
+        "symptom": "swelling",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या स्राव के साथ आपको सुनने में कठिनाई हो रही है?",
+        "en": "Are you having difficulty hearing along with ear discharge?",
+        "category": "hearing_difficulty_with_ear_discharge",
+        "symptom": "hearing loss",
+        "risk_factor": False
+      }
+    ],
+    "infection": [
+      {
+        "hi": "क्या डॉक्टर ने कभी कान के संक्रमण की पुष्टि की है?",
+        "en": "Have you ever been diagnosed with an ear infection before?",
+        "category": "ear_infection_history",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या संक्रमण के समय दर्द, बुखार या बहाव जैसे लक्षण थे?",
+        "en": "Did you have symptoms like pain, fever, or discharge during the infection?",
+        "category": "ear_infection_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने पहले भी इसी तरह के संक्रमण का अनुभव किया है?",
+        "en": "Have you experienced similar infections before?",
+        "category": "ear_infection_recurrence",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपके कान सुन्न या बहुत ठंडे महसूस होते हैं?",
+        "en": "Do your ears feel numb or extremely cold in cold weather?",
+        "category": "ear_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या कान से खून निकलने से पहले चोट लगी थी या किसी चीज़ से कान साफ़ किया था?",
+        "en": "Was there any injury or use of an object in the ear before the bleeding started?",
+        "category": "ear_bleeding_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या कान में खुजली के साथ द्रव या रिसाव हो रहा है?",
+        "en": "Is there any fluid or discharge along with the itching in your ear?",
+        "category": "ear_itching_discharge",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने कान की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your ear issue in more detail.",
+        "category": "ear_detail",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या समस्या कान के अंदर महसूस होती है या बाहरी हिस्से में?",
+        "en": "Is the problem felt inside the ear or on the outer part?",
+        "category": "ear_location",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी नींद या रोज़मर्रा के काम इस समस्या से प्रभावित हो रहे हैं?",
+        "en": "Is this issue affecting your sleep or daily activities?",
+        "category": "ear_impact",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "nails": {
+    "discoloration": [
+      {
+        "hi": "क्या नाखूनों का रंग हाल ही में बदला है?",
+        "en": "Has the color of your nails changed recently?",
+        "category": "nail_discoloration_change",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "pain": [
+      {
+        "hi": "क्या नाखून में दर्द किसी चोट के बाद शुरू हुआ?",
+        "en": "Did the nail pain start after any injury?",
+        "category": "nail_pain_injury",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "infection": [
+      {
+        "hi": "क्या नाखून के पास सूजन, मवाद या लालिमा है?",
+        "en": "Is there swelling, pus, or redness near the nail?",
+        "category": "nail_infection_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "brittle": [
+      {
+        "hi": "क्या आपके नाखून आसानी से टूट या चटक जाते हैं?",
+        "en": "Do your nails crack or break easily?",
+        "category": "nail_brittle_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "growth": [
+      {
+        "hi": "क्या आपने नाखूनों की वृद्धि में कमी या बदलाव देखा है?",
+        "en": "Have you noticed any changes or slowdown in nail growth?",
+        "category": "nail_growth_change",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने नाखूनों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your nail issue in more detail.",
+        "category": "nail_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "bone": {
+    "pain": [
+      {
+        "hi": "क्या यह हड्डी का दर्द किसी विशेष गतिविधि से जुड़ा है?",
+        "en": "Is the bone pain related to any specific activity?",
+        "category": "bone_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "हड्डी का दर्द कहाँ स्थित है?",
+        "en": "Where exactly is the bone pain located?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या हड्डी में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
+        "en": "Is the bone pain constant, or does it come and go?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या हड्डी का दर्द तेज़, सुस्त, धड़क रहा है या दर्द कर रहा है?",
+        "en": "Is the bone pain sharp, dull, throbbing, or aching?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या हिलने-डुलने, दबाव पड़ने या कुछ गतिविधियों से हड्डी का दर्द बढ़ जाता है?",
+        "en": "Does the bone pain get worse with movement, pressure, or certain activities?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में कोई चोटें, गिरना या दुर्घटनाएं हुई हैं?",
+        "en": "Have you had any recent injuries, falls, or accidents?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको प्रभावित क्षेत्र के आसपास सूजन, चोट, या लाली महसूस हो रही है?",
+        "en": "Are you experiencing any swelling, bruising, or redness around the affected area?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने प्रभावित अंग या जोड़ों में कमजोरी, सुन्नता, या आंदोलन में कठिनाई महसूस की है?",
+        "en": "Have you noticed any weakness, numbness, or difficulty moving the affected limb or joint?",
+        "category": "bone_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "fracture": [
+      {
+        "hi": "क्या आपको एक्स-रे या स्कैन में फ्रैक्चर की पुष्टि हुई है?",
+        "en": "Has a fracture been confirmed through an X-ray or scan?",
+        "category": "bone_fracture_diagnosed",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ दर्द या हड्डी पर दबाव से तकलीफ़ होती है?",
+        "en": "Is the swelling painful or tender to touch over the bone?",
+        "category": "bone_swelling_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या आपकी हड्डियाँ आसानी से टूट जाती हैं या कमजोर महसूस होती हैं?",
+        "en": "Do your bones break easily or feel weak?",
+        "category": "bone_weakness_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "हड्डी को चोट कब और कैसे लगी थी?",
+        "en": "When and how did you injure the bone?",
+        "category": "bone_injury_time",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी हड्डियों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your bone issue in more detail.",
+        "category": "bone_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "joint": {
+    "pain": [
+      {
+        "hi": "क्या जोड़ों में दर्द गतिविधि करते समय या मौसम बदलने पर बढ़ता है?",
+        "en": "Does the joint pain increase with activity or during weather changes?",
+        "category": "joint_pain_activity_weather",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके जोड़ों में दर्द लगातार है या आता-जाता है?",
+        "en": "Is your joint pain constant or does it come and go?",
+        "category": "intermittent_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या किसी विशेष गतिविधि के दौरान जोड़ों में दर्द बढ़ता है?",
+        "en": "Does your joint pain increase during any specific activity?",
+        "category": "activity_related_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ जोड़ में गर्माहट या लालिमा महसूस होती है?",
+        "en": "Is there warmth or redness along with the swelling in the joint?",
+        "category": "joint_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या जोड़ों में जकड़न या कठोरता सुबह उठने पर ज्यादा महसूस होती है?",
+        "en": "Does the stiffness or rigidity in your joints feel worse in the morning?",
+        "category": "joint_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या जोड़ों में कमजोरी के कारण चलते वक्त अस्थिरता महसूस होती है?",
+        "en": "Does the weakness in the joint cause instability while walking?",
+        "category": "joint_weakness_instability",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या चोट के बाद चलने में दिक्कत हो रही है?",
+        "en": "Are you having difficulty walking after the injury?",
+        "category": "knee_injury_walking_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या जोड़ में सुन्नपन के साथ झुनझुनाहट या जलन भी महसूस होती है?",
+        "en": "Along with numbness in the joint, do you also feel tingling or burning?",
+        "category": "joint_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने जोड़ों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your joint issue in more detail.",
+        "category": "joint_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "skin": {
+    "rash": [
+      {
+        "hi": "क्या यह चकत्ते शरीर के किसी खास हिस्से पर हैं?",
+        "en": "Is the rash located on a specific part of your body?",
+        "category": "skin_rash_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या खुजली लगातार होती है या समय-समय पर?",
+        "en": "Is the itching constant or does it come and go?",
+        "category": "skin_itching_duration",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dryness": [
+      {
+        "hi": "क्या सूखी त्वचा पर दरारें या खून आना भी होता है?",
+        "en": "Is the dry skin cracking or bleeding?",
+        "category": "skin_dryness_severity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "discoloration": [
+      {
+        "hi": "क्या त्वचा का रंग धीरे-धीरे बदल रहा है या अचानक?",
+        "en": "Did the skin discoloration happen gradually or suddenly?",
+        "category": "skin_discoloration_timeline",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन वाली जगह पर दर्द या गर्मी महसूस हो रही है?",
+        "en": "Is there pain or warmth at the swollen area on the skin?",
+        "category": "skin_swelling_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "acne": [
+      {
+        "hi": "क्या मुहांसों (pimples) के साथ दर्द या पस भी होता है?",
+        "en": "Do the pimples come with pain or pus?",
+        "category": "skin_acne_severity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burn": [
+      {
+        "hi": "क्या जलने के कारण त्वचा में छाले या पपड़ी बन रही है?",
+        "en": "Are blisters or scabs forming due to the burn?",
+        "category": "skin_burn_blisters",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "infection": [
+      {
+        "hi": "क्या त्वचा में किसी प्रकार के घाव, मवाद या लालिमा है?",
+        "en": "Is there any wound, pus, or redness on the skin?",
+        "category": "skin_infection_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या त्वचा से खून किसी चोट, फोड़े या दाने की वजह से निकल रहा है?",
+        "en": "Is the bleeding from your skin due to an injury, boil, or rash?",
+        "category": "skin_bleeding_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी त्वचा की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your skin issue in more detail.",
+        "category": "skin_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "muscle": {
+    "pain": [
+      {
+        "hi": "क्या मांसपेशियों में दर्द गतिविधि करने पर बढ़ता है?",
+        "en": "Does the muscle pain increase with activity?",
+        "category": "muscle_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके मांसपेशियों में दर्द लगातार है या आता-जाता है?",
+        "en": "Is your muscle pain constant or does it come and go?",
+        "category": "intermittent_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके मांसपेशियों में दर्द के साथ सूजन भी है?",
+        "en": "Is there any swelling along with your muscle pain?",
+        "category": "swelling",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या मांसपेशियों में दर्द के साथ कमजोरी भी महसूस हो रही है?",
+        "en": "Are you experiencing any weakness along with muscle pain?",
+        "category": "weakness",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको मांसपेशियों में खिंचाव महसूस हो रहा है?",
+        "en": "Are you feeling any muscle cramps?",
+        "category": "cramps",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या मांसपेशियों में कमजोरी के कारण आपको भारी चीज़ें उठाने में परेशानी होती है?",
+        "en": "Does muscle weakness make it hard for you to lift heavy objects?",
+        "category": "muscle_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "क्या मांसपेशियों में ऐंठन या मरोड़ लगातार हो रही है?",
+        "en": "Are the muscle spasms or cramps happening frequently?",
+        "category": "muscle_spasm_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या चोट के बाद चलने में दिक्कत हो रही है?",
+        "en": "Are you having difficulty walking after the injury?",
+        "category": "knee_injury_walking_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ दर्द या गर्माहट महसूस हो रही है?",
+        "en": "Is there pain or warmth along with the swelling in the muscle?",
+        "category": "muscle_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "cramps": [
+      {
+        "hi": "क्या आपको मांसपेशियों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
+        "en": "Do you experience muscle cramps while walking or exercising?",
+        "category": "muscle_cramps_activity_triggered",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या मांसपेशियों की ऐंठन रात में सोते समय होती है?",
+        "en": "Do your muscle cramps occur during the night while sleeping?",
+        "category": "muscle_cramps_nighttime",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या मांसपेशियों में खुजली व्यायाम या खिंचाव के बाद होती है?",
+        "en": "Does the muscle itching happen after exercise or strain?",
+        "category": "muscle_itching_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या मांसपेशियों में सुन्नपन किसी विशेष स्थिति या गतिविधि से जुड़ा है?",
+        "en": "Is the numbness in your muscles related to a specific position or activity?",
+        "category": "muscle_numbness_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "pulling": [
+      {
+        "hi": "क्या मांसपेशी खिंचने के बाद सूजन या चलने-फिरने में दिक्कत हो रही है?",
+        "en": "After the muscle pull, are you experiencing swelling or difficulty moving?",
+        "category": "muscle_pulling_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी मांसपेशियों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your muscle issue in more detail.",
+        "category": "muscle_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "heart": {
+    "pain": [
+      {
+        "hi": "क्या दर्द सीने के बीच में है या बाईं तरफ?",
+        "en": "Is the pain in the center of the chest or on the left side?",
+        "category": "heart_pain_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या हल्की गतिविधियों से ही थकान या सांस फूलने लगती है?",
+        "en": "Do you feel tired or short of breath even with mild activity?",
+        "category": "heart_weakness_exertion",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी सहनशक्ति पहले की तुलना में कम हो गई है?",
+        "en": "Has your stamina decreased compared to before?",
+        "category": "heart_weakness_stamina_loss",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "palpitation": [
+      {
+        "hi": "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
+        "en": "Do you feel your heartbeat is fast or irregular?",
+        "category": "heart_palpitations",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burn": [
+      {
+        "hi": "क्या आपको दिल की धड़कन तेज या अनियमित महसूस हो रही है?",
+        "en": "Do you feel your heartbeat is fast or irregular?",
+        "category": "heart_palpitations",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "surgery": [
+      {
         "hi": "आपको पहली बार हृदय रोग का निदान कब किया गया था?",
         "en": "When were you first diagnosed with a heart condition?",
         "category": "diagnosis_timing",
         "symptom": "cardiac_surgery",
         "risk_factor": False
-    },
-    {
+      },
+      {
         "hi": "आपको किस प्रकार का हृदय रोग बताया गया है?",
         "en": "What type of heart disease have you been diagnosed with?",
         "category": "diagnosis_type",
         "symptom": "cardiac_surgery",
         "risk_factor": False
-    },
-
-    # Past procedures
-    {
+      },
+      {
         "hi": "क्या आपने कोई हृदय सर्जरी करवाई है जैसे बायपास, स्टेंटिंग या वाल्व रिप्लेसमेंट?",
         "en": "Have you undergone any heart procedures like bypass, stenting, or valve replacement?",
         "category": "procedure_history",
         "symptom": "cardiac_surgery",
         "risk_factor": False
-    },
-    {
+      },
+      {
         "hi": "सर्जरी कब हुई थी?",
         "en": "When was the surgery done?",
         "category": "procedure_details",
         "symptom": "cardiac_surgery",
         "risk_factor": False
-    },
-],
-'attack':[
-     {
-        'hi': "आपको दिल का दौरा आए हुए कितना समय हो गया है?",
-        'en': "How long ago did you have your heart attack?",
-        'category': 'heart_attack_timeline'
-    },
-    {
-        'hi': "दिल का दौरा पड़ने से पहले क्या हुआ था? क्या आप किसी गतिविधि में थे या कोई लक्षण महसूस हो रहे थे?",
-        'en': "What happened before the heart attack? Were you doing any activity or feeling any symptoms?",
-        'category': 'pre_attack_events'
-    }
-
-],
-
-        'default': [
-            {'hi': "कृपया अपने दिल से जुड़ी समस्या के बारे में और बताएं।",
-             'en': "Please tell me more about your heart-related issue.",
-             'category': 'heart_detail'}
-        ]
-    },
-
-'urinary': {
-        'pain': [
-            {'hi': "क्या पेशाब करते समय जलन या दर्द होता है?",
-             'en': "Do you experience burning or pain while urinating?",
-             'category': 'urinary_pain'}
-        ],
-        'frequency': [
-            {'hi': "दिन में कितनी बार पेशाब करने की जरूरत महसूस होती है?",
-             'en': "How many times do you feel the need to urinate in a day?",
-             'category': 'urinary_frequency'}
-        ],
-        'blood': [
-            {'hi': "क्या पेशाब में खून दिखा है?",
-             'en': "Have you noticed any blood in your urine?",
-             'category': 'urinary_blood'}
-        ],
-        'difficulty': [
-            {'hi': "क्या पेशाब करने में कठिनाई या रुकावट हो रही है?",
-             'en': "Are you experiencing difficulty or blockage while urinating?",
-             'category': 'urinary_difficulty'}
-        ],
-        'default': [
-            {'hi': "कृपया अपनी पेशाब से जुड़ी समस्या के बारे में और जानकारी दें।",
-             'en': "Please tell me more about your urinary issue.",
-             'category': 'urinary_detail'}
-        ]
-    },
-'toes': {
-        'injury': [
-            {'hi': "कौन सी उंगली या उंगलियाँ घायल हैं?",
-             'en': "Which toe or toes are injured?",
-             'category': 'toes_injury_location'}
-        ],
-        'pain': [
-            {'hi': "क्या दर्द चलने पर ज्यादा होता है या आराम करते समय भी रहता है?",
-             'en': "Does the pain worsen while walking or is it present even at rest?",
-             'category': 'toes_pain_detail'}
-        ],
-        'swelling': [
-            {'hi': "क्या सूजन के साथ लालिमा या गर्माहट भी है?",
-             'en': "Is there redness or warmth along with the swelling?",
-             'category': 'toes_swelling_symptoms'}
-        ],
-        'default': [
-            {'hi': "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
-             'en': "Please describe your toe issue in more detail.",
-             'category': 'toes_detail'}
-        ]
-    },
- 'nose': {
-        'injury': [
-            {
-                'hi': "नाक में चोट कब और कैसे लगी थी?",
-                'en': "How and when did you injure your nose?",
-                'category': 'nose_injury_time'
-            }
-        ],
-        'burning': [
-            {
-                'hi': "क्या नाक में जलन लगातार रहती है या कुछ खास चीज़ों से होती है?",
-                'en': "Is the burning sensation in your nose constant or triggered by something specific?",
-                'category': 'nose_burning_trigger'
-            }
-        ],
-        'sniffing': [
-            {
-                'hi': "क्या आपको सूंघने में कठिनाई हो रही है?",
-                'en': "Are you having trouble smelling things?",
-                'category': 'nose_sniffing_difficulty'
-            }
-        ],
-        'pain': [
-            {
-              "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
-              "en": "Are you experiencing persistent pain or burning sensation in your nose?",
-              "category": "nose pain",
-            },
-            {
-              "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
-              "en": "Have you recently had a cold, allergies, or sinus issues?",
-              "category": "nose pain",
-            }, 
-    {
-      "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
-      "en": "Do you feel pain when touching or pressing on your nose?",
-      "category": "nose pain",
-    },
-    {
-      "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
-      "en": "Is there any swelling or redness in your nose?",
-      "category": "nose pain",
-    },
-    {
-      "hi": "क्या आपकी नाक से किसी प्रकार का डिस्चार्ज या खून आ रहा है?",
-      "en": "Is there any discharge or bleeding from your nose?",
-      "category": "nose pain",
-    },
+      }
     ],
-        'infection': [
-            {
-                'hi': "क्या आपको सर्दी, जुकाम या साइनस जैसी समस्या भी है?",
-                'en': "Are you also experiencing cold, congestion, or sinus problems?",
-                'category': 'nose_infection_symptoms'
-            }
-        ],
-   'congestion': [
-            {'hi': "क्या आपकी नाक पूरी तरह से बंद है या आंशिक रूप से?",
-             'en': "Is your nose completely blocked or partially blocked?",
-             'category': 'nose_congestion'}
-        ],
-        'bleed': [
-            {'hi': "क्या नाक से खून बहना जारी है या रुक गया है?",
-             'en': "Is the nosebleed still continuing or has it stopped?",
-             'category': 'nose_bleed_status'}
-        ],
-	 'freeze': [
-            {
-                'hi': "क्या आपको ठंडे मौसम में नाक में सुन्नपन या ठंडक का अनुभव होता है?",
-                'en': "Do you feel numbness or a cold sensation in your nose during cold weather?",
-                'category': 'nasal_freezing_cold_sensitivity'
-            }
-        ],
-	 'itching': [
-            {
-                'hi': "क्या नाक में खुजली के साथ छींकें या बहाव भी हो रहा है?",
-                'en': "Is the nose itching accompanied by sneezing or discharge?",
-                'category': 'nose_itching_allergy'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी नाक की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your nose issue in more detail.",
-                'category': 'nose_detail'
-            }
-        ]
-    },
- 'thigh': {
-        'pain': [
-            {
-                'hi': "क्या जांघ में दर्द चलने या दौड़ने से बढ़ता है?",
-                'en': "Does the thigh pain worsen when walking or running?",
-                'category': 'thigh_pain_activity'
-            },
-                {
-      "hi": "आप थाई में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the pain in your thigh? Is it sharp, dull, burning, or throbbing?",
-      "category": "thigh pain",
- 
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your thigh? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "thigh pain",
-
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "thigh pain",
-
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "thigh pain",
-
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी थाई में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar pain or any known medical conditions?",
-      "category": "thigh pain",
-
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "thigh pain",
-
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "thigh pain",
-
-    },
-        ],
-        'weakness': [
-            {
-                'hi': "क्या जांघ की कमजोरी के कारण सीढ़ियाँ चढ़ने में दिक्कत होती है?",
-                'en': "Is thigh weakness making it hard to climb stairs?",
-                'category': 'thigh_weakness_function'
-            }
-        ],
-        'spasm': [
-            {
-                'hi': "क्या जांघ में बार-बार मरोड़ या ऐंठन हो रही है?",
-                'en': "Are you experiencing frequent cramps or spasms in your thigh?",
-                'category': 'thigh_spasm_frequency'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या जांघ में किसी गतिविधि के दौरान चोट लगी थी?",
-                'en': "Did the thigh injury happen during any specific activity?",
-                'category': 'thigh_injury_cause'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजी हुई जांघ को छूने पर गर्म लगती है?",
-                'en': "Does the swollen thigh feel warm to the touch?",
-                'category': 'thigh_swelling_signs'
-            }
-        ],
-	 'numbness': [
-            {
-                'hi': "क्या जांघ का सुन्नपन पूरे पैर तक फैलता है?",
-                'en': "Does the numbness in your thigh spread down the leg?",
-                'category': 'thigh_numbness_distribution'
-            }
-        ],
-	 'itching': [
-            {
-                'hi': "क्या जांघ में खुजली के साथ रैश या फफोले भी हैं?",
-                'en': "Is the thigh itching accompanied by a rash or blisters?",
-                'category': 'thigh_itching_signs'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी जांघ की समस्या के बारे में अधिक जानकारी दें।",
-                'en': "Please provide more details about your thigh issue.",
-                'category': 'thigh_detail'
-            }
-        ]
-    },
- 'forehead': {
-        'pain': [
-            {
-                'hi': "क्या माथे का दर्द लगातार बना रहता है या समय-समय पर आता है?",
-                'en': "Is the forehead pain constant or does it come and go?",
-                'category': 'forehead_pain_pattern'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ माथे पर लालिमा या गर्माहट है?",
-                'en': "Is there redness or warmth along with the forehead swelling?",
-                'category': 'forehead_swelling_signs'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या माथे में चोट किसी गिरावट या टक्कर से लगी थी?",
-                'en': "Was the forehead injury caused by a fall or impact?",
-                'category': 'forehead_injury_cause'
-            }
-        ],
-        'tingling': [
-            {
-                'hi': "क्या माथे में झनझनाहट के साथ सुन्नपन भी महसूस होता है?",
-                'en': "Do you feel numbness along with the tingling in your forehead?",
-                'category': 'forehead_tingling_symptoms'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी माथे की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your forehead issue in more detail.",
-                'category': 'forehead_detail'
-            }
-        ]
-    },
- 'tongue': {
-        'pain': [
-            {
-                'hi': "क्या जीभ में दर्द खाने या बोलने से बढ़ता है?",
-                'en': "Does the tongue pain increase when eating or speaking?",
-                'category': 'tongue_pain_activity'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजी हुई जीभ के कारण निगलने या साँस लेने में परेशानी हो रही है?",
-                'en': "Is the swollen tongue making it hard to swallow or breathe?",
-                'category': 'tongue_swelling_difficulty'
-            }
-        ],
-        'burning': [
-            {
-                'hi': "क्या जीभ में जलन किसी गर्म या मसालेदार चीज़ के सेवन के बाद शुरू हुई?",
-                'en': "Did the tongue burning start after eating something hot or spicy?",
-                'category': 'tongue_burning_trigger'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या जीभ की सुन्नता अचानक शुरू हुई थी?",
-                'en': "Did the numbness in your tongue start suddenly?",
-                'category': 'tongue_numbness_onset'
-            }
-        ],
-        'ulcers': [
-            {
-                'hi': "क्या जीभ के छाले खाने-पीने में तकलीफ देते हैं?",
-                'en': "Do the tongue ulcers cause discomfort while eating or drinking?",
-                'category': 'tongue_ulcers_discomfort'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी जीभ की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your tongue issue in more detail.",
-                'category': 'tongue_detail'
-            }
-        ]
-    },
- 'mouth': {
-        'pain': [
-            {
-                'hi': "क्या मुँह में दर्द खाना खाते समय बढ़ता है?",
-                'en': "Does the mouth pain increase while eating?",
-                'category': 'mouth_pain_eating'
-            },
-                {
-      "hi": "क्या आपके मुंह का दर्द तेजी से फैल रहा है",
-      "en": "Is your mouth pain spreading rapidly?",
-      "category": "rapid_spread_mouth_sores",
-  },
-    {
-      "hi": "क्या आपके मुंह में दर्द के साथ सूजन भी है?",
-      "en": "Is there any swelling along with your mouth pain?",
-      "category": "swelling_with_mouth_sores",
-  },
-    {
-      "hi": "क्या खाने या पीने के दौरान आपके मुंह में दर्द बढ़ जाता है?",
-      "en": "Does your mouth pain increase while eating or drinking?",
-      "category": "pain_with_mouth_sores",
-   },
-{
-      "hi": "क्या आपके मुंह से खून बह रहा है?",
-      "en": "Is your mouth bleeding?",
-      "category": "bleeding_mouth_sores",
-   },
-    {
-      "hi": "क्या आपको मुंह के दर्द के साथ दांत में भी दर्द हो रहा है?",
-      "en": "Are you experiencing tooth pain along with mouth pain?",
-      "category": "tooth_pain_with_mouth_sores",
-   },
-    {
-      "hi": "क्या मुंह में दर्द के कारण बोलने में कठिनाई हो रही है?",
-      "en": "Is the mouth pain causing difficulty in speaking?",
-      "category": "speech_difficulty_with_mouth_sores",
-  },
-        ],
-        'ulcer': [
-            {
-                'hi': "क्या मुँह के छाले लंबे समय से हैं?",
-                'en': "Have the mouth ulcers been present for a long time?",
-                'category': 'mouth_ulcer_duration'
-            }
-        ],
-        'dryness': [
-            {
-                'hi': "क्या आपके मुँह में अक्सर सूखापन महसूस होता है?",
-                'en': "Do you frequently feel dryness in your mouth?",
-                'category': 'mouth_dryness_frequency'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या मुँह में सूजन के साथ दर्द या गर्मी भी महसूस हो रही है?",
-                'en': "Is there pain or warmth along with the swelling in your mouth?",
-                'category': 'mouth_swelling_signs'
-            }
-        ],
-        'bleeding': [
-            {
-                'hi': "क्या मुँह से खून brushing या खाने के समय आता है?",
-                'en': "Does your mouth bleed while brushing or eating?",
-                'category': 'mouth_bleeding_trigger'
-            }
-        ],
-        'bad breath': [
-            {
-                'hi': "क्या आपको लंबे समय से मुँह से दुर्गंध आ रही है?",
-                'en': "Have you been experiencing bad breath for a long time?",
-                'category': 'mouth_bad_breath_duration'
-            }
-        ],
-        'numbness':[
-            {
-        'hi': "क्या सुन्नता आपके होंठों, जीभ या मुंह के अंदर किसी विशेष हिस्से में है?",
-        'en': "Is the numbness in your lips, tongue, or a specific part inside the mouth?",
-        'category': 'mouth_numbness_location'
-    },
-    {
-        'hi': "क्या यह सुन्नता खाने या पीने के बाद महसूस होती है?",
-        'en': "Does the numbness occur after eating or drinking?",
-        'category': 'mouth_numbness_trigger_food'
-    },
-    {
-        'hi': "क्या मुंह में सुन्नता के साथ जलन, झुनझुनी या कोई अजीब स्वाद भी महसूस होता है?",
-        'en': "Do you feel burning, tingling, or an unusual taste along with the numbness in the mouth?",
-        'category': 'mouth_numbness_sensation'
-    },
-        ],
-	 'itching': [
-            {
-                'hi': "क्या मुंह में खुजली के साथ सूजन या जलन भी है?",
-                'en': "Is the itching in your mouth accompanied by swelling or burning?",
-                'category': 'mouth_itching_reaction'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने मुँह की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your mouth issue in more detail.",
-                'category': 'mouth_detail'
-            }
-        ]
-    },
-
-'jaw': {
-    'pain': [
-        {
-            'hi': "क्या जबड़े में दर्द चबाने या बोलने पर बढ़ता है?",
-            'en': "Does the jaw pain worsen while chewing or speaking?",
-            'category': 'jaw_pain_trigger'
-        },
-        {
-      "hi": "क्या आप जबड़े के दर्द (तीव्र, सुस्त, धड़कन या दर्द) का वर्णन कर सकते हैं?",
-      "en": "Can you describe the jaw pain (sharp, dull, throbbing, or aching)?",
-      "category": "jaw pain",
-    },
-    {
-      "hi": "क्या जबड़े का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the jaw pain constant, or does it come and go?",
-      "category": "jaw pain",
-    },
-    {
-      "hi": "क्या दर्द चबाने, बोलने, या मुँह खोलने से बढ़ जाता है?",
-      "en": "Does the pain worsen with chewing, speaking, or opening your mouth wide?",
-      "category": "jaw pain",
-    },
-    {
-      "hi": "क्या आपको अपने काटने या जबड़े की गति में कोई कठिनाई हो रही है?",
-      "en": "Are you having any difficulty with your bite or jaw movement?",
-      "category": "jaw pain",
-    },
-    {
-      "hi": "क्या आप रात में अपने दांतों को पीसते हैं या जबड़े को दबाते हैं?",
-      "en": "Do you grind your teeth or clench your jaw, especially at night?",
-      "category": "jaw pain",
-    },
+    "attack": [
+      {
+        "hi": "आपको दिल का दौरा आए हुए कितना समय हो गया है?",
+        "en": "How long ago did you have your heart attack?",
+        "category": "heart_attack_timeline",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दिल का दौरा पड़ने से पहले क्या हुआ था? क्या आप किसी गतिविधि में थे या कोई लक्षण महसूस हो रहे थे?",
+        "en": "What happened before the heart attack? Were you doing any activity or feeling any symptoms?",
+        "category": "pre_attack_events",
+        "symptom": None,
+        "risk_factor": False
+      }
     ],
-
-    'swelling': [
-        {
-            'hi': "क्या सूजन के साथ जबड़े में जकड़न या गर्माहट है?",
-            'en': "Is there tightness or warmth along with the swelling in the jaw?",
-            'category': 'jaw_swelling_signs'
-        }
-    ],
-    'injury': [
-        {
-            'hi': "क्या जबड़े में चोट किसी दुर्घटना, गिरावट या टक्कर से लगी थी?",
-            'en': "Was the jaw injury caused by an accident, fall, or impact?",
-            'category': 'jaw_injury_cause'
-        }
-    ],
-    'default': [
-        {
-            'hi': "कृपया अपने जबड़े की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your jaw issue in more detail.",
-            'category': 'jaw_detail'
-        }
-    ]
-},
-
-'period' : {
-    'pain': [
-        {
-            'hi': "क्या आपकी मासिक धर्म के दौरान दर्द होता है?",
-            'en': "Do you experience pain during your menstrual period?",
-            'category': 'period_pain'
-        },
-          {
-            "hi": "क्या आपकी माहवारी बहुत कम या हल्की होती है?",
-            "en": "Is your menstrual flow very light or scanty?",
-            "category": "menstruation",
-            "symptom": "light periods",
-            "risk_factor": False,
-        },
-    ],
-    'delayed': [
-            {
-                'hi': "क्या आपकी माहवारी अनियमित रही है या पहले भी देर से आती रही है?",
-                'en': "Have your periods been irregular or delayed in the past as well?",
-                'category': 'period_delay_history'
-            },
-        ],
-    'bleeding': [
-        {
-            'hi': "क्या आपकी मासिक धर्म में असामान्य रक्तस्राव होता है?",
-            'en': "Do you have abnormal bleeding during your period?",
-            'category': 'period_bleeding'
-        },
-          {
-            "hi": "क्या आपकी माहवारी के समय थकान या कमजोरी महसूस होती है?",
-            "en": "Do you feel fatigued or weak during your period?",
-            "category": "menstruation",
-            "symptom": "fatigue during menstruation",
-            "risk_factor": False,
-        },
-        {
-            "hi": "क्या आपकी माहवारी सामान्य से अधिक भारी होती है?",
-            "en": "Is your menstrual flow heavier than usual?",
-            "category": "menstruation",
-            "symptom": "heavy menstrual bleeding",
-            "risk_factor": False,
-        },
-    ],
-  },
-'hip': {
-        'pain': [
-            {
-                'hi': "क्या कूल्हे में दर्द चलने या खड़े होने पर बढ़ता है?",
-                'en': "Does the hip pain increase when walking or standing?",
-                'category': 'hip_pain_activity'
-            },
-	 {
-      "hi": "क्या दर्द एक कूल्हे में है या दोनों कूल्हों में?",
-      "en": "Is the pain in one hip or both hips?",
-      "category": "hip pain",
-    },
-    {
-      "hi": "क्या कूल्हे का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
-      "en": "Is the hip pain constant, or does it come and go?",
-      "category": "hip pain",
-    },
-    {
-      "hi": "क्या आपको हाल ही में कूल्हे में कोई चोट या आघात हुआ है?",
-      "en": "Have you had any recent injuries or trauma to your hip?",
-      "category": "hip pain",
-    },
-    {
-      "hi": "क्या कूल्हे का दर्द कुछ गतिविधियों, जैसे चलने, झुकने या खड़े होने से बढ़ जाता है?",
-      "en": "Does the hip pain worsen with certain movements, such as walking, bending, or standing up?",
-      "category": "hip pain",
-    },
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर कूल्हे में जकड़न ज्यादा होती है?",
-                'en': "Is the hip stiffness worse in the morning?",
-                'category': 'hip_stiffness_morning'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या कूल्हे की सूजन के साथ गर्माहट या लालिमा भी है?",
-                'en': "Is there warmth or redness along with the hip swelling?",
-                'category': 'hip_swelling_inflammation'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या कूल्हे की कमजोरी के कारण आपको खड़ा होने या चलने में दिक्कत होती है?",
-                'en': "Does hip weakness make it hard for you to stand or walk?",
-                'category': 'hip_weakness_mobility'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या हाल ही में कूल्हे में गिरावट या चोट लगी थी?",
-                'en': "Did you recently have a fall or injury to the hip?",
-                'category': 'hip_injury_recent'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या कूल्हे में खुजली किसी खास कपड़े या रैश के कारण है?",
-                'en': "Is the hip itching due to clothing or a rash?",
-                'category': 'hip_itching_cause'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने कूल्हे की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your hip issue in more detail.",
-                'category': 'hip_detail'
-            }
-        ]
-    },
-	
-    'waist': {
-        'pain': [
-            {
-                'hi': "क्या कमर का दर्द खड़े होने या चलने से बढ़ता है?",
-                'en': "Does the waist pain increase when standing or walking?",
-                'category': 'waist_pain_trigger'
-            },
-		 {
-      "hi": "आप कमर दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "waist pain",
-    },
-    {
-      "hi": "कमर का दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "waist pain",
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "waist pain",
-    },
-   
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या कमर में जकड़न सुबह उठने पर ज़्यादा महसूस होती है?",
-                'en': "Is the waist stiffness worse in the morning when you wake up?",
-                'category': 'waist_stiffness_time'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या कमर का सुन्नपन पैर या जांघों तक फैलता है?",
-                'en': "Does the numbness in your waist extend to your legs or thighs?",
-                'category': 'waist_numbness_radiation'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या कमर की सूजन के साथ लालिमा या गर्मी भी है?",
-                'en': "Is there redness or warmth with the swelling in your waist?",
-                'category': 'waist_swelling_signs'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या आपने किसी अचानक गतिविधि के दौरान कमर में चोट महसूस की?",
-                'en': "Did the waist injury happen during a sudden movement or activity?",
-                'category': 'waist_injury_cause'
-            }
-        ],
-	'weakness': [
-            {
-        'hi': "क्या कमर की कमजोरी के कारण आपको खड़े होने या चलने में कठिनाई होती है?",
-        'en': "Does weakness in your waist make it difficult to stand or walk?",
-        'category': 'waist_weakness_function'
-            }
-        ],
-        'itching': [
-            {
-                'hi': "क्या कमर में खुजली के साथ रैश या जलन भी हो रही है?",
-                'en': "Is the itching on your waist accompanied by rash or burning?",
-                'category': 'waist_itching_symptoms'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी कमर की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your waist issue in more detail.",
-                'category': 'waist_detail'
-            }
-        ]
-    },
-
-    'pelvic': {
-        'pain': [
-            {
-                'hi': "क्या श्रोणि क्षेत्र में दर्द बैठने या पेशाब करते समय बढ़ता है?",
-                'en': "Does the pelvic pain increase when sitting or during urination?",
-                'category': 'pelvic_pain_triggers'
-            },
-		{
-      "hi": "आप pelvic में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the pelvic pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "pelvic pain",
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your pelvic area? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "pelvic pain",
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "pelvic pain",
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "pelvic pain",
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी pelvic में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar pelvic pain or any known medical conditions?",
-      "category": "pelvic pain",
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "pelvic pain",
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "pelvic pain",
-    },
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या आपको श्रोणि क्षेत्र को हिलाने में कठिनाई होती है?",
-                'en': "Do you find it difficult to move your pelvic area?",
-                'category': 'pelvic_stiffness_mobility'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या श्रोणि क्षेत्र में सूजन के साथ गर्माहट या दबाव महसूस हो रहा है?",
-                'en': "Is there warmth or a feeling of pressure along with swelling in the pelvic area?",
-                'category': 'pelvic_swelling_signs'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या श्रोणि की कमजोरी के कारण आपको खड़े होने में परेशानी होती है?",
-                'en': "Does pelvic weakness make it hard for you to stand?",
-                'category': 'pelvic_weakness_function'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या हाल ही में आपके श्रोणि क्षेत्र में कोई चोट या गिरावट हुई है?",
-                'en': "Did you recently have a fall or injury to your pelvic area?",
-                'category': 'pelvic_injury_recent'
-            }
-        ],
-	'numbness': [
-            {
-                'hi': "क्या पेल्विक क्षेत्र का सुन्नपन पैरों तक फैलता है?",
-                'en': "Does the numbness in your pelvic area extend to the legs?",
-                'category': 'pelvic_numbness_distribution'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या पेल्विक क्षेत्र की खुजली के साथ जलन या रिसाव भी है?",
-                'en': "Is the itching in the pelvic area accompanied by burning or discharge?",
-                'category': 'pelvic_itching_accompanied'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने श्रोणि क्षेत्र की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your pelvic issue in more detail.",
-                'category': 'pelvic_detail'
-            }
-        ]
-},
-
-    'elbow': {
-        'pain': [
-            {
-                'hi': "क्या कोहनी में दर्द कुछ उठाने या मोड़ने पर बढ़ता है?",
-                'en': "Does the elbow pain increase when lifting or bending?",
-                'category': 'elbow_pain_movement'
-            },
-		 {
-      "hi": "आप कोहनी में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the elbow pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "elbow pain",
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your elbow? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "elbow pain",
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "elbow pain",
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "elbow pain",
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी कोहनी में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar elbow pain or any known medical conditions?",
-      "category": "elbow pain",
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "elbow pain",
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "elbow pain",
-    },
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर कोहनी में जकड़न महसूस होती है?",
-                'en': "Do you feel stiffness in the elbow after waking up in the morning?",
-                'category': 'elbow_stiffness_morning'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या कोहनी की सूजन के साथ गर्माहट या लालिमा भी है?",
-                'en': "Is there warmth or redness along with swelling in the elbow?",
-                'category': 'elbow_swelling_signs'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या कोहनी की कमजोरी के कारण आपको चीजें उठाने में दिक्कत होती है?",
-                'en': "Is it difficult to lift things due to weakness in your elbow?",
-                'category': 'elbow_weakness_function'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या आपने हाल ही में कोहनी में चोट या गिरावट का अनुभव किया है?",
-                'en': "Did you recently experience an injury or fall affecting your elbow?",
-                'category': 'elbow_injury_recent'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी कोहनी की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your elbow issue in more detail.",
-                'category': 'elbow_detail'
-            }
-        ]
-},
-
-    'calf': {
-        'pain': [
-            {
-                'hi': "क्या बछड़े में दर्द चलने या खड़े होने पर बढ़ता है?",
-                'en': "Does the calf pain increase when walking or standing?",
-                'category': 'calf_pain_activity'
-            },
-		 {
-      "hi": "आप बछड़े में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
-      "en": "Can you describe the calf pain? Is it sharp, dull, burning, or throbbing?",
-      "category": "calf pain",
-    },
-    {
-      "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
-      "en": "Where exactly is the pain located in your calf? Is it on one side, both sides, or spreading elsewhere?",
-      "category": "calf pain",
-    },
-    {
-      "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
-      "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-      "category": "calf pain",
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
-      "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-      "category": "calf pain",
-    },
-    {
-      "hi": "क्या आपको पहले भी ऐसी बछड़े में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
-      "en": "Do you have a history of similar calf pain or any known medical conditions?",
-      "category": "calf pain",
-    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
-      "en": "Are you taking any medications or supplements currently?",
-      "category": "calf pain",
-    },
-    {
-      "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
-      "en": "How does the pain affect your daily activities or sleep?",
-      "category": "calf pain",
-    },
-        ],
-        'spasm': [
-            {
-                'hi': "क्या बछड़े में ऐंठन या मरोड़ अक्सर हो रही है?",
-                'en': "Are the calf spasms or cramps happening frequently?",
-                'category': 'calf_spasm_frequency'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या बछड़े में सूजन के साथ गर्माहट या लालिमा भी है?",
-                'en': "Is there warmth or redness along with the swelling in the calf?",
-                'category': 'calf_swelling_signs'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या बछड़े की कमजोरी के कारण आपको खड़े रहने या चलने में परेशानी होती है?",
-                'en': "Does calf weakness make it hard for you to stand or walk?",
-                'category': 'calf_weakness_function'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या बछड़े में हाल ही में कोई चोट या खिंचाव हुआ है?",
-                'en': "Did you recently have any injury or strain in your calf?",
-                'category': 'calf_injury_recent'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने बछड़े की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your calf issue in more detail.",
-                'category': 'calf_detail'
-            }
-        ]
-    },
-'face': {
-        'pain': [
-            {
-                'hi': "क्या चेहरे का दर्द किसी विशेष स्थान पर केंद्रित है?",
-                'en': "Is the facial pain localized to a specific area?",
-                'category': 'face_pain_location'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या चेहरे का सुन्नपन अचानक शुरू हुआ?",
-                'en': "Did the facial numbness start suddenly?",
-                'category': 'face_numbness_onset'
-            }
-        ],
-        'swelling': [
-            {
-               'hi': "क्या चेहरे की सूजन के साथ दर्द भी है?",
-               'en': "Is there pain along with the facial swelling?",
-               'category': 'face_swelling_signs'
-           }
-
-        ],
-        'drooping': [
-            {
-                'hi': "क्या आपके चेहरे का एक हिस्सा झुक गया है या मुस्कान असमान है?",
-                'en': "Is one side of your face drooping or is your smile uneven?",
-                'category': 'face_drooping_sign'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या आपको हाल ही में चेहरे पर कोई चोट लगी है?",
-                'en': "Have you recently had any injury to your face?",
-                'category': 'face_injury_recent'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या चेहरे में खुजली किसी क्रीम या साबुन के इस्तेमाल के बाद हुई?",
-                'en': "Did the facial itching start after using any cream or soap?",
-                'category': 'face_itching_trigger'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने चेहरे की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your facial issue in more detail.",
-                'category': 'face_detail'
-            }
-        ]
-    },
-'ankle': {
-        'pain': [
-            {
-                'hi': "क्या टखने में दर्द चलते समय बढ़ता है?",
-                'en': "Does ankle pain get worse while walking?",
-                'category': 'ankle_pain_activity'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या टखने में सूजन के साथ लालिमा या गर्मी महसूस हो रही है?",
-                'en': "Is there redness or warmth with the ankle swelling?",
-                'category': 'ankle_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर टखना कड़ा महसूस होता है?",
-                'en': "Does your ankle feel stiff in the morning?",
-                'category': 'ankle_stiffness_morning'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या आपने हाल ही में टखना मोड़ लिया या गिर गए?",
-                'en': "Did you recently twist your ankle or fall?",
-                'category': 'ankle_injury_cause'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या आपका टखना चलते समय अचानक मुड़ जाता है या लड़खड़ाता है?",
-                'en': "Does your ankle give out or wobble while walking?",
-                'category': 'ankle_weakness_instability'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या टखने में चोट के कारण खून बह रहा है?",
-                'en': "Is the bleeding from your ankle due to an injury?",
-                'category': 'ankle_bleeding_cause'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने टखने की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your ankle issue in more detail.",
-                'category': 'ankle_detail'
-            }
-        ]
-    },
-'body': {
-        'pain': [
-            {
-                'hi': "क्या पूरे शरीर में दर्द लगातार बना रहता है?",
-                'en': "Is the body-wide pain constant?",
-                'category': 'body_pain_duration'
-            }
-        ],
-        'fatigue': [
-            {
-                'hi': "क्या थकान के साथ नींद भी पूरी नहीं हो रही है?",
-                'en': "Are you feeling fatigued even after a full night's sleep?",
-                'category': 'body_fatigue_sleep'
-            }
-        ],
-        'weakness': [
-            {
-                'hi': "क्या कमजोरी के कारण रोज़मर्रा के कामों में दिक्कत हो रही है?",
-                'en': "Is the weakness affecting your daily activities?",
-                'category': 'body_weakness_function'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह उठने पर पूरे शरीर में जकड़न महसूस होती है?",
-                'en': "Do you feel stiffness throughout your body in the morning?",
-                'category': 'body_stiffness_morning'
-            }
-        ],
-	'itching': [
-        {
-            'hi': "क्या पूरे शरीर में खुजली लगातार हो रही है या रुक-रुक कर?",
-            'en': "Is the itching happening constantly or intermittently across the body?",
-            'category': 'body_itching_pattern'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या शरीर की सूजन किसी विशेष हिस्से में सीमित है या पूरे शरीर में फैली हुई है?",
-            'en': "Is the swelling limited to one area or spread across the whole body?",
-            'category': 'body_swelling_area'
-        }
-    ],
-        'default': [
-            {
-                'hi': "कृपया अपने शरीर की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your body issue in more detail.",
-                'category': 'body_detail'
-            }
-        ]
-    },
-'hair': {
-        'hair loss': [
-            {
-                'hi': "क्या आपके बाल झड़ने का कोई विशेष कारण है जैसे तनाव या हार्मोन?",
-                'en': "Is there a specific reason for your hair loss such as stress or hormones?",
-                'category': 'hair_loss_cause'
-            }
-        ],
-        'dandruff': [
-            {
-                'hi': "क्या सिर में खुजली के साथ-साथ रूसी भी हो रही है?",
-                'en': "Is dandruff accompanied by itching on the scalp?",
-                'category': 'hair_dandruff_itching'
-            }
-        ],
-        'itching': [
-            {
-                'hi': "क्या यह खुजली हर समय बनी रहती है या कुछ समय में होती है?",
-                'en': "Is the itching constant or does it occur occasionally?",
-                'category': 'hair_itching_frequency'
-            }
-        ],
-        'greying': [
-            {
-                'hi': "क्या बालों का सफेद होना उम्र से पहले शुरू हुआ?",
-                'en': "Has the greying of your hair started prematurely?",
-                'category': 'hair_greying_age'
-            }
-        ],
-        'dryness': [
-            {
-                'hi': "क्या आपके बालों में रूखापन मौसम या किसी उत्पाद के कारण है?",
-                'en': "Is the dryness in your hair due to weather or any hair products?",
-                'category': 'hair_dryness_cause'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने बालों की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your hair issue in more detail.",
-                'category': 'hair_detail'
-            }
-        ]
-    },
-'finger': {
-        'pain': [
-            {
-                'hi': "क्या उंगली का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
-                'en': "Does the finger pain increase during any specific activity?",
-                'category': 'finger_pain_activity'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या उंगली में सुन्नपन लगातार बना रहता है या आता-जाता है?",
-                'en': "Is the numbness in the finger constant or does it come and go?",
-                'category': 'finger_numbness_pattern'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ दर्द, गर्माहट या लालिमा भी है?",
-                'en': "Is there pain, warmth, or redness along with the swelling?",
-                'category': 'finger_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह के समय उंगली में जकड़न ज्यादा होती है?",
-                'en': "Is the stiffness in your finger worse in the morning?",
-                'category': 'finger_stiffness_timing'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या उंगली में हाल ही में कोई चोट या झटका लगा है?",
-                'en': "Did you recently injure or bump your finger?",
-                'category': 'finger_injury_event'
-            }
-        ],
-	'freeze': [
-            {
-                'hi': "क्या ठंड में आपकी उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
-                'en': "Do your fingers feel numb or very cold in cold weather?",
-                'category': 'finger_freezing_cold_sensitivity'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या उंगलियों में खुजली के साथ त्वचा फट रही है या सूजन है?",
-                'en': "Is the finger itching accompanied by cracked skin or swelling?",
-                'category': 'finger_itching_condition'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या उंगली से खून बहने के साथ सूजन या दर्द भी है?",
-                'en': "Is the finger bleeding accompanied by swelling or pain?",
-                'category': 'finger_bleeding_signs'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your finger issue in more detail.",
-                'category': 'finger_detail'
-            }
-        ]
-    },
-'thumb': {
-        'pain': [
-            {
-                'hi': "क्या अंगूठे में दर्द पकड़ने या किसी चीज़ को पकड़ने पर बढ़ता है?",
-                'en': "Does thumb pain increase when gripping or holding something?",
-                'category': 'thumb_pain_grip'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या अंगूठे की सूजन के साथ गर्माहट या लालिमा भी है?",
-                'en': "Is there warmth or redness along with the swelling in your thumb?",
-                'category': 'thumb_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह के समय अंगूठे में जकड़न अधिक होती है?",
-                'en': "Is thumb stiffness worse in the morning?",
-                'category': 'thumb_stiffness_timing'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या अंगूठे में सुन्नपन कभी-कभी होता है या लगातार बना रहता है?",
-                'en': "Is the numbness in your thumb occasional or constant?",
-                'category': 'thumb_numbness_pattern'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या हाल ही में अंगूठे में कोई चोट या मोच आई है?",
-                'en': "Did you recently injure or sprain your thumb?",
-                'category': 'thumb_injury_event'
-            }
-        ],
-	 'bleeding': [
-            {
-                'hi': "क्या अंगूठे से लगातार खून बह रहा है या रुक गया है?",
-                'en': "Is the bleeding from your thumb continuous or has it stopped?",
-                'category': 'thumb_bleeding_status'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपने अंगूठे की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your thumb issue in more detail.",
-                'category': 'thumb_detail'
-            }
-        ]
-    },
-'palm': {
-        'pain': [
-            {
-                'hi': "क्या हथेली में दर्द किसी चीज़ को पकड़ते समय बढ़ता है?",
-                'en': "Does the palm pain increase when gripping something?",
-                'category': 'palm_pain_grip'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या हथेली में झुनझुनी या सुन्नपन रात के समय ज्यादा होता है?",
-                'en': "Is the numbness or tingling in your palm worse at night?",
-                'category': 'palm_numbness_timing'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या हथेली में सूजन के साथ लालिमा या गर्माहट भी है?",
-                'en': "Is there redness or warmth along with swelling in your palm?",
-                'category': 'palm_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या हथेली की जकड़न के कारण उंगलियां मोड़ने में दिक्कत होती है?",
-                'en': "Is the palm stiffness making it hard to bend your fingers?",
-                'category': 'palm_stiffness_flexibility'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या आपकी हथेली पर हाल ही में कोई चोट, जलन या कट हुआ है?",
-                'en': "Have you recently had a cut, burn, or injury on your palm?",
-                'category': 'palm_injury_event'
-            }
-        ],
-	'dryness': [
-            {
-                'hi': "क्या हथेली का सूखापन फटने या खुजली के साथ है?",
-                'en': "Is the dryness in your palm accompanied by cracking or itching?",
-                'category': 'palm_dryness_signs'
-            }
-        ],
-	'itching': [
-            {
-                'hi': "क्या हथेली में खुजली के साथ लालपन या सूजन है?",
-                'en': "Is the itching in your palm accompanied by redness or swelling?",
-                'category': 'palm_itching_signs'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी हथेली की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your palm issue in more detail.",
-                'category': 'palm_detail'
-            }
-        ]
-    },
-'toe': {
-        'pain': [
-            {
-                'hi': "क्या पैर की उंगली का दर्द चलने या दौड़ने से बढ़ता है?",
-                'en': "Does the toe pain worsen when walking or running?",
-                'category': 'toe_pain_activity'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या पैर की उंगली में सुन्नपन लगातार रहता है या कभी-कभी होता है?",
-                'en': "Is the numbness in the toe constant or occasional?",
-                'category': 'toe_numbness_pattern'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या सूजन के साथ पैर की उंगली में दर्द या गर्माहट है?",
-                'en': "Is there pain or warmth along with the swelling in the toe?",
-                'category': 'toe_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या सुबह के समय पैर की उंगली में जकड़न ज्यादा महसूस होती है?",
-                'en': "Is the stiffness in your toe worse in the morning?",
-                'category': 'toe_stiffness_timing'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या हाल ही में पैर की उंगली में चोट लगी थी या टकराई थी?",
-                'en': "Did you recently injure or stub your toe?",
-                'category': 'toe_injury_event'
-            }
-        ],
-        'freeze': [
-            {
-                'hi': "क्या ठंड में आपकी पैर की उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
-                'en': "Do your toes feel numb or extremely cold in cold weather?",
-                'category': 'toe_freezing_cold_sensitivity'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या पैर की उंगली से खून कट या नाखून टूटने के कारण बह रहा है?",
-                'en': "Is the bleeding from your toe due to a cut or broken nail?",
-                'category': 'toe_bleeding_reason'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी पैर की उंगली की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your toe issue in more detail.",
-                'category': 'toe_detail'
-            }
-        ]
-    },
-
-'heel': {
-        'pain': [
-            {
-                'hi': "क्या एड़ी में दर्द सुबह उठने पर अधिक होता है?",
-                'en': "Is your heel pain worse when you get up in the morning?",
-                'category': 'heel_pain_morning'
-            }
-        ],
-        'swelling': [
-            {
-                'hi': "क्या एड़ी पर सूजन के साथ लालिमा या गर्माहट है?",
-                'en': "Is there redness or warmth with the heel swelling?",
-                'category': 'heel_swelling_signs'
-            }
-        ],
-        'stiffness': [
-            {
-                'hi': "क्या एड़ी जकड़ी हुई या चलने में कठिनाई होती है?",
-                'en': "Does your heel feel stiff or make walking difficult?",
-                'category': 'heel_stiffness_difficulty'
-            }
-        ],
-        'injury': [
-            {
-                'hi': "क्या हाल ही में आपकी एड़ी में कोई चोट लगी है?",
-                'en': "Have you recently injured your heel?",
-                'category': 'heel_injury_recent'
-            }
-        ],
-        'numbness': [
-            {
-                'hi': "क्या एड़ी में सुन्नपन या झनझनाहट महसूस होती है?",
-                'en': "Do you feel numbness or tingling in your heel?",
-                'category': 'heel_numbness_sensation'
-            }
-        ],
-	'bleeding': [
-            {
-                'hi': "क्या एड़ी से खून चलने या दबाव डालने पर निकल रहा है?",
-                'en': "Is the heel bleeding when you walk or put pressure on it?",
-                'category': 'heel_bleeding_trigger'
-            }
-        ],
-        'default': [
-            {
-                'hi': "कृपया अपनी एड़ी की समस्या के बारे में और जानकारी दें।",
-                'en': "Please describe your heel issue in more detail.",
-                'category': 'heel_detail'
-            }
-        ]
-    },
-'lip': {
-    'pain': [
-        {
-            'hi': "क्या होंठों में जलन या तीव्र दर्द हो रहा है?",
-            'en': "Are you experiencing burning or sharp pain in the lips?",
-            'category': 'lip_pain_burning'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या होंठों की सूजन अचानक से हुई या किसी एलर्जी के कारण है?",
-            'en': "Did the lip swelling happen suddenly or due to an allergy?",
-            'category': 'lip_swelling_allergy'
-        }
-    ],
-    'dryness': [
-        {
-            'hi': "क्या होंठ लगातार फटते या सूखते रहते हैं?",
-            'en': "Are your lips constantly dry or cracking?",
-            'category': 'lip_dryness_chronic'
-        }
-    ],
-    'numbness': [
-        {
-            'hi': "क्या होंठों में सुन्नपन या झनझनाहट महसूस हो रही है?",
-            'en': "Do you feel numbness or tingling in your lips?",
-            'category': 'lip_numbness_sensation'
-        }
-    ],
-    'ulcers': [
-        {
-            'hi': "क्या होंठों पर छाले या घाव हैं?",
-            'en': "Do you have ulcers or sores on your lips?",
-            'category': 'lip_ulcers_visible'
-        }
-    ],
-    'default': [
-        {
-            'hi': "कृपया अपने होंठों की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your lip issue in more detail.",
-            'category': 'lip_detail'
-        }
-    ]
-},
-'cheek': {
-    'pain': [
-        {
-            'hi': "क्या गाल में दर्द लगातार बना रहता है या छूने से बढ़ता है?",
-            'en': "Is the cheek pain constant or does it increase when touched?",
-            'category': 'cheek_pain_touch_sensitive'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या गाल में सूजन के साथ बुखार या गर्माहट भी है?",
-            'en': "Is the swelling in the cheek accompanied by fever or warmth?",
-            'category': 'cheek_swelling_fever'
-        }
-    ],
-    'numbness': [
-        {
-            'hi': "क्या गाल में सुन्नपन या झनझनाहट महसूस होती है?",
-            'en': "Do you feel numbness or tingling in your cheek?",
-            'category': 'cheek_numbness_sensation'
-        }
-    ],
-    'redness': [
-        {
-            'hi': "क्या गाल में लालिमा अचानक से हुई है या जलन महसूस होती है?",
-            'en': "Is the redness in your cheek sudden or does it feel like burning?",
-            'category': 'cheek_redness_burning'
-        }
-    ],
-    'injury': [
-        {
-            'hi': "क्या आपके गाल पर हाल ही में कोई चोट लगी है?",
-            'en': "Did you recently suffer any injury to your cheek?",
-            'category': 'cheek_injury_recent'
-        }
-    ],
-    'default': [
-        {
-            'hi': "कृपया अपने गाल की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your cheek issue in more detail.",
-            'category': 'cheek_detail'
-        }
-    ]
-},
-'chin': {
-    'pain': [
-        {
-            'hi': "क्या ठोड़ी में दर्द चबाने या बोलने पर बढ़ता है?",
-            'en': "Does the chin pain increase while chewing or talking?",
-            'category': 'chin_pain_activity'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या ठोड़ी की सूजन के साथ बुखार या लालिमा है?",
-            'en': "Is the chin swelling accompanied by fever or redness?",
-            'category': 'chin_swelling_fever'
-        }
-    ],
-    'numbness': [
-        {
-            'hi': "क्या ठोड़ी में सुन्नपन या झनझनाहट महसूस हो रही है?",
-            'en': "Do you feel numbness or tingling in your chin?",
-            'category': 'chin_numbness_sensation'
-        }
-    ],
-    'injury': [
-        {
-            'hi': "क्या आपने हाल ही में ठोड़ी पर चोट लगाई है?",
-            'en': "Did you recently injure your chin?",
-            'category': 'chin_injury_recent'
-        }
-    ],
-    'lump': [
-        {
-            'hi': "क्या आपकी ठोड़ी पर कोई गांठ या उभार है?",
-            'en': "Is there a lump or bump on your chin?",
-            'category': 'chin_lump_present'
-        }
-    ],
-    'default': [
-        {
-            'hi': "कृपया अपनी ठोड़ी की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your chin issue in more detail.",
-            'category': 'chin_detail'
-        }
-    ]
-},
-'soles': {
-    'pain': [
-        {
-            'hi': "क्या तलवों में दर्द सुबह उठने पर या चलने पर बढ़ता है?",
-            'en': "Is the pain in your soles worse in the morning or while walking?",
-            'category': 'soles_pain_morning_walk'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या तलवों में सूजन के साथ गर्मी या लालिमा भी है?",
-            'en': "Is there warmth or redness along with swelling in the soles?",
-            'category': 'soles_swelling_inflammation'
-        }
-    ],
-    'numbness': [
-        {
-            'hi': "क्या आपके तलवे सुन्न हो जाते हैं या उनमें झनझनाहट होती है?",
-            'en': "Do your soles feel numb or have a tingling sensation?",
-            'category': 'soles_numbness_sensation'
-        }
-    ],
-    'cracks': [
-        {
-            'hi': "क्या आपके तलवे फट रहे हैं या सूखे हैं?",
-            'en': "Are the soles of your feet cracked or dry?",
-            'category': 'soles_cracks_dryness'
-        }
-    ],
-    'itching': [
-        {
-            'hi': "क्या तलवों में खुजली या जलन हो रही है?",
-            'en': "Do you have itching or burning in the soles?",
-            'category': 'soles_itching_irritation'
-        }
-    ],
-    'default': [
-        {
-            'hi': "कृपया अपने तलवों की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your sole-related issue in more detail.",
-            'category': 'soles_detail'
-        }
-    ]
-},
-'fingertip': {
-    'pain': [
-        {
-            'hi': "क्या उंगली के सिरे में तेज़ या जलन जैसा दर्द है?",
-            'en': "Is the pain in your fingertip sharp or burning?",
-            'category': 'fingertip_pain_burning'
-        }
-    ],
-    'numbness': [
-        {
-            'hi': "क्या उंगली के सिरे में सुन्नपन या झनझनाहट महसूस हो रही है?",
-            'en': "Do you feel numbness or tingling in your fingertip?",
-            'category': 'fingertip_numbness_sensation'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या उंगली के सिरे में सूजन के साथ लालिमा या गर्मी है?",
-            'en': "Is there swelling along with redness or warmth in the fingertip?",
-            'category': 'fingertip_swelling_inflammation'
-        }
-    ],
-    'injury': [
-        {
-            'hi': "क्या आपकी उंगली के सिरे पर हाल ही में चोट लगी है?",
-            'en': "Did you recently injure the tip of your finger?",
-            'category': 'fingertip_injury_recent'
-        }
-    ],
-    'discoloration': [
-        {
-            'hi': "क्या उंगली का सिरा नीला, काला या पीला हो गया है?",
-            'en': "Has the fingertip turned blue, black, or pale?",
-            'category': 'fingertip_discoloration_color_change'
-        }
-    ],
-    'default': [
-        {
-            'hi': "कृपया अपनी उंगली के सिरे की समस्या के बारे में और जानकारी दें।",
-            'en': "Please describe your fingertip issue in more detail.",
-            'category': 'fingertip_detail'
-        }
-    ]
-},
-
-'testicle': {
-    'problem': [
-        {
-            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
-            'en':"did you previously show any doctor about the issue?",
-            'category': 'testicle problem'
-        }
-    ],
-    'swelling': [
-        {
-            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
-            'en':"did you previously show any doctor about the issue?",
-            'category': 'testicle problem'
-        }
-    ],
-    'bleeding': [
-        {
-            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
-            'en':"did you previously show any doctor about the issue?",
-            'category': 'testicle problem'
-        }
-    ],
-    'itching': [
-        {
-            'hi': "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
-            'en':"did you previously show any doctor about the issue?",
-            'category': 'testicle problem'
-        }
-    ],
-
-    
-},
-
-'child' : {
-    'pain': [
-        {
-            'hi': "क्या आपका बच्चा दर्द से रोता है? क्या यह बच्चे के लिए असहनीय है?",
-            'en': "Does your child cry with pain? Is it unbearable for the child",
-            'category': 'child_pain'
-        }
-    ],
-    'bleeding': [
-        {
-            'hi': "क्या बच्चे को भारी रक्तस्राव हो रहा है?",
-            'en': "Does the child have heavy bleeding?",
-            'category': 'child_bleeding'
-        }
-    ],
-    'default': [
-        {
-            'hi': "क्या आपका बच्चा इन समस्याओं का सामना कर रहा है?",
-            'en': "Is your child facing the issues?",
-            'category': 'confirm_child',
-            'symptom': None
-        }
+    "default": [
+      {
+        "hi": "कृपया अपने दिल से जुड़ी समस्या के बारे में और बताएं।",
+        "en": "Please tell me more about your heart-related issue.",
+        "category": "heart_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
     ]
   },
-
+  "urinary": {
+    "pain": [
+      {
+        "hi": "क्या पेशाब करते समय जलन या दर्द होता है?",
+        "en": "Do you experience burning or pain while urinating?",
+        "category": "urinary_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "frequency": [
+      {
+        "hi": "दिन में कितनी बार पेशाब करने की जरूरत महसूस होती है?",
+        "en": "How many times do you feel the need to urinate in a day?",
+        "category": "urinary_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "blood": [
+      {
+        "hi": "क्या पेशाब में खून दिखा है?",
+        "en": "Have you noticed any blood in your urine?",
+        "category": "urinary_blood",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "difficulty": [
+      {
+        "hi": "क्या पेशाब करने में कठिनाई या रुकावट हो रही है?",
+        "en": "Are you experiencing difficulty or blockage while urinating?",
+        "category": "urinary_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी पेशाब से जुड़ी समस्या के बारे में और जानकारी दें।",
+        "en": "Please tell me more about your urinary issue.",
+        "category": "urinary_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "toes": {
+    "injury": [
+      {
+        "hi": "कौन सी उंगली या उंगलियाँ घायल हैं?",
+        "en": "Which toe or toes are injured?",
+        "category": "toes_injury_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "pain": [
+      {
+        "hi": "क्या दर्द चलने पर ज्यादा होता है या आराम करते समय भी रहता है?",
+        "en": "Does the pain worsen while walking or is it present even at rest?",
+        "category": "toes_pain_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ लालिमा या गर्माहट भी है?",
+        "en": "Is there redness or warmth along with the swelling?",
+        "category": "toes_swelling_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your toe issue in more detail.",
+        "category": "toes_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "nose": {
+    "injury": [
+      {
+        "hi": "नाक में चोट कब और कैसे लगी थी?",
+        "en": "How and when did you injure your nose?",
+        "category": "nose_injury_time",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burning": [
+      {
+        "hi": "क्या नाक में जलन लगातार रहती है या कुछ खास चीज़ों से होती है?",
+        "en": "Is the burning sensation in your nose constant or triggered by something specific?",
+        "category": "nose_burning_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "sniffing": [
+      {
+        "hi": "क्या आपको सूंघने में कठिनाई हो रही है?",
+        "en": "Are you having trouble smelling things?",
+        "category": "nose_sniffing_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "pain": [
+      {
+        "hi": "क्या आपकी नाक में लगातार दर्द या जलन हो रही है?",
+        "en": "Are you experiencing persistent pain or burning sensation in your nose?",
+        "category": "nose pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में सर्दी, एलर्जी या साइनस की समस्या हुई है?",
+        "en": "Have you recently had a cold, allergies, or sinus issues?",
+        "category": "nose pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको नाक छूने या दबाने पर दर्द महसूस होता है?",
+        "en": "Do you feel pain when touching or pressing on your nose?",
+        "category": "nose pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी नाक में सूजन या लालिमा है?",
+        "en": "Is there any swelling or redness in your nose?",
+        "category": "nose pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी नाक से किसी प्रकार का डिस्चार्ज या खून आ रहा है?",
+        "en": "Is there any discharge or bleeding from your nose?",
+        "category": "nose pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "infection": [
+      {
+        "hi": "क्या आपको सर्दी, जुकाम या साइनस जैसी समस्या भी है?",
+        "en": "Are you also experiencing cold, congestion, or sinus problems?",
+        "category": "nose_infection_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "congestion": [
+      {
+        "hi": "क्या आपकी नाक पूरी तरह से बंद है या आंशिक रूप से?",
+        "en": "Is your nose completely blocked or partially blocked?",
+        "category": "nose_congestion",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleed": [
+      {
+        "hi": "क्या नाक से खून बहना जारी है या रुक गया है?",
+        "en": "Is the nosebleed still continuing or has it stopped?",
+        "category": "nose_bleed_status",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या आपको ठंडे मौसम में नाक में सुन्नपन या ठंडक का अनुभव होता है?",
+        "en": "Do you feel numbness or a cold sensation in your nose during cold weather?",
+        "category": "nasal_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या नाक में खुजली के साथ छींकें या बहाव भी हो रहा है?",
+        "en": "Is the nose itching accompanied by sneezing or discharge?",
+        "category": "nose_itching_allergy",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी नाक की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your nose issue in more detail.",
+        "category": "nose_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "thigh": {
+    "pain": [
+      {
+        "hi": "क्या जांघ में दर्द चलने या दौड़ने से बढ़ता है?",
+        "en": "Does the thigh pain worsen when walking or running?",
+        "category": "thigh_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "आप थाई में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+        "en": "Can you describe the pain in your thigh? Is it sharp, dull, burning, or throbbing?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+        "en": "Where exactly is the pain located in your thigh? Is it on one side, both sides, or spreading elsewhere?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+        "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+        "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पहले भी ऐसी थाई में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+        "en": "Do you have a history of similar pain or any known medical conditions?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+        "en": "Are you taking any medications or supplements currently?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+        "en": "How does the pain affect your daily activities or sleep?",
+        "category": "thigh pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या जांघ की कमजोरी के कारण सीढ़ियाँ चढ़ने में दिक्कत होती है?",
+        "en": "Is thigh weakness making it hard to climb stairs?",
+        "category": "thigh_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "क्या जांघ में बार-बार मरोड़ या ऐंठन हो रही है?",
+        "en": "Are you experiencing frequent cramps or spasms in your thigh?",
+        "category": "thigh_spasm_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या जांघ में किसी गतिविधि के दौरान चोट लगी थी?",
+        "en": "Did the thigh injury happen during any specific activity?",
+        "category": "thigh_injury_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजी हुई जांघ को छूने पर गर्म लगती है?",
+        "en": "Does the swollen thigh feel warm to the touch?",
+        "category": "thigh_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या जांघ का सुन्नपन पूरे पैर तक फैलता है?",
+        "en": "Does the numbness in your thigh spread down the leg?",
+        "category": "thigh_numbness_distribution",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या जांघ में खुजली के साथ रैश या फफोले भी हैं?",
+        "en": "Is the thigh itching accompanied by a rash or blisters?",
+        "category": "thigh_itching_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी जांघ की समस्या के बारे में अधिक जानकारी दें।",
+        "en": "Please provide more details about your thigh issue.",
+        "category": "thigh_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "forehead": {
+    "pain": [
+      {
+        "hi": "क्या माथे का दर्द लगातार बना रहता है या समय-समय पर आता है?",
+        "en": "Is the forehead pain constant or does it come and go?",
+        "category": "forehead_pain_pattern",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ माथे पर लालिमा या गर्माहट है?",
+        "en": "Is there redness or warmth along with the forehead swelling?",
+        "category": "forehead_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या माथे में चोट किसी गिरावट या टक्कर से लगी थी?",
+        "en": "Was the forehead injury caused by a fall or impact?",
+        "category": "forehead_injury_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "tingling": [
+      {
+        "hi": "क्या माथे में झनझनाहट के साथ सुन्नपन भी महसूस होता है?",
+        "en": "Do you feel numbness along with the tingling in your forehead?",
+        "category": "forehead_tingling_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी माथे की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your forehead issue in more detail.",
+        "category": "forehead_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "tongue": {
+    "pain": [
+      {
+        "hi": "क्या जीभ में दर्द खाने या बोलने से बढ़ता है?",
+        "en": "Does the tongue pain increase when eating or speaking?",
+        "category": "tongue_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजी हुई जीभ के कारण निगलने या साँस लेने में परेशानी हो रही है?",
+        "en": "Is the swollen tongue making it hard to swallow or breathe?",
+        "category": "tongue_swelling_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "burning": [
+      {
+        "hi": "क्या जीभ में जलन किसी गर्म या मसालेदार चीज़ के सेवन के बाद शुरू हुई?",
+        "en": "Did the tongue burning start after eating something hot or spicy?",
+        "category": "tongue_burning_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या जीभ की सुन्नता अचानक शुरू हुई थी?",
+        "en": "Did the numbness in your tongue start suddenly?",
+        "category": "tongue_numbness_onset",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "ulcers": [
+      {
+        "hi": "क्या जीभ के छाले खाने-पीने में तकलीफ देते हैं?",
+        "en": "Do the tongue ulcers cause discomfort while eating or drinking?",
+        "category": "tongue_ulcers_discomfort",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी जीभ की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your tongue issue in more detail.",
+        "category": "tongue_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "mouth": {
+    "pain": [
+      {
+        "hi": "क्या मुँह में दर्द खाना खाते समय बढ़ता है?",
+        "en": "Does the mouth pain increase while eating?",
+        "category": "mouth_pain_eating",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके मुंह का दर्द तेजी से फैल रहा है",
+        "en": "Is your mouth pain spreading rapidly?",
+        "category": "rapid_spread_mouth_sores",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके मुंह में दर्द के साथ सूजन भी है?",
+        "en": "Is there any swelling along with your mouth pain?",
+        "category": "swelling_with_mouth_sores",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या खाने या पीने के दौरान आपके मुंह में दर्द बढ़ जाता है?",
+        "en": "Does your mouth pain increase while eating or drinking?",
+        "category": "pain_with_mouth_sores",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके मुंह से खून बह रहा है?",
+        "en": "Is your mouth bleeding?",
+        "category": "bleeding_mouth_sores",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको मुंह के दर्द के साथ दांत में भी दर्द हो रहा है?",
+        "en": "Are you experiencing tooth pain along with mouth pain?",
+        "category": "tooth_pain_with_mouth_sores",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या मुंह में दर्द के कारण बोलने में कठिनाई हो रही है?",
+        "en": "Is the mouth pain causing difficulty in speaking?",
+        "category": "speech_difficulty_with_mouth_sores",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "ulcer": [
+      {
+        "hi": "क्या मुँह के छाले लंबे समय से हैं?",
+        "en": "Have the mouth ulcers been present for a long time?",
+        "category": "mouth_ulcer_duration",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dryness": [
+      {
+        "hi": "क्या आपके मुँह में अक्सर सूखापन महसूस होता है?",
+        "en": "Do you frequently feel dryness in your mouth?",
+        "category": "mouth_dryness_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या मुँह में सूजन के साथ दर्द या गर्मी भी महसूस हो रही है?",
+        "en": "Is there pain or warmth along with the swelling in your mouth?",
+        "category": "mouth_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या मुँह से खून brushing या खाने के समय आता है?",
+        "en": "Does your mouth bleed while brushing or eating?",
+        "category": "mouth_bleeding_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bad breath": [
+      {
+        "hi": "क्या आपको लंबे समय से मुँह से दुर्गंध आ रही है?",
+        "en": "Have you been experiencing bad breath for a long time?",
+        "category": "mouth_bad_breath_duration",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या सुन्नता आपके होंठों, जीभ या मुंह के अंदर किसी विशेष हिस्से में है?",
+        "en": "Is the numbness in your lips, tongue, or a specific part inside the mouth?",
+        "category": "mouth_numbness_location",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या यह सुन्नता खाने या पीने के बाद महसूस होती है?",
+        "en": "Does the numbness occur after eating or drinking?",
+        "category": "mouth_numbness_trigger_food",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या मुंह में सुन्नता के साथ जलन, झुनझुनी या कोई अजीब स्वाद भी महसूस होता है?",
+        "en": "Do you feel burning, tingling, or an unusual taste along with the numbness in the mouth?",
+        "category": "mouth_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या मुंह में खुजली के साथ सूजन या जलन भी है?",
+        "en": "Is the itching in your mouth accompanied by swelling or burning?",
+        "category": "mouth_itching_reaction",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने मुँह की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your mouth issue in more detail.",
+        "category": "mouth_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "jaw": {
+    "pain": [
+      {
+        "hi": "क्या जबड़े में दर्द चबाने या बोलने पर बढ़ता है?",
+        "en": "Does the jaw pain worsen while chewing or speaking?",
+        "category": "jaw_pain_trigger",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप जबड़े के दर्द (तीव्र, सुस्त, धड़कन या दर्द) का वर्णन कर सकते हैं?",
+        "en": "Can you describe the jaw pain (sharp, dull, throbbing, or aching)?",
+        "category": "jaw pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या जबड़े का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+        "en": "Is the jaw pain constant, or does it come and go?",
+        "category": "jaw pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द चबाने, बोलने, या मुँह खोलने से बढ़ जाता है?",
+        "en": "Does the pain worsen with chewing, speaking, or opening your mouth wide?",
+        "category": "jaw pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको अपने काटने या जबड़े की गति में कोई कठिनाई हो रही है?",
+        "en": "Are you having any difficulty with your bite or jaw movement?",
+        "category": "jaw pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप रात में अपने दांतों को पीसते हैं या जबड़े को दबाते हैं?",
+        "en": "Do you grind your teeth or clench your jaw, especially at night?",
+        "category": "jaw pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ जबड़े में जकड़न या गर्माहट है?",
+        "en": "Is there tightness or warmth along with the swelling in the jaw?",
+        "category": "jaw_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या जबड़े में चोट किसी दुर्घटना, गिरावट या टक्कर से लगी थी?",
+        "en": "Was the jaw injury caused by an accident, fall, or impact?",
+        "category": "jaw_injury_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने जबड़े की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your jaw issue in more detail.",
+        "category": "jaw_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "period": {
+    "pain": [
+      {
+        "hi": "क्या आपकी मासिक धर्म के दौरान दर्द होता है?",
+        "en": "Do you experience pain during your menstrual period?",
+        "category": "period_pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी माहवारी बहुत कम या हल्की होती है?",
+        "en": "Is your menstrual flow very light or scanty?",
+        "category": "menstruation",
+        "symptom": "light periods",
+        "risk_factor": False
+      }
+    ],
+    "delayed": [
+      {
+        "hi": "क्या आपकी माहवारी अनियमित रही है या पहले भी देर से आती रही है?",
+        "en": "Have your periods been irregular or delayed in the past as well?",
+        "category": "period_delay_history",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या आपकी मासिक धर्म में असामान्य रक्तस्राव होता है?",
+        "en": "Do you have abnormal bleeding during your period?",
+        "category": "period_bleeding",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी माहवारी के समय थकान या कमजोरी महसूस होती है?",
+        "en": "Do you feel fatigued or weak during your period?",
+        "category": "menstruation",
+        "symptom": "fatigue during menstruation",
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपकी माहवारी सामान्य से अधिक भारी होती है?",
+        "en": "Is your menstrual flow heavier than usual?",
+        "category": "menstruation",
+        "symptom": "heavy menstrual bleeding",
+        "risk_factor": False
+      }
+    ]
+  },
+  "hip": {
+    "pain": [
+      {
+        "hi": "क्या कूल्हे में दर्द चलने या खड़े होने पर बढ़ता है?",
+        "en": "Does the hip pain increase when walking or standing?",
+        "category": "hip_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या दर्द एक कूल्हे में है या दोनों कूल्हों में?",
+        "en": "Is the pain in one hip or both hips?",
+        "category": "hip pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कूल्हे का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
+        "en": "Is the hip pain constant, or does it come and go?",
+        "category": "hip pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको हाल ही में कूल्हे में कोई चोट या आघात हुआ है?",
+        "en": "Have you had any recent injuries or trauma to your hip?",
+        "category": "hip pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कूल्हे का दर्द कुछ गतिविधियों, जैसे चलने, झुकने या खड़े होने से बढ़ जाता है?",
+        "en": "Does the hip pain worsen with certain movements, such as walking, bending, or standing up?",
+        "category": "hip pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर कूल्हे में जकड़न ज्यादा होती है?",
+        "en": "Is the hip stiffness worse in the morning?",
+        "category": "hip_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या कूल्हे की सूजन के साथ गर्माहट या लालिमा भी है?",
+        "en": "Is there warmth or redness along with the hip swelling?",
+        "category": "hip_swelling_inflammation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कूल्हे की कमजोरी के कारण आपको खड़ा होने या चलने में दिक्कत होती है?",
+        "en": "Does hip weakness make it hard for you to stand or walk?",
+        "category": "hip_weakness_mobility",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या हाल ही में कूल्हे में गिरावट या चोट लगी थी?",
+        "en": "Did you recently have a fall or injury to the hip?",
+        "category": "hip_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या कूल्हे में खुजली किसी खास कपड़े या रैश के कारण है?",
+        "en": "Is the hip itching due to clothing or a rash?",
+        "category": "hip_itching_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने कूल्हे की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your hip issue in more detail.",
+        "category": "hip_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "waist": {
+    "pain": [
+      {
+        "hi": "क्या कमर का दर्द खड़े होने या चलने से बढ़ता है?",
+        "en": "Does the waist pain increase when standing or walking?",
+        "category": "waist_pain_trigger",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "आप कमर दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+        "en": "Can you describe the pain? Is it sharp, dull, burning, or throbbing?",
+        "category": "waist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "कमर का दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+        "en": "Where exactly is the pain located? Is it on one side, both sides, or spreading elsewhere?",
+        "category": "waist pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+        "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+        "category": "waist pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या कमर में जकड़न सुबह उठने पर ज़्यादा महसूस होती है?",
+        "en": "Is the waist stiffness worse in the morning when you wake up?",
+        "category": "waist_stiffness_time",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या कमर का सुन्नपन पैर या जांघों तक फैलता है?",
+        "en": "Does the numbness in your waist extend to your legs or thighs?",
+        "category": "waist_numbness_radiation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या कमर की सूजन के साथ लालिमा या गर्मी भी है?",
+        "en": "Is there redness or warmth with the swelling in your waist?",
+        "category": "waist_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपने किसी अचानक गतिविधि के दौरान कमर में चोट महसूस की?",
+        "en": "Did the waist injury happen during a sudden movement or activity?",
+        "category": "waist_injury_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कमर की कमजोरी के कारण आपको खड़े होने या चलने में कठिनाई होती है?",
+        "en": "Does weakness in your waist make it difficult to stand or walk?",
+        "category": "waist_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या कमर में खुजली के साथ रैश या जलन भी हो रही है?",
+        "en": "Is the itching on your waist accompanied by rash or burning?",
+        "category": "waist_itching_symptoms",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी कमर की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your waist issue in more detail.",
+        "category": "waist_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "pelvic": {
+    "pain": [
+      {
+        "hi": "क्या श्रोणि क्षेत्र में दर्द बैठने या पेशाब करते समय बढ़ता है?",
+        "en": "Does the pelvic pain increase when sitting or during urination?",
+        "category": "pelvic_pain_triggers",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "आप pelvic में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+        "en": "Can you describe the pelvic pain? Is it sharp, dull, burning, or throbbing?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+        "en": "Where exactly is the pain located in your pelvic area? Is it on one side, both sides, or spreading elsewhere?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+        "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+        "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पहले भी ऐसी pelvic में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+        "en": "Do you have a history of similar pelvic pain or any known medical conditions?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+        "en": "Are you taking any medications or supplements currently?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+        "en": "How does the pain affect your daily activities or sleep?",
+        "category": "pelvic pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या आपको श्रोणि क्षेत्र को हिलाने में कठिनाई होती है?",
+        "en": "Do you find it difficult to move your pelvic area?",
+        "category": "pelvic_stiffness_mobility",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या श्रोणि क्षेत्र में सूजन के साथ गर्माहट या दबाव महसूस हो रहा है?",
+        "en": "Is there warmth or a feeling of pressure along with swelling in the pelvic area?",
+        "category": "pelvic_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या श्रोणि की कमजोरी के कारण आपको खड़े होने में परेशानी होती है?",
+        "en": "Does pelvic weakness make it hard for you to stand?",
+        "category": "pelvic_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या हाल ही में आपके श्रोणि क्षेत्र में कोई चोट या गिरावट हुई है?",
+        "en": "Did you recently have a fall or injury to your pelvic area?",
+        "category": "pelvic_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या पेल्विक क्षेत्र का सुन्नपन पैरों तक फैलता है?",
+        "en": "Does the numbness in your pelvic area extend to the legs?",
+        "category": "pelvic_numbness_distribution",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या पेल्विक क्षेत्र की खुजली के साथ जलन या रिसाव भी है?",
+        "en": "Is the itching in the pelvic area accompanied by burning or discharge?",
+        "category": "pelvic_itching_accompanied",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने श्रोणि क्षेत्र की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your pelvic issue in more detail.",
+        "category": "pelvic_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "elbow": {
+    "pain": [
+      {
+        "hi": "क्या कोहनी में दर्द कुछ उठाने या मोड़ने पर बढ़ता है?",
+        "en": "Does the elbow pain increase when lifting or bending?",
+        "category": "elbow_pain_movement",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "आप कोहनी में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+        "en": "Can you describe the elbow pain? Is it sharp, dull, burning, or throbbing?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+        "en": "Where exactly is the pain located in your elbow? Is it on one side, both sides, or spreading elsewhere?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+        "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+        "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पहले भी ऐसी कोहनी में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+        "en": "Do you have a history of similar elbow pain or any known medical conditions?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+        "en": "Are you taking any medications or supplements currently?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+        "en": "How does the pain affect your daily activities or sleep?",
+        "category": "elbow pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर कोहनी में जकड़न महसूस होती है?",
+        "en": "Do you feel stiffness in the elbow after waking up in the morning?",
+        "category": "elbow_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या कोहनी की सूजन के साथ गर्माहट या लालिमा भी है?",
+        "en": "Is there warmth or redness along with swelling in the elbow?",
+        "category": "elbow_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कोहनी की कमजोरी के कारण आपको चीजें उठाने में दिक्कत होती है?",
+        "en": "Is it difficult to lift things due to weakness in your elbow?",
+        "category": "elbow_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपने हाल ही में कोहनी में चोट या गिरावट का अनुभव किया है?",
+        "en": "Did you recently experience an injury or fall affecting your elbow?",
+        "category": "elbow_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी कोहनी की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your elbow issue in more detail.",
+        "category": "elbow_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "calf": {
+    "pain": [
+      {
+        "hi": "क्या बछड़े में दर्द चलने या खड़े होने पर बढ़ता है?",
+        "en": "Does the calf pain increase when walking or standing?",
+        "category": "calf_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "आप बछड़े में दर्द का वर्णन कैसे करेंगे? क्या यह तेज़, मन्द, जलन वाला, या धड़कता हुआ है?",
+        "en": "Can you describe the calf pain? Is it sharp, dull, burning, or throbbing?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
+        "en": "Where exactly is the pain located in your calf? Is it on one side, both sides, or spreading elsewhere?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
+        "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
+        "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपको पहले भी ऐसी बछड़े में दर्द की समस्या रही है या कोई पुरानी बीमारी है?",
+        "en": "Do you have a history of similar calf pain or any known medical conditions?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आप कोई दवाइयाँ या सप्लीमेंट्स ले रहे हैं?",
+        "en": "Are you taking any medications or supplements currently?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या इस दर्द से आपकी रोज़मर्रा की गतिविधियाँ या नींद प्रभावित हो रही हैं?",
+        "en": "How does the pain affect your daily activities or sleep?",
+        "category": "calf pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "spasm": [
+      {
+        "hi": "क्या बछड़े में ऐंठन या मरोड़ अक्सर हो रही है?",
+        "en": "Are the calf spasms or cramps happening frequently?",
+        "category": "calf_spasm_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या बछड़े में सूजन के साथ गर्माहट या लालिमा भी है?",
+        "en": "Is there warmth or redness along with the swelling in the calf?",
+        "category": "calf_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या बछड़े की कमजोरी के कारण आपको खड़े रहने या चलने में परेशानी होती है?",
+        "en": "Does calf weakness make it hard for you to stand or walk?",
+        "category": "calf_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या बछड़े में हाल ही में कोई चोट या खिंचाव हुआ है?",
+        "en": "Did you recently have any injury or strain in your calf?",
+        "category": "calf_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने बछड़े की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your calf issue in more detail.",
+        "category": "calf_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "face": {
+    "pain": [
+      {
+        "hi": "क्या चेहरे का दर्द किसी विशेष स्थान पर केंद्रित है?",
+        "en": "Is the facial pain localized to a specific area?",
+        "category": "face_pain_location",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या चेहरे का सुन्नपन अचानक शुरू हुआ?",
+        "en": "Did the facial numbness start suddenly?",
+        "category": "face_numbness_onset",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या चेहरे की सूजन के साथ दर्द भी है?",
+        "en": "Is there pain along with the facial swelling?",
+        "category": "face_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "drooping": [
+      {
+        "hi": "क्या आपके चेहरे का एक हिस्सा झुक गया है या मुस्कान असमान है?",
+        "en": "Is one side of your face drooping or is your smile uneven?",
+        "category": "face_drooping_sign",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपको हाल ही में चेहरे पर कोई चोट लगी है?",
+        "en": "Have you recently had any injury to your face?",
+        "category": "face_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या चेहरे में खुजली किसी क्रीम या साबुन के इस्तेमाल के बाद हुई?",
+        "en": "Did the facial itching start after using any cream or soap?",
+        "category": "face_itching_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने चेहरे की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your facial issue in more detail.",
+        "category": "face_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "ankle": {
+    "pain": [
+      {
+        "hi": "क्या टखने में दर्द चलते समय बढ़ता है?",
+        "en": "Does ankle pain get worse while walking?",
+        "category": "ankle_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या टखने में सूजन के साथ लालिमा या गर्मी महसूस हो रही है?",
+        "en": "Is there redness or warmth with the ankle swelling?",
+        "category": "ankle_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर टखना कड़ा महसूस होता है?",
+        "en": "Does your ankle feel stiff in the morning?",
+        "category": "ankle_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपने हाल ही में टखना मोड़ लिया या गिर गए?",
+        "en": "Did you recently twist your ankle or fall?",
+        "category": "ankle_injury_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या आपका टखना चलते समय अचानक मुड़ जाता है या लड़खड़ाता है?",
+        "en": "Does your ankle give out or wobble while walking?",
+        "category": "ankle_weakness_instability",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या टखने में चोट के कारण खून बह रहा है?",
+        "en": "Is the bleeding from your ankle due to an injury?",
+        "category": "ankle_bleeding_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने टखने की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your ankle issue in more detail.",
+        "category": "ankle_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "body": {
+    "pain": [
+      {
+        "hi": "क्या पूरे शरीर में दर्द लगातार बना रहता है?",
+        "en": "Is the body-wide pain constant?",
+        "category": "body_pain_duration",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "fatigue": [
+      {
+        "hi": "क्या थकान के साथ नींद भी पूरी नहीं हो रही है?",
+        "en": "Are you feeling fatigued even after a full night's sleep?",
+        "category": "body_fatigue_sleep",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "weakness": [
+      {
+        "hi": "क्या कमजोरी के कारण रोज़मर्रा के कामों में दिक्कत हो रही है?",
+        "en": "Is the weakness affecting your daily activities?",
+        "category": "body_weakness_function",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह उठने पर पूरे शरीर में जकड़न महसूस होती है?",
+        "en": "Do you feel stiffness throughout your body in the morning?",
+        "category": "body_stiffness_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या पूरे शरीर में खुजली लगातार हो रही है या रुक-रुक कर?",
+        "en": "Is the itching happening constantly or intermittently across the body?",
+        "category": "body_itching_pattern",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या शरीर की सूजन किसी विशेष हिस्से में सीमित है या पूरे शरीर में फैली हुई है?",
+        "en": "Is the swelling limited to one area or spread across the whole body?",
+        "category": "body_swelling_area",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने शरीर की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your body issue in more detail.",
+        "category": "body_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "hair": {
+    "hair loss": [
+      {
+        "hi": "क्या आपके बाल झड़ने का कोई विशेष कारण है जैसे तनाव या हार्मोन?",
+        "en": "Is there a specific reason for your hair loss such as stress or hormones?",
+        "category": "hair_loss_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dandruff": [
+      {
+        "hi": "क्या सिर में खुजली के साथ-साथ रूसी भी हो रही है?",
+        "en": "Is dandruff accompanied by itching on the scalp?",
+        "category": "hair_dandruff_itching",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या यह खुजली हर समय बनी रहती है या कुछ समय में होती है?",
+        "en": "Is the itching constant or does it occur occasionally?",
+        "category": "hair_itching_frequency",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "greying": [
+      {
+        "hi": "क्या बालों का सफेद होना उम्र से पहले शुरू हुआ?",
+        "en": "Has the greying of your hair started prematurely?",
+        "category": "hair_greying_age",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dryness": [
+      {
+        "hi": "क्या आपके बालों में रूखापन मौसम या किसी उत्पाद के कारण है?",
+        "en": "Is the dryness in your hair due to weather or any hair products?",
+        "category": "hair_dryness_cause",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने बालों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your hair issue in more detail.",
+        "category": "hair_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "finger": {
+    "pain": [
+      {
+        "hi": "क्या उंगली का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
+        "en": "Does the finger pain increase during any specific activity?",
+        "category": "finger_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या उंगली में सुन्नपन लगातार बना रहता है या आता-जाता है?",
+        "en": "Is the numbness in the finger constant or does it come and go?",
+        "category": "finger_numbness_pattern",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ दर्द, गर्माहट या लालिमा भी है?",
+        "en": "Is there pain, warmth, or redness along with the swelling?",
+        "category": "finger_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह के समय उंगली में जकड़न ज्यादा होती है?",
+        "en": "Is the stiffness in your finger worse in the morning?",
+        "category": "finger_stiffness_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या उंगली में हाल ही में कोई चोट या झटका लगा है?",
+        "en": "Did you recently injure or bump your finger?",
+        "category": "finger_injury_event",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपकी उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
+        "en": "Do your fingers feel numb or very cold in cold weather?",
+        "category": "finger_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या उंगलियों में खुजली के साथ त्वचा फट रही है या सूजन है?",
+        "en": "Is the finger itching accompanied by cracked skin or swelling?",
+        "category": "finger_itching_condition",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या उंगली से खून बहने के साथ सूजन या दर्द भी है?",
+        "en": "Is the finger bleeding accompanied by swelling or pain?",
+        "category": "finger_bleeding_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी उंगली की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your finger issue in more detail.",
+        "category": "finger_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "thumb": {
+    "pain": [
+      {
+        "hi": "क्या अंगूठे में दर्द पकड़ने या किसी चीज़ को पकड़ने पर बढ़ता है?",
+        "en": "Does thumb pain increase when gripping or holding something?",
+        "category": "thumb_pain_grip",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या अंगूठे की सूजन के साथ गर्माहट या लालिमा भी है?",
+        "en": "Is there warmth or redness along with the swelling in your thumb?",
+        "category": "thumb_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह के समय अंगूठे में जकड़न अधिक होती है?",
+        "en": "Is thumb stiffness worse in the morning?",
+        "category": "thumb_stiffness_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या अंगूठे में सुन्नपन कभी-कभी होता है या लगातार बना रहता है?",
+        "en": "Is the numbness in your thumb occasional or constant?",
+        "category": "thumb_numbness_pattern",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या हाल ही में अंगूठे में कोई चोट या मोच आई है?",
+        "en": "Did you recently injure or sprain your thumb?",
+        "category": "thumb_injury_event",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या अंगूठे से लगातार खून बह रहा है या रुक गया है?",
+        "en": "Is the bleeding from your thumb continuous or has it stopped?",
+        "category": "thumb_bleeding_status",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने अंगूठे की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your thumb issue in more detail.",
+        "category": "thumb_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "palm": {
+    "pain": [
+      {
+        "hi": "क्या हथेली में दर्द किसी चीज़ को पकड़ते समय बढ़ता है?",
+        "en": "Does the palm pain increase when gripping something?",
+        "category": "palm_pain_grip",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या हथेली में झुनझुनी या सुन्नपन रात के समय ज्यादा होता है?",
+        "en": "Is the numbness or tingling in your palm worse at night?",
+        "category": "palm_numbness_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या हथेली में सूजन के साथ लालिमा या गर्माहट भी है?",
+        "en": "Is there redness or warmth along with swelling in your palm?",
+        "category": "palm_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या हथेली की जकड़न के कारण उंगलियां मोड़ने में दिक्कत होती है?",
+        "en": "Is the palm stiffness making it hard to bend your fingers?",
+        "category": "palm_stiffness_flexibility",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपकी हथेली पर हाल ही में कोई चोट, जलन या कट हुआ है?",
+        "en": "Have you recently had a cut, burn, or injury on your palm?",
+        "category": "palm_injury_event",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dryness": [
+      {
+        "hi": "क्या हथेली का सूखापन फटने या खुजली के साथ है?",
+        "en": "Is the dryness in your palm accompanied by cracking or itching?",
+        "category": "palm_dryness_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या हथेली में खुजली के साथ लालपन या सूजन है?",
+        "en": "Is the itching in your palm accompanied by redness or swelling?",
+        "category": "palm_itching_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी हथेली की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your palm issue in more detail.",
+        "category": "palm_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "toe": {
+    "pain": [
+      {
+        "hi": "क्या पैर की उंगली का दर्द चलने या दौड़ने से बढ़ता है?",
+        "en": "Does the toe pain worsen when walking or running?",
+        "category": "toe_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या पैर की उंगली में सुन्नपन लगातार रहता है या कभी-कभी होता है?",
+        "en": "Is the numbness in the toe constant or occasional?",
+        "category": "toe_numbness_pattern",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या सूजन के साथ पैर की उंगली में दर्द या गर्माहट है?",
+        "en": "Is there pain or warmth along with the swelling in the toe?",
+        "category": "toe_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या सुबह के समय पैर की उंगली में जकड़न ज्यादा महसूस होती है?",
+        "en": "Is the stiffness in your toe worse in the morning?",
+        "category": "toe_stiffness_timing",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या हाल ही में पैर की उंगली में चोट लगी थी या टकराई थी?",
+        "en": "Did you recently injure or stub your toe?",
+        "category": "toe_injury_event",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "freeze": [
+      {
+        "hi": "क्या ठंड में आपकी पैर की उंगलियाँ सुन्न या बहुत ठंडी हो जाती हैं?",
+        "en": "Do your toes feel numb or extremely cold in cold weather?",
+        "category": "toe_freezing_cold_sensitivity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या पैर की उंगली से खून कट या नाखून टूटने के कारण बह रहा है?",
+        "en": "Is the bleeding from your toe due to a cut or broken nail?",
+        "category": "toe_bleeding_reason",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी पैर की उंगली की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your toe issue in more detail.",
+        "category": "toe_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "heel": {
+    "pain": [
+      {
+        "hi": "क्या एड़ी में दर्द सुबह उठने पर अधिक होता है?",
+        "en": "Is your heel pain worse when you get up in the morning?",
+        "category": "heel_pain_morning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या एड़ी पर सूजन के साथ लालिमा या गर्माहट है?",
+        "en": "Is there redness or warmth with the heel swelling?",
+        "category": "heel_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "stiffness": [
+      {
+        "hi": "क्या एड़ी जकड़ी हुई या चलने में कठिनाई होती है?",
+        "en": "Does your heel feel stiff or make walking difficult?",
+        "category": "heel_stiffness_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या हाल ही में आपकी एड़ी में कोई चोट लगी है?",
+        "en": "Have you recently injured your heel?",
+        "category": "heel_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या एड़ी में सुन्नपन या झनझनाहट महसूस होती है?",
+        "en": "Do you feel numbness or tingling in your heel?",
+        "category": "heel_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या एड़ी से खून चलने या दबाव डालने पर निकल रहा है?",
+        "en": "Is the heel bleeding when you walk or put pressure on it?",
+        "category": "heel_bleeding_trigger",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी एड़ी की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your heel issue in more detail.",
+        "category": "heel_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "lip": {
+    "pain": [
+      {
+        "hi": "क्या होंठों में जलन या तीव्र दर्द हो रहा है?",
+        "en": "Are you experiencing burning or sharp pain in the lips?",
+        "category": "lip_pain_burning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या होंठों की सूजन अचानक से हुई या किसी एलर्जी के कारण है?",
+        "en": "Did the lip swelling happen suddenly or due to an allergy?",
+        "category": "lip_swelling_allergy",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "dryness": [
+      {
+        "hi": "क्या होंठ लगातार फटते या सूखते रहते हैं?",
+        "en": "Are your lips constantly dry or cracking?",
+        "category": "lip_dryness_chronic",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या होंठों में सुन्नपन या झनझनाहट महसूस हो रही है?",
+        "en": "Do you feel numbness or tingling in your lips?",
+        "category": "lip_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "ulcers": [
+      {
+        "hi": "क्या होंठों पर छाले या घाव हैं?",
+        "en": "Do you have ulcers or sores on your lips?",
+        "category": "lip_ulcers_visible",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने होंठों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your lip issue in more detail.",
+        "category": "lip_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "cheek": {
+    "pain": [
+      {
+        "hi": "क्या गाल में दर्द लगातार बना रहता है या छूने से बढ़ता है?",
+        "en": "Is the cheek pain constant or does it increase when touched?",
+        "category": "cheek_pain_touch_sensitive",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या गाल में सूजन के साथ बुखार या गर्माहट भी है?",
+        "en": "Is the swelling in the cheek accompanied by fever or warmth?",
+        "category": "cheek_swelling_fever",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या गाल में सुन्नपन या झनझनाहट महसूस होती है?",
+        "en": "Do you feel numbness or tingling in your cheek?",
+        "category": "cheek_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "redness": [
+      {
+        "hi": "क्या गाल में लालिमा अचानक से हुई है या जलन महसूस होती है?",
+        "en": "Is the redness in your cheek sudden or does it feel like burning?",
+        "category": "cheek_redness_burning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपके गाल पर हाल ही में कोई चोट लगी है?",
+        "en": "Did you recently suffer any injury to your cheek?",
+        "category": "cheek_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने गाल की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your cheek issue in more detail.",
+        "category": "cheek_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "chin": {
+    "pain": [
+      {
+        "hi": "क्या ठोड़ी में दर्द चबाने या बोलने पर बढ़ता है?",
+        "en": "Does the chin pain increase while chewing or talking?",
+        "category": "chin_pain_activity",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या ठोड़ी की सूजन के साथ बुखार या लालिमा है?",
+        "en": "Is the chin swelling accompanied by fever or redness?",
+        "category": "chin_swelling_fever",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या ठोड़ी में सुन्नपन या झनझनाहट महसूस हो रही है?",
+        "en": "Do you feel numbness or tingling in your chin?",
+        "category": "chin_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपने हाल ही में ठोड़ी पर चोट लगाई है?",
+        "en": "Did you recently injure your chin?",
+        "category": "chin_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "lump": [
+      {
+        "hi": "क्या आपकी ठोड़ी पर कोई गांठ या उभार है?",
+        "en": "Is there a lump or bump on your chin?",
+        "category": "chin_lump_present",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी ठोड़ी की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your chin issue in more detail.",
+        "category": "chin_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "soles": {
+    "pain": [
+      {
+        "hi": "क्या तलवों में दर्द सुबह उठने पर या चलने पर बढ़ता है?",
+        "en": "Is the pain in your soles worse in the morning or while walking?",
+        "category": "soles_pain_morning_walk",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या तलवों में सूजन के साथ गर्मी या लालिमा भी है?",
+        "en": "Is there warmth or redness along with swelling in the soles?",
+        "category": "soles_swelling_inflammation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या आपके तलवे सुन्न हो जाते हैं या उनमें झनझनाहट होती है?",
+        "en": "Do your soles feel numb or have a tingling sensation?",
+        "category": "soles_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "cracks": [
+      {
+        "hi": "क्या आपके तलवे फट रहे हैं या सूखे हैं?",
+        "en": "Are the soles of your feet cracked or dry?",
+        "category": "soles_cracks_dryness",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या तलवों में खुजली या जलन हो रही है?",
+        "en": "Do you have itching or burning in the soles?",
+        "category": "soles_itching_irritation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपने तलवों की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your sole-related issue in more detail.",
+        "category": "soles_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "fingertip": {
+    "pain": [
+      {
+        "hi": "क्या उंगली के सिरे में तेज़ या जलन जैसा दर्द है?",
+        "en": "Is the pain in your fingertip sharp or burning?",
+        "category": "fingertip_pain_burning",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "numbness": [
+      {
+        "hi": "क्या उंगली के सिरे में सुन्नपन या झनझनाहट महसूस हो रही है?",
+        "en": "Do you feel numbness or tingling in your fingertip?",
+        "category": "fingertip_numbness_sensation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या उंगली के सिरे में सूजन के साथ लालिमा या गर्मी है?",
+        "en": "Is there swelling along with redness or warmth in the fingertip?",
+        "category": "fingertip_swelling_inflammation",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "injury": [
+      {
+        "hi": "क्या आपकी उंगली के सिरे पर हाल ही में चोट लगी है?",
+        "en": "Did you recently injure the tip of your finger?",
+        "category": "fingertip_injury_recent",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "discoloration": [
+      {
+        "hi": "क्या उंगली का सिरा नीला, काला या पीला हो गया है?",
+        "en": "Has the fingertip turned blue, black, or pale?",
+        "category": "fingertip_discoloration_color_change",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "कृपया अपनी उंगली के सिरे की समस्या के बारे में और जानकारी दें।",
+        "en": "Please describe your fingertip issue in more detail.",
+        "category": "fingertip_detail",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "testicle": {
+    "problem": [
+      {
+        "hi": "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+        "en": "did you previously show any doctor about the issue?",
+        "category": "testicle problem",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "swelling": [
+      {
+        "hi": "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+        "en": "did you previously show any doctor about the issue?",
+        "category": "testicle problem",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+        "en": "did you previously show any doctor about the issue?",
+        "category": "testicle problem",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "itching": [
+      {
+        "hi": "क्या आपने पहले किसी डॉक्टर को इस समस्या के बारे में दिखाया था?",
+        "en": "did you previously show any doctor about the issue?",
+        "category": "testicle problem",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  },
+  "child": {
+    "pain": [
+      {
+        "hi": "क्या आपका बच्चा दर्द से रोता है? क्या यह बच्चे के लिए असहनीय है?",
+        "en": "Does your child cry with pain? Is it unbearable for the child",
+        "category": "child_pain",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "bleeding": [
+      {
+        "hi": "क्या बच्चे को भारी रक्तस्राव हो रहा है?",
+        "en": "Does the child have heavy bleeding?",
+        "category": "child_bleeding",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "default": [
+      {
+        "hi": "क्या आपका बच्चा इन समस्याओं का सामना कर रहा है?",
+        "en": "Is your child facing the issues?",
+        "category": "confirm_child",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ]
+  }
 }
-
 # -----------------------------------------------------------------
 # Map lone body parts → default specialists (used if NO symptoms)
 # -----------------------------------------------------------------
@@ -11834,7 +12900,7 @@ HINDI_OFFLINE_DICT = {
             "sugar": "शुगर (मधुमेह)",
             "eye weakness": "आंखों की कमज़ोरी",
 	    "waist pain": "कमर दर्द",
-            "urine issues": "पेशाब की समस्याएँ",
+            "urine issue": "पेशाब की समस्याएँ",
 	    "caesarean section": "सीज़ेरियन सेक्शन",
             "pregnancy": "गर्भावस्था",
             "pediatric symptoms": "बाल चिकित्सा लक्षण",
