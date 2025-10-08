@@ -812,7 +812,8 @@ symptom_synonyms = {
     'covid-19', 'coronavirus', 'corona', 'corona virus', 'sars-cov-2 infection', 'pandemic virus', 'covid outbreak'
 ],
 
-'animal bite': ['dog bite', 'cat bite', 'bitten by', 'monkey bite','snake bite', 'bit by snake', 'bitten by snake'],
+'animal bite': ['dog bite', 'cat bite', 'bitten by', 'monkey bite','snake bite', 'bit by snake', 'bitten by snake','eaten by dog', 'eaten by a dog', 'dog had eaten',
+                'dog has eaten', 'dog has eaten me', 'dog has bitten me', 'dog bite wound', 'dog bite injury', 'cat bite wound', 'cat bite injury', 'dog bit'],
 
 'hiv': [
     'human immunodeficiency virus', 'HIV-positive', 'HIV', 'HIV/AIDS', 'acquired immunodeficiency virus'
