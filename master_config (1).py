@@ -494,7 +494,7 @@ symptom_synonyms = {
     'my blood pressure keeps rising', 'my blood pressure is too high', 'BP dangerously rising', 'BP dangerously high',
     'pressure high and causing symptoms', 'BP above baseline', 'blood pressure higher than expected', 'feeling symptoms from high BP',
     'high systolic and diastolic pressure', 'blood pressure rising suddenly', 'pressure spiking', 'pressure going dangerously high',
-    'feeling flushed because of high blood pressure', 'high BP causing dizziness',
+    'feeling flushed because of high blood pressure', 'high BP causing dizziness','bpg',
     'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high', 'BP', 'IBP', 'high p', 'hi p', 'high pee', 'hi pee', 
      'hai bp', 'hai b p', 'hbp', 'my bp is high', 'bp is high', 'high blood p', 'high blood pressure', 'bp high', 'i have high bp',
      'ibp', 'hi bp high', 'high bp hi', 'hi bp hi', 'high b p high', 'hi b p high', 'bpg increases',
