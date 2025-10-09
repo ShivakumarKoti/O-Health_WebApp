@@ -6285,6 +6285,36 @@ symptom_followup_questions = {
   }
 ],
 
+"ringworm": [
+    {
+      "hi": "क्या आपको त्वचा पर रिंगवर्म (Ringworm) के कारण लाल चकत्ते का अनुभव हो रहा है?",
+      "en": "Are you experiencing red patches on your skin due to ringworm?",
+      "category": "skin_rash",
+      "symptom": "red patches",
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या रिंगवर्म (Ringworm) के चकत्तों के आसपास खुजली हो रही है?",
+      "en": "Is there itching around the patches caused by ringworm?",
+      "category": "itching",
+      "symptom": "itching",
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या रिंगवर्म (Ringworm) के चकत्तों का आकार बढ़ रहा है?",
+      "en": "Is the size of the patches from ringworm increasing?",
+      "category": "patch_growth",
+      "symptom": "patch growth",
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या रिंगवर्म (Ringworm) के चकत्तों के अंदर कोई गहरे धब्बे या गोलाकार निशान बन रहे हैं?",
+      "en": "Are there any dark spots or circular marks inside the patches from ringworm?",
+      "category": "circular_marks",
+      "symptom": "circular marks",
+      "risk_factor": False
+    },
+],
 
 
 
