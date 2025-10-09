@@ -7448,6 +7448,39 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके पैर के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your leg?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके पैर के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your leg?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके पैर में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your leg?",
+      "category": "leg_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके पैर की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your leg feel soft or hard?",
+      "category": "leg_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+
     "default": [
       {
         "hi": "कृपया अपनी टांग की समस्या के बारे में और जानकारी दें।",
@@ -7865,6 +7898,39 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+    "boils": [
+      {
+        "hi": "क्या आपके हाथ के फोड़े में दर्द और सूजन हो रही है?", 
+        "en": "Are you experiencing pain and swelling in the boil on your hand?",
+        "category": "pain_swelling_with_boils",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके हाथ के फोड़े में पस भरा हुआ है?", 
+        "en": "Is there any pus in the boil on your hand?", 
+        "category": "pus_in_boils",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+    "lump": [
+      {
+        "hi": "क्या आपके हाथ में गांठ या सूजन महसूस हो रही है?",
+        "en": "Do you feel a lump or swelling in your hand?",
+        "category": "hand_lump_feeling",
+        "symptom": None,
+        "risk_factor": False
+      },
+      {
+        "hi": "क्या आपके हाथ की गांठ नरम या कठोर महसूस होती है?",
+        "en": "Does the lump in your hand feel soft or hard?",
+        "category": "hand_lump_texture",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
+
     "default": [
       {
         "hi": "कृपया अपने हाथ की समस्या के बारे में और जानकारी दें।",
