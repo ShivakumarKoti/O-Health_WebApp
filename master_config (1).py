@@ -7107,6 +7107,13 @@ trigger_keywords = {
       'bleeding': ['bleeds','bleeding','bled','blood'],
       'default':  ['issue']   # no “default” words here; we’ll ask to confirm
 },
+'penis': { 
+    'pain': ['pain', 'ache', 'discomfort', 'burning', 'tender'],
+    'swelling': ['swollen', 'lumps', 'inflammation', 'bump'],
+    'discomfort': ['discomfort', 'soreness', 'sensitive', 'irritation'],
+    'itching': ['itching', 'rash', 'redness']
+},
+
 
     # add ear / skin / etc…
 }
@@ -12693,7 +12700,96 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ]
-  }
+  },
+	'penis': { 
+    'pain': ['pain', 'ache', 'discomfort', 'burning', 'tender'],
+    'swelling': ['swollen', 'lumps', 'inflammation', 'bump'],
+    'discomfort': ['discomfort', 'soreness', 'sensitive', 'irritation'],
+    'bleeding': ['bleeding', 'spotting', 'blood'],
+    'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
+    'itching': ['itching', 'rash', 'redness'],
+    'discharge': ['discharge', 'leakage', 'fluid']
+},
+
+body_part_followup_questions = {
+    "pain": [
+        {
+            "hi": "क्या आपको लिंग में दर्द या जलन महसूस हो रही है?",
+            "en": "Are you experiencing pain or burning in the penis?",
+            "category": "penis_pain",
+            "symptom": None,
+            "risk_factor": False
+        },
+        {
+            "hi": "क्या लिंग में दर्द लगातार है या यह कभी-कभी होती है?",
+            "en": "Is the pain in penis constant or does it come and go?",
+            "category": "intermittent_pain",
+            "symptom": None,
+            "risk_factor": False
+        },
+        {
+            "hi": "क्या आपको लिंग में दर्द के साथ सूजन भी महसूस हो रही है?",
+            "en": "Is there any swelling along with the pain in the penis?",
+            "category": "swelling",
+            "symptom": None,
+            "risk_factor": False
+        },
+        
+    ],
+    "swelling": [
+        {
+            "hi": "क्या लिंग में सूजन के साथ कोई कठोरता या गांठ महसूस हो रही है?",
+            "en": "Are you feeling any hardness or lumps with the swelling in your penis?",
+            "category": "swelling_lumps",
+            "symptom": None,
+            "risk_factor": False
+        },
+        {
+            "hi": "क्या सूजन के साथ लिंग में दर्द या जलन भी हो रही है?",
+            "en": "Is there pain or burning with the swelling in the penis?",
+            "category": "swelling_with_pain",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "discomfort": [
+        {
+            "hi": "क्या लिंग में असुविधा महसूस हो रही है?",
+            "en": "Are you experiencing any discomfort in the penis?",
+            "category": "penis_discomfort",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "bleeding": [
+        {
+            "hi": "क्या लिंग से खून आ रहा है?",
+            "en": "Is there any bleeding from the penis?",
+            "category": "penis_bleeding",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "itching": [
+        {
+            "hi": "क्या लिंग में खुजली या जलन हो रही है?",
+            "en": "Are you experiencing itching or irritation in the penis?",
+            "category": "penis_itching",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "default": [
+        {
+            "hi": "कृपया अपनी लिंग से संबंधित समस्या के बारे में अधिक जानकारी दें।",
+            "en": "Please describe your penis-related issue in more detail.",
+            "category": "penis_detail",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ]
+}
+
 }
 # -----------------------------------------------------------------
 # Map lone body parts → default specialists (used if NO symptoms)
