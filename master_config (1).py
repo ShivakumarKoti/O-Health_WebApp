@@ -8774,6 +8774,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके पेट के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your stomach?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके पेट के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your stomach?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके पेट में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your stomach?",
+      "category": "stomach_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके पेट की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your stomach feel soft or hard?",
+      "category": "stomach_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने पेट की समस्या के बारे में और जानकारी दें।",
@@ -8929,6 +8961,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके गर्दन के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your neck?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके गर्दन के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your neck?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके गर्दन में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your neck?",
+      "category": "neck_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके गर्दन की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your neck feel soft or hard?",
+      "category": "neck_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपनी गर्दन की समस्या के बारे में और जानकारी दें।",
@@ -9084,6 +9148,37 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके घुटने के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your knee?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके घुटने के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your knee?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके घुटने में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your knee?",
+      "category": "knee_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके घुटने की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your knee feel soft or hard?",
+      "category": "knee_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    },
     "default": [
       {
         "hi": "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
@@ -9236,6 +9331,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके पैर के तलवे में फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your foot?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके पैर के तलवे में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your foot?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके पैर में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your foot?",
+      "category": "foot_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके पैर की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your foot feel soft or hard?",
+      "category": "foot_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने पैर की समस्या के बारे में और जानकारी दें।",
@@ -9329,6 +9456,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके कंधे के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your shoulder?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके कंधे के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your shoulder?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके कंधे में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your shoulder?",
+      "category": "shoulder_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके कंधे की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your shoulder feel soft or hard?",
+      "category": "shoulder_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने कंधे की समस्या के बारे में और जानकारी दें।",
