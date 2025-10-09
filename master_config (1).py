@@ -12897,6 +12897,7 @@ body_part_to_specialist = {
     'period bleeding':'Gynecologist',
     'period issue': 'Gynecologist',
     'period':'Gynecologist',
+	'penis': 'Urologist',
 }
 
 BP_CANON = {
@@ -12961,6 +12962,7 @@ BP_CANON = {
      'cheeks': 'cheek',
      'palms': 'palm',
      'toes': 'toe',
+	 'testicles': 'testicle',
       'urinating': 'urinary',
       'urine':'urinary',
      'calves':'calf',
@@ -12978,7 +12980,7 @@ body_parts = [
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles', 'sole',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs', 'liver',
-    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart','testicle',
+    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart','testicle', 'penis',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body','child'
 ] 
 
@@ -13547,6 +13549,13 @@ symptom_to_specialist = {
 
   'child pain': 'Pediatrician',
   'child bleeding': 'Pediatrician',
+
+'penis pain': 'Urologist',
+'penis swelling': 'Urologist',
+'penis discomfort': 'Urologist',
+'penis bleeding': 'Urologist',
+'penis itching': Urologist',
+	
   'latrine issue': 'General Practitioner',
   'hernia': 'General Surgeon',
   'appendicitis': 'General Surgeon',
@@ -13765,6 +13774,7 @@ HINDI_OFFLINE_DICT = {
   "waist issue": "कमर की समस्या",
   "pelvic issue": "श्रोणि की समस्या",
   "body issue": "शरीर की समस्या",
+  "penis issue": "लिंग समस्या"
 
 
 # Trigger keywords entries
@@ -14135,6 +14145,13 @@ HINDI_OFFLINE_DICT = {
 
   "child pain": "बच्चे को दर्द",
   "child bleeding": "बच्चे में रक्तस्राव",
+
+"penis pain": "लिंग में दर्द",
+"penis swelling": "लिंग में सूजन",
+"penis discomfort": "लिंग में असुविधा",
+"penis bleeding": "लिंग से खून आना",
+"penis itching": "लिंग में खुजली",
+
 
 
         # — specific trigger_keyword combos —
