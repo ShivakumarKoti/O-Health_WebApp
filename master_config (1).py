@@ -12774,7 +12774,7 @@ symptom_to_specialist = {
   'appendicitis': 'General Surgeon',
   'gallstones': 'Gastroenterologist',
   'hydrocele': 'Urologist',
-
+  'ringworm': 'Dermatologist',
 }
 
 HINDI_OFFLINE_DICT = {
@@ -13345,7 +13345,7 @@ HINDI_OFFLINE_DICT = {
         "acidity": "अम्लता",
         "shoulder weakness": "कंधे में कमजोरी",
         "ear ringing": "कान में घंटी बजना",
-	"eye weakness": "आँखों में कमजोरी",
+	    "eye weakness": "आँखों में कमजोरी",
         "nosebleed": "नाक से खून आना",
 
 	#newly added
@@ -13410,4 +13410,5 @@ HINDI_OFFLINE_DICT = {
     "appendicitis": "अपेंडिसाइटिस",
     "gallstones": "पित्त की पथरी",
     "hydrocele": "हाइड्रोसील",
+	"ringworm": "रिंगवर्म",
         }
