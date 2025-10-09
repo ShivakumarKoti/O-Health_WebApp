@@ -968,6 +968,10 @@ symptom_synonyms = {
     'gallbladder calculi', 'bile stones', 'gall stones', 'gallstones', 'gallbladder colic',
     'stone in bile duct', 'gall bladder stones'
 ],
+'ringworm': [
+    'tinea','ring-shaped rash', 'tinea corporis', 'scalp ringworm', 'ringworms', 'ring worm', 'ring worms',
+	'ring-worm', 'ring-worms'
+],
 
 
 
