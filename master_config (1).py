@@ -11492,6 +11492,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके कोहनी में फोड़े के दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your elbow?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी कोहनी के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your elbow?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपकी कोहनी में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your elbow?",
+      "category": "elbow_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी कोहनी की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your elbow feel soft or hard?",
+      "category": "elbow_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपनी कोहनी की समस्या के बारे में और जानकारी दें।",
@@ -11662,6 +11694,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके चेहरे पर फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your face?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके चेहरे के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your face?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके चेहरे पर गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling on your face?",
+      "category": "face_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके चेहरे की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump on your face feel soft or hard?",
+      "category": "face_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने चेहरे की समस्या के बारे में और जानकारी दें।",
@@ -11792,6 +11856,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके शरीर पर फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your body?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके शरीर के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your body?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके शरीर में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling on your body?",
+      "category": "body_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके शरीर की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump on your body feel soft or hard?",
+      "category": "body_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने शरीर की समस्या के बारे में और जानकारी दें।",
@@ -12265,6 +12361,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपके होंठ पर फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your lip?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके होंठ के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your lip?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपके होंठ पर गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling on your lip?",
+      "category": "lip_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपके होंठ की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump on your lip feel soft or hard?",
+      "category": "lip_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने होंठों की समस्या के बारे में और जानकारी दें।",
