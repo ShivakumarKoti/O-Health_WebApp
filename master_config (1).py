@@ -12866,7 +12866,10 @@ BP_CANON = {
      'toes': 'toe',
       'urinating': 'urinary',
       'urine':'urinary',
-     'calves':'calf'
+     'calves':'calf',
+	  'facial': 'face',
+	  'nasal': 'nose',
+	  'cervical': 'neck',
       
     # …and so on for all body parts
 }
