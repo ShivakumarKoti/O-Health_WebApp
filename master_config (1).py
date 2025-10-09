@@ -12275,6 +12275,7 @@ symptom_to_specialist = {
 
     # Gastroenterologist: Digestive system symptoms
     'stomach pain': 'Gastroenterologist',
+    'stomach burning': 'Gastroenterologist',
     'constipation': 'Gastroenterologist',
     'diarrhea': 'Gastroenterologist',
     'vomiting': 'Gastroenterologist',
