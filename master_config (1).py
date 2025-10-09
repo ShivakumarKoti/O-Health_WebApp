@@ -8247,6 +8247,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपकी पीठ के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your back?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी पीठ के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your back?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपकी पीठ में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your back?",
+      "category": "back_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी पीठ की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your back feel soft or hard?",
+      "category": "back_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "issue": [
       {
         "hi": "कृपया अपनी पीठ की समस्या के बारे में और जानकारी दें।",
@@ -8354,6 +8386,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपकी छाती के फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your chest?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी छाती के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your chest?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपकी छाती में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your chest?",
+      "category": "chest_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी छाती की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your chest feel soft or hard?",
+      "category": "chest_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपनी छाती की समस्या के बारे में और जानकारी दें।",
@@ -8575,6 +8639,38 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+  "boils": [
+    {
+      "hi": "क्या आपकी गले में फोड़े में दर्द और सूजन हो रही है?", 
+      "en": "Are you experiencing pain and swelling in the boil on your throat?",
+      "category": "pain_swelling_with_boils",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी गले के फोड़े में पस भरा हुआ है?", 
+      "en": "Is there any pus in the boil on your throat?", 
+      "category": "pus_in_boils",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
+  "lump": [
+    {
+      "hi": "क्या आपकी गले में गांठ या सूजन महसूस हो रही है?",
+      "en": "Do you feel a lump or swelling in your throat?",
+      "category": "throat_lump_feeling",
+      "symptom": None,
+      "risk_factor": False
+    },
+    {
+      "hi": "क्या आपकी गले की गांठ नरम या कठोर महसूस होती है?",
+      "en": "Does the lump in your throat feel soft or hard?",
+      "category": "throat_lump_texture",
+      "symptom": None,
+      "risk_factor": False
+    }
+  ],
     "default": [
       {
         "hi": "कृपया अपने गले की समस्या के बारे में और जानकारी दें।",
