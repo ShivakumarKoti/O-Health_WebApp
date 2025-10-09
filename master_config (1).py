@@ -17,7 +17,7 @@ symptom_list = [
 'low blood pressure', 'excessive thirst', 'dehydration', 'skin burning', 'sweat', 'jaundice', 'hernia', 'appendicitis', 'gallstones',
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
-'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol','hydrocele',
+'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol','hydrocele', 'ringworm',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking', 'fatty liver',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite', 'arthiritis','arthritis',
