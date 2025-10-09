@@ -9867,6 +9867,15 @@ body_part_followup_questions = {
         "risk_factor": False
       }
     ],
+    "burn": [
+        {
+        "hi": "क्या मसालेदार भोजन खाने से आपको मूत्र संबंधी कोई परेशानी होती है?",
+        "en": "Does eating spicy food cause you any urinary discomfort?",
+        "category": "urinary_difficulty",
+        "symptom": None,
+        "risk_factor": False
+      }
+    ],
     "default": [
       {
         "hi": "कृपया अपनी पेशाब से जुड़ी समस्या के बारे में और जानकारी दें।",
