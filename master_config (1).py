@@ -20,7 +20,7 @@ symptom_list = [
 'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol','hydrocele',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking', 'fatty liver',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite', 'arthiritis',
+'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite', 'arthiritis','arthritis',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
 #  'arthritis', 'sugar', 'cancer','pediatric symptoms',
 ]
@@ -636,10 +636,10 @@ symptom_synonyms = {
     'soft tissue strain', 'overexertion', 'overworked muscle'
 ],
 
-#'arthritis': [
-#    'inflammatory arthritis', 'rheumatoid arthritis', 'osteoarthritis', 'degenerative joint disease',  'rheumatism',  'pain from arthritis',
-#    'arthralgia', 'chronic arthritis', 'autoimmune arthritis', 'psoriatic arthritis'
-#],
+'arthritis': [
+    'inflammatory arthritis', 'rheumatoid arthritis', 'osteoarthritis', 'degenerative joint disease',  'rheumatism',  'pain from arthritis',
+    'arthralgia', 'chronic arthritis', 'autoimmune arthritis', 'psoriatic arthritis'
+],
 
 'gout': [
     'uric acid buildup', 'acute gout', 'chronic gout', 'gout attack', 'gouty inflammation', 'gouty attack',
@@ -3262,34 +3262,10 @@ symptom_followup_questions = {
   
   "arthritis": [
     {
-      "hi": "कौन से जोड़ों में समस्या है (जैसे घुटने, हाथ, कूल्हे, उंगलियाँ)?",
-      "en": "Which joints are affected (e.g., knees, hands, hips, fingers)?",
-      "category": "arthritis",
-      "symptom": "location",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या दर्द लगातार है, या यह आता-जाता रहता है?",
-      "en": "Is the pain constant, or does it come and go?",
-      "category": "arthritis",
-      "symptom": "pain type",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपको सुबह के समय जकड़न महसूस होती है, और यदि होती है, तो यह कितनी देर तक रहती है?",
       "en": "Do you experience morning stiffness, and if so, how long does it last?",
       "category": "arthritis",
       "symptom": "other",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने प्रभावित जोड़ों में सूजन, लाली, या गर्मी महसूस की है?",
-      "en": "Have you noticed any swelling, redness, or warmth in the affected joints?",
-      "category": "arthritis",
-      "symptom": "joint swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या दर्द कुछ गतिविधियों के साथ बेहतर या खराब होता है (जैसे विश्राम, व्यायाम, मौसम में बदलाव)?",
-      "en": "Does the pain improve or worsen with certain activities (e.g., rest, exercise, weather changes)?",
-      "category": "arthritis",
-      "symptom": "activity impact",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको दैनिक गतिविधियाँ करने में कठिनाई हो रही है, जैसे चलना, टाइप करना, या जार खोलना?",
@@ -6823,7 +6799,8 @@ trigger_keywords = {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure','cramping', 'stiff', 'tightness'],
         'frequency': ['frequent', 'frequency', 'often', 'urge', 'need to go', 'multiple times'],
         'blood': ['blood', 'bloody', 'hematuria'],
-        'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing']
+        'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing'],
+        'burn': ['burn', 'burning', 'burns', 'scalding', 'scalded'],
     },
 'toes': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -12196,6 +12173,8 @@ BP_CANON = {
      'cheeks': 'cheek',
      'palms': 'palm',
      'toes': 'toe',
+      'urinating': 'urinary',
+      'urine':'urinary',
      'calves':'calf'
       
     # …and so on for all body parts
@@ -12278,7 +12257,6 @@ symptom_to_specialist = {
     'jaw pain': 'Dentist',
 
     # Cardiologist: Heart-related symptoms
-    'chest pain': 'Cardiologist',
     'shortness of breath': 'Pulmonologist',
     'rapid breathing': 'Cardiologist',
     'irregular heartbeat': 'Cardiologist',
