@@ -7111,6 +7111,7 @@ trigger_keywords = {
     'pain': ['pain', 'ache', 'discomfort', 'burning', 'tender'],
     'swelling': ['swollen', 'lumps', 'inflammation', 'bump'],
     'discomfort': ['discomfort', 'soreness', 'sensitive', 'irritation'],
+	'bleeding': ['bleeding', 'blood'],
     'itching': ['itching', 'rash', 'redness']
 },
 
