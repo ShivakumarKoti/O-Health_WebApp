@@ -7116,6 +7116,16 @@ trigger_keywords = {
     'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
     'itching': ['itching', 'rash', 'redness'],
     'discharge': ['discharge', 'leakage', 'fluid']
+  },
+
+  'genital': { 
+    'pain': ['pain', 'ache', 'discomfort', 'burning', 'tender'],
+    'swelling': ['swollen', 'lumps', 'inflammation', 'bump'],
+    'discomfort': ['discomfort', 'soreness', 'sensitive', 'irritation'],
+    'bleeding': ['bleeding', 'spotting', 'blood'],
+    'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
+    'itching': ['itching', 'rash', 'redness'],
+    'discharge': ['discharge', 'leakage', 'fluid']
   }
 
 
@@ -13851,6 +13861,8 @@ HINDI_OFFLINE_DICT = {
   "pelvic issue": "श्रोणि की समस्या",
   "body issue": "शरीर की समस्या",
   "penis issue": "लिंग समस्या",
+  "genital issue": "जननांग क्षेत्र समस्या",
+
 
 
 # Trigger keywords entries
@@ -14227,6 +14239,12 @@ HINDI_OFFLINE_DICT = {
 "penis discomfort": "लिंग में असुविधा",
 "penis bleeding": "लिंग से खून आना",
 "penis itching": "लिंग में खुजली",
+
+"genital pain": "जननांग क्षेत्र में दर्द",
+"genital swelling": "जननांग क्षेत्र में सूजन",
+"genital discomfort": "जननांग क्षेत्र में असुविधा",
+"genital bleeding": "जननांग क्षेत्र से खून आना",
+"genital itching": "जननांग क्षेत्र में खुजली",
 
 
 
