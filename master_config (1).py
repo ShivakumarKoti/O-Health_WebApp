@@ -12758,33 +12758,34 @@ body_part_followup_questions = {
             "risk_factor": False
         }
     ],
-    "discomfort": [
-        {
-            "hi": "क्या लिंग में असुविधा महसूस हो रही है?",
-            "en": "Are you experiencing any discomfort in the penis?",
-            "category": "penis_discomfort",
-            "symptom": None,
-            "risk_factor": False
-        }
-    ],
-    "bleeding": [
-        {
-            "hi": "क्या लिंग से खून आ रहा है?",
-            "en": "Is there any bleeding from the penis?",
-            "category": "penis_bleeding",
-            "symptom": None,
-            "risk_factor": False
-        }
-    ],
-    "itching": [
-        {
-            "hi": "क्या लिंग में खुजली या जलन हो रही है?",
-            "en": "Are you experiencing itching or irritation in the penis?",
-            "category": "penis_itching",
-            "symptom": None,
-            "risk_factor": False
-        }
-    ],
+   "discomfort": [
+    {
+        "hi": "क्या लिंग में असुविधा के दौरान आपको कोई जलन या खुजली महसूस हो रही है?",
+        "en": "In addition to the discomfort, are you feeling any itching or burning sensation in the penis?"
+        "category": "penis_discomfort",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+   "bleeding": [
+    {
+        "hi": "क्या लिंग से खून आने के अलावा आपको दर्द या जलन भी हो रही है?",
+        "en": "In addition to the bleeding, are you experiencing any pain or burning sensation?"
+        "category": "penis_bleeding",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+   "itching": [
+    {
+        "hi": "क्या खुजली के साथ कोई दाने, सूजन या लालिमा भी हो रही है?",
+        "en": "Along with the itching, are you noticing any bumps, swelling, or redness?"
+        "category": "penis_itching",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+
     "default": [
         {
             "hi": "कृपया अपनी लिंग से संबंधित समस्या के बारे में अधिक जानकारी दें।",
@@ -12832,33 +12833,34 @@ body_part_followup_questions = {
             "risk_factor": False
         }
     ],
-    "discomfort": [
-        {
-            "hi": "क्या जननांग क्षेत्र में असुविधा महसूस हो रही है?",
-            "en": "Are you experiencing any discomfort in the genital area?",
-            "category": "body_discomfort",
-            "symptom": None,
-            "risk_factor": False
-        }
-    ],
-    "bleeding": [
-        {
-            "hi": "क्या जननांग क्षेत्र से खून आ रहा है?",
-            "en": "Is there any bleeding from the genital area?",
-            "category": "genital_bleeding",
-            "symptom": None,
-            "risk_factor": False
-        }
-    ],
-    "itching": [
-        {
-            "hi": "क्या जननांग क्षेत्र में खुजली या जलन हो रही है?",
-            "en": "Are you experiencing itching or irritation in the genital area?",
-            "category": "itching",
-            "symptom": None,
-            "risk_factor": False
-        }
-    ],
+   "discomfort": [
+    {
+        "hi": "क्या जननांग क्षेत्र में असुविधा के दौरान आपको कोई जलन या खुजली महसूस हो रही है?",
+        "en": "In addition to the discomfort, are you feeling any itching or burning sensation in the genital area?",
+        "category": "genital_area_discomfort",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+"bleeding": [
+    {
+        "hi": "क्या जननांग क्षेत्र से खून आने के अलावा आपको दर्द या जलन भी हो रही है?",
+        "en": "In addition to the bleeding, are you experiencing any pain or burning sensation in the genital area?",
+        "category": "genital_area_bleeding",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+"itching": [
+    {
+        "hi": "क्या खुजली के साथ कोई दाने, सूजन या लालिमा भी हो रही है?",
+        "en": "Along with the itching, are you noticing any bumps, swelling, or redness in the genital area?",
+        "category": "genital_area_itching",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+
     "default": [
         {
             "hi": "कृपया अपनी जननांग क्षेत्र से संबंधित समस्या के बारे में अधिक जानकारी दें।",
