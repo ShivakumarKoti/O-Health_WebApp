@@ -6601,7 +6601,7 @@ trigger_keywords = {
 'leg': {
         'injury': ['injury', 'injured', 'twist', 'twists','twisted', 'sprain', 'sprained', 'sprains','fracture', 'fractured', 'broke', 'broken', 'fall', 'fell', 'hurt', 'accident'],
         'pain': ['pain', 'paining', 'ache', 'aching', 'sore', 'sores', 'soreness', 'painful', 'throbbing', 'hurting', 'sharp', 'dull', 'cramp', 'cramping', 'stiff', 'stiffness','pains','hurts'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'itching': ['itch', 'itching', 'itches', 'itchy', 'itched', 'itchiness'],
         'weakness': ['weak', 'weakened', 'weakness', 'fatigue', 'tired', 'no strength', 'drained'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingled', 'tingling', 'pins', 'needles'],
@@ -6609,7 +6609,7 @@ trigger_keywords = {
         'spasm': ['spasm', 'spasms', 'tightness', 'twitch', 'twitching'],
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 
 'eye': {
@@ -6628,14 +6628,14 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'hurting', 'throbbing', 'aching'],
 	    'weakness': ['weakness', 'weak',  'fatigued', 'can’t grip', 'loss of strength', 'tremble', 'can’t hold'],
         'numbness': ['numb', 'numbed', 'numbs', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'injured', 'fracture', 'fractured', 'broke', 'broken', 'wound', 'wounded', 'crack', 'cracked', 'hit', 'hurt', 'twist', 'twisted'],
         'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
         'itching': ['itch', 'itches', 'itchy', 'itching', 'itched', 'itchiness', 'scratchy'],
 	    'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'arm': {
         'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore',  'hurting','throbbing', 'aching'],
@@ -6646,7 +6646,7 @@ trigger_keywords = {
 	    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
         'swelling': ['swollen', 'swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
@@ -6666,7 +6666,7 @@ trigger_keywords = {
 	      'itching': ['itch', 'itching', 'itchy','itches', 'itchiness', 'scratchy'],
         'issue': ['issue', 'bone issue','issues', 'problem', 'problems', 'condition', 'discomfort'],
 	'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'chest': {
         'pain': ['pain', 'pains', 'sore', 'painful', 'paining', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'hurting', 'aches', 'burning', 'burn', 'soreness'],
@@ -6676,7 +6676,7 @@ trigger_keywords = {
         'palpitations': ['palpitations', 'racing', 'fluttering', 'pounding', 'fast heartbeat', 'rapid heartbeat'],
 	      'itching': ['itch', 'itches', 'itching', 'itchy', 'itchiness', 'scratchy'],
         'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'wrist': {
         'pain': ['pain','painful', 'paining', 'sore', 'pains', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'hurting', 'burning', 'soreness'],
@@ -6688,30 +6688,30 @@ trigger_keywords = {
     },
 'throat': {
         'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'hurting', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing','swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'infectious', 'infected','infections','infected'],
         'dryness': ['dry', 'dryness', 'scratchy', 'rough', 'parched', 'chapped'],
 	      'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'stomach': {
         'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurted','sore','sores','pains','problem','problems'],
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
         'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
         #'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'burning' : ['burn','burning','burns','burnt','fire'],
 		'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'neck': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'hurting', 'ache', 'aches', 'aching','throbbing'],
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'can’t hold up', 'loss of strength', 'unstable'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'tense', 'tension'],
-        'swelling': ['swelling', 'swollen', 'lump', 'bump', 'enlarged', 'inflamed'],
+        'swelling': ['swelling', 'swollen', 'lump', 'enlarged', 'inflamed'],
         'injury': ['injury', 'injured', 'whiplash', 'fall', 'fell', 'hit', 'knock', 'twist', 'twisted'],
         'numbness': ['numb', 'numbness', 'numbed', 'tingle', 'tingling', 'pins', 'needles'],
 	     'itching': ['itch', 'itching', 'itches', 'itchy','scratchy', 'itchiness'],
@@ -6719,12 +6719,12 @@ trigger_keywords = {
 	    'spasm': ['spasm', 'spasms', 'cramp', 'tightness', 'twitching'],
 		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
 
     },
 'knee': {
         'pain': ['pain', 'pains','painful', 'paining', 'hurt', 'hurts', 'ache', 'aches', 'hurting', 'aching'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'locked', 'tight', 'rigid'],
         'injury': ['injury', 'injured', 'twist', 'twisted', 'fall', 'fell', 'hit', 'sprain', 'sprained', 'fracture', 'fractured'],
         'weakness': ['weak', 'weakness', 'unstable', 'giving way', "can’t stand", 'buckling'],
@@ -6734,12 +6734,12 @@ trigger_keywords = {
 	    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
 	    'soreness': ['sore', 'soreness', 'tender', 'sores', 'discomfort'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'foot': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'ache', 'hurts', 'hurt', 'hurting','sore', 'throbbing', 'burning'],
 	     'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'giving way', 'can’t push off', 'loss of strength'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingling', 'tingle', 'pins', 'needles'],
         'injury': ['injury', 'injured', 'fall', 'fell', 'twist', 'twisted', 'fracture', 'fractured', 'sprain', 'sprained', 'broke', 'broken'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'rigid', 'locked', 'restricted'],
@@ -6750,7 +6750,7 @@ trigger_keywords = {
 	    'burning': ['burning', 'hot sensation', 'burnt', 'heat', 'fire-like', 'burns'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'shoulder': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing'],
@@ -6761,7 +6761,7 @@ trigger_keywords = {
 	    'itching': ['itch', 'itching', 'itches', 'itchy', 'itchiness', 'scratchy'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'ear': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching', 'hurting','throbbing'],
@@ -6791,17 +6791,17 @@ trigger_keywords = {
 
 'joint': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'rigid', 'locked', 'tight'],
         'weakness': ['weak','weakness', 'unstable', 'giving way', "can’t move"],
         'injury': ['injury', 'sprain', 'dislocation', 'fracture', 'strain'],
 	   'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
 	   'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'skin': {
         'rash': [
-            'rash', 'red spots', 'bumps', 'patches', 'eruption', 
+            'rash', 'red spots', 'patches', 'eruption', 
             'blotchy', 'hives', 'welts', 'raised spots'
         ],
         'itching': [
@@ -6829,7 +6829,7 @@ trigger_keywords = {
 	'bleeding': ['bleeding', 'blood', 'bleed', 'bleeds'],
 	'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-     'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+     'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 
 
@@ -6868,7 +6868,7 @@ trigger_keywords = {
 		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
     },
 'nose': {
-        'injury': ['injury', 'hit', 'fracture', 'bump', 'hurt','broken','broke'],
+        'injury': ['injury', 'hit', 'fracture', 'hurt','broken','broke'],
         'burning': ['burning', 'stinging', 'irritation', 'hot sensation','burns'],
         'sniffing': ['sniffing', 'sniff', 'smelling', 'inhale', 'breathing in'],
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -6879,28 +6879,28 @@ trigger_keywords = {
 	'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
 	'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-    'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+    'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'thigh': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
         'weakness': ['weakness', "can’t lift", 'weak','fatigue', 'tired', 'no strength', 'drained'],
         'spasm': ['spasm', 'twitch', 'twitching', 'cramp', 'tightness', 'spasms'],
         'injury': ['injury', 'pulled', 'strain', 'torn','injured','injure'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
 	    'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation'],
 	    'itching': ['itch', 'itching', 'itchy','itches', 'scratchy', 'itchiness'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'forehead': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'hit', 'bruise', 'injured'],
         'tingling': ['tingling', 'numb', 'tingly'],
 		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'tongue': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -6966,7 +6966,7 @@ trigger_keywords = {
         'weakness': ['weakness', 'weak', 'unstable', 'fatigued', 'can’t lift', 'loss of strength'],
         'injury': ['injury', 'strain', 'sprain', 'bruise', 'fracture', 'fall', 'hit', 'trauma', 'injured'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
  'calf': {
         'pain': ['pain', 'pains','painful', 'paining', 'sore', 'ache', 'aching', 'soreness', 'cramping', 'sharp', 'burning', 'throbbing'],
@@ -6978,13 +6978,13 @@ trigger_keywords = {
 'face': {
         'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'throbbing', 'pains', 'paining'],
         'numbness': ['numbness', 'numb', 'tingling', 'loss of sensation', 'no feeling'],
-        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflammation', 'bump'],
+        'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflammation'],
         'drooping': ['drooping', 'droop', 'sagging', 'paralysis', 'uneven smile'],
         'injury': ['bruise', 'cut', 'impact', 'injury', 'trauma'],
 	    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
     'testicle': {
         'problem': ['problem', 'issue','issues','problems','pain','paining','hurt','hurts','hurting','allergy'],
@@ -7009,7 +7009,7 @@ trigger_keywords = {
         'swelling': ['swelling', 'puffiness', 'swollen', 'swells', 'swell', 'inflammation'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'hair': {
         'loss': ['fall', 'falling', 'fallen', 'balding', 'shedding', 'thinning'],
@@ -7076,7 +7076,7 @@ trigger_keywords = {
     'ulcers': ['ulcer', 'ulcers', 'blister', 'sores'],
 	'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-    'lump': ['lump', 'lumps', 'bump', 'bumps', 'swollen mass'],
+    'lump': ['lump', 'lumps', 'bump', 'bumps'],
 },
 'cheek': {
     'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'hurting', 'sore', 'tender'],
@@ -7107,13 +7107,16 @@ trigger_keywords = {
       'bleeding': ['bleeds','bleeding','bled','blood'],
       'default':  ['issue']   # no “default” words here; we’ll ask to confirm
 },
-'penis': { 
+
+	'penis': { 
     'pain': ['pain', 'ache', 'discomfort', 'burning', 'tender'],
     'swelling': ['swollen', 'lumps', 'inflammation', 'bump'],
     'discomfort': ['discomfort', 'soreness', 'sensitive', 'irritation'],
-	'bleeding': ['bleeding', 'blood'],
-    'itching': ['itching', 'rash', 'redness']
-},
+    'bleeding': ['bleeding', 'spotting', 'blood'],
+    'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
+    'itching': ['itching', 'rash', 'redness'],
+    'discharge': ['discharge', 'leakage', 'fluid']
+  }
 
 
     # add ear / skin / etc…
@@ -9187,6 +9190,7 @@ body_part_followup_questions = {
       "symptom": None,
       "risk_factor": False
     },
+  ],
     "default": [
       {
         "hi": "कृपया अपने घुटने की समस्या के बारे में और जानकारी दें।",
@@ -12702,18 +12706,9 @@ body_part_followup_questions = {
       }
     ]
   },
-	'penis': { 
-    'pain': ['pain', 'ache', 'discomfort', 'burning', 'tender'],
-    'swelling': ['swollen', 'lumps', 'inflammation', 'bump'],
-    'discomfort': ['discomfort', 'soreness', 'sensitive', 'irritation'],
-    'bleeding': ['bleeding', 'spotting', 'blood'],
-    'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
-    'itching': ['itching', 'rash', 'redness'],
-    'discharge': ['discharge', 'leakage', 'fluid']
-},
 
-body_part_followup_questions = {
-    "pain": [
+  'penis': {
+        "pain": [
         {
             "hi": "क्या आपको लिंग में दर्द या जलन महसूस हो रही है?",
             "en": "Are you experiencing pain or burning in the penis?",
@@ -12788,10 +12783,87 @@ body_part_followup_questions = {
             "symptom": None,
             "risk_factor": False
         }
-    ]
-}
+    
+    ],
 
-}
+},
+
+'genital': {
+        "pain": [
+        {
+            "hi": "क्या आपको जननांग क्षेत्र में दर्द या जलन महसूस हो रही है?",
+            "en": "Are you experiencing pain or burning in the genital area?",
+            "category": "penis_pain",
+            "symptom": None,
+            "risk_factor": False
+        },
+        {
+            "hi": "क्या आपको जननांग क्षेत्र में दर्द के साथ सूजन भी महसूस हो रही है?",
+            "en": "Is there any swelling along with the pain in the genital area?",
+            "category": "swelling",
+            "symptom": None,
+            "risk_factor": False
+        },
+        
+    ],
+    "swelling": [
+        {
+            "hi": "क्या जननांग क्षेत्र में सूजन के साथ कोई कठोरता या गांठ महसूस हो रही है?",
+            "en": "Are you feeling any hardness or lumps with the swelling in the genital area?",
+            "category": "swelling_lumps",
+            "symptom": None,
+            "risk_factor": False
+        },
+        {
+            "hi": "क्या सूजन के साथ जननांग क्षेत्र में दर्द या जलन भी हो रही है?",
+            "en": "Is there pain or burning with the swelling in the genital area?",
+            "category": "swelling_with_pain",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "discomfort": [
+        {
+            "hi": "क्या जननांग क्षेत्र में असुविधा महसूस हो रही है?",
+            "en": "Are you experiencing any discomfort in the genital area?",
+            "category": "body_discomfort",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "bleeding": [
+        {
+            "hi": "क्या जननांग क्षेत्र से खून आ रहा है?",
+            "en": "Is there any bleeding from the genital area?",
+            "category": "genital_bleeding",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "itching": [
+        {
+            "hi": "क्या जननांग क्षेत्र में खुजली या जलन हो रही है?",
+            "en": "Are you experiencing itching or irritation in the genital area?",
+            "category": "itching",
+            "symptom": None,
+            "risk_factor": False
+        }
+    ],
+    "default": [
+        {
+            "hi": "कृपया अपनी जननांग क्षेत्र से संबंधित समस्या के बारे में अधिक जानकारी दें।",
+            "en": "Please describe your genital area-related issue in more detail.",
+            "category": "more_detail",
+            "symptom": None,
+            "risk_factor": False
+        }
+    
+    ],
+
+},
+
+},
+
 # -----------------------------------------------------------------
 # Map lone body parts → default specialists (used if NO symptoms)
 # -----------------------------------------------------------------
@@ -12897,8 +12969,11 @@ body_part_to_specialist = {
     'period bleeding':'Gynecologist',
     'period issue': 'Gynecologist',
     'period':'Gynecologist',
-	'penis': 'Urologist',
+	  'penis': 'Urologist',
 }
+
+if isinstance(body_part_followup_questions, tuple):
+    body_part_followup_questions = body_part_followup_questions[0]
 
 BP_CANON = {
     'teeth':      'tooth',
@@ -12969,6 +13044,7 @@ BP_CANON = {
 	  'facial': 'face',
 	  'nasal': 'nose',
 	  'cervical': 'neck',
+    'private part': 'genital',
       
     # …and so on for all body parts
 }
@@ -13554,7 +13630,7 @@ symptom_to_specialist = {
 'penis swelling': 'Urologist',
 'penis discomfort': 'Urologist',
 'penis bleeding': 'Urologist',
-'penis itching': Urologist',
+'penis itching': 'Urologist',
 	
   'latrine issue': 'General Practitioner',
   'hernia': 'General Surgeon',
@@ -13718,7 +13794,7 @@ HINDI_OFFLINE_DICT = {
             "pneumonia": "निमोनिया",
             "sugar": "शुगर (मधुमेह)",
             "eye weakness": "आंखों की कमज़ोरी",
-	    "waist pain": "कमर दर्द",
+	           "waist pain": "कमर दर्द",
             "urine issue": "पेशाब की समस्याएँ",
 	    "caesarean section": "सीज़ेरियन सेक्शन",
             "pregnancy": "गर्भावस्था",
@@ -13774,7 +13850,7 @@ HINDI_OFFLINE_DICT = {
   "waist issue": "कमर की समस्या",
   "pelvic issue": "श्रोणि की समस्या",
   "body issue": "शरीर की समस्या",
-  "penis issue": "लिंग समस्या"
+  "penis issue": "लिंग समस्या",
 
 
 # Trigger keywords entries
@@ -14284,4 +14360,4 @@ HINDI_OFFLINE_DICT = {
 "lip boils": "होठों में फोड़े",
 "lip lump": "होठों में गांठ",
 
-        }
+}
