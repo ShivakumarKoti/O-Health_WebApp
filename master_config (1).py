@@ -20,7 +20,7 @@ symptom_list = [
 'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol','hydrocele', 'ringworm',
 'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking', 'fatty liver',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
-'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite', 'arthiritis','arthritis',
+'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
 #  'arthritis', 'sugar', 'cancer','pediatric symptoms',
 ]
@@ -82,8 +82,8 @@ symptom_synonyms = {
         'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'throat is sore','mucus in throat', 'mucus in mouth'
     ],
 
-   'weakness': [
-    'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome',
+    'weakness': [
+    'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling weak', 'lack of energy', 
     'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
     'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements', 'lacking strength', 
     'body feels heavy', 'brain fog', 'struggling to stay awake', "can’t focus due to fatigue", 'slow to move', 'slow to think',
@@ -129,12 +129,6 @@ symptom_synonyms = {
     'breath is shallow', 'breath feels stuck', 'breath is short', 'breath is labored', 'breath is heavy', 'breath feels blocked',
     'breath feels cut off', 'breath feels tight', 'breath feels restricted', 'breath feels painful', 'breath feels difficult',
     'breathing is hard work', 'breathing is a struggle', 'breathing is painful', 'breathing feels tight', 'breathing feels heavy',
-    'breathing feels like pushing through resistance', 'breathing feels shallow and fast', 'breathing feels shallow and weak',
-    'lungs feel tight', 'lungs feel heavy', 
-    'lungs are not expanding fully', "lungs don’t fill properly", 'lungs feel air starved', 'lungs feel empty',
-    'feeling like suffocating', 'feeling like air is too thick to breathe', 'feeling strangled by lack of air',
-    'feeling smothered', 'feeling choked', 'feeling like air is not enough', 'feeling like chest is tight',
-    'chest feels heavy', 'chest feels tight', 'chest feels restricted', "chest feels like it’s being squeezed",
     'chest oppression when breathing', 'chest pain on breathing', 'chest discomfort when breathing',
     'muscles feel strained just to breathe', 'muscle effort just to breathe', 'muscle tiredness when breathing',
     'need to breathe harder', 'need to take deeper breaths', 'need to gasp for air', 'need to gasp between words',
@@ -293,8 +287,8 @@ symptom_synonyms = {
     'decreased appetite', 'reduced appetite', 'appetite loss', 'lack of appetite', 'poor appetite', 'no desire to eat', 'loss of interest in food', 'unwillingness to eat',
     'inability to eat', 'diminished appetite', 'eating less', 'loss of hunger', 'food aversion', 'food intolerance', 'decreased desire to eat', 'lack of hunger',
     'decrease in food intake', 'disinterest in eating', 'feeling full quickly', 'loss of taste for food', 'absence of hunger', 'less hungry', 'not feeling hungry',' don\'t feel hungry',
-    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less','do not feel hungry',
-    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed',
+    'difficulty eating', 'reduced food consumption', 'lack of craving for food', 'feeling satiated quickly', 'loss of appetite', 'eating less','do not feel hungry','appetite seems to be very low',
+    'anorexia', 'anorexia nervosa', 'feeling no appetite', 'feeling disinterested in food', 'poor food intake', 'reduced food desire', 'appetite is less','feel stuffed','appetite seems to be low',
     'eat less food','more hunger not there','more hunger is not there', 'not feeling like eating', 'not feeling like having food','not hungry', 'not feeling like eating food',
 ],
 
@@ -734,7 +728,7 @@ symptom_synonyms = {
 
 'pneumonia': ['lung infection','alveolar infection'],
 
-#'sugar': ['sugars', 'blood sugar', 'hyperglycemia', 'hypoglycemia'],
+'sugar': ['sugars', 'blood sugar', 'sugar','hyperglycemia', 'hypoglycemia'],
 
 'tingling': ['tingling sensation', 'pins and needles', 'prickling sensation', 'buzzing sensation',
               'electrical sensation'],
@@ -812,7 +806,7 @@ symptom_synonyms = {
     'covid-19', 'coronavirus', 'corona', 'corona virus', 'sars-cov-2 infection', 'pandemic virus', 'covid outbreak'
 ],
 
-'animal bite': ['dog bite', 'cat bite', 'bitten by', 'monkey bite','snake bite', 'bit by snake', 'bitten by snake','eaten by dog', 'eaten by a dog', 'dog had eaten',
+'animal bite': ['dog bite', 'cat bite', 'bitten by', 'monkey bite','snake bite', 'bit by snake', 'bitten by snake','eaten by dog', 'eaten by a dog', 'dog had eaten', 'bitten by a dog',
                 'dog has eaten', 'dog has eaten me', 'dog has bitten me', 'dog bite wound', 'dog bite injury', 'cat bite wound', 'cat bite injury', 'dog bit'],
 
 'hiv': [
@@ -988,32 +982,32 @@ symptom_followup_questions = {
     {
       "hi": "आपको कब से एसिडिटी या सीने में जलन हो रही है?",
       "en": "Since when are you having acidity or burning sensations in chest?",
-      "category": "duration",
+      "category": "duration: acidity",
       "symptom": None,
       "risk_factor": False,    },
       
      {
       "hi": "क्या आपको पेट में जलन या जलती हुई अनुभूति हो रही है?",
-    "en": "Are you experiencing burning sensations in your stomach?",
-      "category": "burning_sensation_with_heartburn",
+      "en": "Are you experiencing burning sensations in your stomach?",
+      "category": "burning sensation",
       "symptom": None,
       "risk_factor": False,    },
         {
       "hi": "क्या आपको उल्टी हो रही है?",
       "en": "Do you experience vomitting?",
-      "category": "burning_sensation_with_heartburn",
+      "category": "vomiting",
       "symptom": "vomiting",
       "risk_factor": False,    },
 {
       "hi": "लक्षणों को क्या ट्रिगर करता है या बिगाड़ता है (जैसे कि कुछ खाद्य पदार्थ, लेट जाना, तनाव)?",
       "en": "What triggers or worsens the symptoms (e.g., certain foods, lying down, stress)?",
-      "category": "heartburn",
+      "category": "cause: acidity",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके आहार, वजन, या जीवनशैली में हाल ही में कोई बदलाव हुआ है?",
       "en": "Have you had any changes in your diet, weight, or lifestyle recently?",
-      "category": "dietary changes",
+      "category": "diet",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1022,44 +1016,38 @@ symptom_followup_questions = {
     {
         "hi": "क्या आप को नसों या मांसपेशियों से जुड़ी कोई पुरानी समस्या है?",
         "en": "Do you have any chronic nerve or muscle-related condition?",
-        "category": "limb_weakness_neuro_muscular_history",
-        "symptom": None,
+        "category": "nerve or muscle condition",
+        "symptom": "nerve or muscle condition",
         "risk_factor": True
     },
-    {
-      "hi": "क्या आपको थकान महसूस होती है?",
-      "en": "Do you feel fatigue? ", 
-      "category": "weakness",
-      "symptom": "weakness",
-      "risk_factor": False,    },
   ],
 
 "headache": [
   {
     "hi": "क्या सिरदर्द का कोई विशिष्ट स्थान है?",
     "en": "Is there a specific location where you feel the headache?",
-    "category": "location_specific",
+    "category": "location: headache",
     "symptom": "location",
     "risk_factor": False
   },
   {
     "hi": "क्या आपका सिरदर्द लगातार है या बीच-बीच में आता है?",
     "en": "Is your headache constant or intermittent?",
-    "category": "headache_type",
+    "category": "headache type",
     "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "क्या आप सिरदर्द के साथ-साथ तनाव में भी हैं?",
     "en": "Are you under stress along with headache?",
-    "category": "stress_headache",
-    "symptom": "Stress",
+    "category": "stress",
+    "symptom": "stress",
     "risk_factor": False
   },
   {
     "hi": "क्या सिरदर्द की तीव्रता बढ़ रही है?",
     "en": "Is the intensity of your headache increasing?",
-    "category": "intensity",
+    "category": "intensity: headache",
     "symptom": None,
     "risk_factor": False
   }
@@ -1076,8 +1064,8 @@ symptom_followup_questions = {
 	{
       "hi": "क्या आपको खाने के बाद जी मचलता है?",
       "en": "Do you feel nauseous after eating?",
-      "category": "postprandial_nausea",
-      "symptom": "Postprandial nausea",
+      "category": "postprandial nausea",
+      "symptom": None,
       "risk_factor": False,    },
       {
       "hi": "क्या आपको जी मिचलाना के साथ पेट दर्द है?",
@@ -1088,13 +1076,13 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको सिर दर्द के साथ जी मचलता है",
       "en": "Do you have headaches along with nausea?",
-      "category": "headache_nausea",
+      "category": "headache",
       "symptom": "headache",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको चक्कर के साथ जी मचलता है",
       "en": "Are you feeling dizzy along with nausea?",
-      "category": "dizziness_nausea",
+      "category": "dizziness",
       "symptom": "dizziness",
       "risk_factor": False,    },
 
@@ -1105,21 +1093,21 @@ symptom_followup_questions = {
   {
     "hi": "आपके लिए सबसे बड़ा तनाव का कारण क्या है?",
     "en": "What is the biggest cause of stress for you?",
-    "category": "primary_stressor",
-    "symptom": "cause",
+    "category": "cause: stress",
+    "symptom": None,
     "risk_factor": True
   },
   {
     "hi": "तनाव बढ़ने पर शरीर में कौन से लक्षण आते हैं?",
     "en": "What physical symptoms do you experience when stress increases?",
-    "category": "physical_symptoms_stress",
-    "symptom": "others",
+    "category": "physical symptom",
+    "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "क्या तनाव ने आपकी नींद या भूख पर असर डाला है?",
     "en": "Has stress affected your sleep or appetite?",
-    "category": "sleep_appetite_impact",
+    "category": "impact: stress",
     "symptom": "insomnia",
     "risk_factor": False
   },
@@ -1127,14 +1115,14 @@ symptom_followup_questions = {
     "hi": "तनाव कम करने के लिए आप कौन से तरीके इस्तेमाल करते हैं?",
     "en": "What methods do you use to reduce stress?",
     "category": "stress_management_methods",
-    "symptom": "history",
+    "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "परिवार या दोस्तों से कितनी सहायता मिलती है?",
     "en": "How much support do you get from family or friends?",
     "category": "social_support",
-    "symptom": "support_system",
+    "symptom": None,
     "risk_factor": False
   }
 ],
@@ -1143,14 +1131,14 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपकी नाक बह रही है?",
   "en": "Do you have a runny nose?",
-    "category": "runny_nose",
+    "category": "runny nose",
     "symptom": "runny nose",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको गले में खराश है साथ ही नाक बंद है?",
    "en": "Do you have a sore throat along with nasal congestion?",
-    "category": "sore_throat_congestion",
+    "category": "sore throat",
     "symptom": "sore throat",
     "risk_factor": False,
   },
@@ -1158,30 +1146,30 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपकी आवाज़ भारी लग रही है?",
   "en": "Does your voice sound congested or muffled?",
-    "category": "voice_congestion",
+    "category": "voice congestion",
     "symptom": "voice congestion",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपकी नाक से बदबू आ रही है या गंध नहीं आ रही?",
   "en": "Are you experiencing a bad smell or loss of smell through your nose?",
-    "category": "loss_of_smell",
-    "symptom": "Loss or change in smell",
+    "category": "loss of smell",
+    "symptom": "loss of smell",
     "risk_factor": False,
   },
 {
     "hi": "क्या आपकी नाक में दबाव या जकड़न महसूस हो रही है?",
     "en": "Do you feel pressure or tightness in your nasal passages?",
-    "category": "nasal_pressure",
-    "symptom": "Nasal pressure or tightness",
+    "category": "nasal pressure",
+    "symptom": "nasal pressure",
     "risk_factor": False,
   },
 
   {
     "hi": "क्या आपको सुबह उठने पर नाक में ज्यादा जकड़न महसूस होती है?",
     "en": "Do you feel more nasal congestion in the mornings?",
-    "category": "morning_congestion",
-    "symptom": "Morning nasal congestion",
+    "category": "morning nasal congestion",
+    "symptom": "nasal congestion",
     "risk_factor": False,
   },
 ],
@@ -1189,36 +1177,35 @@ symptom_followup_questions = {
   "dizziness": [
     {
       "hi": "क्या चक्कर आना अचानक शुरू हुआ था या धीरे-धीरे?",
-    "en": "Did the dizziness start suddenly or gradually?",
-      "category": "dizziness_onset",
+      "en": "Did the dizziness start suddenly or gradually?",
+      "category": "onset: duration",
       "symptom": "dizziness",
       "risk_factor": False,    },
     {
-  "hi": "क्या आप चलते वक्त संतुलन खो रहे हैं?",
-  "en": "Are you losing your balance while moving?",
-  "category": "balance_issues",
-  "symptom": "balance problem",
-  "risk_factor": False,    },
+      "hi": "क्या आप चलते वक्त संतुलन खो रहे हैं?",
+      "en": "Are you losing your balance while moving?",
+      "category": "balance problem",
+      "symptom": "balance problem",
+      "risk_factor": False,    },
 
 {
       "hi": "क्या चक्कर आना चलने या खड़े होने पर बढ़ता है?",
      "en": "Does the dizziness increase when walking or standing?",
-      "category": "position_related_dizziness",
-      "symptom": "exercise",
+      "category": "activity impact: dizziness",
+      "symptom": None,
       "risk_factor": False,    },
     
-
-    {
+{
       "hi": "क्या आपको चक्कर आने के साथ सिरदर्द भी हो रहा है?",
       "en": "Are you having headaches along with dizziness?",
-      "category": "headache_dizziness",
+      "category": "headache",
       "symptom": "headache",
       "risk_factor": False,    },
 {
       "hi": "क्या चक्कर आने के साथ उल्टी हो रही है?",
       "en": "Are you experiencing vomiting along with dizziness?",
-      "category": "dizziness_nausea_vomiting",
-      "symptom": "nausea",
+      "category": "vomiting",
+      "symptom": "vomiting",
       "risk_factor": False,    },
     
   ],
@@ -1226,42 +1213,36 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपकी त्वचा भी पीली हो गई है?",
      "en": "Has your skin also turned yellow?",
-      "category": "jaundice_skin",
-      "symptom": "Jaundice in skin",
+      "category": "yellow skin",
+      "symptom": "yellow skin",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके मूत्र का रंग गहरा हो गया है?",
-    "en": "Has the color of your urine become darker?",
-      "category": "dark_urine",
-      "symptom": "Dark urine",
+      "en": "Has the color of your urine become darker?",
+      "category": "dark urine",
+      "symptom": None,
       "risk_factor": False,    },
     {
-"hi": "क्या आपको पेट में दर्द के साथ पीली आँखें हैं?",
-  "en": "Do you have abdominal pain along with yellow eyes?",
-      "category": "abdominal_pain",
+      "hi": "क्या आपको पेट में दर्द के साथ पीली आँखें हैं?",
+    "en": "Do you have abdominal pain along with yellow eyes?",
+      "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी आँखों में जलन हो रही है?",
      "en": "Are your eyes feeling itchy along with yellowing?",
-      "category": "itchy_eyes",
-      "symptom": "Itchy eyes",
+      "category": "itchy eyes",
+      "symptom": "itchy eyes",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको थकान महसूस हो रही है साथ में पीली आँखें?",
       "en": "Are you feeling fatigued along with yellow eyes?",
-      "category": "fatigue_jaundice",
-      "symptom": "Fatigue with jaundice",
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
   ],
 
   "fever": [
-    {
-      "hi": "क्या आपका बुखार लगातार है या बीच-बीच में आता है?",
-     "en": "Is your fever constant or intermittent?",
-      "category": "fever_type",
-      "symptom": None,
-      "risk_factor": False,    },
     {
       "hi": "क्या आपको ठंड लग रही है?",
       "en": "Are you experiencing any chills?",
@@ -1271,7 +1252,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको रात में पसीना आता है?",
      "en": "Do you experience night sweats?",
-      "category": "night_sweats",
+      "category": "night sweats",
       "symptom": "night sweats",
       "risk_factor": False,    },
     {
@@ -1280,16 +1261,16 @@ symptom_followup_questions = {
       "category": "headache",
       "symptom": "headache",
       "risk_factor": False,    },
-{
-      "hi": "क्या आपका तापमान सामान्य से अधिक है?",
-      "en": "Is your temperature higher than normal?",
-      "category": "high_temperature",
-      "symptom": "high temperature",
+	{
+      "hi": "क्या आपका बुखार लगातार है या बीच-बीच में आता है?",
+     "en": "Is your fever constant or intermittent?",
+      "category": "type: fever",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको भूख कम लग रही है?",
       "en": "Are you experiencing loss of appetite?",
-      "category": "loss_of_appetite",
+      "category": "loss of appetite",
       "symptom": "loss of appetite",
       "risk_factor": False,    },
   ],
@@ -1298,7 +1279,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपकी खांसी सूखी है या बलगम के साथ?",
     "en": "Is your cough dry or with phlegm?",
-      "category": "cough_type",
+      "category": "phlegm",
       "symptom": None,
       "risk_factor": False,    },
     {
@@ -1311,38 +1292,38 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको सांस लेने में कठिनाई हो रही है?",
      "en": "Are you experiencing difficulty breathing?",
-      "category": "breathing",
+      "category": "shortness of breath",
       "symptom": "shortness of breath",
       "risk_factor": False,    },
 {
       "hi": "क्या आपको सीने में दर्द है?",
     "en": "Are you experiencing chest pain?",
-      "category": "chest_pain",
+      "category": "chest pain",
       "symptom": "chest pain",
       "risk_factor": False,    },
 {
       "hi": "क्या आपको गले में खराश है?",
       "en": "Do you have a sore throat?",
-      "category": "sore_throat",
+      "category": "sore throat",
       "symptom": "sore throat",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी खांसी रात में बढ़ जाती है?",
       "en": "Does your cough worsen at night?",
-      "category": "time",
+      "category": "instance: cough",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी आवाज़ बदल गई है?",
       "en": "Has your voice changed?",
-      "category": "voice_change",
-      "symptom": "broken voice",
+      "category": "voice change",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी खांसी के साथ तेज सांस लेना शामिल है?",
       "en": "Does your cough include rapid breathing?",
-      "category": "rapid_breathing",
-      "symptom": "Rapid breathing",
+      "category": "rapid breathing",
+      "symptom": "rapid breathing",
       "risk_factor": False,    },
   ],
 
@@ -1350,7 +1331,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या कब्ज के साथ पेट में दर्द है?",
       "en": "Are you experiencing abdominal pain along with constipation?",
-      "category": "abdominal_pain",
+      "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },
     {
@@ -1360,13 +1341,13 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,    },
 
-  {
-  "hi": "क्या आपको थायरॉयड की समस्या या सुगर ( डायबिटीज़) है?",
-  "en": "Do you have thyroid issues or diabetes?",
-  "category": "thyroid_or_diabetes",
-  "symptom": "thyroid",
-  "risk_factor": True,
-},
+    {
+    "hi": "क्या आपको थायरॉयड की समस्या या सुगर ( डायबिटीज़) है?",
+    "en": "Do you have thyroid issues or diabetes?",
+    "category": "thyroid or diabetes",
+    "symptom": "thyroid",
+    "risk_factor": True,
+  },
     {
       "hi": "क्या आप नियमित रूप से व्यायाम करते हैं?",
       "en": "Do you exercise regularly?",
@@ -1379,7 +1360,7 @@ symptom_followup_questions = {
 {
       "hi": "क्या आपको निगलने में कठिनाई हो रही है?",
       "en": "Are you having difficulty swallowing?",
-      "category": "difficulty_swallowing",
+      "category": "difficulty swallowing",
       "symptom": "difficulty swallowing",
       "risk_factor": False,    },
     
@@ -1399,27 +1380,27 @@ symptom_followup_questions = {
 {
   "hi": "क्या गले में दर्द के साथ बहती नाक भी है?",
   "en": "Do you have a runny nose along with a sore throat?",
-  "category": "runny_nose",
+  "category": "runny nose",
   "symptom": "runny nose",
   "risk_factor": False,
 },
    {
       "hi": "क्या गले में दर्द के साथ सूजन भी है?",
       "en": "Is there any swelling along with your sore throat?",
-      "category": "swelling",
-      "symptom": "swelling",
+      "category": "swelling: throat",
+      "symptom": "throat swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी गले में दर्द लगातार है या आता-जाता है?",
       "en": "Is your sore throat constant or does it come and go?",
-      "category": "intermittent_pain",
+      "category": "type: sore throat",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको गले में जलन महसूस हो रही है?",
       "en": "Are you experiencing any burning sensation in your throat?",
-      "category": "burning_sensation",
-      "symptom": "burning throat",
+      "category": "burning sensation",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -1427,7 +1408,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या दस्त के साथ पेट में दर्द है?",
       "en": "Do you have abdominal pain along with diarrhea?",
-      "category": "abdominal_pain",
+      "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },  
    {
@@ -1439,7 +1420,7 @@ symptom_followup_questions = {
  {
       "hi": "क्या आपको दस्त लगातार हो रहे हैं या कभी-कभी?",
       "en": "Are you experiencing diarrhea continuously or intermittently?",
-      "category": "intermittent_diarrea",
+      "category": "type: diarrhea",
       "symptom": None,
       "risk_factor": False,    },
    
@@ -1454,7 +1435,7 @@ symptom_followup_questions = {
       "hi": "क्या आप अपने शरीर से अधिक पानी खो रहे हैं?",
       "en": "Are you losing more water from your body?",
       "category": "dehydration",
-      "symptom": None,
+      "symptom": "dehydration",
       "risk_factor": False,    },
   ],
 
@@ -1462,13 +1443,13 @@ symptom_followup_questions = {
 {
       "hi": "क्या उल्टी के साथ पेट में दर्द है?",
       "en": "Do you have abdominal pain along with vomiting?",
-      "category": "abdominal_pain",
+      "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },    
 {
   "hi": "पिछले चौबीस घंटों में आपको कितनी बार उल्टी हुई?",
   "en": "How many episodes of vomiting did you have in the last 24 hours?",
-  "category": "vomiting",
+  "category": "frequency: vomiting",
   "symptom": "vomiting",
   "risk_factor": False,
 },
@@ -1481,8 +1462,8 @@ symptom_followup_questions = {
   {
   "hi": "क्या उल्टी के कारण आप कुछ भी खा या पी नहीं पा रहे हैं?",
   "en": "Are you unable to eat or drink anything due to vomiting?",
-  "category": "vomiting",
-  "symptom": "vomiting",
+  "category": "diet: vomiting",
+  "symptom": None,
   "risk_factor": False,
 },
   ],
@@ -1497,7 +1478,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या ठंडक की अनुभूति लगातार है या आता-जाता है?",
       "en": "Is your feeling of chills constant or intermittent?",
-      "category": "intermittent_chills",
+      "category": "type: chills",
       "symptom": "chills",
       "risk_factor": False,    },
     {
@@ -1509,7 +1490,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या ठंडक की अनुभूति किसी विशेष समय पर अधिक होती है?",
       "en": "Do you feel chills more at any specific time?",
-      "category": "time_related_chills",
+      "category": "instance: chills",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1517,26 +1498,20 @@ symptom_followup_questions = {
   "swelling": [
  
     {
-      "hi": "क्या सूजन के साथ दर्द भी है?",
-      "en": "Is there any pain along with swelling?",
-      "category": "pain_with_swelling",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या सूजन लगातार है या आता-जाता है?",
-      "en": "Is the swelling constant or does it come and go?",
-      "category": "intermittent_swelling",
-      "symptom": None,
-      "risk_factor": False,    },
+      "hi": "क्या सूजन किसी विशेष जगह पर सीमित है या फैली हुई है?",
+      "en": "Is the swelling localized to one area or is it widespread?",
+      "category": "location: swelling",
+      "symptom": "swelling",
+      "risk_factor": False,
+    },
   ],
 
   "infection": [
-    
  {
       "hi": "क्या संक्रमण के कारण आपको किसी विशेष हिस्से में दर्द हो रहा है?",
       "en": "Are you experiencing pain in any specific area due to the infection?",
-      "category": "infection",
-      "symptom": "location",
+      "category": "location: infection",
+      "symptom": None,
       "risk_factor": False,    },
     
     {
@@ -1551,36 +1526,30 @@ symptom_followup_questions = {
 {
       "hi": "क्या आपने अपनी सामान्य दिनचर्या में रुचि खो दी है?",
       "en": "Have you lost interest in your daily routine?",
-      "category": "depression",
+      "category": "activity impact: depression",
       "symptom": None,
       "risk_factor": False,    },   
 
 {
     "hi": "क्या आपको खाने की इच्छा या वजन में कोई बदलाव महसूस हुआ है?",
     "en": "Have you experienced any changes in appetite or weight?",
-    "category": "appetite_weight_change",
+    "category": "llifestyle change: depression",
     "symptom": None,
     "risk_factor": False,
 },
 
 {
-      "hi": "क्या आपको उदासी या निराशा महसूस हो रही है?",
-      "en": "Are you feeling sad or hopeless?",
-      "category": "sadness",
-      "symptom": None,
-      "risk_factor": False,    },
-{
       "hi": "क्या आपकी नींद में कोई समस्या है?",
       "en": "Are you having any problems with your sleep?",
-      "category": "sleep_problems",
-      "symptom": "insomnia",
+      "category": "sleep issue",
+      "symptom": "sleep issue",
       "risk_factor": False,    },
 
     {
       "hi": "क्या आपको ऊर्जा की कमी महसूस हो रही है?",
       "en": "Are you feeling a lack of energy?",
-      "category": "energy_deficit",
-      "symptom": "fatigue",
+      "category": "tired",
+      "symptom": "tired",
       "risk_factor": False,    },
   ],
 
@@ -1588,8 +1557,8 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको बार-बार पेशाब आ रहा है?",
       "en": "Are you urinating frequently?",
-      "category": "frequent_urination",
-      "symptom": "urinary frequency",
+      "category": "frequency: diabetes",
+      "symptom": "frequent urination",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके घुटनों या पैरों में सुन्नता है?",
@@ -1600,57 +1569,56 @@ symptom_followup_questions = {
 {
       "hi": "क्या आपको बहुत भूख लग रही है?",
       "en": "Are you feeling very hungry?",
-      "category": "increased_appetite",
-      "symptom": "increased appetite",
+      "category": "more hungry",
+      "symptom": "more hungry",
       "risk_factor": False,    },
 
     {
      "hi": "क्या आपको अत्यधिक प्यास लग रही है?",
       "en": "Are you feeling excessively thirsty?",
-      "category": "excessive_thirst",
+      "category": "excessive thirst",
       "symptom": "excessive thirst",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके वजन में अचानक कमी आई है?",
       "en": "Have you experienced sudden weight loss?",
-      "category": "sudden_weight_loss",
+      "category": "weight loss",
       "symptom": "weight loss",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको ऊँची या नीची रक्तचाप की समस्या है?",
-      "en": "Do you have high or low blood pressure?",
-      "category": "blood_pressure",
-      "symptom": None,
+      "en": "Do you have high blood pressure?",
+      "category": "blood pressure",
+      "symptom": "high blood pressure",
       "risk_factor": False,    },
   ], 
 
   "allergy": [
- 
   {
     "hi": "क्या आपकी एलर्जी धूल, पराग या जानवरों के संपर्क में आने पर बढ़ जाती है?",
     "en": "Do your allergies worsen when exposed to dust, pollen, or animals?",
-    "category": "common_allergy_triggers",
+    "category": "cause: allergy",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपके लक्षण पूरे साल रहते हैं या सिर्फ कुछ समय के लिए होते हैं?",
     "en": "Do your symptoms occur year-round or only during certain times?",
-    "category": "allergy_timing",
+    "category": "instance: allergy",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपके परिवार में किसी को एलर्जी की समस्या रही है?",
     "en": "Does anyone in your family have a history of allergies?",
-    "category": "family_history",
+    "category": "family history: allergy",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपने किसी खाद्य पदार्थ के सेवन के बाद एलर्जी की प्रतिक्रिया महसूस की है?",
     "en": "Have you ever experienced an allergic reaction after consuming certain foods?",
-    "category": "food_allergy",
+    "category": "diet: allergy",
     "symptom": None,
     "risk_factor": False,
   },
@@ -1665,88 +1633,84 @@ symptom_followup_questions = {
 
  "high blood pressure": [
   {
-    "hi": "क्या आप सिरदर्द, चक्कर, छाती में दर्द, या सांस की तकलीफ जैसे लक्षण महसूस कर रहे हैं?",
-    "en": "Are you experiencing any symptoms like headaches, dizziness, chest pain, or shortness of breath?",
-    "category": "high blood pressure",
+    "hi": "क्या आप सिरदर्द या चक्कर जैसे लक्षण महसूस कर रहे हैं?",
+    "en": "Are you experiencing any symptoms like headache or dizziness?",
+    "category": "headache or dizziness",
     "symptom": None,
     "risk_factor": False,
   },
   
-{
-    "hi": "आपने आखिरी बार कब अपना बीपी जांचवाया था, और उसके परिणाम क्या थे?",
-    "en": "When was the last time you had your blood pressure checked, and what were the results?",
-    "category": "high blood pressure",
-    "symptom": "high blood pressure",
+  {
+    "hi": "क्या आप छाती में दर्द या सांस की तकलीफ जैसे लक्षण महसूस कर रहे हैं?",
+    "en": "Are you experiencing any symptoms like chest pain, or shortness of breath?",
+    "category": "headache",
+    "symptom": None,
     "risk_factor": False,
   },
+
+    {
+    "hi": "क्या आपको ऐसी कोई अन्य स्वास्थ्य समस्याएं है, जैसे कि सुगर?",
+    "en": "Do you have any other health conditions such as diabetes?",
+    "category": "diabetes",
+    "symptom": "diabetes",
+    "risk_factor": False,   },
+
   {
     "hi": "क्या आपके परिवार में उच्च रक्तचाप, हृदय रोग, या स्ट्रोक का इतिहास है?",
     "en": "Do you have a family history of high blood pressure, heart disease, or stroke?",
-    "category": "high blood pressure",
+    "category": "family history: blood pressure",
     "symptom": None,
     "risk_factor": False,
   },
-  {
-    "hi": "क्या आपको ऐसी कोई अन्य स्वास्थ्य समस्याएं है जैसे कि सुगर , गुर्दे की बीमारी,सोते समय सास का रुकना जो उच्च रक्तचाप में योगदान कर सकती हैं?",
-    "en": "Do you have any other health conditions, such as diabetes, kidney disease, or sleep apnea, that might contribute to high blood pressure?",
-    "category": "high blood pressure",
-    "symptom": None,
-    "risk_factor": False,   },
+
   {
     "hi": "क्या आपने अपनी जीवनशैली में कोई बदलाव महसूस किया है, जैसे तनाव में वृद्धि, खराब आहार, या व्यायाम की कमी?",
     "en": "Have you noticed any changes in your lifestyle, such as increased stress, poor diet, or lack of exercise?",
-    "category": "high blood pressure",
+    "category": "lifestyle change",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप शराब, कैफीन, या तंबाकू का सेवन करते हैं, और यदि हां, तो कितनी मात्रा में?",
     "en": "Do you consume alcohol, caffeine, or tobacco, and if so, how much?",
-    "category": "high blood pressure",
+    "category": "alcohol",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में वजन बढ़ाया है या अपने आहार या शारीरिक गतिविधि स्तर में बदलाव महसूस किया है?",
     "en": "Have you recently gained weight or experienced changes in your diet or physical activity levels?",
-    "category": "high blood pressure",
-    "symptom": None,
+    "category": "weight gain",
+    "symptom": "weight gain",
     "risk_factor": False,
   },
 ],
     "low blood pressure": [
   {
-    "hi": "क्या आप चक्कर, हल्कापन, थकान, या धुंधली दृष्टि जैसे विशिष्ट लक्षण महसूस कर रहे हैं?",
-    "en": "Are you experiencing any specific symptoms like dizziness, lightheadedness, fatigue, or blurred vision?",
-    "category": "low blood pressure",
-    "symptom": None,
-    "risk_factor": False,
-  },
-  {
-    "hi": "क्या आपको जल्दी खड़ा होने पर या कुछ समय तक लेटे रहने के बाद हल्का चक्कर या बेहोशी का एहसास होता है?",
-   "en": "Do you feel lightheaded or faint when standing up quickly or after lying down for a while?",
-    "category": "low blood pressure",
+    "hi": "क्या आप चक्कर या थकान जैसे विशिष्ट लक्षण महसूस कर रहे हैं?",
+    "en": "Are you experiencing any specific symptoms like dizziness or fatigue?",
+    "category": "dizziness or lighthead",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में कोई बीमारी, संक्रमण, या स्वास्थ्य में कोई बदलाव अनुभव किया है जो आपके रक्तचाप को प्रभावित कर सकता है?",
     "en": "Have you had any recent illnesses, infections, or changes in your health that could affect your blood pressure?",
-    "category": "low blood pressure",
+    "category": "diet",
     "symptom": None,
     "risk_factor": False, 
  },
   {
     "hi": "क्या आपने हाल ही में अपने आहार, तरल पदार्थों का सेवन, या शारीरिक गतिविधि स्तर में कोई महत्वपूर्ण बदलाव महसूस किया है?",
     "en": "Have you experienced any significant changes in your diet, fluid intake, or activity level recently?",
-    "category": "low blood pressure",
+    "category": "diet",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में किसी तनाव का अनुभव किया है या खून की महत्वपूर्ण हानि (जैसे चोट या सर्जरी से) हुई है?",
     "en": "Have you been under any recent stress or experienced a significant loss of blood (e.g., from an injury or surgery)?",
-    "category": "low blood pressure",
+    "category": "loss of blood",
     "symptom": None,
     "risk_factor": False,
   },
@@ -1756,37 +1720,31 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको क्रैम्प्स लगातार हो रहे हैं या कभी-कभी?",
       "en": "Are you experiencing cramps continuously or intermittently?",
-      "category": "intermittent_cramps",
+      "category": "type: cramps",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या क्रैम्प्स किसी विशेष समय पर अधिक होते हैं?",
       "en": "Do your cramps occur more frequently at any specific time?",
-      "category": "time_related_cramps",
+      "category": "frequency: cramps",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या क्रैम्प्स के साथ सूजन भी है?",
       "en": "Is there any swelling along with your cramps?",
-      "category": "swelling_with_cramps",
+      "category": "swelling",
       "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या क्रैम्प्स के कारण आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued due to cramps?",
-      "category": "fatigue_with_cramps",
-      "symptom": "fatigue",
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या क्रैम्प्स किसी विशेष गतिविधि के दौरान बढ़ते हैं?",
       "en": "Do your cramps increase during any specific activity?",
-      "category": "activity_related_cramps",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको क्रैम्प्स के साथ दर्द में कोई बदलाव महसूस हो रहा है?",
-      "en": "Are you noticing any changes in the pain associated with your cramps?",
-      "category": "pain_changes",
+      "category": "instance: cramps",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1795,38 +1753,8 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको त्वचा पर खुजली या जलन महसूस हो रही है?",
       "en": "Are you experiencing itching or burning sensations on your skin?",
-      "category": "skin_itching_burning",
+      "category": "itching",
       "symptom": "itching",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको आंखों, नाक या गले में जलन हो रही है?",
-      "en": "Are you feeling irritation in your eyes, nose, or throat?",
-      "category": "localized_irritation",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके शरीर के किसी विशेष हिस्से में जलन महसूस हो रही है?",
-      "en": "Are you feeling burning sensations in any specific part of your body?",
-      "category": "specific_irritation",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या जलन के साथ सूजन भी है?",
-      "en": "Is there any swelling along with the irritation?",
-      "category": "swelling_with_irritation",
-      "symptom": "swelling",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको किसी विशेष पदार्थ से जलन हो रही है?",
-      "en": "Are you experiencing irritation due to any specific substance?",
-      "category": "triggered_irritation",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या जलन के कारण आपकी त्वचा लाल हो गई है?",
-      "en": "Has the irritation caused any redness on your skin?",
-      "category": "redness_with_irritation",
-      "symptom": "redness",
       "risk_factor": False,    },
   ],
 
@@ -1834,25 +1762,25 @@ symptom_followup_questions = {
     {
       "hi": "क्या सूजन के साथ दर्द भी है?",
       "en": "Is there any pain along with the inflammation?",
-      "category": "pain_with_inflammation",
+      "category": "pain",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या सूजन लगातार है या आता-जाता है?",
       "en": "Is the inflammation constant or does it come and go?",
-      "category": "intermittent_inflammation",
+      "category": "type: inflammation",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या सूजन किसी विशेष समय पर अधिक होती है?",
       "en": "Does the inflammation occur more frequently at any specific time?",
-      "category": "time_related_inflammation",
+      "category": "instance: inflammation",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या सूजन के कारण आपको चलने-फिरने में कठिनाई हो रही है?",
       "en": "Are you having difficulty moving due to the inflammation?",
-      "category": "movement_difficulty_with_inflammation",
+      "category": "activity impact: inflammation",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1861,65 +1789,53 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको वजन तेजी से बढ़ रहा है?",
       "en": "Are you gaining weight rapidly?",
-      "category": "rapid_weight_gain",
+      "category": "frequency",
       "symptom": "weight gain",
       "risk_factor": False,    },
     {
       "hi": "क्या वजन बढ़ने के कारण आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued due to weight gain?",
-      "category": "fatigue_with_weight_gain",
-      "symptom": "fatigue",
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या वजन बढ़ने के साथ आपकी त्वचा पर कोई परिवर्तन आ रहा है?",
       "en": "Are there any changes in your skin due to weight gain?",
-      "category": "skin_changes_with_weight_gain",
+      "category": "skin changes",
       "symptom": "skin changes",
       "risk_factor": False,    },
     {
       "hi": "क्या वजन बढ़ने के साथ आपको किसी विशेष हिस्से में दर्द हो रहा है?",
       "en": "Are you experiencing pain in any specific area due to weight gain?",
-      "category": "localized_pain_with_weight_gain",
+      "category": "location: weight gain",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या वजन बढ़ने के साथ आपका मूड भी प्रभावित हो रहा है?",
       "en": "Is your mood being affected along with weight gain?",
-      "category": "mood_changes_with_weight_gain",
-      "symptom": "depression",
+      "category": "mental health change: weight gain",
+      "symptom": "mental health change",
       "risk_factor": False,    },
   ],
 
    "weight issue": [
-{
-   "hi": "क्या आपको वजन तेजी से बढ़ रहा है?",
-      "en": "Are you gaining weight rapidly?",
-      "category": "rapid_weight_gain",
-      "symptom": "weight gain",
-      "risk_factor": False,    },
     {
       "hi": "क्या आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued due to weight fluctuation?",
-      "category": "fatigue_with_weight_gain",
-      "symptom": "fatigue",
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या आपकी त्वचा पर कोई परिवर्तन आ रहा है?",
       "en": "Are there any changes in your skin due to weight fluctuation?",
-      "category": "skin_changes_with_weight_gain",
+      "category": "skin changes",
       "symptom": "skin changes",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको किसी विशेष हिस्से में दर्द हो रहा है?",
-      "en": "Are you experiencing pain in any specific area due to weight fluctuation?",
-      "category": "localized_pain_with_weight_gain",
-      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपका मूड भी प्रभावित हो रहा है?",
       "en": "Is your mood being affected along with weight fluctuation?",
-      "category": "mood_changes_with_weight_gain",
-      "symptom": "depression",
+      "category": "mental health change",
+      "symptom": "mental health change",
       "risk_factor": False,    },
 ],
 
@@ -1927,44 +1843,33 @@ symptom_followup_questions = {
     {
       "hi": "क्या बालों का झड़ना किसी विशेष हिस्से में ज्यादा हो रहा है?",
       "en": "Is hair loss more prominent in any specific area?",
-      "category": "localized_hair_loss",
+      "category": "location: hair loss",
       "symptom": None,
       "risk_factor": False,    },
-   {
-      "hi": "क्या बालों का झड़ना के साथ स्कैल्प में खुजली या जलन है?",
-      "en": "Is there itching or burning in the scalp along with hair loss?",
-      "category": "scalp_itching_burning",
-      "symptom": "scalp_itching_burning",
-      "risk_factor": False,    },     
-   {
+
+         {
   "hi": "क्या आपके परिवार में बाल झड़ने या गंजेपन का इतिहास है?",
   "en": "Do you have a family history of hair loss or baldness?",
-  "category": "family_history_hair_loss",
+  "category": "family history: hair loss",
   "symptom": "family_history_hair_loss",
   "risk_factor": True,
 },
- {
-      "hi": "क्या आपके बालों की ग्रोथ धीमी हो गई है?",
-      "en": "Has your hair growth slowed down?",
-      "category": "slowed_hair_growth",
-      "symptom": None,
-      "risk_factor": False,    },
+   {
+      "hi": "क्या बालों का झड़ना के साथ स्कैल्प में खुजली या जलन है?",
+      "en": "Is there itching or burning in the scalp along with hair loss?",
+      "category": "itching",
+      "symptom": "scalp itching",
+      "risk_factor": False,    },     
     {
       "hi": "क्या आपके बालों का रंग बदल रहा है?",
       "en": "Are you noticing any changes in your hair color?",
-      "category": "hair_color_changes",
+      "category": "hair color change",
       "symptom": "hair color changes",
-      "risk_factor": False,    },
-	 {
-      "hi": "क्या आपको बालों का झड़ना तेजी से हो रहा है?",
-      "en": "Are you experiencing rapid hair loss?",
-      "category": "rapid_hair_loss",
-      "symptom": "hair loss",
       "risk_factor": False,    },
      {
       "hi": "क्या बालों का झड़ना किसी विशेष समय पर अधिक होता है?",
       "en": "Does hair loss occur more frequently at any specific time?",
-      "category": "time_related_hair_loss",
+      "category": "instance: hair loss",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -1973,25 +1878,25 @@ symptom_followup_questions = {
     {
       "hi": "क्या सुन्नता लगातार है या आती-जाती है?",
       "en": "Is the numbness constant or does it come and go?",
-      "category": "intermittent_numbness",
+      "category": "type: numbness",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या सुन्नता किसी विशेष गतिविधि के दौरान बढ़ती है?",
       "en": "Does your numbness increase during any specific activity?",
-      "category": "activity_related_numbness",
+      "category": "activity impact: numbness",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या सुन्नता किसी विशेष समय पर अधिक होती है?",
       "en": "Does the numbness occur more frequently at any specific time?",
-      "category": "time_related_numbness",
+      "category": "frequency: numbness",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सुन्नता के साथ कमजोरी भी महसूस हो रही है?",
       "en": "Are you feeling any weakness along with numbness?",
-      "category": "weakness_with_numbness",
+      "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
   ],
@@ -2002,27 +1907,27 @@ symptom_followup_questions = {
     {
       "hi": "क्या पेट फूलने के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with bloating?",
-      "category": "abdominal_pain_with_bloating",
+      "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको पेट फूलने के साथ उल्टी हो रही है?",
       "en": "Are you experiencing vomiting along with bloating?",
-      "category": "nausea_vomiting_with_bloating",
-      "symptom": "nausea",
+      "category": "vomiting",
+      "symptom": "vomiting",
       "risk_factor": False,    },
     {
       "hi": "क्या पेट फूलने के कारण आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Is bloating causing difficulty in breathing?",
-      "category": "breathing_difficulty_with_bloating",
+      "category": "shortness of breath",
       "symptom": "shortness of breath",
       "risk_factor": False,    },
     
     {
       "hi": "क्या पेट फूलने के कारण आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued due to bloating?",
-      "category": "fatigue_with_bloating",
-      "symptom": "fatigue",
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
   ],
 
@@ -2030,21 +1935,21 @@ symptom_followup_questions = {
     {
       "hi": "क्या गैस के साथ पेट में दर्द भी हो रहा है?",
       "en": "Are you experiencing abdominal pain along with gas?",
-      "category": "abdominal_pain_with_gas",
+      "category": "stomach pain",
       "symptom": "stomach pain",
       "risk_factor": False,    },
      
     {
       "hi": "क्या गैस के कारण आपको पेट फूलने का अनुभव हो रहा है?",
       "en": "Are you experiencing bloating due to gas?",
-      "category": "bloating_with_gas",
+      "category": "bloating",
       "symptom": "bloating",
       "risk_factor": False,    },
     
     {
       "hi": "क्या गैस के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is gas affecting your sleep?",
-      "category": "sleep_disturbance_with_gas",
+      "category": "sleep issue",
       "symptom": "insomnia",
       "risk_factor": False,    },
   ],
@@ -2053,19 +1958,19 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको गैस या पेट फूलने का महसूस हो रही है?",
       "en": "Are you feeling gas or bloating?",
-      "category": "gas_bloating_with_indigestion",
+      "category": "gas",
       "symptom": "gas",
       "risk_factor": False,    },
     {
       "hi": "क्या अपच के साथ आपको उल्टी या दस्त भी हो रहे हैं?",
       "en": "Are you also experiencing vomiting or diarrhea along with indigestion?",
-      "category": "vomiting_diarrhea_with_indigestion",
+      "category": "vomiting or diarrhea",
       "symptom": "vomiting",
       "risk_factor": False,    },
     {
       "hi": "क्या अपच के कारण आपको भोजन निगलने में कठिनाई हो रही है?",
       "en": "Is indigestion causing difficulty in swallowing your food?",
-      "category": "swallowing_difficulty_with_indigestion",
+      "category": "difficulty swallowing",
       "symptom": "difficulty swallowing",
       "risk_factor": False,    },
     {
@@ -2077,7 +1982,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या अपच के कारण आपकी नींद प्रभावित हो रही है?",
       "en": "Is indigestion affecting your sleep?",
-      "category": "sleep_disturbance_with_indigestion",
+      "category": "sleep issue",
       "symptom": "insomnia",
       "risk_factor": False,    },
   ],
@@ -2085,27 +1990,21 @@ symptom_followup_questions = {
 
   "mouth sore": [
     {
-      "hi": "क्या आपके मुंह में घाव तेजी से बढ़ रहे हैं?",
-      "en": "Are your mouth sores spreading rapidly?",
-      "category": "rapid_spread_mouth_sores",
-      "symptom": "mouth sores",
-      "risk_factor": False,    },
-    {
       "hi": "क्या मुंह के घावों के साथ सूजन भी है?",
       "en": "Is there any swelling along with your mouth sores?",
-      "category": "swelling_with_mouth_sores",
+      "category": "swelling",
       "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या मुंह के घाव खाने या पीने में दर्द पैदा करते हैं?",
       "en": "Do your mouth sores cause pain while eating or drinking?",
-      "category": "pain_with_mouth_sores",
+      "category": "pain: mouth sore",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको मुंह के घावों से रक्तस्राव हो रहा है?",
       "en": "Are your mouth sores bleeding?",
-      "category": "bleeding_mouth_sores",
+      "category": "bleeding: mouth_sores",
       "symptom": "bleeding",
       "risk_factor": False,    },
     {
@@ -2126,37 +2025,31 @@ symptom_followup_questions = {
     {
       "hi": "क्या नाक से खून बहना बार-बार हो रहा है?",
       "en": "Are you experiencing frequent nosebleeds?",
-      "category": "frequent_nosebleeds",
-      "symptom": "nosebleeds",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या नाक से खून बहने के साथ दर्द भी हो रहा है?",
-      "en": "Are you experiencing pain along with nosebleeds?",
-      "category": "pain_with_nosebleeds",
-      "symptom": None,
+      "category": "frequency: nosebleed",
+      "symptom": "nosebleed",
       "risk_factor": False,    },
     {
       "hi": "क्या नाक से खून बहने का कोई विशेष कारण है?",
       "en": "Is there any specific cause for your nosebleeds?",
-      "category": "specific_cause_nosebleeds",
+      "category": "cause: nosebleed",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या नाक से खून बहने के साथ आपको सूजन भी हो रही है?",
       "en": "Is there any swelling along with your nosebleeds?",
-      "category": "swelling_with_nosebleeds",
+      "category": "swelling: nosebleed",
       "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको नाक से खून बहने के बाद कमजोरी महसूस हो रही है?",
       "en": "Are you feeling weak after nosebleeds?",
-      "category": "weakness_with_nosebleeds",
+      "category": "weakness: nosebleed",
       "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या नाक से खून बहने के साथ आपको सिरदर्द भी हो रहा है?",
       "en": "Are you experiencing headaches along with nosebleeds?",
-      "category": "headache_with_nosebleeds",
+      "category": "headache",
       "symptom": "headache",
       "risk_factor": False,    },
   ],
@@ -2165,37 +2058,37 @@ symptom_followup_questions = {
     {
       "hi": "क्या खून की मात्रा बढ़ रही है?",
       "en": "Is the amount of blood in your urine increasing?",
-      "category": "increasing_blood_in_urine",
+      "category": "frequency: blood in urine",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या खून आने के साथ आपको पेशाब में दर्द हो रहा है?",
       "en": "Are you experiencing pain while urinating along with blood in urine?",
-      "category": "pain_with_blood_in_urine",
+      "category": "pain: blood_in_urine",
       "symptom": "urinary pain",
       "risk_factor": False,    },
     {
       "hi": "क्या खून आने के साथ आपको कमजोरी भी महसूस हो रही है?",
       "en": "Are you feeling weak along with blood in your urine?",
-      "category": "weakness_with_blood_in_urine",
+      "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या खून आने के कारण आपकी त्वचा में कोई परिवर्तन आ रहा है?",
       "en": "Is there any change in your skin due to blood in urine?",
-      "category": "skin_changes_with_blood_in_urine",
-      "symptom": "skin discoloration",
+      "category": "skin changes",
+      "symptom": "skin changes",
       "risk_factor": False,    },
     {
       "hi": "क्या खून आने के साथ आपको बुखार भी है?",
       "en": "Do you have a fever along with blood in urine?",
-      "category": "fever_with_blood_in_urine",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,    },
     {
       "hi": "क्या खून आने के साथ आपको पसीना भी आ रहा है?",
       "en": "Are you sweating along with blood in urine?",
-      "category": "sweating_with_blood_in_urine",
+      "category": "sweating",
       "symptom": "sweating",
       "risk_factor": False,    },
   ],
@@ -2205,7 +2098,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या खून आने के कारण आपको कमजोरी महसूस हो रही है?",
       "en": "Are you feeling weak due to blood in your stool?",
-      "category": "weakness_with_blood_in_stool",
+      "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
     {
@@ -2217,13 +2110,13 @@ symptom_followup_questions = {
     {
       "hi": "क्या खून आने के साथ आपको बुखार भी है?",
       "en": "Do you have a fever along with blood in stool?",
-      "category": "fever_with_blood_in_stool",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,    },
     {
       "hi": "क्या खून आने के कारण आपकी त्वचा में कोई परिवर्तन आ रहा है?",
       "en": "Is there any change in your skin due to blood in stool?",
-      "category": "skin_changes_with_blood_in_stool",
+      "category": "skin change",
       "symptom": "skin discoloration",
       "risk_factor": False,    },
   ],
@@ -2233,19 +2126,19 @@ symptom_followup_questions = {
     {
       "hi": "क्या अत्यधिक प्यास के साथ आपको बार-बार पेशाब आ रहा है?",
       "en": "Are you urinating frequently along with excessive thirst?",
-      "category": "frequent_urination_with_thirst",
+      "category": "frequent urination",
       "symptom": "frequent urination",
       "risk_factor": False,    },
     {
       "hi": "क्या अत्यधिक प्यास के कारण आप पर्याप्त पानी पी रहे हैं?",
       "en": "Are you drinking enough water due to excessive thirst?",
-      "category": "hydration_with_thirst",
+      "category": "hydration",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या अत्यधिक प्यास के साथ आपको कमजोरी भी महसूस हो रही है?",
       "en": "Are you feeling weak along with excessive thirst?",
-      "category": "weakness_with_thirst",
+      "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,    },
     {
@@ -2257,13 +2150,13 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपकी डाइट में कोई विशेष बदलाव हुआ है जिससे आपको अत्यधिक प्यास लग रही है?",
       "en": "Has there been any specific change in your diet causing excessive thirst?",
-      "category": "diet_changes_with_thirst",
+      "category": "diet: thirst",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको अत्यधिक प्यास के साथ वजन कम हो रहा है?",
       "en": "Are you losing weight along with excessive thirst?",
-      "category": "weight_loss_with_thirst",
+      "category": "weight loss",
       "symptom": "weight loss",
       "risk_factor": False,    },
   ],
@@ -2272,20 +2165,20 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपका पेशाब कम आ रहा है और रंग गहरा हो गया है?",
       "en": "Is your urine output reduced and dark-colored?",
-      "category": "reduced_dark_urine",
+      "category": "dark urine",
       "symptom": "dark urine",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सिरदर्द या चक्कर आ रहे हैं?",
       "en": "Are you experiencing headaches or dizziness?",
-      "category": "headache_dizziness_with_dehydration",
+      "category": "headache or dizziness",
       "symptom": "headache",
       "risk_factor": False,    },
     {
       "hi": "क्या आपको थकान महसूस हो रही है?",
       "en": "Are you feeling fatigued?",
-      "category": "fatigue_with_dehydration",
-      "symptom": "fatigue",
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,    },
   ],
 
@@ -2294,13 +2187,13 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको पसीना आना सामान्य से अधिक हो रहा है?",
       "en": "Are you sweating more than usual?",
-      "category": "excessive_sweating",
+      "category": "excessive sweating",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या पसीना आना किसी विशेष समय पर अधिक होता है?",
       "en": "Does sweating occur more frequently at any specific time?",
-      "category": "time_related_sweating",
+      "category": "instance: more",
       "symptom": None,
       "risk_factor": False,    },
     {
@@ -2318,35 +2211,18 @@ symptom_followup_questions = {
   ],
 
   "cold": [
-    {
-      "hi": "क्या आपको ठंड लगना सामान्य से अधिक हो रहा है?",
-      "en": "Are you feeling cold more than usual?",
-      "category": "excessive_cold",
-      "symptom": "cold",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या ठंड महसूस होने के साथ आपको दर्द भी हो रहा है?",
-      "en": "Are you experiencing pain along with feeling cold?",
-      "category": "pain_with_feeling_cold",
-      "symptom": "other",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या ठंड महसूस होने के कारण आपके शरीर में कोई कमजोरी आ रही है?",
-      "en": "Is feeling cold causing any weakness in your body?",
-      "category": "weakness_with_feeling_cold",
-      "symptom": "weakness",
-      "risk_factor": False,    },
+
     {
       "hi": "क्या आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Are you having difficulty breathing?",
-      "category": "breathing_difficulty_with_cold",
-      "symptom": "breathing difficulty",
+      "category": "shortness of breath",
+      "symptom":  "shortness of breath",
       "risk_factor": True
     },
     {
       "hi": "क्या आपको अचानक से ठंड लगना शुरू हुआ?",
       "en": "Did the feeling of cold start suddenly?",
-      "category": "sudden_onset_cold",
+      "category": "type: cold",
       "symptom": None,
       "risk_factor": False
     },
@@ -2357,19 +2233,19 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपकी आँखें लाल हो रही हैं लगातार या कभी-कभी?",
       "en": "Are your eyes becoming red continuously or intermittently?",
-      "category": "intermittent_eye_redness",
+      "category": "type: red eyes",
       "symptom": "eye redness",
       "risk_factor": False,    },
     {
       "hi": "क्या आँखों में लालिमा के साथ सूजन भी हो रही है?",
       "en": "Is there any swelling along with redness in your eyes?",
-      "category": "swelling_with_eye_redness",
+      "category": "swelling: red eye",
       "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या आँखों में लालिमा के साथ दर्द भी हो रहा है?",
       "en": "Are you experiencing pain along with redness in your eyes?",
-      "category": "pain_with_eye_redness",
+      "category": "pain: eye",
       "symptom": "eye pain",
       "risk_factor": False,    },
     {
@@ -2394,21 +2270,15 @@ symptom_followup_questions = {
 
   "hearing loss": [
     {
-      "hi": "क्या आपको सुनने में कठिनाई हो रही है लगातार या कभी-कभी?",
-      "en": "Are you experiencing difficulty hearing continuously or intermittently?",
-      "category": "intermittent_hearing_loss",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
       "hi": "क्या सुनने में कमी किसी विशेष समय या स्थिति में होती है?",
       "en": "Does the hearing loss occur more during any specific time or situation?",
-      "category": "time_situation_related_hearing_loss",
+      "category": "instance: hearing",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या सुनने में कमी के साथ आपको कान में दर्द भी हो रहा है?",
       "en": "Are you experiencing ear pain along with hearing loss?",
-      "category": "ear_pain_with_hearing_loss",
+      "category": "pain: hearing loss",
       "symptom": "ear pain",
       "risk_factor": False,    },
     {
@@ -2442,26 +2312,20 @@ symptom_followup_questions = {
     {
       "hi": "क्या संतुलन बिगड़ने की समस्या किसी विशेष समय या स्थिति में होती है?",
       "en": "Do balance problems occur more during any specific time or situation?",
-      "category": "time_situation_related_balance_problems",
+      "category": "instance: balance problem",
       "symptom": None,
       "risk_factor": False,    },
   
-    {
-      "hi": "क्या संतुलन बिगड़ने के कारण आपकी दैनिक गतिविधियाँ प्रभावित हो रही हैं?",
-      "en": "Are your daily activities being affected due to balance problems?",
-      "category": "daily_activity_impact_with_balance_problems",
-      "symptom": None,
-      "risk_factor": False,    },
 	  {
       "hi": "क्या संतुलन बिगड़ने के साथ चक्कर आना भी हो रहा है?",
       "en": "Are you experiencing dizziness along with balance problems?",
-      "category": "dizziness_with_balance_problems",
+      "category": "dizziness",
       "symptom": "dizziness",
       "risk_factor": False,    },
     {
       "hi": "क्या संतुलन बिगड़ने के कारण आपको चलने-फिरने में कठिनाई हो रही है?",
       "en": "Are you having difficulty walking due to balance problems?",
-      "category": "walking_difficulty_with_balance_problems",
+      "category": "activity impact: balance problem",
       "symptom": None,
       "risk_factor": False,    },
       
@@ -2471,31 +2335,31 @@ symptom_followup_questions = {
     {
       "hi": "क्या तेजी से सांस लेने के कारण आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Are you having difficulty breathing due to rapid breathing?",
-      "category": "difficulty_breathing_with_rapid_breathing",
+      "category": "shortness of breath",
       "symptom": "shortness of breath",
       "risk_factor": False,    },
     {
       "hi": "क्या तेजी से सांस लेने के साथ आपका दिल भी तेज धड़क रहा है?",
       "en": "Is your heart beating faster along with rapid breathing?",
-      "category": "heart_rate_increase_with_rapid_breathing",
-      "symptom": "irregular heartbeat",
+      "category": "increased heart rate",
+      "symptom": "increased heartbeat",
       "risk_factor": False,    },
     {
       "hi": "क्या तेजी से सांस लेने के कारण आपको चक्कर आ रहे हैं?",
       "en": "Are you experiencing dizziness due to rapid breathing?",
-      "category": "dizziness_with_rapid_breathing",
+      "category": "dizziness",
       "symptom": "dizziness",
       "risk_factor": False,    },
     {
       "hi": "क्या तेजी से सांस लेने के साथ आपको पसीना आ रहा है?",
       "en": "Are you sweating along with rapid breathing?",
-      "category": "sweating_with_rapid_breathing",
+      "category": "sweating",
       "symptom": "sweating",
       "risk_factor": False,    },
     {
       "hi": "क्या तेजी से सांस लेने का कारण कोई विशेष गतिविधि है?",
       "en": "Is there any specific activity causing your rapid breathing?",
-      "category": "activity_related_rapid_breathing",
+      "category": "activity impact: rapid breathing",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -2504,37 +2368,31 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपके दिल की धड़कन अनियमित हो गई है?",
       "en": "Has your heartbeat become irregular?",
-      "category": "irregular_heartbeat",
+      "category": "irregular heartbeat",
       "symptom": "irregular heartbeat",
       "risk_factor": False,    },
      {
       "hi": "क्या अनियमित धड़कन के कारण आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Are you having difficulty breathing due to an irregular heartbeat?",
-      "category": "breathing_difficulty_with_irregular_heartbeat",
+      "category": "shortness of breath",
       "symptom": "shortness of breath",
       "risk_factor": False,    },
     {
       "hi": "क्या अनियमित धड़कन के साथ आपको चक्कर आ रहे हैं?",
       "en": "Are you experiencing dizziness along with an irregular heartbeat?",
-      "category": "dizziness_with_irregular_heartbeat",
+      "category": "dizziness",
       "symptom": "dizziness",
       "risk_factor": False,    },
     {
       "hi": "क्या अनियमित धड़कन के साथ आपको थकान भी हो रही है?",
       "en": "Are you feeling fatigued along with an irregular heartbeat?",
-      "category": "fatigue_with_irregular_heartbeat",
-      "symptom": "fatigue",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपके दिल की धड़कन तेज हो गई है?",
-      "en": "Has your heartbeat become faster?",
-      "category": "fast_heartbeat_with_irregular_heartbeat",
-      "symptom": "heart palpitations",
+      "category": "fatigue",
+      "symptom": "weakness",
       "risk_factor": False,    },
     {
       "hi": "क्या अनियमित धड़कन अचानक शुरू हुई है या धीरे-धीरे?",
       "en": "Did your irregular heartbeat start suddenly or gradually?",
-      "category": "sudden_graduate_irregular_heartbeat",
+      "category": "type: irregular heartbeat",
       "symptom": None,
       "risk_factor": False,    },
   ],
@@ -2544,25 +2402,25 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपके शरीर पर कोई दाने या चकत्ते हैं?",
       "en": "Do you have any bumps or spots on your skin?",
-      "category": "bumps_spots_with_skin_rash",
+      "category": "rash",
       "symptom": "skin rash",
       "risk_factor": False,    },
     {
       "hi": "क्या त्वचा पर लालिमा या सूजन भी है?",
       "en": "Is there any redness or swelling on your skin along with the rash?",
-      "category": "redness_swelling_with_skin_rash",
-      "symptom": "redness",
+      "category": "swelling",
+      "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या रैश किसी विशेष स्थान पर ज्यादा हैं?",
       "en": "Are the rashes more concentrated in any specific area?",
-      "category": "localized_skin_rash",
+      "category": "location skin_rash",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या रैश के साथ खुजली या जलन भी हो रही है?",
       "en": "Are you experiencing itching or burning sensations along with the rash?",
-      "category": "itching_burning_with_skin_rash",
+      "category": "itching",
       "symptom": "itching",
       "risk_factor": False,    },
     {
@@ -2589,66 +2447,54 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपकी खुजली लगातार है या कभी-कभी आती है?",
       "en": "Is the itching continuous or intermittent?",
-      "category": "intermittent_skin_itching",
+      "category": "type: itching",
       "symptom": "skin itching",
       "risk_factor": False,    },
     {
       "hi": "क्या खुजली के कारण सूजन हो रही है?",
       "en": "Is itching causing any swelling?",
-      "category": "swelling_with_skin_itching",
+      "category": "swelling",
       "symptom": "swelling",
       "risk_factor": False,    },
     {
       "hi": "क्या खुजली आपको सोने में परेशान कर रही है?",
       "en": "Is itching disturbing your sleep?",
-      "category": "sleep_disturbance_with_skin_itching",
+      "category": "sleep issue",
       "symptom": "insomnia",
       "risk_factor": False,    },
     {
       "hi": "क्या खुजली के साथ त्वचा में कोई दरार या फफोले हो रहे हैं?",
       "en": "Are there any cracks or blisters along with itching?",
-      "category": "cracks_blisters_with_skin_itching",
+      "category": "blister",
       "symptom": "skin lesions",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या खुजली के कारण कोई अन्य परिवर्तन हो रहा है?",
-      "en": "Are there any other changes due to itching?",
-      "category": "skin_changes_with_skin_itching",
-      "symptom": "skin discoloration",
       "risk_factor": False,    },
     {
       "hi": "क्या खुजली किसी विशेष समय या वातावरण में बढ़ती है?",
       "en": "Does itching increase during any specific time or environment?",
-      "category": "environment_related_skin_itching",
+      "category": "instance: itching",
       "symptom": None,
       "risk_factor": False,    },
   ],
 
   "acne": [
 	  {
-      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार किया है?",
-      "en": "Have you tried any treatments for your acne?",
-      "category": "acne treatments",
-      "symptom": "acne treatment",
+      "hi": "क्या आपने अपने एक्ने के लिए कोई उपचार या स्किनकेयर उपयोग कर रहे हैं?",
+      "en": "Have you tried any treatments or skincare for your acne?",
+      "category": "medication",
+      "symptom": None,
       "risk_factor": False,    },
     
     {
-      "hi": "क्या आप वर्तमान में कोई स्किनकेयर या मेकअप उत्पाद उपयोग कर रहे हैं?",
-      "en": "Are you currently using any skincare or makeup products?",
-      "category": "skincare",
-      "symptom": "skincare use",
-      "risk_factor": False,    },
-    {
       "hi": "क्या आपके परिवार में किसी को एक्ने है?",
       "en": "Do you have a family history of acne?",
-      "category": "family history",
-      "symptom": "family history",
+      "category": "family history: acne",
+      "symptom": None,
       "risk_factor": True,    },
     {
       "hi": "क्या आपने अपने एक्ने के लिए किसी विशेष कारण का अनुभव किया है?",
       "en": "Have you noticed any specific triggers for your acne?",
-      "category": "acne triggers",
-      "symptom": "acne triggers",
+      "category": "cause: acne",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -2656,50 +2502,50 @@ symptom_followup_questions = {
     {
       "hi": "आप आमतौर पर किस समय सोने जाते हैं और किस समय उठते हैं?",
       "en": "What time do you usually go to bed and wake up?",
-      "category": "insomnia",
-      "symptom": "sleep schedule",
+      "category": "sleep schedule",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "आपको सोने में सामान्यतः कितना समय लगता है?",
       "en": "How long does it typically take you to fall asleep?",
-      "category": "insomnia",
-      "symptom": "time to fall asleep",
+      "category": "time to fall asleep",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप रात में उठते हैं? अगर हां, तो कितनी बार?",
       "en": "Do you wake up during the night? If so, how often?",
-      "category": "insomnia",
-      "symptom": "night waking",
+      "category": "frequency: insomnia",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप जब उठते हैं तो आराम महसूस करते हैं?",
       "en": "Do you feel rested when you wake up?",
-      "category": "insomnia",
-      "symptom": "restfulness",
+      "category": "rest",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपने हाल ही में अपनी जीवनशैली में कोई बदलाव अनुभव किया है (जैसे तनाव, आहार, यात्रा)?",
       "en": "Have you experienced any changes in your lifestyle recently (e.g., stress, diet, travel)?",
-      "category": "lifestyle",
+      "category": "lifestyle changes",
       "symptom": "lifestyle changes",
       "risk_factor": False,    },
     {
-      "hi": "क्या आप कैफीन, निकोटीन, या शराब का सेवन करते हैं, और अगर हां, तो कब?",
-      "en": "Do you consume caffeine, nicotine, or alcohol, and if so, when?",
-      "category": "substance use",
-      "symptom": "substance use",
+      "hi": "क्या आप कैफीन या शराब का सेवन करते हैं, और अगर हां, तो कब?",
+      "en": "Do you consume caffeine or alcohol, and if so, when?",
+      "category": "alcohol",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं (जैसे दर्द, सांस लेने में समस्या, मानसिक स्वास्थ्य समस्याएँ)?",
       "en": "Do you have any other medical conditions (e.g., pain, breathing problems, mental health conditions)?",
-      "category": "medical conditions",
-      "symptom": "medical conditions",
+      "category": "history",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप सोने से पहले कोई गतिविधियाँ या दिनचर्या करते हैं (जैसे स्क्रीन टाइम, व्यायाम, विश्राम)?",
       "en": "Do you engage in any activities or routines before bed (e.g., screen time, exercise, relaxation)?",
-      "category": "bedtime routines",
-      "symptom": "bedtime routine",
+      "category": "exercise",
+      "symptom": None,
       "risk_factor": False,    },
   ],
 
@@ -2707,59 +2553,35 @@ symptom_followup_questions = {
   {
   "hi": "क्या आप हाल की घटनाओं को भूल जाते हैं?",
   "en": "Do you forget recent events?",
-  "category": "short_term_memory_loss",
-  "symptom": "short-term memory loss",
+  "category": "memory loss",
+  "symptom": "memory loss",
   "risk_factor": False,
 },
-{
-  "hi": "क्या आपकी याददाश्त में कमी समय के साथ और अधिक बढ़ गई है?",
-  "en": "Has your memory loss got worsened over time?",
-  "category": "progressive_memory_loss",
-  "symptom": "worsening memory loss",
-  "risk_factor": False,
-},  
- {
-      "hi": "क्या याददाश्त की कमी समय के साथ बढ़ रही है?",
-      "en": "Is the memory loss getting worse over time?",
-      "category": "memory loss",
-      "symptom": "memory loss progression",
-      "risk_factor": False,    },
-   {
-  "hi": "क्या आपको हाल ही में सिर में चोट, कोई आघात या स्ट्रोक हुआ है?",
-  "en": "Have you had any recent head injuries or trauma or stroke?",
-  "category": "head_injury_or_stroke",
-  "symptom": None,
-  "risk_factor": True,
-  },
+
+
   {
       "hi": "क्या आपको कोई अन्य चिकित्सा समस्याएँ हैं, जैसे उच्च रक्तचाप, मधुमेह, या थायरॉयड की समस्याएँ?",
       "en": "Do you have any other medical conditions, such as high blood pressure, diabetes, or thyroid problems?",
-      "category": "medical conditions",
-      "symptom": "medical conditions",
+      "category": "high blood pressure or diabetes",
+      "symptom": "high blood pressure",
       "risk_factor": True,    },
     {
       "hi": "क्या आप किसी अन्य संज्ञानात्मक समस्या का अनुभव कर रहे हैं, जैसे भ्रम या ध्यान केंद्रित करने में कठिनाई?",
       "en": "Are you experiencing any other cognitive problems, such as confusion or difficulty concentrating?",
-      "category": "cognitive problems",
+      "category": "cognitive problem",
       "symptom": "cognitive problems",
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में किसी को याददाश्त की समस्याएँ या तंत्रिका तंत्र की बीमारियाँ हैं (जैसे अल्जाइमर, डिमेंशिया)?",
       "en": "Do you have any family history of memory problems or neurological conditions (e.g., Alzheimer’s, dementia)?",
-      "category": "family history",
+      "category": "family history: memory",
       "symptom": "family history",
       "risk_factor": True,    },
     {
       "hi": "क्या आपको हाल ही में किसी मूड परिवर्तन का अनुभव हो रहा है, जैसे अवसाद या चिंता?",
       "en": "Have you been experiencing any mood changes, such as depression or anxiety?",
-      "category": "mood changes",
+      "category": "mood change",
       "symptom": "mood changes",
-      "risk_factor": False,    },
-     {
-      "hi": "आप किस प्रकार की याददाश्त की समस्याओं का सामना कर रहे हैं?",
-      "en": "What type of memory problems are you experiencing?",
-      "category": "memory loss",
-      "symptom": "memory problem type",
       "risk_factor": False,    },
   ],
 
@@ -2768,95 +2590,54 @@ symptom_followup_questions = {
     {
       "hi": "क्या कंपन हमेशा होते हैं या यह आते-जाते हैं?",
       "en": "Are the tremors present all the time or do they come and go?",
-      "category": "tremors",
+      "category": "tremor",
       "symptom": "tremor",
       "risk_factor": False,    },
     {
       "hi": "क्या कंपन आपके शरीर के किसी विशेष हिस्से में होते हैं (जैसे, हाथ, सिर, आवाज)?",
       "en": "Do the tremors occur in specific parts of your body (e.g., hands, head, voice)?",
-      "category": "tremors",
+      "category": "location: tremor",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या कंपन किसी विशेष गतिविधि के साथ और अधिक बढ़ जाते हैं, जैसे कुछ पकड़ने या हिलाने के दौरान?",
       "en": "Do the tremors get worse with certain activities, like holding something or moving?",
-      "category": "tremors",
+      "category": "activity impact: tremor",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में कंपन या न्यूरोलॉजिकल स्थितियों का इतिहास है (जैसे, पार्किंसंस रोग)?",
       "en": "Do you have a family history of tremors or neurological conditions (e.g., Parkinson’s disease)?",
-      "category": "tremors",
+      "category": "family history: tremor",
       "symptom": "family history of neurological conditions",
       "risk_factor": True,    },
-    {
-      "hi": "क्या आपने हाल ही में कोई तनाव, चिंता, या मानसिक परिवर्तन अनुभव किए हैं?",
-      "en": "Have you recently experienced any stress, anxiety, or emotional changes?",
-      "category": "tremors",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें पर्ची वाली, ओवर-द-काउंटर दवाइयाँ, या सप्लीमेंट्स शामिल हैं?",
-      "en": "Are you taking any medications, including prescription, over-the-counter, or supplements?",
-      "category": "tremors",
-      "symptom": "medication use",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको हाल ही में कोई चोट, संक्रमण, या बीमारी हुई है जो आपके तंत्रिका तंत्र को प्रभावित कर सकती है?",
-      "en": "Have you had any recent injuries, infections, or illnesses that might affect your nervous system?",
-      "category": "tremors",
-      "symptom": "nervous system impact",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप शराब पीते हैं या कैफीन का सेवन करते हैं, और यदि हां, तो कितनी मात्रा में और कितनी बार?",
-      "en": "Do you drink alcohol or consume caffeine, and if so, how much and how often?",
-      "category": "tremors",
-      "symptom": "alcohol or caffeine consumption",
-      "risk_factor": False,    },
   ],
 
   "panic attack": [
     {
       "hi": "आपको कितनी बार आतंकी हमल होते हैं?",
       "en": "How often do you have panic attacks?",
-      "category": "panic_attack",
+      "category": "frequency: panic attack",
       "symptom": "panic attack",
       "risk_factor": False,    },
     {
       "hi": "क्या आतंकी हमल अचानक होते हैं, या आपको कुछ विशेष उत्तेजक (जैसे, तनावपूर्ण स्थिति, भीड़) का पता चलता है?",
       "en": "Do the panic attacks occur unexpectedly, or do you notice specific triggers (e.g., stressful situations, crowds)?",
-      "category": "panic_attack",
+      "category": "cause: panic attack",
       "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको आतंकी हमल के अलावा भी चिंता या घबराहट महसूस होती है?",
-      "en": "Do you feel anxious or nervous even when you're not having a panic attack?",
-      "category": "panic_attack",
-      "symptom": "anxiety",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपने हाल ही में कोई बड़ा जीवन परिवर्तन या आघातक घटना अनुभव की है?",
-      "en": "Have you experienced any major life stressors or traumatic events recently?",
-      "category": "panic_attack",
-      "symptom": "mental health changes",
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आप आतंकी हमल के डर से कुछ स्थानों या स्थितियों से बचते हैं?",
-      "en": "Do you avoid certain situations or places because of the fear of having a panic attack?",
-      "category": "panic_attack",
-      "symptom": "other",
-      "risk_factor": False,    },
+
     {
       "hi": "क्या आपको किसी अन्य मानसिक स्वास्थ्य समस्याओं का निदान हुआ है, जैसे चिंता, अवसाद, या PTSD?",
       "en": "Have you been diagnosed with any other mental health conditions, such as anxiety, depression, or PTSD?",
-      "category": "panic_attack",
-      "symptom": "mental health disorder",
+      "category": "history: mental health condition",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर या हर्बल सप्लीमेंट्स भी शामिल हैं?",
       "en": "Are you taking any medications, including over-the-counter or herbal supplements?",
-      "category": "panic_attack",
-      "symptom": "medication",
+      "category": "medication: panic",
+      "symptom": None,
       "risk_factor": False,    },
 
   ],
@@ -2866,20 +2647,20 @@ symptom_followup_questions = {
     {
       "hi": "आपके मूड स्विंग्स कितनी बार होते हैं?",
       "en": "How often do your mood swings occur?",
-      "category": "mood_swings",
-      "symptom": "frequency",
+      "category": "frequency: mood swing",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "आप किस प्रकार के मूड परिवर्तनों का अनुभव करते हैं (जैसे, बहुत खुश या बहुत उदास महसूस करना)?",
       "en": "What types of mood changes do you experience (e.g., feeling very happy or very sad)?",
-      "category": "mood_swings",
+      "category": "type: mood swing",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके मूड स्विंग्स कुछ विशेष घटनाओं या परिस्थितियों द्वारा प्रेरित होते हैं?",
       "en": "Do your mood swings seem to be triggered by specific events or situations?",
-      "category": None,
-      "symptom": "cause",
+      "category": "cause: mood swing",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप मूड स्विंग्स के बीच चिड़चिड़े, चिंतित, या अवसादित महसूस करते हैं?",
@@ -3078,33 +2859,33 @@ symptom_followup_questions = {
       "hi": "फ्रैक्चर कैसे हुआ (जैसे गिरना, दुर्घटना, खेलों की चोट)?",
       "en": "How did the fracture occur (e.g., fall, accident, sports injury)?",
       "category": "bone_fracture",
-      "symptom": "cause of fracture",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "कौन सा हड्डी फ्रैक्चर हुई है, और दर्द कहाँ है?",
       "en": "Which bone is fractured, and where is the pain located?",
-      "category": "bone_fracture",
-      "symptom": "location and type of fracture",
+      "category": "location: fracture",
+      "symptom": None,
       "risk_factor": False,    },
 
    {
   "hi": "क्या आपको फ्रैक्चर के बाद हड्डी में दर्द, सूजन या असामान्य रूप से गर्मी महसूस हो रही है?",
   "en": "After the fracture, are you experiencing pain, swelling, or unusual warmth in the bone?",
-  "category": "bone_fracture",
-  "symptom": "pain, swelling, or warmth",
+  "category": "pain: bone fracture",
+  "symptom": None,
   "risk_factor": False,
 },
     {
       "hi": "क्या आपके पास पहले कोई फ्रैक्चर या हड्डी की चोटें रही हैं?",
       "en": "Have you had any previous fractures or bone injuries?",
-      "category": "bone_fracture",
-      "symptom": "history of fractures or bone injuries",
+      "category": "history: fracture",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में हड्डी संबंधित समस्याएँ या हड्डी की मजबूती को प्रभावित करने वाली स्थितियाँ हैं?",
       "en": "Do you have a family history of bone problems or conditions that affect bone strength?",
-      "category": "bone_fracture",
-      "symptom": "family history of bone problems",
+      "category": "family history: fracture",
+      "symptom": None,
       "risk_factor": True,    },
   ],
 
@@ -3118,39 +2899,39 @@ symptom_followup_questions = {
     {
       "hi": "कौन सा जोड़ा या लिगामेंट घायल हुआ है?",
       "en": "Which joint or ligament is injured?",
-      "category": "sprain",
-      "symptom": "injury",
+      "category": "location",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या लिगामेंट में दर्द लगातार बना रहता है, या यह हिलने-डुलने या दबाव के साथ बदलता रहता है?",
       "en": "Is the ligament pain constant, or does it vary with movement or pressure?",
-      "category": "sprain",
-      "symptom": "pain variation",
+      "category": "activity impact: sprain",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या घायल क्षेत्र के आसपास सूजन, चोट या लाली है?",
       "en": "Is there swelling, bruising, or redness around the injured area?",
-      "category": "sprain",
-      "symptom": "swelling",
+      "category": "swelling",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप प्रभावित जोड़े को हिला सकते हैं, या यह हिलाने में बहुत दर्द होता है?",
       "en": "Can you move the affected joint, or is it too painful tomove?",
       "category": "sprain",
-      "symptom": "joint movement",
+      "symptom": None,
       "risk_factor": False,    },
     {
   "hi": "क्या चोट के बाद आपको जोड़े में स्थिरता या अस्थिरता का अनुभव हो रहा है?",
   "en": "After the injury, do you feel any instability or weakness in the joint?",
   "category": "sprain",
-  "symptom": "joint instability or weakness",
+  "symptom": None,
   "risk_factor": False,
 },
     {
       "hi": "क्या आपने उसी जोड़े में पहले कभी कोई स्ट्रेन या चोट लगाई है?",
       "en": "Have you had any previous sprains or injuries to the same joint?",
       "category": "sprain",
-      "symptom": "previous injuries",
+      "symptom":None,
       "risk_factor": False,    },
   ],
 
@@ -3158,22 +2939,22 @@ symptom_followup_questions = {
   {
     "hi": "क्या चोट के बाद दर्द लगातार बना रहता है, या हिलने-डुलने या विशिष्ट गतिविधियों से यह बढ़ जाता है?",
     "en": "Is the pain after injury constant, or does it worsen with movement or specific activities?",
-    "category": "general injury",
-    "symptom": "injury",
+    "category": "pain: injury",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप प्रभावित क्षेत्र को हिला सकते हैं, या यह हिलाने में बहुत दर्दनाक या अस्थिर है?",
     "en": "Can you move the affected area, or is it too painful or unstable to do so?",
-    "category": "general injury",
-    "symptom": "movement limitation",
+    "category": "activity impact: injury",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने पहले कभी उसी क्षेत्र में चोट या बार-बार समस्याएँ महसूस की हैं?",
     "en": "Have you had any previous injuries or recurring problems in the same area?",
-    "category": "general injury",
-    "symptom": "previous injuries",
+    "category": "history: injure",
+    "symptom": None,
     "risk_factor": False,
   },
 ],
@@ -3183,26 +2964,21 @@ symptom_followup_questions = {
     {
       "hi": "कौन सा जोड़ा प्रभावित है, और क्या वह सूजा हुआ, लाल, या छूने पर गर्म है?",
       "en": "Which joint is affected, and is it swollen, red, or warm to the touch?",
-      "category": "gout",
-      "symptom": "location",
+      "category": "location: gout",
+      "symptom": None,
       "risk_factor": False,    },
-    {
-      "hi": "क्या आपको पहले कभी इसी तरह के लक्षण हुए थे, या यह गाउट का पहला दौरा है?",
-      "en": "Have you had similar symptoms in the past, or is this your first episode of gout?",
-      "category": "gout",
-      "symptom": "history",
-      "risk_factor": False,    },
+
     {
       "hi": "क्या आपको प्रभावित जोड़े में विशेष रूप से रात के समय तीव्र दर्द हो रहा है?",
       "en": "Are you experiencing severe pain in the affected joint, especially at night?",
-      "category": "gout",
-      "symptom": "other",
+      "category": "pain: gout",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको उच्च यूरिक एसिड स्तर का इतिहास है, या क्या आपको पहले गाउट का निदान किया गया था?",
       "en": "Do you have a history of high uric acid levels, or have you been diagnosed with gout before?",
       "category": "gout",
-      "symptom": "history",
+      "symptom": None,
       "risk_factor": True,    },
     {
       "hi": "क्या आपने प्यूरीन से भरपूर खाद्य पदार्थों या पेय पदार्थों का सेवन किया है, जैसे लाल मांस, शंख, या शराब, विशेष रूप से बीयर या शराब?",
@@ -3223,38 +2999,38 @@ symptom_followup_questions = {
     {
       "hi": "साइटिका का दर्द कहाँ स्थित है (उदाहरण के लिए, पीठ के निचले हिस्से, नितंब, पैर, पैर)?",
       "en": "Where is the sciatica pain located (e.g., lower back, buttocks, legs, feet)?",
-      "category": "sciatica",
-      "symptom": "location",
+      "category": "None: sciatica",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या साइटिका का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
       "en": "Is the sciatica pain constant, or does it come and go?",
-      "category": "sciatica",
-      "symptom": "frequency",
+      "category": "frequency: sciatica",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको एक पैर में या दोनों पैरों में दर्द, सुन्नता, या झुनझुनी महसूस होती है?",
       "en": "Do you experience pain, numbness, or tingling down one leg or both legs?",
-      "category": "sciatica",
-      "symptom": "location",
+      "category": "location: sciatica",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या कटिस्नायुशूल का दर्द तेज, जलन वाला या अधिक हल्का दर्द है?",
       "en": "Is the sciatica pain sharp, burning, or more of a dull ache?",
-      "category": "sciatica",
-      "symptom": "pain type",
+      "category": "type: sciatica",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या कुछ विशेष गतिविधियाँ या स्थितियाँ जैसे बैठना, खड़ा होना, खांसी या छींकने से दर्द बढ़ता है?",
       "en": "Does anything trigger or worsen the pain, such as sitting, standing, coughing, or sneezing?",
-      "category": "sciatica",
-      "symptom": "cause",
+      "category": "cause: sciatica",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको कोई अन्य चिकित्सीय स्थिति है, जैसे हर्नियेटेड डिस्क, डीजनरेटिव डिस्क रोग, या स्पाइनल स्टेनोसिस?",
       "en": "Do you have any other medical conditions, such as herniated discs, degenerative disc disease, or spinal stenosis?",
       "category": "sciatica",
-      "symptom": "other",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, और क्या आपने साइटिका के दर्द के लिए किसी उपचार (जैसे फिजिकल थेरेपी, विश्राम, दर्द निवारण) की कोशिश की है?",
@@ -3269,25 +3045,25 @@ symptom_followup_questions = {
       "hi": "क्या आपको सुबह के समय जकड़न महसूस होती है, और यदि होती है, तो यह कितनी देर तक रहती है?",
       "en": "Do you experience morning stiffness, and if so, how long does it last?",
       "category": "arthritis",
-      "symptom": "other",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको दैनिक गतिविधियाँ करने में कठिनाई हो रही है, जैसे चलना, टाइप करना, या जार खोलना?",
       "en": "Do you have difficulty performing daily activities, such as walking, typing, or opening jars?",
-      "category": "arthritis",
-      "symptom": "difficulty with daily activities",
+      "category": "activity impact: arthritis",
+      "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपके परिवार में आर्थ्राइटिस या अन्य ऑटोइम्यून बीमारियों का इतिहास है, जैसे रुमेटोइड आर्थ्राइटिस या ल्यूपस?",
       "en": "Do you have a family history of arthritis or other autoimmune conditions, such as rheumatoid arthritis or lupus?",
       "category": "arthritis",
-      "symptom": "family history of arthritis",
+      "symptom": None,
       "risk_factor": True,    },
     {
       "hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं, जिसमें दर्द निवारक, या आपने कोई उपचार (जैसे शारीरिक चिकित्सा, जीवनशैली में बदलाव) किया है?",
       "en": "Are you currently taking any medications, including pain relievers, or have you tried any treatments (e.g., physical therapy, lifestyle changes)?",
-      "category": "arthritis",
-      "symptom": "medication",
+      "category": "medication: arthritis",
+      "symptom": None,
       "risk_factor": True,    },
     ],
 	
@@ -3295,7 +3071,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको वजन कम होता महसूस हो रहा है?",
       "en": "Have you noticed weight loss?",
-      "category": "weight_loss",
+      "category": "weight loss",
       "symptom": "weight loss",
       "risk_factor": False,
     },
@@ -3303,35 +3079,35 @@ symptom_followup_questions = {
       "hi": "क्या खाना देखकर या सूंघकर भी भूख नहीं लगती?",
       "en": "Do you not feel hungry even when you see or smell food?",
       "category": "no_hunger_response",
-      "symptom": "other",
+      "symptom": None,
       "risk_factor": False,
     },
 	  {
     "hi": "क्या आपकी जीवनशैली हाल ही में अचानक बदल गई है (जैसे डाइटिंग, शारीरिक गतिविधि)?",
     "en": "Has your lifestyle changed recently (e.g., dieting, physical activity)?",
-    "category": "lifestyle_change",
-    "symptom": "diet",
+    "category": "lifestyle change",
+    "symptom": None,
     "risk_factor": True,
   },
     {
       "hi": "क्या आप तनाव, चिंता या अवसाद का अनुभव कर रहे हैं?",
       "en": "Are you experiencing stress, anxiety, or depression?",
-      "category": "mental_health",
-      "symptom": "mental health changes",
+      "category": "stress",
+      "symptom": "mental health change",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको पेट से जुड़ी कोई समस्या है, जैसे गैस, बदहजमी, या कब्ज?",
       "en": "Do you have any digestive issues such as gas, indigestion, or constipation?",
-      "category": "digestive_issues",
+      "category": "indigestion",
       "symptom": "indigestion",
       "risk_factor": False,
     },
   {
     "hi": "क्या आपको हार्मोनल समस्या जैसे थायरॉइड की बीमारी है?",
     "en": "Do you have a hormonal issue such as thyroid disorder?",
-    "category": "thyroid_or_hormonal",
-    "symptom": "Thyroid",
+    "category": "thyroid",
+    "symptom": "thyroid",
     "risk_factor": True,
   },
 
@@ -3367,29 +3143,29 @@ symptom_followup_questions = {
   {
     "hi": "सूजे हुए लिम्फ नोड्स कहां स्थित हैं? (जैसे गर्दन, बगल, कमर)",
     "en": "Where exactly are the swollen lymph nodes located? (e.g., neck, underarms, groin)",
-    "category": "swollen lymph nodes",
-    "symptom": "location",
+    "category": "location: swollen lymph nodes",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या लिम्फ नोड्स दबाने पर दर्दनाक या कोमल हैं?",
     "en": "Are the lymph nodes painful or tender to the touch?",
-    "category": "swollen lymph nodes",
-    "symptom": "other",
+    "category": "pain: swollen lymph nodes",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या सूजे हुए लिम्फ नोड्स के आकार या स्थिरता में पहले देखे गए लक्षणों से कोई बदलाव हुआ है?",
     "en": "Have the swollen lymph nodes changed in size or consistency since you first noticed them?",
     "category": "swollen lymph nodes",
-    "symptom": "other",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको ऐसी कोई बीमारी का इतिहास है जो इम्यून सिस्टम या लिम्फैटिक सिस्टम को प्रभावित करती है? (जैसे ऑटोइम्यून बीमारियां, कैंसर, एचआईवी)",
     "en": "Do you have a history of conditions that affect the immune system or lymphatic system (e.g., autoimmune diseases, cancer, HIV)?",
-    "category": "swollen lymph nodes",
-    "symptom": "history",
+    "category": "history: swollen lymph nodes",
+    "symptom": None,
     "risk_factor": True,
   },
   {
@@ -3443,8 +3219,8 @@ symptom_followup_questions = {
     {
       "hi": "क्या खून बहना लगातार है या यह कभी-कभी होता है?",
       "en": "Is the bleeding continuous or intermittent?",
-      "category": "bleeding",
-      "symptom": "frequency",
+      "category": "frequency: bleeding",
+      "symptom": None,
       "risk_factor": False,
     },
 ],
@@ -3468,14 +3244,14 @@ symptom_followup_questions = {
       "hi": "आप अपनी चिंता से निपटने या उसे प्रबंधित करने के लिए क्या उपाय करते हैं?",
       "en": "How do you cope with or manage your anxiety?",
       "category": "anxiety",
-      "symptom": "other",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपके परिवार में चिंता या अन्य मानसिक स्वास्थ्य समस्याओं का इतिहास है?",
       "en": "Do you have a history of anxiety or other mental health conditions in your family?",
-      "category": "anxiety",
-      "symptom": "history",
+      "category": "history: anxiety",
+      "symptom": None,
       "risk_factor": False,
     }
 ],
@@ -3541,28 +3317,28 @@ symptom_followup_questions = {
     {
       "hi": "आपने कितनी वजन कम की है, और यह कितने समय में हुआ है?",
       "en": "How much weight have you lost, and over what period of time?",
-      "category": "weight loss",
+      "category": "instance: weight loss",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने अपनी भूख में कोई बदलाव महसूस किया है?",
       "en": "Have you noticed any changes in your appetite?",
-      "category": "weight loss",
+      "category": "loss of appetite",
       "symptom": "loss of appetite",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको खाने या निगलने में कोई कठिनाई हो रही है?",
       "en": "Are you experiencing any difficulty eating or swallowing?",
-      "category": "weight loss",
-      "symptom": None,
+      "category": "difficulty swallowing",
+      "symptom": "difficulty swallowing",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने हाल ही में कोई बीमारी, संक्रमण या स्वास्थ्य समस्याएँ अनुभव की हैं?",
       "en": "Have you had any recent illnesses, infections, or health conditions?",
-      "category": "weight loss",
+      "category": "history: weight loss",
       "symptom": None,
       "risk_factor": False,
     },
@@ -3570,7 +3346,7 @@ symptom_followup_questions = {
       "hi": "क्या आपको थायरॉयड समस्याएँ, डायबिटीज़, या अन्य चयापचय विकारों का इतिहास है?",
       "en": "Do you have a history of thyroid problems, diabetes, or other metabolic disorders?",
       "category": "weight loss",
-      "symptom": "history",
+      "symptom": None,
       "risk_factor": True,
     }
 ],
@@ -3578,50 +3354,44 @@ symptom_followup_questions = {
     {
       "hi": "आपको दिन और रात में कितनी बार पेशाब करने की आवश्यकता होती है?",
       "en": "How often do you need to urinate during the day and night?",
-      "category": "frequent urination",
-      "symptom": "frequency",
+      "category": "frequency: urination",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या पेशाब करते समय कोई दर्द या असुविधा हो रही है?",
       "en": "Is there any pain or discomfort when urinating?",
-      "category": "frequent urination",
+      "category": "pain: urination",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने पेशाब के रंग, गंध, या रूप में कोई बदलाव देखा है?",
       "en": "Have you noticed any changes in the color, odor, or appearance of your urine?",
-      "category": "frequent urination",
+      "category": "dark urine",
       "symptom": None,
       "risk_factor": False,
     },
-    {
-      "hi": "क्या आपको पेशाब करने की अत्यधिक आवश्यकता या तात्कालिकता महसूस हो रही है?",
-      "en": "Are you experiencing any urgency or a strong need to urinate?",
-      "category": "frequent urination",
-      "symptom": None,
-      "risk_factor": False,
-    },
+
     {
       "hi": "क्या आपने हाल ही में कोई मूत्र मार्ग संक्रमण (UTIs) या मूत्राशय की समस्याएं अनुभव की हैं?",
       "en": "Have you had any recent urinary tract infections (UTIs) or bladder issues?",
-      "category": "frequent urination",
-      "symptom": "history",
+      "category": "history: urination",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आप सामान्य से अधिक तरल पदार्थ पी रहे हैं, या आपके आहार में कोई बदलाव हुआ है?",
       "en": "Are you drinking more fluids than usual, or have there been any changes to your diet?",
-      "category": "frequent urination",
-      "symptom": "frequent urination",
+      "category": "hydration",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको डायबिटीज़ या गुर्दे या मूत्राशय से संबंधित अन्य चिकित्सा समस्याओं का इतिहास है?",
       "en": "Do you have a history of diabetes or any other medical conditions affecting the kidneys or bladder?",
-      "category": "frequent urination",
-      "symptom": None,
+      "category": "history: urination",
+      "symptom": "diabetes",
       "risk_factor": True,
     },
 ],
@@ -3682,35 +3452,28 @@ symptom_followup_questions = {
     {
       "hi": "आपने आखिरी बार बेहोशी या बेहोशी के निकट अनुभव कब किया था?",
       "en": "When did you last experience fainting or a near-fainting episode?",
-      "category": "fainting",
-      "symptom": "frequency",
+      "category": "duration: fainting",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या बेहोश होने से पहले कोई विशिष्ट उत्तेजक या चेतावनी संकेत थे (जैसे चक्कर आना, जी मिचलाना)?",
       "en": "Were there any specific triggers or warning signs before you fainted (e.g., dizziness, nausea)?",
-      "category": "fainting",
-      "symptom": "cause",
+      "category": "cause: fainting",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने पूरी तरह से चेतना खो दी थी, या आपको बस हल्का महसूस हो रहा था?",
       "en": "Did you lose consciousness completely, or were you just lightheaded?",
-      "category": "fainting",
-      "symptom": "fainting",
+      "category": "consciousness",
+      "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "बेहोशी का अनुभव कितना समय चला?",
       "en": "How long did the fainting episode last?",
-      "category": "fainting",
-      "symptom": "frequency",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में कोई बीमारी, निर्जलीकरण, या दवाओं में बदलाव अनुभव किया है?",
-      "en": "Have you had any recent illnesses, dehydration, or changes in medication?",
-      "category": "fainting",
+      "category": "fainting episode",
       "symptom": None,
       "risk_factor": False,
     },
@@ -3724,19 +3487,12 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको हृदय की समस्याओं, मिर्गी, या कम रक्तचाप का इतिहास है?",
       "en": "Do you have a history of heart problems, seizures, or low blood pressure?",
-      "category": "fainting",
-      "symptom": "history",
+      "category": "history: heart problem",
+      "symptom": None,
       "risk_factor": True,
     },
 ],
   "nervousness": [
-    {
-      "hi": "आप सामान्यतः कब घबराहट या चिंतित महसूस करते हैं?",
-      "en": "When do you typically feel nervous or anxious?",
-      "category": "nervousness",
-      "symptom": "nervousness",
-      "risk_factor": False,
-    },
     {
       "hi": "क्या ऐसी कोई विशिष्ट स्थिति या उत्तेजक है जो आपको घबराहट महसूस कराती है?",
       "en": "Are there specific situations or triggers that make you feel nervous?",
@@ -3744,27 +3500,7 @@ symptom_followup_questions = {
       "symptom": "cause",
       "risk_factor": False,
     },
-    {
-      "hi": "यह घबराहट की भावना आमतौर पर कितनी देर तक रहती है?",
-      "en": "How long do these feelings of nervousness usually last?",
-      "category": "nervousness",
-      "symptom": "duration",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपको अपनी घबराहट को नियंत्रित या प्रबंधित करने में कठिनाई होती है?",
-      "en": "Do you find it difficult to control or manage your nervousness?",
-      "category": "nervousness",
-      "symptom": "other",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आपने हाल ही में अधिक तनाव महसूस किया है?",
-      "en": "Have you been under increased stress recently?",
-      "category": "nervousness",
-      "symptom": "mental health changes",
-      "risk_factor": False,
-    },
+
 ],
 "blurred vision": [
     {
@@ -3777,7 +3513,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या आँखों का धुंधलापन आता-जाता रहता है, या यह स्थिर रहता है?",
       "en": "Does the eye blurriness come and go, or is it constant?",
-      "category": "blurred vision",
+      "category": "type: blurred vision",
       "symptom": None,
       "risk_factor": False,
     },
@@ -3791,14 +3527,14 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको आंखों से संबंधित कोई पुरानी समस्या है, जैसे मोतियाबिंद, ग्लूकोमा, या मॅक्यूलर डिजेनेरेशन?",
       "en": "Do you have a history of eye conditions, such as cataracts, glaucoma, or macular degeneration?",
-      "category": None,
+      "category": "history: blurred vision",
       "symptom": None,
       "risk_factor": True,
     },
     {
       "hi": "क्या आप वर्तमान में कोई दवाइयाँ ले रहे हैं या कोई अंतर्निहित स्वास्थ्य समस्याएँ हैं (जैसे, मधुमेह या उच्च रक्तचाप)?",
       "en": "Are you currently taking any medications or have any underlying health conditions (e.g., diabetes or hypertension)?",
-      "category": "blurred vision",
+      "category": "medication: blurred vision",
       "symptom": None,
       "risk_factor": False,
     }
@@ -3807,35 +3543,22 @@ symptom_followup_questions = {
     {
       "hi": "क्या कोई विशेष परिस्थितियाँ या उत्तेजक हैं जो आपको अधिक बेचैन महसूस कराते हैं?",
       "en": "Are there specific situations or triggers that make you feel more restless?",
-      "category": "restlessness",
+      "category": "cause: restles",
       "symptom": "restlessness",
       "risk_factor": False,
     },
-    {
-      "hi": "यह बेचैनी की भावना आमतौर पर कितनी देर तक रहती है?",
-      "en": "How long do these feelings of restlessness usually last?",
-      "category": "restlessness",
-      "symptom": "restlessness",
-      "risk_factor": False,
-    },
-    {
-      "hi": "क्या आप आराम करने या शांत होने में सक्षम हैं, या यह बेचैनी बनी रहती है?",
-      "en": "Are you able to relax or calm down, or does the restlessness persist?",
-      "category": "restlessness",
-      "symptom": "restlessness",
-      "risk_factor": False,
-    },
+    
     {
       "hi": "क्या आपको सोने में या सोकर बने रहने में कठिनाई हो रही है?",
       "en": "Do you have trouble sleeping or staying asleep?",
-      "category": "restlessness",
+      "category": "sleep issue",
       "symptom": "restlessness",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने हाल ही में अपनी दिनचर्या, आहार, या दवाइयों में कोई बदलाव किया है?",
       "en": "Have you had any changes in your routine, diet, or medications recently?",
-      "category": "restlessness",
+      "category": "diet: restless",
       "symptom": None,
       "risk_factor": False,
     }
@@ -3995,24 +3718,18 @@ symptom_followup_questions = {
     {
       "hi": "क्या आप दिन के कुछ विशेष समय पर या कुछ विशेष वातावरण में ज्यादा छींकते हैं?",
       "en": "Do you sneeze more at certain times of day or in specific environments?",
-      "category": "sneezing",
+      "category": "instance: sneezing",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने किसी एलर्जी उत्पन्न करने वाले तत्वों (जैसे पराग, धूल, या पालतू जानवरों की रूसी) से संपर्क किया है?",
       "en": "Have you been exposed to any allergens, such as pollen, dust, or pet dander?",
-      "category": "sneezing",
+      "category": "cause: sneezing",
       "symptom": None,
       "risk_factor": False,
     },
-    {
-      "hi": "क्या आपने हाल ही में बिमार महसूस किया है या सर्दी या फ्लू के लक्षण थे?",
-      "en": "Have you recently been sick or had symptoms of a cold or flu?",
-      "category": "sneezing",
-      "symptom": None,
-      "risk_factor": False,
-    },
+
     {
       "hi": "क्या आपको एलर्जी या अस्थमा का इतिहास है?",
       "en": "Do you have a history of allergies or asthma?",
@@ -4020,13 +3737,7 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": True,
     },
-    {
-      "hi": "क्या आपने हाल ही में मजबूत गंध, धुंआ, या रासायनिक उत्तेजकों से संपर्क किया है?",
-      "en": "Have you recently been in contact with strong odors, smoke, or chemical irritants?",
-      "category": "sneezing",
-      "symptom": None,
-      "risk_factor": False,
-    },
+
 ],
 
 "jaundice": [
@@ -4048,7 +3759,7 @@ symptom_followup_questions = {
     "hi": "क्या आपको पेट में कोई दर्द है, विशेष रूप से दाहिने ऊपरी हिस्से में?",
     "en": "Do you have any pain in your abdomen, especially in the upper right side?",
     "category": "jaundice",
-    "symptom": "abdomen pain",
+    "symptom": "stomach pain",
     "risk_factor": False,
   },
   {
@@ -4116,7 +3827,7 @@ symptom_followup_questions = {
     "hi": "क्या थकान लगातार बनी रहती है या आती-जाती रहती है?",
     "en": "Is the fatigue constant, or does it come and go?",
     "category": "fatigue",
-    "symptom": "pain type",
+    "symptom": "fatigue",
     "risk_factor": False,
   },
 ],
@@ -4132,35 +3843,35 @@ symptom_followup_questions = {
   {
     "hi": "आप सामान्यतः रात में कितने घंटे सोते हैं?",
     "en": "How many hours of sleep do you usually get per night?",
-    "category": "sleepy",
+    "category": "duration: sleepy",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप खर्राटे लेते हैं या क्या आपको बताया गया है कि सोते समय आपकी सांस रुक जाती है?",
     "en": "Do you snore or have you been told you stop breathing while sleeping?",
-    "category": "sleepy",
+    "category": "snore",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपने हाल ही में अपनी दिनचर्या या तनाव स्तर में कोई बदलाव महसूस किया है?",
     "en": "Have you experienced any recent changes in your routine or stress levels?",
-    "category": "sleepy",
+    "category": "lifestyle changes: sleepy",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप कोई दवाइयाँ या पदार्थ ले रहे हैं जो आपकी नींद को प्रभावित कर सकते हैं?",
     "en": "Are you taking any medications or substances that could affect your sleep?",
-    "category": "sleepy",
+    "category": "medication: sleepy",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको दिन में अत्यधिक थकान महसूस होती है, भले ही आपने पूरी रात की नींद ली हो?",
     "en": "Do you feel excessively tired during the day, even after a full night of sleep?",
-    "category": "sleepy",
+    "category": "tired",
     "symptom": None,
     "risk_factor": False,
   },
@@ -4204,46 +3915,40 @@ symptom_followup_questions = {
       "symptom": None,
       "risk_factor": False,
     },
-    {
-      "hi": "क्या आपके शरीर में कोई हार्मोनल असंतुलन है?",
-      "en": "Is there any hormonal imbalance in your body?",
-      "category": "female issue",
-      "symptom": "hormonal imbalance",
-      "risk_factor": False,
-    },
+
     {
       "hi": "क्या आपको मूत्र संबंधी कोई लक्षण हैं, जैसे बार-बार पेशाब आना या पेशाब करते समय दर्द होना?",
       "en": "Do you have any history of urinary symptoms, such as frequent urination or pain while urinating?",
-      "category": "female issue",
+      "category": "urinary issue",
       "symptom": None,
       "risk_factor": True,
     },
     {
       "hi": "क्या आपको कोई गाइनकोलॉजिकल स्थितियाँ हैं, जैसे कि फाइब्रॉयड्स, एंडोमेट्रियोसिस, या अंडकोषीय सिस्ट?",
       "en": "Do you have any history of gynecological conditions, such as fibroids, endometriosis, or ovarian cysts?",
-      "category": "female issue",
+      "category": "fibroids",
       "symptom": None,
       "risk_factor": True,
     },
     {
       "hi": "क्या आपको पॉलीसिस्टिक अंडाशय सिंड्रोम (PCOS) या अन्य हार्मोनल विकार हैं?",
       "en": "Do you have PCOS or other hormonal disorders?",
-      "category": "female issue",
+      "category": "PCOS",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आप अपनी माहवारी से पहले या दौरान कोई दर्द या ऐंठन महसूस कर रही हैं?",
       "en": "Are you experiencing any pain or cramping before or during your period?",
-      "category": "female issue",
-      "symptom": "female issue",
+      "category": "pain: period",
+      "symptom": None,
       "risk_factor": False,
     },
    {
       "hi": "क्या आपके पेट के निचले हिस्से में किसी प्रकार की गाँठ या सूजन महसूस हो रही है?",
       "en": "Do you feel any lump or swelling in your lower abdomen or pelvis?",
       "category": "pelvic_mass",
-      "symptom": "pelvic mass",
+      "symptom": None,
       "risk_factor": True,
     },
 ],
@@ -4251,15 +3956,15 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपकी माहवारी नियमित रूप से आती है?",
     "en": "Is your menstrual cycle regular?",
-    "category": "menstruation",
-    "symptom": "irregular periods",
+    "category": "period",
+    "symptom": "irregular period",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपकी माहवारी के समय असामान्य रंग या गंध होती है?",
     "en": "Is there any unusual color or odor during your period?",
     "category": "menstruation",
-    "symptom": "abnormal discharge",
+    "symptom": None,
     "risk_factor": True,
   },
 ],
@@ -4268,15 +3973,15 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपके परिवार में किसी को थायरॉयड संबंधित विकारों का इतिहास है?",
       "en": "Do you have a history of thyroid disorders in your family?",
-      "category": "thyroid",
+      "category": "history: thyroid",
       "symptom": None,
       "risk_factor": True,
     },
     {
       "hi": "क्या आपने अपनी भूख या वजन में कोई बदलाव महसूस किया है?",
       "en": "Have you noticed any changes in your appetite or weight?",
-      "category": "thyroid",
-      "symptom": None,
+      "category": "loss of appetite",
+      "symptom": "loss of appetite",
       "risk_factor": False,
     },
     {
@@ -4312,22 +4017,22 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपने शौच के दौरान कोई खून बहते हुए देखा है? अगर हां, तो कितना?",
       "en": "Have you noticed any bleeding during bowel movements? If so, how much?",
-      "category": "piles",
+      "category": "bleeding: piles",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको बैठने या शौच के दौरान कोई दर्द या असहजता महसूस होती है?",
       "en": "Do you experience any pain or discomfort while sitting or during bowel movements?",
-      "category": "piles",
+      "category": "pain: piles",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपकी शौच की आदतों में कोई बदलाव आया है (जैसे कब्ज, दस्त)?",
       "en": "Have you had any changes in your bowel habits (e.g., constipation, diarrhea)?",
-      "category": "piles",
-      "symptom": None,
+      "category": "diarrhea or constipation",
+      "symptom": "diarrhea",
       "risk_factor": False,
     },
     {
@@ -4340,14 +4045,14 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपने गुदा के आसपास कोई गांठ या सूजन महसूस की है?",
       "en": "Have you experienced any lumps or swelling around the anus?",
-      "category": "piles",
+      "category": "lump",
       "symptom": None,
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको कोई पुरानी स्थितियाँ हैं, जैसे कब्ज, यकृत रोग, या गर्भावस्था?",
       "en": "Do you have any history of chronic conditions, such as constipation, liver disease, or pregnancy?",
-      "category": "piles",
+      "category": "history: liver",
       "symptom": None,
       "risk_factor": True,
     },
@@ -4355,34 +4060,28 @@ symptom_followup_questions = {
 
   "shortness of breath": [
     {
-      "hi": "क्या आपको सांस लेने में कठिनाई हो रही है?",
-      "en": "Are you having difficulty breathing?",
-      "category": "breathing_difficulty",
-      "symptom": "shortness of breath",
-      "risk_factor": False,    },
-    {
       "hi": "क्या सांस लेने में कठिनाई के साथ दिल की धड़कन तेज हो रही है?",
       "en": "Is your heart rate increasing along with difficulty breathing?",
-      "category": "heart_rate_increase",
-      "symptom": None,
+      "category": "increased heartbeat",
+      "symptom": "increased heartbeat",
       "risk_factor": False,    },
     {
       "hi": "क्या सांस लेने में कठिनाई किसी विशेष गतिविधि के दौरान बढ़ती है?",
       "en": "Does your difficulty in breathing increase during any specific activity?",
-      "category": "activity_related_difficulty",
+      "category": "activity impact: shortness of breath",
       "symptom": None,
       "risk_factor": False,    },
     {
       "hi": "क्या आपको सांस लेने में दर्द भी हो रहा है?",
       "en": "Are you experiencing pain while breathing?",
-      "category": "breathing_pain",
+      "category": "pain: shortness of breath",
       "symptom": None,
       "risk_factor": True,    },
 
     {
        "hi": "क्या आपके परिवार में किसी को अस्थमा है?",
        "en": "Do you have a family history of asthma?",
-       "category": "family_history_asthma",
+       "category": "family history: asthma",
        "symptom": None,
        "risk_factor": True,    },
 
@@ -4403,47 +4102,49 @@ symptom_followup_questions = {
   ],
 
     "asthma": [
-    {
-            "hi": "क्या आप धूम्रपान करते हैं या शराब पीते हैं?",
-            "en": "Do you smoke or drink?",
-            "category": "smoking_drinking",
-            "symptom": None,
-            "risk_factor": True,    },
+
     {
             "hi": "क्या आपके परिवार में किसी को अस्थमा है?",
             "en": "Do you have a family history of asthma?",
-            "category": "family_history_asthma",
+            "category": "family history: asthma",
             "symptom": None,
             "risk_factor": True,    },
     {
         "hi": "क्या आपको सांस लेने पर व्हीजिंग या सीटी की आवाजें आती हैं?",
         "en": "Do you experience wheezing or whistling sounds when you breathe?",
-        "category": "wheezing",
-        "symptom": None,
+        "category": "shortness of breath",
+        "symptom": "shortness of breath",
         "risk_factor": False,    },
+
+        {
+            "hi": "क्या आप धूम्रपान करते हैं?",
+            "en": "Do you smoke?",
+            "category": "smoking",
+            "symptom": None,
+            "risk_factor": True,    },
     {
         "hi": "क्या आपकी अस्थमा रात या सुबह जल्दी बढ़ जाती है?",
         "en": "Does your asthma worsen at night or early morning?",
-        "category": "night_worsening",
+        "category": "instance: asthma",
         "symptom": None,
         "risk_factor": False,    },
     {
         "hi": "क्या आपने हाल ही में किसी एलर्जन के संपर्क में आए हैं?",
         "en": "Have you been exposed to any allergens recently?",
-        "category": "allergen_exposure",
+        "category": "cause: asthma",
         "symptom": None,
         "risk_factor": False,    },
     {
         "hi": "क्या आपको किसी प्रकार की एलर्जी प्रतिक्रिया का इतिहास है?",
         "en": "Do you have a history of allergic reactions?",
-        "category": "allergy_history",
+        "category": "history: asthma",
         "symptom": None,
         "risk_factor": True,
     },
     {
         "hi": "क्या आपने हाल ही में अपने रेस्क्यू इनहेलर का अधिक उपयोग किया है?",
         "en": "Have you been using any rescue inhaler more frequently than usual?",
-        "category": "inhaler_usage",
+        "category": "medication: asthma",
         "symptom": None,
         "risk_factor": False,    },
     ],
@@ -4485,43 +4186,43 @@ symptom_followup_questions = {
         {
             "hi": "क्या आपको अपने ब्लड शुगर के स्तर को नियंत्रित करने के लिए दवाओं का उपयोग करना पड़ता है?",
             "en": "Do you need to take medications to control your blood sugar levels?",
-            "category": "blood_sugar_medications",
+            "category": "medication: sugar",
             "symptom": "sugar",
             "risk_factor": True,
         },
         {
             "hi": "क्या आपके खानपान में कोई विशेष बदलाव आया है ताकि आप अपने ब्लड शुगर को नियंत्रित कर सकें?",
             "en": "Have you made any specific changes to your diet to manage your blood sugar?",
-            "category": "blood_sugar_diet_changes",
-            "symptom": "diet changes",
+            "category": "diet: sugar",
+            "symptom": None,
             "risk_factor": False,
         },
         {
             "hi": "क्या आप शारीरिक गतिविधि में किसी प्रकार की वृद्धि या कमी देख रहे हैं ताकि आप अपने ब्लड शुगर को नियंत्रित कर सकें?",
             "en": "Are you increasing or decreasing your physical activities to manage your blood sugar levels?",
-            "category": "blood_sugar_physical_activity",
+            "category": "activity impact",
             "symptom": None,
             "risk_factor": False,
         },
         {
             "hi": "क्या आपके परिवार में किसी को डायबिटीज़ है?",
             "en": "Do you have a family history of diabetes?",
-            "category": "family_history_diabetes",
+            "category": "family history: diabetes",
             "symptom": None,
             "risk_factor": True,
         },
         {
             "hi": "क्या आपको अपने ब्लड शुगर के स्तर में अचानक गिरावट या वृद्धि का अनुभव होता है?",
             "en": "Do you experience sudden drops or spikes in your blood sugar levels?",
-            "category": "blood_sugar_fluctuations",
+            "category": "spike in sugar",
             "symptom": None,
             "risk_factor": False,
         },
         {
             "hi": "क्या आपको अपने ब्लड शुगर के स्तर को नियंत्रित करने के लिए इंसुलिन का उपयोग करना पड़ता है?",
             "en": "Do you need to use insulin to control your blood sugar levels?",
-            "category": "insulin_usage",
-            "symptom": "sugar",
+            "category": "insulin",
+            "symptom": None,
             "risk_factor": True,
         },
     ],
@@ -4945,50 +4646,44 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको बार-बार दस्त हो रहे हैं?",
       "en": "Are you experiencing frequent diarrhea?",
-      "category": "dysentery",
-      "symptom": "dysentery",
+      "category": "diarrhea",
+      "symptom": "diarrhea",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपके दस्त में खून या मवाद (pus) शामिल है?",
       "en": "Is there blood or pus in your stool?",
-      "category": "dysentery",
+      "category": "blood: stool",
       "symptom": "dysentery",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको दस्त के साथ पेट में दर्द या ऐंठन महसूस हो रही है?",
       "en": "Are you experiencing stomach pain or cramping along with diarrhea?",
-      "category": "dysentery",
-      "symptom": None,
+      "category": "stomach pain",
+      "symptom": "stomach pain",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको दस्त के साथ बुखार भी हो रहा है?",
       "en": "Are you also experiencing fever along with the diarrhea?",
-      "category": "dysentery",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,
     },
     {
       "hi": "क्या दस्त के दौरान आपको कमजोरी या थकान महसूस हो रही है?",
       "en": "Do you feel weakness or fatigue during the diarrhea episodes?",
-      "category": "dysentery",
-      "symptom": None,
+      "category": "weakness",
+      "symptom": "weakness",
       "risk_factor": False,
     },
-    {
-      "hi": "क्या आपको किसी अन्य व्यक्ति से दस्त या अन्य लक्षणों के फैलने का डर है?",
-      "en": "Are you concerned about the possibility of the diarrhea or other symptoms spreading from another person?",
-      "category": "dysentery",
-      "symptom": "dysentery",
-      "risk_factor": True,
-    },
+ 
     {
       "hi": "क्या आपने हाल ही में पानी या खाद्य पदार्थ खाए हैं जो संक्रमित हो सकते हैं?",
       "en": "Have you recently consumed water or food that could be contaminated?",
-      "category": "dysentery",
-      "symptom": "dysentery",
+      "category": "diet: water",
+      "symptom": "diet issue",
       "risk_factor": True,
     },
   ],
@@ -4997,50 +4692,50 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको बुखार हो रहा है?",
       "en": "Are you experiencing a fever?",
-      "category": "malaria",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको ठंड या कंपकंपी महसूस हो रही है?",
       "en": "Are you experiencing chills or shivering?",
-      "category": "malaria",
+      "category": "chills",
       "symptom": "chills",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको पसीना ज्यादा आने या थकान महसूस हो रही है?",
       "en": "Are you experiencing excessive sweating or fatigue?",
-      "category": "malaria",
-      "symptom": None,
+      "category": "sweating",
+      "symptom": "sweating",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको सिरदर्द, जी मिचलाना या उल्टी महसूस हो रही है?",
       "en": "Are you experiencing headache, nausea, or vomiting?",
-      "category": "malaria",
-      "symptom": None,
+      "category": "headache or nausea",
+      "symptom": "nausea",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपके शरीर में दर्द या मांसपेशियों में ऐंठन हो रही है?",
       "en": "Are you experiencing body aches or muscle cramps?",
-      "category": "malaria",
-      "symptom": None,
+      "category": "body ache",
+      "symptom": "body ache",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको हाल ही में मच्छरों के काटने या संक्रमित क्षेत्र में यात्रा का अनुभव हुआ है?",
       "en": "Have you recently been bitten by mosquitoes or traveled to an area with malaria?",
-      "category": "malaria",
-      "symptom": "malaria",
+      "category": "mosquito bite",
+      "symptom": None,
       "risk_factor": True,
     },
     {
       "hi": "क्या आपके परिवार में किसी और को मलेरिया का इतिहास है?",
       "en": "Do any other members of your family have a history of malaria?",
-      "category": "malaria",
-      "symptom": "malaria",
+      "category": "family history: malaria",
+      "symptom": None,
       "risk_factor": True,
     },
   ],
@@ -5049,7 +4744,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको अचानक तेज बुखार हो रहा है?",
       "en": "Are you experiencing a sudden high fever?",
-      "category": "dengue",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,
     },
@@ -5057,14 +4752,14 @@ symptom_followup_questions = {
       "hi": "क्या आपको शरीर में दर्द या मांसपेशियों में ऐंठन हो रही है?",
       "en": "Are you experiencing body aches or muscle pain?",
       "category": "dengue",
-      "symptom": None,
+      "symptom": "body ache",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपके शरीर पर लाल चकत्ते या चिढ़न (rash) हैं?",
       "en": "Are you experiencing any red rashes or itching on your body?",
-      "category": "dengue",
-      "symptom": None,
+      "category": "red rash",
+      "symptom": "rash",
       "risk_factor": False,
     },
     {
@@ -5101,36 +4796,36 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको बुखार हो रहा है?",
       "en": "Are you experiencing a fever?",
-      "category": "covid",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको सूखी खांसी हो रही है?",
       "en": "Are you experiencing a dry cough?",
-      "category": "covid",
+      "category": "dry cough",
       "symptom": "cough",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको गले में खराश या गले में दर्द महसूस हो रहा है?",
       "en": "Are you experiencing a sore throat or pain in the throat?",
-      "category": "covid",
-      "symptom": None,
+      "category": "sore throat",
+      "symptom": "sore throat",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको सांस लेने में कठिनाई हो रही है?",
       "en": "Are you having difficulty breathing?",
-      "category": "covid",
-      "symptom": "difficulty breathing",
+      "category": "shortness of breath",
+      "symptom": "shortness of breath",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको शरीर में दर्द या मांसपेशियों में ऐंठन हो रही है?",
       "en": "Are you experiencing body aches or muscle pain?",
-      "category": "covid",
-      "symptom": None,
+      "category": "body ache",
+      "symptom": "body ache",
       "risk_factor": False,
     },
     {
@@ -5205,7 +4900,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको लगातार बुखार हो रहा है?",
       "en": "Are you experiencing a persistent fever?",
-      "category": "typhoid",
+      "category": "fever",
       "symptom": "fever",
       "risk_factor": False,
     },
@@ -5213,21 +4908,21 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको कब्जियत या दस्त हो रही है?",
       "en": "Are you experiencing constipation or diarrhea?",
-      "category": "typhoid",
+      "category": "constipation, diarrhea",
       "symptom": "constipation",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपको शरीर में कमजोरी या थकान महसूस हो रही है?",
       "en": "Are you feeling weak or fatigued?",
-      "category": "typhoid",
+      "category": "weakness",
       "symptom": "weakness",
       "risk_factor": False,
     },
     {
       "hi": "क्या आपने हाल ही में संक्रमित जल या खाद्य पदार्थ खाया है?",
       "en": "Have you recently consumed contaminated water or food?",
-      "category": "typhoid",
+      "category": "diet: water",
       "symptom": None,
       "risk_factor": True,
     },
@@ -5295,49 +4990,49 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपके पेशाब में किसी प्रकार का बदलाव (जैसे रंग, गंध, झाग या मात्रा) हुआ है?",
     "en": "Have you noticed any changes in your urine, such as color, odor, foaminess, or volume?",
-    "category": "kidney issue",
+    "category": "urine color",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको पीठ के निचले हिस्से या पसलियों के नीचे दर्द होता है?",
     "en": "Do you experience pain in your lower back or under your ribs?",
-    "category": "kidney issue",
-    "symptom": None,
+    "category": "back pain",
+    "symptom": "back pain",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको पेशाब करने में जलन या दर्द होता है?",
     "en": "Do you feel a burning sensation or pain while urinating?",
-    "category": "kidney issue",
+    "category": "pain: urine ",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको उच्च रक्तचाप (ब्लड प्रेशर) की समस्या है?",
     "en": "Do you have high blood pressure?",
-    "category": "kidney issue",
+    "category": "high blood pressure",
     "symptom": "high blood pressure",
     "risk_factor": True,
   },
   {
     "hi": "क्या आपके परिवार में किसी को किडनी की बीमारी रही है?",
     "en": "Is there a family history of kidney disease?",
-    "category": "kidney issue",
+    "category": "family history: kidney issue",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपके शरीर में सूजन (जैसे टखनों, पैरों या चेहरे पर) आती है?",
     "en": "Do you experience swelling in your body, such as in your ankles, feet, or face?",
-    "category": "kidney issue",
-    "symptom": "swelling",
+    "category": "swelling",
+    "symptom": "foot swell",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको मधुमेह (डायबिटीज) है या रहा है?",
     "en": "Do you have or have had diabetes?",
-    "category": "kidney issue",
+    "category": "diabetes",
     "symptom": "diabetes",
     "risk_factor": True,
   },
@@ -5347,49 +5042,49 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपको पेट के ऊपरी दाएं हिस्से में दर्द या असहजता होती है?",
     "en": "Do you experience pain or discomfort in the upper right side of your abdomen?",
-    "category": "liver issue",
-    "symptom": "upper right abdominal pain",
+    "category": "pain: stomach",
+    "symptom": "upper right stomach pain",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपका पेट फूला हुआ या सूजा हुआ महसूस होता है?",
     "en": "Do you feel bloating or swelling in your abdomen?",
-    "category": "liver issue",
-    "symptom": "abdominal bloating",
+    "category": "bloating",
+    "symptom": "bloating",
     "risk_factor": False,
   },
 	{
     "hi": "क्या आपको शराब पीने की आदत है या पहले थी?",
     "en": "Do you currently or previously consume alcohol regularly?",
-    "category": "liver issue",
-    "symptom": "alcohol use",
+    "category": "alcohol",
+    "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको अत्यधिक थकान या कमजोरी महसूस होती है?",
     "en": "Do you feel excessive fatigue or weakness?",
-    "category": "liver issue",
-    "symptom": "fatigue",
+    "category": "weakness",
+    "symptom": "weakness",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको भूख में कमी महसूस होती है?",
     "en": "Have you experienced a loss of appetite?",
-    "category": "liver issue",
+    "category": "loss of appetite",
     "symptom": "loss of appetite",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको हेपेटाइटिस (A, B, या C) का संक्रमण हुआ है?",
     "en": "Have you ever had a hepatitis infection (A, B, or C)?",
-    "category": "liver issue",
+    "category": "hepatitis",
     "symptom": "hepatitis infection",
     "risk_factor": True,
   },
   {
     "hi": "क्या आपके परिवार में किसी को लिवर की बीमारी रही है?",
     "en": "Is there a family history of liver disease?",
-    "category": "liver issue",
+    "category": "family history: liver issue",
     "symptom": None,
     "risk_factor": True,
   },
@@ -5420,7 +5115,7 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपको धूम्रपान करने की आदत है?",
     "en": "Do you smoke regularly?",
-    "category": "broken voice",
+    "category": "smoking",
     "symptom": None,
     "risk_factor": True,
   },
@@ -5457,36 +5152,36 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपको सुबह के समय जी मिचलाना या उल्टी होती है?",
     "en": "Do you experience nausea or vomiting in the morning?",
-    "category": "pregnancy",
-    "symptom": None,
+    "category": "nausea or vomiting",
+    "symptom": "nausea",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको खाने की पसंद या स्वाद में कोई बदलाव महसूस हो रहा है?",
     "en": "Have you noticed any changes in food preferences or taste?",
-    "category": "pregnancy",
+    "category": "diet: pregnancy",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको बार-बार पेशाब करने की इच्छा होती है?",
     "en": "Do you feel the urge to urinate more frequently?",
-    "category": "pregnancy",
+    "category": "frequency: urinate",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप गर्भधारण की योजना बना रही हैं या प्रयास कर रही हैं?",
     "en": "Are you planning or trying to conceive?",
-    "category": "pregnancy",
+    "category": "conceive",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको अचानक थकान या चक्कर जैसा महसूस होता है?",
     "en": "Do you feel sudden fatigue or dizziness?",
-    "category": "pregnancy",
-    "symptom": None,
+    "category": "dizziness",
+    "symptom": "fatigue",
     "risk_factor": False,
   },
 ],
@@ -5494,43 +5189,43 @@ symptom_followup_questions = {
   {
     "hi": "क्या बच्चे को बुखार है या हाल ही में बुखार आया था?",
     "en": "Does the child have a fever or had one recently?",
-    "category": "pediatric symptoms",
+    "category": "fever",
     "symptom": "fever",
     "risk_factor": False,
   },
   {
     "hi": "क्या बच्चे को खांसी या सांस लेने में दिक्कत हो रही है?",
     "en": "Is the child coughing or having difficulty breathing?",
-    "category": "pediatric symptoms",
-    "symptom": None,
+    "category": "cough",
+    "symptom": "cough",
     "risk_factor": False,
   },
   {
     "hi": "क्या बच्चे को दस्त या उल्टी हो रही है?",
     "en": "Is the child experiencing diarrhea or vomiting?",
-    "category": "pediatric symptoms",
-    "symptom": None,
+    "category": "diarrhea",
+    "symptom": "diarrhea",
     "risk_factor": False,
   },
   {
     "hi": "क्या बच्चे ने सामान्य से कम खाना या पीना शुरू कर दिया है?",
     "en": "Has the child started eating or drinking less than usual?",
-    "category": "pediatric symptoms",
+    "category": "diet: pediatric",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या बच्चे को कोई पुरानी बीमारी (जैसे अस्थमा या मिर्गी) है?",
     "en": "Does the child have any chronic condition like asthma or epilepsy?",
-    "category": "pediatric symptoms",
-    "symptom": None,
+    "category": "history: asthma",
+    "symptom": "asthma",
     "risk_factor": True,
   },
   {
     "hi": "क्या बच्चे का व्यवहार असामान्य लग रहा है, जैसे अधिक नींद या बहुत चिड़चिड़ापन?",
     "en": "Is the child's behavior unusual, such as excessive sleepiness or irritability?",
-    "category": "pediatric symptoms",
-    "symptom": None,
+    "category": "sleepy",
+    "symptom": "sleepy",
     "risk_factor": False,
   },
   {
@@ -5554,7 +5249,7 @@ symptom_followup_questions = {
     "hi": "क्या आपको हाई ब्लड प्रेशर या प्रीक्लेम्प्सिया जैसी कोई समस्या है?",
     "en": "Do you have high blood pressure or conditions like preeclampsia?",
     "category": "high blood pressure",
-    "symptom": None,
+    "symptom": "high blood pressure",
     "risk_factor": True,
   },
   {
@@ -5591,49 +5286,49 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपको पेशाब करते समय जलन या दर्द होता है?",
     "en": "Do you feel a burning sensation or pain while urinating?",
-    "category": "urine issues",
+    "category": "pain: urination",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपकी पेशाब का रंग सामान्य से अलग है (जैसे गहरा पीला, लाल या बदरंग)?",
     "en": "Is the color of your urine different from normal (e.g., dark yellow, red, or cloudy)?",
-    "category": "urine issue",
+    "category": "urine color",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपकी पेशाब से दुर्गंध आती है?",
     "en": "Does your urine have a strong or unusual odor?",
-    "category": None,
+    "category": "urine odor",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको पेशाब में खून दिखा है?",
     "en": "Have you noticed blood in your urine?",
-    "category": "urine issue",
+    "category": "blood: urine",
     "symptom": "blood in urine",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको मधुमेह (डायबिटीज़) है?",
     "en": "Do you have diabetes?",
-    "category": "urine issue",
+    "category": "diabetes",
     "symptom": "diabetes",
     "risk_factor": True,
   },
   {
     "hi": "क्या आपने हाल ही में पानी या तरल पदार्थ कम पिया है?",
     "en": "Have you recently been drinking less water or fluids?",
-    "category": "urine issue",
+    "category": "dehydration",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको बार-बार पेशाब आने के साथ-साथ अधूरी पेशाब महसूस होती है?",
     "en": "Do you feel the urge to urinate frequently but pass only a small amount each time?",
-    "category": "urine issue",
+    "category": "urge to urinate",
     "symptom": None,
     "risk_factor": False,
   },
@@ -5643,35 +5338,35 @@ symptom_followup_questions = {
   {
     "hi": "क्या घाव से खून रुक-रुक कर या लगातार बह रहा है?",
     "en": "Is the wound bleeding continuously or off and on?",
-    "category": "wound",
+    "category": "bleeding",
     "symptom": "bleeding",
     "risk_factor": False,
   },
   {
     "hi": "क्या घाव वाली जगह में सूजन, लालिमा या गर्माहट महसूस होती है?",
     "en": "Is the wound area swollen, red, or warm to the touch?",
-    "category": "wound",
+    "category": "swelling",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या घाव से पीप या दुर्गंध आ रही है?",
     "en": "Is there any pus or foul smell coming from the wound?",
-    "category": "wound",
+    "category": "pus",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको डायबिटीज़ या कोई अन्य ऐसी बीमारी है जो घाव भरने में देरी करती है?",
     "en": "Do you have diabetes or any condition that delays wound healing?",
-    "category": "wound",
+    "category": "diabetes",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको घाव हुए 3 दिन से ज्यादा हो गए हैं लेकिन वह भर नहीं रहा?",
     "en": "Has it been more than 3 days since you got the wound and it still hasn't healed?",
-    "category": "wound",
+    "category": "duration: wound",
     "symptom": None,
     "risk_factor": False,
   },
@@ -5695,50 +5390,50 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपके पूरे शरीर में दर्द या थकावट महसूस होती है?",
     "en": "Do you feel pain or fatigue throughout your entire body?",
-    "category": "body ache",
+    "category": "pain: body ache",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपकी मांसपेशियाँ या जोड़ दबाने पर दर्द करते हैं?",
     "en": "Do your muscles or joints hurt when pressed?",
-    "category": "body ache",
+    "category": "muscle pain",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या दर्द के साथ आपको बुखार, सर्दी या गले में खराश भी है?",
     "en": "Along with body ache, do you also have fever, cold, or sore throat?",
-    "category": "body ache",
-    "symptom": None,
+    "category": "fever",
+    "symptom": "fever",
     "risk_factor": False,
   },
   {
     "hi": "क्या आप हाल ही में किसी वायरल संक्रमण (जैसे फ्लू या डेंगू) से ठीक हुए हैं?",
     "en": "Have you recently recovered from a viral infection like flu or dengue?",
-    "category": "body ache",
-    "symptom": None,
+    "category": "flu",
+    "symptom": "flu",
     "risk_factor": True,
   },
   {
     "hi": "क्या आप लंबे समय तक एक ही मुद्रा में बैठे या खड़े रहते हैं?",
     "en": "Do you sit or stand in the same posture for long periods?",
-    "category": "body ache",
+    "category": "activity impact: body ache",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको नींद पूरी नहीं हो पाती या आराम नहीं मिलता?",
     "en": "Are you not getting enough sleep or proper rest?",
-    "category": "body ache",
+    "category": "sleep issue",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या दर्द लगातार कई दिनों से बना हुआ है?",
     "en": "Has the pain been persistent for several days?",
-    "category": "body ache",
-    "symptom": "duration",
+    "category": "duration: body ache",
+    "symptom": None,
     "risk_factor": False,
   },
 ],
@@ -5747,49 +5442,49 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपके शरीर पर बिना किसी चोट के नीले या काले निशान बन जाते हैं?",
     "en": "Do you get blue or black marks (bruises) on your body without any known injury?",
-    "category": "bruises",
+    "category": "black bruises",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको बहुत मामूली चोट पर भी आसानी से निशान पड़ जाते हैं?",
     "en": "Do you bruise easily, even from minor bumps or touches?",
-    "category": "bruises",
+    "category": "easy wound",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपके शरीर पर कई जगह एक साथ निशान बन रहे हैं?",
     "en": "Are you getting bruises on multiple areas of the body at the same time?",
-    "category": "bruises",
+    "category": "location: bruises",
     "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आप खून पतला करने वाली दवाएं (जैसे एस्पिरिन या वारफरिन) ले रहे हैं?",
     "en": "Are you taking blood thinners such as aspirin or warfarin?",
-    "category": "bruises",
+    "category": "medication: bruises",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपके परिवार में खून से संबंधित कोई बीमारी (जैसे हीमोफीलिया) है?",
     "en": "Is there a family history of blood disorders like hemophilia?",
-    "category": "bruises",
+    "category": "fa,ily history: bruises",
     "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपको हाल ही में कमजोरी, थकान या चक्कर जैसा महसूस हो रहा है?",
     "en": "Have you recently been feeling weak, tired, or dizzy?",
-    "category": "bruises",
-    "symptom": None,
+    "category": "weakness",
+    "symptom": "weaknesss",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपके शरीर पर बने निशान दर्दनाक या सूजे हुए हैं?",
     "en": "Are the bruises on your body painful or swollen?",
-    "category": "bruises",
+    "category": "pain: bruises",
     "symptom": None,
     "risk_factor": False,
   },
@@ -5806,82 +5501,69 @@ symptom_followup_questions = {
   {
     "hi": "क्या ठंडी जगह में रहने से आपके हाथ या पैर सुन्न हो जाते हैं या रंग बदलते हैं?",
     "en": "Do your hands or feet become numb or change color when exposed to cold?",
-    "category": "cold intolerance",
+    "category": "numbness: cold",
     "symptom": "extremity response to cold",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको ठंड में थकान, कमजोरी या मानसिक भ्रम जैसी समस्याएं होती हैं?",
     "en": "Do you experience fatigue, weakness, or mental fog in cold environments?",
-    "category": "cold intolerance",
-    "symptom": "cold-related fatigue or confusion",
+    "category": "weakness",
+    "symptom": "weakness",
     "risk_factor": False,
   },
-{
-  "hi": "क्या आप ठंड से बचने के लिए सामान्य से अधिक गर्म कपड़े पहनते हैं?",
-  "en": "Do you find yourself needing to wear more layers or warmer clothing than others to stay comfortable in the cold?",
-  "category": "cold intolerance",
-  "symptom": "excessive need for warmth",
-  "risk_factor": False,
-},
+
 {
   "hi": "क्या ठंड के कारण आपकी नींद में खलल पड़ता है या आप रात में जाग जाते हैं?",
   "en": "Does cold interfere with your sleep or cause you to wake up during the night?",
-  "category": "cold intolerance",
-  "symptom": "sleep disruption due to cold",
+  "category": "sleep issue",
+  "symptom": "sleep issue",
   "risk_factor": False,
 },
   
-{
-    "hi": "क्या आपके शरीर का तापमान दूसरों की तुलना में जल्दी कम हो जाता है?",
-    "en": "Does your body temperature drop more quickly than others in cold conditions?",
-    "category": "cold intolerance",
-    "symptom": "rapid drop in body temperature",
-    "risk_factor": False,
-  },
 ],
 
 "goiter": [
   {
     "hi": "क्या आपकी गर्दन के सामने किसी प्रकार की सूजन या उभार महसूस हो रहा है?",
     "en": "Do you feel any swelling or lump in the front of your neck?",
-    "category": "goiter",
-    "symptom": "neck swelling or lump",
+    "category": "swelling",
+    "symptom": None,
     "risk_factor":False,
   },
   {
     "hi": "क्या आपको निगलने या सांस लेने में कठिनाई हो रही है?",
     "en": "Are you experiencing difficulty in swallowing or breathing?",
-    "category": "goiter",
-    "symptom": "difficulty swallowing or breathing",
+    "category": "difficulty swallowing",
+    "symptom": "difficulty swallowing",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपकी आवाज़ भारी या कर्कश हो गई है?",
     "en": "Has your voice become hoarse or rough?",
-    "category": "goiter",
+    "category": "voice coarse",
     "symptom": "hoarseness of voice",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको थकान, ठंड सहन करने में कठिनाई, या वजन बढ़ने जैसी समस्याएं हैं?",
     "en": "Do you experience fatigue, difficulty tolerating cold, or unexplained weight gain?",
-    "category": "goiter",
-    "symptom": "hypothyroid symptoms",
+    "category": "faigue",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपके खान-पान में आयोडीन की कमी है या आप ऐसे क्षेत्र में रहते हैं जहाँ आयोडीन की कमी आम है?",
     "en": "Do you have an iodine-deficient diet or live in an area where iodine deficiency is common?",
-    "category": "goiter",
-    "symptom": "iodine deficiency",
+    "category": "idoine",
+    "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपके परिवार में किसी को थायरॉइड या गले की सूजन से संबंधित समस्या रही है?",
     "en": "Is there a family history of thyroid disorders or neck swelling?",
-    "category": "goiter",
-    "symptom": "family history",
+    "category": "family history: goiter",
+    "symptom": None,
     "risk_factor": True,
   },
 ],
@@ -5980,56 +5662,56 @@ symptom_followup_questions = {
     "hi": "क्या आपकी माहवारी (periods) अनियमित है या छूट रही है?",
     "en": "Is your menstrual cycle irregular or missing?",
     "category": "female_reproductive_issues",
-    "symptom": "female issues",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको माहवारी के दौरान अत्यधिक रक्तस्राव या दर्द होता है?",
     "en": "Do you experience heavy bleeding or severe pain during periods?",
-    "category": "female_reproductive_issues",
-    "symptom": "heavy or painful periods",
+    "category": "blood: female",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको योनि से असामान्य स्राव, जलन या खुजली होती है?",
     "en": "Are you experiencing abnormal vaginal discharge, burning, or itching?",
-    "category": "female_reproductive_issues",
+    "category": "itching: female",
     "symptom": "vaginal discharge or irritation",
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको संभोग के दौरान दर्द होता है?",
     "en": "Do you experience pain during sexual intercourse?",
-    "category": "female_reproductive_issues",
-    "symptom": "painful intercourse",
+    "category": "pain: intercourse",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको अचानक वजन बढ़ने, मुंहासे, या चेहरे/शरीर पर अत्यधिक बालों की समस्या है?",
     "en": "Have you noticed sudden weight gain, acne, or excessive hair growth on the face/body?",
-    "category": "female_reproductive_issues",
-    "symptom": "PCOS-like symptoms",
+    "category": "weight gain",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपको बार-बार गर्भपात का अनुभव हुआ है?",
     "en": "Have you experienced repeated miscarriages?",
     "category": "female_reproductive_issues",
-    "symptom": "recurrent miscarriage",
+    "symptom": None,
     "risk_factor": False,
   },
   {
     "hi": "क्या आपके परिवार में किसी को प्रजनन संबंधी समस्याएं रही हैं?",
     "en": "Is there a family history of reproductive health issues?",
     "category": "female_reproductive_issues",
-    "symptom": "family history",
+    "symptom": None,
     "risk_factor": True,
   },
   {
     "hi": "क्या आपने कोई प्रसवपूर्व संक्रमण, पेल्विक सर्जरी, या गर्भाशय से संबंधित कोई समस्या झेली है?",
     "en": "Have you had any infections during pregnancy, pelvic surgeries, or uterine problems?",
     "category": "female_reproductive_issues",
-    "symptom": "pregnancy or uterine history",
+    "symptom": None,
     "risk_factor": True,
   },
 ],
@@ -6089,9 +5771,17 @@ symptom_followup_questions = {
     {
         "hi": "आपरेशन कब हुई थी?",
         "en": "When was the operation done?",
-        "category": "procedure_details",
-        "symptom": "duration",
+        "category": "duration: operation",
+        "symptom": None,
         "risk_factor": False
+    },
+
+    {
+        "hi": "क्या ऑपरेशन के बाद कोई तकलीफ या संक्रमण हुआ है?",
+        "en": "Have you experienced any discomfort or infection after the operation?",
+        "category": "operation post complications",
+        "symptom": None,
+        "risk_factor": True,
     },
 ],
 
@@ -6099,22 +5789,22 @@ symptom_followup_questions = {
   {
     "hi": "आप एक दिन में कितनी बार लात्रीन जाते हैं?",
     "en": "How many times are you going to the latrine in a day?",
-    "category": "frequency_of_latrine_visits",
-    "symptom": "frequency",
+    "category": "frequency: latrine",
+    "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "क्या आपको लात्रीन जाने में दर्द या जलन महसूस हो रही है?",
     "en": "Are you experiencing pain or burning while using the latrine?",
-    "category": "pain_burning",
+    "category": "pain: urinating",
     "symptom": "pain during latrine",
     "risk_factor": False
   },
   {
     "hi": "क्या आपको लात्रीन के बाद उल्टी या जी मिचलाना का अनुभव हो रहा है?",
     "en": "Are you experiencing nausea or vomiting after using the latrine?",
-    "category": "latrine_nausea_vomiting",
-    "symptom": "Nausea or vomiting",
+    "category": "nausea, vomiting",
+    "symptom": "nausea or vomiting",
     "risk_factor": False
   },
   
@@ -6126,15 +5816,15 @@ symptom_followup_questions = {
     {
         "hi": "क्या ये छाले जलने, रगड़ या एलर्जी के बाद आए हैं?",
         "en": "Did the blisters appear after a burn, friction, or an allergy?",
-        "category": "blisters_cause",
-        "symptom": "Blisters due to irritation",
+        "category": "cause: blister",
+        "symptom": "blister",
         "risk_factor": False
     },
     {
         "hi": "क्या छाले दर्दनाक या खुजली वाले हैं?",
         "en": "Are the blisters painful or itchy?",
-        "category": "blisters_pain_itch",
-        "symptom": "Painful or itchy blisters",
+        "category": "pain: blister",
+        "symptom": "pain",
         "risk_factor": False
     },
 
@@ -6153,42 +5843,42 @@ symptom_followup_questions = {
       "hi": "क्या आपको पेट के ऊपरी दाएं हिस्से में दर्द या भारीपन महसूस होता है?",
       "en": "Do you feel pain or heaviness in the upper right side of your abdomen?",
       "category": "upper_abdominal_discomfort",
-      "symptom": "Upper abdominal discomfort",
+      "symptom": "upper stomach pain",
       "risk_factor": False
     },
     {
       "hi": "क्या आपको लगातार थकान महसूस होती है?",
       "en": "Do you feel persistent fatigue?",
-      "category": "persistent_fatigue",
-      "symptom": "Fatigue",
+      "category": "fatigue",
+      "symptom": "fatigue",
       "risk_factor": False
     },
     {
       "hi": "क्या आप नियमित रूप से शराब का सेवन करते हैं?",
       "en": "Do you consume alcohol regularly?",
-      "category": "alcohol_consumption",
-      "symptom": "Alcohol use",
+      "category": "alcohol",
+      "symptom": None,
       "risk_factor": True
     },
     {
       "hi": "क्या आपको मधुमेह (डायबिटीज़) है?",
       "en": "Do you have diabetes?",
       "category": "diabetes",
-      "symptom": "Diabetes",
+      "symptom": "diabetes",
       "risk_factor": True
     },
     {
       "hi": "क्या आपका वज़न अधिक है या आप मोटापे से ग्रस्त हैं?",
       "en": "Are you overweight or obese?",
       "category": "obesity",
-      "symptom": "Obesity",
+      "symptom": "obesity",
       "risk_factor": True
     },
     {
       "hi": "क्या आपके परिवार में किसी को लिवर की बीमारी रही है?",
       "en": "Is there a history of liver disease in your family?",
-      "category": "family_history_liver_disease",
-      "symptom": "Family history of liver disease",
+      "category": "family history: liver issue",
+      "symptom": None,
       "risk_factor": True
     },
   ],
@@ -6197,53 +5887,72 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपको पेट या कमर में कोई उभार या सूजन दिख रही है?",
     "en": "Do you notice any bulge or swelling in your abdomen or groin area?",
-    "category": "visible_bulge",
-    "symptom": "Visible bulge/swelling",
+    "category": "swelling: stomach",
+    "symptom": None,
     "risk_factor": False
   },  
   {
     "hi": "क्या आपको कब्ज़, गैस या मल त्याग में कोई समस्या हो रही है?",
     "en": "Are you experiencing constipation, gas, or difficulty passing stool?",
-    "category": "digestive_issues",
-    "symptom": "Digestive problems",
+    "category": "constipation",
+    "symptom": "constipation",
     "risk_factor": False
   },
   {
     "hi": "क्या आपको पहले किसी प्रकार का हर्निया हुआ है या उसका ऑपरेशन हुआ है?",
     "en": "Have you had a hernia before or undergone hernia surgery?",
-    "category": "history_of_hernia",
-    "symptom": "Past hernia or surgery",
+    "category": "history: hernia operation",
+    "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "क्या आपका काम भारी सामान उठाने से जुड़ा हुआ है?",
     "en": "Does your work involve lifting heavy objects?",
-    "category": "heavy_lifting_occupation",
-    "symptom": "Occupation-related risk",
+    "category": "activity impact: hernia",
+    "symptom": None,
     "risk_factor": False
   }
 ],
+
+	"animal bite": [
+  {
+    "hi": "आपको कब काटा गया?",
+    "en": "When did you get bitten?",
+    "category": "duration: animal bite",
+    "symptom": "animal bite",
+    "risk_factor": False
+  }, 
+
+    {
+    "hi": "क्या आपने वैक्सीन लगवाया है?",
+    "en": "Did you take a vaccine yet?",
+    "category": "medication",
+    "symptom": None,
+    "risk_factor": False
+  }, 
+
+  ],
 	
 "appendicitis": [
   {
     "hi": "क्या आपको पेट के नाभि के पास तीव्र दर्द हो रहा है जो बाद में दाहिने निचले हिस्से में चला जाता है?",
     "en": "Are you experiencing sharp pain near your navel that later shifts to the lower right side of your abdomen?",
-    "category": "pain_location",
-    "symptom": "Pain location and migration",
+    "category": "location: appendicitus",
+    "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "क्या आपको भूख कम लग रही है?",
     "en": "Are you experiencing loss of appetite?",
-    "category": "loss_of_appetite",
-    "symptom": "Loss of appetite",
+    "category": "loss of appetite",
+    "symptom": "loss of appetite",
     "risk_factor": False
   },
   {
     "hi": "क्या आपको पेट के निचले हिस्से में दबाव या सूजन महसूस हो रही है?",
     "en": "Are you experiencing tenderness or swelling in the lower abdomen?",
-    "category": "tenderness_swelling",
-    "symptom": "Tenderness or swelling",
+    "category": "swelling: stomach",
+    "symptom": None,
     "risk_factor": False
   },
   {
@@ -6265,15 +5974,15 @@ symptom_followup_questions = {
   {
     "hi": "क्या पेट दर्द भोजन करने के बाद या रात के समय अधिक होता है?",
     "en": "Does the abdominal pain get worse after eating or at night?",
-    "category": "pain_timing",
-    "symptom": "Pain after eating or at night",
+    "category": "instance: stomach pain",
+    "symptom": None,
     "risk_factor": False
   },
   {
     "hi": "क्या आपको उल्टी हो रही है?",
     "en": "Are you experiencing vomiting?",
-    "category": "nausea_vomiting",
-    "symptom": "Nausea or vomiting",
+    "category": "nausea or vomiting",
+    "symptom": "Nausea",
     "risk_factor": False
   },
   {
@@ -6289,8 +5998,8 @@ symptom_followup_questions = {
     {
       "hi": "क्या आपको त्वचा पर रिंगवर्म (Ringworm) के कारण लाल चकत्ते का अनुभव हो रहा है?",
       "en": "Are you experiencing red patches on your skin due to ringworm?",
-      "category": "skin_rash",
-      "symptom": "red patches",
+      "category": "skin rash",
+      "symptom": None,
       "risk_factor": False
     },
     {
@@ -6304,14 +6013,14 @@ symptom_followup_questions = {
       "hi": "क्या रिंगवर्म (Ringworm) के चकत्तों का आकार बढ़ रहा है?",
       "en": "Is the size of the patches from ringworm increasing?",
       "category": "patch_growth",
-      "symptom": "patch growth",
+      "symptom": None,
       "risk_factor": False
     },
     {
       "hi": "क्या रिंगवर्म (Ringworm) के चकत्तों के अंदर कोई गहरे धब्बे या गोलाकार निशान बन रहे हैं?",
       "en": "Are there any dark spots or circular marks inside the patches from ringworm?",
       "category": "circular_marks",
-      "symptom": "circular marks",
+      "symptom": None,
       "risk_factor": False
     },
 ],
@@ -6324,30 +6033,30 @@ symptom_followup_questions = {
     {
         "hi": "आपको पहली बार हृदय रोग का निदान कब किया गया था?",
         "en": "When were you first diagnosed with a heart condition?",
-        "category": "diagnosis_timing",
-        "symptom": "cardiac_surgery",
+        "category": "duration: cardiac surgery",
+        "symptom": "cardiac surgery",
         "risk_factor": False
     },
     {
         "hi": "आपको किस प्रकार का हृदय रोग बताया गया है?",
         "en": "What type of heart disease have you been diagnosed with?",
-        "category": "diagnosis_type",
-        "symptom": "cardiac_surgery",
+        "category": "heart issue",
+        "symptom": "heart disease",
         "risk_factor": False
     },
 
     {
         "hi": "क्या ये लक्षण चलने, सीढ़ी चढ़ने या मेहनत के बाद बढ़ जाते हैं?",
         "en": "Do these symptoms get worse with walking, climbing stairs or exertion?",
-        "category": "symptom_worsening",
-        "symptom": "cardiac_surgery",
+        "category": "impact",
+        "symptom": None,
         "risk_factor": False
     },
     {
         "hi": "क्या लक्षणों की तीव्रता समय के साथ बदली है?",
         "en": "Have the severity of your symptoms changed over time?",
-        "category": "progression",
-        "symptom": "cardiac_surgery",
+        "category": "type: cardiac",
+        "symptom": None,
         "risk_factor": False
     },
 
@@ -6355,15 +6064,15 @@ symptom_followup_questions = {
     {
         "hi": "क्या आपने कोई हृदय सर्जरी करवाई है जैसे बायपास, स्टेंटिंग या वाल्व रिप्लेसमेंट?",
         "en": "Have you undergone any heart procedures like bypass, stenting, or valve replacement?",
-        "category": "procedure_history",
-        "symptom": "cardiac_surgery",
+        "category": "history: cardiac surgery",
+        "symptom": None,
         "risk_factor": False
     },
     {
         "hi": "सर्जरी कब हुई थी?",
         "en": "When was the surgery done?",
-        "category": "procedure_details",
-        "symptom": "cardiac_surgery",
+        "category": "duration: cardiac surgery",
+        "symptom": None,
         "risk_factor": False
     },
 
@@ -6371,17 +6080,41 @@ symptom_followup_questions = {
     {
         "hi": "क्या आपको उच्च रक्तचाप, मधुमेह, या कोलेस्ट्रॉल की समस्या है?",
         "en": "Do you have hypertension, diabetes, or high cholesterol (dyslipidemia)?",
-        "category": "risk_factors",
-        "symptom": "cardiac_surgery",
+        "category": "diabetes",
+        "symptom": "diabetes",
         "risk_factor": True
     },
     {
         "hi": "क्या आपके परिवार में किसी को दिल की बीमारी रही है?",
         "en": "Does anyone in your family have a history of heart disease?",
-        "category": "family_history",
-        "symptom": "cardiac_surgery",
+        "category": "family history: heart",
+        "symptom": None,
         "risk_factor": True
     }
+],
+
+"hydrocele": [
+    {
+    "hi": "क्या कोई चोट या सर्जरी (जैसे हर्निया ऑपरेशन) पहले हुई है?",
+    "en": "Have you had any injury, infection, or surgery (such as hernia repair) in the past?",
+    "category": "history: hydrocele",
+    "symptom": "operation",
+    "risk_factor": True
+  },
+    {
+    "hi": "क्या अंडकोष में सूजन या फुलाव महसूस हो रहा है?",
+    "en": "Do you notice swelling or enlargement in the scrotum?",
+    "category": "swelling",
+    "symptom": "swelling",
+    "risk_factor": False
+  },
+  {
+    "hi": "क्या सूजन धीरे-धीरे बढ़ रही है या अचानक आई है?",
+    "en": "Did the swelling develop gradually or appear suddenly?",
+    "category": "swelling: hydrocele",
+    "symptom": None,
+    "risk_factor": False
+  },
 ],
 
 "neurosurgery" : [
@@ -6390,15 +6123,15 @@ symptom_followup_questions = {
     {
         "hi": "क्या आपको कभी स्ट्रोक हुआ है?",
         "en": "Any history of stroke or TIA (transient ischemic attack)?",
-        "category": "stroke_history",
-        "symptom": "neurosurgery",
+        "category": "stroke",
+        "symptom": "stroke",
         "risk_factor": True
     },
     {
         "hi": "क्या आपके मस्तिष्क या रीढ़ की कभी सर्जरी हुई है?",
         "en": "Have you ever had brain or spinal surgery?",
-        "category": "past_neurosurgery",
-        "symptom": "neurosurgery",
+        "category": "history: surgery",
+        "symptom": None,
         "risk_factor": False
     },
 
@@ -6406,8 +6139,8 @@ symptom_followup_questions = {
     {
         "hi": "क्या आप नशे की दवाओं, शराब, या मानसिक रोगों की दवाओं का सेवन करते हैं?",
         "en": "Any history of sedatives, alcohol, or psychiatric drug use?",
-        "category": "drug_use_history",
-        "symptom": "neurosurgery",
+        "category": "alcohol",
+        "symptom": None,
         "risk_factor": True
     },
 
@@ -6415,8 +6148,8 @@ symptom_followup_questions = {
     {
         "hi": "क्या आपको हाल ही में कोई टीका लगाया गया है?",
         "en": "Have you had any recent vaccination?",
-        "category": "recent_vaccination",
-        "symptom": "neurosurgery",
+        "category": "vaccination",
+        "symptom": None,
         "risk_factor": True
     },
 
@@ -6424,8 +6157,8 @@ symptom_followup_questions = {
     {
         "hi": "क्या आपके सिर या मस्तिष्क की कोई सर्जरी हुई है?",
         "en": "Have you undergone any procedures on the head or brain?",
-        "category": "surgical_history",
-        "symptom": "neurosurgery",
+        "category": "history: operation",
+        "symptom": None,
         "risk_factor": False
     },
 
@@ -6433,17 +6166,19 @@ symptom_followup_questions = {
     {
         "hi": "क्या आपको डिप्रेशन, एंग्जायटी या मानसिक रोग रहा है?",
         "en": "Any history of depression, anxiety, or psychiatric illness?",
-        "category": "psychiatric_history",
-        "symptom": "neurosurgery",
+        "category": "mental health change",
+        "symptom": None,
         "risk_factor": True
     },
     {
         "hi": "क्या आपने कभी मानसिक रोग की दवा ली है?",
         "en": "Have you ever taken psychiatric medications?",
-        "category": "psychiatric_medication",
-        "symptom": "neurosurgery",
+        "category": "medication: psychiatric",
+        "symptom": None,
         "risk_factor": True
     }
+
+
 ],
 
 
@@ -7128,8 +6863,6 @@ trigger_keywords = {
     'discharge': ['discharge', 'leakage', 'fluid']
   }
 
-
-    # add ear / skin / etc…
 }
 
 
@@ -7140,14 +6873,14 @@ body_part_followup_questions = {
       {
         "hi": "क्या चोट लगने के बाद दाँत में दर्द है?",
         "en": "Is there pain in the tooth after the injury?",
-        "category": "tooth_injury_pain",
-        "symptom": None,
+        "category": "pain: tooth",
+        "symptom": "tooth pain",
         "risk_factor": False
       },
       {
         "hi": "चोट कैसे लगी थी?",
         "en": "How did the injury happen?",
-        "category": "tooth_injury_cause",
+        "category": "cause: tooth injury",
         "symptom": None,
         "risk_factor": False
       },
@@ -7163,21 +6896,21 @@ body_part_followup_questions = {
       {
         "hi": "क्या दाँत या मसूड़े छूने पर संवेदनशील लग रहे हैं?",
         "en": "Are your teeth or gums feeling sensitive to touch?",
-        "category": "tooth_sensitivity",
+        "category": "tooth sensitivity",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या गर्म या ठंडा खाने पर दर्द होता है?",
         "en": "Do you feel pain when eating or drinking something hot or cold?",
-        "category": "tooth_sensitivity_temp",
+        "category": "pain: eating",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या मीठा खाने पर भी संवेदनशीलता होती है?",
         "en": "Do you feel sensitivity when eating sweets?",
-        "category": "tooth_sensitivity_sweets",
+        "category": "sensitive: eating",
         "symptom": None,
         "risk_factor": False
       }
@@ -7186,35 +6919,35 @@ body_part_followup_questions = {
       {
         "hi": "क्या आप दांत के दर्द (तीव्र, धड़कते, लगातार या रुक-रुक कर) का वर्णन कर सकते हैं?",
         "en": "Can you describe the tooth pain (sharp, throbbing, constant, or intermittent)?",
-        "category": "tooth pain",
+        "category": "type: tooth pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या यह दर्द गर्म, ठंडा, या मीठे खाद्य या पेय पदार्थों से उत्तेजित होता है?",
         "en": "Is the pain triggered by hot, cold, or sweet foods or drinks?",
-        "category": "tooth pain",
+        "category": "trigger: tooth pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपने हाल ही में दंत चिकित्सा कार्य या दांत में किसी प्रकार का आघात अनुभव किया है?",
         "en": "Have you had any recent dental work or trauma to the tooth?",
-        "category": "tooth pain",
+        "category": "history: tooth",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको चबाने या काटने में कोई कठिनाई हो रही है?",
         "en": "Are you having difficulty chewing or biting down?",
-        "category": "tooth pain",
+        "category": "chewing issue",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको कीड़े, मसूड़ों की बीमारी, या अन्य दंत समस्याओं का इतिहास है?",
         "en": "Have you had a history of cavities, gum disease, or other dental issues?",
-        "category": "tooth pain",
+        "category": "history: cavity",
         "symptom": None,
         "risk_factor": False
       }
@@ -7223,35 +6956,28 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपके दांत में दरार, टूट-फूट, या चिप लगी हुई है?",
         "en": "Do you have a crack, fracture, or chip in your tooth?",
-        "category": "broken tooth",
+        "category": "tooth fracture",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप चबाते समय दांत में दर्द या संवेदनशीलता महसूस कर रहे हैं?",
         "en": "Do you feel pain or sensitivity in the tooth while chewing?",
-        "category": "broken tooth",
+        "category": "chewing issue",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपका टूटा हुआ दांत खाने, पीने या बोलने में परेशानी पैदा कर रहा है?",
         "en": "Is the broken tooth causing difficulty while eating, drinking, or speaking?",
-        "category": "broken tooth",
-        "symptom": None,
-        "risk_factor": False
-      },
-      {
-        "hi": "क्या आपने हाल ही में किसी दुर्घटना, गिरावट या कठोर चीज काटने के बाद दांत टूटने का अनुभव किया है?",
-        "en": "Did the tooth break after an accident, fall, or biting something hard?",
-        "category": "broken tooth",
+        "category": "eating issue",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपके पास पहले से दांत क्षय (कीड़ा लगना) या कमजोर दांतों का इतिहास है?",
         "en": "Do you have a history of tooth decay or weakened teeth?",
-        "category": "broken tooth",
+        "category": "history: tooth decay",
         "symptom": None,
         "risk_factor": False
       }
@@ -7267,28 +6993,28 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपको मीठे, गर्म या ठंडे खाद्य पदार्थों से दांत में संवेदनशीलता या दर्द होता है?",
         "en": "Do you feel sensitivity or pain in your tooth when eating sweet, hot, or cold foods?",
-        "category": "tooth decay",
+        "category": "eating issue",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपके मुंह से दुर्गंध आती है या कोई खराब स्वाद बना रहता है?",
         "en": "Do you experience bad breath or a persistent unpleasant taste in your mouth?",
-        "category": "tooth decay",
+        "category": "bad breath",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपके मसूड़े सूजे हुए हैं या उनमें से खून आता है?",
         "en": "Are your gums swollen or do they bleed?",
-        "category": "tooth decay",
+        "category": "gum swollen",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप नियमित रूप से मीठे खाद्य पदार्थ खाते हैं या दिन में कई बार स्नैक्स लेते हैं?",
         "en": "Do you frequently eat sugary foods or snack multiple times a day?",
-        "category": "tooth decay",
+        "category": "diet: snack",
         "symptom": None,
         "risk_factor": False
       }
@@ -7297,14 +7023,14 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपके दाँतों में झुनझुनाहट के साथ दर्द भी होता है?",
         "en": "Do you experience pain along with tingling in your teeth?",
-        "category": "teeth_tingling_pain",
+        "category": "pain: tooth",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या दाँतों में झुनझुनाहट ठंडा या गर्म खाने पर बढ़ जाती है?",
         "en": "Does the tingling in your teeth worsen with hot or cold foods?",
-        "category": "teeth_tingling_sensitivity",
+        "category": "eating issue",
         "symptom": None,
         "risk_factor": False
       }
@@ -7324,14 +7050,14 @@ body_part_followup_questions = {
       {
         "hi": "कौन सी टांग या टांगे घायल हैं?",
         "en": "Which leg or legs are injured?",
-        "category": "leg_injury_location",
+        "category": "location: leg pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या चोट के बाद प्रभावित क्षेत्र में सूजन, रक्तस्राव या नीलेपन की समस्या हो रही है?",
         "en": "After the injury, are you experiencing swelling, bleeding, or bruising in the affected area?",
-        "category": "general injury",
+        "category": "leg swelling",
         "symptom": None,
         "risk_factor": False
       }
@@ -7340,31 +7066,25 @@ body_part_followup_questions = {
       {
         "hi": "क्या  पैर में दर्द चलते समय बढ़ता है या आराम करते समय भी रहता है?",
         "en": "Does the pain increase while walking or is it constant?",
-        "category": "leg_pain_detail",
+        "category": "activity impact: leg pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण पैर में दर्द हुआ?",
         "en": "Was there any specific injury or event that triggered the leg pain?",
-        "category": "leg pain",
+        "category": "cause: leg pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "दर्द आपके पैर के किस हिस्से में महसूस हो रहा है? (जांघ, घुटना, पिंडली, पंजा)",
         "en": "Where exactly in the leg do you feel the pain (thigh, knee, calf, foot)?",
-        "category": "leg pain",
+        "category": "location: leg pain",
         "symptom": None,
         "risk_factor": False
       },
-      {
-        "hi": "क्या चलने, दौड़ने या खड़े होने से पैर का दर्द बढ़ जाता है?",
-        "en": "Does the leg pain get worse with walking, running, or standing?",
-        "category": "leg pain",
-        "symptom": None,
-        "risk_factor": False
-      },
+   
       {
         "hi": "क्या आपने पैरों में सूजन, लालिमा या गर्मी महसूस की है?",
         "en": "Have you noticed any swelling, redness, or warmth in the leg?",
@@ -7375,35 +7095,35 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपने पहले अपने पैरों में किसी चोट या समस्या का अनुभव किया है?",
         "en": "Have you had any previous injuries or problems with your legs?",
-        "category": "leg pain",
+        "category": "leg swelling",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप पैर के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
         "en": "Can you describe the leg pain? (Sharp, dull, cramping, burning, etc.)",
-        "category": "leg pain",
+        "category": "type: leg pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या पैर में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
         "en": "Does the leg pain occur constantly, or does it come and go?",
-        "category": "leg pain",
+        "category": "instance: leg pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या दर्द पैर के अन्य हिस्सों तक फैलता है (जैसे कि जांघ से पंजे तक)?",
         "en": "Does the pain radiate to other parts of the leg (e.g., from the thigh to the foot)?",
-        "category": "leg pain",
+        "category": "location: leg pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको पैरों में कमजोरी, सुन्नता या झुनझुनी महसूस होती है?",
         "en": "Do you feel weakness, numbness, or tingling in the leg?",
-        "category": "leg pain",
+        "category": "leg weakness",
         "symptom": None,
         "risk_factor": False
       }
@@ -7464,8 +7184,8 @@ body_part_followup_questions = {
       {
         "hi": "क्या पैर में कोई गहरी चोट लगी है जिससे खून बह रहा है?",
         "en": "Is there a deep wound in your leg that is causing bleeding?",
-        "category": "leg_bleeding_wound",
-        "symptom": None,
+        "category": "wound",
+        "symptom": "wound",
         "risk_factor": False
       }
     ],
@@ -7473,8 +7193,8 @@ body_part_followup_questions = {
     {
       "hi": "क्या आपके पैर के फोड़े में दर्द और सूजन हो रही है?", 
       "en": "Are you experiencing pain and swelling in the boil on your leg?",
-      "category": "pain_swelling_with_boils",
-      "symptom": None,
+      "category": "swelling: leg",
+      "symptom": "swelling",
       "risk_factor": False
     },
     {
@@ -7593,8 +7313,8 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपको धुंधला दिखता है जब आप दूर या पास की चीजें देखते हैं?",
         "en": "Do things appear blurry when you look at objects far away or up close?",
-        "category": "eye_weakness_blurry_vision",
-        "symptom": None,
+        "category": "blurred vision",
+        "symptom": "blurred vision",
         "risk_factor": False
       },
       {
@@ -7655,35 +7375,35 @@ body_part_followup_questions = {
       {
         "hi": "क्या दर्द एक आंख में है या दोनों आंखों में?",
         "en": "Is the pain in one eye or both eyes?",
-        "category": "eye pain",
+        "category": "location: eye pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको हाल ही में आंखों में चोट या आघात लगा है?",
         "en": "Have you had any recent eye injuries or trauma?",
-        "category": "eye pain",
+        "category": "history: eye pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको धुंआ, रसायन, या अन्य उत्तेजकों का संपर्क हुआ है?",
         "en": "Have you been exposed to smoke, chemicals, or other irritants?",
-        "category": "eye pain",
+        "category": "smoke exposure",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपकी आंखें लाल हैं या उनमें सूजन है?",
         "en": "Are your eyes red or swollen?",
-        "category": "eye pain",
+        "category": "red eye",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपकी दृष्टि धुंधली हो गई है या आपको रोशनी से संवेदनशीलता महसूस होती है?",
         "en": "Has your vision become blurry or are you experiencing sensitivity to light?",
-        "category": "eye pain",
+        "category": "blurred vision",
         "symptom": None,
         "risk_factor": False
       }
@@ -7692,7 +7412,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या सूजी हुई आंख में दर्द या गर्माहट महसूस हो रही है?",
         "en": "Is the swollen eye accompanied by pain or warmth?",
-        "category": "eye_swelling_signs",
+        "category": "eye pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -7701,7 +7421,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आंखों को घुमाने पर दबाव या भारीपन और बढ़ जाता है?",
         "en": "Does the crushing pressure in your eye worsen when you move your eyes?",
-        "category": "eye_crushing_movement_relation",
+        "category": "eye movement",
         "symptom": None,
         "risk_factor": False
       }
@@ -7710,7 +7430,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपको पास की चीज़ें देखने में परेशानी होती है या दूर की?",
         "en": "Do you have trouble seeing things up close or far away?",
-        "category": "eye_sight_near_far",
+        "category": "blurred vision",
         "symptom": None,
         "risk_factor": False
       },
@@ -7758,14 +7478,14 @@ body_part_followup_questions = {
       {
         "hi": "क्या दर्द एक हाथ में है या दोनों हाथों में?",
         "en": "Is the pain in one hand or both hands?",
-        "category": "hand pain",
-        "symptom": None,
+        "category": "location: hand pain",
+        "symptom": "hand pain",
         "risk_factor": False
       },
       {
         "hi": "क्या आपको हाल ही में हाथों में चोट या आघात लगा है?",
         "en": "Have you had any recent injuries or trauma to your hands?",
-        "category": "hand pain",
+        "category": "history: hand pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -7843,7 +7563,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या हाथों की त्वचा में खुजली या जलन होती है?",
         "en": "Do you experience itching or irritation on the hands?",
-        "category": "hand dryness",
+        "category": "itching: hand dryness",
         "symptom": None,
         "risk_factor": False
       },
@@ -7968,34 +7688,38 @@ body_part_followup_questions = {
         "hi": "क्या आपके बांह का दर्द लगातार बना रहता है?",
         "en": "Is the pain in your arm persistent?",
         "category": "arm_pain_detail",
-        "symptom": "frequency",
+        "symptom": None,
         "risk_factor": False
       },
-      {
-        "hi": "क्या दर्द एक बांह में है या दोनों में?",
-        "en": "Is the pain in one arm or both arms?",
-        "category": "arm pain",
-        "symptom": "location",
-        "risk_factor": False
-      },
-      {
-        "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
-        "en": "Is the arm pain sharp, dull, or throbbing?",
-        "category": "arm pain",
-        "symptom": "sharp arm ache",
-        "risk_factor": False
-      },
+
       {
         "hi": "क्या आपको अपने बांह या कंधे को हिलाने में कठिनाई हो रही है?",
         "en": "Do you have difficulty moving your arm or shoulder?",
-        "category": "arm pain",
-        "symptom": "mobility discomfort",
+        "category": "activity impact: arm pain",
+        "symptom": None,
         "risk_factor": False
       },
+
+      {
+        "hi": "क्या बांह का दर्द तेज़, सुस्त या धड़कता हुआ है?",
+        "en": "Is the arm pain sharp, dull, or throbbing?",
+        "category": "instance: arm pain",
+        "symptom": "arm pain",
+        "risk_factor": False
+      },
+
+      {
+        "hi": "क्या दर्द एक बांह में है या दोनों में?",
+        "en": "Is the pain in one arm or both arms?",
+        "category": "location: arm pain",
+        "symptom": None,
+        "risk_factor": False
+      },
+      
       {
         "hi": "क्या आपको बांह या हाथों में सुन्नता, झनझनाहट, या कमजोरी का अनुभव हो रहा है?",
         "en": "Are you experiencing any numbness, tingling, or weakness in the arm or hand?",
-        "category": "arm pain",
+        "category": "numbness",
         "symptom": None,
         "risk_factor": False
       }
@@ -8084,7 +7808,7 @@ body_part_followup_questions = {
         "hi": "क्या आपने पहले भी सिर में चोट या बार-बार सिरदर्द की समस्या झेली है?",
         "en": "Have you had previous head injuries or frequent headaches?",
         "category": "head_injury_history",
-        "symptom": "previous head injuries",
+        "symptom": None,
         "risk_factor": False
       }
     ],
@@ -8146,7 +7870,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपको लंबे समय तक चलने, खड़े रहने, या बैठने में परेशानी हो रही है?",
         "en": "Are you having difficulty walking, standing, or sitting for long periods?",
-        "category": "mobility_impairment",
+        "category": "activity impact: back pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -8185,50 +7909,50 @@ body_part_followup_questions = {
       {
         "hi": "पीठ की ऐंठन कहाँ स्थित है (उदाहरण के लिए, निचली पीठ, ऊपरी पीठ, या गर्दन)?",
         "en": "Where is the back spasm located (e.g., lower back, upper back, or neck)?",
-        "category": "back_spasms",
-        "symptom": "location of spasm",
+        "category": "location: back spasm",
+        "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या पीठ की ऐंठन लगातार बनी रहती है, या वे आती-जाती रहती हैं?",
         "en": "Are the back spasms constant, or do they come and go?",
-        "category": "back_spasms",
-        "symptom": "spasm pattern",
+        "category": "type: back_spasm",
+        "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "पीठ की ऐंठन के दौरान दर्द कितना गंभीर होता है? क्या यह तेज़, सुस्त या ऐंठन वाला होता है?",
         "en": "How severe is the pain during the back spasms? Is it sharp, dull, or cramping?",
-        "category": "back_spasms",
-        "symptom": "pain severity and type",
+        "category": "instance: back_spasms",
+        "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या पीठ में ऐंठन कुछ गतिविधियों जैसे उठाने, झुकने या शारीरिक परिश्रम के बाद होती है?",
         "en": "Do the back spasms occur after certain activities, such as lifting, bending, or physical exertion?",
-        "category": "back_spasms",
-        "symptom": "activity-related spasms",
+        "category": "activity impact: backspasm",
+        "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको हाल ही में कोई चोट लगी है, गिर गया है, या खिंचाव आया है जिसके कारण पीठ में ऐंठन हुई हो?",
         "en": "Have you had any recent injuries, falls, or strains that might have triggered the back spasms?",
-        "category": "back_spasms",
-        "symptom": "recent injury or strain",
+        "category": "injury",
+        "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको पीठ से संबंधित कोई पिछला इतिहास है, जैसे हर्नियेटेड डिस्क, गठिया, या डीजनरेटिव डिस्क रोग?",
         "en": "Do you have a history of back problems, such as herniated discs, arthritis, or degenerative disc disease?",
         "category": "back_spasms",
-        "symptom": "history of back problems",
+        "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप वर्तमान में पीठ की ऐंठन के लिए कोई दवा ले रहे हैं या उपचार (जैसे, गर्मी, बर्फ, भौतिक चिकित्सा) का उपयोग कर रहे हैं?",
         "en": "Are you currently taking any medications or using treatments (e.g., heat, ice, physical therapy) for the back spasms?",
-        "category": "back_spasms",
-        "symptom": "medications and treatments",
+        "category": "medication",
+        "symptom": None,
         "risk_factor": False
       }
     ],
@@ -8315,7 +8039,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या छाती में दर्द चलने या सीढ़ियाँ चढ़ने पर बढ़ता है?",
         "en": "Does the chest pain increase when walking or climbing stairs?",
-        "category": "chest_pain_exertion",
+        "category": "activity impact: chest pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -8350,7 +8074,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या छाती का दर्द किसी विशेष गतिविधि के दौरान बढ़ता है?",
         "en": "Does your chest pain increase during any specific activity?",
-        "category": "activity_related_pain",
+        "category": "activity impact: chest pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -8359,15 +8083,15 @@ body_part_followup_questions = {
       {
         "hi": "क्या छाती में कमजोरी या भारीपन के कारण आपको सांस लेने में कठिनाई होती है?",
         "en": "Do you experience difficulty breathing due to weakness or heaviness in the chest?",
-        "category": "chest_weakness_breathing_difficulty",
+        "category": "shortness of breath",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या छाती की कमजोरी के कारण आपको सामान्य काम करने में भी थकावट महसूस होती है?",
         "en": "Does chest weakness cause you to feel fatigued even during routine activities?",
-        "category": "chest_weakness_fatigue",
-        "symptom": None,
+        "category": "weakness",
+        "symptom": "weakness",
         "risk_factor": False
       }
     ],
@@ -8375,8 +8099,8 @@ body_part_followup_questions = {
       {
         "hi": "क्या छाती में असहजता के साथ जी मिचलाना या पसीना भी आता है?",
         "en": "Do you experience nausea or sweating along with the discomfort?",
-        "category": "chest_discomfort_symptoms",
-        "symptom": None,
+        "category": "nausea",
+        "symptom": "nausea",
         "risk_factor": False
       }
     ],
@@ -8454,7 +8178,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या दोनों कलाइयों में दर्द है?",
         "en": "Is the pain in both wrists?",
-        "category": "wrist_pain_location",
+        "category": "location: wrist_pain_location",
         "symptom": None,
         "risk_factor": False
       },
@@ -8468,21 +8192,21 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपकी कलाई के आसपास सूजन या चोट है?",
         "en": "Is there swelling or bruising around the wrist?",
-        "category": "wrist pain",
-        "symptom": None,
+        "category": "swelling: wrist",
+        "symptom": "swelling",
         "risk_factor": False
       },
       {
         "hi": "क्या आपके हाथ या अंगुलियों में सुन्नता या झनझनाहट महसूस हो रही है?",
         "en": "Do you have numbness or tingling in your hand or fingers?",
-        "category": "wrist pain",
+        "category": "numbness: hand",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या कलाई में दर्द लगातार या रुक-रुक कर होता है?",
         "en": "Is the wrist pain constant or intermittent?",
-        "category": "wrist pain",
+        "category": "type: wrist pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -8596,7 +8320,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आप धूम्रपान करते हैं या आपको धुंआ या अन्य उत्तेजकों से संपर्क हुआ है?",
         "en": "Do you smoke or have you been exposed to smoke or other irritants?",
-        "category": "throat pain",
+        "category": "smoking",
         "symptom": None,
         "risk_factor": False
       },
@@ -8707,14 +8431,14 @@ body_part_followup_questions = {
       {
         "hi": "क्या पेट में दर्द खाने के बाद बढ़ता है?",
         "en": "Does the stomach pain increase after eating?",
-        "category": "stomach_pain_after_eating",
+        "category": "diet: stomach_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या दर्द पेट के ऊपरी हिस्से में है या निचले हिस्से में?",
         "en": "Is the pain in the upper part of your abdomen or the lower part?",
-        "category": "stomach_pain_location",
+        "category": "location: stomach_pain_location",
         "symptom": None,
         "risk_factor": False
       },
@@ -8722,34 +8446,34 @@ body_part_followup_questions = {
         "hi": "क्या आपको अन्य कोई लक्षण जैसे कि जी मिचलाना, उल्टी, दस्त, बुखार आदि महसूस हो रहे हैं?",
         "en": "Do you have any other symptoms, such as nausea, vomiting, diarrhea, or fever?",
         "category": "nausea",
-        "symptom": None,
+        "symptom": "nausea",
         "risk_factor": False
       },
       {
         "hi": "क्या पेट दर्द के साथ ऐंठन या चुभन जैसा महसूस होता है?",
         "en": "Does the stomach pain feel like cramping or stabbing?",
-        "category": "stomach_pain_nature",
+        "category": "type: stomach_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप पेट दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, ऐंठन, जलन, आदि)",
         "en": "Can you describe the stomach pain? (Sharp, dull, cramping, burning, etc.)",
-        "category": "stomach ache",
+        "category": "type: stomach ache",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपने हाल ही में कोई असामान्य भोजन खाया है या आपके आहार में कोई बदलाव हुआ है?",
         "en": "Have you eaten anything unusual or had any changes in your diet recently?",
-        "category": "dietary changes",
+        "category": "diet: stomach pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको पाचन समस्याओं का इतिहास है (जैसे कि अम्लता, IBS, अल्सर आदि)?",
         "en": "Do you have a history of digestive problems (e.g., acid reflux, IBS, ulcers)?",
-        "category": "digestive history",
+        "category": "history: stomach",
         "symptom": None,
         "risk_factor": False
       }
@@ -8775,7 +8499,7 @@ body_part_followup_questions = {
         "hi": "क्या पेट में सूजन के साथ गैस या डकार भी होती है?",
         "en": "Do you experience gas or burps along with the bloating?",
         "category": "stomach_bloating_gas",
-        "symptom": None,
+        "symptom": "gas",
         "risk_factor": False
       },
       {
@@ -9029,56 +8753,56 @@ body_part_followup_questions = {
       {
         "hi": "क्या घुटने का दर्द चलने या बैठने पर बढ़ता है?",
         "en": "Does the knee pain worsen while walking or sitting?",
-        "category": "knee_pain_activity",
+        "category": "activity impact: knee pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या कोई विशेष चोट या घटना थी जिसके कारण घुटने में दर्द हुआ?",
         "en": "Was there any specific injury or event that triggered the knee pain?",
-        "category": "knee pain",
+        "category": "cause: knee pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या घुटनों में दर्द लगातार होता रहता है, या आता-जाता रहता है?",
         "en": "Does the knee pain occur constantly, or does it come and go?",
-        "category": "knee pain",
+        "category": "type: knee pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या घुटने के आसपास सूजन, लाली या गर्मी महसूस हो रही है?",
         "en": "Have you noticed any swelling, redness, or warmth around the knee?",
-        "category": "knee pain",
-        "symptom": None,
+        "category": "swelling",
+        "symptom": "swelling",
         "risk_factor": False
       },
       {
         "hi": "क्या आपको घुटने को मोड़ने या सीधा करने में कोई समस्या हो रही है?",
         "en": "Are you having trouble bending or straightening your knee?",
-        "category": "knee pain",
+        "category": "activity impact: knee pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप घुटने के दर्द का वर्णन कर सकते हैं? (तीव्र, सुस्त, दर्द, आदि)",
         "en": "Can you describe the knee pain? (Sharp, dull, aching, etc.)",
-        "category": "knee pain",
+        "category": "type: knee pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "दर्द आपके घुटने के किस हिस्से में महसूस हो रहा है? (सामने, पीछे, किनारे)",
         "en": "Where exactly in the knee do you feel the pain (front, back, sides)?",
-        "category": "knee pain",
+        "category": "location: knee pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या चलने या सीढ़ियाँ चढ़ने जैसी कुछ गतिविधियों से घुटने का दर्द बढ़ जाता है?",
         "en": "Does the knee pain get worse with certain activities, like walking or climbing stairs?",
-        "category": "knee pain",
+        "category": "activity impact: knee pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -9112,7 +8836,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या चोट के बाद चलने में दिक्कत हो रही है?",
         "en": "Are you having difficulty walking after the injury?",
-        "category": "knee_injury_walking_difficulty",
+        "category": "activity impact: knee pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -9128,7 +8852,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या घुटना कमजोर महसूस होता है या चलते समय लड़खड़ाता है?",
         "en": "Does the knee feel weak or give way while walking?",
-        "category": "knee_weakness_instability",
+        "category": "activity impact: knee pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -9164,7 +8888,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या घुटनों में यह अकड़न या दर्द चलने या बैठने पर बढ़ता है?",
         "en": "Does the knee soreness or discomfort increase when walking or sitting?",
-        "category": "knee_soreness_activity",
+        "category": "activity impact: knee pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -9216,7 +8940,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पैर में दर्द चलने या खड़े होने पर बढ़ता है?",
         "en": "Does the foot pain increase while walking or standing?",
-        "category": "foot_pain_activity",
+        "category": "activity impact: foot pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -9251,7 +8975,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या दर्द कुछ गतिविधियों के साथ बढ़ जाता है, जैसे लंबी अवधि तक चलना या खड़ा होना?",
         "en": "Does the pain get worse with certain activities, like walking or standing for long periods?",
-        "category": "foot pain",
+        "category": "activity impact: foot pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -9260,7 +8984,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पैर की कमजोरी के कारण आपको चलने में अस्थिरता महसूस होती है?",
         "en": "Does foot weakness make you feel unsteady while walking?",
-        "category": "foot_weakness_unsteady_walking",
+        "category": "activity impact: foot pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -9321,7 +9045,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पैरों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
         "en": "Do you get foot spasms while walking or during exercise?",
-        "category": "foot_spasm_context",
+        "category": "activity impact: foot pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -9339,7 +9063,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पैर में खून बहने के साथ चलने में दिक्कत हो रही है?",
         "en": "Is the foot bleeding making it difficult to walk?",
-        "category": "foot_bleeding_function",
+        "category": "activity impact: foot pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -9755,42 +9479,42 @@ body_part_followup_questions = {
       {
         "hi": "हड्डी का दर्द कहाँ स्थित है?",
         "en": "Where exactly is the bone pain located?",
-        "category": "bone_pain",
+        "category": "location: bone_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या हड्डी में दर्द लगातार बना रहता है, या आता-जाता रहता है?",
         "en": "Is the bone pain constant, or does it come and go?",
-        "category": "bone_pain",
+        "category": "type: bone_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या हड्डी का दर्द तेज़, सुस्त, धड़क रहा है या दर्द कर रहा है?",
         "en": "Is the bone pain sharp, dull, throbbing, or aching?",
-        "category": "bone_pain",
+        "category": "instance: bone_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या हिलने-डुलने, दबाव पड़ने या कुछ गतिविधियों से हड्डी का दर्द बढ़ जाता है?",
         "en": "Does the bone pain get worse with movement, pressure, or certain activities?",
-        "category": "bone_pain",
+        "category": "activity: bone_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको हाल ही में कोई चोटें, गिरना या दुर्घटनाएं हुई हैं?",
         "en": "Have you had any recent injuries, falls, or accidents?",
-        "category": "bone_pain",
+        "category": "history: bone_pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको प्रभावित क्षेत्र के आसपास सूजन, चोट, या लाली महसूस हो रही है?",
         "en": "Are you experiencing any swelling, bruising, or redness around the affected area?",
-        "category": "bone_pain",
+        "category": "swelling",
         "symptom": None,
         "risk_factor": False
       },
@@ -9894,7 +9618,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या जोड़ों में कमजोरी के कारण चलते वक्त अस्थिरता महसूस होती है?",
         "en": "Does the weakness in the joint cause instability while walking?",
-        "category": "joint_weakness_instability",
+        "category": "activity impact: joint pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -9903,7 +9627,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या चोट के बाद चलने में दिक्कत हो रही है?",
         "en": "Are you having difficulty walking after the injury?",
-        "category": "knee_injury_walking_difficulty",
+        "category": "activity impact: joint pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -10143,7 +9867,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या चोट के बाद चलने में दिक्कत हो रही है?",
         "en": "Are you having difficulty walking after the injury?",
-        "category": "knee_injury_walking_difficulty",
+        "category": "activity impact: muscle pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -10161,7 +9885,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपको मांसपेशियों में ऐंठन चलते समय या व्यायाम करते समय होती है?",
         "en": "Do you experience muscle cramps while walking or exercising?",
-        "category": "muscle_cramps_activity_triggered",
+        "category": "activity impact: muscle cramp",
         "symptom": None,
         "risk_factor": False
       },
@@ -10315,7 +10039,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पेशाब करते समय जलन या दर्द होता है?",
         "en": "Do you experience burning or pain while urinating?",
-        "category": "urinary_pain",
+        "category": "pain: urine",
         "symptom": None,
         "risk_factor": False
       }
@@ -10324,7 +10048,7 @@ body_part_followup_questions = {
       {
         "hi": "दिन में कितनी बार पेशाब करने की जरूरत महसूस होती है?",
         "en": "How many times do you feel the need to urinate in a day?",
-        "category": "urinary_frequency",
+        "category": "frequency: urine",
         "symptom": None,
         "risk_factor": False
       }
@@ -10333,7 +10057,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पेशाब में खून दिखा है?",
         "en": "Have you noticed any blood in your urine?",
-        "category": "urinary_blood",
+        "category": "blood: urine",
         "symptom": None,
         "risk_factor": False
       }
@@ -10351,7 +10075,7 @@ body_part_followup_questions = {
         {
         "hi": "क्या मसालेदार भोजन खाने से आपको मूत्र संबंधी कोई परेशानी होती है?",
         "en": "Does eating spicy food cause you any urinary discomfort?",
-        "category": "urinary_difficulty",
+        "category": "diet: urine",
         "symptom": None,
         "risk_factor": False
       }
@@ -10360,7 +10084,7 @@ body_part_followup_questions = {
       {
         "hi": "कृपया अपनी पेशाब से जुड़ी समस्या के बारे में और जानकारी दें।",
         "en": "Please tell me more about your urinary issue.",
-        "category": "urinary_detail",
+        "category": "urinar",
         "symptom": None,
         "risk_factor": False
       }
@@ -10380,7 +10104,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या दर्द चलने पर ज्यादा होता है या आराम करते समय भी रहता है?",
         "en": "Does the pain worsen while walking or is it present even at rest?",
-        "category": "toes_pain_detail",
+        "category": "activity impact: toe pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -10561,7 +10285,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या जांघ में दर्द चलने या दौड़ने से बढ़ता है?",
         "en": "Does the thigh pain worsen when walking or running?",
-        "category": "thigh_pain_activity",
+        "category": "activity impact: thigh pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -10575,14 +10299,14 @@ body_part_followup_questions = {
       {
         "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
         "en": "Where exactly is the pain located in your thigh? Is it on one side, both sides, or spreading elsewhere?",
-        "category": "thigh pain",
+        "category": "location: thigh pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
         "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-        "category": "thigh pain",
+        "category": "activity impact: thigh pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -10997,35 +10721,35 @@ body_part_followup_questions = {
       {
         "hi": "क्या आप जबड़े के दर्द (तीव्र, सुस्त, धड़कन या दर्द) का वर्णन कर सकते हैं?",
         "en": "Can you describe the jaw pain (sharp, dull, throbbing, or aching)?",
-        "category": "jaw pain",
+        "category": "instance: jaw pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या जबड़े का दर्द लगातार बना रहता है, या यह आता-जाता रहता है?",
         "en": "Is the jaw pain constant, or does it come and go?",
-        "category": "jaw pain",
+        "category": "type: jaw pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या दर्द चबाने, बोलने, या मुँह खोलने से बढ़ जाता है?",
         "en": "Does the pain worsen with chewing, speaking, or opening your mouth wide?",
-        "category": "jaw pain",
+        "category": "chewing",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आपको अपने काटने या जबड़े की गति में कोई कठिनाई हो रही है?",
         "en": "Are you having any difficulty with your bite or jaw movement?",
-        "category": "jaw pain",
+        "category": "jaw movement",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या आप रात में अपने दांतों को पीसते हैं या जबड़े को दबाते हैं?",
         "en": "Do you grind your teeth or clench your jaw, especially at night?",
-        "category": "jaw pain",
+        "category": "jaw grind",
         "symptom": None,
         "risk_factor": False
       }
@@ -11071,7 +10795,7 @@ body_part_followup_questions = {
         "hi": "क्या आपकी माहवारी बहुत कम या हल्की होती है?",
         "en": "Is your menstrual flow very light or scanty?",
         "category": "menstruation",
-        "symptom": "light periods",
+        "symptom": None,
         "risk_factor": False
       }
     ],
@@ -11095,14 +10819,14 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपकी माहवारी के समय थकान या कमजोरी महसूस होती है?",
         "en": "Do you feel fatigued or weak during your period?",
-        "category": "menstruation",
-        "symptom": "fatigue during menstruation",
+        "category": "fatigue",
+        "symptom": "fatigue",
         "risk_factor": False
       },
       {
         "hi": "क्या आपकी माहवारी सामान्य से अधिक भारी होती है?",
         "en": "Is your menstrual flow heavier than usual?",
-        "category": "menstruation",
+        "category": "menstruation flow",
         "symptom": "heavy menstrual bleeding",
         "risk_factor": False
       }
@@ -11113,14 +10837,14 @@ body_part_followup_questions = {
       {
         "hi": "क्या कूल्हे में दर्द चलने या खड़े होने पर बढ़ता है?",
         "en": "Does the hip pain increase when walking or standing?",
-        "category": "hip_pain_activity",
+        "category": "activity impact: hip pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या दर्द एक कूल्हे में है या दोनों कूल्हों में?",
         "en": "Is the pain in one hip or both hips?",
-        "category": "hip pain",
+        "category": "location: hip pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -11141,7 +10865,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या कूल्हे का दर्द कुछ गतिविधियों, जैसे चलने, झुकने या खड़े होने से बढ़ जाता है?",
         "en": "Does the hip pain worsen with certain movements, such as walking, bending, or standing up?",
-        "category": "hip pain",
+        "category": "activity impact: hip pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -11168,7 +10892,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या कूल्हे की कमजोरी के कारण आपको खड़ा होने या चलने में दिक्कत होती है?",
         "en": "Does hip weakness make it hard for you to stand or walk?",
-        "category": "hip_weakness_mobility",
+        "category": "activity impact: hip pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -11206,7 +10930,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या कमर का दर्द खड़े होने या चलने से बढ़ता है?",
         "en": "Does the waist pain increase when standing or walking?",
-        "category": "waist_pain_trigger",
+        "category": "activity impact: waist pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -11272,7 +10996,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या कमर की कमजोरी के कारण आपको खड़े होने या चलने में कठिनाई होती है?",
         "en": "Does weakness in your waist make it difficult to stand or walk?",
-        "category": "waist_weakness_function",
+        "category": "activity impact: waist pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -11315,14 +11039,14 @@ body_part_followup_questions = {
       {
         "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
         "en": "Where exactly is the pain located in your pelvic area? Is it on one side, both sides, or spreading elsewhere?",
-        "category": "pelvic pain",
+        "category": "location: pelvic pain",
         "symptom": None,
         "risk_factor": False
       },
       {
         "hi": "क्या कोई गतिविधि, स्थिति या आराम से दर्द बढ़ता या कम होता है?",
         "en": "Does anything make the pain better or worse, like movement, posture, or rest?",
-        "category": "pelvic pain",
+        "category": "activity impact: pelvic pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -11438,7 +11162,7 @@ body_part_followup_questions = {
       {
         "hi": "दर्द ठीक कहाँ है? क्या यह एक तरफ़, दोनों तरफ़ या किसी और हिस्से तक फैलता है?",
         "en": "Where exactly is the pain located in your elbow? Is it on one side, both sides, or spreading elsewhere?",
-        "category": "elbow pain",
+        "category": "location: elbow pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -11452,7 +11176,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपने हाल ही में कोई भारी वजन उठाया है या कोई चोट लगी है?",
         "en": "Have you had any recent injuries, heavy lifting, or physical strain?",
-        "category": "elbow pain",
+        "category": "history: elbow pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -11561,7 +11285,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या बछड़े में दर्द चलने या खड़े होने पर बढ़ता है?",
         "en": "Does the calf pain increase when walking or standing?",
-        "category": "calf_pain_activity",
+        "category": "activity impact: calf pain",
         "symptom": None,
         "risk_factor": False
       },
@@ -11637,7 +11361,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या बछड़े की कमजोरी के कारण आपको खड़े रहने या चलने में परेशानी होती है?",
         "en": "Does calf weakness make it hard for you to stand or walk?",
-        "category": "calf_weakness_function",
+        "category": "activity impact: calf pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -11763,7 +11487,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या टखने में दर्द चलते समय बढ़ता है?",
         "en": "Does ankle pain get worse while walking?",
-        "category": "ankle_pain_activity",
+        "category": "activity impact: ankle pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -11799,7 +11523,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या आपका टखना चलते समय अचानक मुड़ जाता है या लड़खड़ाता है?",
         "en": "Does your ankle give out or wobble while walking?",
-        "category": "ankle_weakness_instability",
+        "category": "activity impact: ankle pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -12203,7 +11927,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या पैर की उंगली का दर्द चलने या दौड़ने से बढ़ता है?",
         "en": "Does the toe pain worsen when walking or running?",
-        "category": "toe_pain_activity",
+        "category": "activity impact: toe pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -12295,7 +12019,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या एड़ी जकड़ी हुई या चलने में कठिनाई होती है?",
         "en": "Does your heel feel stiff or make walking difficult?",
-        "category": "heel_stiffness_difficulty",
+        "category": "activity impact: heel pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -12322,7 +12046,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या एड़ी से खून चलने या दबाव डालने पर निकल रहा है?",
         "en": "Is the heel bleeding when you walk or put pressure on it?",
-        "category": "heel_bleeding_trigger",
+        "category": "activity impact: heel pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -12542,7 +12266,7 @@ body_part_followup_questions = {
       {
         "hi": "क्या तलवों में दर्द सुबह उठने पर या चलने पर बढ़ता है?",
         "en": "Is the pain in your soles worse in the morning or while walking?",
-        "category": "soles_pain_morning_walk",
+        "category": "activity impact: sole pain",
         "symptom": None,
         "risk_factor": False
       }
@@ -12722,14 +12446,14 @@ body_part_followup_questions = {
         {
             "hi": "क्या आपको लिंग में दर्द या जलन महसूस हो रही है?",
             "en": "Are you experiencing pain or burning in the penis?",
-            "category": "penis_pain",
+            "category": "pain: penis",
             "symptom": None,
             "risk_factor": False
         },
         {
             "hi": "क्या लिंग में दर्द लगातार है या यह कभी-कभी होती है?",
             "en": "Is the pain in penis constant or does it come and go?",
-            "category": "intermittent_pain",
+            "category": "type: penis",
             "symptom": None,
             "risk_factor": False
         },
@@ -12758,28 +12482,29 @@ body_part_followup_questions = {
             "risk_factor": False
         }
     ],
-   "discomfort": [
+
+"discomfort": [
     {
         "hi": "क्या लिंग में असुविधा के दौरान आपको कोई जलन या खुजली महसूस हो रही है?",
-        "en": "In addition to the discomfort, are you feeling any itching or burning sensation in the penis?"
+        "en": "In addition to the discomfort, are you feeling any itching or burning sensation in the penis?",
         "category": "penis_discomfort",
         "symptom": None,
         "risk_factor": False
     }
 ],
-   "bleeding": [
+"bleeding": [
     {
         "hi": "क्या लिंग से खून आने के अलावा आपको दर्द या जलन भी हो रही है?",
-        "en": "In addition to the bleeding, are you experiencing any pain or burning sensation?"
+        "en": "In addition to the bleeding, are you experiencing any pain or burning sensation?",
         "category": "penis_bleeding",
         "symptom": None,
         "risk_factor": False
     }
 ],
-   "itching": [
+"itching": [
     {
         "hi": "क्या खुजली के साथ कोई दाने, सूजन या लालिमा भी हो रही है?",
-        "en": "Along with the itching, are you noticing any bumps, swelling, or redness?"
+        "en": "Along with the itching, are you noticing any bumps, swelling, or redness?",
         "category": "penis_itching",
         "symptom": None,
         "risk_factor": False
@@ -12800,11 +12525,11 @@ body_part_followup_questions = {
 },
 
 'genital': {
-        "pain": [
+    "pain": [
         {
             "hi": "क्या आपको जननांग क्षेत्र में दर्द या जलन महसूस हो रही है?",
             "en": "Are you experiencing pain or burning in the genital area?",
-            "category": "penis_pain",
+            "category": "pain: penis",
             "symptom": None,
             "risk_factor": False
         },
@@ -12833,7 +12558,7 @@ body_part_followup_questions = {
             "risk_factor": False
         }
     ],
-   "discomfort": [
+    "discomfort": [
     {
         "hi": "क्या जननांग क्षेत्र में असुविधा के दौरान आपको कोई जलन या खुजली महसूस हो रही है?",
         "en": "In addition to the discomfort, are you feeling any itching or burning sensation in the genital area?",
@@ -12860,7 +12585,6 @@ body_part_followup_questions = {
         "risk_factor": False
     }
 ],
-
     "default": [
         {
             "hi": "कृपया अपनी जननांग क्षेत्र से संबंधित समस्या के बारे में अधिक जानकारी दें।",
@@ -13208,8 +12932,8 @@ symptom_to_specialist = {
     'eye weakness': 'Ophthalmologist',
 
     # Rheumatologist: Autoimmune and joint-related symptoms
-    'swelling': 'Rheumatologist',
-    'cramp': 'Rheumatologist',
+    'swelling': 'General Practitioner',
+    'cramp': 'General Practitioner',
     'swollen lymph nodes': 'E N T Specialist',
 
     # Infectious Disease Specialist: Infectious diseases
@@ -13787,7 +13511,6 @@ HINDI_OFFLINE_DICT = {
             "headache": "सिरदर्द",
             "injury": "चोट",
             "chills": "ठंड लगना",
-            "leg pain": "टांग में दर्द",
             "hand pain": "हाथ में दर्द",
             "arm pain": "बांह में दर्द",
             "foot pain": "पैर में दर्द",
@@ -14378,6 +14101,8 @@ HINDI_OFFLINE_DICT = {
 "body boils": "शरीर में फोड़े",
 "body lump": "शरीर में गांठ",
 "lip boils": "होठों में फोड़े",
+"fracture" : "फ्रैक्चर",
+"phlegm" : "कफ",
 "lip lump": "होठों में गांठ",
 
 }
