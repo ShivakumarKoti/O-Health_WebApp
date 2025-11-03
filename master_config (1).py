@@ -12772,6 +12772,8 @@ BP_CANON = {
 	  'cervical': 'neck',
     'private part': 'genital',
       'armpit':'armpits',
+	'underarm':'underarms',
+	'armpit':'underarm',
     # …and so on for all body parts
 }
 
