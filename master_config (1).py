@@ -6850,7 +6850,18 @@ trigger_keywords = {
     'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
     'itching': ['itching', 'rash', 'redness'],
     'discharge': ['discharge', 'leakage', 'fluid']
-  }
+  },
+	'armpit': {
+    'pain': ['pain', 'painful', 'ache', 'aching', 'hurt', 'hurts', 'sore', 'tender', 'tenderness', 'throbbing'],
+    'swelling': ['swollen', 'swelling', 'puffy', 'enlarged', 'bump', 'bulge'],
+    'lump': ['lump', 'lumps', 'bump', 'bumps', 'mass', 'node', 'nodule'],
+    'rash': ['rash', 'rashes', 'redness', 'red', 'irritation', 'burning', 'inflammation', 'blotch', 'spots'],
+    'itching': ['itch', 'itching', 'itches', 'itchy', 'itchiness', 'scratchy'],
+    'odor': ['odor', 'smell', 'smelly', 'stink', 'bad smell', 'body odor'],
+    'sweating': ['sweat', 'sweating', 'perspiration', 'excessive sweat', 'hyperhidrosis'],
+    'injury': ['injury', 'injured', 'bruise', 'bruised', 'hit', 'cut', 'scrape'],
+	'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
+},
 
 }
 
@@ -12584,6 +12595,141 @@ body_part_followup_questions = {
         }
     
     ],
+},
+'armpit': {
+"pain": [
+    {
+        "hi": "क्या आपके बगल में दर्द लगातार बना रहता है?",
+        "en": "Is the pain in your armpit persistent?",
+        "category": "armpit_pain_detail",
+        "symptom": None,
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या दर्द एक तरफ की बगल में है या दोनों में?",
+        "en": "Is the pain in one armpit or both?",
+        "category": "location: armpit pain",
+        "symptom": None,
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या बगल का दर्द तेज़, सुस्त या धड़कता हुआ है?",
+        "en": "Is the armpit pain sharp, dull, or throbbing?",
+        "category": "instance: armpit pain",
+        "symptom": "armpit pain",
+        "risk_factor": False
+    }
+],
+
+"swelling": [
+    {
+        "hi": "क्या बगल की सूजन के साथ दर्द या लालपन भी है?",
+        "en": "Is the swelling in your armpit accompanied by pain or redness?",
+        "category": "armpit_swelling_signs",
+        "symptom": None,
+        "risk_factor": False
+    },
+   
+],
+
+"lump": [
+    {
+        "hi": "क्या बगल की गांठ दर्दनाक है या बिना दर्द के है?",
+        "en": "Is the lump in the armpit painful or painless?",
+        "category": "armpit_lump_pain",
+        "symptom": None,
+        "risk_factor": True
+    },
+],
+
+"rash": [
+    {
+        "hi": "क्या बगल में लाल चकत्ते, जलन या खुजली है?",
+        "en": "Do you have redness, burning, or rash in your armpit?",
+        "category": "armpit_rash_symptom",
+        "symptom": "armpit rash",
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या ये चकत्ते किसी नई क्रीम, डियोडोरेंट या साबुन के बाद हुए?",
+        "en": "Did the rash appear after using a new cream, deodorant, or soap?",
+        "category": "trigger: armpit rash",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+
+"itching": [
+    {
+        "hi": "क्या बगल में खुजली लगातार बनी रहती है या कभी-कभी होती है?",
+        "en": "Is the itching in your armpit constant or occasional?",
+        "category": "armpit_itching_pattern",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+
+"odor": [
+    {
+        "hi": "क्या आपकी बगल से दुर्गंध आती है जो धोने के बाद भी नहीं जाती?",
+        "en": "Do you notice a persistent odor from your armpit even after washing?",
+        "category": "armpit_odor_persistence",
+        "symptom": "armpit odor",
+        "risk_factor": False
+    }
+],
+
+"sweating": [
+    {
+        "hi": "क्या आपकी बगल में ज़्यादा पसीना आता है?",
+        "en": "Do you sweat excessively in your armpits?",
+        "category": "armpit_sweating_excess",
+        "symptom": "armpit sweating",
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या पसीना बिना किसी कारण या तापमान बढ़े भी आता है?",
+        "en": "Do you experience sweating without heat or physical activity?",
+        "category": "armpit_sweating_context",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+
+"injury": [
+    {
+        "hi": "क्या हाल ही में आपकी बगल पर कोई चोट या खरोंच लगी है?",
+        "en": "Have you recently injured or scraped your armpit?",
+        "category": "armpit_injury_check",
+        "symptom": None,
+        "risk_factor": False
+    },
+    {
+        "hi": "क्या चोट के बाद सूजन या दर्द हुआ?",
+        "en": "Did you experience swelling or pain after the injury?",
+        "category": "armpit_injury_effect",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
+	"boils": [
+    {
+        "hi": "क्या आपकी बगल में फोड़े या फुंसी जैसी सूजन है?",
+        "en": "Do you have any boils or pus-filled bumps in your armpit?",
+        "category": "armpit_boils_check",
+        "symptom": "armpit boils",
+        "risk_factor": False
+    },
+
+"default": [
+    {
+        "hi": "कृपया अपनी बगल की समस्या के बारे में अधिक जानकारी दें।",
+        "en": "Please describe your armpit issue in more detail.",
+        "category": "armpit_detail",
+        "symptom": None,
+        "risk_factor": False
+    }
+],
 
 },
 
