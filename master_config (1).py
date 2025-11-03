@@ -12842,6 +12842,7 @@ body_part_to_specialist = {
     'period issue': 'Gynecologist',
     'period':'Gynecologist',
 	  'penis': 'Urologist',
+	'armpit':'General Physician',
 }
 
 if isinstance(body_part_followup_questions, tuple):
@@ -13503,6 +13504,17 @@ symptom_to_specialist = {
 'penis discomfort': 'Urologist',
 'penis bleeding': 'Urologist',
 'penis itching': 'Urologist',
+
+'armpit pain': 'General Physician',
+'armpit swelling': 'General Surgeon',
+'armpit lump': 'General Surgeon',
+'armpit rash': 'Dermatologist',
+'armpit itching': 'Dermatologist',
+'armpit odor': 'Dermatologist',
+'armpit sweating': 'Dermatologist',
+'armpit injury': 'Orthopedic Specialist',
+'armpit boils': 'Dermatologist',
+
 	
   'latrine issue': 'General Practitioner',
   'hernia': 'General Surgeon',
