@@ -18,7 +18,7 @@ symptom_list = [
 'hearing loss', 'balance problem', 'irregular heartbeat', 'fainting', 'tremor', 'nervousness', 'panic attack', 'mood swing', 'difficulty concentrating',
 'hallucination', 'lack of motivation', 'exhaustion',  'sprain', 'strain', 'gout', 'headache', 'injury', 'chills',
 'sleepy','fatigue', 'fracture','stress','operation','cholesterol', 'heart problem','cholestrol','hydrocele', 'ringworm',
-'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking', 'fatty liver',
+'female issue', 'menopause', 'thyroid', 'piles', 'asthma','pneumonia','tingling', 'difficulty speaking', 'fatty liver','kidney stone',
 'brittle nails', 'more hungry', 'obesity', 'seizures', 'hiccups', 'ulcers', 'dysentery', 'malaria', 'dengue', 'covid','typhoid', 'chickenpox', 'kidney issue',
 'caesarean section','pregnancy',  'blood in urine','broken voice', 'wound', 'cold intolerance', 'goiter','slow reflexes','animal bite',
 'male reproductive issues', 'female reproductive issues', 'dandruff','blister','bruises','cardiac surgery','neurosurgery', 'latrine issue','sugar','',
@@ -83,14 +83,11 @@ symptom_synonyms = {
     ],
 
     'weakness': [
-    'low energy', 'feeling sluggish', 'debilitating tiredness', 'drowsiness', 'chronic fatigue syndrome', 'feeling weak', 'lack of energy', 
-    'feeling lethargic', 'mental sluggishness', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
-    'constant tiredness', 'fatigued muscles', 'endless tiredness', 'lethargic movements', 'lacking strength', 
-    'body feels heavy', 'brain fog', 'struggling to stay awake', "can’t focus due to fatigue", 'slow to move', 'slow to think',
-    'exhausted no matter how much I sleep', 'general weakness', 'barely functioning', 'worn out', "can’t get out of bed",
-    'out of energy', 'lack of strength in limbs', 'sluggish reaction time','trouble keeping eyes open during the day', 
-    'body feels like lead', "can’t finish daily tasks", 'short bursts of energy followed by crashes',
-    'muscle weakness without exertion', 'tired even after sleeping well'
+    'low energy', 'feeling sluggish', 'tiredness', 'drowsiness', 'feeling weak', 'lack of energy', 'drowsy',
+    'feeling lethargic', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
+    'body feels heavy', 'brain fog', 'slow to move', 'slow to think','feeling weakness',
+    'exhausted','worn out', 'feeling weak','feel weak','weakness','feeling very weak',
+    'out of energy', 'lack of strength', "can’t finish daily tasks", 'short bursts of energy followed by crashes',
 ],
 
     'nausea': [
@@ -169,7 +166,7 @@ symptom_synonyms = {
         'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', "can’t sleep", 'sleep not coming',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
-        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept'
+        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept','not been able to sleep'
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
@@ -230,7 +227,7 @@ symptom_synonyms = {
         'humid feeling', 'warm moisture on skin', 'sweat beads forming everywhere', 'bodily moisture overload', 'persistent dampness', 'sweaty palms and forehead',
     ],
     'swelling': [
-        'swollen', 'edema', 'swellings', 'fluid retention', 'swollen body part', 'inflamed tissue', 'puffiness', 'swells', 'enlarged tissue area','swelling'
+        'swollen', 'edema', 'swellings', 'fluid retention', 'swollen body part', 'inflamed tissue', 'puffiness', 'swells', 'enlarged tissue area','swelling', 'sujan'
     ],
     'tremor': [
         'twitching', 'involuntary movements', 'nervous shaking', 'rhythmic shaking', 'trembling hands', 'uncontrolled muscle movement',
@@ -275,7 +272,7 @@ symptom_synonyms = {
         'memory wires disconnected', 'stuttering recollection attempts', 'defragmented mental records', 'shaky mental camera', 'fading mental impressions', 'mind like a sieve', 'losing info instantly',
         'rattled mental library', 'concept slip-through', 'flickering data in mind', 'barren mental shelves', 'no retrieval of recent facts', 'thinking it’s on the tip of my tongue but never surfacing',
         'losing track of recent conversations', 'difficulty holding new info', 'memory short-circuits frequently', 'mental vacancy', 'ephemeral recollections', 'passing mental clouds with no retention',
-        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot'
+        'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot', 'loss of memory'
     ],
   'hallucination': [
     'delusion', 'illusion', 'False perception', 'sensory distortion', 'auditory hallucination', 'illusions', 'delusions','hallucinate','hallucination','hearing voices',
@@ -405,7 +402,7 @@ symptom_synonyms = {
     'dysphagia', 'trouble swallowing', 'swallowing difficulty', 'painful swallowing', 'difficulty with swallowing', 'difficulty in swallowing food',
     'inability to swallow', 'swallowing discomfort', 'choking sensation', 'difficulty swallowing pills', 'food getting stuck', 'hard time swallowing',
     'difficulty in throat swallowing', 'swallowing obstruction', 'swallowing problems', 'gagging while swallowing', 'swallowing trouble',
-    'feeling of blockage while swallowing', "can’t swallow food", 'difficulties swallowing'
+    'feeling of blockage while swallowing', "can’t swallow food", 'difficulties swallowing','difficulty swallowing'
 ],
 
 'restlessness': [
@@ -415,7 +412,7 @@ symptom_synonyms = {
 
 'bloating': [
     'abdominal bloating', 'stomach bloating', 'gas buildup', 'swollen belly', 'feeling of fullness', 'abdominal distention',
-    'overfull stomach', 'stomach swelling', 'intestinal bloating', 'bloated stomach', 'bloating sensation',
+    'overfull stomach', 'intestinal bloating', 'bloated stomach', 'bloating sensation',
     'gassy stomach', 'bloating after eating', 'digestive bloating', 'feeling bloated', 'bloating in the abdomen', 'gas pain'
 ],
 
@@ -451,14 +448,16 @@ symptom_synonyms = {
 ],
 
 'urine issue': [
-    'dark-colored urine', 'dark yellow urine', 'brown urine', 'amber-colored urine', 'tea-colored urine', 'concentrated urine', 'urine with strong color',
+    'dark yellow urine', 'brown urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
     'urinary issues', 'urination'
 ],
 
+'kidney stone': ['kidney stone', 'kidney stones','stone in kidney','stones in kidney','stone in the back','stones in the back', 'stone in back', 'there is a stone', 'there is stone'],
+
 'blood in urine': [
-    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 
+    'hematuria', 'urinary blood', 'blood in the urine', 'blood while peeing', 'bleeding while peeing', 'blood with urine', 'blood in urine',
    'hemorrhagic urine', 'urinary bleeding', 'presence of blood in urine', 'blood in the bladder','urine has blood','bloody urine', 'red urine',
     'bloody discharge in urine', 'urine with reddish tint','bleeding while peeing','urine has blood', 'blood with urine', 'bloody urine','urine had blood', 'blood in the urine',
     'visible blood in urine', 'microscopic hematuria','blood in the urinary tract'
@@ -466,7 +465,7 @@ symptom_synonyms = {
 
 'blood in stool': [
     'hematochezia', 'rectal bleeding', 'bloody stool', 'stool with blood', 'bright red blood in stool', 'blood in the stool', 'blood in the bowel movement',
-    'blood-tinged stool', 'bloody feces', 'blood in feces', 'stool with reddish tint', 'blood in the stool sample', 'melena', 'dark tarry stool',
+    'bloody feces', 'blood in feces', 'stool with reddish tint', 'blood in the stool sample', 'melena', 'dark tarry stool',
     'fecal blood', 'visible blood in stool', 'blood after bowel movement', 'stool with clots', 'bloody discharge from the rectum', 'abnormal stool color'
 ],
 	
@@ -490,12 +489,12 @@ symptom_synonyms = {
     'high systolic and diastolic pressure', 'blood pressure rising suddenly', 'pressure spiking', 'pressure going dangerously high',
     'feeling flushed because of high blood pressure', 'high BP causing dizziness','bpg',
     'BP higher than it should be', 'BP higher than normal range', 'heart pressure above normal', 'arterial pressure high', 'BP', 'IBP', 'high p', 'hi p', 'high pee', 'hi pee', 
-     'hai bp', 'hai b p', 'hbp', 'my bp is high', 'bp is high', 'high blood p', 'high blood pressure', 'bp high', 'i have high bp',
+     'hai bp', 'b p', 'hbp', 'my bp is high', 'bp is high', 'high blood p', 'high blood pressure', 'bp high', 'i have high bp',
      'ibp', 'hi bp high', 'high bp hi', 'hi bp hi', 'high b p high', 'hi b p high', 'bpg increases',
       'high bp is high', 'hi bp is high', 'high bp is hi', 'hi bp is hi', 'high bp is h', 'hi bp is h', 'high bp h', 'hi bp h', 'high b h', 
 	'hi b h', 'high p high', 'hi p high', 'high p hi', 'hi p hi', 'high p h', 'hi p h', 'high pee high', 'hi pee high', 'high pee hi', 'hi pee hi', 'high pee h', 'hi pee h', 
 	'high b h p', 'hi b h p', 'high b p high', 'hi b p high',
-	'high b p high', 'hi b p high','bpg hi','hi bpg','bpg high','high bp g',
+	'high b p high', 'hi b p high','bpg hi','hi bpg','bpg high','high bp g', 'b.p','bpg'
 ],
 
 'low blood pressure': [
@@ -547,14 +546,14 @@ symptom_synonyms = {
 'ear discharge': [
     'otorrhea', 'ear fluid', 'ear drainage', 'pus from the ear', 'ear pus', 'ear infection discharge', 'fluid from the ear', 'ear secretion',
     'yellow ear discharge', 'green ear discharge', 'watery ear discharge', 'bloody ear discharge', 'ear mucus', 'crust in the ear', 'excessive ear fluid',
-    'ear leakage', 'ear wax buildup', 'discharge from the ear canal', 'discharge from the middle ear', 'infection-related ear discharge', 'ear discharge after swimming',
+    'ear leakage', 'ear wax buildup', 'discharge from the ear canal', 'discharge from the middle ear', 'ear discharge after swimming',
     'ear drainage after injury', 'something coming out of ears','pus comes out from inside the ear','pus is coming out of the ear' 'pus from ear','ear pus''pus comes from ear',
     'pus comes from the ear','pus is coming from an ear','pus is coming from left ear','pus in ear','pus in the ear', 'something coming out of ear', 'something coming out of my ears'
 ],
 
 'balance problem': [
     'vertigo', 'loss of balance', 'balance disorder', 'impaired balance', 'unsteady gait', 'lack of coordination', 'unsteadiness',
-    'balance difficulty', 'feeling of instability', 'spatial disorientation', 'postural imbalance', 'equilibrium disturbance', 'feeling off-balance',
+    'balance difficulty', 'feeling of instability', 'spatial disorientation', 'postural imbalance', 'equilibrium disturbance',
     'gait imbalance', 'disequilibrium', 'vestibular dysfunction', 'balance issues', 'vertiginous symptoms', 'coordination problems', 'stumbling', 'feeling lightheaded'
 ],
 
@@ -579,8 +578,8 @@ symptom_synonyms = {
 ],
 
 'panic attack': [
-    'anxiety attack', 'nervous breakdown', 'stress attack', 'overwhelming fear', 'intense fear episode', 'fight-or-flight response', 'panic episode', 'emotional breakdown',
-    'sudden panic', 'heart-pounding anxiety', 'fear attack', 'intense panic', 'acute stress response', 'terror attack', 'nervous episode',
+    'anxiety attack', 'nervous breakdown', 'stress attack', 'overwhelming fear', 'intense fear episode', 'panic episode', 'emotional breakdown',
+    'sudden panic', 'heart-pounding anxiety', 'fear attack', 'intense panic', 'acute stress response', 'terror attack', 'nervous episode','panic attack',
     'severe panic', 'acute emotional distress', 'uncontrollable fear', 'chronic panic disorder'
 ],
 
@@ -588,7 +587,7 @@ symptom_synonyms = {
     'emotional swing', 'mood fluctuation', 'emotional rollercoaster', 'mood shift', 'mood change', 'mood variation', 'mood disorder',
     'rapid mood change', 'emotional instability', 'mood instability', 'mood alteration', 'emotional shift', 'temper fluctuation',
     'emotional lability', 'mood fluctuations', 'unstable mood', 'irregular mood', 'affective swing', 'mood imbalance', 'emotional outbursts',
-    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad'
+    'highs and lows', 'emotional extremes','mood is low','mood is very low', 'mood is very bad','mood swing', 'mood swings'
 ],
 
 'difficulty concentrating': [
@@ -608,10 +607,10 @@ symptom_synonyms = {
     'tiredness', 'weariness', 'drained', 'burnout', 'physical exhaustion', 'mental exhaustion', 'lack of energy',
     'overwhelming tiredness', 'depletion', 'lack of stamina', 'total exhaustion', 'exhausted feeling', 
     'drowsiness', 'wearing out', 'energy depletion','feeling drained', 'exhaustive tiredness', 'loss of energy',
-    'sleep-deprived', 'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
+    'exhausted', 'yawning', 'low energy', 'snoozy', 'droopy eyed', 'barely awake',
     'hard to stay awake', 'sleep craving', 'languid', 'wearied', 'brain fog',
     'bed ready', 'lazy eyed', 'unfocused from tiredness', 'nodding head', 'drifting off', 'slumberous', 'soporific', 'somnolent',
-    'rest-seeking', 'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
+     'near dozing', 'eyes struggling to stay open', 'unable to concentrate', 'dull from tiredness'
 ],
 
 'fatigue': [
@@ -636,13 +635,13 @@ symptom_synonyms = {
 ],
 
 'gout': [
-    'uric acid buildup', 'acute gout', 'chronic gout', 'gout attack', 'gouty inflammation', 'gouty attack',
-    'painful gout episode', 'gouty swelling', 'gout in the foot', 'gout in the big toe', 'gouty condition', 'uric acid crystals', 'gouty joint disease'
+    'uric acid buildup', 'gouty inflammation', 'gouty attack',
+    'painful gout episode', 'gouty swelling', 'gouty condition', 'uric acid crystals', 'gouty joint disease'
 ],
 
 'female issue': [
     'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis','ladies problem',
-    'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 'menstruation', 
+    'fibroids', 'ovarian cysts', 'vaginal infection', 'vaginal discharge', 'menstruation', 'female issue',
     'vaginal dryness', 'prolapsed uterus', 'birth control issues', 'female urinary issues',
     'pregnancy complications', 'white discharge', 'female issues', 'woman issue', 'women issue', 'woman issues',
     'women issues', 'vaginal itching', 'vaginal odor', 'ovulation pain', 'breast tenderness', 'breast lumps',
@@ -681,26 +680,26 @@ symptom_synonyms = {
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
 'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
 'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma', 'ears not listening',
-'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'high-frequency hearing loss', 'earwax blockage hearing loss', 'acoustic trauma', 'trouble hearing'
-'temporary auditory loss', 'chronic hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss','not hearing', 'not able to hear'
+'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'earwax blockage hearing loss', 'acoustic trauma', 'trouble hearing'
+'hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss','not hearing', 'not able to hear'
 ],
 
 'weight gain': [
 'increase in weight', 'gain in body mass', 'weight gain', 'excess body weight', 'body mass increase', 'weight is increasing','weight increased','weight is more', 'waistline is growing',
- 'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 'gaining weight', 'gained weight',
-'hormone-related fat storage', 'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
+'caloric surplus', 'fat accumulation', 'body fat increase', 'muscle mass gain', 'excess calorie intake', 'fat storage increase', 'gaining weight', 'gained weight',
+'body composition change', 'gained weight', 'weight going up', 'weight fluctuating', 'gaining too much weight','getting fatter','got fat'
 ],
 
-'weight issue': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight','not losing weight','not gaining weight',
+'weight issue': ["weight's been fluctuating", 'weight has been fluctuating', 'fluctuating weight', 'weight change', 'weigh different', 'change in weight','not losing weight','not gaining weight', 'weight fluctuation',
  'weight is different', 'weighing change', 'weight has changed','don\'t lose weight','don\'t gain weight','weight fluctuations'],
 
 'skin burning': [
 'burning feeling in skin', 'skin irritation', 'skin stinging', 'skin redness', 'skin inflammation', 'burning sensation in skin', 'skin discomfort', 'tingling burn',
 'localized skin burn', 'skin heat sensation', 'raw skin feeling', 'skin hypersensitivity', 'sunburn', 'chemical burn', 'skin scorching', 'skin sensitivity to touch',
-'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'nerve-related burning', 'itchy burning skin', 'skin damage from burn',
+'prickling skin sensation', 'hot skin feeling', 'burning skin pain', 'skin abrasion burn', 'itchy burning skin', 'skin damage from burn',
 'intense burning sensation', 'surface skin burn', 'skin blistering', 'burned skin surface', 'burning sensation on the skin', 'burning sensation on the skin',
 'red inflamed skin', 'skin discomfort from heat', 'skin chafing burn', 'sensitive skin after burn', 'burning sensation in the skin',
-'stinging skin pain', 'skin burn from chemicals', 'skin damage sensation', 'skin peeling from burn', 
+'stinging skin pain', 'skin burn from chemicals', 'skin damage sensation', 'skin peeling from burn', 'skin burning'
 'lingering skin burn', 'burnt skin tenderness', 'skin hot spot'
 ],
 
@@ -794,7 +793,7 @@ symptom_synonyms = {
 ],
 
 'malaria': [
-    'malarial infection', 'malarial fever', 'mosquito-borne disease', 'mosquito-related fever', 'vector-borne parasitic disease', 'protozoan infection'
+    'malarial infection', 'malarial fever', 'protozoan infection'
    
 ],
 
@@ -803,14 +802,14 @@ symptom_synonyms = {
 ],
 
 'covid': [
-    'covid-19', 'coronavirus', 'corona', 'corona virus', 'sars-cov-2 infection', 'pandemic virus', 'covid outbreak'
+  'coronavirus', 'corona', 'corona virus', 'sars-cov-2 infection', 'pandemic virus', 'covid outbreak'
 ],
 
 'animal bite': ['dog bite', 'cat bite', 'bitten by', 'monkey bite','snake bite', 'bit by snake', 'bitten by snake','eaten by dog', 'eaten by a dog', 'dog had eaten', 'bitten by a dog',
                 'dog has eaten', 'dog has eaten me', 'dog has bitten me', 'dog bite wound', 'dog bite injury', 'cat bite wound', 'cat bite injury', 'dog bit'],
 
 'hiv': [
-    'human immunodeficiency virus', 'HIV-positive', 'HIV', 'HIV/AIDS', 'acquired immunodeficiency virus'
+    'human immunodeficiency virus', 'HIV', 'AIDS', 'acquired immunodeficiency virus'
 ],
 
 'typhoid': [
@@ -818,11 +817,11 @@ symptom_synonyms = {
 ],
 
 'chickenpox': [
-    'varicella', 'varicella infection', 'chicken pox', 'varicella-zoster virus', 'viral exanthem'
+    'varicella', 'varicella infection', 'chicken pox', 'viral exanthem'
 ],
 'kidney issue': [
-    'kidney disease', 'acute kidney injury', 'kidney stones', 'renal failure', 'nephritis', 'glomerulonephritis',
-    'pyelonephritis', 'kidney infection', 'hydronephrosis', 'kidney fail','kidney stone',
+    'kidney disease', 'acute kidney injury', 'renal failure', 'nephritis', 'glomerulonephritis',
+    'pyelonephritis', 'kidney infection', 'hydronephrosis', 'kidney fail',
     'high creatinine', 'low kidney function', 'kidney transplant', 'renal cysts', 'electrolyte imbalance', 'nephropathy'
 ],
 'liver issue': [
@@ -1178,7 +1177,7 @@ symptom_followup_questions = {
     {
       "hi": "क्या चक्कर आना अचानक शुरू हुआ था या धीरे-धीरे?",
       "en": "Did the dizziness start suddenly or gradually?",
-      "category": "onset: duration",
+      "category": "onset: dizziness",
       "symptom": "dizziness",
       "risk_factor": False,    },
     {
@@ -1604,7 +1603,7 @@ symptom_followup_questions = {
   {
     "hi": "क्या आपके लक्षण पूरे साल रहते हैं या सिर्फ कुछ समय के लिए होते हैं?",
     "en": "Do your symptoms occur year-round or only during certain times?",
-    "category": "instance: allergy",
+    "category": "duration: allergy",
     "symptom": None,
     "risk_factor": False,
   },
@@ -1757,6 +1756,16 @@ symptom_followup_questions = {
       "symptom": "itching",
       "risk_factor": False,    },
   ],
+  
+   "kidney stone": [
+     
+     {
+      "hi": "क्या आपने हाल ही में पानी का सेवन कम किया है?",
+      "en": "Have you been drinking less water recently?",
+      "category": "hydration",
+      "symptom": "low water intake",
+      "risk_factor": True
+    },],
 
   "inflammation": [
     {
@@ -2184,29 +2193,12 @@ symptom_followup_questions = {
 
 
   "sweat": [
-    {
-      "hi": "क्या आपको पसीना आना सामान्य से अधिक हो रहा है?",
-      "en": "Are you sweating more than usual?",
-      "category": "excessive sweating",
-      "symptom": None,
-      "risk_factor": False,    },
+  
     {
       "hi": "क्या पसीना आना किसी विशेष समय पर अधिक होता है?",
       "en": "Does sweating occur more frequently at any specific time?",
       "category": "instance: more",
       "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या आपको पसीना आना के कारण किसी विशेष गतिविधि के दौरान कठिनाई हो रही है?",
-      "en": "Are you experiencing difficulty during any specific activity due to sweating?",
-      "category": "activity_related_sweating",
-      "symptom": None,
-      "risk_factor": False,    },
-    {
-      "hi": "क्या पसीना आना के साथ आपको त्वचा में कोई परिवर्तन हो रहा है?",
-      "en": "Are you noticing any changes in your skin due to sweating?",
-      "category": "skin_changes_with_sweating",
-      "symptom": "skin changes",
       "risk_factor": False,    },
   ],
 
@@ -4186,7 +4178,7 @@ symptom_followup_questions = {
         {
             "hi": "क्या आपको अपने ब्लड शुगर के स्तर को नियंत्रित करने के लिए दवाओं का उपयोग करना पड़ता है?",
             "en": "Do you need to take medications to control your blood sugar levels?",
-            "category": "medication: sugar",
+            "category": "medication",
             "symptom": "sugar",
             "risk_factor": True,
         },
@@ -5810,8 +5802,6 @@ symptom_followup_questions = {
   
 ],
 	
-
-
 "blister": [
     {
         "hi": "क्या ये छाले जलने, रगड़ या एलर्जी के बाद आए हैं?",
@@ -6385,7 +6375,7 @@ trigger_keywords = {
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
-        'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed'],
+        'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed','heavy'],
         'numbness': ['numb', 'numbness', 'no sensation'],
 	      'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
 	      'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt', 'hurts','throbbing']
@@ -6424,7 +6414,6 @@ trigger_keywords = {
 'throat': {
         'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'hurting', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
-        'difficulty_swallowing': ['difficulty swallowing', 'trouble swallowing', 'painful swallowing','swallowing'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'infectious', 'infected','infections','infected'],
         'dryness': ['dry', 'dryness', 'scratchy', 'rough', 'parched', 'chapped'],
@@ -6433,14 +6422,14 @@ trigger_keywords = {
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
     },
 'stomach': {
-        'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurted','sore','sores','pains','problem','problems'],
+        'pain': ['pain','painful', 'paining', 'soreness', 'ache','issue', 'issues','hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurted','sore','sores','pains','problem','problems'],
 	      'weakness': ['weakness', 'weak', 'fatigued', 'tired', 'no strength', 'can’t engage', 'loss of core strength'],
-        'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention'],
+        'bloating': ['bloating', 'bloated', 'gas', 'gassy', 'fullness', 'distention','full'],
         #'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'burning' : ['burn','burning','burns','burnt','fire'],
 		'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'lump': ['lump', 'lumps', 'bump', 'bumps','crack'],
     },
 'neck': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'hurting', 'ache', 'aches', 'aching','throbbing'],
@@ -12672,6 +12661,7 @@ body_part_to_specialist = {
     'palm': 'Orthopedic Specialist',
     'palms': 'Orthopedic Specialist',
     'fingertip': 'Orthopedic Specialist',
+    'kidney stone': 'Nephrologist',
     'fingertips': 'Orthopedic Specialist',
     'instep': 'Orthopedic Specialist',
     'calf': 'Orthopedic Specialist',
@@ -12929,7 +12919,6 @@ symptom_to_specialist = {
     'eye pain': 'Ophthalmologist',
     'eyes pain' : 'Ophthalmologist',
     'eye discharge': 'Ophthalmologist',
-    'eye weakness': 'Ophthalmologist',
 
     # Rheumatologist: Autoimmune and joint-related symptoms
     'swelling': 'General Practitioner',
@@ -12981,7 +12970,6 @@ symptom_to_specialist = {
     'wound': 'General Practitioner',
     'body ache': 'General Practitioner',
     'bruises': 'General Practitioner',
-    'eye weakness': 'Ophthalmologist',
     'leg weakness': 'Neurologist',
     'yellow eyes': 'Hepatologist',
     'red eyes': 'Ophthalmologist',
@@ -13357,7 +13345,7 @@ symptom_to_specialist = {
   'soles numbness': 'Neurologist',
   'soles cracks': 'Dermatologist',
   'soles itching': 'Dermatologist',
-  'testicle problem': 'General Practitioneer',
+  'testicle problem': 'General Practitioner',
 
   'child pain': 'Pediatrician',
   'child bleeding': 'Pediatrician',
@@ -13390,6 +13378,7 @@ symptom_to_specialist = {
   'neck boils': 'Dermatologist',
   'neck lump': 'ENT Specialist',
   'knee boils': 'Dermatologist',
+  "urine issue": 'Urologist',
   'knee lump': 'Orthopedic Specialist',
   'foot boils': 'Dermatologist',
   'foot lump': 'Orthopedic Specialist',
@@ -13527,11 +13516,10 @@ HINDI_OFFLINE_DICT = {
             "piles": "बवासीर",
             "asthma": "अस्थमा",
             "pneumonia": "निमोनिया",
-            "sugar": "शुगर (मधुमेह)",
-            "eye weakness": "आंखों की कमज़ोरी",
+            "sugar": "शुगर",
 	           "waist pain": "कमर दर्द",
             "urine issue": "पेशाब की समस्याएँ",
-	    "caesarean section": "सीज़ेरियन सेक्शन",
+	          "caesarean section": "सीज़ेरियन सेक्शन",
             "pregnancy": "गर्भावस्था",
             "pediatric symptoms": "बाल चिकित्सा लक्षण",
             
@@ -13998,7 +13986,6 @@ HINDI_OFFLINE_DICT = {
         "acidity": "अम्लता",
         "shoulder weakness": "कंधे में कमजोरी",
         "ear ringing": "कान में घंटी बजना",
-	    "eye weakness": "आँखों में कमजोरी",
         "nosebleed": "नाक से खून आना",
 
 	#newly added
@@ -14088,6 +14075,7 @@ HINDI_OFFLINE_DICT = {
 "joint lump": "जोड़ो में गांठ",
 "skin boils": "त्वचा में फोड़े",
 "skin lump": "त्वचा में गांठ",
+"kidney stone": "गुर्दे की पथरी",
 "nose boils": "नाक में फोड़े",
 "nose lump": "नाक में गांठ",
 "thigh boils": "जांघों में फोड़े",
