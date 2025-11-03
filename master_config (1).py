@@ -12771,7 +12771,7 @@ BP_CANON = {
 	  'nasal': 'nose',
 	  'cervical': 'neck',
     'private part': 'genital',
-      
+      'armpit':'armpits',
     # …and so on for all body parts
 }
 
@@ -12782,7 +12782,7 @@ body_parts = [
     'elbow', 'elbows','ankle','ankles', 'heel', 'heels', 'toe', 'toes','finger','fingers', 'thumb', 'thumbs', 'palm','palms', 'soles', 'sole',
     'fingertip', 'fingertips', 'instep', 'calf', 'shin','lumbar', 'thoracic', 'cervical', 'gastrointestinal', 'abdominal', 'rectal', 'genital',
     'urinary', 'respiratory', 'cardiac', 'pulmonary', 'digestive', 'cranial', 'facial', 'face', 'hair', 'hairs', 'liver',
-    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart','testicle', 'penis',
+    'ocular', 'otologic', 'nasal', 'oral', 'buccal', 'lingual', 'pharyngeal', 'laryngeal', 'heart','testicle', 'penis', 'armpits', 'armpit',
     'trigeminal', 'spinal', 'peripheral', 'visceral', 'biliary', 'renal', 'hepatic','period','jaw','hip','waist', 'pelvic','body','child'
 ] 
 
