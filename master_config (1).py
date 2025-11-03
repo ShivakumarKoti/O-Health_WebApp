@@ -14119,6 +14119,17 @@ HINDI_OFFLINE_DICT = {
 "genital bleeding": "जननांग क्षेत्र से खून आना",
 "genital itching": "जननांग क्षेत्र में खुजली",
 
+"armpit pain": "बगल का दर्द",
+"armpit swelling": "बगल की सूजन",
+"armpit lump": "बगल में गांठ",
+"armpit rash": "बगल में चकत्ते",
+"armpit itching": "बगल में खुजली",
+"armpit odor": "बगल की दुर्गंध",
+"armpit sweating": "बगल में पसीना",
+"armpit injury": "बगल की चोट",
+"armpit boils": "बगल में फोड़े",
+
+
 
 
         # — specific trigger_keyword combos —
