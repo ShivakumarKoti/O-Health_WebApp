@@ -17763,7 +17763,6 @@ HINDI_OFFLINE_DICT = {
 "elbow boils": "कोहनी में फोड़े",
 "elbow lump": "कोहनी में गांठ",
 "face boils": "चेहरे में फोड़े",
-""
 "face lump": "चेहरे में गांठ",
 "body boils": "शरीर में फोड़े",
 "body lump": "शरीर में गांठ",
