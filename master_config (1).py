@@ -650,7 +650,7 @@ symptom_synonyms = {
     'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'chronic hemorrhoids',
     'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
-    'itchy anus', 'hemorrhoid treatment', 'hemorrhoid relief',
+    'itchy anus', 'hemorrhoid treatment', 'hemorrhoid'
 ],
 
 'hearing loss': [
@@ -906,7 +906,7 @@ symptom_synonyms = {
 ],
 
 'latrine issue': ['latrine', 'latrine issues','stool problem', 'stool issues', 'bowel issues', 'bowel problem', 'toilet issue', 'toilet problem',
-                  'toilet problems','stool does not come'],
+                  'toilet problems','stool does not come', 'loose motion', 'loose motion', 'stools'],
 	
 'fatty liver': ['fatty liver', 'liver fat', 'liver swelling', 'liver heaviness', 'fat buildup in liver', 'fat liver', 'liver is fat', 'liver is fatty',
             'hepatic steatosis', 'liver steatosis', 'fatty infiltration of liver','fat deposits in liver', 'fat accumulation in liver',
