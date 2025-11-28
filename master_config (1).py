@@ -649,7 +649,7 @@ symptom_synonyms = {
     'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'chronic hemorrhoids',
     'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
-    'itchy anus', 'hemorrhoid treatment', 'hemorrhoid relief',
+    'itchy anus', 'hemorrhoid treatment', 'hemorrhoid',
 ],
 
 'hearing loss': [
