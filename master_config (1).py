@@ -31,11 +31,9 @@ symptom_list = [
 # ------------------------------------------------------------------ #
 symptom_synonyms = {
     'headache': [
-        'throbbing headache', 'pounding head', 'cranial ache', 'head pounding','head is aching', 'head starts to ache','head aches','head is aching', 'head has been aching','ache in the head','head ache',
-         'stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
-         'dull throb','head is aching',
-        'subcranial ache', 'stabbing darts of pain in scalp',
-       'head tenderness', 'brainache', 
+        'throbbing headache', 'pounding head', 'cranial ache', 'head pounding','head is aching', 'head starts to ache','head aches','head is aching', 
+		'head has been aching','ache in the head','head ache','stabbing head sensation', 'skull-crushing pressure', 'nagging ache in head',
+         'dull throb','head is aching','subcranial ache', 'stabbing darts of pain in scalp','head tenderness', 'brainache', 
         'grating ache inside skull', 'sinus-pressured ache',  'brain pulsation pain', 'cephalic torment',
        'head discomfort', 'dull pounding drumbeat in head', 'hammering inside skull walls', 'unyielding head tension', 'rote ache cycling through head',
         'cranium under siege','head pounding like drums','issue with head'
@@ -49,15 +47,13 @@ symptom_synonyms = {
         'blocked sinuses', 'allergy', 'anaphylactic reaction', 'anaphylaxis'
     ],
     'fever': [
-        'high temperature', 'elevated body temperature', 'feeling feverish', 'fevering', 'running a fever', 'burning up', 'feeling internally hot', 'having a temperature', 'spiking a fever', 'febrile state',
-        'raised core temperature', 'overheated body', 'intense body heat', 'thermal imbalance', 'body overheating', 'raging fever', 'heated condition', 'pyrexia',
-        'feeling aflame', 'body heat surging', 'hot to the touch', 'internal ignition of warmth', 'body temperature surging', 'excessive warmth inside', 
-        'scorching internal climate', 'burning sensation from within', 'sweltering body feel', 'thermal elevation',  'heat radiating under skin',
-         'unrelenting heat', 'blazing warmth',
-         'sizzling body temp', 'heat wave inside me', 'sweating due to internal heat','feverish',
-        'red-hot core', 'smoldering embers of warmth', 'furnace-like core', 'pulsating heat', 'unremitting temperature rise', 'searing body condition', 'fire coursing through veins', 'endlessly hot', 'elevated reading on the thermometer',
-    
-        'hothouse conditions inside', 'bookar', 'booker','bukhar','bokhar','ukar','ukhar',
+        'high temperature', 'elevated body temperature', 'feeling feverish', 'fevering', 'running a fever', 'burning up', 'feeling internally hot',
+		'having a temperature', 'spiking a fever', 'febrile state', 'raised core temperature', 'overheated body', 'intense body heat', 'thermal imbalance',
+		'body overheating', 'raging fever', 'heated condition', 'pyrexia', 'feeling aflame', 'body heat surging', 'hot to the touch', 'internal ignition of warmth', 
+		'body temperature surging', 'excessive warmth inside', 'scorching internal climate', 'burning sensation from within', 'sweltering body feel', 
+		'thermal elevation',  'heat radiating under skin','unrelenting heat', 'blazing warmth', 'sizzling body temp', 'heat wave inside me', 'sweating due to internal heat',
+		'feverish', 'red-hot core', 'smoldering embers of warmth', 'furnace-like core', 'pulsating heat', 'unremitting temperature rise', 'searing body condition', 
+		'fire coursing through veins', 'endlessly hot', 'elevated reading on the thermometer', 'hothouse conditions inside', 'bookar', 'booker','bukhar','bokhar','ukar','ukhar',
 		'warm body', 'hot body', 'body is warm', 'body is hot', 'body gets warm', 'body gets hot', 'body getting hot', 'body getting warm'
     ],
     'cough': [
@@ -110,7 +106,7 @@ symptom_synonyms = {
     'needy breathing pattern', 'barely pulling in enough air', 'lungs working at half capacity', 'respiratory distress',
     'continuous short-windedness', 'lack of breath', 'shortage of breath', 'breath shortage', 'light breathing', 'mild breathing',
     'unable to breathe', 'wheezing', 'lacking breath', "can’t breathe deeply", "can’t take my breath", "can’t breathe", 'breathing rate is low',
-    'breathing rate is slow', 'dyspnea', 'trouble breathing', 'painful when breathing',
+    'breathing rate is slow', 'dyspnea', 'trouble breathing', 'low breathing rate', 
     "can’t catch my breath", "can’t get enough air", "can’t breathe properly", 'cannot breathe deeply', "can’t take a full breath",
     'breath is shallow', 'breath feels stuck', 'breath is short', 'breath is labored', 'breath is heavy', 'breath feels blocked',
     'breath feels cut off', 'breath feels tight', 'breath feels restricted', 'breath feels painful', 'breath feels difficult',
@@ -192,10 +188,9 @@ symptom_synonyms = {
     ],
     'vomiting': [
         'throwing up', 'puking', 'retching', 'emesis', 'forcefully throwing up', 'sick stomach', 'food coming out', 'food came out',
-        'gagging', 'upchucking', 'spitting up', 'retching reflex', 'vomit',
+        'gagging', 'upchucking', 'spitting up', 'retching reflex', 'vomit', 'sick and throwing up',
         'forceful expulsion of food', 'involuntary stomach release', 'emetic response', 'feeling of needing to vomit', 'gag reflex triggering', 
         'unpleasant stomach eruption', 'stomach contents expelled forcefully', 'gastrointestinal purge', 'expulsion of gastric contents', 'violent heaving',
-        'sick and throwing up',
         'puking from irritation', 'regurgitating food', 'empty stomach vomiting', 'morning sickness vomiting', 'emesis due to motion sickness', 'heaving up'
     ],
     'cold': [
@@ -597,19 +592,15 @@ symptom_synonyms = {
 'operation': ['surgery', 'surgeries','operation','operations','operate'],
 
 'strain': [
-
-    'soft tissue strain', 'overexertion', 'overworked muscle'
-],
+    'soft tissue strain', 'overexertion', 'overworked muscle'],
 
 'arthritis': [
     'inflammatory arthritis', 'rheumatoid arthritis', 'osteoarthritis', 'degenerative joint disease',  'rheumatism',  'pain from arthritis',
-    'arthralgia', 'chronic arthritis', 'autoimmune arthritis', 'psoriatic arthritis'
-],
+    'arthralgia', 'chronic arthritis', 'autoimmune arthritis', 'psoriatic arthritis'],
 
 'gout': [
     'uric acid buildup', 'gouty inflammation', 'gouty attack',
-    'painful gout episode', 'gouty swelling', 'gouty condition', 'uric acid crystals', 'gouty joint disease'
-],
+    'painful gout episode', 'gouty swelling', 'gouty condition', 'uric acid crystals', 'gouty joint disease'],
 
 'female issue': [
     'women’s health', 'gynecological issue', 'female reproductive health', 'PCOS', 'PCOD', 'endometriosis','ladies problem',
@@ -650,9 +641,9 @@ symptom_synonyms = {
 'loss of hearing', 'lost hearing', 'reduced hearing', 'impaired hearing', 'difficulty hearing', 'diminished hearing ability', 'deaf', 'cannot hear','no hearing',
 'hearing impairment', 'hearing less', 'less hearing','low hearing','hearing low','hearing very low', 'not hearing', 'unable to hear', 'one ear not listening',
 'hearing deficiency', 'blocked hearing', 'muffled hearing', 'ringing in ears', 'ear damage', 'auditory dysfunction', 'ear canal blockage', 'inner ear damage',
-'hearing weakness', 'fading hearing', 'loss of sound perception', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
-'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound frequencies', 'ear trauma', 'ears not listening',
-'hearing impairment due to illness', 'hearing degradation', 'low sound perception', 'earwax blockage hearing loss', 'acoustic trauma', 'trouble hearing'
+'hearing weakness', 'fading hearing', 'unable to listen', 'difficulty understanding speech', 'distorted hearing', 'ear drum damage', 'hearing sensitivity reduction',
+'hearing clarity reduction', 'speech comprehension difficulty', 'auditory decline', 'inability to detect sound', 'ear trauma', 'ears not listening', "can't listen",
+'hearing disability', 'hearing degradation', 'low sound perception', 'cannot listen', 'acoustic trauma', 'trouble hearing', 'hearing trouble',"can't hear",
 'hearing damage','hearing decreased','decreased hearing', 'hearing less', 'loss of hearing','hearing loss','not hearing', 'not able to hear'
 ],
 
@@ -680,6 +671,7 @@ symptom_synonyms = {
 'burning itch', 'itching with redness', 'itching from dryness', 'irritated skin itch', 'tickling skin sensation',
 'itchy skin bumps', 'itchy welts', 'itchy hives', 'skin crawling sensation', 'itchy blisters', 'itchiness'
 ],
+
 'fracture': ['fracture', 'fractured','fractures'],
 
 'injury': [
@@ -728,9 +720,7 @@ symptom_synonyms = {
 ],
 
 'seizures': [
-    'seizure', 'epileptic episode',
-    'convulsions', 'sudden convulsion',
-    'body shaking episode', 'jerking movements',
+    'seizure', 'epileptic episode', 'convulsions', 'sudden convulsion', 'body shaking episode', 'jerking movements',
     'sudden blackout with convulsions', 'shaking episode without warning',
     'sudden onset of convulsions', 'involuntary body movement'
 ],
