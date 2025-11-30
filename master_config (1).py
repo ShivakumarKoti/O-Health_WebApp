@@ -75,7 +75,7 @@ symptom_synonyms = {
     'weakness': [
     'low energy', 'feeling sluggish', 'tiredness', 'drowsiness', 'feeling weak', 'lack of energy', 'drowsy',
     'feeling lethargic', 'difficulty keeping eyes open', 'lack of vitality', 'feeling disconnected',
-    'body feels heavy', 'brain fog', 'slow to move', 'slow to think','feeling weakness',
+    'body feels heavy', 'brain fog', 'slow to move', 'slow to think','feeling weakness','weak feelings',
     'exhausted','worn out', 'feeling weak','feel weak','weakness','feeling very weak',
     'out of energy', 'lack of strength', 'short bursts of energy followed by crashes',
 ],
