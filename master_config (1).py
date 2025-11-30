@@ -630,8 +630,8 @@ symptom_synonyms = {
 
 'piles': [
     'hemorrhoids', 'anal piles', 'rectal swelling', 'internal hemorrhoids', 'external hemorrhoids','piles',
-    'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'chronic hemorrhoids',
-    'painful hemorrhoids', 'prolapsed hemorrhoids', 'thrombosed hemorrhoids', 'anal fissures', 'blood clots in hemorrhoids',
+    'hemorrhoidal disease', 'rectal discomfort', 'anal itching', 'anal bleeding', 'rectal bleeding', 'hemorr hoids',
+    'hemorhoid', 'hemorhoids', 'thrombosed hemorrhoids', 'anal fissures', 'hemorr hoid',
     'swollen hemorrhoids', 'anal prolapse', 'inflamed hemorrhoids', 'rectal irritation', 'constipation-related hemorrhoids',
     'itchy anus', 'hemorrhoid treatment', 'hemorrhoid',
 ],
