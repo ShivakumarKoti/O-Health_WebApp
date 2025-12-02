@@ -417,7 +417,7 @@ symptom_synonyms = {
     'dark yellow urine', 'brown urine', 'concentrated urine', 'urine with strong color',
     'deep yellow urine', 'urine discoloration', 'darkened urine', 'urine with reddish tint', 'dark brown urine', 'urine with high concentration', 'cloudy urine',
     'urine with abnormal color', 'dark urine caused by medication', 'urine with high pigment', 'strong urine color', 'burning while passing urine',
-    'urinary issues', 'urination'
+    'urinary issues', 'urination','trouble urinating'
 ],
 
 'kidney stone': ['kidney stone', 'kidney stones','stone in my stomach','stone in stomach','stone in kidney','stones in kidney','stone in the back','stones in the back', 'stone in the stomach','stone in back', 'there is a stone', 'there is stone'],
