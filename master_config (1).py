@@ -7883,7 +7883,7 @@ medications_list = [
     "Ciprofloxacin Ear Drops", "Eye Drop", "Ear Drop", "Tobramycin Eye Drops", "Ciprofloxacin Eye Drops", "Azithromycin Eye Drops", "Artificial Tears (Carboxymethylcellulose)", "Hyaluronic Acid Eye Drops", "Olopatadine Eye Drops", "Ketorolac Eye Drops", "Dexamethasone Eye Drops", "Diclofenac Gel", "Volini Gel", "Iodex", 
     "Methyl Salicylate Cream", "Ketoprofen Patch", "Tolperisone", "Thiocolchicoside", "Cyclobenzaprine", "Arnica Gel", "Capsaicin Cream", "Hormonal Contraceptives (Levonorgestrel)", "Clotrimazole Vaginal Cream", "Fluconazole", "Cranberry Extract (for UTI)", "Nitrofurantoin", "Ciprofloxacin",
 
-    "ultrasound","MRI","CT scan","lab test"
+    "ultrasound","MRI","CT scan","lab test","syrup","pills","medicine","medication","tablet","medicines",
 ]
 
 trigger_keywords = {
