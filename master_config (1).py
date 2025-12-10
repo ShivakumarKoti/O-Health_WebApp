@@ -8288,7 +8288,7 @@ trigger_keywords = {
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
     },
 'body': {
-        'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'ache', 'whole pain', 'all over pain', 'ache everywhere','aching'],
+        'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'ache','aches','whole pain', 'all over pain', 'ache everywhere','aching'],
         'fatigue': ['tired', 'fatigue', 'exhausted', 'lethargic'],
         'weakness': ['weakness', 'weak', 'low energy', 'sluggish', 'no strength'],
         'stiffness': ['stiffness', 'stiff', 'tight', 'rigid', 'hard to move'],
