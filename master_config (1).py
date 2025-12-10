@@ -1293,15 +1293,6 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको रात में पसीना आता है?",
-      "en": "Do you experience night sweats?",
-      "gu": "શું તમને રાત્રે ખૂબ ઘમો આવે છે?",
-      "te": "మీకు రాత్రిళ్లు చెమటలు ఎక్కువగా వస్తున్నాయా?",
-      "category": "night sweats",
-      "symptom": "night sweats",
-      "risk_factor": False,
-    },
-    {
       "hi": "क्या आपको सिरदर्द है?",
       "en": "Are you experiencing headaches?",
       "gu": "શું તમને માથાનો દુખાવો છે?",
@@ -5249,7 +5240,7 @@ symptom_followup_questions = {
       "gu": "શું તમને તમારા બ્લડ શુગરને કાબૂમાં રાખવા માટે દવાઓ લેવી પડે છે?",
       "te": "మీ రక్తంలో చక్కెర స్థాయిని నియంత్రించడానికి మందులు తీసుకోవలసి వస్తుందా?",
       "category": "medication",
-      "symptom": "sugar",
+      "symptom": None,
       "risk_factor": True,
     },
     {
