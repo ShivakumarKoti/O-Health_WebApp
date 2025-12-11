@@ -3180,15 +3180,6 @@ symptom_followup_questions = {
       "risk_factor": False,
     },
     {
-      "hi": "क्या आपको किसी अन्य मानसिक स्वास्थ्य समस्याओं का निदान हुआ है, जैसे चिंता, अवसाद, या PTSD?",
-      "en": "Have you been diagnosed with any other mental health conditions, such as anxiety, depression, or PTSD?",
-      "gu": "શું તમને ચિંતા, ડિપ્રેશન અથવા PTSD જેવી અન્ય માનસિક તકલીફોનું નિદાન થયું છે?",
-      "te": "మీకు ఆందోళన, డిప్రెషన్ లేదా PTSD వంటి మరే మానసిక ఆరోగ్య సమస్యల నిర్ధారణ జరిగిందా?",
-      "category": "history: mental health condition",
-      "symptom": None,
-      "risk_factor": False,
-    },
-    {
       "hi": "क्या आप कोई दवाइयाँ ले रहे हैं, जिसमें ओवर-द-काउंटर या हर्बल सप्लीमेंट्स भी शामिल हैं?",
       "en": "Are you taking any medications, including over-the-counter or herbal supplements?",
       "gu": "શું તમે કોઈ દવાઓ, ઓવર-દ-કાઉન્ટર દવા કે હર્બલ સપૂર્મેન્ટ લઈ રહ્યા છો?",
@@ -4418,7 +4409,7 @@ symptom_followup_questions = {
       "gu": "શું તમને ઊંઘ આવવામાં કે આખી રાત ઊંઘ જાળવવામાં તકલીફ થાય છે?",
       "te": "మీకు నిద్రపోవడంలో లేదా నిద్ర కొనసాగించడంలో ఇబ్బంది అవుతున్నదా?",
       "category": "sleep issue",
-      "symptom": "restlessness",
+      "symptom": "insomnia",
       "risk_factor": False,
     },
     {
@@ -8136,7 +8127,7 @@ trigger_keywords = {
         'pain': ['pain', 'pains', 'paining','painful', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'weakness': ['weakness', 'weak',  'fatigued', 'tired', 'low stamina', 'easily exhausted'],
         'burn': ['burn', 'burning', 'burns', 'burnt'],
-        'palpitation': ['flutter', 'palpitations', 'racing', 'fast rate', 'skipped beat', 'pounding','faster', 'fast'],
+        'palpitation': ['flutter', 'palpitations', 'racing', 'fast rate', 'skipped beat', 'pounding','faster', 'fast','gone up'],
         'surgery' : ['surgery', 'bypass', 'stent', 'angioplasty', 'valve replacement','operation'],
         'attack': ['attack', 'infarction', 'angina', 'arrest'],
  },
