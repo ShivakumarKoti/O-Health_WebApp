@@ -28,41 +28,41 @@ surgery_list = ['hemorrhoidectomy','cartilage surgery','dvt surgery','cleft lip 
 'feeding tube insertion','vascular surgery','cataract surgery','knee replacement','septoplasty','abdominoplasty',
 'facelift','hydrocele surgery','leg bypass surgery','mediastinal surgery','acid reflux surgery','wisdom tooth removal',
 'colonoscopy','stent surgery','laminectomy','retinal surgery','accident surgery','kidney transplant',
-'glaucoma surgery','laparotomy','frozen shoulder surgery','liver resection','heart operation','Multimedia Manual Of Cardiothoracic Surgery',
+'glaucoma surgery','laparotomy','frozen shoulder surgery','liver resection','Multimedia Manual Of Cardiothoracic Surgery',
 'Prostatectomy','esophageal surgery','diagnostic laparoscopy','central line insertion','boil surgery','aortic surgery',
 'perianal abscess surgery','second opinion surgery','ureter surgery','vitrectomy','fistulotomy','rhinoplasty',
-'piles surgery','hand surgery','sinus surgery','ear tube surgery','ent surgery','tooth surgery',
+'piles surgery','sinus surgery','ent surgery',
 'Cardiac Surgery','arm lift','episiotomy','fissurectomy','fissure surgery','uterus removal',
 'electrocautery','cyst removal','liposuction','transurethral resection of prostate','deep vein thrombosis surgery','contoura vision',
-'dental extraction','testicular surgery','gall bladder surgery','gall stone surgery','gastric bypass','eye surgery',
-'Inguinal hernia repair','retinal detachment surgery','Cataract surgery','obesity surgery','anti reflux surgery','head surgery',
+'dental extraction','testicular surgery','gall bladder surgery','gall stone surgery','gastric bypass',
+'Inguinal hernia repair','retinal detachment surgery','Cataract surgery','obesity surgery','anti reflux surgery',
 'hydrocephalus surgery','tonsillectomy','heart bypass surgery','vertebroplasty','cystectomy','angiography',
 'pneumonectomy','polypectomy','ventriculoperitoneal shunt','orchidopexy','stapedectomy','abdominal surgery',
-'deviated septum surgery','bile duct surgery','bone plating','Coronary artery bypass','joint surgery','tongue tie release',
-'jaw surgery','pyloric stenosis surgery','nail bed surgery','chest surgery','vasectomy','root canal treatment',
+'deviated septum surgery','bile duct surgery','bone plating','Coronary artery bypass','tongue tie release',
+'pyloric stenosis surgery','nail bed surgery','chest surgery','vasectomy','root canal treatment',
 'neuro surgery','dental surgery','bone fracture surgery','surgery for trauma','aortic stent grafting','tattoo removal',
 'amputation','stone surgery','tracheostomy','eyelid surgery','eardrum surgery','pediatric heart surgery',
 'laser iridotomy','labiaplasty','Cesarean section','exploratory laparotomy','aortic aneurysm repair','hernia operation',
 'tmj surgery','Cholecystectomy','keratoplasty','fibroid removal','craniotomy','endovascular repair',
 'exploratory surgery','splenectomy','liver transplant','spinal fusion','ingrown toenail surgery','heart valve surgery',
-'total knee arthroplasty','Biopsy','hip surgery','foot surgery','fistula surgery','pancreas surgery',
+'total knee arthroplasty','Biopsy','fistula surgery','pancreas surgery',
 'hernia surgery','nephroureterectomy','squint surgery','thyroidectomy','major surgery','turbinate reduction',
-'tympanoplasty','mastectomy','varicose veins operation','neck dissection','bone surgery','ovarian cystectomy',
+'tympanoplasty','mastectomy','varicose veins operation','neck dissection','ovarian cystectomy',
 'arthroscopy','prostate removal','diabetic retinopathy surgery','mole removal','pancreaticoduodenectomy','breast lift',
 'hip replacement','scar revision surgery','nose job','fracture surgery','appendix surgery','bowel surgery',
 'shoulder replacement','burn surgery','prostate surgery','limb salvage surgery','cervical cerclage','joint replacement surgery',
 'hernia surgery','liver operation','colon surgery','spleen surgery','angioplasty','minor surgery',
-'cochlear implant','coronary artery bypass grafting','orthopedic surgery','emergency surgery','Hysterectomy','skin surgery',
+'cochlear implant','coronary artery bypass grafting','orthopedic surgery','emergency surgery','Hysterectomy',
 'sebaceous cyst removal','body piercing removal','corneal transplant','lipoma removal','varicose vein surgery','C Section',
 'breast enlargement','Dilation and curettage','hysterectomy','sex change surgery','knee surgery','rectal prolapse surgery',
 'robotic surgery','breast augmentation','heart surgery','Mastectomy','pelvic surgery','cesarean delivery',
 'lung biopsy','rectal surgery','male breast reduction','keyhole surgery','fallopian tube surgery','rib surgery',
 'vaginal surgery','spondylolisthesis surgery','ureteric stone surgery','heart transplant','oophorectomy','colectomy for cancer',
 'aneurysm clipping','shoulder surgery','bone tumor surgery','parkinson surgery','breast reduction','oral cancer surgery',
-'Hysteroscopy','cosmetic surgery','liver surgery','brain surgery','gall bladder operation','kyphoplasty',
+'Hysteroscopy','cosmetic surgery','liver surgery','gall bladder operation','kyphoplasty',
 'follow up surgery','bariatric surgery','turp','slip disc surgery','ligament surgery','gallbladder removal',
 'cystoscopy','revision surgery','cranioplasty','laparoscopic surgery','tubectomy','pancreatic surgery',
-'gastrectomy','kidney stone surgery','nose surgery','lymp node dissection','lumbar spine surgery','osteotomy',
+'gastrectomy','kidney stone surgery','lymp node dissection','lumbar spine surgery','osteotomy',
 'joint lavage','adenoidectomy','thigh lift','rotator cuff repair','arterial bypass','hair transplant',
 'cleft palate surgery','ovarian cyst surgery','Tonsillectomy','pyeloplasty','elbow replacement','ganglion cyst removal',
 'testicular cancer surgery','weight loss surgery','ilizarov surgery','laryngectomy','spinal cord surgery','external fixation',
@@ -79,11 +79,11 @@ surgery_list = ['hemorrhoidectomy','cartilage surgery','dvt surgery','cleft lip 
 'laparoscopy','womb surgery','spine surgery','portacath insertion','ovary surgery','cleft surgery',
 'colostomy','nephrectomy','cryosurgery','pacemaker surgery','duodenal switch','dilation and curettage',
 'cabg','laser surgery','smile surgery','Hemorrhoidectomy','epilepsy surgery','orchidectomy',
-'biopsy','hammer toe surgery','stomach surgery','pediatric hernia surgery','Endoscopy','dialysis access surgery',
+'biopsy','hammer toe surgery','pediatric hernia surgery','Endoscopy','dialysis access surgery',
 'ear surgery','meniscus surgery','ectopic pregnancy surgery','gum surgery','achilles tendon surgery','Appendectomy',
 'hypospadias repair','Free skin graft','eye operation','joint arthroscopy','cervical spine surgery','incision and drainage',
 'cesarean surgery','uterus surgery','cardiac surgery','Jet Ventilation','brain hemorrhage surgery','carpal tunnel surgery',
-'throat surgery','skin tag removal','tonsil surgery','kidney surgery','Breast Biopsy','deep brain stimulation',
+'throat surgery','skin tag removal','tonsil surgery','Breast Biopsy','deep brain stimulation',
 'open heart surgery','intestine surgery','Hypnosurgery','bladder cancer surgery','appendix operation','blepharoplasty',
 'esophagectomy','undescended testicle surgery','whipple procedure','surgery for infection','chest tube insertion','Surgical Drain',
 'other surgeries','lung surgery','rod insertion','discectomy','gynecomastia surgery','bypass surgery',
@@ -935,9 +935,9 @@ symptom_synonyms = {
 'cardiac surgery': [
 
     # Direct procedure mentions
-    'cardiac surgery', 'surgery of heart', 'bypass', 'stent', 'heart surgery', 'bypass surgery', 'coronary artery bypass graft', 'CABG',
+    'bypass', 'stent', 'bypass surgery', 'coronary artery bypass graft', 'CABG',
     'angioplasty done', 'had valve replacement', 'mitral valve surgery', 'aortic valve repair',
-    'post cardiac surgery', 'heart procedure', 'balloon angioplasty', 'stent placement in coronary artery',
+    'post cardiac surgery', 'balloon angioplasty', 'stent placement in coronary artery',
     'pacemaker inserted', 'had ICD implantation', 'pacemaker surgery', 'ICD placed in chest', 'had cardiac catheterization', 'angioplasty procedure',
     'thrombolysis done', 'blood clot dissolving for heart', 'went through cardiac cath',
 
@@ -945,18 +945,15 @@ symptom_synonyms = {
     'chest surgery',  'tightness in chest post-operation', 'pain near sternum', 'sharp sternal pain'
   
     # Colloquial and patient-style phrases
-    'heart operated', 'they opened my chest', 'heart fixed', 'chest was cut open', 'doctor repaired my valve', 'my heart had a blockage', 'they put a stent',
-    'got my arteries cleaned', 'my chest hurts since heart operation', 'pain where heart surgery was done', 'had open chest surgery',
+    'they opened my chest', 'heart fixed', 'chest was cut open', 'doctor repaired my valve', 'heart had a blockage', 'put a stent', 'open chest surgery',
     'battery inserted in chest', 'they put wires in my chest', 'got my heart reset', 'heart restarted in hospital', 'shocked my heart back', 'doctor placed device in chest',
 
     # Post-operative issues
-    'fatigue after heart operation', 'limited mobility post bypass', 'internal chest pulling sensation',
+ 'limited mobility post bypass', 'internal chest pulling sensation',
     'healing heart wound', 'surgical site pain in chest', 'heart rhythm issues post surgery', 'fainting spells after heart procedure', 'slow heartbeat recovery',
 
     # Risk & lifestyle factor–linked phrases
-    'heart surgery due to high BP', 'diabetes patient with bypass', 'valve problem after rheumatic fever', 'had thyroid issue and heart surgery',
     'heart block',
-     'on heart diet since procedure', 'stopped salt after bypass',
 
 ],
 
@@ -7798,7 +7795,8 @@ trigger_keywords = {
         'spasm': ['spasm', 'spasms', 'tightness', 'twitch', 'twitching'],
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps'],
+      'lump': ['lump', 'lumps', 'bump', 'bumps'],
+      'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 
 'eye': {
@@ -7811,7 +7809,8 @@ trigger_keywords = {
 		'swelling': ['swollen','swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
 		'discharge': ['discharge', 'pus', 'watery', 'sticky', 'fluid', 'oozing', 'liquid', 'water','allergy'],
 		'crushing': ['crushing', 'crushed', 'crush', 'crushes'],
-		'sight issues': ['sight', 'sight issues','short sight', 'short sightness', 'far sight', 'far sightness', 'long sight', 'long sightness', 'near sight', 'near sightness']
+		'sight issues': ['sight', 'sight issues','short sight', 'short sightness', 'far sight', 'far sightness', 'long sight', 'long sightness', 'near sight', 'near sightness'],
+  'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'hand': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore', 'hurting', 'throbbing', 'aching'],
@@ -7825,6 +7824,7 @@ trigger_keywords = {
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'arm': {
         'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'sores', 'ache', 'aches', 'hurt', 'hurts', 'sore',  'hurting','throbbing', 'aching'],
@@ -7836,13 +7836,15 @@ trigger_keywords = {
         'swelling': ['swollen', 'swells', 'swell', 'puffy', 'swelling', 'bulging', 'bump'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'head': {
         'injury': ['injury', 'injured', 'bump', 'hit', 'knock', 'knocked', 'blow', 'fall', 'fell', 'impact', 'strike', 'broken'],
         'pressure': ['pressure', 'tightness', 'heaviness', 'tense', 'tension', 'compressed','heavy','spins','spinning'],
         'numbness': ['numb', 'numbness', 'no sensation'],
 		'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy', 'tingle', 'irritation'],
-	    'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt', 'hurts','throbbing']
+	    'pain' : ['pain', 'paining', 'painful', 'sore', 'soreness', 'pains', 'hurts','hurting', 'hurt', 'hurts','throbbing'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
 	
     },
 'back': {
@@ -7856,6 +7858,7 @@ trigger_keywords = {
         'issue': ['issue', 'bone issue','issues', 'problem', 'problems', 'condition', 'discomfort'],
 		'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'chest': {
         'pain': ['pain', 'pains', 'sore', 'painful', 'paining', 'tightness', 'tight', 'pressure', 'hurt', 'hurts', 'ache', 'hurting', 'aches', 'burning', 'burn', 'soreness'],
@@ -7866,6 +7869,7 @@ trigger_keywords = {
 	    'itching': ['itch', 'itches', 'itching', 'itchy', 'itchiness', 'scratchy'],
         'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'wrist': {
         'pain': ['pain','painful', 'paining', 'sore', 'pains', 'hurt', 'hurts', 'ache', 'aches', 'throbbing', 'hurting', 'burning', 'soreness'],
@@ -7873,7 +7877,8 @@ trigger_keywords = {
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'stiffness': ['stiff', 'stiffness', 'tight', 'restricted', 'rigid', 'locked'],
         'numbness': ['numb', 'numbed', 'numbness', 'tingle', 'tingling', 'pins', 'needles'],
-        'injury': ['injury', 'injured', 'fall', 'fell', 'fracture', 'fractured', 'twist', 'twisted', 'sprain', 'sprained', 'broke', 'broken']
+        'injury': ['injury', 'injured', 'fall', 'fell', 'fracture', 'fractured', 'twist', 'twisted', 'sprain', 'sprained', 'broke', 'broken'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'throat': {
         'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'hurting', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
@@ -7884,6 +7889,7 @@ trigger_keywords = {
 	    'itching': ['itch', 'itching', 'itchy', 'itches', 'itchiness', 'scratchy'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'stomach': {
         'pain': ['pain','painful', 'paining', 'soreness', 'trouble', 'troubles','ache','issue', 'issues','hurt', 'hurting', 'cramp', 'cramps', 'discomfort', 'throbbing','aches','hurts','hurted','sore','sores','pains','problem','problems'],
@@ -7892,8 +7898,10 @@ trigger_keywords = {
         #'nausea': ['nausea', 'queasy', 'feeling sick', 'vomit', 'vomiting', 'urge to vomit'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'burning' : ['burn','burning','burns','burnt','fire'],
-		'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
-        'lump': ['lump', 'lumps', 'bump', 'bumps','crack'],
+		  'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
+    'lump': ['lump', 'lumps', 'bump', 'bumps','crack'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
+        
     },
 'neck': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'hurting', 'ache', 'aches', 'aching','throbbing'],
@@ -7908,6 +7916,7 @@ trigger_keywords = {
 		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
 
     },
 'knee': {
@@ -7923,6 +7932,7 @@ trigger_keywords = {
 	    'soreness': ['sore', 'soreness', 'tender', 'sores', 'discomfort'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'foot': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'ache', 'hurts', 'hurt', 'hurting','sore', 'throbbing', 'burning'],
@@ -7939,6 +7949,7 @@ trigger_keywords = {
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'shoulder': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing'],
@@ -7950,6 +7961,7 @@ trigger_keywords = {
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'ear': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching', 'hurting','throbbing'],
@@ -7959,7 +7971,8 @@ trigger_keywords = {
         'infection': ['infection', 'infectious', 'infections'],
         'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	    'bleeding': ['bleeding', 'blood', 'bleed'],
-	    'itching': ['itch', 'itching', 'itches', 'itchy', 'scratchy', 'itchiness']
+	    'itching': ['itch', 'itching', 'itches', 'itchy', 'scratchy', 'itchiness'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'nails': {
         'discoloration': ['discoloration', 'yellow', 'dark', 'black', 'pale'],
@@ -7974,7 +7987,8 @@ trigger_keywords = {
     'fracture': ['fracture', 'broken', 'break', 'crack', 'cracked','cracks','fractured','fractures','breaks','snap', 'shattered', 'hairline'],
     'swelling': ['swelling', 'swollen', 'puffy', 'enlarged', 'swells','inflamed'],
     'weakness': ['weakness', 'weak', 'brittle', 'fragile', 'soft', 'thin'],
-    'injury': ['injury', 'trauma', 'blow', 'contusion', 'bruise', 'damage']
+    'injury': ['injury', 'trauma', 'blow', 'contusion', 'bruise', 'damage'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
 },
 
 'joint': {
@@ -7986,6 +8000,7 @@ trigger_keywords = {
 	    'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'skin': {
         'rash': [
@@ -8018,6 +8033,8 @@ trigger_keywords = {
 			'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 			'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
      		'lump': ['lump', 'lumps', 'bump', 'bumps'],
+       'burn': ['burn', 'burning', 'burns', 'burnt' ,'scald','scalding' ],
+       'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 
 
@@ -8030,7 +8047,8 @@ trigger_keywords = {
 		'cramps': ['cramp', 'cramps', 'cramping', 'contracting', 'twitch'],
 		'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
 		'numbness': ['numb', 'numbness', 'numbed', 'tingling', 'tingle', 'pins', 'needles'],
-		'pulling': ['pull', 'pulling', 'pulled', 'tugging', 'tight pull', 'pulls', 'strained']
+		'pulling': ['pull', 'pulling', 'pulled', 'tugging', 'tight pull', 'pulls', 'strained'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
  
 'heart': {
@@ -8040,6 +8058,7 @@ trigger_keywords = {
         'palpitation': ['flutter', 'palpitations', 'racing', 'fast rate', 'skipped beat', 'pounding','faster', 'fast','gone up'],
         'surgery' : ['surgery', 'bypass', 'stent', 'angioplasty', 'valve replacement','operation'],
         'attack': ['attack', 'infarction', 'angina', 'arrest'],
+        'operation': ['operation', 'operated','surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
  },
 
 'urinary': {
@@ -8048,12 +8067,14 @@ trigger_keywords = {
         'blood': ['blood', 'bloody', 'hematuria'],
         'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing'],
         'burn': ['burn', 'burning', 'burns', 'scalding', 'scalded'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'toes': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'red', 'tender'],
         'injury': ['injury', 'stubbed', 'fracture', 'broken', 'hurt', 'crush','injures','injured'],
-		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+		    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'nose': {
         'injury': ['injury', 'hit', 'fracture', 'hurt','broken','broke'],
@@ -8063,11 +8084,12 @@ trigger_keywords = {
         'congestion'  : ['congestion', 'blocked', 'clogged', 'stuffy', 'stopped up'],
         'infection': ['infection', 'sinus', 'sinusitis'],
         'bleed' : ['bleed', 'bleeding', 'epistaxis', 'blood','bled','bleeds'],
-		'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen'],
-		'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
-		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
-		'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
+      'freeze': ['freeze', 'freezing', 'chilled', 'freezed', 'frozen'],
+      'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
+      'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+      'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
     	'lump': ['lump', 'lumps', 'bump', 'bumps'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'thigh': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -8080,6 +8102,7 @@ trigger_keywords = {
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'forehead': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -8089,13 +8112,15 @@ trigger_keywords = {
 		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'tongue': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'burning': ['burning ', 'feels hot', 'scalded', 'burns','burn'],
         'ulcers': ['ulcer', 'sore spot', 'ulcers'],
-		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+		    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'mouth': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness','hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness'],
@@ -8107,12 +8132,15 @@ trigger_keywords = {
         'numbness': ['numb', 'tingling', 'pins', 'needles','numbness'],
 	    'itching': ['itch', 'itching', 'itches', 'itchy', 'itchiness', 'scratchy'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'jaw':{
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure', 'squeezing','stabbing','cramping', 'stiff', 'tightness',],
         'swelling': ['swelling', 'swollen', 'swells', 'swell','bump', 'puffy', 'inflamed', 'bulge'],
         'injury': ['injury', 'hit', 'injured', 'bruise'],
-		'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+		    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
+  
     },
 'period' : {
       'pain':     ['paining','pains','painful', 'paining', 'soreness','hurts','hurting','pain','hurt','sore','sores','ache','aches','cramping','cramps','throbbing'],
@@ -8126,7 +8154,8 @@ trigger_keywords = {
     'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
     'weakness': ['weakness', 'weak', 'unstable', 'giving way', 'can’t bear weight', 'wobbly', 'tired'],
     'injury': ['injury', 'fracture', 'dislocation', 'sprain', 'strain', 'bruise', 'fall', 'trauma', 'injured'],
-    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy']
+    'itching': ['itch', 'itching','itches', 'itchy', 'itchiness', 'scratchy'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
 },
  'waist': {
         'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'ache', 'aching', 'throbbing', 'sore', 'discomfort', 'soreness'],
@@ -8135,7 +8164,8 @@ trigger_keywords = {
         'swelling': ['swollen', 'bump', 'swelling', 'puffy', 'enlarged', 'inflamed', 'inflammation'],
         'injury': ['injury', 'pulled', 'strained', 'hurt', 'broken', 'strain', 'sprain', 'trauma', 'broke', 'fall', 'twisted', 'injured'],
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
-	   'itching': ['itchy', 'itching', 'itches', 'itch', 'itchiness', 'scratchy']
+	      'itching': ['itchy', 'itching', 'itches', 'itch', 'itchiness', 'scratchy'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 
 'pelvic': {
@@ -8145,7 +8175,8 @@ trigger_keywords = {
         'weakness': ['weakness', 'weak', 'unstable', 'tired', 'fatigued', 'can’t support', 'giving way'],
         'injury': ['injury', 'fall', 'fracture', 'trauma', 'strain', 'sprain', 'injured'],
 	    'numbness': ['numb', 'numbness', 'tingling', 'loss of sensation'],
-	    'itching': ['itchy', 'itching', 'itches', 'itch', 'itchiness', 'scratchy']
+	    'itching': ['itchy', 'itching', 'itches', 'itch', 'itchiness', 'scratchy'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'elbow': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'aching', 'sharp', 'burning', 'stabbing', 'soreness', 'discomfort', 'throbbing'],
@@ -8155,13 +8186,15 @@ trigger_keywords = {
         'injury': ['injury', 'strain', 'sprain', 'bruise', 'fracture', 'fall', 'hit', 'trauma', 'injured'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
  'calf': {
         'pain': ['pain', 'pains','painful', 'paining', 'sore', 'ache', 'aching', 'soreness', 'cramping', 'sharp', 'burning', 'throbbing'],
         'spasm': ['spasm', 'cramp', 'tightness', 'twitching'],
         'swelling': ['swelling', 'swollen', 'puffy', 'inflamed', 'enlarged'],
         'weakness': ['weakness', 'weak', 'fatigued', 'loss of strength', 'unable to stand', 'unstable'],
-        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'broke', 'broken', 'fall', 'injured']
+        'injury': ['injury', 'strain', 'pull', 'tear', 'bruise', 'broke', 'broken', 'fall', 'injured'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'face': {
         'pain': ['pain','painful', 'paining', 'soreness', 'ache', 'throbbing', 'pains', 'paining'],
@@ -8173,12 +8206,14 @@ trigger_keywords = {
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
     'testicle': {
         'problem': ['problem', 'issue','issues','problems','pain','paining','hurt','hurts','hurting','allergy'],
         'swelling': ['swells','swollen','swells','swelled','swelling'],
         'itching': ['itches','itch','itching'],
-        'bleeding': ['blood','bleed', 'bleeding','blooded']
+        'bleeding': ['blood','bleed', 'bleeding','blooded'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'ankle': {
         'pain': ['pain','painful', 'sore', 'soreness', 'ache', 'hurting', 'paining', 'pains', 'throbbing'],
@@ -8186,7 +8221,8 @@ trigger_keywords = {
         'stiffness': ['stiffness', 'stiff', 'immobile', 'hard to move'],
         'injury': ['injury', 'sprain', 'twist', 'hurt', 'fracture', 'break', 'injured'],
         'weakness': ['weakness', 'weak', 'unstable', 'buckling', 'giving way'],
-	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood']
+	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'body': {
         'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'ache','aches','whole pain', 'all over pain', 'ache everywhere','aching'],
@@ -8198,6 +8234,7 @@ trigger_keywords = {
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	    'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
         'lump': ['lump', 'lumps', 'bump', 'bumps'],
+        'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'hair': {
         'loss': ['fall', 'falling', 'fallen', 'balding', 'shedding', 'thinning'],
@@ -8217,6 +8254,7 @@ trigger_keywords = {
 	    'itching': ['itch', 'itching', 'itchy', 'itches', 'itch', 'itchiness', 'scratchy'],
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'thumb': {
         'pain': ['pain', 'paining', 'pains', 'painful', 'soreness', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -8226,6 +8264,7 @@ trigger_keywords = {
         'injury': ['injury', 'injured', 'sprain', 'dislocated', 'jammed', 'fracture'],
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'palm': {
         'pain': ['pain', 'paining', 'pains', 'painful', 'soreness', 'hurts', 'sore', 'ache'],
@@ -8236,6 +8275,7 @@ trigger_keywords = {
 	    'dryness': ['dry', 'dryness', 'cracked', 'rough', 'peeling', 'flaky', 'chapped'],
 	    'itching': ['itch', 'itching', 'itchy', 'itches', 'itch', 'itchiness', 'scratchy'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'toe': {
         'pain': ['pain', 'pains', 'paining', 'painful', 'soreness', 'hurts', 'ache', 'throbbing', 'sore'],
@@ -8246,6 +8286,7 @@ trigger_keywords = {
         'freeze': ['freeze', 'freezing', 'frozen', 'chilled'],
 	    'bleeding': ['bleed', 'bleeding', 'bleeds', 'bled', 'blood'],
 	    'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+     'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'heel': {
         'pain': ['pain', 'pains', 'painful', 'paining', 'soreness','ache', 'hurting', 'sharp pain', 'burning', 'discomfort'],
@@ -8265,6 +8306,7 @@ trigger_keywords = {
 	'cut': ['cut', 'scratches', 'scratch', 'cuts'],
 	'boils': ['boil', 'boils', 'abscess', 'blister', 'pus-filled', 'pus'],
     'lump': ['lump', 'lumps', 'bump', 'bumps'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
 },
 'cheek': {
     'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'hurting', 'sore', 'tender'],
@@ -8281,6 +8323,7 @@ trigger_keywords = {
     'injury': ['injury', 'injured', 'hit', 'bruise', 'fracture', 'wound', 'cut'],
     'lump': ['lump', 'bump', 'mass', 'growth', 'nodule'],
 	'cut': ['cut', 'scratches', 'scratch', 'cuts'],
+ 'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
 },
 'soles' :{
     'pain': ['pain', 'pains', 'painful', 'paining', 'soreness', 'ache', 'hurting', 'sore', 'burning', 'sharp pain'],
@@ -8303,7 +8346,8 @@ trigger_keywords = {
     'bleeding': ['bleeding', 'spotting', 'blood'],
     'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
     'itching': ['itching', 'rash', 'redness'],
-    'discharge': ['discharge', 'leakage', 'fluid']
+    'discharge': ['discharge', 'leakage', 'fluid'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
   },
 
   'genital': { 
@@ -8313,7 +8357,8 @@ trigger_keywords = {
     'bleeding': ['bleeding', 'spotting', 'blood'],
     'erection': ['erection problems', 'difficulty getting erect', 'unable to maintain erection', 'flaccid'],
     'itching': ['itching', 'rash', 'redness'],
-    'discharge': ['discharge', 'leakage', 'fluid']
+    'discharge': ['discharge', 'leakage', 'fluid'],
+    'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
   },
 	'armpit': {
     'pain': ['pain', 'painful', 'ache', 'aching', 'hurt', 'hurts', 'sore', 'tender', 'tenderness', 'throbbing'],
@@ -11488,15 +11533,6 @@ body_part_followup_questions = {
       "symptom": None,
       "risk_factor": False
     },
-    {
-      "hi": "क्या आपकी नींद या रोज़मर्रा के काम इस समस्या से प्रभावित हो रहे हैं?",
-      "en": "Is this issue affecting your sleep or daily activities?",
-      "gu": "શું આ સમસ્યા તમારી ઊંઘ અથવા રોજિંદા કાર્યોને અસર કરે છે?",
-      "te": "ఈ సమస్య వల్ల మీ నిద్ర లేదా రోజువారీ పనులు ప్రభావితమవుతున్నాయా?",
-      "category": "ear_impact",
-      "symptom": None,
-      "risk_factor": False
-    }
   ]
 },
 
@@ -16199,6 +16235,7 @@ symptom_to_specialist = {
   'thigh swelling': 'Orthopedic Specialist',
   'thigh numbness': 'Orthopedic Specialist',
   'thigh itching': 'Dermatologist',
+  'indigestion': 'Gastroenterologist',
 
   'forehead pain': 'General Practitioner',
   'forehead swelling': 'General Physician',
@@ -16852,6 +16889,54 @@ symptom_to_specialist = {
 'lasik':'OPHTHALMOLOGY',
 'thoracic surgery':'CTVS',
 'rhytidectomy':'PLASTIC & RECONSTRUCTION SURGERY',
+'tooth operation':'ORAL & MAXILLOFACIAL SURGERY',
+'leg operation':'ORTHOPEDICS',
+'eye operation':'OPTHALMOLOGY',
+'hand operation':'ORTHOPEDICS',
+'arm operation':'ORTHOPEDICS',
+'head operation':'NEURO SURGERY',
+'back operation':'NEURO SURGERY',
+'chest operation':'CTVS',
+'wrist operation':'ORTHOPEDICS',
+'throat operation':'E.N.T',
+'stomach operation':'GENERAL SURGERY',
+'neck operation':'E.N.T',
+'knee operation':'ORTHOPEDICS',
+'foot operation':'ORTHOPEDICS',
+'shoulder operation':'ORTHOPEDICS',
+'ear operation':'E.N.T',
+'bone operation':'ORTHOPEDICS',
+'joint operation':'ORTHOPEDICS',
+'urinary operation':'UROLOGY & ANDROLOGY',
+'heart operation':'CTVS',
+'muscle operation':'ORTHOPEDICS',
+
+'skin burn':'PLASTIC & RECONSTRUCTION SURGERY',
+'skin operation':'DERMATOLOGY',
+
+'toe operation':'ORTHOPEDICS',
+'nose operation':'E.N.T',
+'thigh operation':'ORTHOPEDICS',
+'tongue operation':'ORAL & MAXILLOFACIAL SURGERY',
+'mouth operation':'ORAL & MAXILLOFACIAL SURGERY',
+'hip operation':'ORTHOPEDICS',
+'waist operation':'ORTHOPEDICS',
+'pelvic operation':'GENERAL SURGERY',
+'elbow operation':'ORTHOPEDICS',
+'calf operation':'ORTHOPEDICS',
+'face operation':'PLASTIC & RECONSTRUCTION SURGERY',
+
+'testicle operation':'UROLOGY & ANDROLOGY',
+'ankle operation':'ORTHOPEDICS',
+'body operation':'GENERAL SURGERY',
+'finger operation':'ORTHOPEDICS',
+'thumb operation':'ORTHOPEDICS',
+'palm operation':'ORTHOPEDICS',
+'lip operation':'PLASTIC & RECONSTRUCTION SURGERY',
+'chin operation':'PLASTIC & RECONSTRUCTION SURGERY',
+
+'penis operation':'UROLOGY & ANDROLOGY',
+'genital operation':'UROLOGY & ANDROLOGY'
 }
 
 HINDI_OFFLINE_DICT = {
@@ -18174,5 +18259,57 @@ HINDI_OFFLINE_DICT = {
     "lasik":"लेसिक सर्जरी",
     "thoracic surgery":	"थोरैसिक सर्जरी",
     "rhytidectomy":	"रुईटिडेक्टमी",
+
+  "tooth operation":      "दाँत का ऑपरेशन",
+"leg operation":        "पैर का ऑपरेशन",
+"eye operation":        "आँख का ऑपरेशन",
+"hand operation":       "हाथ का ऑपरेशन",
+"arm operation":        "बाँह का ऑपरेशन",
+"head operation":       "सिर का ऑपरेशन",
+"back operation":       "पीठ का ऑपरेशन",
+"chest operation":      "छाती का ऑपरेशन",
+"wrist operation":      "कलाई का ऑपरेशन",
+"throat operation":     "गले का ऑपरेशन",
+"stomach operation":    "पेट का ऑपरेशन",
+"neck operation":       "गर्दन का ऑपरेशन",
+"knee operation":       "घुटने का ऑपरेशन",
+"foot operation":       "पैर (पाँव) का ऑपरेशन",
+"shoulder operation":   "कंधे का ऑपरेशन",
+"ear operation":        "कान का ऑपरेशन",
+"bone operation":       "हड्डी का ऑपरेशन",
+"joint operation":      "जोड़ का ऑपरेशन",
+"urinary operation":    "मूत्र मार्ग का ऑपरेशन",
+"heart operation":      "दिल का ऑपरेशन",
+"muscle operation":     "मांसपेशी का ऑपरेशन",
+
+"skin burn":             "त्वचा जलना",
+"skin operation":        "त्वचा का ऑपरेशन",
+
+"toe operation":         "पैर की उँगली का ऑपरेशन",
+"nose operation":        "नाक का ऑपरेशन",
+"thigh operation":       "जांघ का ऑपरेशन",
+"tongue operation":      "जीभ का ऑपरेशन",
+"mouth operation":       "मुँह का ऑपरेशन",
+"hip operation":         "कूल्हे का ऑपरेशन",
+"waist operation":       "कमर का ऑपरेशन",
+"pelvic operation":      "पेल्विक क्षेत्र का ऑपरेशन",
+"elbow operation":       "कोहनी का ऑपरेशन",
+"calf operation":        "पिंडली का ऑपरेशन",
+"face operation":        "चेहरे का ऑपरेशन",
+
+"testicle operation":    "अंडकोष का ऑपरेशन",
+"ankle operation":       "टखने का ऑपरेशन",
+"body operation":        "शरीर का ऑपरेशन",
+"finger operation":      "उँगली का ऑपरेशन",
+"thumb operation":       "अंगूठे का ऑपरेशन",
+"palm operation":        "हथेली का ऑपरेशन",
+"lip operation":         "होंठ का ऑपरेशन",
+"chin operation":        "ठुड्डी का ऑपरेशन",
+
+"penis operation":       "लिंग का ऑपरेशन",
+"genital operation":     "जननांगों का ऑपरेशन"
+
+    
+
     
 }
