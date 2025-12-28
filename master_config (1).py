@@ -8027,7 +8027,7 @@ trigger_keywords = {
         'acne': [
             'pimples', 'acne', 'zits', 'whiteheads', 'blackheads', 
             'breakouts', 'spots', 'pustules', 'cysts', 'nodules'],
-        	'burn': ['burn', 'sunburn', 'scald', 'blister','burns','burning'],
+        	'burn': ['burn', 'sunburn', 'scald', 'burns','burning'],
         	'infection': ['infection', 'pus', 'bacterial', 'fungal', 'sores'],
 			'bleeding': ['bleeding', 'blood', 'bleed', 'bleeds'],
 			'cut': ['cut', 'scratches', 'scratch', 'cuts'],
