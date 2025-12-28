@@ -337,7 +337,7 @@ symptom_synonyms = {
         'drifting away from details', 'no anchor to past events','do not remember anything', 'forget everything', 'forgetting everything','I forgot', 'loss of memory'
     ],
   'hallucination': [
-    'auditory illusion', 'mental delusion', 'altered reality'
+    'auditory illusion', 'mental delusion', 'altered reality', 'hallucinated'
 ],
 
   'loss of appetite': [
