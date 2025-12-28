@@ -388,7 +388,7 @@ symptom_synonyms = {
 ],
 
 'anxiety': [
-    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry',
+    'unease', 'fear', 'apprehension', 'nervous tension', 'anxiousness', 'anxiety disorder', 'worry', 'anxious',
     'anticipatory anxiety', 'anxiety attack', 'apprehensive feeling', 'distress', 'emotional unease', 'worrying', 'overthinking', 'mental tension'
 ],
 
