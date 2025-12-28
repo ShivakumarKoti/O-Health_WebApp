@@ -158,7 +158,7 @@ symptom_synonyms = {
         'scratchy throat', 'painful throat', 'burning throat', 'irritated throat', 'swollen throat', 'inflamed throat', 'throat discomfort', 'throat scratchiness',
         'raw throat', 'tight throat', 'feeling of something stuck in throat', 'hoarse throat', 'swollen tonsils', 'throat inflammation', 'red throat', 'sore and swollen throat',
         'gritty throat', 'tender throat', 'raspy throat', 'dry throat', 'throat burning sensation', 'feeling of throat swelling', 'pain on swallowing', 'raw feeling in throat',
-        'sore feeling when talking', 'throat soreness', 'painful swallowing', 'constant throat irritation', 'itchy throat', 'burning sensation in throat', 'scratching feeling in throat', 'tenderness in throat', 'chronic throat discomfort', 'raspiness in voice',
+        'sore feeling when talking', 'throat soreness', 'painful swallowing', 'throat irritation', 'itchy throat', 'burning sensation in throat', 'scratching feeling in throat', 'tenderness in throat', 'chronic throat discomfort', 'raspiness in voice',
         'feeling like throat is closing', 'constant need to clear throat', 'sore throat with hoarseness', 'throat is sore','mucus in throat', 'mucus in mouth'
     ],
 
@@ -7881,7 +7881,7 @@ trigger_keywords = {
         'operation': ['operation', 'surgery', 'surgical', 'removed', 'removal','surgeries','operations','procedure', 'procedures'],
     },
 'throat': {
-        'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'hurting', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
+        'pain': ['sore', 'pain','painful', 'pains', 'soreness', 'irritation', 'hurting', 'scratchy', 'hurt', 'ache', 'throbbing', 'burning','hurts','hurting','paining'],
         'swelling': ['swelling', 'swollen', 'swells', 'swell', 'puffy', 'inflamed', 'bulge'],
         'hoarseness': ['hoarse', 'raspy', 'rough voice', 'lost voice','hoarseness'],
         'infection': ['infection', 'infectious', 'infected','infections','infected'],
