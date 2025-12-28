@@ -654,7 +654,7 @@ symptom_synonyms = {
     'inability to focus', 'lack of focus', 'poor concentration', 'trouble focusing', 'concentration problems', 'distractibility',
     'difficulty paying attention', 'lack of mental clarity', 'difficulty staying focused', 'inattention', 'short attention span', 'mind wandering',
     'difficulty concentrating on tasks', 'poor attention span', 'difficulty maintaining focus', 'lack of mental focus', 'difficulty with concentration',
-    'easily distracted', 'unable to focus', 'attention issues', 'concentration challenges', 'lack of concentration'
+    'easily distracted', 'unable to focus', 'attention issues', 'concentration challenges', 'lack of concentration', 'lost concentration'
 ],
 
 'lack of motivation': [
