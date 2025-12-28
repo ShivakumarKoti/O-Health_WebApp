@@ -238,7 +238,7 @@ symptom_synonyms = {
         'insufficient sleep', 'lack of sleep', 'unrefreshing sleep', 'tossing and turning', 'unsettled sleep', "can’t sleep", 'sleep not coming','cannot even sleep','cannot sleep',
         'waking up too early', 'difficulty with sleep onset', 'difficulty getting comfortable at night', 'sleeping problems', 'frequent nighttime awakenings', 'irregular sleep cycle',
         'waking up exhausted', 'sleep cycle disruption', 'sleep onset difficulty', 'mental hyperactivity preventing sleep', 'cannot sleep', 'unable to sleep','not able to sleep',
-        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept','not been able to sleep'
+        'unable to fall asleep', 'not able to fall asleep','not getting sleepy','not feel sleepy','not sleepy','not getting sleep','not slept','not been able to sleep', 'asleep',
     ],
     'rash': [
         'skin rash', 'redness on skin', 'skin irritation', 'skin inflammation', 'skin breakout', 'hives', 'blotchy skin', 'skin eruption', 'skin lesions',
