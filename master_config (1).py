@@ -8063,7 +8063,7 @@ trigger_keywords = {
 
 'urinary': {
         'pain': ['pain', 'pains','painful', 'paining', 'soreness', 'hurt', 'hurts', 'sore', 'sores', 'ache', 'aches', 'aching','throbbing','pressure','cramping', 'stiff', 'tightness'],
-        'frequency': ['frequent', 'frequency', 'often', 'urge', 'need to go', 'multiple times'],
+        'frequency': ['frequent', 'frequency', 'often', 'urge', 'need to go', 'multiple times', 'urgency'],
         'blood': ['blood', 'bloody', 'hematuria'],
         'difficulty': ['difficulty', 'straining', 'slow stream', 'trouble passing'],
         'burn': ['burn', 'burning', 'burns', 'scalding', 'scalded'],
