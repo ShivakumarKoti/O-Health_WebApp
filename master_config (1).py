@@ -350,7 +350,7 @@ symptom_synonyms = {
 ],
 
 'constipation': [
-    'difficulty passing stool', 'infrequent bowel movements', 'hard stools', 'painful bowel movements', 'feeling of incomplete evacuation', 'straining during bowel movement',
+    'difficulty passing stool', 'infrequent bowel movements', 'hard stools', 'painful bowel movements', 'feeling of incomplete evacuation', 'straining during bowel movement', 'constipated',
     'constipated', 'dry stool', 'difficulty in defecation', 'delayed bowel movements', 'irregular bowel movements', 'hard and dry stool', ' don\'t have any motion',' don\'t have clear stomach',
     'trouble with bowel movements', 'trouble passing stool', 'slow bowel transit', 'stool retention', 'decreased bowel movement frequency', 'bowel sluggishness', 'motion not passing',
     'straining to poop', 'bowel movement difficulty', 'slow bowel function', 'lack of bowel movement', 'intestinal irregularity', 'do not have clear stomach', 'unclear motion', 'unclear stomach',
